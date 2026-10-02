@@ -1,0 +1,36 @@
+{
+  "stage": "B03",
+  "variant": "baseline",
+  "step": "real_compile",
+  "executable": "D:\\mingw64\\bin\\g++.exe",
+  "arguments": [
+    "-std=c++17",
+    "-O2",
+    "-ffp-contract=off",
+    "-Wno-unknown-pragmas",
+    "-DB02_CACHE_X",
+    "-DB02_AXI_X128",
+    "-DB03_TEST",
+    "baseline/b02/src/w4a8_linear_v1.cpp",
+    "tests/numerical/prefill_tensor_replay.cpp",
+    "-o",
+    "build/b03_baseline/model_tensor_replay.exe"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.8265148,
+  "log": "logs/b03/baseline/20261002-150348-7159923/real_compile.log",
+  "input_sha256": {
+    "baseline/b02/src/w4a8_linear_v1.cpp": "3B7EB37172FD9264B1DB8EAFFDBF92183542F0EEB4F8FE52B7EB599E20EC9625",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_v1.cpp": "69952372C1C5CC980C13CE68E931AF2243866B48F725A650FD84CCF1F1A61178",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_baseline.cfg": "CD6835A32D87BD4B22C26CDEE75BAE63F4B5EDF803611B91B7D349C9C490E1A9",
+    "run_prefill.ps1": "90C7D368FFE909675127072193F0E635119475BC3F456FEEC6EA796B85465183"
+  },
+  "finished_at_utc": "2026-10-02T15:03:59.9462441Z"
+}

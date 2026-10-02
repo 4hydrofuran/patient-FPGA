@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "postchecker_sha256": "78669021e7da6d3123dfbab7cef81b1ad40e89770cc4d89a6727c8972f7542a3",
+  "archived_actual_rtl_replays": {
+    "smoke": {
+      "exit_code": 0,
+      "log": "logs\\b03\\postcheck_audit_smoke.log"
+    },
+    "gate_t1": {
+      "exit_code": 0,
+      "log": "logs\\b03\\postcheck_audit_gate_t1.log"
+    }
+  },
+  "consumer_negative_probe": {
+    "scratch_only": true,
+    "changed": "hand Y[0]: 890 -> 0",
+    "expected": "nonzero / FP32 mismatch",
+    "actual_exit_code": 1,
+    "log": "logs\\b03\\postcheck_audit_tampered.log"
+  },
+  "archived_evidence_unchanged": true
+}

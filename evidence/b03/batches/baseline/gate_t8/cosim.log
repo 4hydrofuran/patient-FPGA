@@ -1,0 +1,4 @@
+TRANSACTION index=0 case=qwen35_gate_up_t8 T=8 N=3584 K=1024 job=1000
+METRICS case=qwen35_gate_up_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=qwen35_gate_up_t8 T=8 N=3584 K=1024 source=synthetic seed=539365386
+B03 PASS suite=b03_gate_t8 source=synthetic transactions=1 int32_partial_checks=229376 fp32_output_checks=28672

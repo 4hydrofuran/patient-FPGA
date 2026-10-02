@@ -23,7 +23,11 @@ constexpr std::uint32_t kAbiVersion = 1;
 constexpr std::uint32_t kAbiMagic = 0x57344138U;
 
 // 访存消融使用独立私有构建标识；公共ABI与数值布局保持不变。
-#if defined(B02_CACHE_X) && defined(B02_AXI_X128)
+#if defined(B03_REUSE) && defined(B03_DOUBLE_BUFFER)
+constexpr std::uint32_t kKernelBuildId = 0xB3030002U;
+#elif defined(B03_REUSE)
+constexpr std::uint32_t kKernelBuildId = 0xB3030001U;
+#elif defined(B02_CACHE_X) && defined(B02_AXI_X128)
 constexpr std::uint32_t kKernelBuildId = 0xB3020002U;
 #elif defined(B02_CACHE_X)
 constexpr std::uint32_t kKernelBuildId = 0xB3020001U;

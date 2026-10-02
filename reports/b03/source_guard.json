@@ -1,0 +1,47 @@
+{
+  "stage": "B03",
+  "status": "PASS",
+  "scope": "Frozen public files and B02 source preservation; numerical and hardware domains separate.",
+  "checks": [
+    {
+      "path": "contracts/quant_v1.json",
+      "sha256": "890297e8bca2eeb5b9579ca7e7dc8a6b3126eb98a7dd0474ee1c5fe46dabeb25",
+      "match": true
+    },
+    {
+      "path": "contracts/sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "match": true
+    },
+    {
+      "path": "contracts/voice_examples.jsonl",
+      "sha256": "55590befbeca0aa89402113ed72bdf88f7fc6b8e8ac115e1d6bbad4360dc61a2",
+      "match": true
+    },
+    {
+      "path": "contracts/voice_v1.json",
+      "sha256": "0ba9699bbf738baf940adf56d202c503ed6343390aaf9086ba1a644b76e6910a",
+      "match": true
+    },
+    {
+      "path": "baseline\\b02\\src\\w4a8_linear_v1.cpp",
+      "sha256": "3b7eb37172fd9264b1db8eaffdbf92183542f0eeb4f8fe52b7eb599e20ec9625",
+      "match": true
+    },
+    {
+      "path": "baseline\\b02\\src\\w4a8_linear_v1.hpp",
+      "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+      "match": true
+    },
+    {
+      "path": "baseline\\b02\\tb\\tb_w4a8_linear_v1.cpp",
+      "sha256": "c530343fe78872f3e9dd8618e085a509b6c449d098ed5c0540347df1834e2952",
+      "match": true
+    },
+    {
+      "path": "baseline\\b02\\tb\\golden_w4a8.hpp",
+      "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+      "match": true
+    }
+  ]
+}

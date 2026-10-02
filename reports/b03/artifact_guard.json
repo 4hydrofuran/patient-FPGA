@@ -1,0 +1,115 @@
+{
+  "stage": "B03",
+  "status": "PASS",
+  "frozen_checks": [
+    {
+      "path": "baseline\\b02\\src\\w4a8_linear_v1.cpp",
+      "sha256": "3b7eb37172fd9264b1db8eaffdbf92183542f0eeb4f8fe52b7eb599e20ec9625"
+    },
+    {
+      "path": "baseline\\b02\\src\\w4a8_linear_v1.hpp",
+      "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba"
+    },
+    {
+      "path": "baseline\\b02\\tb\\tb_w4a8_linear_v1.cpp",
+      "sha256": "c530343fe78872f3e9dd8618e085a509b6c449d098ed5c0540347df1834e2952"
+    },
+    {
+      "path": "baseline\\b02\\tb\\golden_w4a8.hpp",
+      "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f"
+    },
+    {
+      "path": "contracts/quant_v1.json",
+      "sha256": "890297e8bca2eeb5b9579ca7e7dc8a6b3126eb98a7dd0474ee1c5fe46dabeb25"
+    },
+    {
+      "path": "contracts/sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "path": "contracts/voice_examples.jsonl",
+      "sha256": "55590befbeca0aa89402113ed72bdf88f7fc6b8e8ac115e1d6bbad4360dc61a2"
+    },
+    {
+      "path": "contracts/voice_v1.json",
+      "sha256": "0ba9699bbf738baf940adf56d202c503ed6343390aaf9086ba1a644b76e6910a"
+    }
+  ],
+  "variants": {
+    "baseline": {
+      "source_sha256": "3b7eb37172fd9264b1db8eaffdbf92183542f0eeb4f8fe52b7eb599e20ec9625",
+      "header_sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+      "synthesis_receipt": "reports/b03/baseline/20261002-133955-4534622/synth.receipt.json",
+      "xo_sha256": "9a90e92cf10f5f86bf63cbdc2dda8477bb9d403407728c403c2487f16bbe0a55",
+      "xo_bytes": 19043778,
+      "kernel_xml_sha256": "ed4983a3b117d1b9fbd3d0ded2421c2d29372299724c6c9792f54544ee874d3a",
+      "private_abi_matches_baseline": true,
+      "physical_port_width_bits": {
+        "M_AXI_GMEM_W": 128,
+        "M_AXI_GMEM_SW": 32,
+        "M_AXI_GMEM_X": 128,
+        "M_AXI_GMEM_Y": 32,
+        "M_AXI_GMEM_META": 512,
+        "S_AXI_CONTROL": 32
+      }
+    },
+    "reuse": {
+      "source_sha256": "25f3f4cb73733b74f9d78661f162be62fc5f9006b1f2b6141055873da58bca95",
+      "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+      "synthesis_receipt": "reports/b03/reuse/20261002-134218-2620940/synth.receipt.json",
+      "xo_sha256": "9243e29a29cbd26513cd85b78e3f22d838f64ab3ce0208d610c664ef70c615a7",
+      "xo_bytes": 19548525,
+      "kernel_xml_sha256": "4abc8b62c2823f299c400272ac8e7d2509a3e9d707fe70691ab80f364fd6fea0",
+      "private_abi_matches_baseline": true,
+      "physical_port_width_bits": {
+        "M_AXI_GMEM_W": 128,
+        "M_AXI_GMEM_SW": 512,
+        "M_AXI_GMEM_X": 128,
+        "M_AXI_GMEM_Y": 32,
+        "M_AXI_GMEM_META": 512,
+        "S_AXI_CONTROL": 32
+      }
+    },
+    "double": {
+      "source_sha256": "25f3f4cb73733b74f9d78661f162be62fc5f9006b1f2b6141055873da58bca95",
+      "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+      "synthesis_receipt": "reports/b03/double/20261002-134315-5763672/synth.receipt.json",
+      "xo_sha256": "b33383c83fd5e986a9b95289a36bd0529a507f8437bc372cbbcdd38bcb6c7e4d",
+      "xo_bytes": 19621131,
+      "kernel_xml_sha256": "139c5acba9bfda48c4967e4f40d4a1bc72a270b874ff4b6d68cd5c3c69f85dcd",
+      "private_abi_matches_baseline": true,
+      "physical_port_width_bits": {
+        "M_AXI_GMEM_W": 128,
+        "M_AXI_GMEM_SW": 512,
+        "M_AXI_GMEM_X": 128,
+        "M_AXI_GMEM_Y": 32,
+        "M_AXI_GMEM_META": 512,
+        "S_AXI_CONTROL": 32
+      }
+    }
+  },
+  "fixed_input_expected_identity": {
+    "reuse": {
+      "synthetic": {
+        "files": 304,
+        "status": "PASS"
+      },
+      "_real": {
+        "files": 32,
+        "status": "PASS"
+      }
+    },
+    "double": {
+      "synthetic": {
+        "files": 304,
+        "status": "PASS"
+      },
+      "_real": {
+        "files": 32,
+        "status": "PASS"
+      }
+    }
+  },
+  "private_meta_bytes": 40,
+  "scope": "Public/B02 source unchanged; synthesized sources and XO private metadata checked. Physical scale port expands 32 to 512 bits; argument/control offsets remain frozen. Not implementation or BOARD proof."
+}

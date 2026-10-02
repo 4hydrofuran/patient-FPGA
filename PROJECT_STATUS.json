@@ -1,9 +1,9 @@
 {
   "role": "B",
-  "stage": "B02",
-  "stage_status": "COMPLETE_OFF_BOARD",
-  "engineering_gate": "NUMERICAL_AND_RTL_PASS_RESOURCE_OPT_TIMING_UNVERIFIED",
-  "updated_at": "2026-10-02T20:02:50.973040+08:00",
+  "stage": "B03",
+  "stage_status": "PAUSED_USER_AFTER_BASELINE",
+  "engineering_gate": "BASELINE_RTL_PASS_OPTIMIZED_RTL_PENDING",
+  "updated_at": "2026-10-03T01:20:03.346980+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -14,10 +14,10 @@
     "changed_by_agent": false
   },
   "domains": {
-    "pc": "PASS_B02_X128",
-    "csim": "PASS_B02_X128",
-    "synthesis": "PASS_B02_X128",
-    "cosim": "PASS_NATIVE_B02_X128",
+    "pc": "PASS_B03_ALL_VARIANTS",
+    "csim": "PASS_B03_ALL_VARIANTS",
+    "synthesis": "PASS_B03_ALL_VARIANTS",
+    "cosim": "PASS_BASELINE_34; REUSE_DOUBLE_PENDING",
     "implementation": "NOT_TESTED",
     "aarch64_build": "NOT_TESTED",
     "board": "NOT_TESTED",
@@ -25,11 +25,11 @@
     "latency": "NOT_TESTED",
     "power": "NOT_TESTED"
   },
-  "domain_scope": "B02 X128 actual PC/Csim/synthesis/native Cosim; implementation, aarch64 and board remain NOT_TESTED.",
+  "domain_scope": "B03 baseline actual RTL 34/34 accepted, including both target shapes T1/T8. User requested pause before optimized RTL runs; B03 final acceptance and candidate selection incomplete.",
   "new_target_shapes": {
     "pc": "PASS_16_COMBINATIONS_T1_TO_T8",
     "csim": "PASS_CURRENT_AND_B2_16_COMBINATIONS",
-    "cosim": "PASS_NATIVE_X128_TWO_T1_SHAPES; B2/T2_TO_T8_NOT_TESTED",
+    "cosim": "PASS_B03_BASELINE_TWO_SHAPES_T1_T8; REUSE_DOUBLE_NOT_COMPLETED",
     "real_tensors": "PASS_PC_TWO_WEIGHTS_TIMES_T1_T8_SYNTHETIC_ACTIVATIONS"
   },
   "inherited_b3_evidence": {
@@ -75,7 +75,7 @@
     "reports/b01/interface_metadata.receipt.json"
   ],
   "blockers": [],
-  "next_action": "Start B03 from B02_X128; validate T1/T8 both target shapes in RTL, weight-tile reuse and decode regression. B04 must verify platform implementation timing.",
+  "next_action": "Await user resume. Finish reuse/double five nominal groups each; compare actual T1/T8 cycles; then integrate five stress selectors into the runner, complete selected random-stall RTL and freeze one candidate.",
   "warnings": [
     "Client model/effort/speed selection is unverified.",
     "Do not treat old dimensions as new model validation.",
@@ -83,13 +83,15 @@
     "First fixture compilation failed due MinGW helper PATH; retained and fixed with process-local PATH.",
     "Managed agent skill config/agent.json absent; local project rules do not claim a full managed governance migration.",
     "Native Vitis Cosim pipeline exited 1 at generated C/link; supplemental actual RTL+postcheck passed using documented local recovery.",
-    "B2 new-shape Cosim and all new-shape T8 RTL remain NOT_TESTED.",
     "Real-weight coverage is two layer0 matrices with synthetic activations, PC only.",
     "HLS timing/resources are estimates, not implementation or board measurements.",
     "B02: CACHE_X improves gate/up T1 RTL latency by 1.29 percent but slows down T1 by 0.25 percent.",
     "B02 X128 native Cosim passed 25/25; gate/up T1 improves 1.29 percent but down T1 slows 0.25 percent versus B01 in XSIM.",
     "B02 X128 HLS slack is -0.37 ns against 6.667 ns target after 1.80 ns uncertainty; implementation and board frequency NOT_TESTED.",
-    "First X128 native compile failed in local MinGW CreateProcess; original log was overwritten on retry, terminal error summarized in evidence/b02/x128_attempt_first/NOTE.md."
+    "First X128 native compile failed in local MinGW CreateProcess; original log was overwritten on retry, terminal error summarized in evidence/b02/x128_attempt_first/NOTE.md.",
+    "B03 paused after baseline completion at explicit user request; optimized RTL and random-stall acceptance pending.",
+    "Baseline down T8 native RTL completed; native postchecker startup failed. Explicit POST_CHECK recovery passed; native CLI remains exit 1 and unobserved RTL child exit is null.",
+    "B2 original new-shape Cosim remains NOT_TESTED; B03 baseline T1/T8 acceptance does not extend that historical claim."
   ],
   "clean_rebuild": "PASS_B01_SOURCE_ZIP_AND_328_VECTOR_HASHES",
   "b01_pc_results": {
@@ -171,5 +173,43 @@
     "lut_hls_estimate": 28006,
     "hls_clock_slack_ns_estimate": -0.37,
     "gmem_x_width_bits": 128
-  }
+  },
+  "b03_variants": {
+    "baseline": {
+      "pc": "PASS",
+      "real_weight_pc": "PASS_SYNTHETIC_ACTIVATIONS",
+      "csim": "PASS",
+      "synthesis": "PASS",
+      "cosim": "PASS_34_NOMINAL_CALLS"
+    },
+    "reuse": {
+      "pc": "PASS",
+      "real_weight_pc": "PASS_SYNTHETIC_ACTIVATIONS",
+      "csim": "PASS",
+      "synthesis": "PASS",
+      "cosim": "NOT_COMPLETED_INTERRUPTED_ATTEMPTS_ONLY"
+    },
+    "double": {
+      "pc": "PASS",
+      "real_weight_pc": "PASS_SYNTHETIC_ACTIVATIONS",
+      "csim": "PASS",
+      "synthesis": "PASS",
+      "cosim": "NOT_COMPLETED_INTERRUPTED_ATTEMPTS_ONLY"
+    }
+  },
+  "b03_progress": {
+    "baseline_rtl_passed_calls": 34,
+    "baseline_rtl_required_calls": 34,
+    "active": null,
+    "postcheck_consumer_negative_probe": "PASS",
+    "evidence": "reports/b03/postcheck_consumer_proof.json",
+    "nominal_passed_calls_by_variant": {
+      "baseline": 34,
+      "reuse": 0,
+      "double": 0
+    },
+    "paused_by_user": true
+  },
+  "b03_candidate": "NOT_SELECTED",
+  "b03_random_stall_rtl": "NOT_TESTED"
 }

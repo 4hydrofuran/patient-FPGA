@@ -1,0 +1,29 @@
+{
+  "stage": "B03",
+  "variant": "double",
+  "step": "native_test",
+  "executable": "D:\\KV260-project-HLS\\b_qwen35\\build\\b03_double\\numerical_test.exe",
+  "arguments": [
+    "--suite",
+    "full",
+    "--dump",
+    "vectors/b03_double"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.384087,
+  "log": "logs/b03/double/20261002-134315-5763672/native_test.log",
+  "input_sha256": {
+    "src/w4a8_prefill_v1.cpp": "25F3F4CB73733B74F9D78661F162BE62FC5F9006B1F2B6141055873DA58BCA95",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_v1.cpp": "F51A3A0D2C62B96239AD82E3A9F3492B94B9DCFDD7EB86FF26C0E0DA890DFD00",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_double.cfg": "0B82FF83976C972237A895DBA1E2C5CD12BE8A8A0B8B4DDD7A76BC5AC70364D0",
+    "run_prefill.ps1": "E61CC5989AA48E74A118EED8FEDD73FB61213A1D1577B246C6A73DA246D13B4A"
+  },
+  "finished_at_utc": "2026-10-02T13:43:24.4786625Z"
+}

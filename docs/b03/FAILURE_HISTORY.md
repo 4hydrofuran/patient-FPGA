@@ -1,0 +1,19 @@
+# B03 失败与中断记录
+
+- 2026-10-02 初次 baseline native_compile 两次失败：MinGW子进程CreateProcess失败（cc1plus、collect2）。对应非零退出码和原始日志在 reports/b03/baseline/20261002-133919-3365749、20261002-133932-5838110。第三次编译及数值运行通过，没有修改数学或放宽容差。
+- 三版并行Cosim启动后，Xsim内核每个接近9GB工作集，32GB主机出现内存压力。double被主动停止，原生Cosim退出1，不能记为PASS。
+- 对话中断后baseline/reuse残留后台任务未完成；本次用户要求单独重跑，停止已核实的本项目进程，保留中断日志/波形/性能片段到 evidence/b03/rtl_interrupted_*，对应文件哈希在 reports/b03/interrupted_*.json。
+- run_prefill.ps1新增独占运行锁和本工程残留Xsim检查，今后B03域验证串行执行。
+- 首轮启动时runner脚本曾在其他步骤运行期间扩展stress入口，因此旧收据中的runner磁盘SHA并不总等于该PowerShell进程已加载的runner版本；原启动版本保存在 evidence/b03/initial_runner/run_prefill.ps1。核源码、测试和cfg本身的指纹独立保存，数值证据不据此扩大范围。本次串行RTL使用稳定runner和实际命令另记新收据。
+
+所有中断尝试均与成功结果分开保存，不计入功能通过次数。
+
+- 五组串行入口的原生准备在本机多次遇到Windows辅助工具/链接器启动问题。恢复过程曾因长绝对object路径、collect2搜索目录、POST_CHECK程序缺失、make辅助路径及clang配套DLL缺失被保护条件拒绝；这些失败收据仍保留。逐项修复后才运行真实RTL并回放实际输出，没有以链接成功代替功能PASS。run_prefill.ps1仅使用已安装工具，所有环境调整局限于单个进程。
+- stress用例拆成basic/lifecycle/tail/max_k/max_n，完整32笔PC检查以及五组12/11/7/1/1笔均通过，原smoke入口和所有用例仍保留。首次手动编译因MinGW CreateProcess失败，成功重试日志为logs/b03/stress_split_compile_retry.log；尚需候选的五组随机背压RTL逐一通过后才计入最终验收。
+
+- baseline串行尝试20261002-140135-4606602运行约1719秒后停止，退出1。进度30/34，未进行最终RTL数值回放。xsimk私有内存约16.8GB、所有线程等待，CPU累计约532秒长时间不再增长；Windows可用提交内存约1.3GB。资源停滞为怀疑原因，未证明核逻辑错误或内存泄漏。保留evidence/b03/serial_stalled_baseline及reports/b03/serial_stalled_baseline.json。
+- 用户同意把原有用例拆组串行执行。smoke保留前30笔边界/错误/重复/尾块；四个b03_*单矩阵suite使用原seed与同一golden。普通大矩阵关闭端口波形，背压测试保留端口波形；不改核源码、数学、门槛或测试集合。当前testbench只新增选择入口，原full及b03_cosim保留。
+- 分组首次20261002-150642-7454082在wrapc启动工具失败；重试20261002-150840-5372719在xelab的xsim_48.c编译失败。详细诊断显示Vivado内置GCC的CreateProcess错误。进程级PATH优先加入该GCC配套bin后，相同cc1及同一xsim_48.c单独编译均退出0；因此runner的RDI_PREPEND_PATH加入已存在的配套bin。未更改工具安装或全局环境。诊断命令一次因PowerShell传递--lib缺少cmd内层引号而失败，另一次脚本末行掩盖xelab失败，均仅为诊断，不计验证PASS。
+
+- baseline down_t8尝试20261002-163922-9538795在clang启动阶段失败，未进入RTL；完整日志保留。重试20261002-164127-3944097的真实RTL在2026-10-03 01:07:45结束，完整1/1、周期2,555,583；原生C post checking启动失败导致CLI退出1，故当时未计PASS。20261002-171355-5951792显式POST_CHECK重建与真实输出回放退出0，原始RTL文件SHA不变，最终标PASS_POSTCHECK_RECOVERED。先前make别名启动失败也保留日志，最终改用既有make.exe。
+- 用户要求在基线完成后暂停开发并上传三方案。baseline五组34笔集合已完整验收，后续reuse/double RTL与随机背压未启动，本轮不冻结最终候选。

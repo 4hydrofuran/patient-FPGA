@@ -2,3 +2,19 @@
 *.bin -text
 *.zip -text
 *.xo -text
+
+# B03 frozen sources and evidence retain exact bytes for recorded SHA256 receipts.
+baseline/b02/** -text
+contracts/** -text
+evidence/b03/** -text
+reports/b03/** -text
+src/w4a8_prefill_v1.cpp -text
+src/w4a8_linear_v1.hpp -text
+tb/tb_prefill*.cpp -text
+tb/golden_w4a8.hpp -text
+host/linear_validation.hpp -text
+reference/quantization.hpp -text
+tests/support/quantization_checks.hpp -text
+tests/numerical/prefill_tensor_replay.cpp -text
+hls_prefill*.cfg -text
+run_prefill.ps1 -text

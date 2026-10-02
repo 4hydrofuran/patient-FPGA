@@ -1,5 +1,7 @@
 # 成员B：Qwen3.5计算后端
 
+当前为 **B03阶段性暂停（2026-10-03，用户要求）**：baseline、reuse、double三个方案的源码及独立配置已整理；三版PC/Csim/综合通过，baseline分组RTL 34/34通过，reuse/double完整RTL与候选随机背压尚未完成，最终候选尚未冻结。入口为 [三方案状态与恢复说明](docs/b03/THREE_SCHEMES_STATUS.md)。本轮停止继续仿真；不要把此快照当作B03最终验收。
+
 B02 无板访存消融已完成，选 `B02_X128` 作为 B03 开发基线：在每 token A8 缓存上将激活 AXI 口从 512 bit 限为 128 bit。它使 HLS 估计 BRAM_18K 从 CACHE_X 的 120 降到 78，两种目标 T=1 尺寸分别只多 1 个 XSIM 周期；相对 B01，gate/up 快约 1.29%，down 慢约 0.25%。X128 原生 Cosim 25/25 通过，但实现时序和板测未做。运行 `.\run_b02_x128.ps1 -Target native|csim|synth|cosim` 复现新候选；旧 `B02_CACHE_X` 及冻结 B01 配置继续保留。完整选型、消融、证据和限制见 `docs/b02/SELECTION_AND_DELIVERY.md`，当前分域状态以 `PROJECT_STATUS.json` 为准。
 
 B01已完成，工程数值门槛PASS；B01 复现仍读 docs/b01/TEST_PLAN.md 和 docs/b01/workload.json。

@@ -1,0 +1,50 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "method": "HTTP Range, exact Content-Range and length checked; no full model download",
+  "tensors": [
+    {
+      "tensor": "model.language_model.layers.0.mlp.gate_proj.weight",
+      "shape": [
+        3584,
+        1024
+      ],
+      "dtype": "BF16",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_bytes": 1746942600,
+      "full_source_file_sha256": null,
+      "data_offsets": [
+        536998048,
+        544338080
+      ],
+      "tensor_sha256": "ac1e1d4df4f3adca7e0bc15ee7310ce093f9108baa712cfb86f57b03e6d6e140",
+      "raw_file": "gate_proj.bf16.bin",
+      "fp32_file": "gate_proj.fp32.bin",
+      "fp32_sha256": "f08132f6e2895034a77515bb350c6dd80d681d5d4b0cd71a8917e8a0bff1f56d",
+      "conversion": "BF16 bits shifted left 16, no numeric approximation",
+      "activation_source": "synthetic_seeded_not_real_layer_activation"
+    },
+    {
+      "tensor": "model.language_model.layers.0.mlp.down_proj.weight",
+      "shape": [
+        1024,
+        3584
+      ],
+      "dtype": "BF16",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_bytes": 1746942600,
+      "full_source_file_sha256": null,
+      "data_offsets": [
+        529658016,
+        536998048
+      ],
+      "tensor_sha256": "57c93b2a4452740b0b82386debc7c66df7774f98425a0253dd9d3e7006e989ac",
+      "raw_file": "down_proj.bf16.bin",
+      "fp32_file": "down_proj.fp32.bin",
+      "fp32_sha256": "cd776f65ba064083c91503a5ac624289ff63682404092d3e8cf4cafe7e4a1dd0",
+      "conversion": "BF16 bits shifted left 16, no numeric approximation",
+      "activation_source": "synthetic_seeded_not_real_layer_activation"
+    }
+  ],
+  "scope": "Two layer-0 MLP tensors only; not 72 tensors, whole-model inference or teacher-forced activations."
+}
