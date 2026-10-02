@@ -1,0 +1,77 @@
+{
+  "role": "B",
+  "stage": "B00",
+  "stage_status": "COMPLETE_WITH_CLIENT_SETTING_NOTE",
+  "engineering_gate": "PASS",
+  "updated_at": "2026-10-02T14:15:21.585071+08:00",
+  "workspace": "D:\\KV260-project-HLS\\b_qwen35",
+  "branch": "b/qwen35-compute",
+  "model_on_board": "Qwen/Qwen3.5-0.8B",
+  "codex_selection": {
+    "required": "GPT-6.1 Sol / High / Standard",
+    "actual": null,
+    "verified": false,
+    "changed_by_agent": false
+  },
+  "domains": {
+    "pc": "PASS",
+    "csim": "NOT_TESTED",
+    "synthesis": "NOT_TESTED",
+    "cosim": "NOT_TESTED",
+    "implementation": "NOT_TESTED",
+    "aarch64_build": "NOT_TESTED",
+    "board": "NOT_TESTED",
+    "quality": "NOT_TESTED",
+    "latency": "NOT_TESTED",
+    "power": "NOT_TESTED"
+  },
+  "domain_scope": "Only checks executed in B00; historical PASS is separately retained below.",
+  "new_target_shapes": {
+    "pc": "NOT_TESTED",
+    "csim": "NOT_TESTED",
+    "cosim": "NOT_TESTED",
+    "real_tensors": "NOT_TESTED"
+  },
+  "inherited_b3_evidence": {
+    "source": "evidence/history/b3_manifest.json",
+    "native": "PASS",
+    "csim": "PASS",
+    "synthesis": "PASS",
+    "cosim": "PASS",
+    "xo": "PASS",
+    "data": "old shapes and fixed-seed synthetic inputs; not Qwen3.5 validation",
+    "readability": "NOT_PASS"
+  },
+  "b00_pc_results": {
+    "public_c11": "PASS",
+    "public_cpp17": "PASS",
+    "public_fixture_transactions": 3,
+    "inherited_native_transactions": 21,
+    "int32_partial_checks": 75963,
+    "fp32_output_checks": 7712,
+    "b2_same_input_cases": 15
+  },
+  "public_library_implementation": "NOT_IMPLEMENTED_B04",
+  "public_contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "model_revision": null,
+  "board_available": null,
+  "board_date": "UNKNOWN",
+  "platform_profile": null,
+  "evidence": [
+    "reports/bootstrap.receipt.json",
+    "reports/b00_checks.receipt.json",
+    "reports/preservation.receipt.json",
+    "evidence/b00/attempt_first/b00_checks.receipt.json",
+    "reports/clean_repro.receipt.json"
+  ],
+  "blockers": [],
+  "next_action": "B01: expand X/Y Cosim/TB windows and add deterministic new-shape T1..8 numerical regressions and public numeric negative cases.",
+  "warnings": [
+    "Client model/effort/speed selection is unverified.",
+    "Do not treat old dimensions as new model validation.",
+    "C ABI declarations are not linked implementations.",
+    "First fixture compilation failed due MinGW helper PATH; retained and fixed with process-local PATH.",
+    "Managed agent skill config/agent.json absent; local project rules do not claim a full managed governance migration."
+  ],
+  "clean_rebuild": "PASS"
+}

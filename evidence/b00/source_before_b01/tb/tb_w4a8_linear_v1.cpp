@@ -1,13 +1,7 @@
 // B3 合成向量 testbench：独立行主序 golden、32-lane 部分和、真实尺寸与错误语义。
 
 // 引入冻结 ABI 和被测实际 32-lane 数据通路声明。
-#ifdef B01_BASELINE
-#include "../baseline/b2/src/w4a8_linear_v1.hpp"
-#else
 #include "../src/w4a8_linear_v1.hpp"
-#endif
-#include "../host/linear_validation.hpp"
-#include "../tests/support/quantization_checks.hpp"
 
 // 期望值来自未打包矩阵的独立参考，绝不把 HLS 函数当作 expected。
 #include "golden_w4a8.hpp"
@@ -28,9 +22,9 @@ namespace {
 // 联合仿真包装器会复制完整 depth，所有用例必须为每个端口预留该窗口。
 constexpr std::size_t kWDepth = 2179072U;
 constexpr std::size_t kSwDepth = 34048U;
-constexpr std::size_t kXDepth = 38912U;
+constexpr std::size_t kXDepth = 4864U;
 constexpr std::size_t kSxDepth = 8U;
-constexpr std::size_t kYDepth = 38912U;
+constexpr std::size_t kYDepth = 4864U;
 
 // 检查计数用于审计 PASS 实际覆盖了多少整数项与输出项。
 std::uint64_t partial_checks = 0;
@@ -71,7 +65,6 @@ struct Case {
     std::vector<std::int8_t> x;
     std::vector<float> sx;
     std::vector<float> y;
-    bool public_case = false;
     w4a8_b2::KernelMeta meta{};
 
     // 每个端口额外留一个软件 guard；RTL 包装器只拷贝 depth，不应访问 guard。
@@ -108,7 +101,7 @@ void fill_random(Case& c, bool zero = false, bool extremes = false, bool nonbina
     for (std::uint32_t token = 0; token < c.t; ++token) {
 
         // 多 token 测试用于兼容性，首轮吞吐优化目标仍只针对 T=1。
-        c.sx[token] = nonbinary ? (0.3F + token * 0.013F) : std::ldexp(1.0F, -static_cast<int>(token % 4U + 1U));
+        c.sx[token] = nonbinary ? 0.3F : std::ldexp(1.0F, -static_cast<int>(token % 4U + 1U));
 
         // A8 合法极值采用对称范围 -127..127。
         for (std::uint32_t col = 0; col < c.k; ++col) {
@@ -205,15 +198,8 @@ void check_partials(const Case& c, const GoldenResult& expected) {
             for (std::uint32_t group = 0; group < c.groups; ++group) {
 
                 // 观察值来自被测 helper，expected 始终来自 dense golden。
-#ifdef B01_BASELINE
-                // 旧B2独立helper逐lane对照，同样不用于生成expected。
-                for (std::uint32_t lane=0; lane<32U; ++lane) {
-                    observed[lane]=w4a8_group_sum(c.w.data(),c.x.data(),block,lane,group,c.groups,token,c.kp);
-                }
-#else
                 w4a8_tile_group_sums(c.w.data() + (static_cast<std::size_t>(block) * c.groups + group) * 2048U,
                                      c.x.data() + static_cast<std::size_t>(token) * c.kp + group * 128U, observed);
-#endif
 
                 // N padding 没有数学输出，只检查实际有效的 lane。
                 for (std::uint32_t lane = 0; lane < 32U && block * 32U + lane < c.n; ++lane) {
@@ -255,6 +241,56 @@ void run_case(Case& c, const std::string& dump_dir, bool repeat = false) {
     // 每个用例从其独立数学输入产生 golden，绝不读 HLS 结果生成期望。
     const GoldenResult expected = golden_dense(c.t, c.n, c.k, c.np, c.kp, c.dense_w, c.dense_sw, c.x, c.sx);
 
+    // 检查实际 32-lane helper；这不是对 RTL 内部信号的直接观测。
+    check_partials(c, expected);
+
+    // 给完成计数明确的初值，使多次调用行为可重复。
+    c.meta.hw_completed_count = 41ULL;
+
+    // 软件计时不能替代核周期，testbench 只给输入与结果的功能证据。
+    invoke(c, 1000ULL + transactions);
+
+    // 元数据与冻结布局一致，构建标识使用本轮 B3 版本。
+    check(c.meta.status == 0U && c.meta.done == 1U && c.meta.abi_magic == 0x57344138U &&
+          c.meta.kernel_build_id == 0xB3000001U && c.meta.hw_completed_count == 42ULL &&
+          c.meta.job_id == 999ULL + transactions &&
+          c.meta.algorithm_weight_bytes == static_cast<std::uint64_t>(c.np) * c.kp / 2ULL, "meta: " + c.name);
+
+    // FP32 采用 B2 已有的绝对阈值 1e-6，并明确拒绝 NaN/Inf 假通过。
+    for (std::size_t i = 0; i < expected.y.size(); ++i) {
+
+        // 一旦超过阈值，保存首个坐标和实际数值便于回放。
+        check(std::isfinite(c.y[i]) && std::fabs(c.y[i] - expected.y[i]) <= 1.0e-6F,
+              c.name + " y[" + std::to_string(i) + "] expected=" + std::to_string(expected.y[i]) + " observed=" + std::to_string(c.y[i]));
+
+        // 计入 padding 输出，保证末尾 lane 也被检查。
+        ++output_checks;
+    }
+
+    // 检查逻辑输出结束到 cosim 窗口结束之间没有多余写入。
+    for (std::size_t i = expected.y.size(); i < c.y.size(); ++i) {
+
+        // 软件 guard 和业务窗口后的 sentinel 保持原值。
+        check(c.y[i] == -1234.5F, "output guard: " + c.name);
+    }
+
+    // 重复调用复用相同 BO，以不同 job 检查状态和累计计数。
+    if (repeat) {
+
+        // 再次执行完整矩阵，而不是仅调用一个 tile。
+        invoke(c, 7777ULL);
+
+        // job_id 和完成计数必须来自第二次调用。
+        check(c.meta.job_id == 7777ULL && c.meta.hw_completed_count == 43ULL && c.meta.status == 0U && c.meta.done == 1U, "repeat meta: " + c.name);
+
+        // 复用缓冲后的全部输出仍与独立 golden 一致。
+        for (std::size_t i = 0; i < expected.y.size(); ++i) {
+
+            // 检查第二次调用没有保留前次内部累加状态。
+            check(std::isfinite(c.y[i]) && std::fabs(c.y[i] - expected.y[i]) <= 1.0e-6F, "repeat output: " + c.name);
+        }
+    }
+
     // native 阶段可导出全部输入和 expected，Vitis 默认仅执行功能回归。
     if (!dump_dir.empty()) {
 
@@ -280,72 +316,12 @@ void run_case(Case& c, const std::string& dump_dir, bool repeat = false) {
         description << "{\"case\":\"" << c.name << "\",\"source\":\"synthetic\",\"seed\":" << c.seed
                     << ",\"T\":" << c.t << ",\"N\":" << c.n << ",\"K\":" << c.k
                     << ",\"Np\":" << c.np << ",\"Kp\":" << c.kp << ",\"G\":" << c.groups
-                    << ",\"endianness\":\"little\",\"absolute_fp32_tolerance\":" << (c.public_case ? 1e-4 : 1e-6) << ",\"relative_fp32_tolerance\":" << (c.public_case ? 1e-5 : 0.0) << ",\"partials_layout\":\"T,Np,G\"}\n";
+                    << ",\"endianness\":\"little\",\"absolute_fp32_tolerance\":1e-6,\"partials_layout\":\"T,Np,G\"}\n";
 
         // JSON 写失败也影响最终验收状态。
         check(static_cast<bool>(description), "case metadata write: " + c.name);
     }
 
-    // 检查实际 32-lane helper；这不是对 RTL 内部信号的直接观测。
-    check_partials(c, expected);
-
-    // 给完成计数明确的初值，使多次调用行为可重复。
-    c.meta.hw_completed_count = 41ULL;
-
-    // 软件计时不能替代核周期，testbench 只给输入与结果的功能证据。
-    invoke(c, 1000ULL + transactions);
-
-    // 元数据与冻结布局一致，构建标识使用本轮 B3 版本。
-    check(c.meta.status == 0U && c.meta.done == 1U && c.meta.abi_magic == 0x57344138U &&
-          c.meta.kernel_build_id == w4a8_b2::kKernelBuildId && c.meta.hw_completed_count == 42ULL &&
-          c.meta.job_id == 999ULL + transactions &&
-          c.meta.algorithm_weight_bytes == static_cast<std::uint64_t>(c.np) * c.kp / 2ULL, "meta: " + c.name);
-
-    // 新形状按公共atol/rtol；历史用例保留原1e-6门槛，不混改旧证据。
-    double squared_error=0.0, squared_reference=0.0;
-    float maximum_error=0.0F;
-    const float atol=c.public_case ? 1.0e-4F : 1.0e-6F;
-    const float rtol=c.public_case ? 1.0e-5F : 0.0F;
-    for (std::size_t i = 0; i < expected.y.size(); ++i) {
-
-        // 一旦超过阈值，保存首个坐标和实际数值便于回放。
-        check(std::isfinite(c.y[i]) && std::fabs(c.y[i] - expected.y[i]) <= atol + rtol * std::fabs(expected.y[i]),
-              c.name + " y[" + std::to_string(i) + "] expected=" + std::to_string(expected.y[i]) + " observed=" + std::to_string(c.y[i]));
-
-        // 统计实际误差与参考能量，NRMSE只作为数值诊断，不作性能指标。
-        const double error=static_cast<double>(c.y[i])-expected.y[i];
-        squared_error+=error*error;
-        squared_reference+=static_cast<double>(expected.y[i])*expected.y[i];
-        maximum_error=std::max(maximum_error,std::fabs(c.y[i]-expected.y[i]));
-        ++output_checks;
-    }
-
-    // 检查逻辑输出结束到 cosim 窗口结束之间没有多余写入。
-    for (std::size_t i = expected.y.size(); i < c.y.size(); ++i) {
-
-        // 软件 guard 和业务窗口后的 sentinel 保持原值。
-        check(c.y[i] == -1234.5F, "output guard: " + c.name);
-    }
-
-    // 重复调用复用相同 BO，以不同 job 检查状态和累计计数。
-    if (repeat) {
-
-        // 再次执行完整矩阵，而不是仅调用一个 tile。
-        invoke(c, 7777ULL);
-
-        // job_id 和完成计数必须来自第二次调用。
-        check(c.meta.job_id == 7777ULL && c.meta.hw_completed_count == 43ULL && c.meta.status == 0U && c.meta.done == 1U, "repeat meta: " + c.name);
-
-        // 复用缓冲后的全部输出仍与独立 golden 一致。
-        for (std::size_t i = 0; i < expected.y.size(); ++i) {
-
-            // 检查第二次调用没有保留前次内部累加状态。
-            check(std::isfinite(c.y[i]) && std::fabs(c.y[i] - expected.y[i]) <= atol + rtol * std::fabs(expected.y[i]), "repeat output: " + c.name);
-        }
-    }
-
-    const double nrmse=squared_reference==0.0 ? (squared_error==0.0 ? 0.0 : std::numeric_limits<double>::infinity()) : std::sqrt(squared_error/squared_reference);
-    std::cout << "METRICS case=" << c.name << " max_abs=" << maximum_error << " nrmse=" << nrmse << " atol=" << atol << " rtol=" << rtol << '\n';
     // 日志逐条列出真实检查的形状，避免仅一个笼统 PASS。
     std::cout << "PASS case=" << c.name << " T=" << c.t << " N=" << c.n << " K=" << c.k << " source=synthetic seed=" << c.seed << '\n';
 }
@@ -399,78 +375,6 @@ void run_error_cases() {
 
     // 错误事务也单独留痕，不混在合法数值用例数量中。
     std::cout << "PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble\n";
-}
-
-
-// 公共主机校验与旧核错误域分开。拒绝时不启动核、不修改meta、不消费上次Y。
-void run_public_errors() {
-    Case c("public_errors",1U,33U,129U,0x20261002U);
-    fill_random(c); pack(c);
-    c.meta.hw_completed_count=19;
-    unsigned checks=0;
-    auto request=[&]() { return host_b::Request{c.t,c.n,c.k,c.w.data(),c.sw.data(),c.x.data(),c.sx.data(),c.y.data(),
-        static_cast<std::uint64_t>(c.np)*c.kp/2U,static_cast<std::uint64_t>(c.np)*c.groups*4U,
-        static_cast<std::uint64_t>(c.t)*c.kp,c.t*4U,static_cast<std::uint64_t>(c.t)*c.np*4U,55}; };
-    auto reject=[&](host_b::Request r, int expected, const char* label) {
-        const auto saved_meta=c.meta;
-        const auto saved_y=c.y;
-        const auto saved_transactions=transactions;
-        const int code=host_b::validate(r);
-        if(code==SP_OK) invoke(c,r.job);
-        check(code==expected && std::memcmp(&c.meta,&saved_meta,sizeof(saved_meta))==0 && c.y==saved_y && transactions==saved_transactions,label);
-        ++checks;
-        std::cout << "PASS host_rejection=" << label << " public_status=" << code << " kernel_started=false output_consumed=false\n";
-    };
-    check(host_b::validate(request())==SP_OK,"valid public request");
-    auto r=request();r.job=0;reject(r,SP_BAD_ARGUMENT,"zero_job");
-    r=request();r.t=0;reject(r,SP_BAD_ARGUMENT,"zero_t");
-    r=request();r.t=9;reject(r,SP_BAD_ARGUMENT,"t_overflow");
-    r=request();r.n=4865;reject(r,SP_BAD_ARGUMENT,"n_overflow");
-    r=request();r.k=0;reject(r,SP_BAD_ARGUMENT,"zero_k");
-    r=request();r.w=nullptr;reject(r,SP_BAD_ARGUMENT,"null_weight");
-    r=request();r.sw=nullptr;reject(r,SP_BAD_ARGUMENT,"null_sw");
-    r=request();r.x=nullptr;reject(r,SP_BAD_ARGUMENT,"null_x");
-    r=request();r.sx=nullptr;reject(r,SP_BAD_ARGUMENT,"null_sx");
-    r=request();r.y=nullptr;reject(r,SP_BAD_ARGUMENT,"null_y");
-    r=request();--r.wb;reject(r,SP_BUFFER_TOO_SMALL,"short_weight");
-    r=request();--r.swb;reject(r,SP_BUFFER_TOO_SMALL,"short_sw");
-    r=request();--r.xb;reject(r,SP_BUFFER_TOO_SMALL,"short_x");
-    r=request();--r.sxb;reject(r,SP_BUFFER_TOO_SMALL,"short_sx");
-    r=request();--r.yb;reject(r,SP_BUFFER_TOO_SMALL,"short_y");
-    const auto original_x=c.x;
-    c.x[0]=-128;reject(request(),SP_NUMERIC_ERROR,"reserved_a8");c.x=original_x;
-    c.x[c.k]=1;reject(request(),SP_NUMERIC_ERROR,"activation_padding");c.x=original_x;
-    const auto original_w=c.w;
-    c.w[0]=(c.w[0]&0xf0U)|8U;reject(request(),SP_NUMERIC_ERROR,"reserved_w4_low");c.w=original_w;
-    c.w[0]=(c.w[0]&0x0fU)|0x80U;reject(request(),SP_NUMERIC_ERROR,"reserved_w4_high");c.w=original_w;
-    c.w[3U*2048U+16U]=1;reject(request(),SP_NUMERIC_ERROR,"weight_k_padding");c.w=original_w;
-    c.w[3U*2048U]|=0x10U;reject(request(),SP_NUMERIC_ERROR,"weight_n_padding");c.w=original_w;
-    const auto original_sw=c.sw;
-    c.sw[3U*32U+1U]=2.0F;reject(request(),SP_NUMERIC_ERROR,"scale_padding");c.sw=original_sw;
-    const float invalid[]={0.0F,-1.0F,std::numeric_limits<float>::quiet_NaN(),std::numeric_limits<float>::infinity(),-std::numeric_limits<float>::infinity()};
-    const char* labels[]={"zero","negative","nan","positive_inf","negative_inf"};
-    for(unsigned i=0;i<5;++i) {
-        c.sw[0]=invalid[i];reject(request(),SP_NUMERIC_ERROR,(std::string("sw_")+labels[i]).c_str());c.sw=original_sw;
-        c.sx[0]=invalid[i];reject(request(),SP_NUMERIC_ERROR,(std::string("sx_")+labels[i]).c_str());c.sx[0]=1.0F;
-    }
-    std::cout << "PASS host_validation rejection_cases=" << checks << " domain=HOST_ADAPTER\n";
-}
-
-// 重复job不当作去重键；每次成功都递增真实核写回的完成计数。
-void run_repeat_jobs(const std::string& dump_dir) {
-    Case c("repeat_jobs",2U,33U,129U,0x20261002U+32U);
-    fill_random(c);pack(c);run_case(c,dump_dir,true);
-    const auto saved=c.y;
-    invoke(c,7777ULL);
-    check(c.meta.job_id==7777ULL && c.meta.hw_completed_count==44ULL && c.y==saved,"same job repeated");
-    invoke(c,8888ULL);
-    check(c.meta.job_id==8888ULL && c.meta.hw_completed_count==45ULL && c.y==saved,"different job repeated");
-    const auto byte=c.w[0];c.w[0]=(byte&0xf0U)|8U;
-    invoke(c,8888ULL);
-    check(c.meta.status==5 && c.meta.hw_completed_count==45ULL && c.y==saved,"failed run must not consume old output");
-    c.w[0]=byte;invoke(c,9999ULL);
-    check(c.meta.status==0 && c.meta.job_id==9999ULL && c.meta.hw_completed_count==46ULL && c.y==saved,"valid recovery after input error");
-    std::cout << "PASS repeat_jobs same_and_different=verified successes=5 rejected=1 kernel_count=46 output_consumed_on_error=false\n";
 }
 
 }  // namespace
@@ -534,40 +438,30 @@ int main(int argc, char** argv) {
         run_case(padding, dump_dir);
         check(padding.y[0] == 6.0F, "padding ignored");
 
-        // 所有参考/适配层检查是主机端测试，不能声明观测RTL内部分支。
-        run_quantization_checks();
-        run_public_errors();
-        run_repeat_jobs(dump_dir);
-        // 任一私有核错误事务必须保留全部 y，且不得增加完成计数。
+        // 任一错误事务必须保留全部 y，且不得增加完成计数。
         run_error_cases();
 
+        // 合成真实尺寸可验证地址和容量，不代表拿到了模型真实权重或训练数据。
         if (suite != "smoke") {
-            if(suite=="full") {
-                const std::uint32_t old_shapes[][2]={{4864,896},{896,4864},{896,896},{128,896}};
-                const char* old_names[]={"mlp_up_synthetic","mlp_down_synthetic","projection_synthetic","small_projection_synthetic"};
-                for(unsigned i=0;i<4;++i) {
-                    Case c(old_names[i],1U,old_shapes[i][0],old_shapes[i][1],0x48640896U+i);
-                    fill_random(c);pack(c);run_case(c,dump_dir);
-                }
-            }
-            const std::uint32_t shapes[][2]={{3584,1024},{1024,3584}};
-            const char* names[]={"qwen35_gate_up_t","qwen35_down_t"};
-            for(unsigned shape=0;shape<2;++shape) {
-                const unsigned last=suite=="cosim" ? 1U : 8U;
-                for(unsigned t=1;t<=last;++t) {
-                    Case c(std::string(names[shape])+std::to_string(t),t,shapes[shape][0],shapes[shape][1],0x20261002U+shape*256U+t);
-                    c.public_case=true;
-                    fill_random(c,false,false,true);pack(c);
-                    const host_b::Request r{c.t,c.n,c.k,c.w.data(),c.sw.data(),c.x.data(),c.sx.data(),c.y.data(),
-                        static_cast<std::uint64_t>(c.np)*c.kp/2U,static_cast<std::uint64_t>(c.np)*c.groups*4U,
-                        static_cast<std::uint64_t>(c.t)*c.kp,c.t*4U,static_cast<std::uint64_t>(c.t)*c.np*4U,100};
-                    check(host_b::validate(r)==SP_OK,"new-shape public inputs");
-                    run_case(c,dump_dir);
-                }
+
+            // 第一、第二项为真实 up/down 尺寸；后两项仅在完整 Csim/native 中执行。
+            const std::uint32_t real_shapes[][2] = {{4864,896},{896,4864},{896,896},{128,896}};
+            const char* real_names[] = {"mlp_up_synthetic","mlp_down_synthetic","projection_synthetic","small_projection_synthetic"};
+
+            // Cosim 有界选择代表性 up/down，并通过日志明确子集。
+            const std::size_t count = suite == "cosim" ? 2U : 4U;
+
+            // 不复用已有核输出，真实尺寸也逐组与 dense golden 比对。
+            for (std::size_t i = 0; i < count; ++i) {
+                Case c(real_names[i], 1U, real_shapes[i][0], real_shapes[i][1], 0x48640896U + static_cast<std::uint32_t>(i));
+                fill_random(c);
+                pack(c);
+                run_case(c, dump_dir);
             }
         }
+
         // PASS 包括输入来源、suite、事务数与逐项比较计数，避免将合成数据说成训练集。
-        std::cout << "B01 PASS suite=" << suite << " source=synthetic transactions=" << transactions
+        std::cout << "B3 PASS suite=" << suite << " source=synthetic transactions=" << transactions
                   << " int32_partial_checks=" << partial_checks << " fp32_output_checks=" << output_checks << '\n';
 
         // 只有全部检查通过才返回成功。
@@ -575,7 +469,7 @@ int main(int argc, char** argv) {
     } catch (const std::exception& error) {
 
         // 首个失败携带用例坐标，可用已落盘或固定 seed 输入复现。
-        std::cerr << "B01 FAIL: " << error.what() << '\n';
+        std::cerr << "B3 FAIL: " << error.what() << '\n';
 
         // Vitis 与自动化都可通过非零返回值判失败。
         return 1;

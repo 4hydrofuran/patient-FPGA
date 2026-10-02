@@ -23,7 +23,7 @@ constexpr std::uint32_t kAbiVersion = 1;
 constexpr std::uint32_t kAbiMagic = 0x57344138U;
 
 // 区分 B3 的 32-lane 构建与已保留的 B2 串行构建，不改变 ABI。
-constexpr std::uint32_t kKernelBuildId = 0xB3010001U;
+constexpr std::uint32_t kKernelBuildId = 0xB3000001U;
 
 // 状态码明确区分参数错误、缓冲错误和非法 W4 码。
 enum KernelStatus : std::uint32_t {

@@ -41,21 +41,11 @@ int main() {
     struct Shape { const char* name; std::uint32_t t, n, k; };
 
     // 包括手算、边界、多 token 兼容与四种实际尺寸的合成向量。
-    std::vector<Shape> cases = {{"hand_sample",1,2,2},{"tile_random",1,32,128},{"nk_tail",1,33,129},
+    const Shape cases[] = {{"hand_sample",1,2,2},{"tile_random",1,32,128},{"nk_tail",1,33,129},
         {"three_groups",1,65,257},{"single",1,1,1},{"zeros",1,33,129},{"extremes",1,32,128},
         {"t4_compat",4,33,129},{"t8_compat",8,1,1},{"nonbinary_scale",1,32,128},
         {"padding_reserved",1,1,1},{"mlp_up_synthetic",1,4864,896},{"mlp_down_synthetic",1,896,4864},
         {"projection_synthetic",1,896,896},{"small_projection_synthetic",1,128,896}};
-
-    // 新形状名称存储预留容量，保持c_str指针在全部调用期间有效。
-    std::vector<std::string> new_names;new_names.reserve(16);
-    for(unsigned shape=0;shape<2;++shape) {
-        for(unsigned t=1;t<=8;++t) {
-            new_names.push_back(std::string(shape==0 ? "qwen35_gate_up_t" : "qwen35_down_t")+std::to_string(t));
-            cases.push_back(Shape{new_names.back().c_str(),t,shape==0 ? 3584U : 1024U,shape==0 ? 1024U : 3584U});
-        }
-    }
-    cases.push_back(Shape{"repeat_jobs",2,33,129});
 
     // 失败时携带具体文件或用例，返回非零而不继续打印总 PASS。
     try {
@@ -67,7 +57,7 @@ int main() {
             const std::uint32_t np = (shape.n + 31U) / 32U * 32U;
             const std::uint32_t kp = (shape.k + 127U) / 128U * 128U;
             const std::uint32_t groups = kp / 128U;
-            const std::string prefix = std::string("vectors/b01/") + shape.name;
+            const std::string prefix = std::string("vectors/generated/") + shape.name;
 
             // expected 文件来自独立 dense golden，B2 与 B3 都不生成对方的期望值。
             auto w = read_vector<std::uint8_t>(prefix + ".w_packed.bin", static_cast<std::size_t>(np) * kp / 2U);
@@ -93,7 +83,7 @@ int main() {
 
             // 采用与 B3 相同的冻结 FP32 绝对阈值，不放宽测试来获得兼容结论。
             for (std::size_t i = 0; i < expected.size(); ++i) {
-                if (!std::isfinite(y[i]) || std::fabs(y[i] - expected[i]) > ((shape.n==3584U || shape.k==3584U) ? 1.0e-4F+1.0e-5F*std::fabs(expected[i]) : 1.0e-6F)) {
+                if (!std::isfinite(y[i]) || std::fabs(y[i] - expected[i]) > 1.0e-6F) {
                     throw std::runtime_error(std::string("B2 output: ") + shape.name + " index=" + std::to_string(i));
                 }
             }
@@ -103,7 +93,7 @@ int main() {
         }
 
         // 该结果是数值兼容性，不用作优化 CPU 性能基线或 FPGA 加速比。
-        std::cout << "B2/B01 shared-input compatibility PASS cases=" << cases.size() << "\n";
+        std::cout << "B2/B3 shared-input compatibility PASS cases=15\n";
 
         // 所有保存的合法输入均通过后才返回成功。
         return 0;

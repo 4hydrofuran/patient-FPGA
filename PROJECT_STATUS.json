@@ -1,9 +1,9 @@
 {
   "role": "B",
-  "stage": "B00",
-  "stage_status": "COMPLETE_WITH_CLIENT_SETTING_NOTE",
+  "stage": "B01",
+  "stage_status": "COMPLETE",
   "engineering_gate": "PASS",
-  "updated_at": "2026-10-02T14:15:21.585071+08:00",
+  "updated_at": "2026-10-02T15:41:27.193193+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -15,9 +15,9 @@
   },
   "domains": {
     "pc": "PASS",
-    "csim": "NOT_TESTED",
-    "synthesis": "NOT_TESTED",
-    "cosim": "NOT_TESTED",
+    "csim": "PASS_CURRENT_AND_B2",
+    "synthesis": "PASS",
+    "cosim": "PASS_RECOVERED",
     "implementation": "NOT_TESTED",
     "aarch64_build": "NOT_TESTED",
     "board": "NOT_TESTED",
@@ -25,12 +25,12 @@
     "latency": "NOT_TESTED",
     "power": "NOT_TESTED"
   },
-  "domain_scope": "Only checks executed in B00; historical PASS is separately retained below.",
+  "domain_scope": "B01 actual executed checks; historical evidence kept separately.",
   "new_target_shapes": {
-    "pc": "NOT_TESTED",
-    "csim": "NOT_TESTED",
-    "cosim": "NOT_TESTED",
-    "real_tensors": "NOT_TESTED"
+    "pc": "PASS_16_COMBINATIONS_T1_TO_T8",
+    "csim": "PASS_CURRENT_AND_B2_16_COMBINATIONS",
+    "cosim": "PASS_RECOVERED_CURRENT_TWO_T1_SHAPES; B2/T2_TO_T8_NOT_TESTED",
+    "real_tensors": "PASS_PC_TWO_WEIGHTS_TIMES_T1_T8_SYNTHETIC_ACTIVATIONS"
   },
   "inherited_b3_evidence": {
     "source": "evidence/history/b3_manifest.json",
@@ -53,7 +53,7 @@
   },
   "public_library_implementation": "NOT_IMPLEMENTED_B04",
   "public_contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
-  "model_revision": null,
+  "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
   "board_available": null,
   "board_date": "UNKNOWN",
   "platform_profile": null,
@@ -62,16 +62,51 @@
     "reports/b00_checks.receipt.json",
     "reports/preservation.receipt.json",
     "evidence/b00/attempt_first/b00_checks.receipt.json",
-    "reports/clean_repro.receipt.json"
+    "reports/clean_repro.receipt.json",
+    "reports/b01/selftest.receipt.json",
+    "reports/b01/csim.receipt.json",
+    "reports/b01/baseline_csim.receipt.json",
+    "reports/b01/synth.receipt.json",
+    "reports/b01/cosim.receipt.json",
+    "reports/b01/xsim_recovered.receipt.json",
+    "reports/b01/rtl_postcheck.receipt.json",
+    "reports/b01/clean_repro.receipt.json",
+    "reports/b01/source_guard.receipt.json",
+    "reports/b01/interface_metadata.receipt.json"
   ],
   "blockers": [],
-  "next_action": "B01: expand X/Y Cosim/TB windows and add deterministic new-shape T1..8 numerical regressions and public numeric negative cases.",
+  "next_action": "B02: profile loop/AXI bottlenecks from current correct kernel, optimize tile/activation reuse with separate build labels and regression; reproduce local RTL recovery before changing kernel.",
   "warnings": [
     "Client model/effort/speed selection is unverified.",
     "Do not treat old dimensions as new model validation.",
     "C ABI declarations are not linked implementations.",
     "First fixture compilation failed due MinGW helper PATH; retained and fixed with process-local PATH.",
-    "Managed agent skill config/agent.json absent; local project rules do not claim a full managed governance migration."
+    "Managed agent skill config/agent.json absent; local project rules do not claim a full managed governance migration.",
+    "Native Vitis Cosim pipeline exited 1 at generated C/link; supplemental actual RTL+postcheck passed using documented local recovery.",
+    "B2 new-shape Cosim and all new-shape T8 RTL remain NOT_TESTED.",
+    "Real-weight coverage is two layer0 matrices with synthetic activations, PC only.",
+    "HLS timing/resources are estimates, not implementation or board measurements."
   ],
-  "clean_rebuild": "PASS"
+  "clean_rebuild": "PASS_B01_SOURCE_ZIP_AND_328_VECTOR_HASHES",
+  "b01_pc_results": {
+    "synthetic_transactions": 43,
+    "int32_partial_checks": 2140479,
+    "fp32_output_checks": 173728,
+    "quantization_assertions": 27,
+    "host_rejections": 32,
+    "b2_same_input_cases": 32,
+    "real_tensor_cases": 4,
+    "real_int32_partial_checks": 516096,
+    "real_fp32_output_checks": 41472
+  },
+  "b01_rtl_results": {
+    "status": "PASS_RECOVERED",
+    "transactions": 25,
+    "postcheck_int32_reference_checks": 58175,
+    "postcheck_fp32_output_checks": 5664,
+    "standard_vitis_cosim_exit_code": 1,
+    "xsim_exit_code": 0,
+    "rtl_postcheck_exit_code": 0,
+    "scope": "Synthetic fixed vectors: small boundary/error/repeat cases and both new shapes T1; no T8 or real-weight RTL"
+  }
 }

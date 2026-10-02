@@ -255,13 +255,13 @@ extern "C" void w4a8_linear_v1(
 #pragma HLS INTERFACE m_axi port = sw offset = slave bundle = gmem_sw depth = 34048 max_read_burst_length = 32
 
     // A8 输入按 group128 搬入缓存，与 sx 保持同一个冻结 bundle。
-#pragma HLS INTERFACE m_axi port = xq offset = slave bundle = gmem_x depth = 38912 max_read_burst_length = 128
+#pragma HLS INTERFACE m_axi port = xq offset = slave bundle = gmem_x depth = 4864 max_read_burst_length = 128
 
     // 仿真窗口包含最多 8 个 sx，但本轮性能目标仍是 T=1。
 #pragma HLS INTERFACE m_axi port = sx offset = slave bundle = gmem_x depth = 8
 
     // 输出按 tile32 连续写回，depth 覆盖真实 up 层输出。
-#pragma HLS INTERFACE m_axi port = y offset = slave bundle = gmem_y depth = 38912 max_write_burst_length = 32
+#pragma HLS INTERFACE m_axi port = y offset = slave bundle = gmem_y depth = 4864 max_write_burst_length = 32
 #pragma HLS INTERFACE m_axi port = meta offset = slave bundle = gmem_meta depth = 1
 
 #pragma HLS INTERFACE s_axilite port = w_packed bundle = control

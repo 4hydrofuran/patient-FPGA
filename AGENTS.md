@@ -3,7 +3,7 @@
 本文件是 B00 建立的本地规则，不声明已通过 agents-md-generator 的托管配置验收。
 
 - 工作边界为本目录。原 b1_reference、b2_hls、b3_hls、handoff 和任务包只读；不改 A/C 工程。
-- 先读 PROJECT_STATUS.json、docs/b00/B00_CHECKLIST.md、当前阶段计划及失败记录。
+- 先读 PROJECT_STATUS.json、当前阶段计划/清单及失败记录；B01入口为 docs/b01/TEST_PLAN.md 与 docs/b01/B01_CHECKLIST.md，历史B00清单保留在 docs/b00/。
 - 目标模型为 Qwen3.5-0.8B 文本主干。只负责 SP_LINEAR_V1 计算后端，模型图、病例、语音不在本模块范围。
 - contracts/ 是原样复制的公共规范；内部 w4a8_linear_v1/KernelMeta 为私有兼容实现。更改公共数学、布局或冻结核 ABI 前须获得用户确认。
 - 当前唯一开发分支为 b/qwen35-compute。保留 B3 的 32 路基础，优先验证新尺寸，再做 tile 复用和受控双缓冲。
