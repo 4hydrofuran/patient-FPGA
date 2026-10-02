@@ -28,4 +28,6 @@ X128 相对 CACHE_X 节省 42 个 BRAM_18K。综合报告中 `gmem_x` 接口自�
 
 在本目录执行 `run_b02_x128.ps1 -Target native|csim|synth|cosim`；X128 配置为 `hls_b02_x128.cfg`。冻结 B01 和 CACHE_X 的构建配置分别为 `hls_b02_baseline.cfg`、`hls_b02_cache_x.cfg`，后者运行入口为 `run_b02.ps1`。综合/RTL 性能提取可运行 `python tools/summarize_b02_ablation.py`；有成功的 X128 Cosim 后运行 `python tools/archive_b02_x128_evidence.py`，再用 `python tools/package_b02_ablation_evidence.py` 生成 Git 内的小型原始证据副本。
 
+从 Git 新检出时，先运行 `run_b01.ps1 -Target native` 生成被忽略的 B01 合成向量；真实权重复核还需按 `tools/download_model_tensors.py` 取得固定 revision 的两个张量，再运行 `run_real_reference.ps1` 生成 `vectors/b01_real/`。本机运行记录使用 MinGW、Vitis 2026.1 和既有 Windows 工具兼容 shim；这些本机安装不随 Git 分发。缺真实权重时可先复现 Csim/综合，但 `-Target native` 的完整真实张量对比需要上述数据。
+
 Git 交付包含源码、配置、独立测试、状态、报告收据和复现脚本；大波形、模型权重、生成向量及 HLS build 目录留在本机并由 SHA/来源记录，不放入公开源码仓库。本阶段不交付公共 `sp_linear_v1` 动态库或板端 xclbin：它们属于 B04。`BOARD`、aarch64 构建和实现时序继续标为 `NOT_TESTED`。
