@@ -22,14 +22,8 @@ constexpr std::uint32_t kAbiVersion = 1;
 // "W4A8" 的小端整数表示，用于主机检查 meta 是否来自当前核。
 constexpr std::uint32_t kAbiMagic = 0x57344138U;
 
-// 访存消融使用独立私有构建标识；公共ABI与数值布局保持不变。
-#if defined(B02_CACHE_X) && defined(B02_AXI_X128)
-constexpr std::uint32_t kKernelBuildId = 0xB3020002U;
-#elif defined(B02_CACHE_X)
-constexpr std::uint32_t kKernelBuildId = 0xB3020001U;
-#else
+// 区分 B3 的 32-lane 构建与已保留的 B2 串行构建，不改变 ABI。
 constexpr std::uint32_t kKernelBuildId = 0xB3010001U;
-#endif
 
 // 状态码明确区分参数错误、缓冲错误和非法 W4 码。
 enum KernelStatus : std::uint32_t {

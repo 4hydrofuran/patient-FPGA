@@ -1,6 +1,8 @@
 # 成员B：Qwen3.5计算后端
 
-B01已完成，工程数值门槛PASS；先读PROJECT_STATUS.json、docs/b01/TEST_PLAN.md和docs/b01/workload.json。
+B02 无板访存消融已完成，选 `B02_X128` 作为 B03 开发基线：在每 token A8 缓存上将激活 AXI 口从 512 bit 限为 128 bit。它使 HLS 估计 BRAM_18K 从 CACHE_X 的 120 降到 78，两种目标 T=1 尺寸分别只多 1 个 XSIM 周期；相对 B01，gate/up 快约 1.29%，down 慢约 0.25%。X128 原生 Cosim 25/25 通过，但实现时序和板测未做。运行 `.\run_b02_x128.ps1 -Target native|csim|synth|cosim` 复现新候选；旧 `B02_CACHE_X` 及冻结 B01 配置继续保留。完整选型、消融、证据和限制见 `docs/b02/SELECTION_AND_DELIVERY.md`，当前分域状态以 `PROJECT_STATUS.json` 为准。
+
+B01已完成，工程数值门槛PASS；B01 复现仍读 docs/b01/TEST_PLAN.md 和 docs/b01/workload.json。
 核沿用B3的32-lane数学与ABI，只扩X/Y仿真窗口到38912元素并将私有构建ID更新为0xB3010001。
 
 在本目录执行 `.\run_selftest.ps1` 可一键完成全部电脑数值自测（含包内真实权重，不下载、不需要Vitis或板卡）。分项入口：

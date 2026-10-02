@@ -1,9 +1,9 @@
 {
   "role": "B",
-  "stage": "B01",
-  "stage_status": "COMPLETE",
-  "engineering_gate": "PASS",
-  "updated_at": "2026-10-02T15:41:27.193193+08:00",
+  "stage": "B02",
+  "stage_status": "COMPLETE_OFF_BOARD",
+  "engineering_gate": "NUMERICAL_AND_RTL_PASS_RESOURCE_OPT_TIMING_UNVERIFIED",
+  "updated_at": "2026-10-02T20:02:50.973040+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -14,10 +14,10 @@
     "changed_by_agent": false
   },
   "domains": {
-    "pc": "PASS",
-    "csim": "PASS_CURRENT_AND_B2",
-    "synthesis": "PASS",
-    "cosim": "PASS_RECOVERED",
+    "pc": "PASS_B02_X128",
+    "csim": "PASS_B02_X128",
+    "synthesis": "PASS_B02_X128",
+    "cosim": "PASS_NATIVE_B02_X128",
     "implementation": "NOT_TESTED",
     "aarch64_build": "NOT_TESTED",
     "board": "NOT_TESTED",
@@ -25,11 +25,11 @@
     "latency": "NOT_TESTED",
     "power": "NOT_TESTED"
   },
-  "domain_scope": "B01 actual executed checks; historical evidence kept separately.",
+  "domain_scope": "B02 X128 actual PC/Csim/synthesis/native Cosim; implementation, aarch64 and board remain NOT_TESTED.",
   "new_target_shapes": {
     "pc": "PASS_16_COMBINATIONS_T1_TO_T8",
     "csim": "PASS_CURRENT_AND_B2_16_COMBINATIONS",
-    "cosim": "PASS_RECOVERED_CURRENT_TWO_T1_SHAPES; B2/T2_TO_T8_NOT_TESTED",
+    "cosim": "PASS_NATIVE_X128_TWO_T1_SHAPES; B2/T2_TO_T8_NOT_TESTED",
     "real_tensors": "PASS_PC_TWO_WEIGHTS_TIMES_T1_T8_SYNTHETIC_ACTIVATIONS"
   },
   "inherited_b3_evidence": {
@@ -75,7 +75,7 @@
     "reports/b01/interface_metadata.receipt.json"
   ],
   "blockers": [],
-  "next_action": "B02: profile loop/AXI bottlenecks from current correct kernel, optimize tile/activation reuse with separate build labels and regression; reproduce local RTL recovery before changing kernel.",
+  "next_action": "Start B03 from B02_X128; validate T1/T8 both target shapes in RTL, weight-tile reuse and decode regression. B04 must verify platform implementation timing.",
   "warnings": [
     "Client model/effort/speed selection is unverified.",
     "Do not treat old dimensions as new model validation.",
@@ -85,7 +85,11 @@
     "Native Vitis Cosim pipeline exited 1 at generated C/link; supplemental actual RTL+postcheck passed using documented local recovery.",
     "B2 new-shape Cosim and all new-shape T8 RTL remain NOT_TESTED.",
     "Real-weight coverage is two layer0 matrices with synthetic activations, PC only.",
-    "HLS timing/resources are estimates, not implementation or board measurements."
+    "HLS timing/resources are estimates, not implementation or board measurements.",
+    "B02: CACHE_X improves gate/up T1 RTL latency by 1.29 percent but slows down T1 by 0.25 percent.",
+    "B02 X128 native Cosim passed 25/25; gate/up T1 improves 1.29 percent but down T1 slows 0.25 percent versus B01 in XSIM.",
+    "B02 X128 HLS slack is -0.37 ns against 6.667 ns target after 1.80 ns uncertainty; implementation and board frequency NOT_TESTED.",
+    "First X128 native compile failed in local MinGW CreateProcess; original log was overwritten on retry, terminal error summarized in evidence/b02/x128_attempt_first/NOTE.md."
   ],
   "clean_rebuild": "PASS_B01_SOURCE_ZIP_AND_328_VECTOR_HASHES",
   "b01_pc_results": {
@@ -108,5 +112,64 @@
     "xsim_exit_code": 0,
     "rtl_postcheck_exit_code": 0,
     "scope": "Synthetic fixed vectors: small boundary/error/repeat cases and both new shapes T1; no T8 or real-weight RTL"
+  },
+  "b02_variant": "B02_X128",
+  "b02_evidence": [
+    "reports/b02/native_test.receipt.json",
+    "reports/b02/real_test.receipt.json",
+    "reports/b02/synthetic_identity.receipt.json",
+    "reports/b02/real_identity.receipt.json",
+    "reports/b02/csim.receipt.json",
+    "reports/b02/synth.receipt.json",
+    "reports/b02/platform_probe.json",
+    "reports/b02/cosim.receipt.json",
+    "reports/b02/xsim_recovered.receipt.json",
+    "reports/b02/rtl_postcheck.receipt.json",
+    "reports/b02/rtl_recovered_summary.receipt.json",
+    "reports/b02/ablation.json",
+    "reports/b02/x128/native_test.receipt.json",
+    "reports/b02/x128/real_test.receipt.json",
+    "reports/b02/x128/synthetic_identity.receipt.json",
+    "reports/b02/x128/real_identity.receipt.json",
+    "reports/b02/x128/csim.receipt.json",
+    "reports/b02/x128/synth.receipt.json",
+    "reports/b02/x128/cosim.receipt.json",
+    "reports/b02/x128/rtl_evidence.receipt.json",
+    "reports/b02/ablation_raw_manifest.json",
+    "evidence/b02/ablation_raw/",
+    "evidence/b02/x128_attempt_first/NOTE.md"
+  ],
+  "b02_rtl_results": {
+    "status": "PASS_RECOVERED",
+    "transactions": 25,
+    "postcheck_int32_checks": 58175,
+    "postcheck_fp32_checks": 5664,
+    "standard_vitis_cosim_exit_code": 1,
+    "xsim_exit_code": 0,
+    "rtl_postcheck_exit_code": 0,
+    "gate_up_t1_cycles": 530269,
+    "down_t1_cycles": 524413,
+    "b01_gate_up_t1_cycles": 537195,
+    "b01_down_t1_cycles": 523099,
+    "waveform_bytes": 2016526950,
+    "variant": "B02_CACHE_X"
+  },
+  "b02_selection": "B03 development baseline; resource-optimized, down T1 is 0.25 percent slower than B01; not an implemented or board-approved candidate.",
+  "b02_x128_rtl_results": {
+    "status": "PASS_NATIVE",
+    "transactions": 25,
+    "postcheck_int32_checks": 58175,
+    "postcheck_fp32_checks": 5664,
+    "standard_vitis_cosim_exit_code": 0,
+    "gate_up_t1_cycles": 530270,
+    "down_t1_cycles": 524414,
+    "b01_gate_up_t1_cycles": 537195,
+    "b01_down_t1_cycles": 523099,
+    "bram18k_hls_estimate": 78,
+    "dsp_hls_estimate": 58,
+    "ff_hls_estimate": 15105,
+    "lut_hls_estimate": 28006,
+    "hls_clock_slack_ns_estimate": -0.37,
+    "gmem_x_width_bits": 128
   }
 }

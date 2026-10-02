@@ -1,0 +1,95 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Fri Oct  2 16:20:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+INFO: [HLS 200-2005] Using work_dir D:/KV260-project-HLS/b_qwen35/build/b02_cache_x_hls 
+
+INFO: [HLS 200-2006] Changing directory to D:/KV260-project-HLS/b_qwen35/build
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b02_cache_x_hls/vitis-comp.json
+
+INFO: [HLS 200-10] Creating and opening component 'D:/KV260-project-HLS/b_qwen35/build/b02_cache_x_hls'.
+
+INFO: [HLS 200-2174] Applying component config ini file ../hls_b02_cache_x.cfg
+
+INFO: [HLS 200-1465] Applying config ini 'syn.file=src/w4a8_linear_v1.cpp' from ../hls_b02_cache_x.cfg(5)
+
+INFO: [HLS 200-10] Adding design file 'D:/KV260-project-HLS/b_qwen35/src/w4a8_linear_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DB02_CACHE_X -ffp-contract=off' from ../hls_b02_cache_x.cfg(7)
+
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb/tb_w4a8_linear_v1.cpp' from ../hls_b02_cache_x.cfg(8)
+
+INFO: [HLS 200-10] Adding test bench file 'D:/KV260-project-HLS/b_qwen35/tb/tb_w4a8_linear_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DB02_CACHE_X -ffp-contract=off' from ../hls_b02_cache_x.cfg(9)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.top=w4a8_linear_v1' from ../hls_b02_cache_x.cfg(6)
+
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vitis' from ../hls_b02_cache_x.cfg(4)
+
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vitis' value see below messsages for equivalent options.
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -default_axi=1
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from ../hls_b02_cache_x.cfg(1)
+
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+
+INFO: [HLS 200-1465] Applying config ini 'clock=6.667' from ../hls_b02_cache_x.cfg(10)
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=--suite cosim' from ../hls_b02_cache_x.cfg(14)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=verilog' from ../hls_b02_cache_x.cfg(15)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from ../hls_b02_cache_x.cfg(16)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from ../hls_b02_cache_x.cfg(17)
+
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=--suite full' from ../hls_b02_cache_x.cfg(13)
+
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=xo' from ../hls_b02_cache_x.cfg(18)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from ../hls_b02_cache_x.cfg(12)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.unsafe_math_optimizations=0' from ../hls_b02_cache_x.cfg(11)
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b02_cache_x_hls/vitis-comp.json
+
+INFO: [SIM 211-2] *************** CSIM start ***************
+
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+
+process_begin: CreateProcess(D:\2026.1\2026.1\Vitis\tps\win64\msys2_bash\usr\bin\sh.exe, D:/2026.1/2026.1/Vitis/tps/win64/msys2_bash/usr/bin/sh.exe -c "uname | grep -i Linux", ...) failed.
+Makefile.rules:220: pipe: No error
+/cygdrive/d/2026.1/2026.1/Vitis/tps/win64/msys2_bash/usr/bin/sh: line 1: /cygdrive/d/codex-vitis-shims/mkdir.exe: Permission denied
+mingw32-make: *** [Makefile.rules:444: obj/.dir] Error 126
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+
+INFO: [SIM 211-3] *************** CSIM finish ***************
+
+ERROR: CSIM Failed
+
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 6 seconds. Total elapsed time: 10.498 seconds; peak allocated memory: 428.332 MB.
+

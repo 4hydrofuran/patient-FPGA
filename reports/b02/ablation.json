@@ -1,0 +1,78 @@
+{
+  "stage": "B02",
+  "tool": "Vitis HLS 2026.1 / XSIM",
+  "clock_target_ns": 6.667,
+  "clock_uncertainty_ns": 1.8,
+  "rtl_scope": "25 synthetic transactions; target gate/up and down at T=1",
+  "measurements": {
+    "B01": {
+      "synthesis": {
+        "report": "build/b01_hls/hls/syn/report/csynth.rpt",
+        "sha256": "87a8003291435040b2feabeffe82aa03af8d45d2c026cace519e4380b765fe52",
+        "clock_slack_ns_hls_estimate": -0.37,
+        "bram18k_hls_estimate": 117,
+        "dsp_hls_estimate": 58,
+        "ff_hls_estimate": 17068,
+        "lut_hls_estimate": 30801,
+        "gmem_x_width": "8 -> 512",
+        "gmem_x_interface_bram_estimate": 57
+      },
+      "rtl_xsim": {
+        "performance_file": "build/b01_hls/hls/sim/verilog/w4a8_linear_v1.performance.result.transaction.xml",
+        "sha256": "e1e5e71b5f2e31b2c1b642526a567ce9cee357316a4d10aa168269399982a41e",
+        "transactions": 25,
+        "gate_up_t1_cycles": 537195,
+        "down_t1_cycles": 523099
+      }
+    },
+    "B02_CACHE_X": {
+      "synthesis": {
+        "report": "build/b02_cache_x_hls/hls/syn/report/csynth.rpt",
+        "sha256": "3db104c7f00cf0fa8273f2761496d05cec2e3dfa80cc731150b922b597a720af",
+        "clock_slack_ns_hls_estimate": -0.37,
+        "bram18k_hls_estimate": 120,
+        "dsp_hls_estimate": 58,
+        "ff_hls_estimate": 17057,
+        "lut_hls_estimate": 30553,
+        "gmem_x_width": "8 -> 512",
+        "gmem_x_interface_bram_estimate": 57
+      },
+      "rtl_xsim": {
+        "performance_file": "build/b02_cache_x_hls/hls/sim/verilog/w4a8_linear_v1.performance.result.transaction.xml",
+        "sha256": "a80eac92199ee782e39df4f1a18724df66c5a971046f314c166f30156d434591",
+        "transactions": 25,
+        "gate_up_t1_cycles": 530269,
+        "down_t1_cycles": 524413,
+        "gate_up_vs_b01_cycles": -6926,
+        "down_vs_b01_cycles": 1314
+      }
+    },
+    "B02_X128": {
+      "synthesis": {
+        "report": "build/b02_x128_hls/hls/syn/report/csynth.rpt",
+        "sha256": "7fa7da93231c5405a4295286efafebaba4521572570a5577272ad91792b3c85b",
+        "clock_slack_ns_hls_estimate": -0.37,
+        "bram18k_hls_estimate": 78,
+        "dsp_hls_estimate": 58,
+        "ff_hls_estimate": 15105,
+        "lut_hls_estimate": 28006,
+        "gmem_x_width": "8 -> 128",
+        "gmem_x_interface_bram_estimate": 15
+      },
+      "rtl_xsim": {
+        "performance_file": "build/b02_x128_hls/hls/sim/verilog/w4a8_linear_v1.performance.result.transaction.xml",
+        "sha256": "d0d37c10840a43fb630a38213ae9f3d4d1da9ced662ef6143854f83905c34416",
+        "transactions": 25,
+        "gate_up_t1_cycles": 530270,
+        "down_t1_cycles": 524414,
+        "gate_up_vs_b01_cycles": -6925,
+        "down_vs_b01_cycles": 1315
+      }
+    }
+  },
+  "limits": [
+    "HLS resources and slack are estimates, not implemented timing.",
+    "XSIM cycles exclude physical DDR contention and board software overhead.",
+    "No T8 new-shape RTL or board results are claimed."
+  ]
+}

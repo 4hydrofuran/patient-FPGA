@@ -29,6 +29,13 @@ std::uint32_t advance(std::uint32_t& state) {
 }
 
 int main() {
+#if defined(B02_CACHE_X) && defined(B02_AXI_X128)
+    const char* stage_label="B02_X128";
+#elif defined(B02_CACHE_X)
+    const char* stage_label="B02";
+#else
+    const char* stage_label="B01";
+#endif
     try {
         static_assert(sizeof(float)==4 && std::numeric_limits<float>::is_iec559,"IEEE FP32 required");
         std::uint64_t partial_checks=0,output_checks=0;
@@ -70,13 +77,19 @@ int main() {
                 std::vector<float> y(expected.y.size()+1U,-1234.5F);
                 const host_b::Request request{t,n,k,packed.data(),sw.data(),x.data(),sx.data(),y.data(),packed.size(),sw.size()*4U,x.size(),sx.size()*4U,expected.y.size()*4U,seed};
                 if(host_b::validate(request)!=SP_OK) throw std::runtime_error("real-weight public validation");
+#if defined(B02_CACHE_X) && defined(B02_AXI_X128)
+                const std::string prefix="vectors/b02_x128_real/"+kind+"_t"+std::to_string(t);
+#elif defined(B02_CACHE_X)
+                const std::string prefix="vectors/b02_real/"+kind+"_t"+std::to_string(t);
+#else
                 const std::string prefix="vectors/b01_real/"+kind+"_t"+std::to_string(t);
+#endif
                 // 在调用核之前保存独立数学输入与expected，失败仍有完整复现载荷。
                 save(prefix+".w_packed.bin",packed);save(prefix+".sw.bin",sw);save(prefix+".xq.bin",x);save(prefix+".sx.bin",sx);
                 save(prefix+".dense_w.bin",dense_w);save(prefix+".dense_sw.bin",dense_sw);save(prefix+".expected_y.bin",expected.y);save(prefix+".expected_partials.bin",expected.partials);
                 w4a8_b2::KernelMeta meta{};
                 w4a8_linear_v1(packed.data(),sw.data(),x.data(),sx.data(),y.data(),&meta,t,n,k,packed.size(),sw.size()*4U,x.size(),sx.size()*4U,expected.y.size()*4U,40,seed,1);
-                if(meta.status!=0 || meta.done!=1 || meta.job_id!=seed || meta.kernel_build_id!=0xB3010001U || meta.hw_completed_count!=1 || y.back()!=-1234.5F) throw std::runtime_error("real tensor meta/guard");
+                if(meta.status!=0 || meta.done!=1 || meta.job_id!=seed || meta.kernel_build_id!=w4a8_b2::kKernelBuildId || meta.hw_completed_count!=1 || y.back()!=-1234.5F) throw std::runtime_error("real tensor meta/guard");
                 for(unsigned token=0;token<t;++token) {
                     for(unsigned block=0;block<n/32U;++block) {
                         for(unsigned group=0;group<groups;++group) {
@@ -105,9 +118,9 @@ int main() {
                 std::cout << "PASS real_weight=" << kind << " T=" << t << " seed=" << seed << " max_abs=" << max_error << " nrmse=" << nrmse << " activation=synthetic domain=PC_NATIVE\n";
             }
         }
-        std::cout << "B01 real-tensor PASS cases=4 int32_partial_checks=" << partial_checks << " fp32_output_checks=" << output_checks << '\n';
+        std::cout << stage_label << " real-tensor PASS cases=4 int32_partial_checks=" << partial_checks << " fp32_output_checks=" << output_checks << '\n';
         return 0;
     } catch(const std::exception& error) {
-        std::cerr << "B01 real-tensor FAIL " << error.what() << '\n';return 1;
+        std::cerr << stage_label << " real-tensor FAIL " << error.what() << '\n';return 1;
     }
 }

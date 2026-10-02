@@ -254,13 +254,8 @@ extern "C" void w4a8_linear_v1(
     // scale 仍使用冻结的独立 master；连续 32 个 scale 可合并请求。
 #pragma HLS INTERFACE m_axi port = sw offset = slave bundle = gmem_sw depth = 34048 max_read_burst_length = 32
 
-    // X128 消融只限制同一 gmem_x 的最大物理宽度；地址、burst 与数据不变。
-#ifdef B02_AXI_X128
-#pragma HLS INTERFACE m_axi port = xq offset = slave bundle = gmem_x depth = 38912 max_read_burst_length = 128 max_widen_bitwidth = 128
-#else
     // A8 输入按 group128 搬入缓存，与 sx 保持同一个冻结 bundle。
 #pragma HLS INTERFACE m_axi port = xq offset = slave bundle = gmem_x depth = 38912 max_read_burst_length = 128
-#endif
 
     // 仿真窗口包含最多 8 个 sx，但本轮性能目标仍是 T=1。
 #pragma HLS INTERFACE m_axi port = sx offset = slave bundle = gmem_x depth = 8
@@ -396,14 +391,8 @@ extern "C" void w4a8_linear_v1(
     // 每个 K 位置的 16 字节合并，支持 32 个 W4 lane 同时读取。
 #pragma HLS ARRAY_RESHAPE variable = weight_tile cyclic factor = 16 dim = 1
 
-    // B02候选：每个token从AXI读取一次完整A8行，跨全部输出tile复用。
-#ifdef B02_CACHE_X
-    std::int8_t token_activations[w4a8_b2::kMaxK];
-#pragma HLS BIND_STORAGE variable = token_activations type = ram_1p impl = bram
-#else
-    // B01消融构建保留每个tile-group重新从AXI搬入128字节的路径。
+    // A8 组只需 128 字节，一个输入元素在 32-lane 之间广播。
     std::int8_t activation_tile[128];
-#endif
 
     // 一个输出 tile 的 scale 只保留当前 group 的 32 个 FP32 值。
     float scale_tile[32];
@@ -422,14 +411,6 @@ extern "C" void w4a8_linear_v1(
 
         // 同一 token 的 activation scale 只读取一次。
         const float token_scale = sx[token];
-
-#ifdef B02_CACHE_X
-        // padding也在合法X缓冲内：逐token连续读取Kp字节，再供所有输出tile复用。
-        for (std::uint32_t input = 0; input < padded_k; ++input) {
-#pragma HLS PIPELINE II = 1
-            token_activations[input] = xq[static_cast<std::uint64_t>(token) * padded_k + input];
-        }
-#endif
 
         // 输出外循环改为以 32-lane tile 为单位，消除逐输出的步长访存。
         for (std::uint32_t output_block = 0; output_block < padded_n / 32U; ++output_block) {
@@ -453,8 +434,7 @@ extern "C" void w4a8_linear_v1(
                 // 一个完整连续权重块搬入本地，本轮不与计算重叠。
                 load_weight_tile(w_packed, tile_group * 2048ULL, weight_tile);
 
-                // 消融路径保留B01原始AXI搬运；候选直接读取当前token缓存的group窗口。
-#ifndef B02_CACHE_X
+                // 连续的 128 个 A8 元素供本 tile 的 32 条通道复用。
                 for (std::uint32_t input = 0; input < 128U; ++input) {
 
                     // A8 按连续地址每拍搬一个元素，随后复用到 32 个输出 lane。
@@ -463,7 +443,6 @@ extern "C" void w4a8_linear_v1(
                     // 向量尾部已由主机 padding，因此完整 128 字节均可访问。
                     activation_tile[input] = xq[static_cast<std::uint64_t>(token) * padded_k + group * 128U + input];
                 }
-#endif
 
                 // 当前量化组的 32 个权重 scale 连续搬入。
                 for (std::uint32_t lane = 0; lane < 32U; ++lane) {
@@ -476,11 +455,7 @@ extern "C" void w4a8_linear_v1(
                 }
 
                 // 使用实际 32-lane 数据通路得到本组的精确整数部分和。
-#ifdef B02_CACHE_X
-                w4a8_tile_group_sums(weight_tile, &token_activations[group * 128U], sums);
-#else
                 w4a8_tile_group_sums(weight_tile, activation_tile, sums);
-#endif
 
                 // 浮点恢复逐 lane 流水，避免一次实例化 32 套完整浮点乘加器。
                 for (std::uint32_t lane = 0; lane < 32U; ++lane) {

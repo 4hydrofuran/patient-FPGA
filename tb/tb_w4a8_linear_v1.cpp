@@ -25,6 +25,12 @@
 
 namespace {
 
+#ifdef B02_CACHE_X
+constexpr const char* kStageLabel = "B02";
+#else
+constexpr const char* kStageLabel = "B01";
+#endif
+
 // 联合仿真包装器会复制完整 depth，所有用例必须为每个端口预留该窗口。
 constexpr std::size_t kWDepth = 2179072U;
 constexpr std::size_t kSwDepth = 34048U;
@@ -567,7 +573,7 @@ int main(int argc, char** argv) {
             }
         }
         // PASS 包括输入来源、suite、事务数与逐项比较计数，避免将合成数据说成训练集。
-        std::cout << "B01 PASS suite=" << suite << " source=synthetic transactions=" << transactions
+        std::cout << kStageLabel << " PASS suite=" << suite << " source=synthetic transactions=" << transactions
                   << " int32_partial_checks=" << partial_checks << " fp32_output_checks=" << output_checks << '\n';
 
         // 只有全部检查通过才返回成功。
@@ -575,7 +581,7 @@ int main(int argc, char** argv) {
     } catch (const std::exception& error) {
 
         // 首个失败携带用例坐标，可用已落盘或固定 seed 输入复现。
-        std::cerr << "B01 FAIL: " << error.what() << '\n';
+        std::cerr << kStageLabel << " FAIL: " << error.what() << '\n';
 
         // Vitis 与自动化都可通过非零返回值判失败。
         return 1;

@@ -1,0 +1,65 @@
+METRICS case=hand_sample max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=hand_sample T=1 N=2 K=2 source=synthetic seed=1
+METRICS case=tile_random max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=tile_random T=1 N=32 K=128 source=synthetic seed=539365377
+METRICS case=nk_tail max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=nk_tail T=1 N=33 K=129 source=synthetic seed=539365378
+METRICS case=three_groups max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=three_groups T=1 N=65 K=257 source=synthetic seed=539365379
+METRICS case=single max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=single T=1 N=1 K=1 source=synthetic seed=539365380
+METRICS case=zeros max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=zeros T=1 N=33 K=129 source=synthetic seed=539365381
+METRICS case=extremes max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=extremes T=1 N=32 K=128 source=synthetic seed=539365382
+METRICS case=t4_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=t4_compat T=4 N=33 K=129 source=synthetic seed=539365383
+METRICS case=t8_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=t8_compat T=8 N=1 K=1 source=synthetic seed=539365384
+METRICS case=nonbinary_scale max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=nonbinary_scale T=1 N=32 K=128 source=synthetic seed=539365385
+METRICS case=padding_reserved max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=padding_reserved T=1 N=1 K=1 source=synthetic seed=17
+PASS quantization checks=27 execution=HOST_REFERENCE
+PASS host_rejection=zero_job public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=zero_t public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=t_overflow public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=n_overflow public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=zero_k public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_weight public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_sw public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_x public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_sx public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_y public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=short_weight public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_sw public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_x public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_sx public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_y public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_a8 public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=activation_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_w4_low public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_w4_high public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=weight_k_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=weight_n_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=scale_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_zero public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_zero public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_negative public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_negative public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_nan public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_nan public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_positive_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_positive_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_negative_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_negative_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_validation rejection_cases=32 domain=HOST_ADAPTER
+METRICS case=repeat_jobs max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=repeat_jobs T=2 N=33 K=129 source=synthetic seed=539365410
+PASS repeat_jobs same_and_different=verified successes=5 rejected=1 kernel_count=46 output_consumed_on_error=false
+PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble
+METRICS case=qwen35_gate_up_t1 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=qwen35_gate_up_t1 T=1 N=3584 K=1024 source=synthetic seed=539365379
+METRICS case=qwen35_down_t1 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=qwen35_down_t1 T=1 N=1024 K=3584 source=synthetic seed=539365635
+B02 PASS suite=cosim source=synthetic transactions=25 int32_partial_checks=58175 fp32_output_checks=5664
