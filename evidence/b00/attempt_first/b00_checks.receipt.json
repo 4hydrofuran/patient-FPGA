@@ -1,0 +1,61 @@
+{
+  "stage": "B00",
+  "execution_kind": "PC_NATIVE",
+  "steps": [
+    {
+      "name": "public_header_c11",
+      "executable": "D:\\mingw64\\bin\\gcc.exe",
+      "arguments": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-fsyntax-only",
+        "tests/interface/header_probe.c"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "public_header_cpp17",
+      "executable": "D:\\mingw64\\bin\\g++.exe",
+      "arguments": [
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-fsyntax-only",
+        "tests/interface/header_probe.cpp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "fixture_compile",
+      "executable": "D:\\mingw64\\bin\\g++.exe",
+      "arguments": [
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wno-unknown-pragmas",
+        "src/w4a8_linear_v1.cpp",
+        "tests/numerical/fixture_replay.cpp",
+        "-o",
+        "build/native/fixture_replay.exe"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "input_sha256": {
+    "src/w4a8_linear_v1.cpp": "269BAD07DC65FAEA1D4DD6EDCD6F198E7879179CE88B0666B322862EDE7C4A7D",
+    "src/w4a8_linear_v1.hpp": "EB40259D3A434665944C97413A6CE21E13F3D588DE3E4509318B83CC5FFFE00F",
+    "tb/tb_w4a8_linear_v1.cpp": "73A0A45C637C844552474B141F45E77F7382572D9552833E9EA5D9DC6A494E69",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "contracts/sp_linear_v1.h": "D97E544444B8566A32D0BD25E67E2E548F71678AC6E63AC63E96AA415B1A76F9",
+    "tests/interface/header_probe.c": "CF0097B9E743963A84124F7204B08E8BFA047BDE46513DE0C9BF911AF9F46994",
+    "tests/interface/header_probe.cpp": "02F7C738C4F3DF97552B6CE862E2B24B84BA1087F5794AA0F4DC186A215DDAEC",
+    "tests/numerical/fixture_replay.cpp": "86A40C6C02E9AA7ED78C62AB8655FE09D66BE4BA9663D023104E5E40B80999CB",
+    "run_b00.ps1": "0B5D572B13FEC4F0B3BB7D39D8BF3585A35E9C82C8EB81D86F7709F74F3E704B"
+  },
+  "finished_at_utc": "2026-10-02T06:06:03.8468839Z"
+}

@@ -1,0 +1,55 @@
+{
+  "contract": "SP_W4A8_128x32_V1",
+  "endian": "little",
+  "shape_limits": {
+    "T": [
+      1,
+      8
+    ],
+    "N": [
+      1,
+      4864
+    ],
+    "K": [
+      1,
+      4864
+    ]
+  },
+  "target_model": "Qwen/Qwen3.5-0.8B",
+  "target_shapes": [
+    {
+      "kind": "gate_up",
+      "N": 3584,
+      "K": 1024
+    },
+    {
+      "kind": "down",
+      "N": 1024,
+      "K": 3584
+    }
+  ],
+  "weight_range": [
+    -7,
+    7
+  ],
+  "activation_range": [
+    -127,
+    127
+  ],
+  "weight_group_k": 128,
+  "output_tile_n": 32,
+  "rounding": "nearest_ties_to_even",
+  "zero_group_scale": 1.0,
+  "scale_dtype": "fp32",
+  "accumulator": "int32_per_group",
+  "fp_order": "FP32 add in increasing group order of FP32(FP32(sum * sw) * sx); no reassociation",
+  "w_layout": "[N_tile32][K_group128][k_in_group][16 lane_pairs]; even_lane_low_nibble",
+  "scale_layout": "[N_tile32][K_group128][lane32]",
+  "input_layout": "[T,Kp]",
+  "output_layout": "[T,Np]",
+  "tolerance": {
+    "per_element_atol": 0.0001,
+    "per_element_rtol": 1e-05
+  },
+  "note": "Numerical contract only. Private kernel metadata is owned by each backend implementation."
+}

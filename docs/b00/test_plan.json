@@ -1,0 +1,132 @@
+{
+  "stage": "B00",
+  "execution_record": false,
+  "reference": "tb/golden_w4a8.hpp independent dense INT64 reference",
+  "b00_existing_seeds": {
+    "small_cases_base": "0x20261001",
+    "old_shapes_base": "0x48640896",
+    "hand": 1,
+    "padding": 17
+  },
+  "b01_seed_rule": "0x20261002 + shape_index*256 + T; shape_index=0 gate_up, 1 down",
+  "b01_shapes": [
+    {
+      "N": 3584,
+      "K": 1024,
+      "T": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "N": 1024,
+      "K": 3584,
+      "T": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "b00_checks": [
+    "C11/C++17 public declaration type check",
+    "public byte fixture Y and meta",
+    "valid W4 reserved error preserves output/count",
+    "short X preserves output/count",
+    "inherited full native",
+    "same saved inputs on B2"
+  ],
+  "future_cases": [
+    {
+      "owner": "B01",
+      "case": "ties-to-even and clipping",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "zero groups and positive finite scales",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "NaN/Inf/non-positive Sw/Sx",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "A8 -128",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "W4 -8 in valid region",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "N/K tails and public padding",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "length/null pointer/invalid dimensions",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "repeat jobs and echo/count",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "new shapes T1..8 Csim",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "independent packed/dense reference comparison",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "owner": "B01",
+      "case": "pinned real model weight tensors",
+      "status": "PLANNED_NOT_EXECUTED"
+    }
+  ],
+  "later_tests": {
+    "B03": [
+      "new shapes T1/T8 Cosim",
+      "backpressure/double-buffer/repeated jobs"
+    ],
+    "B04": [
+      "all six linked public symbols",
+      "weight ownership/invalid handle",
+      "POISONED timeout and safe close",
+      "JSON size query/no partial JSON",
+      "aarch64 ABI"
+    ]
+  },
+  "independence": "No A runtime, A exporter, clinical case or C voice service dependency",
+  "evidence_domains": [
+    "PC",
+    "Csim",
+    "synthesis",
+    "Cosim",
+    "implementation",
+    "aarch64_build",
+    "BOARD"
+  ],
+  "real_tensor_status": "NOT_TESTED",
+  "model_revision": null
+}

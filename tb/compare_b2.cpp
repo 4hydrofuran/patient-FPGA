@@ -1,8 +1,8 @@
 // 将同一批已保存合成向量交给原 B2 核，核对 B3 golden 与被冻结基线的数值兼容性。
-// 该测试只用于普通 PC C++，需要工作区保留 ../b2_hls，不参与 B3 综合或 Cosim。
+// 该测试只用于普通 PC C++，使用本包 baseline/b2，不参与 B3 综合或 Cosim。
 
-// 从保留的 B2 目录读取真实基线 ABI，而不是复制 B3 的构建标识。
-#include "../../b2_hls/src/w4a8_linear_v1.hpp"
+// 从本包保留的 B2 源码读取真实基线 ABI，避免依赖相邻开发工程。
+#include "../baseline/b2/src/w4a8_linear_v1.hpp"
 
 // 主机端按实际文件长度分配数据，不进入可综合设计。
 #include <cmath>

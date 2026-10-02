@@ -1,4 +1,4 @@
-# B3 构建与验证入口：显式执行 native、CSim、C 综合、Cosim 或 XO 打包。
+﻿# B3 构建与验证入口：显式执行 native、CSim、C 综合、Cosim 或 XO 打包。
 # 兼容环境仅作用于本次进程，结束后恢复；不会更改 Vitis 安装目录。
 [CmdletBinding()]
 param(

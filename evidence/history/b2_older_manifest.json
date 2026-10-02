@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "package": "b2-w4a8-first-correct",
+  "date": "2026-09-26",
+  "tool": {
+    "name": "Vitis HLS",
+    "version": "2026.1",
+    "build": "6493734",
+    "part": "xck26-sfvc784-2LV-c",
+    "clock_period_ns": 6.667
+  },
+  "verification": {
+    "native_cpp": "pass",
+    "vitis_csim": "pass",
+    "vitis_csynth": "pass_with_timing_warnings",
+    "vitis_cosim": "pass",
+    "xo_export": "not_run",
+    "board_test": "not_run"
+  },
+  "csynth_estimate": {
+    "estimated_period_ns": 8.036,
+    "estimated_fmax_mhz": 124.44,
+    "lut": 28650,
+    "ff": 14876,
+    "dsp": 24,
+    "bram_18k": 68,
+    "uram": 0
+  },
+  "revalidation": [
+    {
+      "date": "2026-09-27",
+      "tool": "Vitis HLS 2026.1 (Build 6493734)",
+      "csim": {
+        "command": "vitis-run.bat --mode hls --csim --config hls_config.cfg --work_dir build\\csim",
+        "exit_code": 0,
+        "result": "pass",
+        "compiler": "clang-16",
+        "work_dir": "build/csim",
+        "run_log": "build/csim/hls/csim/report/w4a8_linear_v1_csim.log",
+        "console_log": "logs/csim_run1_console.log"
+      },
+      "csynth": {
+        "command": "vitis-run.bat --mode hls --tcl run_synthesis.tcl",
+        "exit_code": 0,
+        "result": "pass_with_timing_warnings",
+        "project": "build_synthesis",
+        "report": "build_synthesis/solution1/syn/report/w4a8_linear_v1_csynth.rpt",
+        "console_log": "logs/csynth_run1_console.log",
+        "estimated_period_ns": 8.036,
+        "estimated_fmax_mhz": 124.44,
+        "synchk": "0 error(s), 1 warning(s)",
+        "loop_constraint_status": "not all loop constraints satisfied"
+      },
+      "cosim": {
+        "command": "run_cosim.ps1",
+        "exit_code": 0,
+        "result": "pass",
+        "simulator": "xsim",
+        "transactions": 6,
+        "work_dir": "build/cosim",
+        "report": "build/cosim/hls/sim/report/w4a8_linear_v1_cosim.rpt",
+        "latency_cycles_min_avg_max": [251, 7051, 20515],
+        "interval_cycles_min_avg_max": [280, 4391, 13259],
+        "total_execution_cycles": 42470
+      },
+      "source_hashes_match_manifest": true,
+      "toolchain_path_shim_required": true,
+      "previous_csynth_archive": "reports/baseline_20260926"
+    }
+  ],
+  "files_sha256": {
+    "src/w4a8_linear_v1.cpp": "1217823873877543523858abc156aec10a941d0204b6d8113dbfafa913cf4e31",
+    "src/w4a8_linear_v1.hpp": "0e382abd938fcda7cf259308e9d3ebebf24b37ea3bee4fcd4c9aeb00fe1db413",
+    "tb/tb_w4a8_linear_v1.cpp": "1aedb6b8dc7b9d53163c0af7f3aa350c2daa12f2f56e7290222ea004dbefafd9",
+    "hls_config.cfg": "856209886fea5d55bf0d7065b8dab01ce7a90efa9928df8d644f0c22ebe6e455",
+    "run_synthesis.tcl": "a58e4f96cb2a91deb9272ef8eb59ffd2c04acb7e7de8ca317d4941cd29f7b4fb",
+    "run_cosim.ps1": "aa8a8dd80ca572e2b69c6f8fd12890a5b40772f94f1340a39697bcfb2c4f6fb0"
+  }
+}

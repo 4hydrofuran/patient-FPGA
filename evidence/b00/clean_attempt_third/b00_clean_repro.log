@@ -1,0 +1,28 @@
+B00 fixture PASS transactions=3 output_checks=32 source=public_hand_fixture execution=PC_NATIVE
+B3 native_compile : D:\mingw64\bin\g++.exe -std=c++14 -O2 -ffp-contract=off -Wall -Wextra -Wno-unknown-pragmas src\w4a8_linear_v1.cpp tb\tb_w4a8_linear_v1.cpp -o build\native\b3_test.exe
+B3 native_test : D:\KV260-project-HLS\b_qwen35\build\b00_clean_repro_141257\build\native\b3_test.exe --suite full --dump vectors/generated
+PASS case=hand_sample T=1 N=2 K=2 source=synthetic seed=1
+PASS case=tile_random T=1 N=32 K=128 source=synthetic seed=539365377
+PASS case=nk_tail T=1 N=33 K=129 source=synthetic seed=539365378
+PASS case=three_groups T=1 N=65 K=257 source=synthetic seed=539365379
+PASS case=single T=1 N=1 K=1 source=synthetic seed=539365380
+PASS case=zeros T=1 N=33 K=129 source=synthetic seed=539365381
+PASS case=extremes T=1 N=32 K=128 source=synthetic seed=539365382
+PASS case=t4_compat T=4 N=33 K=129 source=synthetic seed=539365383
+PASS case=t8_compat T=8 N=1 K=1 source=synthetic seed=539365384
+PASS case=nonbinary_scale T=1 N=32 K=128 source=synthetic seed=539365385
+PASS case=padding_reserved T=1 N=1 K=1 source=synthetic seed=17
+PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble
+PASS case=mlp_up_synthetic T=1 N=4864 K=896 source=synthetic seed=1214515350
+PASS case=mlp_down_synthetic T=1 N=896 K=4864 source=synthetic seed=1214515351
+PASS case=projection_synthetic T=1 N=896 K=896 source=synthetic seed=1214515352
+PASS case=small_projection_synthetic T=1 N=128 K=896 source=synthetic seed=1214515353
+B3 PASS suite=full source=synthetic transactions=21 int32_partial_checks=75963 fp32_output_checks=7712
+B3 baseline_compile : D:\mingw64\bin\g++.exe -std=c++14 -O2 -ffp-contract=off -Wno-unknown-pragmas baseline\b2\src\w4a8_linear_v1.cpp tb\compare_b2.cpp -o build\native\b2_compat.exe
+g++.exe : tb\compare_b2.cpp:5:10: fatal error: ../../b2_hls/src/w4a8_linear_v1.hpp: No such file or directory
+At D:\KV260-project-HLS\b_qwen35\build\b00_clean_repro_141257\run_b3.ps1:35 char:5
++     & $Executable @Arguments 2>&1 | Tee-Object -FilePath $logFile
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (tb\compare_b2.c...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
