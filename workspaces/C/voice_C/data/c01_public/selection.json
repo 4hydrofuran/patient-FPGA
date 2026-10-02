@@ -1,0 +1,36 @@
+{
+  "dataset": "google/fleurs-r",
+  "revision": "c621c0b7b569dcebcd50273a187a35d1a1fc895f",
+  "license": "cc-by-4.0",
+  "split": "dev",
+  "source": "data/cmn_hans_cn/dev.tsv",
+  "patterns": {
+    "negation": "不|没有|未|无",
+    "number": "[0-9]+(?:\\.[0-9]+)?",
+    "time": "[0-9一二三四五六七八九十百]+(?:年|月|日|天|小时|分钟)",
+    "frequency": "每[天年日月]|经常|频率|每天",
+    "symptom": "腹泻|发烧|症状|流感|咳嗽|疼痛|肿胀|感染",
+    "medical_term": "病毒|细菌|蛋白质|疫苗"
+  },
+  "rule": "FIRST_TWO_MATCHES_PER_FIXED_CATEGORY_PLUS_FIRST_FOUR_TSV_ROWS_DEDUPLICATED_BEFORE_ASR",
+  "rows_with_seven_columns": 409,
+  "other_lines": 0,
+  "selected_wav_names": [
+    "10323412965683910375.wav",
+    "3890233952096932600.wav",
+    "6853906816602258944.wav",
+    "5973466817961657956.wav",
+    "12777520601088301837.wav",
+    "8150522654140426706.wav",
+    "282724074277049133.wav",
+    "14613085993617852640.wav",
+    "8475203873376780466.wav",
+    "7694019024049504210.wav",
+    "3482033887910269292.wav",
+    "15564411723736095779.wav",
+    "2426636562676444667.wav",
+    "7102026745488860267.wav"
+  ],
+  "selected_count": 14,
+  "scope": "PRESELECTED_PUBLIC_DEVELOPMENT_SLICE_NOT_FULL_FLEURS_OR_STUDENT_TEST"
+}

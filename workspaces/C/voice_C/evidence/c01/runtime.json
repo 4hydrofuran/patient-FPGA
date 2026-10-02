@@ -1,0 +1,37 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "packages": [
+    {
+      "name": "sherpa-onnx",
+      "version": "1.13.8",
+      "requires": [
+        "sherpa-onnx-core==1.13.8"
+      ],
+      "declared_license": "Apache licensed, as found in the LICENSE file",
+      "metadata_sha256": "a7d15d519c40063fc92210cc4e28e557371a9ad01074b238b4930bd5f62626de"
+    },
+    {
+      "name": "sherpa-onnx-core",
+      "version": "1.13.8",
+      "requires": null,
+      "declared_license": "Apache-2.0",
+      "metadata_sha256": "07285ebda6ae2f6a185926f443b87eed9e3495de3cc6620fb8032d72d3aec088"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "requires": null,
+      "declared_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "metadata_sha256": "451a9b8028000588e66b0b415587b6aef0bbc51a96d8e8a0cba0dc23acf64f99"
+    }
+  ],
+  "ctc_factory_signature": "(tokens: str, model: str, num_threads: int = 2, sample_rate: float = 16000, feature_dim: int = 80, enable_endpoint_detection: bool = False, rule1_min_trailing_silence: float = 2.4, rule2_min_trailing_silence: float = 1.2, rule3_min_utterance_length: float = 20.0, decoding_method: str = 'greedy_search', ctc_graph: str = '', ctc_max_active: int = 3000, provider: str = 'cpu', debug: bool = False, rule_fsts: str = '', rule_fars: str = '', device: int = 0, hr_dict_dir: str = '', hr_rule_fsts: str = '', hr_lexicon: str = '')",
+  "hotwords_parameter_supported": false,
+  "decoder_bias": "NONE",
+  "ctc_factory_source_sha256": "6fb875f2c8ac8345271612ca35932214b5b793baaff171773ea58f56b0fe55c0",
+  "onnx_license_status": "REVIEW_PENDING",
+  "user_license_answer": "暂无补充，先保留待确认"
+}

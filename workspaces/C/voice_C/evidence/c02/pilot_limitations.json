@@ -1,0 +1,12 @@
+{
+  "status": "SUPERSEDED_ENGINEERING_PILOT_NOT_FINAL_CONFIGURATION",
+  "affected_evidence": ["smoke_fixed", "direct_probe.log", "thread_probe.log", "direct.wav", "thread_probe.wav", "benchmark"],
+  "problem": "Python sid/speed overload creates GenerationConfig with silence_scale approximately 0.2, ignoring OfflineTtsConfig silence_scale=1.0.",
+  "recorded_model_config_silence_scale": 1.0,
+  "actual_generation_silence_scale": 0.20000000298023224,
+  "speed": 1.0,
+  "failed_worker_probe": "smoke.log: timeout; worker_timeout_probe/stderr.log: secondary-thread NumPy first import stalled in create_module",
+  "fix": "Preload NumPy on startup thread; pass explicit GenerationConfig with speed=1.0 and silence_scale=1.0.",
+  "policy": "Original pilot raw records retained unchanged. Final decision and listening packet must use benchmark_final. Pilot quality was never accepted.",
+  "board": "NOT_TESTED"
+}

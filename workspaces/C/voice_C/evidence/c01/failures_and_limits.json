@@ -1,0 +1,75 @@
+{
+  "retained_attempts": [
+    {
+      "attempt": "Initial sandbox network probe",
+      "exit_code": 1,
+      "status": "NETWORK_DENIED_WINERROR_10013",
+      "evidence": "Original tool output; this entry is a factual summary, not a reconstructed raw log"
+    },
+    {
+      "attempt": "GitHub release metadata",
+      "status": "HTTP_403_RATE_LIMIT",
+      "evidence": "sources/github_release.failed.json"
+    },
+    {
+      "attempt": "System.Speech script",
+      "exit_code": 1,
+      "status": "EXECUTION_POLICY_BLOCKED",
+      "evidence": "synthetic_generation.log"
+    },
+    {
+      "attempt": "System.Speech process-only retry",
+      "exit_code": 1,
+      "status": "VOICE_SELECTION_NULL_REFERENCE",
+      "evidence": "synthetic_generation_retry.log"
+    },
+    {
+      "attempt": "System.Speech local access",
+      "exit_code": 1,
+      "status": "VOICE_UNAVAILABLE",
+      "evidence": "synthetic_generation_local_access.log"
+    },
+    {
+      "attempt": "SAPI sandbox",
+      "exit_code": 1,
+      "status": "HRESULT_0X80045040",
+      "evidence": "synthetic_generation_sapi.log",
+      "failed_file": "failed_sapi_first_input.wav"
+    },
+    {
+      "attempt": "SAPI local access",
+      "exit_code": 1,
+      "status": "CLASS_NOT_REGISTERED",
+      "evidence": "synthetic_generation_sapi_local_access.log"
+    },
+    {
+      "attempt": "Guessed individual public audio URL",
+      "exit_code": 1,
+      "status": "HTTP_404",
+      "evidence": "public_audio_acquisition.log"
+    },
+    {
+      "attempt": "Original 24 kHz through strict ASR validation",
+      "exit_code": 1,
+      "status": "BAD_SAMPLE_RATE",
+      "evidence": "public_audio_archive_acquisition.log"
+    },
+    {
+      "attempt": "Normalization in elevated process",
+      "exit_code": 1,
+      "status": "NUMPY_API_NOT_VISIBLE_IN_ELEVATED_PROCESS",
+      "evidence": "public_audio_normalized_acquisition.log"
+    },
+    {
+      "attempt": "Default-sandbox offline normalization",
+      "exit_code": 0,
+      "status": "PASS",
+      "evidence": "public_audio_offline_preparation.log"
+    }
+  ],
+  "own_student_recordings": 0,
+  "successfully_generated_windows_speech": 0,
+  "selected_asr_failures": 0,
+  "onnx_license": "REVIEW_PENDING",
+  "diagnostics_scope": "Observed failures; elevated dependency visibility cause not claimed fully diagnosed"
+}

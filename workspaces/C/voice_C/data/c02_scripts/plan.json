@@ -1,0 +1,23 @@
+{
+  "frozen_before_timing": true,
+  "script_count": 14,
+  "repeats": 3,
+  "runs_per_configuration": 42,
+  "seed": 20261002,
+  "primary_configs": [
+    "threads1.batch1",
+    "threads2.batch1",
+    "threads4.batch1"
+  ],
+  "secondary_config": "selected_threads.batch2: paired two-sentence development texts only",
+  "selection_policy": "ZERO_FAILURE_CONFIG_WITH_LOWEST_PC_COMPUTE_P95; QUALITY_PROVISIONAL_UNTIL_HUMAN_REVIEW",
+  "first_sentence_ready": "ONE_SENTENCE_COMPLETE_WAV_CLIENT_READY; TWO_SENTENCE_INTERNAL_CHUNK_NOT_CLIENT_READY",
+  "model_residency": true,
+  "waveform_cache": false,
+  "speed": 1.0,
+  "amplitude_gain": 1.0,
+  "human_review": "BLANK_FORMS_ONLY_REQUESTED_BY_USER",
+  "board": "NOT_TESTED",
+  "final_test_used": false,
+  "old_qa_questions_used": false
+}

@@ -15,3 +15,27 @@ evidence/b02/rtl_recovered/
 vectors/b02_x128/
 vectors/b02_x128_real/
 evidence/b02/x128_rtl_recovered/
+
+# C publication: local environments, private input and runtime output
+.local_c*/
+**/.venv*/
+**/.deps/
+**/.idea/
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+*.pyc
+**/.env
+**/.env.local
+/workspaces/C/voice_C/spool/
+/workspaces/C/voice_C/evidence/c03_mic/manual_*/
+/workspaces/C/voice_C/evidence/selftest_latest/
+/workspaces/C/voice_C/assets/asr/*/
+/workspaces/C/voice_C/assets/tts/*/
+/workspaces/C/voice_C/assets/wheels/*.whl
+/workspaces/C/voice_C/listening/c02/audio/
+/patient-qwen/backend/audio_files/
+/patient-qwen/frontend/audio/
+/patient-qwen/frontend/temp.wav
+/patient-qwen/frontend/output.pcm
+/patient-qwen/frontend/ai_response.mp3

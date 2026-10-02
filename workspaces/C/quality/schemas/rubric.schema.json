@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kv260:c0:rubric:0.1.0-draft",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "rubric_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "rubric_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "DRAFT"
+        },
+        "reviewer": {
+          "type": "null"
+        },
+        "reviewed_at": {
+          "type": "null"
+        },
+        "approval_reference": {
+          "type": "null"
+        },
+        "needs_medical_teacher": {
+          "const": true
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "approval_reference",
+        "needs_medical_teacher"
+      ],
+      "additionalProperties": false
+    },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "coverage": {
+          "const": 40
+        },
+        "logic": {
+          "const": 25
+        },
+        "clarity": {
+          "const": 15
+        },
+        "care": {
+          "const": 10
+        },
+        "summary": {
+          "const": 10
+        }
+      },
+      "required": [
+        "coverage",
+        "logic",
+        "clarity",
+        "care",
+        "summary"
+      ],
+      "additionalProperties": false
+    },
+    "total_points": {
+      "const": 100
+    },
+    "confidence_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "annotation_policy": {
+      "const": "trusted_engineering_annotations_only_C0"
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterion_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "category": {
+            "enum": [
+              "coverage",
+              "logic",
+              "clarity",
+              "care",
+              "summary"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "points": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "accepted_intents": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "requires_all": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "criterion_id",
+          "category",
+          "label",
+          "points",
+          "accepted_intents",
+          "requires_all"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "rubric_id",
+    "rubric_version",
+    "review",
+    "categories",
+    "total_points",
+    "confidence_threshold",
+    "annotation_policy",
+    "criteria"
+  ],
+  "additionalProperties": false
+}

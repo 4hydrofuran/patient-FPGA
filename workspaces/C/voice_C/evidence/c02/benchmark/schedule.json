@@ -1,0 +1,187 @@
+{
+  "seed": 20261002,
+  "primary_config_order": [
+    "threads1.batch1",
+    "threads2.batch1",
+    "threads4.batch1"
+  ],
+  "schedule": [
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-06"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-01"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-05"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-14"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-08"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-09"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-10"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-12"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-08"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-05"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-02"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-14"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-02"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-05"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-02"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-04"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-03"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-03"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-13"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-13"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-07"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-01"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-08"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-01"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-09"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-11"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-13"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-12"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-14"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-11"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-06"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-03"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-04"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-07"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-04"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-06"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-09"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-12"
+    },
+    {
+      "repeat": 1,
+      "script_id": "tts-dev-10"
+    },
+    {
+      "repeat": 2,
+      "script_id": "tts-dev-07"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-10"
+    },
+    {
+      "repeat": 0,
+      "script_id": "tts-dev-11"
+    }
+  ],
+  "selection_policy": "LOWEST_COMPUTE_P95_ZERO_FAILURE; NO_HUMAN_QUALITY_ACCEPTANCE",
+  "paired_native_batch2": "SAME_TWO_SENTENCE_TEXTS_THREE_REPEATS_SELECTED_THREADS; EXPLORATORY",
+  "warmup": "ONE_EXTRA_FULL_SYNTHESIS_PER_FRESH_PROCESS_RETAINED_SEPARATELY",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu_count": 8,
+  "speed": 1.0,
+  "gain": 1.0,
+  "waveform_cache": false,
+  "network": "LOCAL_ASSETS_DEFAULT_NETWORK_RESTRICTED_SANDBOX_NOT_PHYSICAL_DISCONNECT"
+}

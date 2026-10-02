@@ -1,0 +1,380 @@
+{
+  "status": "PASS_STATIC_ARM_WHEEL_INSPECTION",
+  "target": "KV260 Cortex-A53",
+  "target_isa": "ARMv8-A with Advanced SIMD/NEON; do not assume SVE, dot-product, ARMv8.1 LSE",
+  "python": "CPython 3.12",
+  "os": "GNU/Linux aarch64",
+  "wheel_tag_glibc_floor": "2.27 (NumPy); 2.17 (sherpa)",
+  "rootfs_version": null,
+  "actual_board_glibc": null,
+  "actual_cpu_features": null,
+  "cross_build": "NOT_PERFORMED_PREBUILT_WHEELS_ONLY",
+  "native_import": "NOT_TESTED",
+  "board": "NOT_TESTED",
+  "a53_binary_isa_compatibility": "NOT_VERIFIED_BY_HEADER_INSPECTION",
+  "wheels": [
+    {
+      "wheel": "numpy-2.5.3-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "libraries": [
+        {
+          "path": "numpy/_core/_multiarray_tests.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "d1d57e137ad2dafaf0f97c4cf3569d9e55f6903608841d033438bcdc11e09ce3",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "73d0c6e928b027c9a3a99101dd0899492d91ccb2ba350dbb851e4b06c89039cb",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_operand_flag_tests.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "6819cc3e1e4e96cd71535b9417b384e91b11de40ca98ce07ec5e2f2e55374328",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_rational_tests.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "1d78ab5bb05555cad2eb380ef90a99c3ccd855ace02abb602716c99b0c79a699",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_simd.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "26fd2e82d1f940068989fa9982d75fc550935de1a82a9110d2bfc647a44c5870",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_struct_ufunc_tests.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "efbd229dad80deb8a9bcbbbec520120f5d9e1491feb2c7921edb6b7fd99ce7d8",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/_core/_umath_tests.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "d7874ab662bd37e9792d07e10d857c2e45fb9198853e3701a2e6219440e000f3",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/fft/_pocketfft_umath.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "b954742f8a4599e017c1377203f2034468aa7698438c932895b5edcce2fb8060",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/linalg/_umath_linalg.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "47082efc741a925c0405622f128ec80c2d93739dcfe9915c42679a8164f5b83c",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/linalg/lapack_lite.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "b3dfc478fa60a520330b776dd756badbf4b1eb7e85a89bd05e8a3ddfd9a5339f",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_bounded_integers.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "18a60364616a82854328c1cfd3b2fb9716aa30daaf26ca79584ea4a48b52d39d",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_common.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "49f2b149b4079c73c2fad65f3414c77c545922a44ca9fbe844ba09a4b7c7fe61",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_generator.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "9b7a0254a67d20aad3036230b6ae563d01c294684f18ba49a28a552a12a3e051",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_mt19937.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "1f30e6960009158f05e9ba18670cfbca7c4817abb786369b9715421535fe64ff",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_pcg64.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "f9b6d66c55e3e4e97bde339b5ccbe3018c78f34273656d1217b69ea8bca3bffa",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_philox.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "8b5869a56ac89805b4d7058facaca19b6e3c666803febdeb55a93ce54dc510b2",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/_sfc64.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "88a259d512064bed4f64164e9342c8c6d8c639ea6ed9a25a58b33f1d76fa88d9",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/bit_generator.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "91ba294322e66c53f6a210c94c04eb08575be8e35cb1a001535f7cc00a547697",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy/random/mtrand.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "4c3221030b0af8b65db2a5e44b6b57c07e70441305a050e4fdf6b1c68a71cb0b",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy.libs/libgfortran-e1b7dfc8-d8198c01.so.5.0.0",
+          "sha256": "25899a29a06d3f2927021b4823d858558839fea0e7e759eedb8926fd0a339ea4",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "numpy.libs/libscipy_openblas64_-f552eb69.so",
+          "sha256": "e58b9ec0d373252b70f37d9dc891d7183a4f57f062db87f38e9a1bf7442d3037",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17",
+            "GLIBC_2.27"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        }
+      ],
+      "embedded_license_paths": [
+        "numpy/_core/include/numpy/random/LICENSE.txt",
+        "numpy/ma/LICENSE",
+        "numpy-2.5.3.dist-info/licenses/",
+        "numpy-2.5.3.dist-info/licenses/LICENSE.txt",
+        "numpy-2.5.3.dist-info/licenses/numpy/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/include/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/include/numpy/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/include/numpy/libdivide/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/common/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/highway/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/multiarray/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/npysort/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/umath/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/umath/svml/",
+        "numpy-2.5.3.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+        "numpy-2.5.3.dist-info/licenses/numpy/fft/",
+        "numpy-2.5.3.dist-info/licenses/numpy/fft/pocketfft/",
+        "numpy-2.5.3.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/linalg/",
+        "numpy-2.5.3.dist-info/licenses/numpy/linalg/lapack_lite/",
+        "numpy-2.5.3.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+        "numpy-2.5.3.dist-info/licenses/numpy/ma/",
+        "numpy-2.5.3.dist-info/licenses/numpy/ma/LICENSE",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/distributions/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/mt19937/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/pcg64/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/philox/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/sfc64/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/splitmix64/",
+        "numpy-2.5.3.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md"
+      ]
+    },
+    {
+      "wheel": "sherpa_onnx-1.13.8-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "libraries": [
+        {
+          "path": "sherpa_onnx/lib/_sherpa_onnx.cpython-312-aarch64-linux-gnu.so",
+          "sha256": "894b57cb8dc1b61a8a22d6755909b9c662df03726acb9f1ddc3034133b09ad1c",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "sherpa_onnx.libs/libasound-eeac1cd9.so.2.0.0",
+          "sha256": "719d17f13b24f7efb4a8ad20e21705ed6da001b57a872d18c53eac430316e9e0",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        }
+      ],
+      "embedded_license_paths": [
+        "sherpa_onnx-1.13.8.dist-info/licenses/",
+        "sherpa_onnx-1.13.8.dist-info/licenses/LICENSE"
+      ]
+    },
+    {
+      "wheel": "sherpa_onnx_core-1.13.8-py3-none-manylinux2014_aarch64.whl",
+      "libraries": [
+        {
+          "path": "sherpa_onnx/lib/libsherpa-onnx-c-api.so",
+          "sha256": "1be01a1a5c0420e32a81011222e771fc35fa5e8d8cce951281d769d849296cab",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "sherpa_onnx/lib/libonnxruntime.so",
+          "sha256": "cfc800d4438f15e8d9017521326776ca7117d8783cb847ccccc2fc61ac4d540f",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        },
+        {
+          "path": "sherpa_onnx/lib/libsherpa-onnx-cxx-api.so",
+          "sha256": "8044411d1d112494d5a3009d3b833f27ebe67a61514ecea868b3a83e0fb8f39f",
+          "elf_class": 64,
+          "elf_machine": 183,
+          "architecture": "AARCH64",
+          "glibc_symbol_strings": [
+            "GLIBC_2.17"
+          ],
+          "isa_execution_compatibility": "NOT_TESTED"
+        }
+      ],
+      "embedded_license_paths": []
+    }
+  ],
+  "sources": [
+    "https://pypi.org/project/numpy/2.5.3/",
+    "https://pypi.org/project/sherpa-onnx/1.13.8/",
+    "https://pypi.org/project/sherpa-onnx-core/1.13.8/",
+    "https://k2-fsa.github.io/sherpa/onnx/install/aarch64-embedded-linux.html"
+  ]
+}

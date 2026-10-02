@@ -1,0 +1,13 @@
+Publisher dataset: google/fleurs-r revision: c621c0b7b569dcebcd50273a187a35d1a1fc895f license: cc-by-4.0
+TSV lines: 409 first column counts: [7, 7, 7]
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c01_public_audio.py", line 127, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c01_public_audio.py", line 104, in main
+    f.writeframes(resample_24k_to_16k(pcm))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\prepare_audio.py", line 6, in resample_24k_to_16k
+    samples=np.frombuffer(pcm,dtype='<i2').astype(np.float64)
+            ^^^^^^^^^^^^^
+AttributeError: module 'numpy' has no attribute 'frombuffer'

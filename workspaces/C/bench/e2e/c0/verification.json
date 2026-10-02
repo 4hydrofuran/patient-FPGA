@@ -1,0 +1,73 @@
+{
+  "status": "PASS_PC_ENGINEERING_ONLY",
+  "timestamp_utc": "2026-10-01T09:01:34.631389+00:00",
+  "medical_review": "PENDING_NOT_SENT",
+  "api_review": "PENDING_A",
+  "board_test": "NOT_TESTED",
+  "checks": [
+    {
+      "check": "schema_and_cross_references",
+      "file": "cases\\drafts\\sp_chest_01.json",
+      "status": "PASS"
+    },
+    {
+      "check": "schema_and_cross_references",
+      "file": "cases\\drafts\\sp_chest_02.json",
+      "status": "PASS"
+    },
+    {
+      "check": "schema_and_cross_references",
+      "file": "cases\\drafts\\sp_chest_03.json",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy_13_sources_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy_credential_values_absent_from_delivery",
+      "status": "PASS"
+    },
+    {
+      "check": "execution_package_20_checksums",
+      "status": "PASS"
+    },
+    {
+      "check": "local_dependency_versions",
+      "status": "PASS",
+      "versions": {
+        "attrs": "26.1.0",
+        "jsonschema": "4.23.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.6.3",
+        "typing-extensions": "4.16.0"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "app/tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench\\e2e\\c0\\unittest.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "app/c0_domain.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench\\e2e\\c0\\demo_report.json"
+    }
+  ]
+}

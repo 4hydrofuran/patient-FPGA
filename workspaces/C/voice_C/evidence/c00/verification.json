@@ -1,0 +1,92 @@
+{
+  "status": "PASS_PC_CONTRACT_ONLY",
+  "verified_at_utc": "2026-10-02T07:29:48.993407+00:00",
+  "client_date": "2026-10-02",
+  "client_timezone": "Asia/Shanghai",
+  "stage": "C00",
+  "commands": [
+    {
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "tools/prepare_recording_plan.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+      "exit_code": 0,
+      "log": "voice_C/evidence/c00/recording_plan.log"
+    },
+    {
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+      "exit_code": 0,
+      "log": "voice_C/evidence/c00/unittest.log"
+    },
+    {
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "tools/collect_contract_demo.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+      "exit_code": 0,
+      "log": "voice_C/evidence/c00/contract_demo.log"
+    },
+    {
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "-m",
+        "voicec.metrics",
+        "--manifest",
+        "data/recording_plan.jsonl",
+        "--listening",
+        "data/tts_listening.template.jsonl",
+        "--output",
+        "evidence/c00/quality_readiness.json"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+      "exit_code": 0,
+      "log": "voice_C/evidence/c00/quality_readiness.log"
+    }
+  ],
+  "tests_run": 35,
+  "tests_passed": 35,
+  "tests_skipped": 0,
+  "tests_failed": 0,
+  "execution_kind": "CONTRACT_TEST",
+  "python_version": "3.12.14",
+  "python_executable": "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+  "dependency_scope": "voice_C/.venv; Python standard library only; no pip packages",
+  "recording_plan": {
+    "planned": 48,
+    "collected": 0,
+    "authorized_recordings": 0,
+    "dev": 24,
+    "test": 24,
+    "actual_speaker_isolation": "PENDING_NO_RECORDINGS",
+    "source_and_exact_phrase_overlap": false,
+    "semantic_template_independence": "MANUAL_AUDIT_REQUIRED",
+    "clinical_claim": false
+  },
+  "actual_asr": "NOT_TESTED",
+  "actual_tts": "NOT_TESTED",
+  "real_cer": null,
+  "real_asr_rtf": null,
+  "real_tts_rtf": null,
+  "intelligibility": null,
+  "actual_audible_ms": null,
+  "aarch64_build": "NOT_TESTED",
+  "board": "NOT_TESTED",
+  "board_identity": null,
+  "model_hash": null,
+  "source_commit": null,
+  "codex_selection_actual": "NOT_VERIFIED",
+  "historical_c1_files_unchanged": 47,
+  "package_hashes_match": 30,
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6"
+}

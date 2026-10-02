@@ -1,0 +1,10 @@
+{
+  "first_attempt": "FAIL",
+  "failed_test": "test_persistent_client_and_disabled_tts",
+  "reason": "Optional Python network guard wrote a default stderr marker, violating the existing no-diagnostic default assertion",
+  "correction": "Guard remains active; marker requires VOICE_C_NETWORK_GUARD_DIAGNOSTIC=1",
+  "old_tests_relaxed": false,
+  "first_failed_package_preserved": true,
+  "second_attempt": "PASS",
+  "final_source_commit": "9a63b4cd85464d30072757855edb0f5a57220d58"
+}

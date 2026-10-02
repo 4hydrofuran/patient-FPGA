@@ -1,0 +1,22 @@
+Actual execution failures retained from this C0 session (2026-10-01).
+
+1. Default sandbox pip install jsonschema==4.23.0 to app/.deps: exit_code=1.
+   HTTPS to pypi.org blocked with WinError 10013. No package compatibility conclusion.
+   Retried once via authorized elevated network access: exit_code=0, packages installed locally.
+
+2. First quality/tools/verify_c0.py: exit_code=1, before running tests.
+   ImportError: cannot import name 'Draft202012Validator' from 'jsonschema' (unknown location)
+   Read-only diagnosis found app/.deps/jsonschema directory access denied.
+   jsonschema.__file__ was None and namespace path pointed to app/.deps/jsonschema.
+   Cause supported by the next experiment: local public dependency tree read/execute
+   permissions were repaired; icacls processed 262 files with 0 failures, exit_code=0.
+   Same verify command then passed without changes to test thresholds.
+
+3. Medical reference pages: NICE CG95 full recommendations and JACC executive
+   summary open requests returned 403. Search summaries available; no full guideline
+   review or medical approval was claimed. Draft review packet records this boundary.
+
+4. Legacy credential redaction missed the APIKey spelling on a separate source line.
+   One credential value appeared in tool output. The value is not repeated in this
+   delivery. Subsequent reads redact the entire sensitive line. Credential holder
+   should rotate it. No legacy credential was used or copied into C0 materials.

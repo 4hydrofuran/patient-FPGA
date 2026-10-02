@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "linear_backend": "A",
+  "voice_backend": "A",
+  "backends": {
+    "A": "modules/linear_A/manifest.json",
+    "B": "modules/linear_B/manifest.json"
+  },
+  "voices": {
+    "A": "modules/voice_A/manifest.json",
+    "C": "modules/voice_C/manifest.json"
+  },
+  "selection_time": "startup_only_after_device_quiescence",
+  "fallback": "explicit_and_logged",
+  "note": "Planned configuration. These module files are not supplied or installed by this plan."
+}

@@ -1,0 +1,1563 @@
+{
+  "exclusions": [
+    {
+      "path": "patient-qwen/.idea/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/ffmpeg-master-latest-linux64-gpl/",
+      "reason": "BUNDLED_FFMPEG_PLATFORM_BINARY_AND_DOCUMENTATION",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/backend/.idea/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/backend/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/backend/audio_files/audio.pcm",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "patient-qwen/frontend/.idea/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/frontend/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen/frontend/ai_response.mp3",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "patient-qwen/frontend/output.pcm",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "patient-qwen/frontend/temp.wav",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "patient-qwen/frontend/audio/ai_response_1761558069.5973628.mp3",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "patient-qwen/frontend/audio/ai_response_1761558079.7937832.mp3",
+      "reason": "LEGACY_RUNTIME_AUDIO_PROVENANCE_NOT_VERIFIED"
+    },
+    {
+      "path": "workspaces/C/app/.deps/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/app/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/quality/c1/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/quality/c1/sources/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/C_pc_candidate_v1/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/attempt_02/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/final_independent_runtime/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/final_independent_source/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/independent_runtime/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/independent_source/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/releases/c04/source_snapshot/",
+      "reason": "DUPLICATED_BUILD_SNAPSHOT_OR_PRIVATE_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/.venv/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/.venv_mic/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/public_audio/",
+      "reason": "EXTERNAL_MODEL_OR_DEPENDENCY_RESOURCE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/asr/zipformer-small-ctc-zh-int8-2025-04-01/",
+      "reason": "EXTERNAL_MODEL_OR_DEPENDENCY_RESOURCE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/tts/matcha-icefall-zh-baker/",
+      "reason": "EXTERNAL_MODEL_OR_DEPENDENCY_RESOURCE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/tts/vocos-22khz-univ.onnx",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/wheels/numpy-2.5.3-cp312-cp312-win_amd64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/wheels/sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/assets/wheels/sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/data/c01_smoke/c01.smoke.mandarin.01/in.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c01/failed_sapi_first_input.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c01/edge_inputs/clipped/in.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c01/edge_inputs/short_clip/in.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c01/edge_inputs/silence/in.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/direct.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/thread_probe.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-001.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-002.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-003.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-004.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-005.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-006.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-007.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-008.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-009.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-010.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-011.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-012.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-013.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/aux_asr/listen-014.16k.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads1.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads2.batch2/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark/audio/threads4.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads1.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads2.batch2/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-01.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-01.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-01.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-02.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-02.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-02.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-03.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-03.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-03.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-04.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-04.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-04.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-05.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-05.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-05.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-06.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-06.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-06.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-07.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-07.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-07.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-08.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-08.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-08.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-09.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-09.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-09.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-10.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-10.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-10.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-11.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-11.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-11.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-12.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-12.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-12.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-13.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-13.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-13.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-14.repeat0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-14.repeat1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/tts-dev-14.repeat2.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/benchmark_final/audio/threads4.batch1/warmup.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/smoke_final/speech.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/smoke_fixed/speech.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c02/worker_timeout_probe/spool/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03/edges/combined-recovered.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03/edges/negation-0.16k.pcm",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03/edges/negation-0.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03/edges/negation-1.16k.pcm",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03/edges/negation-1.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_203334_4c8e4bec/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_203408_434441dc/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_203557_c528bb1b/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_203921_8018da01/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_204543_4c9b08fa/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/manual_20261002_204606_ac8435f7/",
+      "reason": "PRIVATE_MICROPHONE_TRANSCRIPT_AND_TRACE",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_01/",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_02/",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_03/",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED",
+      "subtree": true
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_01.log",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_02.log",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c03_mic/real_run_03.log",
+      "reason": "LOCAL_MICROPHONE_ATTEMPT_DETAIL_SUMMARY_RETAINED"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c04/preflight_package.zip",
+      "reason": "INTERMEDIATE_OR_DUPLICATED_ARCHIVE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c04/preflight_package_02.zip",
+      "reason": "INTERMEDIATE_OR_DUPLICATED_ARCHIVE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c04/arm/numpy-2.5.3-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c04/arm/sherpa_onnx-1.13.8-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/evidence/c04/arm/sherpa_onnx_core-1.13.8-py3-none-manylinux2014_aarch64.whl",
+      "reason": "CACHE_OR_EXTERNAL_MODEL_DEPENDENCY_RESOURCE"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-001.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-002.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-003.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-004.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-005.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-006.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-007.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-008.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-009.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-010.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-011.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-012.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-013.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/listening/c02/audio/listen-014.wav",
+      "reason": "LOCAL_OR_SYNTHESIZED_AUDIO_NOT_PUBLISHED"
+    },
+    {
+      "path": "workspaces/C/voice_C/voicec/__pycache__/",
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME",
+      "subtree": true
+    },
+    {
+      "path": "patient-qwen.zip",
+      "reason": "UNREVIEWED_DUPLICATE_ROOT_ARCHIVE"
+    },
+    {
+      "path": "workspaces.zip",
+      "reason": "UNREVIEWED_DUPLICATE_ROOT_ARCHIVE"
+    },
+    {
+      "path": "patient-qwen/frontend/.mypy_cache/",
+      "subtree": true,
+      "reason": "LOCAL_ENVIRONMENT_CACHE_OR_RUNTIME"
+    }
+  ]
+}

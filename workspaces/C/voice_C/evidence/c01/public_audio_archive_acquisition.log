@@ -1,0 +1,19 @@
+Publisher dataset: google/fleurs-r revision: c621c0b7b569dcebcd50273a187a35d1a1fc895f license: cc-by-4.0
+TSV lines: 409 first column counts: [7, 7, 7]
+Dev archive download bytes: 33554432
+Dev archive download bytes: 67108864
+Dev archive download bytes: 100663296
+Dev archive download bytes: 134217728
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c01_public_audio.py", line 113, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c01_public_audio.py", line 93, in main
+    info=inspect_wav(path,asr=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\audio.py", line 52, in inspect_wav
+    return read_pcm16(path, asr)[0]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\audio.py", line 33, in read_pcm16
+    raise VoiceError('BAD_SAMPLE_RATE', 'ASR requires 16000 Hz')
+voicec.audio.VoiceError: ASR requires 16000 Hz

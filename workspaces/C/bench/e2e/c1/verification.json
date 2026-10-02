@@ -1,0 +1,123 @@
+{
+  "status": "PASS_PC_ENGINEERING_ONLY",
+  "timestamp_utc": "2026-10-01T09:46:26.433940+00:00",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/validate_c1.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/dataset_validation.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/make_review_readable.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/review_render.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "quality/c1/tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/c1_tests.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "app/tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/c0_regression.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/evaluate_c1.py",
+        "--output",
+        "bench/e2e/c1/readiness.json"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/readiness.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/prepare_fixture.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/fixture_preparation.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/evaluate_c1.py",
+        "--predictions",
+        "bench/e2e/c1/fixtures/predictions.synthetic.jsonl",
+        "--annotations",
+        "bench/e2e/c1/fixtures/annotations.synthetic.jsonl",
+        "--output",
+        "bench/e2e/c1/fixture_evaluation.json"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/fixture_evaluation.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "quality/c1/review_c1.py",
+        "--reviewer-1",
+        "quality/c1/review/reviewer_1_questions.template.jsonl",
+        "--reviewer-2",
+        "quality/c1/review/reviewer_2_questions.template.jsonl",
+        "--output",
+        "bench/e2e/c1/review_pending.json"
+      ],
+      "cwd": "C:\\vivado\\KV260\\workspaces\\C",
+      "exit_code": 0,
+      "log": "bench/e2e/c1/review_check.log"
+    }
+  ],
+  "test_counts": {
+    "c1_tests.log": 27,
+    "c0_regression.log": 27
+  },
+  "frozen_test_count": 324,
+  "development_record_count": 54,
+  "testset_sha256": "e5cb45b6e8d4a063de03f68526ee4ad350c1456322fc6b9c46e681cfa685a802",
+  "freeze_manifest_sha256": "f02be5d5b947372a3b19fbd02730c0db78212034eeb7410fbf900068a282d398",
+  "c0_input_files_unchanged": 8,
+  "legacy_sources_unchanged": 13,
+  "execution_package_hashes_match": 20,
+  "medical_review": "PENDING_NOT_SENT",
+  "clinical_gold": "NOT_AVAILABLE",
+  "system_evaluation": "NOT_RUN",
+  "teacher_mae": null,
+  "actual_model_and_effort": "NOT_VERIFIED",
+  "model_hash": null,
+  "xclbin_hash": null,
+  "board_identity": null,
+  "git_commit": null,
+  "contract_version": null
+}

@@ -1,0 +1,114 @@
+{
+  "status": "DEVELOPMENT_ENGINEERING_COMPARISON_ONLY",
+  "comparisons": [
+    {
+      "alternative": "threads1.batch1",
+      "baseline_selected": "threads2.batch1",
+      "paired_runs": 42,
+      "script_groups": 14,
+      "alternative_compute_p95": 1056.8803550064324,
+      "selected_same_subset_compute_p95": 722.823564999271,
+      "p95_difference_ms_interval_95": [
+        185.03935999542637,
+        379.6198150070263
+      ],
+      "bootstrap": "2000_SCRIPT_GROUP_RESAMPLES; THREE_REPEATS_PER_SCRIPT_RETAINED_TOGETHER",
+      "alternative_frame_counts_same_as_selected": 42,
+      "quality_comparable": "NOT_HUMAN_VERIFIED",
+      "exploratory": false
+    },
+    {
+      "alternative": "threads4.batch1",
+      "baseline_selected": "threads2.batch1",
+      "paired_runs": 42,
+      "script_groups": 14,
+      "alternative_compute_p95": 1452.522905007208,
+      "selected_same_subset_compute_p95": 722.823564999271,
+      "p95_difference_ms_interval_95": [
+        626.611474992387,
+        1499.2293100032805
+      ],
+      "bootstrap": "2000_SCRIPT_GROUP_RESAMPLES; THREE_REPEATS_PER_SCRIPT_RETAINED_TOGETHER",
+      "alternative_frame_counts_same_as_selected": 42,
+      "quality_comparable": "NOT_HUMAN_VERIFIED",
+      "exploratory": false
+    },
+    {
+      "alternative": "threads2.batch2",
+      "baseline_selected": "threads2.batch1",
+      "paired_runs": 12,
+      "script_groups": 4,
+      "alternative_compute_p95": 615.7785099960164,
+      "selected_same_subset_compute_p95": 768.7406400007603,
+      "p95_difference_ms_interval_95": [
+        -279.1516118657637,
+        -68.83509999897797
+      ],
+      "bootstrap": "2000_SCRIPT_GROUP_RESAMPLES; THREE_REPEATS_PER_SCRIPT_RETAINED_TOGETHER",
+      "alternative_frame_counts_same_as_selected": 0,
+      "quality_comparable": "NOT_HUMAN_VERIFIED",
+      "exploratory": true
+    }
+  ],
+  "lexicon_unknown_tokens": [
+    {
+      "word": "人生自古谁无死",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "谁的",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "谁都",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "鹿死谁手",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    }
+  ],
+  "lexicon_not_modified": true,
+  "warning": "Native loader warns Unknown token: shei2 for four lexicon entries. These words need a separate human pronunciation check.",
+  "residency_comparison": [
+    {
+      "config": "threads1.batch1",
+      "cold_process_startup_ms": 2717.7968000032706,
+      "first_native_call_ms": 384.8515999998199,
+      "resident_compute_p95": 1056.8803550064324
+    },
+    {
+      "config": "threads2.batch1",
+      "cold_process_startup_ms": 2852.518300001975,
+      "first_native_call_ms": 336.42259999760427,
+      "resident_compute_p95": 722.823564999271
+    },
+    {
+      "config": "threads4.batch1",
+      "cold_process_startup_ms": 3639.301599992905,
+      "first_native_call_ms": 1120.2078999922378,
+      "resident_compute_p95": 1452.522905007208
+    },
+    {
+      "config": "threads2.batch2",
+      "cold_process_startup_ms": 3968.6866000120062,
+      "first_native_call_ms": 292.3878000001423,
+      "resident_compute_p95": 615.7785099960164
+    }
+  ],
+  "limits": [
+    "Configuration order fixed; time/thermal effects not independently controlled.",
+    "Secondary native batch comparison has 12 trials and changed waveform duration: exploratory, no quality equivalence claim.",
+    "No default A voice provided; no replacement threshold or board speed claim.",
+    "Warmups and startup stored separately; RTF excludes model load and physical playback.",
+    "Noise scale fixed 1.0; waveform identity neither required nor assumed."
+  ]
+}

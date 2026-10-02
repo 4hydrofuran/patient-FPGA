@@ -1,0 +1,14 @@
+{
+  "author": "Codex AI engineering drafts, not medical teachers",
+  "case_slots_overlap": "相同任务必然共享槽位和病例事实；按问法脚本和模板来源隔离，不按语义槽位隔离。",
+  "development_source": "18 separately authored dialogue workflow scripts × 3 cases; 54 records/18 distinct utterances",
+  "fine_tuning_authorized": false,
+  "independence_limit": "同三病例同AI作者；324不同输入不是324临床独立样本，不能声称跨病例/病种泛化。",
+  "partition_by": "whole source family; all 3 siblings stay in one split",
+  "post_freeze_policy": "不按系统错误修改/删测试或改阈值；教师更正另建v2，保留v1和差异/双版本结果。",
+  "recommended_reviewers": 2,
+  "review_state": "PENDING_NOT_SENT",
+  "sample_ids_may_not_enter_development": true,
+  "test_source": "108 handwritten rows × 3 separately authored utterances, not a shared dev formatter",
+  "training_used": false
+}

@@ -1,0 +1,37 @@
+{
+  "contract": "SP_VOICE_V1",
+  "transport": "persistent child process; UTF-8 JSONL stdin/stdout",
+  "required_request_fields": [
+    "api_version",
+    "request_id",
+    "op"
+  ],
+  "mandatory_ops": [
+    "hello",
+    "transcribe",
+    "synthesize",
+    "cancel",
+    "reset",
+    "shutdown"
+  ],
+  "optional_stream_ops": [
+    "asr_begin",
+    "asr_push",
+    "asr_finish"
+  ],
+  "response_types": [
+    "result",
+    "error",
+    "event"
+  ],
+  "input_audio": {
+    "sampling_rate": 16000,
+    "channels": 1,
+    "encoding": "PCM_S16LE_WAV"
+  },
+  "tts_output": "mono PCM16 WAV, explicit actual sample_rate; do not label ready time as audible time",
+  "security": "spool-relative paths only; no external URLs; no traversal/symlink escape; no shell interpolation",
+  "asr_partial_policy": "display only, never scoring or LLM prompt",
+  "confidence_policy": "null unless actually supplied and meaning documented",
+  "note": "Protocol specification, not a working speech model."
+}

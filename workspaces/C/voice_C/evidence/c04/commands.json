@@ -1,0 +1,68 @@
+{
+  "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+  "commands": [
+    {
+      "action": "workspace regression",
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "log": "unittest.log"
+    },
+    {
+      "action": "ARM acquire restricted",
+      "command": "tools/acquire_c04_arm.py",
+      "exit_code": 1,
+      "log": "arm_acquire_01.log"
+    },
+    {
+      "action": "ARM acquire host permissions",
+      "command": "tools/acquire_c04_arm.py",
+      "exit_code": 0,
+      "log": "arm_acquire_02.log"
+    },
+    {
+      "action": "measurement",
+      "command": "tools/measure_c04.py",
+      "exit_code": 0,
+      "log": "measurements.log"
+    },
+    {
+      "action": "build first draft",
+      "command": "tools/build_c04_candidate.py",
+      "exit_code": 0,
+      "log": "build_candidate.log"
+    },
+    {
+      "action": "first reproduction",
+      "command": "tools/reproduce_c04.py",
+      "exit_code": 1,
+      "log": "reproduction.log"
+    },
+    {
+      "action": "build reviewed draft",
+      "command": "tools/build_c04_candidate.py --attempt 2",
+      "exit_code": 0,
+      "log": "build_candidate_02.log"
+    },
+    {
+      "action": "reviewed reproduction",
+      "command": "tools/reproduce_c04.py --attempt 2",
+      "exit_code": 0,
+      "log": "reproduction_02.log"
+    },
+    {
+      "action": "seal package",
+      "command": "tools/seal_c04_package.py",
+      "exit_code": 0,
+      "log": "package_seal.log"
+    },
+    {
+      "action": "exact final zip reproduction",
+      "command": "tools/verify_final_c04.py",
+      "exit_code": 0,
+      "log": "final_reproduction.log"
+    }
+  ],
+  "source_snapshot_commands": "source_snapshot_commands_02.json",
+  "detailed_reproduction": "final_reproduction/commands.json",
+  "offline_installer": "reproduction_02/commands.json"
+}

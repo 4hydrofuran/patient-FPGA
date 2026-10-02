@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "fresh_extraction": true,
+  "static_before_and_after": "PASS",
+  "source_commit": "9a63b4cd85464d30072757855edb0f5a57220d58",
+  "git_bundle_head_verified": true,
+  "contract_tests": 49,
+  "real_asr": true,
+  "real_streaming_asr": true,
+  "real_tts": true,
+  "missing_models_rejected": true,
+  "offline_installer": true,
+  "model_assets_in_zip": false,
+  "local_model_copy": "SAME_MACHINE_PRIVATE_RUNTIME_ONLY",
+  "global_environment_modified": false,
+  "source_directory": "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source",
+  "runtime_directory": "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime",
+  "microphone_opened": false,
+  "physical_offline_reboot": "NOT_TESTED",
+  "human_final_quality": "NOT_TESTED",
+  "board": "NOT_TESTED",
+  "commands": [
+    {
+      "name": "static",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\tools\\verify_bundle.py",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source",
+        "--contract",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\contracts\\contract_lock.json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "network_guard_probe",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,socket; assert sys._voicec_network_guard; s=socket.socket(); s.connect(('1.1.1.1',443))"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "name": "installation",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\tools\\install_candidate.py",
+        "--target-runtime",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "contract",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\bin\\selftest.py",
+        "--output",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\evidence\\c04\\reproduction_02\\contract_results"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "missing_models",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\bin\\selftest.py",
+        "--real",
+        "--output",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\evidence\\c04\\reproduction_02\\missing_models_results"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "name": "local_asset_materialization",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\tools\\materialize_local_assets.py",
+        "--source-voice-root",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+        "--target-runtime",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "real",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\bin\\selftest.py",
+        "--real",
+        "--output",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\evidence\\c04\\reproduction_02\\real_results"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "name": "static_after_install",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\tools\\verify_bundle.py",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source",
+        "--contract",
+        "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_source\\contracts\\contract_lock.json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0
+    }
+  ]
+}

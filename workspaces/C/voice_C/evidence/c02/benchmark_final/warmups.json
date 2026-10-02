@@ -1,0 +1,221 @@
+[
+  {
+    "config": "threads1.batch1",
+    "response": {
+      "api_version": 1,
+      "request_id": "client-2",
+      "op": "synthesize",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "sample_rate": 22050,
+      "frames": 68864,
+      "audio_duration_ms": 3123.0839002267576,
+      "audio_sha256": "9adcd7f7b7a9efe49bbe3d141f72d2102fe84bfde0a7a6648863f1af81418ecb",
+      "silent": false,
+      "clipped_samples": 0,
+      "float_out_of_range_samples": 0,
+      "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+      "peak_abs_float": 0.5296875834465027,
+      "rms_float": 0.06732636737104773,
+      "text_sha256": "ed6aa0311524821871a3d3cdf83e569426a6635e01ccaaedef46174ee66bb3f6",
+      "output_kind": "SYNTHESIZED_SPEECH",
+      "speech_quality": "HUMAN_REVIEW_PENDING",
+      "native_callbacks": [
+        {
+          "elapsed_ms": 164.79710000567138,
+          "frames": 33536,
+          "progress": 0.5
+        },
+        {
+          "elapsed_ms": 355.95630000170786,
+          "frames": 35328,
+          "progress": 1.0
+        }
+      ],
+      "first_internal_chunk_ms": 164.79710000567138,
+      "internal_chunk_is_client_ready": false,
+      "first_sentence_ready_ms": null,
+      "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+      "num_threads": 1,
+      "speed": 1.0,
+      "cache_hit": false,
+      "waveform_cache": "DISABLED",
+      "wav_path": "warm/out/305ecdfe86674152abd8a169028a9bd4.wav",
+      "compute_ms": 384.8515999998199,
+      "queue_ms": 0.28750000637955964,
+      "ready_ms": 385.14340000983793,
+      "audible_ms": null,
+      "memory": {
+        "current_rss_bytes": 230371328,
+        "peak_rss_bytes": 241324032,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      },
+      "session_id": "warm",
+      "epoch": 0
+    }
+  },
+  {
+    "config": "threads2.batch1",
+    "response": {
+      "api_version": 1,
+      "request_id": "client-2",
+      "op": "synthesize",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "sample_rate": 22050,
+      "frames": 68864,
+      "audio_duration_ms": 3123.0839002267576,
+      "audio_sha256": "a244ec29b7b5d918608019f65c4d86a0727f52f9b5d5be3f2cd546a42f14b6d5",
+      "silent": false,
+      "clipped_samples": 0,
+      "float_out_of_range_samples": 0,
+      "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+      "peak_abs_float": 0.5080814361572266,
+      "rms_float": 0.06932024687984388,
+      "text_sha256": "ed6aa0311524821871a3d3cdf83e569426a6635e01ccaaedef46174ee66bb3f6",
+      "output_kind": "SYNTHESIZED_SPEECH",
+      "speech_quality": "HUMAN_REVIEW_PENDING",
+      "native_callbacks": [
+        {
+          "elapsed_ms": 138.70999999926426,
+          "frames": 33536,
+          "progress": 0.5
+        },
+        {
+          "elapsed_ms": 311.9229000003543,
+          "frames": 35328,
+          "progress": 1.0
+        }
+      ],
+      "first_internal_chunk_ms": 138.70999999926426,
+      "internal_chunk_is_client_ready": false,
+      "first_sentence_ready_ms": null,
+      "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+      "num_threads": 2,
+      "speed": 1.0,
+      "cache_hit": false,
+      "waveform_cache": "DISABLED",
+      "wav_path": "warm/out/34ccc64314fc421b875812689c3ebff3.wav",
+      "compute_ms": 336.42259999760427,
+      "queue_ms": 0.15589999384246767,
+      "ready_ms": 336.5820999897551,
+      "audible_ms": null,
+      "memory": {
+        "current_rss_bytes": 230240256,
+        "peak_rss_bytes": 241049600,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      },
+      "session_id": "warm",
+      "epoch": 0
+    }
+  },
+  {
+    "config": "threads4.batch1",
+    "response": {
+      "api_version": 1,
+      "request_id": "client-2",
+      "op": "synthesize",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "sample_rate": 22050,
+      "frames": 68864,
+      "audio_duration_ms": 3123.0839002267576,
+      "audio_sha256": "448fd9d17710fbf7e3408628510eef44947046c276b60460a897a719cbd1db05",
+      "silent": false,
+      "clipped_samples": 0,
+      "float_out_of_range_samples": 0,
+      "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+      "peak_abs_float": 0.5541008710861206,
+      "rms_float": 0.063821976778086,
+      "text_sha256": "ed6aa0311524821871a3d3cdf83e569426a6635e01ccaaedef46174ee66bb3f6",
+      "output_kind": "SYNTHESIZED_SPEECH",
+      "speech_quality": "HUMAN_REVIEW_PENDING",
+      "native_callbacks": [
+        {
+          "elapsed_ms": 482.93110000668094,
+          "frames": 33536,
+          "progress": 0.5
+        },
+        {
+          "elapsed_ms": 1045.0517999997828,
+          "frames": 35328,
+          "progress": 1.0
+        }
+      ],
+      "first_internal_chunk_ms": 482.93110000668094,
+      "internal_chunk_is_client_ready": false,
+      "first_sentence_ready_ms": null,
+      "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+      "num_threads": 4,
+      "speed": 1.0,
+      "cache_hit": false,
+      "waveform_cache": "DISABLED",
+      "wav_path": "warm/out/a801df234067423eb9e1d4fd6f880cac.wav",
+      "compute_ms": 1120.2078999922378,
+      "queue_ms": 0.37740000698249787,
+      "ready_ms": 1120.5885999952443,
+      "audible_ms": null,
+      "memory": {
+        "current_rss_bytes": 231571456,
+        "peak_rss_bytes": 242528256,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      },
+      "session_id": "warm",
+      "epoch": 0
+    }
+  },
+  {
+    "config": "threads2.batch2",
+    "response": {
+      "api_version": 1,
+      "request_id": "client-2",
+      "op": "synthesize",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "sample_rate": 22050,
+      "frames": 60416,
+      "audio_duration_ms": 2739.954648526077,
+      "audio_sha256": "7b3645deed2d26f601d2812c29dfa41f9cb068f150d8150a4a9041d4a3f1280f",
+      "silent": false,
+      "clipped_samples": 0,
+      "float_out_of_range_samples": 0,
+      "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+      "peak_abs_float": 0.5693649649620056,
+      "rms_float": 0.06945320821680145,
+      "text_sha256": "ed6aa0311524821871a3d3cdf83e569426a6635e01ccaaedef46174ee66bb3f6",
+      "output_kind": "SYNTHESIZED_SPEECH",
+      "speech_quality": "HUMAN_REVIEW_PENDING",
+      "native_callbacks": [
+        {
+          "elapsed_ms": 269.79320000100415,
+          "frames": 60416,
+          "progress": 1.0
+        }
+      ],
+      "first_internal_chunk_ms": 269.79320000100415,
+      "internal_chunk_is_client_ready": false,
+      "first_sentence_ready_ms": null,
+      "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+      "num_threads": 2,
+      "speed": 1.0,
+      "cache_hit": false,
+      "waveform_cache": "DISABLED",
+      "wav_path": "warm/out/c6cbda79d88440b598bc21a9d4ece608.wav",
+      "compute_ms": 292.3878000001423,
+      "queue_ms": 0.2578999992692843,
+      "ready_ms": 292.64970000076573,
+      "audible_ms": null,
+      "memory": {
+        "current_rss_bytes": 233562112,
+        "peak_rss_bytes": 244584448,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      },
+      "session_id": "warm",
+      "epoch": 0
+    }
+  }
+]

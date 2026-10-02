@@ -1,0 +1,2352 @@
+{
+  "status": "FIXTURE_ONLY",
+  "testset_sha256": "e5cb45b6e8d4a063de03f68526ee4ad350c1456322fc6b9c46e681cfa685a802",
+  "label_status": "ENGINEERING_DRAFT",
+  "medical_truth_claim": false,
+  "total_frozen_questions": 324,
+  "prediction_count": 3,
+  "missing_prediction_count": 321,
+  "run_ids": [
+    "C1_SYNTHETIC_EVALUATOR_EXAMPLE_NOT_MODEL_RUN"
+  ],
+  "execution_kinds": [
+    "PC_FIXTURE"
+  ],
+  "factuality": {
+    "status": "COMPLETE_ANNOTATION",
+    "conditional_consistency_rate": 1.0,
+    "consistent_factual_answers": 1,
+    "factual_answers": 1,
+    "annotated_answers": 3,
+    "human_reviewed_answers": 0,
+    "factual_answer_coverage": 0.0030864197530864196,
+    "consistent_factual_coverage": 0.0030864197530864196,
+    "observed_factual_coverage_lower_bound": 0.0030864197530864196,
+    "observed_consistent_factual_coverage_lower_bound": 0.0030864197530864196,
+    "complete_expected_response_coverage": 0.006172839506172839,
+    "unannotated_answers": 0,
+    "semantic_claim_detection": "INDEPENDENT_ANNOTATION_REQUIRED"
+  },
+  "slots": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 280,
+    "micro_precision": 1.0,
+    "micro_recall": 0.0070921985815602835,
+    "micro_f1": 0.014084507042253521
+  },
+  "rates": {
+    "completion": 0.009259259259259259,
+    "template_fallback": 0.0030864197530864196,
+    "hardware_fallback": 0.0,
+    "refusal": 0.0030864197530864196,
+    "unknown": 0.0030864197530864196,
+    "error": 0.0,
+    "timeout": 0.0
+  },
+  "failures": {
+    "missing_prediction": 321,
+    "missing_slot": 1,
+    "refusal_when_known": 1,
+    "unexpected_behavior": 1
+  },
+  "by_case": {
+    "sp_chest_01": {
+      "missing_prediction": 105,
+      "refusal": 1,
+      "generated": 1,
+      "complete_expected_answers": 2,
+      "unknown": 1
+    },
+    "sp_chest_02": {
+      "missing_prediction": 108
+    },
+    "sp_chest_03": {
+      "missing_prediction": 108
+    }
+  },
+  "details": [
+    {
+      "test_id": "c1.test.sp_chest_01.001",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.002",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_slot",
+        "refusal_when_known",
+        "unexpected_behavior"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.003",
+      "case_id": "sp_chest_01",
+      "failures": []
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.004",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.005",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.006",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.007",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.008",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.009",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.010",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.011",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.012",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.013",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.014",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.015",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.016",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.017",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.018",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.019",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.020",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.021",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.022",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.023",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.024",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.025",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.026",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.027",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.028",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.029",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.030",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.031",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.032",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.033",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.034",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.035",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.036",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.037",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.038",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.039",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.040",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.041",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.042",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.043",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.044",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.045",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.046",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.047",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.048",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.049",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.050",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.051",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.052",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.053",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.054",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.055",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.056",
+      "case_id": "sp_chest_01",
+      "failures": []
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.057",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.058",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.059",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.060",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.061",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.062",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.063",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.064",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.065",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.066",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.067",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.068",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.069",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.070",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.071",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.072",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.073",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.074",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.075",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.076",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.077",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.078",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.079",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.080",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.081",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.082",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.083",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.084",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.085",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.086",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.087",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.088",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.089",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.090",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.091",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.092",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.093",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.094",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.095",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.096",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.097",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.098",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.099",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.100",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.101",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.102",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.103",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.104",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.105",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.106",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.107",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_01.108",
+      "case_id": "sp_chest_01",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.001",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.002",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.003",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.004",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.005",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.006",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.007",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.008",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.009",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.010",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.011",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.012",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.013",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.014",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.015",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.016",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.017",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.018",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.019",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.020",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.021",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.022",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.023",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.024",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.025",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.026",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.027",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.028",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.029",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.030",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.031",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.032",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.033",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.034",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.035",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.036",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.037",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.038",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.039",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.040",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.041",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.042",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.043",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.044",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.045",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.046",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.047",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.048",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.049",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.050",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.051",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.052",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.053",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.054",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.055",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.056",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.057",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.058",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.059",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.060",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.061",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.062",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.063",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.064",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.065",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.066",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.067",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.068",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.069",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.070",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.071",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.072",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.073",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.074",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.075",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.076",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.077",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.078",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.079",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.080",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.081",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.082",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.083",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.084",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.085",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.086",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.087",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.088",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.089",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.090",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.091",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.092",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.093",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.094",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.095",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.096",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.097",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.098",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.099",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.100",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.101",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.102",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.103",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.104",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.105",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.106",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.107",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_02.108",
+      "case_id": "sp_chest_02",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.001",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.002",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.003",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.004",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.005",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.006",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.007",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.008",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.009",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.010",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.011",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.012",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.013",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.014",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.015",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.016",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.017",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.018",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.019",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.020",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.021",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.022",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.023",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.024",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.025",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.026",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.027",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.028",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.029",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.030",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.031",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.032",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.033",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.034",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.035",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.036",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.037",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.038",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.039",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.040",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.041",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.042",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.043",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.044",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.045",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.046",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.047",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.048",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.049",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.050",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.051",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.052",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.053",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.054",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.055",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.056",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.057",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.058",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.059",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.060",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.061",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.062",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.063",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.064",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.065",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.066",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.067",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.068",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.069",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.070",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.071",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.072",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.073",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.074",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.075",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.076",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.077",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.078",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.079",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.080",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.081",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.082",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.083",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.084",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.085",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.086",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.087",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.088",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.089",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.090",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.091",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.092",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.093",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.094",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.095",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.096",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.097",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.098",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.099",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.100",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.101",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.102",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.103",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.104",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.105",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.106",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.107",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    },
+    {
+      "test_id": "c1.test.sp_chest_03.108",
+      "case_id": "sp_chest_03",
+      "failures": [
+        "missing_prediction"
+      ]
+    }
+  ],
+  "teacher_scoring": {
+    "status": "NOT_TESTED",
+    "mae": null,
+    "mae_by_rater": {},
+    "disagreements": [],
+    "averaging_reference_scores": false,
+    "qualification_verified_by_software": false,
+    "unpaired_teacher_ratings": 0,
+    "unpaired_session_scores": 0
+  },
+  "clinical_results": {
+    "status": "NOT_TESTED",
+    "reason": "Frozen case/gold annotations are ENGINEERING_DRAFT, not medically approved truth",
+    "mae": null
+  },
+  "performance_claim": "NONE: execution label alone is not board/PL evidence"
+}

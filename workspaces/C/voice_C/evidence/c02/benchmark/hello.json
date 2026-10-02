@@ -1,0 +1,330 @@
+[
+  {
+    "config": "threads1.batch1",
+    "startup_ms": 3338.8140999886673,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c02_tts",
+      "version": "0.3.0-tts",
+      "models": [
+        {
+          "model_id": "csukuangfj/matcha-icefall-zh-baker",
+          "revision": "75e64a57a80fb370abb18a4e4d86bb090ed46e93",
+          "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+          "vocoder_sha256": "0574a135aa1db2de6e181050db2ec528496cacd4a4701fc5d7faf9f9804c0081",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "provider": "cpu",
+            "speed": 1.0,
+            "noise_scale": 1.0,
+            "length_scale": 1.0,
+            "silence_scale": 1.0,
+            "num_threads": 1,
+            "max_num_sentences": 1
+          },
+          "native_sample_rate": 22050,
+          "weight_license": "REVIEW_PENDING",
+          "training_data_restriction": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD",
+          "cache_policy": "MODEL_RESIDENCY_ONLY_NO_WAVEFORM_CACHE",
+          "text_policy": "UNCHANGED_INPUT_NATIVE_FST_FRONTEND",
+          "cancellation": "NATIVE_BATCH_BOUNDARIES_AND_DISCARD_AFTER_RETURN",
+          "load_ms": 3128.7124999944353,
+          "memory_after_load": {
+            "current_rss_bytes": 217419776,
+            "peak_rss_bytes": 217419776,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "weights": "REVIEW_PENDING",
+          "training_data": "NON_COMMERCIAL_ONLY"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": false,
+        "real_tts": true,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000,
+        22050
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 217464832,
+        "peak_rss_bytes": 217464832,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  },
+  {
+    "config": "threads2.batch1",
+    "startup_ms": 2247.9759999987436,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c02_tts",
+      "version": "0.3.0-tts",
+      "models": [
+        {
+          "model_id": "csukuangfj/matcha-icefall-zh-baker",
+          "revision": "75e64a57a80fb370abb18a4e4d86bb090ed46e93",
+          "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+          "vocoder_sha256": "0574a135aa1db2de6e181050db2ec528496cacd4a4701fc5d7faf9f9804c0081",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "provider": "cpu",
+            "speed": 1.0,
+            "noise_scale": 1.0,
+            "length_scale": 1.0,
+            "silence_scale": 1.0,
+            "num_threads": 2,
+            "max_num_sentences": 1
+          },
+          "native_sample_rate": 22050,
+          "weight_license": "REVIEW_PENDING",
+          "training_data_restriction": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD",
+          "cache_policy": "MODEL_RESIDENCY_ONLY_NO_WAVEFORM_CACHE",
+          "text_policy": "UNCHANGED_INPUT_NATIVE_FST_FRONTEND",
+          "cancellation": "NATIVE_BATCH_BOUNDARIES_AND_DISCARD_AFTER_RETURN",
+          "load_ms": 2058.813600000576,
+          "memory_after_load": {
+            "current_rss_bytes": 218062848,
+            "peak_rss_bytes": 218062848,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "weights": "REVIEW_PENDING",
+          "training_data": "NON_COMMERCIAL_ONLY"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": false,
+        "real_tts": true,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000,
+        22050
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 218095616,
+        "peak_rss_bytes": 218095616,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  },
+  {
+    "config": "threads4.batch1",
+    "startup_ms": 3643.074899999192,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c02_tts",
+      "version": "0.3.0-tts",
+      "models": [
+        {
+          "model_id": "csukuangfj/matcha-icefall-zh-baker",
+          "revision": "75e64a57a80fb370abb18a4e4d86bb090ed46e93",
+          "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+          "vocoder_sha256": "0574a135aa1db2de6e181050db2ec528496cacd4a4701fc5d7faf9f9804c0081",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "provider": "cpu",
+            "speed": 1.0,
+            "noise_scale": 1.0,
+            "length_scale": 1.0,
+            "silence_scale": 1.0,
+            "num_threads": 4,
+            "max_num_sentences": 1
+          },
+          "native_sample_rate": 22050,
+          "weight_license": "REVIEW_PENDING",
+          "training_data_restriction": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD",
+          "cache_policy": "MODEL_RESIDENCY_ONLY_NO_WAVEFORM_CACHE",
+          "text_policy": "UNCHANGED_INPUT_NATIVE_FST_FRONTEND",
+          "cancellation": "NATIVE_BATCH_BOUNDARIES_AND_DISCARD_AFTER_RETURN",
+          "load_ms": 3370.5893000005744,
+          "memory_after_load": {
+            "current_rss_bytes": 218411008,
+            "peak_rss_bytes": 218411008,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "weights": "REVIEW_PENDING",
+          "training_data": "NON_COMMERCIAL_ONLY"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": false,
+        "real_tts": true,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000,
+        22050
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 218451968,
+        "peak_rss_bytes": 218451968,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  },
+  {
+    "config": "threads2.batch2",
+    "startup_ms": 2798.4414999955334,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c02_tts",
+      "version": "0.3.0-tts",
+      "models": [
+        {
+          "model_id": "csukuangfj/matcha-icefall-zh-baker",
+          "revision": "75e64a57a80fb370abb18a4e4d86bb090ed46e93",
+          "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+          "vocoder_sha256": "0574a135aa1db2de6e181050db2ec528496cacd4a4701fc5d7faf9f9804c0081",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "provider": "cpu",
+            "speed": 1.0,
+            "noise_scale": 1.0,
+            "length_scale": 1.0,
+            "silence_scale": 1.0,
+            "num_threads": 2,
+            "max_num_sentences": 2
+          },
+          "native_sample_rate": 22050,
+          "weight_license": "REVIEW_PENDING",
+          "training_data_restriction": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD",
+          "cache_policy": "MODEL_RESIDENCY_ONLY_NO_WAVEFORM_CACHE",
+          "text_policy": "UNCHANGED_INPUT_NATIVE_FST_FRONTEND",
+          "cancellation": "NATIVE_BATCH_BOUNDARIES_AND_DISCARD_AFTER_RETURN",
+          "load_ms": 2614.7563999984413,
+          "memory_after_load": {
+            "current_rss_bytes": 217767936,
+            "peak_rss_bytes": 217767936,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "weights": "REVIEW_PENDING",
+          "training_data": "NON_COMMERCIAL_ONLY"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": false,
+        "real_tts": true,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000,
+        22050
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 217804800,
+        "peak_rss_bytes": 217804800,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  }
+]

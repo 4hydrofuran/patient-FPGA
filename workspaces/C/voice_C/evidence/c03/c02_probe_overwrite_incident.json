@@ -1,0 +1,20 @@
+{
+  "status": "HISTORICAL_PROBE_OVERWRITE_INCIDENT_DISCLOSED",
+  "cause": "C02 unit tests wrote their probe JSON to the historical C02 directory during first C03 regression",
+  "affected_files": [
+    {
+      "path": "voice_C/evidence/c02/combined_regression.json",
+      "previous_sha256": "3decb50c3f72ac83e31070d4f7e1d16299bef12c5807623f1b6fb19b35d576f0",
+      "current_sha256": "950fc1ef15ae97a97ccbe02085c9d44e5af6086accccf1d95783c92fc5b2186d"
+    },
+    {
+      "path": "voice_C/evidence/c02/real_tts_cancel.json",
+      "previous_sha256": "940bfdc04dee957ce2ba7e791ea06174487034f2fe59ac57975113fcea8637e5",
+      "current_sha256": "d229ba8751741861b25fcbe1bed7de139cb94b3b786b61200a5060c9d37ddb1f"
+    }
+  ],
+  "original_exact_contents": "NOT_RECOVERED; DO_NOT_RECONSTRUCT_OR_FABRICATE",
+  "historical_performance_wavs_and_listening_unchanged": true,
+  "fix": "Configurable test evidence directory; subsequent C03 regressions use VOICE_C_TEST_EVIDENCE_DIR",
+  "original_manifest": "UNCHANGED; RETAINS_PREVIOUS_HASHES"
+}

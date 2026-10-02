@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allowed_fact_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "allowed_unknown_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "case_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "case_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "case_version": {
+      "const": "0.1.0-draft"
+    },
+    "category": {
+      "enum": [
+        "contradiction",
+        "crosstalk",
+        "dev_workflow",
+        "injection",
+        "multi_slot",
+        "negation",
+        "normal",
+        "repeated",
+        "score_cheating",
+        "synonym",
+        "unknown"
+      ]
+    },
+    "constraints": {
+      "additionalProperties": false,
+      "properties": {
+        "backend_mutation_allowed": {
+          "const": false
+        },
+        "case_mutation_allowed": {
+          "const": false
+        },
+        "cross_session_read_allowed": {
+          "const": false
+        },
+        "fabricated_evidence_allowed": {
+          "const": false
+        },
+        "hidden_hint_allowed": {
+          "const": false
+        }
+      },
+      "required": [
+        "case_mutation_allowed",
+        "cross_session_read_allowed",
+        "hidden_hint_allowed",
+        "fabricated_evidence_allowed",
+        "backend_mutation_allowed"
+      ],
+      "type": "object"
+    },
+    "dataset_version": {
+      "const": "engineering-v1"
+    },
+    "expected_behavior": {
+      "enum": [
+        "answer_known",
+        "state_unknown",
+        "refuse_control"
+      ]
+    },
+    "forbidden_fact_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "input": {
+      "additionalProperties": false,
+      "properties": {
+        "context_setup": {
+          "additionalProperties": false,
+          "properties": {
+            "active_turns": {
+              "items": {
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "foreign_sessions": {
+              "items": {
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "repeated_question": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "active_turns",
+            "foreign_sessions",
+            "repeated_question"
+          ],
+          "type": "object"
+        },
+        "mode": {
+          "const": "assessment"
+        },
+        "text": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "mode",
+        "context_setup"
+      ],
+      "type": "object"
+    },
+    "must_cover_slots": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "author_kind": {
+          "const": "AI_AUTHORED_ENGINEERING"
+        },
+        "clinical_independence_claim": {
+          "const": false
+        },
+        "family_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_file": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_pool": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_row": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source_pool",
+        "source_file",
+        "source_row",
+        "family_id",
+        "author_kind",
+        "clinical_independence_claim"
+      ],
+      "type": "object"
+    },
+    "reference_answer": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "review": {
+      "additionalProperties": false,
+      "properties": {
+        "approval_reference": {
+          "type": "null"
+        },
+        "reviewed_at": {
+          "type": "null"
+        },
+        "reviewer": {
+          "type": "null"
+        },
+        "status": {
+          "const": "ENGINEERING_DRAFT"
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "approval_reference"
+      ],
+      "type": "object"
+    },
+    "rubric_version": {
+      "const": "0.1.0-draft"
+    },
+    "schema_version": {
+      "const": "c1.1.0"
+    },
+    "scoring_labels": {
+      "additionalProperties": false,
+      "properties": {
+        "criterion_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "intents": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "llm_may_set_score": {
+          "const": false
+        },
+        "repetition_must_not_add_points": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "intents",
+        "criterion_ids",
+        "repetition_must_not_add_points",
+        "llm_may_set_score"
+      ],
+      "type": "object"
+    },
+    "split": {
+      "enum": [
+        "test",
+        "dev"
+      ]
+    },
+    "test_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "test_id",
+    "split",
+    "dataset_version",
+    "case_id",
+    "case_version",
+    "case_sha256",
+    "rubric_version",
+    "category",
+    "input",
+    "allowed_fact_ids",
+    "forbidden_fact_ids",
+    "allowed_unknown_ids",
+    "must_cover_slots",
+    "expected_behavior",
+    "reference_answer",
+    "scoring_labels",
+    "constraints",
+    "provenance",
+    "review"
+  ],
+  "type": "object"
+}

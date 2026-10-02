@@ -1,0 +1,255 @@
+{
+  "annotation_policy": "trusted_engineering_annotations_only_C0",
+  "categories": {
+    "care": 10,
+    "clarity": 15,
+    "coverage": 40,
+    "logic": 25,
+    "summary": 10
+  },
+  "confidence_threshold": 0.8,
+  "criteria": [
+    {
+      "accepted_intents": [
+        "ask.onset"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.onset",
+      "label": "起病与时间",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.location"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.location",
+      "label": "部位",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.quality"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.quality",
+      "label": "性质",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.severity"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.severity",
+      "label": "程度",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.duration"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.duration",
+      "label": "持续时间与频次",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.radiation"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.radiation",
+      "label": "放射",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.provocation"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.provocation",
+      "label": "诱发或加重因素",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.relief"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.relief",
+      "label": "缓解因素",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.associated"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.associated",
+      "label": "伴随表现",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "ask.background"
+      ],
+      "category": "coverage",
+      "criterion_id": "coverage.background",
+      "label": "既往、用药、过敏及个人/家族背景",
+      "points": 4,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.clarify_timeline"
+      ],
+      "category": "logic",
+      "criterion_id": "logic.clarify_timeline",
+      "label": "澄清时间线",
+      "points": 5,
+      "requires_all": [
+        "coverage.onset"
+      ]
+    },
+    {
+      "accepted_intents": [
+        "observe.clarify_frequency"
+      ],
+      "category": "logic",
+      "criterion_id": "logic.clarify_frequency",
+      "label": "澄清发作频次",
+      "points": 5,
+      "requires_all": [
+        "coverage.duration"
+      ]
+    },
+    {
+      "accepted_intents": [
+        "observe.compare_factors"
+      ],
+      "category": "logic",
+      "criterion_id": "logic.compare_factors",
+      "label": "比较诱发/缓解因素",
+      "points": 5,
+      "requires_all": [
+        "coverage.provocation",
+        "coverage.relief"
+      ]
+    },
+    {
+      "accepted_intents": [
+        "observe.follow_associated"
+      ],
+      "category": "logic",
+      "criterion_id": "logic.follow_associated",
+      "label": "对伴随表现追问",
+      "points": 5,
+      "requires_all": [
+        "coverage.associated"
+      ]
+    },
+    {
+      "accepted_intents": [
+        "observe.confirm_background"
+      ],
+      "category": "logic",
+      "criterion_id": "logic.confirm_background",
+      "label": "确认相关病史背景",
+      "points": 5,
+      "requires_all": [
+        "coverage.background"
+      ]
+    },
+    {
+      "accepted_intents": [
+        "observe.plain_language"
+      ],
+      "category": "clarity",
+      "criterion_id": "clarity.plain_language",
+      "label": "使用可理解的表述",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.clarify_ambiguity"
+      ],
+      "category": "clarity",
+      "criterion_id": "clarity.clarify_ambiguity",
+      "label": "澄清歧义",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.confirm_understanding"
+      ],
+      "category": "clarity",
+      "criterion_id": "clarity.confirm_understanding",
+      "label": "确认理解",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.permission"
+      ],
+      "category": "care",
+      "criterion_id": "care.permission",
+      "label": "说明教学角色并征得模拟问诊同意",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.acknowledge"
+      ],
+      "category": "care",
+      "criterion_id": "care.acknowledge",
+      "label": "回应病人表达的担忧",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.recap"
+      ],
+      "category": "summary",
+      "criterion_id": "summary.recap",
+      "label": "总结已采集信息",
+      "points": 5,
+      "requires_all": []
+    },
+    {
+      "accepted_intents": [
+        "observe.invite_correction"
+      ],
+      "category": "summary",
+      "criterion_id": "summary.invite_correction",
+      "label": "邀请更正或补充",
+      "points": 5,
+      "requires_all": []
+    }
+  ],
+  "review": {
+    "approval_reference": null,
+    "needs_medical_teacher": true,
+    "reviewed_at": null,
+    "reviewer": null,
+    "status": "DRAFT"
+  },
+  "rubric_id": "chest_pain_history_draft",
+  "rubric_version": "0.1.0-draft",
+  "schema_version": "0.1.0-draft",
+  "total_points": 100
+}

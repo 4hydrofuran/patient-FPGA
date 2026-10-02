@@ -1,0 +1,78 @@
+{
+  "candidate": "C_pc_candidate_v1",
+  "status": "ENGINEERING_FREEZE_HUMAN_FINAL_TEST_PENDING",
+  "date": "2026-10-02",
+  "pc_threads": 2,
+  "tts_batch": 1,
+  "tts_speed": 1.0,
+  "tts_silence_scale": 1.0,
+  "endpoint_seconds": 1.2,
+  "chunk_ms": 200,
+  "final_policy": "EXPLICIT_FINISH_ONLY",
+  "datasets": {
+    "public_asr": "EXISTING_C01_DEVELOPMENT_NOT_FINAL_TEST",
+    "tts": "C02_AUTHORED_DEVELOPMENT",
+    "final_authorized_human_audio": 0,
+    "final_reference_text": null,
+    "human_listening_pending": 14
+  },
+  "gates": {
+    "target_authorized_mandarin_cer": 0.15,
+    "observed_public_dev_cer": 0.24422442244224424,
+    "final_cer": null,
+    "human_key_item_errors": null,
+    "audible_latency": null,
+    "licenses": "REVIEW_PENDING",
+    "board": "NOT_TESTED",
+    "adoption": "UNDECIDED"
+  },
+  "prohibited": [
+    "tune against final answers",
+    "substitute planned text for spoken truth",
+    "include private recordings",
+    "distribute pending-license weights",
+    "claim PC as board"
+  ],
+  "files": [
+    {
+      "path": "configs/asr.selected.json",
+      "sha256": "a9093f137ef2bc4aa93a2c8015ad17ea57a28da7e75566086bb520dc5d011164"
+    },
+    {
+      "path": "configs/tts.selected.json",
+      "sha256": "ac4c01e7be706dfe702fe56dcd92363850e47233bb729e88824cd1cb98a76563"
+    },
+    {
+      "path": "configs/stream.selected.json",
+      "sha256": "feb0140f77c4ea17038e2347734327d0a32426a24045902bedea6192e96b7fc6"
+    },
+    {
+      "path": "assets/asr/model.lock.json",
+      "sha256": "5a1e084aef621339ec800990a707697b9e09053dad7f496a4df0bfa8266bf912"
+    },
+    {
+      "path": "assets/tts/model.lock.json",
+      "sha256": "46d2f13c933c049c71dc4d9fc5317148c44905a1f903d956c2fc6072c34404ac"
+    },
+    {
+      "path": "requirements-c01.lock.txt",
+      "sha256": "bcc9ac8f170e675633da8d8e67a0a9d757a7a4ef7c3637438a38c8f53f169599"
+    },
+    {
+      "path": "assets/wheels/wheels.lock.json",
+      "sha256": "51fdd1214711492acf06fcb102abce1df084289caa6306a0d4ccd7d3a9a8cfbe"
+    },
+    {
+      "path": "data/c01_public/manifest.jsonl",
+      "sha256": "5b00e56c32790ffff3a6fc30d6ae0e2a2a418e6c3956f5886d80d4d828cbf18a"
+    },
+    {
+      "path": "data/c02_scripts/manifest.jsonl",
+      "sha256": "66ffee65de5dec448cbabe5ad0ca8f7fc9409bfb08680025de4efa57e6203191"
+    },
+    {
+      "path": "data/recording_plan.jsonl",
+      "sha256": "6128f0bc6557b413926cd21ceadde3d93aa9053c7e12fed018e8714d09d64506"
+    }
+  ]
+}

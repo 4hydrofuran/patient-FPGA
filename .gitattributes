@@ -2,3 +2,8 @@
 *.bin -text
 *.zip -text
 *.xo -text
+
+# Keep imported C evidence and source bytes unchanged across clones.
+workspaces/C/** -text
+patient-qwen/** -text
+docs/publication_c_20261002/** -text

@@ -1,0 +1,12 @@
+static EXPECTED_EXIT 0
+installation EXPECTED_EXIT 0
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\reproduce_c04.py", line 76, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\reproduce_c04.py", line 50, in main
+    run('contract',[python,runtime/'bin/selftest.py','--output',EV/'contract_results'])
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\reproduce_c04.py", line 45, in run
+    if proc.returncode!=expected:raise RuntimeError(name+' failed; see preserved log')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: contract failed; see preserved log

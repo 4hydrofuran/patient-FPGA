@@ -1,0 +1,1868 @@
+{
+  "_id": "66691ace9325f417d96efd18",
+  "id": "google/fleurs-r",
+  "author": "google",
+  "sha": "c621c0b7b569dcebcd50273a187a35d1a1fc895f",
+  "lastModified": "2024-08-19T02:05:15.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "license:cc-by-4.0",
+    "region:us"
+  ],
+  "downloads": 5053,
+  "likes": 22,
+  "cardData": {
+    "license": "cc-by-4.0"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/af_za/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/af_za/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/af_za/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/af_za/dev.tsv"
+    },
+    {
+      "rfilename": "data/af_za/test.tsv"
+    },
+    {
+      "rfilename": "data/af_za/train.tsv"
+    },
+    {
+      "rfilename": "data/am_et/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/am_et/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/am_et/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/am_et/dev.tsv"
+    },
+    {
+      "rfilename": "data/am_et/test.tsv"
+    },
+    {
+      "rfilename": "data/am_et/train.tsv"
+    },
+    {
+      "rfilename": "data/ar_eg/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ar_eg/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ar_eg/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ar_eg/dev.tsv"
+    },
+    {
+      "rfilename": "data/ar_eg/test.tsv"
+    },
+    {
+      "rfilename": "data/ar_eg/train.tsv"
+    },
+    {
+      "rfilename": "data/as_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/as_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/as_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/as_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/as_in/test.tsv"
+    },
+    {
+      "rfilename": "data/as_in/train.tsv"
+    },
+    {
+      "rfilename": "data/ast_es/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ast_es/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ast_es/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ast_es/dev.tsv"
+    },
+    {
+      "rfilename": "data/ast_es/test.tsv"
+    },
+    {
+      "rfilename": "data/ast_es/train.tsv"
+    },
+    {
+      "rfilename": "data/az_az/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/az_az/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/az_az/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/az_az/dev.tsv"
+    },
+    {
+      "rfilename": "data/az_az/test.tsv"
+    },
+    {
+      "rfilename": "data/az_az/train.tsv"
+    },
+    {
+      "rfilename": "data/be_by/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/be_by/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/be_by/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/be_by/dev.tsv"
+    },
+    {
+      "rfilename": "data/be_by/test.tsv"
+    },
+    {
+      "rfilename": "data/be_by/train.tsv"
+    },
+    {
+      "rfilename": "data/bg_bg/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/bg_bg/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/bg_bg/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/bg_bg/dev.tsv"
+    },
+    {
+      "rfilename": "data/bg_bg/test.tsv"
+    },
+    {
+      "rfilename": "data/bg_bg/train.tsv"
+    },
+    {
+      "rfilename": "data/bn_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/bn_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/bn_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/bn_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/bn_in/test.tsv"
+    },
+    {
+      "rfilename": "data/bn_in/train.tsv"
+    },
+    {
+      "rfilename": "data/bs_ba/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/bs_ba/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/bs_ba/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/bs_ba/dev.tsv"
+    },
+    {
+      "rfilename": "data/bs_ba/test.tsv"
+    },
+    {
+      "rfilename": "data/bs_ba/train.tsv"
+    },
+    {
+      "rfilename": "data/ca_es/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ca_es/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ca_es/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ca_es/dev.tsv"
+    },
+    {
+      "rfilename": "data/ca_es/test.tsv"
+    },
+    {
+      "rfilename": "data/ca_es/train.tsv"
+    },
+    {
+      "rfilename": "data/ceb_ph/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ceb_ph/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ceb_ph/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ceb_ph/dev.tsv"
+    },
+    {
+      "rfilename": "data/ceb_ph/test.tsv"
+    },
+    {
+      "rfilename": "data/ceb_ph/train.tsv"
+    },
+    {
+      "rfilename": "data/ckb_iq/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ckb_iq/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ckb_iq/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ckb_iq/dev.tsv"
+    },
+    {
+      "rfilename": "data/ckb_iq/test.tsv"
+    },
+    {
+      "rfilename": "data/ckb_iq/train.tsv"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/dev.tsv"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/test.tsv"
+    },
+    {
+      "rfilename": "data/cmn_hans_cn/train.tsv"
+    },
+    {
+      "rfilename": "data/cs_cz/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/cs_cz/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/cs_cz/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/cs_cz/dev.tsv"
+    },
+    {
+      "rfilename": "data/cs_cz/test.tsv"
+    },
+    {
+      "rfilename": "data/cs_cz/train.tsv"
+    },
+    {
+      "rfilename": "data/cy_gb/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/cy_gb/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/cy_gb/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/cy_gb/dev.tsv"
+    },
+    {
+      "rfilename": "data/cy_gb/test.tsv"
+    },
+    {
+      "rfilename": "data/cy_gb/train.tsv"
+    },
+    {
+      "rfilename": "data/da_dk/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/da_dk/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/da_dk/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/da_dk/dev.tsv"
+    },
+    {
+      "rfilename": "data/da_dk/test.tsv"
+    },
+    {
+      "rfilename": "data/da_dk/train.tsv"
+    },
+    {
+      "rfilename": "data/de_de/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/de_de/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/de_de/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/de_de/dev.tsv"
+    },
+    {
+      "rfilename": "data/de_de/test.tsv"
+    },
+    {
+      "rfilename": "data/de_de/train.tsv"
+    },
+    {
+      "rfilename": "data/el_gr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/el_gr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/el_gr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/el_gr/dev.tsv"
+    },
+    {
+      "rfilename": "data/el_gr/test.tsv"
+    },
+    {
+      "rfilename": "data/el_gr/train.tsv"
+    },
+    {
+      "rfilename": "data/en_us/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/en_us/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/en_us/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/en_us/dev.tsv"
+    },
+    {
+      "rfilename": "data/en_us/test.tsv"
+    },
+    {
+      "rfilename": "data/en_us/train.tsv"
+    },
+    {
+      "rfilename": "data/es_419/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/es_419/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/es_419/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/es_419/dev.tsv"
+    },
+    {
+      "rfilename": "data/es_419/test.tsv"
+    },
+    {
+      "rfilename": "data/es_419/train.tsv"
+    },
+    {
+      "rfilename": "data/et_ee/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/et_ee/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/et_ee/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/et_ee/dev.tsv"
+    },
+    {
+      "rfilename": "data/et_ee/test.tsv"
+    },
+    {
+      "rfilename": "data/et_ee/train.tsv"
+    },
+    {
+      "rfilename": "data/fa_ir/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/fa_ir/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/fa_ir/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/fa_ir/dev.tsv"
+    },
+    {
+      "rfilename": "data/fa_ir/test.tsv"
+    },
+    {
+      "rfilename": "data/fa_ir/train.tsv"
+    },
+    {
+      "rfilename": "data/ff_sn/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ff_sn/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ff_sn/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ff_sn/dev.tsv"
+    },
+    {
+      "rfilename": "data/ff_sn/test.tsv"
+    },
+    {
+      "rfilename": "data/ff_sn/train.tsv"
+    },
+    {
+      "rfilename": "data/fi_fi/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/fi_fi/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/fi_fi/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/fi_fi/dev.tsv"
+    },
+    {
+      "rfilename": "data/fi_fi/test.tsv"
+    },
+    {
+      "rfilename": "data/fi_fi/train.tsv"
+    },
+    {
+      "rfilename": "data/fil_ph/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/fil_ph/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/fil_ph/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/fil_ph/dev.tsv"
+    },
+    {
+      "rfilename": "data/fil_ph/test.tsv"
+    },
+    {
+      "rfilename": "data/fil_ph/train.tsv"
+    },
+    {
+      "rfilename": "data/fr_fr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/fr_fr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/fr_fr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/fr_fr/dev.tsv"
+    },
+    {
+      "rfilename": "data/fr_fr/test.tsv"
+    },
+    {
+      "rfilename": "data/fr_fr/train.tsv"
+    },
+    {
+      "rfilename": "data/ga_ie/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ga_ie/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ga_ie/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ga_ie/dev.tsv"
+    },
+    {
+      "rfilename": "data/ga_ie/test.tsv"
+    },
+    {
+      "rfilename": "data/ga_ie/train.tsv"
+    },
+    {
+      "rfilename": "data/gl_es/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/gl_es/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/gl_es/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/gl_es/dev.tsv"
+    },
+    {
+      "rfilename": "data/gl_es/test.tsv"
+    },
+    {
+      "rfilename": "data/gl_es/train.tsv"
+    },
+    {
+      "rfilename": "data/gu_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/gu_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/gu_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/gu_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/gu_in/test.tsv"
+    },
+    {
+      "rfilename": "data/gu_in/train.tsv"
+    },
+    {
+      "rfilename": "data/ha_ng/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ha_ng/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ha_ng/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ha_ng/dev.tsv"
+    },
+    {
+      "rfilename": "data/ha_ng/test.tsv"
+    },
+    {
+      "rfilename": "data/ha_ng/train.tsv"
+    },
+    {
+      "rfilename": "data/he_il/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/he_il/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/he_il/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/he_il/dev.tsv"
+    },
+    {
+      "rfilename": "data/he_il/test.tsv"
+    },
+    {
+      "rfilename": "data/he_il/train.tsv"
+    },
+    {
+      "rfilename": "data/hi_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/hi_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/hi_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/hi_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/hi_in/test.tsv"
+    },
+    {
+      "rfilename": "data/hi_in/train.tsv"
+    },
+    {
+      "rfilename": "data/hr_hr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/hr_hr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/hr_hr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/hr_hr/dev.tsv"
+    },
+    {
+      "rfilename": "data/hr_hr/test.tsv"
+    },
+    {
+      "rfilename": "data/hr_hr/train.tsv"
+    },
+    {
+      "rfilename": "data/hu_hu/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/hu_hu/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/hu_hu/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/hu_hu/dev.tsv"
+    },
+    {
+      "rfilename": "data/hu_hu/test.tsv"
+    },
+    {
+      "rfilename": "data/hu_hu/train.tsv"
+    },
+    {
+      "rfilename": "data/hy_am/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/hy_am/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/hy_am/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/hy_am/dev.tsv"
+    },
+    {
+      "rfilename": "data/hy_am/test.tsv"
+    },
+    {
+      "rfilename": "data/hy_am/train.tsv"
+    },
+    {
+      "rfilename": "data/id_id/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/id_id/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/id_id/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/id_id/dev.tsv"
+    },
+    {
+      "rfilename": "data/id_id/test.tsv"
+    },
+    {
+      "rfilename": "data/id_id/train.tsv"
+    },
+    {
+      "rfilename": "data/ig_ng/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ig_ng/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ig_ng/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ig_ng/dev.tsv"
+    },
+    {
+      "rfilename": "data/ig_ng/test.tsv"
+    },
+    {
+      "rfilename": "data/ig_ng/train.tsv"
+    },
+    {
+      "rfilename": "data/is_is/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/is_is/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/is_is/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/is_is/dev.tsv"
+    },
+    {
+      "rfilename": "data/is_is/test.tsv"
+    },
+    {
+      "rfilename": "data/is_is/train.tsv"
+    },
+    {
+      "rfilename": "data/it_it/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/it_it/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/it_it/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/it_it/dev.tsv"
+    },
+    {
+      "rfilename": "data/it_it/test.tsv"
+    },
+    {
+      "rfilename": "data/it_it/train.tsv"
+    },
+    {
+      "rfilename": "data/ja_jp/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ja_jp/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ja_jp/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ja_jp/dev.tsv"
+    },
+    {
+      "rfilename": "data/ja_jp/test.tsv"
+    },
+    {
+      "rfilename": "data/ja_jp/train.tsv"
+    },
+    {
+      "rfilename": "data/jv_id/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/jv_id/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/jv_id/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/jv_id/dev.tsv"
+    },
+    {
+      "rfilename": "data/jv_id/test.tsv"
+    },
+    {
+      "rfilename": "data/jv_id/train.tsv"
+    },
+    {
+      "rfilename": "data/ka_ge/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ka_ge/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ka_ge/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ka_ge/dev.tsv"
+    },
+    {
+      "rfilename": "data/ka_ge/test.tsv"
+    },
+    {
+      "rfilename": "data/ka_ge/train.tsv"
+    },
+    {
+      "rfilename": "data/kam_ke/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/kam_ke/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/kam_ke/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/kam_ke/dev.tsv"
+    },
+    {
+      "rfilename": "data/kam_ke/test.tsv"
+    },
+    {
+      "rfilename": "data/kam_ke/train.tsv"
+    },
+    {
+      "rfilename": "data/kea_cv/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/kea_cv/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/kea_cv/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/kea_cv/dev.tsv"
+    },
+    {
+      "rfilename": "data/kea_cv/test.tsv"
+    },
+    {
+      "rfilename": "data/kea_cv/train.tsv"
+    },
+    {
+      "rfilename": "data/kk_kz/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/kk_kz/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/kk_kz/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/kk_kz/dev.tsv"
+    },
+    {
+      "rfilename": "data/kk_kz/test.tsv"
+    },
+    {
+      "rfilename": "data/kk_kz/train.tsv"
+    },
+    {
+      "rfilename": "data/km_kh/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/km_kh/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/km_kh/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/km_kh/dev.tsv"
+    },
+    {
+      "rfilename": "data/km_kh/test.tsv"
+    },
+    {
+      "rfilename": "data/km_kh/train.tsv"
+    },
+    {
+      "rfilename": "data/kn_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/kn_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/kn_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/kn_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/kn_in/test.tsv"
+    },
+    {
+      "rfilename": "data/kn_in/train.tsv"
+    },
+    {
+      "rfilename": "data/ko_kr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ko_kr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ko_kr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ko_kr/dev.tsv"
+    },
+    {
+      "rfilename": "data/ko_kr/test.tsv"
+    },
+    {
+      "rfilename": "data/ko_kr/train.tsv"
+    },
+    {
+      "rfilename": "data/ky_kg/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ky_kg/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ky_kg/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ky_kg/dev.tsv"
+    },
+    {
+      "rfilename": "data/ky_kg/test.tsv"
+    },
+    {
+      "rfilename": "data/ky_kg/train.tsv"
+    },
+    {
+      "rfilename": "data/lb_lu/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/lb_lu/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/lb_lu/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/lb_lu/dev.tsv"
+    },
+    {
+      "rfilename": "data/lb_lu/test.tsv"
+    },
+    {
+      "rfilename": "data/lb_lu/train.tsv"
+    },
+    {
+      "rfilename": "data/lg_ug/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/lg_ug/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/lg_ug/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/lg_ug/dev.tsv"
+    },
+    {
+      "rfilename": "data/lg_ug/test.tsv"
+    },
+    {
+      "rfilename": "data/lg_ug/train.tsv"
+    },
+    {
+      "rfilename": "data/ln_cd/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ln_cd/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ln_cd/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ln_cd/dev.tsv"
+    },
+    {
+      "rfilename": "data/ln_cd/test.tsv"
+    },
+    {
+      "rfilename": "data/ln_cd/train.tsv"
+    },
+    {
+      "rfilename": "data/lo_la/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/lo_la/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/lo_la/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/lo_la/dev.tsv"
+    },
+    {
+      "rfilename": "data/lo_la/test.tsv"
+    },
+    {
+      "rfilename": "data/lo_la/train.tsv"
+    },
+    {
+      "rfilename": "data/lt_lt/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/lt_lt/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/lt_lt/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/lt_lt/dev.tsv"
+    },
+    {
+      "rfilename": "data/lt_lt/test.tsv"
+    },
+    {
+      "rfilename": "data/lt_lt/train.tsv"
+    },
+    {
+      "rfilename": "data/luo_ke/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/luo_ke/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/luo_ke/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/luo_ke/dev.tsv"
+    },
+    {
+      "rfilename": "data/luo_ke/test.tsv"
+    },
+    {
+      "rfilename": "data/luo_ke/train.tsv"
+    },
+    {
+      "rfilename": "data/lv_lv/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/lv_lv/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/lv_lv/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/lv_lv/dev.tsv"
+    },
+    {
+      "rfilename": "data/lv_lv/test.tsv"
+    },
+    {
+      "rfilename": "data/lv_lv/train.tsv"
+    },
+    {
+      "rfilename": "data/metadata.zip"
+    },
+    {
+      "rfilename": "data/mi_nz/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/mi_nz/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/mi_nz/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/mi_nz/dev.tsv"
+    },
+    {
+      "rfilename": "data/mi_nz/test.tsv"
+    },
+    {
+      "rfilename": "data/mi_nz/train.tsv"
+    },
+    {
+      "rfilename": "data/mk_mk/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/mk_mk/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/mk_mk/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/mk_mk/dev.tsv"
+    },
+    {
+      "rfilename": "data/mk_mk/test.tsv"
+    },
+    {
+      "rfilename": "data/mk_mk/train.tsv"
+    },
+    {
+      "rfilename": "data/ml_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ml_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ml_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ml_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/ml_in/test.tsv"
+    },
+    {
+      "rfilename": "data/ml_in/train.tsv"
+    },
+    {
+      "rfilename": "data/mn_mn/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/mn_mn/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/mn_mn/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/mn_mn/dev.tsv"
+    },
+    {
+      "rfilename": "data/mn_mn/test.tsv"
+    },
+    {
+      "rfilename": "data/mn_mn/train.tsv"
+    },
+    {
+      "rfilename": "data/mr_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/mr_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/mr_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/mr_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/mr_in/test.tsv"
+    },
+    {
+      "rfilename": "data/mr_in/train.tsv"
+    },
+    {
+      "rfilename": "data/ms_my/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ms_my/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ms_my/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ms_my/dev.tsv"
+    },
+    {
+      "rfilename": "data/ms_my/test.tsv"
+    },
+    {
+      "rfilename": "data/ms_my/train.tsv"
+    },
+    {
+      "rfilename": "data/mt_mt/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/mt_mt/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/mt_mt/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/mt_mt/dev.tsv"
+    },
+    {
+      "rfilename": "data/mt_mt/test.tsv"
+    },
+    {
+      "rfilename": "data/mt_mt/train.tsv"
+    },
+    {
+      "rfilename": "data/my_mm/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/my_mm/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/my_mm/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/my_mm/dev.tsv"
+    },
+    {
+      "rfilename": "data/my_mm/test.tsv"
+    },
+    {
+      "rfilename": "data/my_mm/train.tsv"
+    },
+    {
+      "rfilename": "data/nb_no/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/nb_no/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/nb_no/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/nb_no/dev.tsv"
+    },
+    {
+      "rfilename": "data/nb_no/test.tsv"
+    },
+    {
+      "rfilename": "data/nb_no/train.tsv"
+    },
+    {
+      "rfilename": "data/ne_np/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ne_np/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ne_np/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ne_np/dev.tsv"
+    },
+    {
+      "rfilename": "data/ne_np/test.tsv"
+    },
+    {
+      "rfilename": "data/ne_np/train.tsv"
+    },
+    {
+      "rfilename": "data/nl_nl/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/nl_nl/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/nl_nl/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/nl_nl/dev.tsv"
+    },
+    {
+      "rfilename": "data/nl_nl/test.tsv"
+    },
+    {
+      "rfilename": "data/nl_nl/train.tsv"
+    },
+    {
+      "rfilename": "data/nso_za/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/nso_za/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/nso_za/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/nso_za/dev.tsv"
+    },
+    {
+      "rfilename": "data/nso_za/test.tsv"
+    },
+    {
+      "rfilename": "data/nso_za/train.tsv"
+    },
+    {
+      "rfilename": "data/ny_mw/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ny_mw/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ny_mw/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ny_mw/dev.tsv"
+    },
+    {
+      "rfilename": "data/ny_mw/test.tsv"
+    },
+    {
+      "rfilename": "data/ny_mw/train.tsv"
+    },
+    {
+      "rfilename": "data/oc_fr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/oc_fr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/oc_fr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/oc_fr/dev.tsv"
+    },
+    {
+      "rfilename": "data/oc_fr/test.tsv"
+    },
+    {
+      "rfilename": "data/oc_fr/train.tsv"
+    },
+    {
+      "rfilename": "data/om_et/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/om_et/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/om_et/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/om_et/dev.tsv"
+    },
+    {
+      "rfilename": "data/om_et/test.tsv"
+    },
+    {
+      "rfilename": "data/om_et/train.tsv"
+    },
+    {
+      "rfilename": "data/or_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/or_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/or_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/or_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/or_in/test.tsv"
+    },
+    {
+      "rfilename": "data/or_in/train.tsv"
+    },
+    {
+      "rfilename": "data/pa_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/pa_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/pa_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/pa_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/pa_in/test.tsv"
+    },
+    {
+      "rfilename": "data/pa_in/train.tsv"
+    },
+    {
+      "rfilename": "data/pl_pl/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/pl_pl/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/pl_pl/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/pl_pl/dev.tsv"
+    },
+    {
+      "rfilename": "data/pl_pl/test.tsv"
+    },
+    {
+      "rfilename": "data/pl_pl/train.tsv"
+    },
+    {
+      "rfilename": "data/ps_af/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ps_af/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ps_af/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ps_af/dev.tsv"
+    },
+    {
+      "rfilename": "data/ps_af/test.tsv"
+    },
+    {
+      "rfilename": "data/ps_af/train.tsv"
+    },
+    {
+      "rfilename": "data/pt_br/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/pt_br/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/pt_br/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/pt_br/dev.tsv"
+    },
+    {
+      "rfilename": "data/pt_br/test.tsv"
+    },
+    {
+      "rfilename": "data/pt_br/train.tsv"
+    },
+    {
+      "rfilename": "data/ro_ro/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ro_ro/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ro_ro/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ro_ro/dev.tsv"
+    },
+    {
+      "rfilename": "data/ro_ro/test.tsv"
+    },
+    {
+      "rfilename": "data/ro_ro/train.tsv"
+    },
+    {
+      "rfilename": "data/ru_ru/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ru_ru/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ru_ru/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ru_ru/dev.tsv"
+    },
+    {
+      "rfilename": "data/ru_ru/test.tsv"
+    },
+    {
+      "rfilename": "data/ru_ru/train.tsv"
+    },
+    {
+      "rfilename": "data/sd_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sd_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sd_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sd_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/sd_in/test.tsv"
+    },
+    {
+      "rfilename": "data/sd_in/train.tsv"
+    },
+    {
+      "rfilename": "data/sk_sk/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sk_sk/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sk_sk/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sk_sk/dev.tsv"
+    },
+    {
+      "rfilename": "data/sk_sk/test.tsv"
+    },
+    {
+      "rfilename": "data/sk_sk/train.tsv"
+    },
+    {
+      "rfilename": "data/sl_si/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sl_si/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sl_si/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sl_si/dev.tsv"
+    },
+    {
+      "rfilename": "data/sl_si/test.tsv"
+    },
+    {
+      "rfilename": "data/sl_si/train.tsv"
+    },
+    {
+      "rfilename": "data/sn_zw/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sn_zw/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sn_zw/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sn_zw/dev.tsv"
+    },
+    {
+      "rfilename": "data/sn_zw/test.tsv"
+    },
+    {
+      "rfilename": "data/sn_zw/train.tsv"
+    },
+    {
+      "rfilename": "data/so_so/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/so_so/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/so_so/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/so_so/dev.tsv"
+    },
+    {
+      "rfilename": "data/so_so/test.tsv"
+    },
+    {
+      "rfilename": "data/so_so/train.tsv"
+    },
+    {
+      "rfilename": "data/sr_rs/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sr_rs/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sr_rs/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sr_rs/dev.tsv"
+    },
+    {
+      "rfilename": "data/sr_rs/test.tsv"
+    },
+    {
+      "rfilename": "data/sr_rs/train.tsv"
+    },
+    {
+      "rfilename": "data/sv_se/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sv_se/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sv_se/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sv_se/dev.tsv"
+    },
+    {
+      "rfilename": "data/sv_se/test.tsv"
+    },
+    {
+      "rfilename": "data/sv_se/train.tsv"
+    },
+    {
+      "rfilename": "data/sw_ke/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/sw_ke/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/sw_ke/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/sw_ke/dev.tsv"
+    },
+    {
+      "rfilename": "data/sw_ke/test.tsv"
+    },
+    {
+      "rfilename": "data/sw_ke/train.tsv"
+    },
+    {
+      "rfilename": "data/ta_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ta_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ta_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ta_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/ta_in/test.tsv"
+    },
+    {
+      "rfilename": "data/ta_in/train.tsv"
+    },
+    {
+      "rfilename": "data/te_in/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/te_in/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/te_in/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/te_in/dev.tsv"
+    },
+    {
+      "rfilename": "data/te_in/test.tsv"
+    },
+    {
+      "rfilename": "data/te_in/train.tsv"
+    },
+    {
+      "rfilename": "data/tg_tj/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/tg_tj/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/tg_tj/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/tg_tj/dev.tsv"
+    },
+    {
+      "rfilename": "data/tg_tj/test.tsv"
+    },
+    {
+      "rfilename": "data/tg_tj/train.tsv"
+    },
+    {
+      "rfilename": "data/th_th/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/th_th/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/th_th/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/th_th/dev.tsv"
+    },
+    {
+      "rfilename": "data/th_th/test.tsv"
+    },
+    {
+      "rfilename": "data/th_th/train.tsv"
+    },
+    {
+      "rfilename": "data/tr_tr/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/tr_tr/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/tr_tr/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/tr_tr/dev.tsv"
+    },
+    {
+      "rfilename": "data/tr_tr/test.tsv"
+    },
+    {
+      "rfilename": "data/tr_tr/train.tsv"
+    },
+    {
+      "rfilename": "data/uk_ua/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/uk_ua/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/uk_ua/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/uk_ua/dev.tsv"
+    },
+    {
+      "rfilename": "data/uk_ua/test.tsv"
+    },
+    {
+      "rfilename": "data/uk_ua/train.tsv"
+    },
+    {
+      "rfilename": "data/umb_ao/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/umb_ao/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/umb_ao/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/umb_ao/dev.tsv"
+    },
+    {
+      "rfilename": "data/umb_ao/test.tsv"
+    },
+    {
+      "rfilename": "data/umb_ao/train.tsv"
+    },
+    {
+      "rfilename": "data/ur_pk/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/ur_pk/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/ur_pk/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/ur_pk/dev.tsv"
+    },
+    {
+      "rfilename": "data/ur_pk/test.tsv"
+    },
+    {
+      "rfilename": "data/ur_pk/train.tsv"
+    },
+    {
+      "rfilename": "data/uz_uz/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/uz_uz/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/uz_uz/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/uz_uz/dev.tsv"
+    },
+    {
+      "rfilename": "data/uz_uz/test.tsv"
+    },
+    {
+      "rfilename": "data/uz_uz/train.tsv"
+    },
+    {
+      "rfilename": "data/vi_vn/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/vi_vn/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/vi_vn/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/vi_vn/dev.tsv"
+    },
+    {
+      "rfilename": "data/vi_vn/test.tsv"
+    },
+    {
+      "rfilename": "data/vi_vn/train.tsv"
+    },
+    {
+      "rfilename": "data/wo_sn/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/wo_sn/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/wo_sn/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/wo_sn/dev.tsv"
+    },
+    {
+      "rfilename": "data/wo_sn/test.tsv"
+    },
+    {
+      "rfilename": "data/wo_sn/train.tsv"
+    },
+    {
+      "rfilename": "data/xh_za/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/xh_za/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/xh_za/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/xh_za/dev.tsv"
+    },
+    {
+      "rfilename": "data/xh_za/test.tsv"
+    },
+    {
+      "rfilename": "data/xh_za/train.tsv"
+    },
+    {
+      "rfilename": "data/yo_ng/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/yo_ng/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/yo_ng/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/yo_ng/dev.tsv"
+    },
+    {
+      "rfilename": "data/yo_ng/test.tsv"
+    },
+    {
+      "rfilename": "data/yo_ng/train.tsv"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/dev.tsv"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/test.tsv"
+    },
+    {
+      "rfilename": "data/yue_hant_hk/train.tsv"
+    },
+    {
+      "rfilename": "data/zu_za/audio/dev.tar.gz"
+    },
+    {
+      "rfilename": "data/zu_za/audio/test.tar.gz"
+    },
+    {
+      "rfilename": "data/zu_za/audio/train.tar.gz"
+    },
+    {
+      "rfilename": "data/zu_za/dev.tsv"
+    },
+    {
+      "rfilename": "data/zu_za/test.tsv"
+    },
+    {
+      "rfilename": "data/zu_za/train.tsv"
+    }
+  ],
+  "createdAt": "2024-06-12T03:49:34.000Z",
+  "usedStorage": 266890833875
+}

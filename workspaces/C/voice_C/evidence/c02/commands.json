@@ -1,0 +1,106 @@
+{
+  "working_directory": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+  "python": "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+  "journal_scope": "RECORDED_TOOL_EXITS_AND_LOGS; NOT_A_RAW_RECONSTRUCTION_OF_EARLIER_TOOL_OUTPUT",
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe tools/prepare_c02_sources.py",
+      "exit_code": null,
+      "log": "evidence/c02_sources_initial.log",
+      "note": "Source metadata and baseline retained; original exit code not saved in this file"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/acquire_c02_assets.py",
+      "exit_code": 1,
+      "log": "evidence/c02/asset_acquisition.log",
+      "result": "WINERROR_10054_CONNECTION_RESET"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/acquire_c02_assets.py",
+      "exit_code": 0,
+      "log": "evidence/c02/asset_acquisition_retry1.log",
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/prepare_c02_plan.py",
+      "exit_code": 0,
+      "log": "evidence/c02/prepare_plan.log",
+      "result": "FROZEN"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/smoke_c02.py (initial)",
+      "exit_code": 1,
+      "log": "evidence/c02/smoke.log",
+      "result": "WORKER_TIMEOUT"
+    },
+    {
+      "command": "Direct main/thread Tts probes via python -c",
+      "exit_code": 0,
+      "logs": [
+        "evidence/c02/direct_probe.log",
+        "evidence/c02/thread_probe.log"
+      ],
+      "result": "PILOT_PAUSE_0_2"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/debug_c02_worker.py",
+      "exit_code": 0,
+      "log": "evidence/c02/worker_timeout_probe.log",
+      "diagnostic": "evidence/c02/worker_timeout_probe/stderr.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/smoke_c02.py (NumPy startup fix)",
+      "exit_code": 0,
+      "log": "evidence/c02/smoke_fixed.log",
+      "result": "PILOT_PAUSE_0_2"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/benchmark_c02.py (pilot)",
+      "exit_code": 0,
+      "log": "evidence/c02/benchmark.log",
+      "result": "138_PILOT_RUNS_SUPERSEDED_BY_EXPLICIT_PAUSE_SETTINGS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/benchmark_c02.py",
+      "exit_code": 0,
+      "log": "evidence/c02/benchmark_final.log",
+      "result": "138_FINAL_ENGINEERING_RUNS_PASS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/prepare_c02_listening.py",
+      "exit_code": 0,
+      "log": "evidence/c02/prepare_listening.log",
+      "result": "14_PENDING_FORMS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "log": "evidence/c02/unittest_initial.log",
+      "result": "67_PASS_0_SKIP"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/collect_c02_aux_asr.py",
+      "exit_code": 0,
+      "log": "evidence/c02/aux_asr.log",
+      "result": "14_AUXILIARY_NOT_HUMAN_QUALITY"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/smoke_c02.py (explicit GenerationConfig)",
+      "exit_code": 0,
+      "log": "evidence/c02/smoke_final.log",
+      "result": "REAL_SYNTHESIS_PASS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/analyze_c02.py",
+      "exit_code": 0,
+      "log": "evidence/c02/analysis.log",
+      "result": "PAIRED_COMPARISONS_AND_LEXICON_AUDIT"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/finalize_c02.py (first audit)",
+      "exit_code": 1,
+      "log": "evidence/c02_finalize.log",
+      "result": "AUDIT_SCRIPT_STOPITERATION: C00 HANDOFF NOT LISTED IN C01 MANIFEST; CHECK AGAINST ORIGINAL C00 MANIFEST"
+    }
+  ]
+}

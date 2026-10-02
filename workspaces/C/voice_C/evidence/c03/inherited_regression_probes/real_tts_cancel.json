@@ -1,0 +1,74 @@
+{
+  "cancel": {
+    "api_version": 1,
+    "request_id": "client-3",
+    "op": "cancel",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "target_request_id": "client-2",
+    "cancel_pending": true,
+    "stopped": false,
+    "late_result_policy": "DISCARD",
+    "state": "CANCEL_REQUESTED"
+  },
+  "reset": {
+    "api_version": 1,
+    "request_id": "client-4",
+    "op": "reset",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "session_id": "s",
+    "epoch": 1,
+    "pending_compute": true,
+    "removed_scope": "WORKER_OWNED_FILES_ONLY"
+  },
+  "next_result": {
+    "api_version": 1,
+    "request_id": "client-5",
+    "op": "synthesize",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "sample_rate": 22050,
+    "frames": 45568,
+    "audio_duration_ms": 2066.575963718821,
+    "audio_sha256": "bcd5f2183b608bb4d3efe8ad6f92b942e0290853394aaeac911d9104672db974",
+    "silent": false,
+    "clipped_samples": 0,
+    "float_out_of_range_samples": 0,
+    "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+    "peak_abs_float": 0.30272674560546875,
+    "rms_float": 0.04523501402292889,
+    "text_sha256": "3490a8ab6ab9eedac24a7cf26802836e6c3c836da3eb55b55a3c7eda11a73606",
+    "output_kind": "SYNTHESIZED_SPEECH",
+    "speech_quality": "HUMAN_REVIEW_PENDING",
+    "native_callbacks": [
+      {
+        "elapsed_ms": 160.28139999252744,
+        "frames": 45568,
+        "progress": 1.0
+      }
+    ],
+    "first_internal_chunk_ms": 160.28139999252744,
+    "internal_chunk_is_client_ready": false,
+    "first_sentence_ready_ms": null,
+    "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+    "num_threads": 1,
+    "speed": 1.0,
+    "cache_hit": false,
+    "waveform_cache": "DISABLED",
+    "wav_path": "s/out/0230524505f84e539b3c9ab8c36e3925.wav",
+    "compute_ms": 172.74650000035763,
+    "queue_ms": 146.88150001165923,
+    "ready_ms": 319.6295000088867,
+    "audible_ms": null,
+    "memory": {
+      "current_rss_bytes": 231796736,
+      "peak_rss_bytes": 242941952,
+      "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+      "memory_method": "Windows GetProcessMemoryInfo"
+    },
+    "session_id": "s",
+    "epoch": 1
+  },
+  "late_audio_discarded": true
+}

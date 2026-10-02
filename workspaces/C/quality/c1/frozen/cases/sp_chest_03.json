@@ -1,0 +1,297 @@
+{
+  "case_id": "sp_chest_03",
+  "case_version": "0.1.0-draft",
+  "chief_complaint": "胸痛",
+  "disclosure_rules": [
+    {
+      "fact_id": "fact.identity",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.identity"
+      ]
+    },
+    {
+      "fact_id": "fact.onset",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.onset"
+      ]
+    },
+    {
+      "fact_id": "fact.location",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.location"
+      ]
+    },
+    {
+      "fact_id": "fact.quality",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.quality"
+      ]
+    },
+    {
+      "fact_id": "fact.severity",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.severity"
+      ]
+    },
+    {
+      "fact_id": "fact.duration",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.duration"
+      ]
+    },
+    {
+      "fact_id": "fact.radiation",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.radiation"
+      ]
+    },
+    {
+      "fact_id": "fact.provocation",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.provocation"
+      ]
+    },
+    {
+      "fact_id": "fact.relief",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.relief"
+      ]
+    },
+    {
+      "fact_id": "fact.associated",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.associated"
+      ]
+    },
+    {
+      "fact_id": "fact.background",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.background"
+      ]
+    },
+    {
+      "fact_id": "fact.timeline",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "observe.clarify_timeline"
+      ]
+    },
+    {
+      "fact_id": "fact.previous_episode",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.previous_episode"
+      ]
+    },
+    {
+      "fact_id": "fact.care_received",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.care_received"
+      ]
+    },
+    {
+      "fact_id": "fact.concern",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.concern"
+      ]
+    },
+    {
+      "fact_id": "unknown.diagnosis",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.diagnosis"
+      ]
+    },
+    {
+      "fact_id": "unknown.ecg",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.ecg"
+      ]
+    },
+    {
+      "fact_id": "unknown.troponin",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.troponin"
+      ]
+    },
+    {
+      "fact_id": "unknown.vital_signs",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.vital_signs"
+      ]
+    },
+    {
+      "fact_id": "unknown.drug_dose",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.drug_dose"
+      ]
+    },
+    {
+      "fact_id": "unknown.contact_details",
+      "requires_all_disclosed": [],
+      "trigger_intents": [
+        "ask.contact_details"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact.identity",
+      "slot": "identity",
+      "value": "44岁，合成人物丙"
+    },
+    {
+      "fact_id": "fact.onset",
+      "slot": "onset",
+      "value": "三天前晚饭后慢慢出现"
+    },
+    {
+      "fact_id": "fact.location",
+      "slot": "location",
+      "value": "胸口中间偏下"
+    },
+    {
+      "fact_id": "fact.quality",
+      "slot": "quality",
+      "value": "有些烧灼感"
+    },
+    {
+      "fact_id": "fact.severity",
+      "slot": "severity",
+      "value": "自己估计三分，满分十分"
+    },
+    {
+      "fact_id": "fact.duration",
+      "slot": "duration",
+      "value": "每次约十分钟，这三天每天一两次"
+    },
+    {
+      "fact_id": "fact.radiation",
+      "slot": "radiation",
+      "value": "没感觉放射到肩膀或手臂"
+    },
+    {
+      "fact_id": "fact.provocation",
+      "slot": "provocation",
+      "value": "吃得多和饭后马上躺下时明显"
+    },
+    {
+      "fact_id": "fact.relief",
+      "slot": "relief",
+      "value": "坐起来会逐渐舒服些"
+    },
+    {
+      "fact_id": "fact.associated",
+      "slot": "associated",
+      "value": "有时口里感觉酸；没有出汗或明显气短"
+    },
+    {
+      "fact_id": "fact.background",
+      "slot": "background",
+      "value": "没记得长期疾病；没有长期用药；没有记得的药物过敏；偶尔饮酒；家里类似情况不清楚"
+    },
+    {
+      "fact_id": "fact.timeline",
+      "slot": "timeline",
+      "value": "三天来没有明显加重"
+    },
+    {
+      "fact_id": "fact.previous_episode",
+      "slot": "previous_episode",
+      "value": "以前偶尔有过口酸，但没有这种胸部感觉"
+    },
+    {
+      "fact_id": "fact.care_received",
+      "slot": "care_received",
+      "value": "没有做过这次相关检查，也没自行服药"
+    },
+    {
+      "fact_id": "fact.concern",
+      "slot": "concern",
+      "value": "担心反复发生"
+    }
+  ],
+  "notice": "仅用于教学训练；不用于诊断、治疗、分诊或替代执业人员判断。病例及量表尚需医学教师审核。",
+  "review": {
+    "approval_reference": null,
+    "needs_medical_teacher": true,
+    "reviewed_at": null,
+    "reviewer": null,
+    "status": "DRAFT"
+  },
+  "role_policy": {
+    "answer_only_asked": true,
+    "assessment_hints": false,
+    "diagnostic_inference": false,
+    "teaching_hints": "slot_labels_only",
+    "unknown_answer": "这项我不清楚，设定里没有提供。"
+  },
+  "rubric_ref": "chest_pain_history_draft",
+  "rubric_version": "0.1.0-draft",
+  "schema_version": "0.1.0-draft",
+  "synthetic": true,
+  "teacher_only": {
+    "diagnosis": null,
+    "review_questions": [
+      "合成病史是否自洽、适合指定教学层级？",
+      "哪些追问和表述应改写？",
+      "哪些未知信息需要补充，哪些应继续保留未知？"
+    ]
+  },
+  "title": "进食后胸部烧灼感（合成草案）",
+  "unknowns": [
+    {
+      "fact_id": "unknown.diagnosis",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "diagnosis",
+      "value": null
+    },
+    {
+      "fact_id": "unknown.ecg",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "ecg",
+      "value": null
+    },
+    {
+      "fact_id": "unknown.troponin",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "troponin",
+      "value": null
+    },
+    {
+      "fact_id": "unknown.vital_signs",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "vital_signs",
+      "value": null
+    },
+    {
+      "fact_id": "unknown.drug_dose",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "drug_dose",
+      "value": null
+    },
+    {
+      "fact_id": "unknown.contact_details",
+      "reason": "合成设定未提供；不推断阴性或正常结果",
+      "slot": "contact_details",
+      "value": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\client.py", line 76, in receive
+    item = self.incoming.get(timeout=remaining)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\smoke_c02.py", line 18, in <module>
+    response=c.call('synthesize',session_id='smoke',text='我没有发热，也没有咳嗽。',output_dir='smoke/out')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\client.py", line 87, in call
+    return self.receive(rid, timeout=self.response_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\voicec\client.py", line 78, in receive
+    raise TimeoutError('No matching worker response within timeout') from exc
+TimeoutError: No matching worker response within timeout

@@ -1,0 +1,189 @@
+{
+  "status": "PASS_ENGINEERING_TRACE_AND_PACING_AUDIT",
+  "trace_checks": [
+    {
+      "path": "evidence/c03/benchmark/paced.trace.jsonl",
+      "requests": 994,
+      "responses": 2185,
+      "partial_events": 199,
+      "unique_final_results": 14,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 14,
+        "p50": 2237.26170000009,
+        "p95": 5432.481224999354,
+        "max": 8033.89399999287
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/benchmark/unpaced.trace.jsonl",
+      "requests": 2976,
+      "responses": 6547,
+      "partial_events": 597,
+      "unique_final_results": 42,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 42,
+        "p50": 172.1392499966896,
+        "p95": 575.3164900008405,
+        "max": 629.201000003377
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/edges/endpoint08.trace.jsonl",
+      "requests": 403,
+      "responses": 864,
+      "partial_events": 60,
+      "unique_final_results": 7,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 7,
+        "p50": 155.53420000651386,
+        "p95": 237.720220007759,
+        "max": 256.50070000847336
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/edges/endpoint12.trace.jsonl",
+      "requests": 403,
+      "responses": 864,
+      "partial_events": 60,
+      "unique_final_results": 7,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 7,
+        "p50": 165.1562000042759,
+        "p95": 283.35988000471843,
+        "max": 292.99810000520665
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/edges/endpoint16.trace.jsonl",
+      "requests": 403,
+      "responses": 864,
+      "partial_events": 60,
+      "unique_final_results": 7,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 7,
+        "p50": 227.0563000056427,
+        "p95": 317.87431999691756,
+        "max": 331.8184999952791
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/edges/lifecycle.trace.jsonl",
+      "requests": 8,
+      "responses": 12,
+      "partial_events": 0,
+      "unique_final_results": 0,
+      "errors": 3,
+      "first_partial_after_begin_ack_ms": {
+        "count": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/smoke/trace.jsonl",
+      "requests": 83,
+      "responses": 174,
+      "partial_events": 11,
+      "unique_final_results": 1,
+      "errors": 1,
+      "first_partial_after_begin_ack_ms": {
+        "count": 1,
+        "p50": 206.76269999239594,
+        "p95": 206.76269999239594,
+        "max": 206.76269999239594
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    },
+    {
+      "path": "evidence/c03/standalone_client/trace.jsonl",
+      "requests": 82,
+      "responses": 173,
+      "partial_events": 11,
+      "unique_final_results": 1,
+      "errors": 0,
+      "first_partial_after_begin_ack_ms": {
+        "count": 1,
+        "p50": 179.64349999965634,
+        "p95": 179.64349999965634,
+        "max": 179.64349999965634
+      },
+      "policy": "ALL_PARTIALS_DISPLAY_ONLY; EACH_STREAM_AT_MOST_ONE_FINAL"
+    }
+  ],
+  "pacing": {
+    "runs": 14,
+    "chunks": 963,
+    "premature_chunks": 0,
+    "all_original_frames_preserved": true,
+    "sample_scope": "14_PUBLISHED_DEV_FILES_191_2_SECONDS_OF_AUDIO; NO_MICROPHONE",
+    "max_schedule_lag_ms": 252.6578000106383,
+    "note": "Late arrived chunks may catch up after backpressure; observed lag/max ACK latency retained, no chunk omitted."
+  },
+  "endpoint_candidates": {
+    "08": {
+      "runs": 7,
+      "endpoint_advice_seen": 7,
+      "all_pcm_preserved": true,
+      "short_negation_texts": [
+        "没有",
+        "不是"
+      ],
+      "continuation_texts": [
+        "没有不是"
+      ],
+      "no_automatic_cut": true,
+      "human_quality_verified": false
+    },
+    "12": {
+      "runs": 7,
+      "endpoint_advice_seen": 7,
+      "all_pcm_preserved": true,
+      "short_negation_texts": [
+        "没有",
+        "不是"
+      ],
+      "continuation_texts": [
+        "没有不是"
+      ],
+      "no_automatic_cut": true,
+      "human_quality_verified": false
+    },
+    "16": {
+      "runs": 7,
+      "endpoint_advice_seen": 7,
+      "all_pcm_preserved": true,
+      "short_negation_texts": [
+        "没有",
+        "不是"
+      ],
+      "continuation_texts": [
+        "没有不是"
+      ],
+      "no_automatic_cut": true,
+      "human_quality_verified": false
+    }
+  },
+  "selected_endpoint": "1.2_SECONDS_ADVISORY_ONLY",
+  "startup_measurement_note": "benchmark/hello.json startup_ms was sampled immediately after client construction: process spawn only, not full model startup. Use model load_ms for measured model load; no cold-start acceptance claim.",
+  "limits": [
+    "14 paced runs are descriptive; 42 unpaced runs are the repeated engineering set.",
+    "File end plus final ACK is not independently labeled human speech end.",
+    "Eight of fourteen files produced native endpoint advice before file end; this alone does not establish false endpoints.",
+    "ASR CER and student quality are not improved/accepted by this protocol stage.",
+    "Synthetic short-negation checks do not certify natural student utterances.",
+    "Microphone authorization declined; no physical audio device opened.",
+    "Original two C02 probe JSON records were overwritten by initial regression; see incident report."
+  ]
+}

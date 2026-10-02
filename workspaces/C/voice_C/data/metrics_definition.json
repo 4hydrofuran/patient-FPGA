@@ -1,0 +1,33 @@
+{
+  "version": "c00.1.0",
+  "status": "ENGINEERING_METRIC_DEFINITION_BEFORE_REAL_SPEECH_EVALUATION",
+  "cer": {
+    "definition": "(substitutions + deletions + insertions) / reference character count",
+    "normalization": "Unicode NFKC, lowercase, remove whitespace and Unicode punctuation except . - + % :; preserve negation and numbers",
+    "ties": "substitution, deletion, insertion order",
+    "empty_reference": "null CER, preserve insertion count",
+    "full_set_cer": "null if any expected item has no successful actual transcript; observed CER must be paired with coverage and missing/error/timeout counts",
+    "reference": "Human-verified transcript of actual authorized audio; planned reading script is not automatically ground truth"
+  },
+  "critical_items": {
+    "categories": ["negation", "number", "time", "frequency", "symptom", "term"],
+    "automated": "Literal normalized phrase occurrence counts; only a screening indicator",
+    "human": "Independent reviewer checks semantic negation, numbers, time and additions/omissions; literal phrase retention is not semantic correctness",
+    "label_status": "PENDING"
+  },
+  "rtf": "compute_ms / actual audio_duration_ms; compute includes this worker operation's validation and generation/transcription boundary; queue time separate",
+  "ready": "High-resolution monotonic worker time from enqueue to complete WAV available; not physical playback or streaming first-block time",
+  "streaming_first_block": "NOT_IMPLEMENTED_C00; null until actual streaming engine emits a verified usable first block",
+  "memory": "Actual worker process lifetime peak working set/RSS including Python and framework; not isolated per-request model allocation",
+  "tts_listening": {
+    "status": "PENDING",
+    "method": "Anonymous condition IDs, same playback volume policy, independent listener transcription and judgments; preserve each listener",
+    "intelligibility_anchors": {"1": "Cannot understand", "3": "Understand with difficulty/errors", "5": "All content clearly understood"},
+    "naturalness_anchors": {"1": "Very unnatural", "3": "Noticeably synthetic but usable", "5": "Natural to the listener"},
+    "negation_number_omission": "Explicit human error flags, not inferred from AI opinion"
+  },
+  "statistics": "Future real runs: at least 30 performance repeats, report p50/p95/max/errors/timeouts and paired comparisons; do not change frozen definitions based on final-test errors",
+  "contract_fixtures": "Silence and non-speech tone only validate pipeline; never included as ASR/TTS quality or KV260 performance",
+  "runtime_truth": "PC_REAL and BOARD_REAL are declared execution labels, not standalone proof of board execution",
+  "current_result": "NOT_TESTED"
+}

@@ -1,0 +1,68 @@
+{
+  "retained_failures": [
+    {
+      "path": "asset_acquisition.log",
+      "problem": "TLS_CONNECTION_RESET",
+      "fixed": "PUBLIC_FIXED_ASSET_RETRY"
+    },
+    {
+      "path": "smoke.log",
+      "problem": "WORKER_TIMEOUT",
+      "diagnostic": "worker_timeout_probe/stderr.log",
+      "fixed": "NUMPY_STARTUP_PRELOAD"
+    },
+    {
+      "path": "pilot_limitations.json",
+      "problem": "IMPLICIT_GENERATION_PAUSE_0_2",
+      "fixed": "EXPLICIT_GENERATION_CONFIG_1_0"
+    },
+    {
+      "path": "sources/vocos_upstream_repo.failed.json",
+      "problem": "GITHUB_API_403_RATE_LIMIT",
+      "status": "CODE_LICENSE_METADATA_STILL_UNVERIFIED"
+    },
+    {
+      "path": "native_callback_check.json",
+      "problem": "PYTHON_DOC_CALLBACK_DIRECTION_INCORRECT_FOR_MATCHA",
+      "fixed": "MEASURED_1_CONTINUE_0_STOP"
+    }
+  ],
+  "unresolved_lexicon_unknown_tokens": [
+    {
+      "word": "人生自古谁无死",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "谁的",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "谁都",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    },
+    {
+      "word": "鹿死谁手",
+      "unknown_tokens": [
+        "shei2"
+      ]
+    }
+  ],
+  "auxiliary_asr_mismatches": "SEE_AUX_ASR_REPORT; TTS_AND_ASR_ERROR_CAUSES_NOT_SEPARABLE_WITHOUT_LISTENING",
+  "human_ratings": 0,
+  "licenses": {
+    "baker": "REVIEW_PENDING",
+    "vocos": "REVIEW_PENDING",
+    "training_data": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD"
+  },
+  "runtime_network": "NO_NETWORK_API_LOCAL_ASSETS; DEFAULT_RESTRICTED_SANDBOX; NOT_PHYSICALLY_DISCONNECTED",
+  "board": "NOT_TESTED",
+  "stability_2h": "NOT_TESTED",
+  "default_voice_comparison": "NOT_TESTED",
+  "end_to_end_200_rounds": "NOT_TESTED"
+}

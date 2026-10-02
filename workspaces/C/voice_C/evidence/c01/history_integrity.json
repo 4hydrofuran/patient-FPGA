@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "c00_prior_manifest_unchanged": true,
+  "c00_existing_files_unchanged": 27,
+  "unchanged_paths": [
+    "voice_C/.gitignore",
+    "voice_C/data/authorization.template.json",
+    "voice_C/data/metrics_definition.json",
+    "voice_C/data/recording_plan.jsonl",
+    "voice_C/data/tts_listening.template.jsonl",
+    "voice_C/data/录音计划.md",
+    "voice_C/evidence/c00/contract_demo.json",
+    "voice_C/evidence/c00/contract_demo.log",
+    "voice_C/evidence/c00/initial_check_summary.json",
+    "voice_C/evidence/c00/initial_timing_observation.json",
+    "voice_C/evidence/c00/protocol_trace.jsonl",
+    "voice_C/evidence/c00/quality_readiness.json",
+    "voice_C/evidence/c00/quality_readiness.log",
+    "voice_C/evidence/c00/recording_plan.log",
+    "voice_C/evidence/c00/unittest.log",
+    "voice_C/evidence/c00/verification.json",
+    "voice_C/requirements.txt",
+    "voice_C/tests/test_c00.py",
+    "voice_C/tools/collect_contract_demo.py",
+    "voice_C/tools/prepare_recording_plan.py",
+    "voice_C/tools/verify_c00.py",
+    "voice_C/voicec/__init__.py",
+    "voice_C/voicec/dataset.py",
+    "voice_C/voicec/memory.py",
+    "voice_C/voicec/metrics.py",
+    "voice_C/voicec/spool.py",
+    "docs/handoffs/C00.md"
+  ],
+  "explicit_changes": [
+    {
+      "path": "voice_C/README.md",
+      "old_sha256": "fbc3ff809f07bd9389f7a8a5b513e9d6dbd85943ae3bc1543ec2d3dafa3166d8",
+      "new_sha256": "1ca4733cf20f955fae767e896b2c937ee24cd8d78cbd92a5f61de93292168fa0",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "voice_C/tools/benchmark_asr.py",
+      "old_sha256": "a2f1dcbef2a2afd650a2e8b889d9431c2c930d1bf63bac0d0dba80ae1c466c36",
+      "new_sha256": "5b66422cb5e4ec57bd7f544ae3f4d9790c2367ee0f1ac31c112aed1b06b370b9",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "voice_C/voicec/audio.py",
+      "old_sha256": "24ed9f49da6c291beaa3779d18ebffe5c7b089fc42434b4c8790c4e41db65cad",
+      "new_sha256": "411a3381d653c1aecea87fcbd965ab44474548dc3d1f8ca9c99d0fb2c956be7d",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "voice_C/voicec/client.py",
+      "old_sha256": "c2cd44b539a98ff8747ca27d0030e79bfafdff784f3d8fe88394f560f2d0bbe7",
+      "new_sha256": "d865a761965a69e3824ad2b361d0b266328971801cd751c36c5bcf49db9305aa",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "voice_C/voicec/worker.py",
+      "old_sha256": "9d4eb3430186a3facf1a0d04575a002eaa5111f613be95d2059ca8f8fd236856",
+      "new_sha256": "5bda67259aed41ec07c7e6937e9da80a50df8840062d784488f24022df10bd43",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "PROJECT_STATUS.json",
+      "old_sha256": "3de1ffda9f4e3683fd103be5d1e52c6d5d7487ba6354f40f21eb832ca92d7f90",
+      "new_sha256": "470ca4c030946190256921a22a5188fca228642f84c99f603c8b30e03f297a13",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "docs/status/C.md",
+      "old_sha256": "975bbe20edd0dd470e64ba54f8d56e5ea9dbbe10c4063dd2e76466573eb0e7ae",
+      "new_sha256": "6134456f67f12970423fe4c3e2e17bfd2e0568f9a9b908c6a46fb7438e3c0d6f",
+      "reason": "C01 adapter extension or living status update"
+    },
+    {
+      "path": "AGENTS.md",
+      "old_sha256": "0ba3002ab46d21034542494dc176eb00646aaad927279db7d9ea696d5679352d",
+      "new_sha256": "ffeb1b85feb38ae2b58d679773f4f902eed33e3da9e1ba34fae2de2b35e836b0",
+      "reason": "C01 adapter extension or living status update"
+    }
+  ],
+  "old_c1_immutable_files_verified": 47,
+  "guidance_declared_hashes_verified": 30,
+  "model_files_verified": 4,
+  "wheel_files_verified": 3,
+  "c00_original_recording_plan_unchanged": true,
+  "historical_scores_not_relabelled": true
+}

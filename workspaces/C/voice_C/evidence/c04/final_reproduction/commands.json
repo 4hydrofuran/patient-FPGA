@@ -1,0 +1,32 @@
+[
+  {
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_source\\tools\\install_candidate.py",
+      "--target-runtime",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_source\\tools\\materialize_local_assets.py",
+      "--source-voice-root",
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+      "--target-runtime",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_runtime\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\final_independent_runtime\\bin\\selftest.py",
+      "--real",
+      "--output",
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\evidence\\c04\\final_reproduction\\selftest"
+    ],
+    "exit_code": 0
+  }
+]

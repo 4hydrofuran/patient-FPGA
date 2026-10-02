@@ -1,0 +1,242 @@
+[
+  {
+    "threads": 1,
+    "client_startup_ms": 1860.3971999982605,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c01_asr",
+      "version": "0.2.0-asr",
+      "models": [
+        {
+          "model_id": "csukuangfj/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+          "revision": "a5f60fe00dcfbaf68fcc1c6b5cf53061e144d6da",
+          "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+          "tokens_sha256": "6fed8c6c248516f38e7faa19404b57413e8ce259f1cbc1fa4aebc86eac32fdfd",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "num_threads": 1,
+            "provider": "cpu",
+            "decoding_method": "greedy_search",
+            "tail_padding_ms": 660
+          },
+          "decoder_bias": "NONE",
+          "hotwords_configured": false,
+          "hotwords_factory_parameter_supported": false,
+          "underlying_model_streaming": true,
+          "public_streaming_ops": false,
+          "upstream_declared_license": "apache-2.0",
+          "onnx_license_status": "REVIEW_PENDING",
+          "redistribution": "PENDING_NOT_APPROVED",
+          "load_ms": 1624.8212000064086,
+          "memory_after_load": {
+            "current_rss_bytes": 122404864,
+            "peak_rss_bytes": 122404864,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "upstream": "apache-2.0",
+          "onnx": "REVIEW_PENDING"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": true,
+        "real_tts": false,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 122503168,
+        "peak_rss_bytes": 122503168,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  },
+  {
+    "threads": 2,
+    "client_startup_ms": 1422.590999995009,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c01_asr",
+      "version": "0.2.0-asr",
+      "models": [
+        {
+          "model_id": "csukuangfj/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+          "revision": "a5f60fe00dcfbaf68fcc1c6b5cf53061e144d6da",
+          "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+          "tokens_sha256": "6fed8c6c248516f38e7faa19404b57413e8ce259f1cbc1fa4aebc86eac32fdfd",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "num_threads": 2,
+            "provider": "cpu",
+            "decoding_method": "greedy_search",
+            "tail_padding_ms": 660
+          },
+          "decoder_bias": "NONE",
+          "hotwords_configured": false,
+          "hotwords_factory_parameter_supported": false,
+          "underlying_model_streaming": true,
+          "public_streaming_ops": false,
+          "upstream_declared_license": "apache-2.0",
+          "onnx_license_status": "REVIEW_PENDING",
+          "redistribution": "PENDING_NOT_APPROVED",
+          "load_ms": 1241.3453000044683,
+          "memory_after_load": {
+            "current_rss_bytes": 122138624,
+            "peak_rss_bytes": 122138624,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "upstream": "apache-2.0",
+          "onnx": "REVIEW_PENDING"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": true,
+        "real_tts": false,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 122236928,
+        "peak_rss_bytes": 122236928,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  },
+  {
+    "threads": 4,
+    "client_startup_ms": 1745.5158999946434,
+    "response": {
+      "api_version": 1,
+      "request_id": "client-1",
+      "op": "hello",
+      "type": "result",
+      "execution_kind": "PC_REAL",
+      "module_id": "voice_C_c01_asr",
+      "version": "0.2.0-asr",
+      "models": [
+        {
+          "model_id": "csukuangfj/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+          "revision": "a5f60fe00dcfbaf68fcc1c6b5cf53061e144d6da",
+          "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+          "tokens_sha256": "6fed8c6c248516f38e7faa19404b57413e8ce259f1cbc1fa4aebc86eac32fdfd",
+          "dependencies": {
+            "sherpa-onnx": "1.13.8",
+            "sherpa-onnx-core": "1.13.8",
+            "numpy": "2.5.3"
+          },
+          "config": {
+            "api_version": 1,
+            "num_threads": 4,
+            "provider": "cpu",
+            "decoding_method": "greedy_search",
+            "tail_padding_ms": 660
+          },
+          "decoder_bias": "NONE",
+          "hotwords_configured": false,
+          "hotwords_factory_parameter_supported": false,
+          "underlying_model_streaming": true,
+          "public_streaming_ops": false,
+          "upstream_declared_license": "apache-2.0",
+          "onnx_license_status": "REVIEW_PENDING",
+          "redistribution": "PENDING_NOT_APPROVED",
+          "load_ms": 1553.7403000053018,
+          "memory_after_load": {
+            "current_rss_bytes": 122368000,
+            "peak_rss_bytes": 122368000,
+            "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+            "memory_method": "Windows GetProcessMemoryInfo"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "upstream": "apache-2.0",
+          "onnx": "REVIEW_PENDING"
+        }
+      ],
+      "mandatory_ops": [
+        "hello",
+        "transcribe",
+        "synthesize",
+        "cancel",
+        "reset",
+        "shutdown"
+      ],
+      "capabilities": {
+        "streaming_asr": false,
+        "real_asr": true,
+        "real_tts": false,
+        "contract_test_tone": false
+      },
+      "sample_rates": [
+        16000
+      ],
+      "concurrency_limit": 1,
+      "queued_limit": 2,
+      "confidence": null,
+      "memory": {
+        "current_rss_bytes": 122458112,
+        "peak_rss_bytes": 122458112,
+        "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+        "memory_method": "Windows GetProcessMemoryInfo"
+      }
+    }
+  }
+]

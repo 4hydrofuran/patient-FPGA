@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kv260:c0:session:0.1.0-draft",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "case_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "rubric_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "rubric_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "mode": {
+      "enum": [
+        "teaching",
+        "assessment"
+      ]
+    },
+    "execution_kind": {
+      "const": "PC_ENGINEERING_ONLY"
+    },
+    "notice": {
+      "const": "仅用于教学训练；不用于诊断、治疗、分诊或替代执业人员判断。病例及量表尚需医学教师审核。"
+    },
+    "closed": {
+      "type": "boolean"
+    },
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "monotonic_ns": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "request_id",
+          "question",
+          "timestamp_utc",
+          "monotonic_ns",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timestamp_utc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "monotonic_ns": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "intent": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "span_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "span_end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "criterion_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true
+          },
+          "annotation_source": {
+            "const": "trusted_engineering_annotation"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "request_id",
+          "question",
+          "timestamp_utc",
+          "monotonic_ns",
+          "intent",
+          "confidence",
+          "quote",
+          "span_start",
+          "span_end",
+          "criterion_ids",
+          "annotation_source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterion_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "intent": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          }
+        },
+        "required": [
+          "criterion_id",
+          "evidence_id",
+          "intent"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "disclosed_fact_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "history_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "session_id",
+    "case_id",
+    "case_version",
+    "rubric_id",
+    "rubric_version",
+    "mode",
+    "execution_kind",
+    "notice",
+    "closed",
+    "turns",
+    "evidence",
+    "mappings",
+    "disclosed_fact_ids",
+    "history_summary"
+  ],
+  "additionalProperties": false
+}

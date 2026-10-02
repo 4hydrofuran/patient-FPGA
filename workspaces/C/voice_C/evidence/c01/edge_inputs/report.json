@@ -1,0 +1,198 @@
+{
+  "hello": {
+    "api_version": 1,
+    "request_id": "client-1",
+    "op": "hello",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "module_id": "voice_C_c01_asr",
+    "version": "0.2.0-asr",
+    "models": [
+      {
+        "model_id": "csukuangfj/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+        "revision": "a5f60fe00dcfbaf68fcc1c6b5cf53061e144d6da",
+        "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+        "tokens_sha256": "6fed8c6c248516f38e7faa19404b57413e8ce259f1cbc1fa4aebc86eac32fdfd",
+        "dependencies": {
+          "sherpa-onnx": "1.13.8",
+          "sherpa-onnx-core": "1.13.8",
+          "numpy": "2.5.3"
+        },
+        "config": {
+          "api_version": 1,
+          "num_threads": 2,
+          "provider": "cpu",
+          "decoding_method": "greedy_search",
+          "tail_padding_ms": 660
+        },
+        "decoder_bias": "NONE",
+        "hotwords_configured": false,
+        "hotwords_factory_parameter_supported": false,
+        "underlying_model_streaming": true,
+        "public_streaming_ops": false,
+        "upstream_declared_license": "apache-2.0",
+        "onnx_license_status": "REVIEW_PENDING",
+        "redistribution": "PENDING_NOT_APPROVED",
+        "load_ms": 1413.0036999995355,
+        "memory_after_load": {
+          "current_rss_bytes": 122343424,
+          "peak_rss_bytes": 122343424,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        }
+      }
+    ],
+    "licenses": [
+      {
+        "upstream": "apache-2.0",
+        "onnx": "REVIEW_PENDING"
+      }
+    ],
+    "mandatory_ops": [
+      "hello",
+      "transcribe",
+      "synthesize",
+      "cancel",
+      "reset",
+      "shutdown"
+    ],
+    "capabilities": {
+      "streaming_asr": false,
+      "real_asr": true,
+      "real_tts": false,
+      "contract_test_tone": false
+    },
+    "sample_rates": [
+      16000
+    ],
+    "concurrency_limit": 1,
+    "queued_limit": 2,
+    "confidence": null,
+    "memory": {
+      "current_rss_bytes": 122437632,
+      "peak_rss_bytes": 122437632,
+      "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+      "memory_method": "Windows GetProcessMemoryInfo"
+    }
+  },
+  "cases": [
+    {
+      "input_kind": "SYNTHETIC_BOUNDARY_NOT_SPEECH_QUALITY",
+      "case": "silence",
+      "response": {
+        "api_version": 1,
+        "request_id": "client-2",
+        "op": "transcribe",
+        "type": "result",
+        "execution_kind": "PC_REAL",
+        "text": "",
+        "confidence": null,
+        "sample_rate": 16000,
+        "frames": 16000,
+        "audio_duration_ms": 1000.0,
+        "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+        "silent": true,
+        "clipped_samples": 0,
+        "warnings": [
+          "SILENT_INPUT"
+        ],
+        "tail_padding_ms": 660,
+        "decode_steps": 2,
+        "amplitude_policy": "PCM16_DIV_32768_NO_AGC_NO_TRIMMING_NO_DENOISING",
+        "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+        "num_threads": 2,
+        "compute_ms": 58.04150000039954,
+        "queue_ms": 0.262100002146326,
+        "ready_ms": 58.30610000703018,
+        "audible_ms": null,
+        "memory": {
+          "current_rss_bytes": 136097792,
+          "peak_rss_bytes": 136097792,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        },
+        "session_id": "silence",
+        "epoch": 0
+      }
+    },
+    {
+      "input_kind": "SYNTHETIC_BOUNDARY_NOT_SPEECH_QUALITY",
+      "case": "short_clip",
+      "response": {
+        "api_version": 1,
+        "request_id": "client-3",
+        "op": "transcribe",
+        "type": "result",
+        "execution_kind": "PC_REAL",
+        "text": "",
+        "confidence": null,
+        "sample_rate": 16000,
+        "frames": 320,
+        "audio_duration_ms": 20.0,
+        "audio_sha256": "0962d112edacc0362e4968df2176b4844ad75894a93b5406f8f0f80788510db1",
+        "silent": false,
+        "clipped_samples": 320,
+        "warnings": [
+          "CLIPPED_INPUT",
+          "VERY_SHORT_INPUT"
+        ],
+        "tail_padding_ms": 660,
+        "decode_steps": 0,
+        "amplitude_policy": "PCM16_DIV_32768_NO_AGC_NO_TRIMMING_NO_DENOISING",
+        "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+        "num_threads": 2,
+        "compute_ms": 7.193500001449138,
+        "queue_ms": 0.26139999681618065,
+        "ready_ms": 7.455800005118363,
+        "audible_ms": null,
+        "memory": {
+          "current_rss_bytes": 136138752,
+          "peak_rss_bytes": 146587648,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        },
+        "session_id": "short_clip",
+        "epoch": 0
+      }
+    },
+    {
+      "input_kind": "SYNTHETIC_BOUNDARY_NOT_SPEECH_QUALITY",
+      "case": "clipped",
+      "response": {
+        "api_version": 1,
+        "request_id": "client-4",
+        "op": "transcribe",
+        "type": "result",
+        "execution_kind": "PC_REAL",
+        "text": "",
+        "confidence": null,
+        "sample_rate": 16000,
+        "frames": 16000,
+        "audio_duration_ms": 1000.0,
+        "audio_sha256": "96160c427ceed74b64039fe846741215b0f160d8641d143b4dbf13393ce67540",
+        "silent": false,
+        "clipped_samples": 16000,
+        "warnings": [
+          "CLIPPED_INPUT"
+        ],
+        "tail_padding_ms": 660,
+        "decode_steps": 2,
+        "amplitude_policy": "PCM16_DIV_32768_NO_AGC_NO_TRIMMING_NO_DENOISING",
+        "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+        "num_threads": 2,
+        "compute_ms": 52.357700013089925,
+        "queue_ms": 0.2049999893642962,
+        "ready_ms": 52.56469998857938,
+        "audible_ms": null,
+        "memory": {
+          "current_rss_bytes": 136187904,
+          "peak_rss_bytes": 146632704,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        },
+        "session_id": "clipped",
+        "epoch": 0
+      }
+    }
+  ]
+}

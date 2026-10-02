@@ -1,0 +1,76 @@
+{
+  "status": "PC_STREAMING_ENGINEERING_MEASURED",
+  "summaries": {
+    "unpaced": {
+      "runs": 42,
+      "successes": 42,
+      "failures": 0,
+      "same_as_c01": 42,
+      "rtf": {
+        "count": 42,
+        "p50": 0.0406366792966856,
+        "p95": 0.05691572487298966,
+        "max": 0.0642093583313302
+      },
+      "finish_to_final_ms": {
+        "count": 42,
+        "p50": 27.002149996405933,
+        "p95": 54.57549000057041,
+        "max": 97.5140999944415
+      },
+      "chunk_ack_ms": {
+        "count": 2889,
+        "p50": 8.295200008433312,
+        "p95": 38.39322000567335,
+        "max": 97.46400000585709
+      },
+      "peak_rss_bytes": 162684928,
+      "total_pcm_chunks": 2889,
+      "partial_events": 597,
+      "max_send_lag_ms": null,
+      "native_endpoint_before_input_end": 24,
+      "final_quality_acceptance": false,
+      "student_cer": null,
+      "microphone": false
+    },
+    "paced": {
+      "runs": 14,
+      "successes": 14,
+      "failures": 0,
+      "same_as_c01": 14,
+      "rtf": {
+        "count": 14,
+        "p50": 0.051760750548153,
+        "p95": 0.07589450228992166,
+        "max": 0.07848772916683326
+      },
+      "finish_to_final_ms": {
+        "count": 14,
+        "p50": 31.628049997380003,
+        "p95": 151.1598899938689,
+        "max": 326.3085000071442
+      },
+      "chunk_ack_ms": {
+        "count": 963,
+        "p50": 9.831000003032386,
+        "p95": 45.05258000426693,
+        "max": 450.8446000108961
+      },
+      "peak_rss_bytes": 146087936,
+      "total_pcm_chunks": 963,
+      "partial_events": 199,
+      "max_send_lag_ms": 252.6578000106383,
+      "native_endpoint_before_input_end": 8,
+      "final_quality_acceptance": false,
+      "student_cer": null,
+      "microphone": false
+    }
+  },
+  "total_runs": 56,
+  "endpoint_policy": "EARLY_ADVICE_NEVER_FINALIZES_OR_DISCARDS_INPUT",
+  "physical_audio_devices": "NOT_OPENED",
+  "human_speech_end_labels": null,
+  "actual_audible_latency": null,
+  "board": "NOT_TESTED",
+  "license": "REVIEW_PENDING"
+}

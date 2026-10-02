@@ -1,0 +1,212 @@
+{
+  "hello": {
+    "api_version": 1,
+    "request_id": "client-1",
+    "op": "hello",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "module_id": "voice_C_c02_tts",
+    "version": "0.3.0-tts",
+    "models": [
+      {
+        "model_id": "csukuangfj/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+        "revision": "a5f60fe00dcfbaf68fcc1c6b5cf53061e144d6da",
+        "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+        "tokens_sha256": "6fed8c6c248516f38e7faa19404b57413e8ce259f1cbc1fa4aebc86eac32fdfd",
+        "dependencies": {
+          "sherpa-onnx": "1.13.8",
+          "sherpa-onnx-core": "1.13.8",
+          "numpy": "2.5.3"
+        },
+        "config": {
+          "api_version": 1,
+          "num_threads": 2,
+          "provider": "cpu",
+          "decoding_method": "greedy_search",
+          "tail_padding_ms": 660
+        },
+        "decoder_bias": "NONE",
+        "hotwords_configured": false,
+        "hotwords_factory_parameter_supported": false,
+        "underlying_model_streaming": true,
+        "public_streaming_ops": false,
+        "upstream_declared_license": "apache-2.0",
+        "onnx_license_status": "REVIEW_PENDING",
+        "redistribution": "PENDING_NOT_APPROVED",
+        "load_ms": 1115.2641999942716,
+        "memory_after_load": {
+          "current_rss_bytes": 122327040,
+          "peak_rss_bytes": 122327040,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        }
+      },
+      {
+        "model_id": "csukuangfj/matcha-icefall-zh-baker",
+        "revision": "75e64a57a80fb370abb18a4e4d86bb090ed46e93",
+        "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+        "vocoder_sha256": "0574a135aa1db2de6e181050db2ec528496cacd4a4701fc5d7faf9f9804c0081",
+        "dependencies": {
+          "sherpa-onnx": "1.13.8",
+          "sherpa-onnx-core": "1.13.8",
+          "numpy": "2.5.3"
+        },
+        "config": {
+          "api_version": 1,
+          "provider": "cpu",
+          "speed": 1.0,
+          "noise_scale": 1.0,
+          "length_scale": 1.0,
+          "silence_scale": 1.0,
+          "num_threads": 1,
+          "max_num_sentences": 1
+        },
+        "native_sample_rate": 22050,
+        "weight_license": "REVIEW_PENDING",
+        "training_data_restriction": "NON_COMMERCIAL_ONLY_PER_MODEL_CARD",
+        "cache_policy": "MODEL_RESIDENCY_ONLY_NO_WAVEFORM_CACHE",
+        "text_policy": "UNCHANGED_INPUT_NATIVE_FST_FRONTEND",
+        "generation_config": {
+          "sid": 0,
+          "speed": 1.0,
+          "silence_scale": 1.0,
+          "api": "EXPLICIT_GENERATION_CONFIG"
+        },
+        "max_text_characters": 160,
+        "cancellation": "NATIVE_BATCH_BOUNDARIES_AND_DISCARD_AFTER_RETURN",
+        "load_ms": 2155.5063999985578,
+        "memory_after_load": {
+          "current_rss_bytes": 276488192,
+          "peak_rss_bytes": 276488192,
+          "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+          "memory_method": "Windows GetProcessMemoryInfo"
+        }
+      }
+    ],
+    "licenses": [
+      {
+        "upstream": "apache-2.0",
+        "onnx": "REVIEW_PENDING"
+      },
+      {
+        "weights": "REVIEW_PENDING",
+        "training_data": "NON_COMMERCIAL_ONLY"
+      }
+    ],
+    "mandatory_ops": [
+      "hello",
+      "transcribe",
+      "synthesize",
+      "cancel",
+      "reset",
+      "shutdown"
+    ],
+    "capabilities": {
+      "streaming_asr": false,
+      "real_asr": true,
+      "real_tts": true,
+      "contract_test_tone": false
+    },
+    "optional_ops": [],
+    "scheduling": "ONE_NATIVE_TASK; ACTIVE_STREAM_EXCLUDES_TTS_AND_TRANSCRIBE",
+    "sample_rates": [
+      16000,
+      22050
+    ],
+    "concurrency_limit": 1,
+    "queued_limit": 2,
+    "confidence": null,
+    "memory": {
+      "current_rss_bytes": 276520960,
+      "peak_rss_bytes": 276520960,
+      "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+      "memory_method": "Windows GetProcessMemoryInfo"
+    }
+  },
+  "asr": {
+    "api_version": 1,
+    "request_id": "client-2",
+    "op": "transcribe",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "text": "据警方成撞倒摄影师的汽车司机未必密会面临形式指控",
+    "confidence": null,
+    "sample_rate": 16000,
+    "frames": 247040,
+    "audio_duration_ms": 15440.0,
+    "audio_sha256": "cb152454844aee49346c82c00da421361a0184b1fc6c6cdaa3380c0144d99d20",
+    "silent": false,
+    "clipped_samples": 1,
+    "warnings": [
+      "CLIPPED_INPUT"
+    ],
+    "tail_padding_ms": 660,
+    "decode_steps": 24,
+    "amplitude_policy": "PCM16_DIV_32768_NO_AGC_NO_TRIMMING_NO_DENOISING",
+    "model_sha256": "68c9c943840f7d9cf3e8a4970ba50f404feb5277f611fa82b7e72267786fa84a",
+    "num_threads": 2,
+    "compute_ms": 620.5576999927871,
+    "queue_ms": 0.12419999984558672,
+    "ready_ms": 620.6852000032086,
+    "audible_ms": null,
+    "memory": {
+      "current_rss_bytes": 295010304,
+      "peak_rss_bytes": 295010304,
+      "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+      "memory_method": "Windows GetProcessMemoryInfo"
+    },
+    "session_id": "s",
+    "epoch": 0
+  },
+  "tts": {
+    "api_version": 1,
+    "request_id": "client-3",
+    "op": "synthesize",
+    "type": "result",
+    "execution_kind": "PC_REAL",
+    "sample_rate": 22050,
+    "frames": 43776,
+    "audio_duration_ms": 1985.3061224489797,
+    "audio_sha256": "ada4b0ee8edf19349a735ec2d6bad37ad6a8df490481697af2d00554a4a77fac",
+    "silent": false,
+    "clipped_samples": 0,
+    "float_out_of_range_samples": 0,
+    "amplitude_policy": "FIXED_GAIN_1_ROUND_TIES_EVEN_CLAMP_PCM16_NO_AGC_NO_TRIM",
+    "peak_abs_float": 0.37463080883026123,
+    "rms_float": 0.06641413164876653,
+    "text_sha256": "efc474143159546afed03bc269bd16cd865e99701630264e0983ad233a2bdf16",
+    "output_kind": "SYNTHESIZED_SPEECH",
+    "speech_quality": "HUMAN_REVIEW_PENDING",
+    "native_callbacks": [
+      {
+        "elapsed_ms": 304.57469999964815,
+        "frames": 43776,
+        "progress": 1.0
+      }
+    ],
+    "first_internal_chunk_ms": 304.57469999964815,
+    "internal_chunk_is_client_ready": false,
+    "first_sentence_ready_ms": null,
+    "model_sha256": "ef7ebdf5987e16a5836136a51d6f3560ca997ffd33d06a40daab5af92b4b86e5",
+    "num_threads": 1,
+    "speed": 1.0,
+    "cache_hit": false,
+    "waveform_cache": "DISABLED",
+    "wav_path": "s/out/8acf6c55e9934d1e9ab2eb999e2533b1.wav",
+    "compute_ms": 324.74710000678897,
+    "queue_ms": 0.1336999994236976,
+    "ready_ms": 324.88410000223666,
+    "audible_ms": null,
+    "memory": {
+      "current_rss_bytes": 303693824,
+      "peak_rss_bytes": 314155008,
+      "memory_scope": "WORKER_PROCESS_LIFETIME_PEAK",
+      "memory_method": "Windows GetProcessMemoryInfo"
+    },
+    "session_id": "s",
+    "epoch": 0
+  },
+  "original_c01_transcript": "据警方成撞倒摄影师的汽车司机未必密会面临形式指控",
+  "original_audio_sha256": "cb152454844aee49346c82c00da421361a0184b1fc6c6cdaa3380c0144d99d20",
+  "old_transcript_preserved": true
+}

@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1527, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c02_assets.py", line 74, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c02_assets.py", line 45, in main
+    files.append(acquire(f'https://huggingface.co/{REPO}/resolve/{REVISION}/{name}',OUT/'matcha-icefall-zh-baker'/name,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c02_assets.py", line 24, in acquire
+    with open_url(url) as response,temporary.open('wb') as target:
+         ^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\voice_C\tools\acquire_c02_assets.py", line 17, in open_url
+    return urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'voice-C-C02-public-assets'}),timeout=40)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>

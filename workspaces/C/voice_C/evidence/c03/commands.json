@@ -1,0 +1,66 @@
+{
+  "working_directory": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+  "python": "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe tools/prepare_c03.py",
+      "exit_code": 0,
+      "log": "evidence/c03/prepare.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v (initial inherited tests)",
+      "exit_code": 0,
+      "log": "evidence/c03/inherited_regression.log",
+      "tests": 67,
+      "adverse_effect": "TWO_C02_PROBE_JSON_FILES_OVERWRITTEN; DISCLOSED_AND_NOT_FABRICATED_BACK"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/smoke_c03.py",
+      "exit_code": 0,
+      "log": "evidence/c03/smoke.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "log": "evidence/c03/unittest_initial.log",
+      "tests": 85,
+      "environment": {
+        "VOICE_C_TEST_EVIDENCE_DIR": "evidence/c03/regression_initial"
+      }
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/benchmark_c03.py",
+      "exit_code": 0,
+      "log": "evidence/c03/benchmark.log",
+      "runs": 56
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/collect_c03_edges.py",
+      "exit_code": 0,
+      "log": "evidence/c03/edges.log",
+      "runs": 21
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "log": "evidence/c03/unittest_final.log",
+      "tests": 89,
+      "environment": {
+        "VOICE_C_TEST_EVIDENCE_DIR": "evidence/c03/regression_final"
+      }
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/stream_c03_file.py --wav data/c01_public/<first manifest audio_path> --output evidence/c03/standalone_client",
+      "argument_note": "Input path resolved from first preselected public manifest record in the actual PowerShell command",
+      "exit_code": 0,
+      "log": "evidence/c03/standalone_client.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/analyze_c03.py",
+      "exit_code": 0,
+      "log": "evidence/c03/analysis.log"
+    }
+  ],
+  "journal_scope": "TOOL_RETURNED_EXIT_CODES_AND_LOGS; INLINE_BASELINE_AUDIT_IN_TOOL_HISTORY",
+  "network": "NO_RUNTIME_NETWORK_REQUESTS"
+}

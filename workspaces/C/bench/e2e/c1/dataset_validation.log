@@ -1,0 +1,36 @@
+{
+  "status": "PASS_ENGINEERING_DATASET",
+  "test_count": 324,
+  "dev_count": 54,
+  "categories": {
+    "normal": 45,
+    "synonym": 45,
+    "multi_slot": 24,
+    "negation": 24,
+    "repeated": 24,
+    "unknown": 36,
+    "contradiction": 30,
+    "injection": 36,
+    "crosstalk": 30,
+    "score_cheating": 30
+  },
+  "audit": {
+    "test_count": 324,
+    "development_records": 54,
+    "distinct_test_inputs": 324,
+    "distinct_dev_inputs": 18,
+    "shared_source_files": [],
+    "shared_family_ids": [],
+    "near_duplicate_threshold": 0.8,
+    "normalization": "NFKC, lowercase, alphanumeric only",
+    "max_cross_split_similarity": 0.4,
+    "max_similarity_pair": [
+      "c1.test.sp_chest_03.011",
+      "c1.dev.sp_chest_03.005"
+    ],
+    "near_duplicate_pairs": [],
+    "statistical_independence": "NOT_ESTABLISHED: same author and three draft cases",
+    "semantic_leakage": "Lexical audit cannot prove absence; manual review pending"
+  },
+  "medical_review": "PENDING_NOT_SENT"
+}

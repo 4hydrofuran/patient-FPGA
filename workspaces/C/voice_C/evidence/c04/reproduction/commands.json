@@ -1,0 +1,36 @@
+[
+  {
+    "name": "static",
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_source\\tools\\verify_bundle.py",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_source",
+      "--contract",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_source\\contracts\\contract_lock.json"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "installation",
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_source\\tools\\install_candidate.py",
+      "--target-runtime",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_runtime"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "name": "contract",
+    "argv": [
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_runtime\\.venv\\Scripts\\python.exe",
+      "C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\independent_runtime\\bin\\selftest.py",
+      "--output",
+      "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\evidence\\c04\\reproduction\\contract_results"
+    ],
+    "exit_code": 1,
+    "expected_exit": 0
+  }
+]

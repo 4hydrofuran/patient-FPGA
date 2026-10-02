@@ -1,0 +1,168 @@
+{
+  "execution_kind": "PC_REAL",
+  "input_kind": "LICENSED_PUBLIC_RESTORED_SPEECH",
+  "synthetic_fixtures": 0,
+  "own_student_recordings": 0,
+  "models_compared": 1,
+  "threads_compared": [
+    1,
+    2,
+    4
+  ],
+  "runs_per_thread": 42,
+  "summaries": {
+    "1": {
+      "runs": 42,
+      "successes": 42,
+      "failures": 0,
+      "compute_ms_p50": 759.1813999970327,
+      "compute_ms_p95": 1394.724309998855,
+      "client_elapsed_ms_p95": 1404.0777699992755,
+      "rtf_p50": 0.06209890746497113,
+      "rtf_p95": 0.07718351609599186,
+      "peak_rss_bytes": 153706496,
+      "observed_public_slice_cer": 0.24422442244224424,
+      "reference_chars": 606,
+      "errors": 148,
+      "quality_distinct_audio_count": 14,
+      "key_items": {
+        "time": {
+          "items": 2,
+          "failed": 0
+        },
+        "number": {
+          "items": 8,
+          "failed": 8
+        },
+        "frequency": {
+          "items": 2,
+          "failed": 0
+        },
+        "medical_term": {
+          "items": 2,
+          "failed": 0
+        },
+        "negation": {
+          "items": 4,
+          "failed": 0
+        },
+        "symptom": {
+          "items": 2,
+          "failed": 0
+        }
+      },
+      "per_repeat_text_stable": true,
+      "failure_policy": "ALL_RUNS_RETAINED; CER_REPORTED_FOR_FIRST_REPEAT_SUCCESSFUL_AUDIO_WITH_COVERAGE",
+      "student_cer": null,
+      "human_semantic_critical_item_review": "PENDING",
+      "scope": "PRESELECTED_PUBLISHED_DEV_TRANSCRIPTS_NOT_LOCALLY_HUMAN_VERIFIED"
+    },
+    "2": {
+      "runs": 42,
+      "successes": 42,
+      "failures": 0,
+      "compute_ms_p50": 591.9871500009322,
+      "compute_ms_p95": 1145.0329550068998,
+      "client_elapsed_ms_p95": 1152.5514900000414,
+      "rtf_p50": 0.04642919008089431,
+      "rtf_p95": 0.058752419063535996,
+      "peak_rss_bytes": 153464832,
+      "observed_public_slice_cer": 0.24422442244224424,
+      "reference_chars": 606,
+      "errors": 148,
+      "quality_distinct_audio_count": 14,
+      "key_items": {
+        "time": {
+          "items": 2,
+          "failed": 0
+        },
+        "number": {
+          "items": 8,
+          "failed": 8
+        },
+        "frequency": {
+          "items": 2,
+          "failed": 0
+        },
+        "medical_term": {
+          "items": 2,
+          "failed": 0
+        },
+        "negation": {
+          "items": 4,
+          "failed": 0
+        },
+        "symptom": {
+          "items": 2,
+          "failed": 0
+        }
+      },
+      "per_repeat_text_stable": true,
+      "failure_policy": "ALL_RUNS_RETAINED; CER_REPORTED_FOR_FIRST_REPEAT_SUCCESSFUL_AUDIO_WITH_COVERAGE",
+      "student_cer": null,
+      "human_semantic_critical_item_review": "PENDING",
+      "scope": "PRESELECTED_PUBLISHED_DEV_TRANSCRIPTS_NOT_LOCALLY_HUMAN_VERIFIED"
+    },
+    "4": {
+      "runs": 42,
+      "successes": 42,
+      "failures": 0,
+      "compute_ms_p50": 822.0719000019017,
+      "compute_ms_p95": 1619.4574099892627,
+      "client_elapsed_ms_p95": 1626.2746349966612,
+      "rtf_p50": 0.06677576106604428,
+      "rtf_p95": 0.09020004824965713,
+      "peak_rss_bytes": 153858048,
+      "observed_public_slice_cer": 0.24422442244224424,
+      "reference_chars": 606,
+      "errors": 148,
+      "quality_distinct_audio_count": 14,
+      "key_items": {
+        "time": {
+          "items": 2,
+          "failed": 0
+        },
+        "number": {
+          "items": 8,
+          "failed": 8
+        },
+        "frequency": {
+          "items": 2,
+          "failed": 0
+        },
+        "medical_term": {
+          "items": 2,
+          "failed": 0
+        },
+        "negation": {
+          "items": 4,
+          "failed": 0
+        },
+        "symptom": {
+          "items": 2,
+          "failed": 0
+        }
+      },
+      "per_repeat_text_stable": true,
+      "failure_policy": "ALL_RUNS_RETAINED; CER_REPORTED_FOR_FIRST_REPEAT_SUCCESSFUL_AUDIO_WITH_COVERAGE",
+      "student_cer": null,
+      "human_semantic_critical_item_review": "PENDING",
+      "scope": "PRESELECTED_PUBLISHED_DEV_TRANSCRIPTS_NOT_LOCALLY_HUMAN_VERIFIED"
+    }
+  },
+  "identical_transcripts_across_threads": true,
+  "selected_pc_threads": 2,
+  "selection_scope": "LOCAL_PC_DEVELOPMENT_PROVISIONAL_NOT_A53_OR_FINAL_QUALITY_ACCEPTANCE",
+  "student_quality": "NOT_TESTED",
+  "student_cer": null,
+  "board": "NOT_TESTED",
+  "onnx_export_license": "REVIEW_PENDING",
+  "model_acceptance": "NOT_GRANTED_BY_THIS_BENCHMARK",
+  "limitations": [
+    "Small preselected dev slice; no full dataset score",
+    "Published transcripts not locally human verified; no medical semantic review",
+    "Sequential thread blocks, shared host CPU and three repeats; exploratory PC timing only",
+    "No student speakers/clinical conversation/noise/final test; own C00 plan remains uncollected",
+    "No inverse text normalization: Arabic and Chinese numerals count as literal differences"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_WITH_SKIPPED_TEST",
+  "tests_run": 35,
+  "passed": 34,
+  "skipped": 1,
+  "failed": 0,
+  "exit_code": 0,
+  "skip": "Windows symlink creation lacked privilege, WinError 1314.",
+  "source": "First direct unittest command output in this chat; raw output was not saved to a file.",
+  "resolution": "Replaced Windows fixture with native NTFS junction fallback; subsequent actual run passed 35/35 with no skips."
+}

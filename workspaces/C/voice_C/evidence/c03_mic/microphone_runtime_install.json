@@ -1,0 +1,67 @@
+{
+  "target": "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv_mic",
+  "wheels": [
+    {
+      "path": "assets/wheels/numpy-2.5.3-cp312-cp312-win_amd64.whl",
+      "bytes": 12567828,
+      "sha256": "0a59a421a32580a009e8a1751345bf829631b990dc1794b80514ab722b435def"
+    },
+    {
+      "path": "assets/wheels/sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl",
+      "bytes": 2287856,
+      "sha256": "566e49ad3fb2aa8ceb723a52f9809aa6c2ee0a5eb3b0946c3fd2374af807a5c6"
+    },
+    {
+      "path": "assets/wheels/sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl",
+      "bytes": 16903581,
+      "sha256": "5579e80196d516e6dae23c8f629292ce3142ab8869925d32b94612fd86f93733"
+    }
+  ],
+  "network": false,
+  "original_venv_modified": false,
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "venv",
+        "--without-pip",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv_mic"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\quq\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--no-index",
+        "--find-links",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\assets\\wheels",
+        "--require-hashes",
+        "--no-compile",
+        "--target",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv_mic\\Lib\\site-packages",
+        "-r",
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\requirements-c01.lock.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "Looking in links: c:\\vivado\\KV260\\workspaces\\C\\voice_C\\assets\\wheels\nProcessing .\\assets\\wheels\\numpy-2.5.3-cp312-cp312-win_amd64.whl (from -r C:\\vivado\\KV260\\workspaces\\C\\voice_C\\requirements-c01.lock.txt (line 2))\nProcessing .\\assets\\wheels\\sherpa_onnx-1.13.8-cp312-cp312-win_amd64.whl (from -r C:\\vivado\\KV260\\workspaces\\C\\voice_C\\requirements-c01.lock.txt (line 3))\nProcessing .\\assets\\wheels\\sherpa_onnx_core-1.13.8-py3-none-win_amd64.whl (from -r C:\\vivado\\KV260\\workspaces\\C\\voice_C\\requirements-c01.lock.txt (line 4))\nInstalling collected packages: sherpa-onnx-core, sherpa-onnx, numpy\n\nSuccessfully installed numpy-2.5.3 sherpa-onnx-1.13.8 sherpa-onnx-core-1.13.8\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv_mic\\Scripts\\python.exe",
+        "-c",
+        "import importlib.metadata as m; import numpy,sherpa_onnx; print({k:m.version(k) for k in ('numpy','sherpa-onnx','sherpa-onnx-core')})"
+      ],
+      "exit_code": 0,
+      "stdout": "{'numpy': '2.5.3', 'sherpa-onnx': '1.13.8', 'sherpa-onnx-core': '1.13.8'}\n",
+      "stderr": ""
+    }
+  ]
+}

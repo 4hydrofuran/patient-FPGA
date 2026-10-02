@@ -1,0 +1,178 @@
+{
+  "adoption_date_beijing": "2026-10-02",
+  "recorded_at_utc": "2026-10-02T06:42:28.955641+00:00",
+  "source": "C:\\vivado\\KV260\\KV260_Qwen35_C_任务包",
+  "local_guidance": "C:\\vivado\\KV260\\workspaces\\C\\docs\\plan_qwen35",
+  "authorization": "User requested this package to replace current task guidance and requested differences against completed work.",
+  "scope": "Read and adopt guidance; compare historical C0/C1. C00 implementation not executed.",
+  "package_declared_files_checked": 30,
+  "package_files_copied": 31,
+  "source_package_sha256": "904f7e397ba3b1e85afc750c740c5997e843ef5fef91e4d057c125057ef565e6",
+  "source_files_unchanged": true,
+  "copy_byte_identical": true,
+  "historical_c1_artifacts_verified_before_status_update": 48,
+  "previous_C_status_sha256": "a932dd57382a8839cd9ddd15e32d1103a814bbb7293b6194c5c898bea8f0f0cd",
+  "historical_log_policy": "C0/C1 handoffs, frozen inputs, logs and manifests preserved; docs/status/C.md is a living status file, will intentionally change on guidance adoption.",
+  "new_model_runtime_status": "NOT_TESTED",
+  "new_voice_module_status": "NOT_IMPLEMENTED",
+  "codex_selection_actual": "NOT_VERIFIED",
+  "source_commit": null,
+  "board_available": null,
+  "files": [
+    {
+      "path": "00_从这里开始.md",
+      "sha256": "861c615db618d2fcc946027ee4e3c1e1ff507233dcd77fae46d2f6bacccce07d",
+      "bytes": 1108
+    },
+    {
+      "path": "01_完整方案.md",
+      "sha256": "fc8b994500dccc011ad0f1078f8eed7ed415441e1f3aed3629ce9163226e7708",
+      "bytes": 10849
+    },
+    {
+      "path": "02_公共接口与替换规则.md",
+      "sha256": "88e3a6a201a5d58824812acf486846e8dc6cc63e1baca1f72300e1647be98f53",
+      "bytes": 9927
+    },
+    {
+      "path": "05_C_离线语音优化_阶段提示词.md",
+      "sha256": "fe843e753e74637fc765ff8e13a95aa6da002d6f47fb29c1997f98519f32d643",
+      "bytes": 15566
+    },
+    {
+      "path": "06_总控_恢复_验收提示词.md",
+      "sha256": "1386ed97812869e39b5e450420d914906bd5d647357b41d0b0394c3b245eb8bd",
+      "bytes": 4986
+    },
+    {
+      "path": "07_日历与验收指标.md",
+      "sha256": "d4513892f5eaec32692e0ae9928cbb1e2764c2479eac474a7882b706b8d578bc",
+      "bytes": 5317
+    },
+    {
+      "path": "08_来源与已完成工作边界.md",
+      "sha256": "88b5eb30493d4f13de36188aea119a00103430ecb389b355e417c6363c9ed25f",
+      "bytes": 3865
+    },
+    {
+      "path": "09_候选接收操作.md",
+      "sha256": "7151dc72b30fb8fa1960c48c43b53f0499d8706c2f4653f8c62512aeb346f083",
+      "bytes": 1601
+    },
+    {
+      "path": "10_本包校验说明.md",
+      "sha256": "78006c567d4d0ca911818709c7c7ff85f30727c24331f3dc3025cf059a8e3abb",
+      "bytes": 722
+    },
+    {
+      "path": "PACKAGE_SHA256.json",
+      "sha256": "904f7e397ba3b1e85afc750c740c5997e843ef5fef91e4d057c125057ef565e6",
+      "bytes": 3019
+    },
+    {
+      "path": "contracts/contract_lock.json",
+      "sha256": "247b84c4304f6719539b668b9ea3843087f8ebda2609697ba55220f0c293de3d",
+      "bytes": 601
+    },
+    {
+      "path": "contracts/quant_v1.json",
+      "sha256": "890297e8bca2eeb5b9579ca7e7dc8a6b3126eb98a7dd0474ee1c5fe46dabeb25",
+      "bytes": 1142
+    },
+    {
+      "path": "contracts/sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "path": "contracts/voice_examples.jsonl",
+      "sha256": "55590befbeca0aa89402113ed72bdf88f7fc6b8e8ac115e1d6bbad4360dc61a2",
+      "bytes": 383
+    },
+    {
+      "path": "contracts/voice_v1.json",
+      "sha256": "0ba9699bbf738baf940adf56d202c503ed6343390aaf9086ba1a644b76e6910a",
+      "bytes": 982
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "0d08e67d8272af7c30c60396055a36d49a4f9be830b01d7972a24343059a112a",
+      "bytes": 412
+    },
+    {
+      "path": "fixtures/expected_y.bin",
+      "sha256": "55e1e904ba385f8a00fb979c4c57891044535d6b0abb371dc9137dad694887f1",
+      "bytes": 128
+    },
+    {
+      "path": "fixtures/hand_sample.json",
+      "sha256": "12ae39dcfb0d15e22830f328034472173c6c923c02dd0baa39a03316eea9c381",
+      "bytes": 784
+    },
+    {
+      "path": "fixtures/sw.bin",
+      "sha256": "b638277a8690e175a9137feff1e43c067f9faf4e2f600caf468fb05b0403b717",
+      "bytes": 128
+    },
+    {
+      "path": "fixtures/sx.bin",
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "bytes": 4
+    },
+    {
+      "path": "fixtures/w_packed.bin",
+      "sha256": "96f4bf8cf92edf739053a4fc41488ace10d706ec8ad5a3cabc8926ab5fa7de7b",
+      "bytes": 2048
+    },
+    {
+      "path": "fixtures/xq.bin",
+      "sha256": "9ac2c7a9745a8f96952636958a215f8a2b54a8ec5035c0a631cc3e586f0024e3",
+      "bytes": 128
+    },
+    {
+      "path": "templates/AGENTS_共同规则.md",
+      "sha256": "e47e244e26169ae994b2e6319318f816c3615cbf5583ba96a675f3c96906d85a",
+      "bytes": 1490
+    },
+    {
+      "path": "templates/BUNDLE_MANIFEST.example.json",
+      "sha256": "b383125bce3802db39e82b2ec47eac4dcb1ecb74efe09f7eb6244ec78b0bc9a3",
+      "bytes": 937
+    },
+    {
+      "path": "templates/ONE_PAGE_SUMMARY.example.json",
+      "sha256": "e541621802f76e4d371036d66783b327c170059a37c5846bdcedc1586ecbbe8a",
+      "bytes": 287
+    },
+    {
+      "path": "templates/PROJECT_STATUS.example.json",
+      "sha256": "795d7c1fb62863ae13f605b740fb8415dae56074dc52c4843502006380a6f422",
+      "bytes": 610
+    },
+    {
+      "path": "templates/selection.example.json",
+      "sha256": "d50e42b24d6789adecfce232fb28ea711b4077328743e2fd8bda998a2912c7de",
+      "bytes": 479
+    },
+    {
+      "path": "templates/stages_plan.json",
+      "sha256": "227b6703bee564c0c85ed1d0cbab813cdb3b13d95b7fa554d1e658881d554715",
+      "bytes": 10352
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "sha256": "a7c71eb63789bbc3fe911095fd3780cacb54308caaf87f2ba489a8bd4b35bccd",
+      "bytes": 1345
+    },
+    {
+      "path": "tests/test_verify_bundle.py",
+      "sha256": "e1758c3a7ed098109f12006b124bae14eb371e7f2ca3997a3e6d1aa26ff6ed21",
+      "bytes": 2389
+    },
+    {
+      "path": "tools/verify_bundle.py",
+      "sha256": "74460844d7e18d2507786e00fc9f24b5f37ac8a2b0ccacd05f94290a4c318565",
+      "bytes": 6115
+    }
+  ]
+}

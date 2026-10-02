@@ -1,0 +1,1071 @@
+{
+  "execution_kind": "PC_REAL",
+  "input_kind": "LICENSED_PUBLIC_RESTORED_SPEECH",
+  "student_quality": "NOT_TESTED",
+  "student_cer": null,
+  "observed_public_slice_cer": 0.24422442244224424,
+  "reference_chars": 606,
+  "errors": 148,
+  "distinct_audio": 14,
+  "distinct_texts": 12,
+  "key_items": {
+    "time": {
+      "items": 2,
+      "failed": 0
+    },
+    "number": {
+      "items": 8,
+      "failed": 8
+    },
+    "frequency": {
+      "items": 2,
+      "failed": 0
+    },
+    "medical_term": {
+      "items": 2,
+      "failed": 0
+    },
+    "negation": {
+      "items": 4,
+      "failed": 0
+    },
+    "symptom": {
+      "items": 2,
+      "failed": 0
+    }
+  },
+  "numeric_annotations": [
+    {
+      "recording_id": "c01.public.008",
+      "reference_numeral": "12",
+      "chinese_representation_observation": "十二",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.004",
+      "reference_numeral": "116",
+      "chinese_representation_observation": "一百一十六",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.004",
+      "reference_numeral": "36",
+      "chinese_representation_observation": "三十六",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_numeral": "1978",
+      "chinese_representation_observation": "一九七八",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_numeral": "20",
+      "chinese_representation_observation": "二十",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_numeral": "70",
+      "chinese_representation_observation": "七十",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 1,
+      "observed_chinese_spelling_occurrences": 1,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_numeral": "1979",
+      "chinese_representation_observation": "一九七九",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 2,
+      "observed_chinese_spelling_occurrences": 2,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_numeral": "1979",
+      "chinese_representation_observation": "一九七九",
+      "spelling_present_in_actual_hypothesis": true,
+      "reference_occurrences": 2,
+      "observed_chinese_spelling_occurrences": 2,
+      "status": "ENGINEERING_TEXT_OBSERVATION_NOT_AUDIO_HUMAN_VERIFICATION",
+      "effect_on_primary_cer": "NONE"
+    }
+  ],
+  "details": [
+    {
+      "recording_id": "c01.public.005",
+      "reference_text": "这是马特利 (Martelly) 四年来第五次入选海地临时选举委员会 (CEP)。",
+      "hypothesis": "这是玛特利四年来第五次入选还第临时选举委员会<unk>",
+      "cer": {
+        "reference_chars": 33,
+        "substitutions": 6,
+        "deletions": 8,
+        "insertions": 2,
+        "errors": 16,
+        "cer": 0.48484848484848486
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "time",
+            "text_sha256": "57f5281cbbe04a45fc30b89b058adaed81daa9db45798c427af740a3c8d05d43",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "马",
+          "hypothesis": "玛"
+        },
+        {
+          "op": "delete",
+          "reference": " (Martelly) ",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "海地",
+          "hypothesis": "还第"
+        },
+        {
+          "op": "replace",
+          "reference": " (CEP)。",
+          "hypothesis": "<unk>"
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.014",
+      "reference_text": "她之所以得出这个结论，是因为有许多男女个人发给她积极评价和鼓励，竭力主张将避孕药视为医疗必需品。",
+      "hypothesis": "他之所以得出这个结论是因为有许多男女个人发给他积极评价和鼓励竭力主张将病药列为医疗必需品",
+      "cer": {
+        "reference_chars": 45,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 0,
+        "errors": 5,
+        "cer": 0.1111111111111111
+      },
+      "key_items": {
+        "items": [],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "她",
+          "hypothesis": "他"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "她",
+          "hypothesis": "他"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "避孕",
+          "hypothesis": "病"
+        },
+        {
+          "op": "replace",
+          "reference": "视",
+          "hypothesis": "列"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.008",
+      "reference_text": "每年规模最大的锦标赛于 12 月份在拉斯卡尼塔斯 (Las Cañitas) 的马球场举行。",
+      "hypothesis": "每年规模最大的锦标赛于十二月份在拉斯卡尼塔斯到马球上举行",
+      "cer": {
+        "reference_chars": 38,
+        "substitutions": 4,
+        "deletions": 10,
+        "insertions": 0,
+        "errors": 14,
+        "cer": 0.3684210526315789
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "number",
+            "text_sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "frequency",
+            "text_sha256": "3fd8936ffb47086a62d576310ea0d9385af1a9cc9c075ddb4ea2749d629278e4",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 1,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": " 12 ",
+          "hypothesis": "十二"
+        },
+        {
+          "op": "replace",
+          "reference": " (Las Cañitas) 的",
+          "hypothesis": "到"
+        },
+        {
+          "op": "replace",
+          "reference": "场",
+          "hypothesis": "上"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [
+        "CLIPPED_INPUT"
+      ],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.012",
+      "reference_text": "这名患者曾去过尼日利亚，当地曾出现数宗埃博拉病毒的病例。",
+      "hypothesis": "证明患者曾去过尼日利亚当地曾出现诉讼拉病毒的病例",
+      "cer": {
+        "reference_chars": 26,
+        "substitutions": 4,
+        "deletions": 2,
+        "insertions": 0,
+        "errors": 6,
+        "cer": 0.23076923076923078
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "medical_term",
+            "text_sha256": "29edd066d17f045b103b8e79dc12a503571b668e0b21f1acbe96079119e409a4",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "这名",
+          "hypothesis": "证明"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "数宗埃博",
+          "hypothesis": "诉讼"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.002",
+      "reference_text": "\"布什政府发言人戈登·约翰德罗 (Gordon Johndroe) 称朝鲜的承诺是\"朝着实现朝鲜半岛可核查的无核化目标迈出的重要一步\"。\"",
+      "hypothesis": "不实政府发言人撈登约翰德罗称朝鲜的承诺是朝着实现朝鲜半岛可核查的无合化目标出的重要一步",
+      "cer": {
+        "reference_chars": 58,
+        "substitutions": 4,
+        "deletions": 15,
+        "insertions": 0,
+        "errors": 19,
+        "cer": 0.3275862068965517
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "negation",
+            "text_sha256": "484d55613910eb8c0917fe308b499d474115ced993cd002a17d7cc75254330a4",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "\"布什",
+          "hypothesis": "不实"
+        },
+        {
+          "op": "replace",
+          "reference": "戈",
+          "hypothesis": "撈"
+        },
+        {
+          "op": "delete",
+          "reference": "·",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": " (Gordon Johndroe) ",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "\"",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "核",
+          "hypothesis": "合"
+        },
+        {
+          "op": "delete",
+          "reference": "迈",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "\"。\"",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.004",
+      "reference_text": "她的第一个项目是障碍滑雪，并在第一回合以“未完成”的成绩结束比赛。该比赛 116 名参赛者中有 36 人取得了相同的成绩。",
+      "hypothesis": "他的第一个项目上海雪并在第一回合以未完成的成结束比赛单比赛一百一十六名参赛者中有三十六人取得了相同的成绩",
+      "cer": {
+        "reference_chars": 52,
+        "substitutions": 9,
+        "deletions": 3,
+        "insertions": 3,
+        "errors": 15,
+        "cer": 0.28846153846153844
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "negation",
+            "text_sha256": "084700c83146761cf759f77400b2f485aa580e189e060c187abe2a121358b429",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          },
+          {
+            "kind": "number",
+            "text_sha256": "e5b861a6d8a966dfca7e7341cd3eb6be9901688d547a72ebed0b1f5e14f3d08d",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "number",
+            "text_sha256": "76a50887d8f1c2e9301755428990ad81479ee21c25b43215cf524541e0503269",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          }
+        ],
+        "failed_items": 2,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "她",
+          "hypothesis": "他"
+        },
+        {
+          "op": "replace",
+          "reference": "是障碍滑",
+          "hypothesis": "上海"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "“",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "”",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "绩",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "。该",
+          "hypothesis": "单"
+        },
+        {
+          "op": "replace",
+          "reference": " 116 ",
+          "hypothesis": "一百一十六"
+        },
+        {
+          "op": "replace",
+          "reference": " 36 ",
+          "hypothesis": "三十六"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [
+        "CLIPPED_INPUT"
+      ],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.003",
+      "reference_text": "身为国家安全顾问，他曾协助卡特处理诸多国际事务，例如 1978 年签署《戴维营协议》；在20 世纪 70 年代末实现美中关系正常化；1979 年导致伊朗人质危机的伊朗革命；1979 年苏联入侵阿富汗。",
+      "hypothesis": "身为国家安全顾问他曾写卡特处理诸多国际事物例如一九七八年签署戴维英协议在二十世纪七十年代末实现美众关系正常化一九七九年导致伊朗人知危机的伊朗革命一九七九年苏联入侵阿富汗",
+      "cer": {
+        "reference_chars": 85,
+        "substitutions": 21,
+        "deletions": 1,
+        "insertions": 0,
+        "errors": 22,
+        "cer": 0.25882352941176473
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "number",
+            "text_sha256": "46635b56d3c7f0b7bb26adae2a1692debbfd145d4a0986a9137fe91e73e70360",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "number",
+            "text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "number",
+            "text_sha256": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a",
+            "expected_count": 1,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "number",
+            "text_sha256": "11d1ff4edd53407199c92b00cbc3abe8c9c5d5bed4414ad07b55c896b0e7a713",
+            "expected_count": 2,
+            "observed_count": 0,
+            "count_preserved": false
+          },
+          {
+            "kind": "number",
+            "text_sha256": "11d1ff4edd53407199c92b00cbc3abe8c9c5d5bed4414ad07b55c896b0e7a713",
+            "expected_count": 2,
+            "observed_count": 0,
+            "count_preserved": false
+          }
+        ],
+        "failed_items": 5,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "协助",
+          "hypothesis": "写"
+        },
+        {
+          "op": "replace",
+          "reference": "务，",
+          "hypothesis": "物"
+        },
+        {
+          "op": "replace",
+          "reference": " 1978 ",
+          "hypothesis": "一九七八"
+        },
+        {
+          "op": "delete",
+          "reference": "《",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "营",
+          "hypothesis": "英"
+        },
+        {
+          "op": "delete",
+          "reference": "》；",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "20 ",
+          "hypothesis": "二十"
+        },
+        {
+          "op": "replace",
+          "reference": " 70 ",
+          "hypothesis": "七十"
+        },
+        {
+          "op": "replace",
+          "reference": "中",
+          "hypothesis": "众"
+        },
+        {
+          "op": "replace",
+          "reference": "；1979 ",
+          "hypothesis": "一九七九"
+        },
+        {
+          "op": "replace",
+          "reference": "质",
+          "hypothesis": "知"
+        },
+        {
+          "op": "replace",
+          "reference": "；1979 ",
+          "hypothesis": "一九七九"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.013",
+      "reference_text": "在布法罗-匹兹堡高速公路上，行车条件最具挑战性的是波特马里恩 (Point Marion) 到费尔蒙特 (Fairmont) 之间的路段，这段路频繁地途径多处偏僻的边远地区。",
+      "hypothesis": "在布法罗彼此堡的高速公路上行车条件最具挑战性呢是波特马里安到菲尔蒙特之间的路段这段路频繁的途经多处偏僻的边缘地区",
+      "cer": {
+        "reference_chars": 75,
+        "substitutions": 10,
+        "deletions": 19,
+        "insertions": 0,
+        "errors": 29,
+        "cer": 0.38666666666666666
+      },
+      "key_items": {
+        "items": [],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "-匹兹",
+          "hypothesis": "彼此"
+        },
+        {
+          "op": "insert",
+          "reference": "",
+          "hypothesis": "的"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "的",
+          "hypothesis": "呢"
+        },
+        {
+          "op": "replace",
+          "reference": "恩 (Point Marion) ",
+          "hypothesis": "安"
+        },
+        {
+          "op": "replace",
+          "reference": "费",
+          "hypothesis": "菲"
+        },
+        {
+          "op": "delete",
+          "reference": " (Fairmont) ",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "地",
+          "hypothesis": "的"
+        },
+        {
+          "op": "replace",
+          "reference": "径",
+          "hypothesis": "经"
+        },
+        {
+          "op": "replace",
+          "reference": "远",
+          "hypothesis": "缘"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.007",
+      "reference_text": "这门课程通常会涵盖在此讨论到的所有问题，经常会以实战经验的方式加以深入。",
+      "hypothesis": "这门课程通常会涵盖再次讨论到的所有问题经常会以实战经验的方式深加以深入",
+      "cer": {
+        "reference_chars": 34,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "errors": 3,
+        "cer": 0.08823529411764706
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "frequency",
+            "text_sha256": "1c49d48df5599c116024f2fe1e086b863500b97dd7118a14c359cc2cf34371a1",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "在此",
+          "hypothesis": "再次"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "insert",
+          "reference": "",
+          "hypothesis": "深"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.001",
+      "reference_text": "据警方称，撞倒摄影师的汽车司机未必会面临刑事指控。",
+      "hypothesis": "据警方成撞倒摄影师的汽车司机未必密会面临形式指控",
+      "cer": {
+        "reference_chars": 23,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 1,
+        "errors": 4,
+        "cer": 0.17391304347826086
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "negation",
+            "text_sha256": "084700c83146761cf759f77400b2f485aa580e189e060c187abe2a121358b429",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "称，",
+          "hypothesis": "成"
+        },
+        {
+          "op": "insert",
+          "reference": "",
+          "hypothesis": "密"
+        },
+        {
+          "op": "replace",
+          "reference": "刑事",
+          "hypothesis": "形式"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [
+        "CLIPPED_INPUT"
+      ],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.009",
+      "reference_text": "莫尔 (Moll) 博士认为，有些病人可能是在医院感染了病菌，而且至少有两名病人是医院的医护人员。",
+      "hypothesis": "掫尔博士认为有些病人可能是在医院感染了病菌而且至少有两名病人是医院的医护人员",
+      "cer": {
+        "reference_chars": 42,
+        "substitutions": 1,
+        "deletions": 4,
+        "insertions": 0,
+        "errors": 5,
+        "cer": 0.11904761904761904
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "symptom",
+            "text_sha256": "a7b3fd75079842768d3946a03ff271bebbf3d874473b7ca871bb26e7703a1693",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "莫",
+          "hypothesis": "掫"
+        },
+        {
+          "op": "delete",
+          "reference": " (Moll) ",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.006",
+      "reference_text": "由于一天只颁发十八块奖牌，许多国家的运动员未能登上领奖台。",
+      "hypothesis": "由于一天值班颁发十八块奖牌许多国家的运动员未能登上领奖台",
+      "cer": {
+        "reference_chars": 27,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "errors": 2,
+        "cer": 0.07407407407407407
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "negation",
+            "text_sha256": "084700c83146761cf759f77400b2f485aa580e189e060c187abe2a121358b429",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          },
+          {
+            "kind": "time",
+            "text_sha256": "5448481f38a4f90889db94c5998b7062c6b13737424ced2926dc90a5fca256b1",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "只",
+          "hypothesis": "值班"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [
+        "CLIPPED_INPUT"
+      ],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.010",
+      "reference_text": "莫尔 (Moll) 博士认为，有些病人可能是在医院感染了病菌，而且至少有两名病人是医院的医护人员。",
+      "hypothesis": "莫尔博士认为有些病人可能是在医院感染了病菌而且至少有两名病人是该医院的医护人员",
+      "cer": {
+        "reference_chars": 42,
+        "substitutions": 0,
+        "deletions": 4,
+        "insertions": 1,
+        "errors": 5,
+        "cer": 0.11904761904761904
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "symptom",
+            "text_sha256": "a7b3fd75079842768d3946a03ff271bebbf3d874473b7ca871bb26e7703a1693",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "delete",
+          "reference": " (Moll) ",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "insert",
+          "reference": "",
+          "hypothesis": "该"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [],
+      "human_review_status": "PENDING"
+    },
+    {
+      "recording_id": "c01.public.011",
+      "reference_text": "这名患者曾去过尼日利亚，当地曾出现数宗埃博拉病毒的病例。",
+      "hypothesis": "这命患者曾去过尼日里亚当地曾出现数宗埃伯拉病毒的病例",
+      "cer": {
+        "reference_chars": 26,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 0,
+        "errors": 3,
+        "cer": 0.11538461538461539
+      },
+      "key_items": {
+        "items": [
+          {
+            "kind": "medical_term",
+            "text_sha256": "29edd066d17f045b103b8e79dc12a503571b668e0b21f1acbe96079119e409a4",
+            "expected_count": 1,
+            "observed_count": 1,
+            "count_preserved": true
+          }
+        ],
+        "failed_items": 0,
+        "semantic_negation_correctness": "HUMAN_REVIEW_REQUIRED",
+        "scope": "LITERAL_PHRASE_COUNT_ONLY_NOT_CLINICAL_SEMANTICS"
+      },
+      "display_differences": [
+        {
+          "op": "replace",
+          "reference": "名",
+          "hypothesis": "命"
+        },
+        {
+          "op": "replace",
+          "reference": "利",
+          "hypothesis": "里"
+        },
+        {
+          "op": "delete",
+          "reference": "，",
+          "hypothesis": ""
+        },
+        {
+          "op": "replace",
+          "reference": "博",
+          "hypothesis": "伯"
+        },
+        {
+          "op": "delete",
+          "reference": "。",
+          "hypothesis": ""
+        }
+      ],
+      "difference_alignment": "DISPLAY_ONLY_NOT_CER_ALIGNMENT",
+      "warnings": [
+        "CLIPPED_INPUT"
+      ],
+      "human_review_status": "PENDING"
+    }
+  ],
+  "observations": [
+    "Eight literal numeral count failures include Arabic/Chinese representation differences; primary CER unchanged",
+    "English parenthetical names and acronyms remain in reference; no spoken-only reference editing",
+    "Same generic term count can remain while a full medical entity is wrong or missing",
+    "Negation literal count is not a semantic or false-positive-negation audit",
+    "Uncalibrated confidence is null; human listening/transcripts/clinical review remain pending"
+  ]
+}

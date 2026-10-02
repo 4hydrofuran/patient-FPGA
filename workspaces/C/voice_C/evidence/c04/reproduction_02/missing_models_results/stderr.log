@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\vivado\KV260\workspaces\C\releases\c04\attempt_02\independent_runtime\voicec\worker.py", line 453, in <module>
+    main()
+  File "C:\vivado\KV260\workspaces\C\releases\c04\attempt_02\independent_runtime\voicec\worker.py", line 418, in main
+    asr = Asr(args.asr_config, endpoint_config=stream_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\vivado\KV260\workspaces\C\releases\c04\attempt_02\independent_runtime\voicec\asr.py", line 50, in __init__
+    if path.is_symlink() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+                                           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quq\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\vivado\\KV260\\workspaces\\C\\releases\\c04\\attempt_02\\independent_runtime\\assets\\asr\\zipformer-small-ctc-zh-int8-2025-04-01\\model.int8.onnx'

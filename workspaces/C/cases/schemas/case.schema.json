@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kv260:c0:case:0.1.0-draft",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "case_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "DRAFT"
+        },
+        "reviewer": {
+          "type": "null"
+        },
+        "reviewed_at": {
+          "type": "null"
+        },
+        "approval_reference": {
+          "type": "null"
+        },
+        "needs_medical_teacher": {
+          "const": true
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "approval_reference",
+        "needs_medical_teacher"
+      ],
+      "additionalProperties": false
+    },
+    "notice": {
+      "const": "仅用于教学训练；不用于诊断、治疗、分诊或替代执业人员判断。病例及量表尚需医学教师审核。"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chief_complaint": {
+      "const": "胸痛"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fact_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "slot": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "fact_id",
+          "slot",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fact_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "slot": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "value": {
+            "type": "null"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "fact_id",
+          "slot",
+          "value",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "disclosure_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fact_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "trigger_intents": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "requires_all_disclosed": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "fact_id",
+          "trigger_intents",
+          "requires_all_disclosed"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "role_policy": {
+      "type": "object",
+      "properties": {
+        "answer_only_asked": {
+          "const": true
+        },
+        "unknown_answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "diagnostic_inference": {
+          "const": false
+        },
+        "assessment_hints": {
+          "const": false
+        },
+        "teaching_hints": {
+          "const": "slot_labels_only"
+        }
+      },
+      "required": [
+        "answer_only_asked",
+        "unknown_answer",
+        "diagnostic_inference",
+        "assessment_hints",
+        "teaching_hints"
+      ],
+      "additionalProperties": false
+    },
+    "rubric_ref": {
+      "const": "chest_pain_history_draft"
+    },
+    "rubric_version": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0-draft$"
+    },
+    "teacher_only": {
+      "type": "object",
+      "properties": {
+        "diagnosis": {
+          "type": "null"
+        },
+        "review_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "diagnosis",
+        "review_questions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "case_version",
+    "synthetic",
+    "review",
+    "notice",
+    "title",
+    "chief_complaint",
+    "facts",
+    "unknowns",
+    "disclosure_rules",
+    "role_policy",
+    "rubric_ref",
+    "rubric_version",
+    "teacher_only"
+  ],
+  "additionalProperties": false
+}

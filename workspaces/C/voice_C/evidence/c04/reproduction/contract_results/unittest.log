@@ -1,0 +1,69 @@
+test_48_planned_not_collected (test_c00.MetricAndPlanTests.test_48_planned_not_collected) ... ok
+test_blind_listening_is_empty_not_fake_scores (test_c00.MetricAndPlanTests.test_blind_listening_is_empty_not_fake_scores) ... ok
+test_cer_substitution_deletion_insertion (test_c00.MetricAndPlanTests.test_cer_substitution_deletion_insertion) ... ok
+test_empty_reference_and_decimal_preservation (test_c00.MetricAndPlanTests.test_empty_reference_and_decimal_preservation) ... ok
+test_fixture_rejected_for_real_and_marked_if_allowed (test_c00.MetricAndPlanTests.test_fixture_rejected_for_real_and_marked_if_allowed) ... ok
+test_hash_mismatch_and_duplicate_results (test_c00.MetricAndPlanTests.test_hash_mismatch_and_duplicate_results) ... ok
+test_literal_key_counts_not_semantic_claim (test_c00.MetricAndPlanTests.test_literal_key_counts_not_semantic_claim) ... ok
+test_missing_difficult_item_leaves_full_cer_unknown (test_c00.MetricAndPlanTests.test_missing_difficult_item_leaves_full_cer_unknown) ... ok
+test_no_results_is_not_quality_measurement (test_c00.MetricAndPlanTests.test_no_results_is_not_quality_measurement) ... ok
+test_real_results_require_authorization_and_review (test_c00.MetricAndPlanTests.test_real_results_require_authorization_and_review) ... ok
+test_speaker_overlap_is_rejected (test_c00.MetricAndPlanTests.test_speaker_overlap_is_rejected) ... ok
+test_timing_units_and_invalid_numbers (test_c00.MetricAndPlanTests.test_timing_units_and_invalid_numbers) ... ok
+test_bad_json_nonfinite_duplicate_keys_and_utf8_recover (test_c00.ProcessTests.test_bad_json_nonfinite_duplicate_keys_and_utf8_recover) ... ok
+test_memory_is_actual_process_peak_or_explicit_unknown (test_c00.ProcessTests.test_memory_is_actual_process_peak_or_explicit_unknown) ... ok
+test_oversized_jsonl_drained_and_recovers (test_c00.ProcessTests.test_oversized_jsonl_drained_and_recovers) ... ok
+test_persistent_client_and_disabled_tts (test_c00.ProcessTests.test_persistent_client_and_disabled_tts) ... FAIL
+test_actual_link_or_windows_junction_rejected (test_c00.SpoolAndAudioTests.test_actual_link_or_windows_junction_rejected) ... ok
+test_tone_cannot_overwrite_existing_file (test_c00.SpoolAndAudioTests.test_tone_cannot_overwrite_existing_file) ... ok
+test_truncated_pcm (test_c00.SpoolAndAudioTests.test_truncated_pcm) ... ok
+test_windows_reparse_attribute_rejected (test_c00.SpoolAndAudioTests.test_windows_reparse_attribute_rejected) ... ok
+test_audio_sample_rate_stereo_and_corrupt (test_c00.WorkerTests.test_audio_sample_rate_stereo_and_corrupt) ... ok
+test_bad_version_and_extra_fields (test_c00.WorkerTests.test_bad_version_and_extra_fields) ... ok
+test_bounded_queue (test_c00.WorkerTests.test_bounded_queue) ... ok
+test_cancel_missing_target (test_c00.WorkerTests.test_cancel_missing_target) ... ok
+test_cross_session_path_and_missing_file (test_c00.WorkerTests.test_cross_session_path_and_missing_file) ... ok
+test_duplicate_id (test_c00.WorkerTests.test_duplicate_id) ... ok
+test_hello_truthful_capabilities (test_c00.WorkerTests.test_hello_truthful_capabilities) ... ok
+test_invalid_and_oversized_text (test_c00.WorkerTests.test_invalid_and_oversized_text) ... ok
+test_optional_streaming_is_rejected (test_c00.WorkerTests.test_optional_streaming_is_rejected) ... ok
+test_paths_reject_escape_absolute_unc_and_ads (test_c00.WorkerTests.test_paths_reject_escape_absolute_unc_and_ads) ... ok
+test_reset_discards_old_epoch_job (test_c00.WorkerTests.test_reset_discards_old_epoch_job) ... ok
+test_reset_only_deletes_owned_outputs (test_c00.WorkerTests.test_reset_only_deletes_owned_outputs) ... ok
+test_running_cancel_pending_discards_late_output (test_c00.WorkerTests.test_running_cancel_pending_discards_late_output) ... ok
+test_tone_explicit_not_speech_and_text_hash (test_c00.WorkerTests.test_tone_explicit_not_speech_and_text_hash) ... ok
+test_valid_wav_does_not_return_fake_transcript (test_c00.WorkerTests.test_valid_wav_does_not_return_fake_transcript) ... ok
+test_exact_order_pcm_hash_and_release (test_microphone.MicrophoneTests.test_exact_order_pcm_hash_and_release) ... ok
+test_invalid_capture_limits_rejected_before_device_access (test_microphone.MicrophoneTests.test_invalid_capture_limits_rejected_before_device_access) ... ok
+test_malformed_driver_bytes_abort_and_release (test_microphone.MicrophoneTests.test_malformed_driver_bytes_abort_and_release) ... ok
+test_non_200ms_final_chunk_has_only_requested_frames (test_microphone.MicrophoneTests.test_non_200ms_final_chunk_has_only_requested_frames) ... ok
+test_open_failure_is_not_reported_as_recording (test_microphone.MicrophoneTests.test_open_failure_is_not_reported_as_recording) ... ok
+test_prepare_failure_cleans_only_prepared_headers (test_microphone.MicrophoneTests.test_prepare_failure_cleans_only_prepared_headers) ... ok
+test_queue_overflow_aborts_and_releases (test_microphone.MicrophoneTests.test_queue_overflow_aborts_and_releases) ... ok
+test_read_before_start_and_restart_rejected (test_microphone.MicrophoneTests.test_read_before_start_and_restart_rejected) ... ok
+test_release_failure_keeps_buffers_alive_and_is_error (test_microphone.MicrophoneTests.test_release_failure_keeps_buffers_alive_and_is_error) ... ok
+test_windows_abi_layout_and_format (test_microphone.MicrophoneTests.test_windows_abi_layout_and_format) ... ok
+test_existing_caller_directory_and_files_preserved (test_c04.AuditTests.test_existing_caller_directory_and_files_preserved) ... ok
+test_invalid_limits_rejected (test_c04.AuditTests.test_invalid_limits_rejected) ... ok
+test_real_subprocess_protocol_and_reset_cleanup_with_audit (test_c04.AuditTests.test_real_subprocess_protocol_and_reset_cleanup_with_audit) ... ok
+test_rotation_bounded_and_payload_redacted (test_c04.AuditTests.test_rotation_bounded_and_payload_redacted) ... ok
+
+======================================================================
+FAIL: test_persistent_client_and_disabled_tts (test_c00.ProcessTests.test_persistent_client_and_disabled_tts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\vivado\KV260\workspaces\C\releases\c04\independent_runtime\tests\test_c00.py", line 236, in test_persistent_client_and_disabled_tts
+    self.assertEqual(c.stderr,[])
+AssertionError: Lists differ: ['C04_PYTHON_NETWORK_GUARD_ACTIVE\n'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'C04_PYTHON_NETWORK_GUARD_ACTIVE\n'
+
+- ['C04_PYTHON_NETWORK_GUARD_ACTIVE\n']
++ []
+
+----------------------------------------------------------------------
+Ran 49 tests in 3.210s
+
+FAILED (failures=1)

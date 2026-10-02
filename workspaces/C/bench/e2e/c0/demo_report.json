@@ -1,0 +1,252 @@
+{
+  "session_id": "17c10081-9e7f-4f35-873d-f62f4e76b5a3",
+  "case_id": "sp_chest_01",
+  "case_version": "0.1.0-draft",
+  "rubric_version": "0.1.0-draft",
+  "review_status": "DRAFT",
+  "execution_kind": "PC_ENGINEERING_ONLY",
+  "notice": "仅用于教学训练；不用于诊断、治疗、分诊或替代执业人员判断。病例及量表尚需医学教师审核。",
+  "scoring_authority": "deterministic_rules",
+  "runtime_executed": false,
+  "total": 4,
+  "max_total": 100,
+  "criteria": [
+    {
+      "criterion_id": "coverage.onset",
+      "category": "coverage",
+      "label": "起病与时间",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.location",
+      "category": "coverage",
+      "label": "部位",
+      "max_points": 4,
+      "points": 4,
+      "status": "earned",
+      "evidence": [
+        {
+          "evidence_id": "ev.1",
+          "request_id": "demo-1",
+          "question": "胸痛在什么位置？",
+          "timestamp_utc": "2026-10-01T09:01:34.619112+00:00",
+          "monotonic_ns": 3245421000000,
+          "intent": "ask.location",
+          "confidence": 1.0,
+          "quote": "胸痛在什么位置？",
+          "span_start": 0,
+          "span_end": 8,
+          "criterion_ids": [
+            "coverage.location"
+          ],
+          "annotation_source": "trusted_engineering_annotation"
+        }
+      ],
+      "reason": "earned"
+    },
+    {
+      "criterion_id": "coverage.quality",
+      "category": "coverage",
+      "label": "性质",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.severity",
+      "category": "coverage",
+      "label": "程度",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.duration",
+      "category": "coverage",
+      "label": "持续时间与频次",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.radiation",
+      "category": "coverage",
+      "label": "放射",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.provocation",
+      "category": "coverage",
+      "label": "诱发或加重因素",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.relief",
+      "category": "coverage",
+      "label": "缓解因素",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.associated",
+      "category": "coverage",
+      "label": "伴随表现",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "coverage.background",
+      "category": "coverage",
+      "label": "既往、用药、过敏及个人/家族背景",
+      "max_points": 4,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "logic.clarify_timeline",
+      "category": "logic",
+      "label": "澄清时间线",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "logic.clarify_frequency",
+      "category": "logic",
+      "label": "澄清发作频次",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "logic.compare_factors",
+      "category": "logic",
+      "label": "比较诱发/缓解因素",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "logic.follow_associated",
+      "category": "logic",
+      "label": "对伴随表现追问",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "logic.confirm_background",
+      "category": "logic",
+      "label": "确认相关病史背景",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "clarity.plain_language",
+      "category": "clarity",
+      "label": "使用可理解的表述",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "clarity.clarify_ambiguity",
+      "category": "clarity",
+      "label": "澄清歧义",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "clarity.confirm_understanding",
+      "category": "clarity",
+      "label": "确认理解",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "care.permission",
+      "category": "care",
+      "label": "说明教学角色并征得模拟问诊同意",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "care.acknowledge",
+      "category": "care",
+      "label": "回应病人表达的担忧",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "summary.recap",
+      "category": "summary",
+      "label": "总结已采集信息",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    },
+    {
+      "criterion_id": "summary.invite_correction",
+      "category": "summary",
+      "label": "邀请更正或补充",
+      "max_points": 5,
+      "points": 0,
+      "status": "missing",
+      "evidence": [],
+      "reason": "missing"
+    }
+  ]
+}

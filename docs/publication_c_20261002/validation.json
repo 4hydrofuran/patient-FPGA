@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "date": "2026-10-02",
+  "original_integrity": {
+    "status": "PASS",
+    "original_source_hashes_checked": 670,
+    "original_changes": [],
+    "syntax_errors": [],
+    "source_modifications": 0
+  },
+  "imported_file_hash_check": "PASS",
+  "final_archive_sha256": "f507c5d1792a6477a38ce29f60fff76b3cfe98e00e2ef2830574c87d20547006",
+  "publication_portable_selftest": {
+    "contract_tests": 49,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "real_requested": false,
+    "real_status": "NOT_TESTED",
+    "microphone_opened": false,
+    "board": "NOT_TESTED",
+    "human_quality": "NOT_TESTED",
+    "status": "PASS"
+  },
+  "legacy_tests": [
+    {
+      "stage": "C0",
+      "tests": 27,
+      "status": "PASS"
+    },
+    {
+      "stage": "C1",
+      "tests": 27,
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "mode": "integrity",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\publish_patient_fpga\\docs\\publication_c_20261002\\verify_export.py"
+      ],
+      "cwd": "C:\\vivado\\KV260\\publish_patient_fpga",
+      "exit_code": 0,
+      "seconds": 1.0200991000019712,
+      "dependency_source": "Existing local isolated Python runtime",
+      "microphone_opened": false
+    },
+    {
+      "mode": "voice",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "C:\\vivado\\KV260\\publish_patient_fpga\\workspaces\\C\\voice_C\\bin\\selftest.py",
+        "--output",
+        "C:\\vivado\\KV260\\publish_preparation\\validation\\voice"
+      ],
+      "cwd": "C:\\vivado\\KV260\\publish_patient_fpga\\workspaces\\C\\voice_C",
+      "exit_code": 0,
+      "seconds": 3.2489426999964053,
+      "dependency_source": "Existing local isolated Python runtime",
+      "microphone_opened": false
+    },
+    {
+      "mode": "c0",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "app/tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\publish_patient_fpga\\workspaces\\C",
+      "exit_code": 0,
+      "seconds": 1.8248442999902181,
+      "dependency_source": "Existing local pinned C0 app/.deps via PYTHONPATH",
+      "microphone_opened": false
+    },
+    {
+      "mode": "c1",
+      "argv": [
+        "C:\\vivado\\KV260\\workspaces\\C\\voice_C\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "quality/c1/tests",
+        "-v"
+      ],
+      "cwd": "C:\\vivado\\KV260\\publish_patient_fpga\\workspaces\\C",
+      "exit_code": 0,
+      "seconds": 1.3065308000077493,
+      "dependency_source": "Existing local pinned C0 app/.deps via PYTHONPATH",
+      "microphone_opened": false
+    }
+  ],
+  "known_credentials_in_publication": 0,
+  "model_measurements_rerun": false,
+  "historical_evidence_rewritten": false,
+  "microphone_opened": false,
+  "board": "NOT_TESTED",
+  "push_status": "NOT_RUN_AT_VALIDATION_TIME"
+}

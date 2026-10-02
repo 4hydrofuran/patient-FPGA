@@ -1,0 +1,137 @@
+{
+  "cwd": "C:\\vivado\\KV260\\workspaces\\C\\voice_C",
+  "commands": [
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "tools/stream_c03_microphone.py",
+        "--list-devices"
+      ],
+      "execution": "SANDBOXED_READ_ONLY",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_microphone.py",
+        "-v"
+      ],
+      "log": "microphone_unit.log",
+      "tests": 10,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "tools/stream_c03_microphone.py",
+        "--record",
+        "--device",
+        "0",
+        "--seconds",
+        "10",
+        "--countdown",
+        "15",
+        "--output",
+        "evidence/c03_mic/real_run_01"
+      ],
+      "execution": "SANDBOXED",
+      "log": "real_run_01.log",
+      "exit_code": 1
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "tools/stream_c03_microphone.py",
+        "--record",
+        "--device",
+        "0",
+        "--seconds",
+        "10",
+        "--countdown",
+        "15",
+        "--output",
+        "evidence/c03_mic/real_run_02"
+      ],
+      "execution": "HOST_PERMISSIONS",
+      "log": "real_run_02.log",
+      "exit_code": 1
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "tools/prepare_microphone_runtime.py"
+      ],
+      "execution": "HOST_PERMISSIONS_OFFLINE_INSTALL_SEPARATE_VENV",
+      "log": "microphone_runtime_install.json",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv_mic/Scripts/python.exe",
+        "tools/stream_c03_microphone.py",
+        "--record",
+        "--device",
+        "0",
+        "--seconds",
+        "10",
+        "--countdown",
+        "15",
+        "--output",
+        "evidence/c03_mic/real_run_03"
+      ],
+      "execution": "HOST_PERMISSIONS",
+      "log": "real_run_03.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "environment": {
+        "VOICE_C_TEST_EVIDENCE_DIR": "evidence/c03_mic/regression_probes"
+      },
+      "log": "unittest.log",
+      "tests": 99,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        ".venv_mic/Scripts/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "execution": "HOST_PERMISSIONS_NO_PHYSICAL_MICROPHONE",
+      "environment": {
+        "VOICE_C_TEST_EVIDENCE_DIR": "evidence/c03_mic/regression_mic_runtime"
+      },
+      "log": "unittest_mic_runtime.log",
+      "tests": 99,
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "tools/run_microphone.ps1",
+        "-ListDevices"
+      ],
+      "execution": "SANDBOXED_READ_ONLY_FROM_PROJECT_ROOT",
+      "exit_code": 0
+    }
+  ],
+  "network_audio_upload": false
+}
