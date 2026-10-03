@@ -2,6 +2,8 @@
 
 当前为 **B03无板验收完成（2026-10-03）**：baseline、reuse、double各34笔普通RTL通过；唯一候选double另通过32笔随机背压RTL。两种目标T1与基线周期相同，T8收益与资源代价见[验收报告](docs/b03/B03_REPORT.md)及reports/b03/ablation.json。Sw保持32位，消除自动拓宽造成的decode退化。[三方案阶段快照](docs/b03/THREE_SCHEMES_STATUS.md)保留历史暂停状态。B04公共动态库、实现时序和板测尚未完成。
 
+B03 / A06 实际补交包已发布：[下载完整 ZIP](https://github.com/4hydrofuran/patient-FPGA/releases/download/b03-a06-supplement-20261003/B03_A06_supplement_20261003.zip)，[Release 附件与校验文件](https://github.com/4hydrofuran/patient-FPGA/releases/tag/b03-a06-supplement-20261003)。包中包含实际 XO、原始 RTL 数据与固定向量，下载入口和验收方法见[补交说明](docs/b03/A06_SUPPLEMENT.md)。
+
 B02 无板访存消融已完成，选 `B02_X128` 作为 B03 开发基线：在每 token A8 缓存上将激活 AXI 口从 512 bit 限为 128 bit。它使 HLS 估计 BRAM_18K 从 CACHE_X 的 120 降到 78，两种目标 T=1 尺寸分别只多 1 个 XSIM 周期；相对 B01，gate/up 快约 1.29%，down 慢约 0.25%。X128 原生 Cosim 25/25 通过，但实现时序和板测未做。运行 `.\run_b02_x128.ps1 -Target native|csim|synth|cosim` 复现新候选；旧 `B02_CACHE_X` 及冻结 B01 配置继续保留。完整选型、消融、证据和限制见 `docs/b02/SELECTION_AND_DELIVERY.md`，当前分域状态以 `PROJECT_STATUS.json` 为准。
 
 B01已完成，工程数值门槛PASS；B01 复现仍读 docs/b01/TEST_PLAN.md 和 docs/b01/workload.json。

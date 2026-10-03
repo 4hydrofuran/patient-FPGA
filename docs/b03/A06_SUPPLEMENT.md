@@ -2,6 +2,14 @@
 
 日期：2026-10-03。针对 A 的 B_MISSING_AND_DEFECTS.md（旧提交 fdd1d65），补齐当前 double 候选的实际文件和独立回放证据。B03_REPORT.md 是最初紧凑包的开发报告，其中“排除 TV/向量”的描述不适用于本补交包；本文件与包根 B03_supplement_manifest.json 说明新增内容。
 
+## GitHub 实际文件下载
+
+- [完整补交 ZIP：B03_A06_supplement_20261003.zip](https://github.com/4hydrofuran/patient-FPGA/releases/download/b03-a06-supplement-20261003/B03_A06_supplement_20261003.zip)
+- [Release：校验文件、中文说明及验收收据](https://github.com/4hydrofuran/patient-FPGA/releases/tag/b03-a06-supplement-20261003)
+- ZIP 大小 137,874,097 字节；SHA256：`506f079daabf37f6dc539d35c49add0b4c0e7629a0a97c461c470b0f75c59513`。
+
+2026-10-03 已完整下载四个远端附件，逐文件大小和 SHA256 与本地原件一致。远端 ZIP 与此前 B03_A06_补交包.zip 字节一致，下载文件名采用 ASCII。本次补齐此前未发布的实际二进制附件；A 独立接收复测仍由 A 确认。
+
 **须把实际 ZIP 交给 A。只克隆 Git 或提供本机路径，不等于已接收 XO 与原始向量。** 本包不代 A 签收；A 独立复测后才能更新其 NOT_ACCEPTED。
 
 ## 唯一候选
