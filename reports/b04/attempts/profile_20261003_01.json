@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_ATTEMPT_RESOLVED",
+  "command": "python tools/b04_profile.py --cxx D:/mingw64/bin/g++.exe --work build/b04/profile_20261003_01 --receipt reports/b04/profile_20261003_01.receipt.json",
+  "exit_code": 1,
+  "error": "XO embedded XML differs from delivery XML",
+  "embedded_xml_bytes": 3983,
+  "delivery_xml_bytes": 4109,
+  "embedded_xml_raw_sha256": "dadfa622dc114a373af9195778f64e34f4d715ea190426fa745dfd39f818d1de",
+  "delivery_xml_raw_sha256": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
+  "diagnosis": "Actual frozen files have different XML formatting. Element/attribute canonical forms are identical; newline normalization alone is insufficient.",
+  "resolution": "Keep exact frozen file hashes; compare XML canonical forms without formatting whitespace; store both raw hashes. No kernel, XO, contract, tolerance or archived data changed."
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-03T18:45:20+08:00",
+  "candidate": "double",
+  "profile_sha256": "dff92d7bfa4351e7534737d795e9a8ea274f0a728f0f2a1f91df4cd2c4c2e5a8",
+  "frozen_inputs": {
+    "src/w4a8_prefill_v1.cpp": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "src/w4a8_linear_v1.hpp": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+    "artifact/b03_candidate/w4a8_linear_v1.xo": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+    "artifact/b03_candidate/kernel.xml": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
+    "hls_prefill_double.cfg": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0"
+  },
+  "contract_files": {
+    "quant_v1.json": "890297e8bca2eeb5b9579ca7e7dc8a6b3126eb98a7dd0474ee1c5fe46dabeb25",
+    "sp_linear_v1.h": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+    "voice_examples.jsonl": "55590befbeca0aa89402113ed72bdf88f7fc6b8e8ac115e1d6bbad4360dc61a2",
+    "voice_v1.json": "0ba9699bbf738baf940adf56d202c503ed6343390aaf9086ba1a644b76e6910a"
+  },
+  "compiled_layout": {
+    "meta_bytes": 40,
+    "magic": 1463042360,
+    "build_id": 3003318274,
+    "offsets": {
+      "abi_magic": 0,
+      "kernel_build_id": 4,
+      "job_id": 8,
+      "status": 16,
+      "done": 20,
+      "hw_completed_count": 24,
+      "algorithm_weight_bytes": 32
+    }
+  },
+  "steps": {
+    "compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "tests/b04/layout_probe.cpp",
+        "-o",
+        "build/b04/profile_20261003_04/layout_probe.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run": {
+      "arguments": [
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\profile_20261003_04\\layout_probe.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "431f0d9670bcd26157b3db0c34079ce601be1412d4dd7de1fb91f44e2b7a308e"
+    }
+  },
+  "xml_comparison": "XML canonicalization, strip formatting whitespace; all elements/attributes preserved",
+  "embedded_xml_raw_sha256": "dadfa622dc114a373af9195778f64e34f4d715ea190426fa745dfd39f818d1de",
+  "input_sha256": {
+    "tests/b04/layout_probe.cpp": "61e7a6c7243e0c4df5443f60d9f473e0bb81ce290becd317bbb8ea5a53196107",
+    "host/b04_private_probe.hpp": "1ee09315d81d7e292e2540abf333a19ebb86ee2a0d0a9b41592c7f36c2d645c1",
+    "tools/b04_profile.py": "0898d1c46236f67c9aec88c68e1a5075fe99f4fa91c1a6670c775a6985f49643",
+    "tools/b04_common.py": "c425576a038f1531d2d51045cff8e6eb916f1e4de063e08b7038d8667c1df9df"
+  },
+  "scope": "Frozen XO/XML identity and actual C++ layout; no XRT, implementation, ARM runtime or BOARD proof."
+}

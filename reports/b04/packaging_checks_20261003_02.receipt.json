@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-03T19:03:05+08:00",
+  "checks": 31,
+  "cases": [
+    {
+      "case": "unsafe ZIP name '../escape'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name '/absolute'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'C:/outside'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a\\\\..\\\\outside'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a/../outside'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a//b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name './b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a/NUL.txt'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a/trailing.'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name 'a/trailing '",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe ZIP name ''",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "valid portable relative name",
+      "status": "PASS"
+    },
+    {
+      "case": "no A delivery",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "empty A identity",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "synthetic ARM64 header only; never a runtime result",
+      "status": "PASS"
+    },
+    {
+      "case": "x86 library instead of ARM64",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "truncated ELF header",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "big-endian ELF",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "duplicate names",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "case collision",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "escaping member",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "false full acceptance",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "wrong outer trusted ZIP SHA",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "changed payload",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "deleted required header",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "deleted original scalar",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "changed frozen XO",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "synthetic six defined exports; no A runtime claim",
+      "status": "PASS"
+    },
+    {
+      "case": "undefined public exports",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "missing close",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "hidden public exports",
+      "status": "REJECTED_AS_EXPECTED"
+    }
+  ],
+  "scope": "Synthetic malformed inputs and inventory rejection; not a public runtime, ARM build or BOARD test."
+}

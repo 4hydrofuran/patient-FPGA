@@ -1,0 +1,263 @@
+"""Assemble B's partial stage package; verify before extracting into a fresh directory.
+
+This intentionally cannot emit B_pc_candidate_v1.zip or sign A-owned runtime gates.
+Use Python 3.9+; no package installation is needed.
+"""
+import argparse
+import json
+import os
+from pathlib import Path, PurePosixPath
+import stat
+import subprocess
+import zipfile
+
+from b04_common import ROOT, FLAGS, META_GROUPS, compiler, digest, now, read_json, run, safe_path, write_json
+
+B03_ZIP_SHA = '506f079daabf37f6dc539d35c49add0b4c0e7629a0a97c461c470b0f75c59513'
+B03_URL = 'https://github.com/4hydrofuran/patient-FPGA/releases/download/b03-a06-supplement-20261003/B03_A06_supplement_20261003.zip'
+REQUIRED = {
+    'README_B04_STAGE.md', 'PROJECT_STATUS.json', 'config/b04/kernel_profile.json',
+    'contracts/contract_lock.json', 'contracts/sp_linear_v1.h',
+    'src/w4a8_prefill_v1.cpp', 'src/w4a8_linear_v1.hpp', 'hls_prefill_double.cfg',
+    'artifact/b03_candidate/w4a8_linear_v1.xo', 'artifact/b03_candidate/kernel.xml',
+    'host/b04_private_probe.hpp', 'tests/b04/layout_probe.cpp',
+    'tests/b04/private_probe_test.cpp', 'tests/b04/meta_probe_cli.cpp',
+    'tools/b04_common.py', 'tools/b04_profile.py', 'tools/b04_selftest.py', 'tools/b04_stage.py',
+    'tools/b04_export_meta.py', 'vectors/b04_meta/manifest.json',
+    'tests/numerical/fixture_replay.cpp',
+    'fixtures/w_packed.bin', 'fixtures/sw.bin', 'fixtures/xq.bin', 'fixtures/sx.bin', 'fixtures/expected_y.bin',
+}
+
+
+def member_name(name):
+    """Reject ambiguous names before any filesystem operation, on either OS."""
+    path = PurePosixPath(name)
+    reserved = {'CON', 'PRN', 'AUX', 'NUL', *('COM' + str(n) for n in range(1, 10)),
+                *('LPT' + str(n) for n in range(1, 10))}
+    if not name or '\\' in name or ':' in name or path.is_absolute() or path.as_posix() != name:
+        raise ValueError('Unsafe ZIP name: ' + name)
+    if any(part in ('', '.', '..') or part.endswith((' ', '.')) or part.split('.')[0].upper() in reserved
+           for part in path.parts):
+        raise ValueError('Unsafe ZIP path component: ' + name)
+    return name
+
+
+def verify_archive(path, expected_sha=None):
+    """The outer SHA must come from a separately delivered trusted receipt."""
+    if expected_sha and digest(path) != expected_sha.lower():
+        raise ValueError('ZIP SHA256 differs from supplied receipt')
+    with zipfile.ZipFile(path) as archive:
+        infos = archive.infolist()
+        names = [member_name(info.filename) for info in infos]
+        if len(set(name.casefold() for name in names)) != len(names):
+            raise ValueError('Duplicate or case-colliding ZIP members')
+        if any(info.is_dir() or stat.S_ISLNK(info.external_attr >> 16) for info in infos):
+            raise ValueError('Directory/symlink ZIP members are not accepted')
+        if 'manifest.json' not in names:
+            raise ValueError('Missing stage manifest')
+        if archive.testzip():
+            raise ValueError('ZIP CRC failed')
+        manifest = json.loads(archive.read('manifest.json'))
+        if manifest.get('package_kind') != 'B04_B_STAGE_PARTIAL' or manifest.get('full_B04_accepted') is not False:
+            raise ValueError('Stage manifest must explicitly disclaim full B04 acceptance')
+        files = manifest['files']
+        if set(files) != set(names) - {'manifest.json'} or not REQUIRED.issubset(files):
+            raise ValueError('Manifest inventory or required stage files differ')
+        import hashlib
+        for name, entry in files.items():
+            member_name(name)
+            data = archive.read(name)
+            if len(data) != entry['bytes'] or hashlib.sha256(data).hexdigest() != entry['sha256']:
+                raise ValueError('Stage member digest differs: ' + name)
+        profile = json.loads(archive.read('config/b04/kernel_profile.json'))
+        if profile['build_id'] != 0xB3030002 or profile['meta']['bytes'] != 40:
+            raise ValueError('Frozen build/meta identity differs')
+        for name, expected in profile['frozen_files'].items():
+            if files[name]['sha256'] != expected:
+                raise ValueError('Frozen source/XO mismatch: ' + name)
+        locked = json.loads(archive.read('contracts/contract_lock.json'))
+        if locked['contract_sha256'] != manifest['public_contract_sha256']:
+            raise ValueError('Public contract identity differs')
+        for name, expected in locked['files'].items():
+            if files['contracts/' + name]['sha256'] != expected:
+                raise ValueError('Frozen contract file differs: ' + name)
+        if manifest['B03_full_evidence']['sha256'] != B03_ZIP_SHA:
+            raise ValueError('Pinned B03 full evidence differs')
+        # Each original meta transaction must retain its independent expected bytes.
+        for group in META_GROUPS:
+            prefix = 'evidence/b03/batches/double/' + group + '/'
+            original = json.loads(archive.read(prefix + 'manifest.json'))
+            needed_tv = ['tv/cdatafile/c.w4a8_linear_v1.autotvin_' + name + '.dat'
+                         for name in ('gmem_meta', 'meta', 'meta_bytes', 'job_id', 't', 'n', 'k')]
+            needed_tv.append('tv/rtldatafile/rtl.w4a8_linear_v1.autotvout_gmem_meta.dat')
+            if any(prefix + name not in files for name in needed_tv):
+                raise ValueError('Missing original meta/scalar TV subset')
+            for name, entry in original['files'].items():
+                if name.startswith('tv/') and prefix + name in files and files[prefix + name] != entry:
+                    raise ValueError('Original RTL subset manifest mismatch')
+            for transaction in original['cases']:
+                expected = 'evidence/b03/supplement/rtl_expected/' + group + '/' + transaction + '/expected_meta.bin'
+                if expected not in files:
+                    raise ValueError('Missing independent expected meta')
+        if sum(len(json.loads(archive.read('evidence/b03/batches/double/' + group + '/manifest.json'))['cases'])
+               for group in META_GROUPS) != 66:
+            raise ValueError('Original RTL metadata coverage differs from 66 calls')
+        friendly = json.loads(archive.read('vectors/b04_meta/manifest.json'))
+        if friendly['transactions'] != 66 or len(friendly['cases']) != 66 or friendly['kernel_build_id'] != '0xB3030002':
+            raise ValueError('Host-friendly meta case coverage/identity differs')
+        if len({case['id'] for case in friendly['cases']}) != 66:
+            raise ValueError('Duplicate host-friendly meta cases')
+        for case in friendly['cases']:
+            for entry in case['files'].values():
+                if files['vectors/b04_meta/' + entry['path']] != {'bytes': entry['bytes'], 'sha256': entry['sha256']}:
+                    raise ValueError('Host-friendly meta file differs')
+            original_expected = files['evidence/b03/supplement/rtl_expected/' + case['id'] + '/expected_meta.bin']
+            if case['files']['expected.bin']['sha256'] != original_expected['sha256'] or case['files']['actual.bin']['sha256'] != original_expected['sha256']:
+                raise ValueError('Host-friendly actual/expected differs from independent original')
+        for name, entry in friendly['original_sources'].items():
+            if files[name] != entry:
+                raise ValueError('Host-friendly source provenance differs')
+        return manifest
+
+
+def collect_files():
+    selected = set(REQUIRED)
+    selected.add('artifact/b03_candidate/candidate.json')
+    for folder in ('contracts', 'fixtures', 'docs/b04', 'reports/b04', 'evidence/b04', 'vectors/b04_meta'):
+        selected.update(path.relative_to(ROOT).as_posix() for path in (ROOT / folder).rglob('*') if path.is_file())
+    selected.update(path.relative_to(ROOT).as_posix() for path in (ROOT / 'tools').glob('b04_*.py'))
+    selected.update(path.relative_to(ROOT).as_posix() for path in (ROOT / 'tests/b04').glob('*') if path.is_file())
+    candidate = read_json(ROOT / 'artifact/b03_candidate/candidate.json')
+    selected.add(candidate['artifact']['synthesis_receipt'])
+    for group in META_GROUPS:
+        prefix = 'evidence/b03/batches/double/' + group + '/'
+        selected.add(prefix + 'manifest.json')
+        selected.add(prefix + 'tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_meta.dat')
+        selected.add(prefix + 'tv/rtldatafile/rtl.w4a8_linear_v1.autotvout_gmem_meta.dat')
+        for parameter in ('meta', 'meta_bytes', 'job_id', 't', 'n', 'k'):
+            selected.add(prefix + 'tv/cdatafile/c.w4a8_linear_v1.autotvin_' + parameter + '.dat')
+        original = read_json(ROOT / prefix / 'manifest.json')
+        for transaction in original['cases']:
+            selected.add('evidence/b03/supplement/rtl_expected/' + group + '/' + transaction + '/expected_meta.bin')
+    return {member_name(name): safe_path(ROOT, name) for name in sorted(selected)}
+
+
+def assemble(output, profile_receipt, selftest_receipt):
+    output = Path(output).resolve()
+    if output.name == 'B_pc_candidate_v1.zip':
+        raise ValueError('Full candidate is unavailable until A delivery and joint G1-G6 acceptance')
+    if output.exists():
+        raise FileExistsError('Preserve previous packages; choose a fresh output name')
+    profile = read_json(ROOT / 'config/b04/kernel_profile.json')
+    checks = [read_json(safe_path(ROOT, name)) for name in (profile_receipt, selftest_receipt)]
+    if any(report['status'] != 'PASS' for report in checks):
+        raise ValueError('Required B probe evidence is not PASS')
+    if checks[0]['profile_sha256'] != digest(ROOT / 'config/b04/kernel_profile.json'):
+        raise ValueError('Profile receipt is stale')
+    for report in checks:
+        for name, expected in report.get('input_sha256', {}).items():
+            if digest(safe_path(ROOT, name)) != expected:
+                raise ValueError('Probe receipt inputs changed: ' + name)
+    if checks[1]['unit_checks'] != 40 or checks[1]['archived_rtl_meta_transactions'] != 66 or checks[1]['job_counter_mutation_rejections'] != 108:
+        raise ValueError('Required independent probe coverage is incomplete')
+    payload = collect_files()
+    files = {name: {'bytes': path.stat().st_size, 'sha256': digest(path)} for name, path in payload.items()}
+    for name, expected in profile['frozen_files'].items():
+        if files[name]['sha256'] != expected:
+            raise ValueError('Frozen kernel differs: ' + name)
+    manifest = {
+        'schema_version': 1, 'created_at': now(), 'package_kind': 'B04_B_STAGE_PARTIAL',
+        'full_B04_accepted': False, 'B_status': 'B_SIDE_PREPARATION_PASS', 'A_status': 'WAITING_A',
+        'kernel_build_id': '0xB3030002', 'public_contract_sha256': profile['public_contract_sha256'],
+        'source_revision_at_assembly': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+        'source_revision_note': 'Revision is provenance before stage commit; all packaged edits identified by per-file hashes.',
+        'profile_receipt': profile_receipt, 'selftest_receipt': selftest_receipt,
+        'domains': {'CPU_private_probes': 'PASS', 'archived_RTL_meta_replay': 'PASS_66',
+                    'new_RTL': 'NOT_RUN_KERNEL_UNCHANGED', 'XRT_runtime': 'WAITING_A',
+                    'implementation': 'NOT_TESTED', 'ARM64_runtime': 'NOT_TESTED', 'BOARD': 'NOT_TESTED'},
+        'joint_gates': {key: 'WAITING_A_AND_JOINT_ACCEPTANCE' for key in ('G1', 'G2', 'G3', 'G4', 'G5', 'G6')},
+        'missing': ['A public runtime source/build entry', 'A XRT lifecycle/control evidence',
+                    'matching actual xclbin and implementation reports', 'matching ARM64 .so and independent host',
+                    'joint integration and full candidate extraction acceptance'],
+        'B03_full_evidence': {'url': B03_URL, 'sha256': B03_ZIP_SHA,
+                             'scope': 'Full raw Y/RTL and numerical vectors; meta-only subset is self-contained here.'},
+        'files': files,
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+        for name, path in payload.items():
+            archive.write(path, name)
+        archive.writestr('manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
+    verify_archive(output)
+    receipt = {'status': 'PASS', 'scope': 'B partial stage packaging only', 'finished_at': now(),
+               'zip_name': output.name, 'bytes': output.stat().st_size, 'sha256': digest(output),
+               'members': len(files) + 1, 'manifest': manifest}
+    write_json(output.with_suffix('.receipt.json'), receipt)
+    output.with_suffix('.sha256.txt').write_text(digest(output) + '  ' + output.name + '\n', encoding='ascii')
+    print('PASS B04 partial stage package: ' + output.name + ' SHA256=' + digest(output), flush=True)
+    return receipt
+
+
+def extract_and_test(archive_path, target, cxx, expected_sha):
+    manifest = verify_archive(archive_path, expected_sha)
+    target = Path(target).resolve()
+    target.mkdir(parents=True, exist_ok=False)
+    with zipfile.ZipFile(archive_path) as archive:
+        for name in [*manifest['files'], 'manifest.json']:
+            output = safe_path(target, name)
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_bytes(archive.read(name))
+    for name, entry in manifest['files'].items():
+        if digest(safe_path(target, name)) != entry['sha256']:
+            raise ValueError('Fresh extraction differs: ' + name)
+    python = __import__('sys').executable
+    steps = {}
+    _, steps['profile'] = run([python, 'tools/b04_profile.py', '--cxx', cxx, '--work', 'build/b04/fresh_profile',
+                               '--receipt', 'reports/b04/fresh_profile.receipt.json'], target, target / 'build/fresh_profile.log')
+    _, steps['selftest'] = run([python, 'tools/b04_selftest.py', '--cxx', cxx, '--work', 'build/b04/fresh_selftest',
+                                '--receipt', 'reports/b04/fresh_selftest.receipt.json'], target, target / 'build/fresh_selftest.log')
+    _, steps['delivery_rejections'] = run([python, 'tests/b04/packaging_checks.py',
+                                'reports/b04/fresh_delivery_checks.receipt.json', '--archive', str(Path(archive_path).resolve())],
+                                target, target / 'build/fresh_delivery_checks.log')
+    executable, extra, env = compiler(cxx)
+    fixture = 'build/fixture' + ('.exe' if os.name == 'nt' else '')
+    _, steps['fixture_compile'] = run([executable, *extra, '-std=c++17', '-O2', '-ffp-contract=off', *FLAGS,
+                'tests/numerical/fixture_replay.cpp', 'src/w4a8_prefill_v1.cpp', '-o', fixture],
+                target, target / 'build/fixture_compile.log', env)
+    fixture_text, steps['fixture_run'] = run([str(target / fixture)], target, target / 'build/fixture.log', env)
+    if 'fixture PASS transactions=3 output_checks=32' not in fixture_text:
+        raise ValueError('Independent hand fixture did not pass')
+    result = {'status': 'PASS', 'finished_at': now(), 'zip_sha256': digest(archive_path),
+              'members_checked': len(manifest['files']) + 1, 'steps': steps,
+              'private_probes': read_json(target / 'reports/b04/fresh_selftest.receipt.json'),
+              'delivery_checks': read_json(target / 'reports/b04/fresh_delivery_checks.receipt.json'),
+              'kernel_fixture_transactions': 3, 'kernel_fixture_output_checks': 32,
+              'scope': 'Fresh B-stage extraction/CPU build, original RTL meta replay, fixed independent kernel fixture; not full B04/runtime/implementation/BOARD.'}
+    write_json(target / 'fresh_extraction.receipt.json', result)
+    print('PASS B04 fresh extraction: 40 units, 66 meta, 108 changed-record rejections, 3 fixture calls', flush=True)
+    return result
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest='command', required=True)
+    pack = commands.add_parser('assemble')
+    pack.add_argument('--output', required=True)
+    pack.add_argument('--profile-receipt', required=True)
+    pack.add_argument('--selftest-receipt', required=True)
+    check = commands.add_parser('verify')
+    check.add_argument('archive')
+    check.add_argument('--sha256')
+    extract = commands.add_parser('extract-test')
+    extract.add_argument('archive')
+    extract.add_argument('--target', required=True)
+    extract.add_argument('--cxx', default='g++')
+    extract.add_argument('--sha256', required=True)
+    args = parser.parse_args()
+    if args.command == 'assemble':
+        assemble(args.output, args.profile_receipt, args.selftest_receipt)
+    elif args.command == 'verify':
+        checked = verify_archive(args.archive, args.sha256)
+        print('PASS B04 stage archive inventory: ' + str(len(checked['files'])) + ' payload files')
+    else:
+        extract_and_test(args.archive, args.target, args.cxx, args.sha256)

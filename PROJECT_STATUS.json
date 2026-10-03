@@ -1,9 +1,9 @@
 {
   "role": "B",
-  "stage": "B03",
-  "stage_status": "COMPLETE_OFF_BOARD",
-  "engineering_gate": "B03_OFF_BOARD_PASS",
-  "updated_at": "2026-10-03T05:07:03.291354+08:00",
+  "stage": "B04",
+  "stage_status": "PAUSED_PARTIAL",
+  "engineering_gate": "B04_PARTIAL_WAITING_A",
+  "updated_at": "2026-10-03T19:20:33+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -14,10 +14,11 @@
     "changed_by_agent": false
   },
   "domains": {
-    "pc": "PASS_B03_ALL_VARIANTS",
-    "csim": "PASS_B03_ALL_VARIANTS",
-    "synthesis": "PASS_B03_ALL_VARIANTS",
-    "cosim": "PASS_B03_ALL_VARIANTS_102_NOMINAL_AND_SELECTED_32_STALL",
+    "pc": "PASS_B04_PRIVATE_PROBES_AND_SMALL_KERNEL_FIXTURE",
+    "csim": "NOT_RERUN_B03_FROZEN",
+    "synthesis": "NOT_RERUN_B03_FROZEN",
+    "cosim": "NOT_RERUN_B03_FROZEN_META_REPLAY_ONLY",
+    "public_runtime": "WAITING_A",
     "implementation": "NOT_TESTED",
     "aarch64_build": "NOT_TESTED",
     "board": "NOT_TESTED",
@@ -25,7 +26,7 @@
     "latency": "NOT_TESTED",
     "power": "NOT_TESTED"
   },
-  "domain_scope": "Three designs: PC50 + real-weight4 + full Csim50 each, nominal RTL34 each; selected double random-stall RTL32. Implementation/ARM/BOARD not tested.",
+  "domain_scope": "B04 host-private conformance and stage extraction only; full B03 results preserved in b03_frozen_stage_summary. No new HLS/RTL/runtime/implementation/ARM/BOARD pass.",
   "new_target_shapes": {
     "pc": "PASS_16_COMBINATIONS_T1_TO_T8",
     "csim": "PASS_CURRENT_AND_B2_16_COMBINATIONS",
@@ -51,7 +52,7 @@
     "fp32_output_checks": 7712,
     "b2_same_input_cases": 15
   },
-  "public_library_implementation": "NOT_IMPLEMENTED_B04",
+  "public_library_implementation": "WAITING_A_PER_ADOPTED_A07_B04_SCOPE",
   "public_contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
   "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
   "board_available": null,
@@ -77,10 +78,17 @@
     "reports/b03/artifact_guard.json",
     "reports/b03/stress_acceptance.json",
     "reports/b03/selection.json",
-    "reports/b03/clean_delivery.receipt.json"
+    "reports/b03/clean_delivery.receipt.json",
+    "reports/b04/profile_20261003_05.receipt.json",
+    "reports/b04/selftest_20261003_02.receipt.json",
+    "reports/b04/export_meta_20261003_01.receipt.json",
+    "reports/b04/packaging_checks_20261003_04.receipt.json",
+    "reports/b04/fresh_stage_trial_20261003_02.receipt.json"
   ],
-  "blockers": [],
-  "next_action": "B04 public C ABI library/lifecycle, platform linking, implementation timing/resources and aarch64 build; do not claim board readiness.",
+  "blockers": [
+    "A public runtime, XRT lifecycle evidence, matching xclbin/implementation and ARM64 library/host not delivered"
+  ],
+  "next_action": "After explicit resume, receive A real artifacts, review XRT/implementation/ARM evidence and jointly check G1-G6 before full candidate assembly",
   "warnings": [
     "Client model/effort/speed selection is unverified.",
     "Do not treat old dimensions as new model validation.",
@@ -216,5 +224,53 @@
     "selected_stall_passed_calls": 32
   },
   "b03_candidate": "double",
-  "b03_random_stall_rtl": "PASS_32_SELECTED_CANDIDATE"
+  "b03_random_stall_rtl": "PASS_32_SELECTED_CANDIDATE",
+  "b03_frozen_stage_summary": {
+    "stage": "B03",
+    "stage_status": "COMPLETE_OFF_BOARD",
+    "engineering_gate": "B03_OFF_BOARD_PASS",
+    "domains": {
+      "pc": "PASS_B03_ALL_VARIANTS",
+      "csim": "PASS_B03_ALL_VARIANTS",
+      "synthesis": "PASS_B03_ALL_VARIANTS",
+      "cosim": "PASS_B03_ALL_VARIANTS_102_NOMINAL_AND_SELECTED_32_STALL",
+      "implementation": "NOT_TESTED",
+      "aarch64_build": "NOT_TESTED",
+      "board": "NOT_TESTED",
+      "quality": "NOT_TESTED",
+      "latency": "NOT_TESTED",
+      "power": "NOT_TESTED"
+    },
+    "domain_scope": "Three designs: PC50 + real-weight4 + full Csim50 each, nominal RTL34 each; selected double random-stall RTL32. Implementation/ARM/BOARD not tested."
+  },
+  "b04_progress": {
+    "phases": {
+      "P1_profile": "PASS",
+      "P2_private_probes": "PASS",
+      "P3_stage_extraction": "PASS_B_PARTIAL_STAGE",
+      "P4_joint_integration": "WAITING_A"
+    },
+    "A_delivery": "NOT_DELIVERED_CONFIRMED_BY_USER",
+    "kernel_modified": false,
+    "public_contract_modified": false,
+    "full_B04_accepted": false,
+    "joint_gates": {
+      "G1": "WAITING_A_AND_JOINT_ACCEPTANCE",
+      "G2": "WAITING_A_AND_JOINT_ACCEPTANCE",
+      "G3": "WAITING_A_AND_JOINT_ACCEPTANCE",
+      "G4": "WAITING_A_AND_JOINT_ACCEPTANCE",
+      "G5": "WAITING_A_AND_JOINT_ACCEPTANCE",
+      "G6": "WAITING_A_AND_JOINT_ACCEPTANCE"
+    },
+    "measurements": {
+      "private_unit_checks": 40,
+      "archived_rtl_meta_transactions": 66,
+      "job_counter_mutation_rejections": 108,
+      "delivery_checks": 31,
+      "fresh_kernel_fixture_transactions": 3,
+      "fresh_kernel_fixture_output_checks": 32
+    },
+    "paused_by_user": true,
+    "development_cutoff": "2026-10-03T19:20:33+08:00"
+  }
 }

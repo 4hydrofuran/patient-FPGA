@@ -1,0 +1,908 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-03T18:35:39+08:00",
+  "unit_checks": 40,
+  "archived_rtl_meta_transactions": 66,
+  "job_counter_mutation_rejections": 108,
+  "groups": {
+    "smoke": {
+      "transactions": 30,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "hand_sample",
+          "actual_meta_sha256": "d220c9a6a752ef1f695b86646cee4ad1c80787a79a7e6a995845ebab346be527",
+          "expected_meta_sha256": "d220c9a6a752ef1f695b86646cee4ad1c80787a79a7e6a995845ebab346be527",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 1,
+          "case": "hand_sample",
+          "actual_meta_sha256": "a4e88e9f8fdc1818561ea5058acb1d568625c41f6301e9ee8f850ad731e08617",
+          "expected_meta_sha256": "a4e88e9f8fdc1818561ea5058acb1d568625c41f6301e9ee8f850ad731e08617",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        },
+        {
+          "transaction": 2,
+          "case": "tile_random",
+          "actual_meta_sha256": "75f20e2357a1a0a6f7870618ff3b58cec884dcc4ddb2991bb670e49db35bd21c",
+          "expected_meta_sha256": "75f20e2357a1a0a6f7870618ff3b58cec884dcc4ddb2991bb670e49db35bd21c",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 3,
+          "case": "nk_tail",
+          "actual_meta_sha256": "7778331ce5b86f2323612e123f154ccbbc23b6b73e20e02d90795209ec9cd6e2",
+          "expected_meta_sha256": "7778331ce5b86f2323612e123f154ccbbc23b6b73e20e02d90795209ec9cd6e2",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 4,
+          "case": "three_groups",
+          "actual_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "expected_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 5,
+          "case": "single",
+          "actual_meta_sha256": "141572d00fd791ec897cd864f0577875b294708e1d7ba7105e04945b59595430",
+          "expected_meta_sha256": "141572d00fd791ec897cd864f0577875b294708e1d7ba7105e04945b59595430",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 6,
+          "case": "zeros",
+          "actual_meta_sha256": "3efcebcebc221016fd722dc5daad09a6295a26e04d52dd5f7c888596a6c70537",
+          "expected_meta_sha256": "3efcebcebc221016fd722dc5daad09a6295a26e04d52dd5f7c888596a6c70537",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 7,
+          "case": "extremes",
+          "actual_meta_sha256": "a91665e8bd37a5d94801f944385fc1e4cdd3905a14f2f3038952325755c81616",
+          "expected_meta_sha256": "a91665e8bd37a5d94801f944385fc1e4cdd3905a14f2f3038952325755c81616",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 8,
+          "case": "t4_compat",
+          "actual_meta_sha256": "1dd5bc0c38f301bf8e040ea93b562d950b9eed086d6a080b3ecca02e47978cae",
+          "expected_meta_sha256": "1dd5bc0c38f301bf8e040ea93b562d950b9eed086d6a080b3ecca02e47978cae",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 9,
+          "case": "t8_compat",
+          "actual_meta_sha256": "fa753b6dca35ba8da6671ea9458d4e0334f23753c50f1ab4ab19557554449cac",
+          "expected_meta_sha256": "fa753b6dca35ba8da6671ea9458d4e0334f23753c50f1ab4ab19557554449cac",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 10,
+          "case": "nonbinary_scale",
+          "actual_meta_sha256": "a67efe196706a0c41f44fd4aa25994ac7f8e97e76a3b29d6cd6b1671e075d858",
+          "expected_meta_sha256": "a67efe196706a0c41f44fd4aa25994ac7f8e97e76a3b29d6cd6b1671e075d858",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 11,
+          "case": "padding_reserved",
+          "actual_meta_sha256": "d183eaacf89474de1fdf22a5394a6c52d857e1d0a53784e31493ce7a3204552d",
+          "expected_meta_sha256": "d183eaacf89474de1fdf22a5394a6c52d857e1d0a53784e31493ce7a3204552d",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 12,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "736170e73ebd5e49f2992021601e335359f9937d984e5d247371241b3a9bf603",
+          "expected_meta_sha256": "736170e73ebd5e49f2992021601e335359f9937d984e5d247371241b3a9bf603",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 13,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "27236f97236f02c8df9e9d0fd61caf5b165361e821c048cf88b155b94b6ac7ad",
+          "expected_meta_sha256": "27236f97236f02c8df9e9d0fd61caf5b165361e821c048cf88b155b94b6ac7ad",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        },
+        {
+          "transaction": 14,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "fcd0bba104cbb85baa69285a22b2062d4b10021701373acd70a8b45db89b0084",
+          "expected_meta_sha256": "fcd0bba104cbb85baa69285a22b2062d4b10021701373acd70a8b45db89b0084",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 44
+        },
+        {
+          "transaction": 15,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "ae0a97f53a5f58e1072681d6a320a35b133a8770ce4ebf726a5ccd1c4cefeb23",
+          "expected_meta_sha256": "ae0a97f53a5f58e1072681d6a320a35b133a8770ce4ebf726a5ccd1c4cefeb23",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 45
+        },
+        {
+          "transaction": 16,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "770610baf0b312c6780bcbb661ef178377c401bf091a8d970fe6e8a677e59b5e",
+          "expected_meta_sha256": "770610baf0b312c6780bcbb661ef178377c401bf091a8d970fe6e8a677e59b5e",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 45
+        },
+        {
+          "transaction": 17,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "ba07992386c12a9cac7bf34c4e46172069eb41daa989aae2a0f6a4e7d9f680b6",
+          "expected_meta_sha256": "ba07992386c12a9cac7bf34c4e46172069eb41daa989aae2a0f6a4e7d9f680b6",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 46
+        },
+        {
+          "transaction": 18,
+          "case": "errors",
+          "actual_meta_sha256": "3b144b802fde477ebc0eba75fdb429c212c42b6eb72d8c4ba87a163c3e161c25",
+          "expected_meta_sha256": "3b144b802fde477ebc0eba75fdb429c212c42b6eb72d8c4ba87a163c3e161c25",
+          "public_status": 2,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 1,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 19,
+          "case": "errors",
+          "actual_meta_sha256": "3ad3a99b347eb12d09264cd8f206415bb61d8e8677ecb6bff775420f33c3a6c2",
+          "expected_meta_sha256": "3ad3a99b347eb12d09264cd8f206415bb61d8e8677ecb6bff775420f33c3a6c2",
+          "public_status": 3,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 3,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 20,
+          "case": "errors",
+          "actual_meta_sha256": "26b12fa5806db80a973434e76a52b79e5f7508ca2d30587fc386a76987b2f395",
+          "expected_meta_sha256": "26b12fa5806db80a973434e76a52b79e5f7508ca2d30587fc386a76987b2f395",
+          "public_status": 1,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 2,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 21,
+          "case": "errors",
+          "actual_meta_sha256": "baef47deb371b5c5fa121044d59b8b9471a2d446cf5712a62b0e833c9db2c055",
+          "expected_meta_sha256": "baef47deb371b5c5fa121044d59b8b9471a2d446cf5712a62b0e833c9db2c055",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 22,
+          "case": "high_reserved",
+          "actual_meta_sha256": "9affbb0f2e405274895d1d44378e083b56f651e04b927c691284370704ab6eb3",
+          "expected_meta_sha256": "9affbb0f2e405274895d1d44378e083b56f651e04b927c691284370704ab6eb3",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 0
+        },
+        {
+          "transaction": 23,
+          "case": "prefill_tail_t2",
+          "actual_meta_sha256": "da2db34f0791adbdb44d391f9334338c6456f32bf58127d2d8a882e1aa5a5875",
+          "expected_meta_sha256": "da2db34f0791adbdb44d391f9334338c6456f32bf58127d2d8a882e1aa5a5875",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 24,
+          "case": "prefill_tail_t3",
+          "actual_meta_sha256": "a571fa6bd6952a717c37e8e36e2fe2cc883953c2ebedaf56799646cf47351aa2",
+          "expected_meta_sha256": "a571fa6bd6952a717c37e8e36e2fe2cc883953c2ebedaf56799646cf47351aa2",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 25,
+          "case": "prefill_tail_t5",
+          "actual_meta_sha256": "52913f4148591171d2241c5d53adae9519454649da6e630c96c2fb73833937ce",
+          "expected_meta_sha256": "52913f4148591171d2241c5d53adae9519454649da6e630c96c2fb73833937ce",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 26,
+          "case": "prefill_tail_t6",
+          "actual_meta_sha256": "ece517f7dc27536a408d107d1ecd3629fbded1db604c98fad14af2cbde69cd23",
+          "expected_meta_sha256": "ece517f7dc27536a408d107d1ecd3629fbded1db604c98fad14af2cbde69cd23",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 27,
+          "case": "prefill_tail_t7",
+          "actual_meta_sha256": "a823cd9fa83fe58db4814fba678cbfc8e509673c41eb056bb254d3ba6428645a",
+          "expected_meta_sha256": "a823cd9fa83fe58db4814fba678cbfc8e509673c41eb056bb254d3ba6428645a",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 28,
+          "case": "prefill_tail_t8",
+          "actual_meta_sha256": "db4aeb3ca85a4cc45f5b94ed7abac1534885a5b4aa4ced3a547e5c1072ca258e",
+          "expected_meta_sha256": "db4aeb3ca85a4cc45f5b94ed7abac1534885a5b4aa4ced3a547e5c1072ca258e",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 29,
+          "case": "prefill_tail_t8",
+          "actual_meta_sha256": "acae83bcc311b9bbc3f1a5b459d8f3e2c79f7d91e1f8f3ccbb2dbe80b5dcbfba",
+          "expected_meta_sha256": "acae83bcc311b9bbc3f1a5b459d8f3e2c79f7d91e1f8f3ccbb2dbe80b5dcbfba",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        }
+      ]
+    },
+    "gate_t1": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "qwen35_gate_up_t1",
+          "actual_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "expected_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "gate_t8": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "qwen35_gate_up_t8",
+          "actual_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "expected_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "down_t1": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "qwen35_down_t1",
+          "actual_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "expected_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "down_t8": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "qwen35_down_t8",
+          "actual_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "expected_meta_sha256": "a27ba9d8e8a692d16e93c0ecb1f542ac9f9e622c910cdf53bdaf3b65494d0921",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "stall_basic": {
+      "transactions": 12,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "hand_sample",
+          "actual_meta_sha256": "d220c9a6a752ef1f695b86646cee4ad1c80787a79a7e6a995845ebab346be527",
+          "expected_meta_sha256": "d220c9a6a752ef1f695b86646cee4ad1c80787a79a7e6a995845ebab346be527",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 1,
+          "case": "hand_sample",
+          "actual_meta_sha256": "a4e88e9f8fdc1818561ea5058acb1d568625c41f6301e9ee8f850ad731e08617",
+          "expected_meta_sha256": "a4e88e9f8fdc1818561ea5058acb1d568625c41f6301e9ee8f850ad731e08617",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        },
+        {
+          "transaction": 2,
+          "case": "tile_random",
+          "actual_meta_sha256": "75f20e2357a1a0a6f7870618ff3b58cec884dcc4ddb2991bb670e49db35bd21c",
+          "expected_meta_sha256": "75f20e2357a1a0a6f7870618ff3b58cec884dcc4ddb2991bb670e49db35bd21c",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 3,
+          "case": "nk_tail",
+          "actual_meta_sha256": "7778331ce5b86f2323612e123f154ccbbc23b6b73e20e02d90795209ec9cd6e2",
+          "expected_meta_sha256": "7778331ce5b86f2323612e123f154ccbbc23b6b73e20e02d90795209ec9cd6e2",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 4,
+          "case": "three_groups",
+          "actual_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "expected_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 5,
+          "case": "single",
+          "actual_meta_sha256": "141572d00fd791ec897cd864f0577875b294708e1d7ba7105e04945b59595430",
+          "expected_meta_sha256": "141572d00fd791ec897cd864f0577875b294708e1d7ba7105e04945b59595430",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 6,
+          "case": "zeros",
+          "actual_meta_sha256": "3efcebcebc221016fd722dc5daad09a6295a26e04d52dd5f7c888596a6c70537",
+          "expected_meta_sha256": "3efcebcebc221016fd722dc5daad09a6295a26e04d52dd5f7c888596a6c70537",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 7,
+          "case": "extremes",
+          "actual_meta_sha256": "a91665e8bd37a5d94801f944385fc1e4cdd3905a14f2f3038952325755c81616",
+          "expected_meta_sha256": "a91665e8bd37a5d94801f944385fc1e4cdd3905a14f2f3038952325755c81616",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 8,
+          "case": "t4_compat",
+          "actual_meta_sha256": "1dd5bc0c38f301bf8e040ea93b562d950b9eed086d6a080b3ecca02e47978cae",
+          "expected_meta_sha256": "1dd5bc0c38f301bf8e040ea93b562d950b9eed086d6a080b3ecca02e47978cae",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 9,
+          "case": "t8_compat",
+          "actual_meta_sha256": "fa753b6dca35ba8da6671ea9458d4e0334f23753c50f1ab4ab19557554449cac",
+          "expected_meta_sha256": "fa753b6dca35ba8da6671ea9458d4e0334f23753c50f1ab4ab19557554449cac",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 10,
+          "case": "nonbinary_scale",
+          "actual_meta_sha256": "a67efe196706a0c41f44fd4aa25994ac7f8e97e76a3b29d6cd6b1671e075d858",
+          "expected_meta_sha256": "a67efe196706a0c41f44fd4aa25994ac7f8e97e76a3b29d6cd6b1671e075d858",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 11,
+          "case": "padding_reserved",
+          "actual_meta_sha256": "d183eaacf89474de1fdf22a5394a6c52d857e1d0a53784e31493ce7a3204552d",
+          "expected_meta_sha256": "d183eaacf89474de1fdf22a5394a6c52d857e1d0a53784e31493ce7a3204552d",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "stall_lifecycle": {
+      "transactions": 11,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "c0b915e100df7f1cfd01ca5b646f94a47c94df906f677ce74b61192cb352aa75",
+          "expected_meta_sha256": "c0b915e100df7f1cfd01ca5b646f94a47c94df906f677ce74b61192cb352aa75",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 1,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "27236f97236f02c8df9e9d0fd61caf5b165361e821c048cf88b155b94b6ac7ad",
+          "expected_meta_sha256": "27236f97236f02c8df9e9d0fd61caf5b165361e821c048cf88b155b94b6ac7ad",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        },
+        {
+          "transaction": 2,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "fcd0bba104cbb85baa69285a22b2062d4b10021701373acd70a8b45db89b0084",
+          "expected_meta_sha256": "fcd0bba104cbb85baa69285a22b2062d4b10021701373acd70a8b45db89b0084",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 44
+        },
+        {
+          "transaction": 3,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "ae0a97f53a5f58e1072681d6a320a35b133a8770ce4ebf726a5ccd1c4cefeb23",
+          "expected_meta_sha256": "ae0a97f53a5f58e1072681d6a320a35b133a8770ce4ebf726a5ccd1c4cefeb23",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 45
+        },
+        {
+          "transaction": 4,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "770610baf0b312c6780bcbb661ef178377c401bf091a8d970fe6e8a677e59b5e",
+          "expected_meta_sha256": "770610baf0b312c6780bcbb661ef178377c401bf091a8d970fe6e8a677e59b5e",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 45
+        },
+        {
+          "transaction": 5,
+          "case": "repeat_jobs",
+          "actual_meta_sha256": "ba07992386c12a9cac7bf34c4e46172069eb41daa989aae2a0f6a4e7d9f680b6",
+          "expected_meta_sha256": "ba07992386c12a9cac7bf34c4e46172069eb41daa989aae2a0f6a4e7d9f680b6",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 46
+        },
+        {
+          "transaction": 6,
+          "case": "errors",
+          "actual_meta_sha256": "3b144b802fde477ebc0eba75fdb429c212c42b6eb72d8c4ba87a163c3e161c25",
+          "expected_meta_sha256": "3b144b802fde477ebc0eba75fdb429c212c42b6eb72d8c4ba87a163c3e161c25",
+          "public_status": 2,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 1,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 7,
+          "case": "errors",
+          "actual_meta_sha256": "3ad3a99b347eb12d09264cd8f206415bb61d8e8677ecb6bff775420f33c3a6c2",
+          "expected_meta_sha256": "3ad3a99b347eb12d09264cd8f206415bb61d8e8677ecb6bff775420f33c3a6c2",
+          "public_status": 3,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 3,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 8,
+          "case": "errors",
+          "actual_meta_sha256": "26b12fa5806db80a973434e76a52b79e5f7508ca2d30587fc386a76987b2f395",
+          "expected_meta_sha256": "26b12fa5806db80a973434e76a52b79e5f7508ca2d30587fc386a76987b2f395",
+          "public_status": 1,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 2,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 9,
+          "case": "errors",
+          "actual_meta_sha256": "baef47deb371b5c5fa121044d59b8b9471a2d446cf5712a62b0e833c9db2c055",
+          "expected_meta_sha256": "baef47deb371b5c5fa121044d59b8b9471a2d446cf5712a62b0e833c9db2c055",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 19
+        },
+        {
+          "transaction": 10,
+          "case": "high_reserved",
+          "actual_meta_sha256": "9affbb0f2e405274895d1d44378e083b56f651e04b927c691284370704ab6eb3",
+          "expected_meta_sha256": "9affbb0f2e405274895d1d44378e083b56f651e04b927c691284370704ab6eb3",
+          "public_status": 9,
+          "issue": "kernel_rejected",
+          "consume_y": false,
+          "private_status": 5,
+          "done": 1,
+          "completed_count": 0
+        }
+      ]
+    },
+    "stall_tail": {
+      "transactions": 7,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "prefill_tail_t2",
+          "actual_meta_sha256": "87cc461d2b4abdcf4408f767c1443909ca4ec9b864c96be76c6771f34396982f",
+          "expected_meta_sha256": "87cc461d2b4abdcf4408f767c1443909ca4ec9b864c96be76c6771f34396982f",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 1,
+          "case": "prefill_tail_t3",
+          "actual_meta_sha256": "a5c666b07343be1e1a48f090134565f3b9f0aeb6034f17bfbbbcc5bbf07b4d3b",
+          "expected_meta_sha256": "a5c666b07343be1e1a48f090134565f3b9f0aeb6034f17bfbbbcc5bbf07b4d3b",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 2,
+          "case": "prefill_tail_t5",
+          "actual_meta_sha256": "196d0e9ed3ab3915b33a094ac43cc6bcd2f154e4abc14e4d5b969e98b5e38525",
+          "expected_meta_sha256": "196d0e9ed3ab3915b33a094ac43cc6bcd2f154e4abc14e4d5b969e98b5e38525",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 3,
+          "case": "prefill_tail_t6",
+          "actual_meta_sha256": "09b768896112cfe37ba31fceb6be210e4332ecb0cf1cc4fdd17ab495aca30671",
+          "expected_meta_sha256": "09b768896112cfe37ba31fceb6be210e4332ecb0cf1cc4fdd17ab495aca30671",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 4,
+          "case": "prefill_tail_t7",
+          "actual_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "expected_meta_sha256": "986acbbf689e69ba5b94029aa3c9f31ccec57e8fdfac60db2660f9fe6a3790cd",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 5,
+          "case": "prefill_tail_t8",
+          "actual_meta_sha256": "808d83f12cfc3afa60f43668db653db145b8801ec0fb1f7ae046c0774fb79659",
+          "expected_meta_sha256": "808d83f12cfc3afa60f43668db653db145b8801ec0fb1f7ae046c0774fb79659",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        },
+        {
+          "transaction": 6,
+          "case": "prefill_tail_t8",
+          "actual_meta_sha256": "acae83bcc311b9bbc3f1a5b459d8f3e2c79f7d91e1f8f3ccbb2dbe80b5dcbfba",
+          "expected_meta_sha256": "acae83bcc311b9bbc3f1a5b459d8f3e2c79f7d91e1f8f3ccbb2dbe80b5dcbfba",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 43
+        }
+      ]
+    },
+    "stall_max_k": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "maximum_k_t8",
+          "actual_meta_sha256": "59bf206ca6a6c8cb545e0f8434c40f04ac719c729b4ba92e053782883fc67bc1",
+          "expected_meta_sha256": "59bf206ca6a6c8cb545e0f8434c40f04ac719c729b4ba92e053782883fc67bc1",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    },
+    "stall_max_n": {
+      "transactions": 1,
+      "status": "PASS",
+      "cases": [
+        {
+          "transaction": 0,
+          "case": "maximum_n_t8",
+          "actual_meta_sha256": "78a9e7b06030074d479a9d58041f770f775e75136cc5a01c2a766ec9b40eac55",
+          "expected_meta_sha256": "78a9e7b06030074d479a9d58041f770f775e75136cc5a01c2a766ec9b40eac55",
+          "public_status": 0,
+          "issue": "none",
+          "consume_y": true,
+          "private_status": 0,
+          "done": 1,
+          "completed_count": 42
+        }
+      ]
+    }
+  },
+  "steps": {
+    "unit_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "tests/b04/private_probe_test.cpp",
+        "-o",
+        "build/b04/selftest_20261003_01/unit.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "meta_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "tests/b04/meta_probe_cli.cpp",
+        "-o",
+        "build/b04/selftest_20261003_01/meta.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unit_run": {
+      "arguments": [
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\selftest_20261003_01\\unit.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "fa87e26b2a882b37a70cee566735003a2a26b164b61a06d45c44188d9b49671c"
+    }
+  },
+  "input_sha256": {
+    "host/b04_private_probe.hpp": "1ee09315d81d7e292e2540abf333a19ebb86ee2a0d0a9b41592c7f36c2d645c1",
+    "tests/b04/private_probe_test.cpp": "40c7056a3cc4fa4a1693335f45ef00d0659169e88e6e7a01aa69024243b7bb6e",
+    "tests/b04/meta_probe_cli.cpp": "5d54a96a2c2589878bc6f7868690b67d4d5b70a976d8ceeba410de5a45eb8f6e"
+  },
+  "scope": "CPU conformance probes plus original RTL metadata replay, not new RTL or public XRT lifecycle/BOARD acceptance."
+}

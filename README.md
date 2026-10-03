@@ -1,6 +1,8 @@
 # 成员B：Qwen3.5计算后端
 
-当前为 **B03无板验收完成（2026-10-03）**：baseline、reuse、double各34笔普通RTL通过；唯一候选double另通过32笔随机背压RTL。两种目标T1与基线周期相同，T8收益与资源代价见[验收报告](docs/b03/B03_REPORT.md)及reports/b03/ablation.json。Sw保持32位，消除自动拓宽造成的decode退化。[三方案阶段快照](docs/b03/THREE_SCHEMES_STATUS.md)保留历史暂停状态。B04公共动态库、实现时序和板测尚未完成。
+当前 B04 的 B侧独立准备已通过，完整候选等待A交付与联合验收，见[B04阶段说明](README_B04_STAGE.md)和[阶段报告](docs/b04/B04_STAGE_REPORT.md)。
+
+**B03无板验收完成（2026-10-03）**：baseline、reuse、double各34笔普通RTL通过；唯一候选double另通过32笔随机背压RTL。两种目标T1与基线周期相同，T8收益与资源代价见[验收报告](docs/b03/B03_REPORT.md)及reports/b03/ablation.json。Sw保持32位，消除自动拓宽造成的decode退化。[三方案阶段快照](docs/b03/THREE_SCHEMES_STATUS.md)保留历史暂停状态。B04公共动态库、实现时序和板测尚未完成。
 
 B03 / A06 实际补交包已发布：[下载完整 ZIP](https://github.com/4hydrofuran/patient-FPGA/releases/download/b03-a06-supplement-20261003/B03_A06_supplement_20261003.zip)，[Release 附件与校验文件](https://github.com/4hydrofuran/patient-FPGA/releases/tag/b03-a06-supplement-20261003)。包中包含实际 XO、原始 RTL 数据与固定向量，下载入口和验收方法见[补交说明](docs/b03/A06_SUPPLEMENT.md)。
 
@@ -24,3 +26,6 @@ B01已完成，工程数值门槛PASS；B01 复现仍读 docs/b01/TEST_PLAN.md �
 B00冻结包继续保留，根B00_PACKAGE_MANIFEST为历史快照；不要用它核验当前B01文件。旧run_b00/run_b3为历史入口，阶段复现使用B00冻结包。
 
 本机Vitis原生Cosim总流程曾失败；实际RTL通过来自保留生成物后的链接恢复与输出回放，见docs/b01/RTL_RECOVERY.md。不能把首次退出码1改写为0。
+# B04 阶段工作
+
+用户采用 A07/B04 协作边界，A 尚未交付。B 侧资料、独立接口探针及阶段包入口见 [B04 阶段说明](README_B04_STAGE.md)。完整公共运行时、xclbin/实现和 ARM64 候选仍需 A 交付与联合验收；本阶段包不能替代完整 B04 候选。

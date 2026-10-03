@@ -32,3 +32,15 @@ tools/prepare_prefill_supplement.py -text
 tools/package_prefill_supplement.py -text
 tools/refresh_prefill_baseline_provenance.ps1 -text
 tests/numerical/replay_archived_rtl.cpp -text
+
+# B04 probe/source receipts must survive Windows checkout without newline changes.
+config/b04/** -text
+docs/b04/** -text
+reports/b04/** -text
+evidence/b04/** -text
+vectors/b04_meta/** -text
+host/b04_private_probe.hpp -text
+tests/b04/** -text
+tools/b04_*.py -text
+README_B04_STAGE.md -text
+PROJECT_STATUS.json -text
