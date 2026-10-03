@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "readelf",
+    "-d",
+    "/home/member-a/kv260-sdk-2026.1-common/sysroots/cortexa72-cortexa53-amd-linux/usr/lib/libm.so.6"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "stdout": "\nDynamic section at offset 0x8fd20 contains 30 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libm.so.6]\n 0x000000000000000c (INIT)               0xca28\n 0x000000000000000d (FINI)               0x53224\n 0x0000000000000019 (INIT_ARRAY)         0x9fd10\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x9fd18\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2a0\n 0x0000000000000005 (STRTAB)             0x9708\n 0x0000000000000006 (SYMTAB)             0x2868\n 0x000000000000000a (STRSZ)              9633 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x9ff40\n 0x0000000000000002 (PLTRELSZ)           240 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xc938\n 0x0000000000000007 (RELA)               0xc800\n 0x0000000000000008 (RELASZ)             312 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x0000000070000001 (AARCH64_BTI_PLT)    \n 0x000000006ffffffc (VERDEF)             0xc5e8\n 0x000000006ffffffd (VERDEFNUM)          14\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0xc7d0\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0xbcaa\n 0x000000006ffffff9 (RELACOUNT)          4\n 0x0000000000000000 (NULL)               0x0\n",
+  "stderr": "readelf: Warning: Separate debug info file /home/member-a/kv260-sdk-2026.1-common/sysroots/cortexa72-cortexa53-amd-linux/usr/lib/libm.so.6 found, but CRC does not match - ignoring\n"
+}

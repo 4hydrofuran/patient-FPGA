@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "submit",
+    "--owner",
+    "A",
+    "--label",
+    "a07-b04-v1",
+    "--",
+    "/bin/bash",
+    "/mnt/c/Patientqwen/platform/qwen35/a07/b04/run_local.sh"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T14:18:27.179947+00:00",
+  "elapsed_s": 0.3929379000328481,
+  "exit_code": 0,
+  "stdout": "01791037107527650519-A-a07-b04-v1-76cbbf73\n",
+  "stderr": ""
+}

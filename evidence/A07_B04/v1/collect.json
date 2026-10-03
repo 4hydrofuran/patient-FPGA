@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a07/b04/collect.py",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791037107527650519-A-a07-b04-v1-76cbbf73"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T14:26:45.292230+00:00",
+  "elapsed_s": 33.20284140005242,
+  "exit_code": 0,
+  "stdout": "{\"delivery\": \"/mnt/c/Patientqwen/release/a07_b04_v1\", \"files\": 253, \"status\": \"PARTIAL\", \"actual_tests\": [{\"domain\": \"PC_HOST_LOGIC_ONLY\", \"assertions\": 970, \"device_calls\": 0, \"BOARD\": \"NOT_TESTED\"}, {\"domain\": \"PC_HOST_LOGIC_ONLY\", \"assertions\": 970, \"device_calls\": 0, \"BOARD\": \"NOT_TESTED\"}, {\"BOARD\": \"NOT_TESTED\", \"actual_meta_records\": 66, \"bad_build_ids\": 4, \"device_calls\": 0, \"domain\": \"PC_ARCHIVED_RTL_META_REPLAY\", \"new_RTL_simulation\": false, \"tamper_rejections\": 396}, {\"BOARD\": \"NOT_TESTED\", \"actual_meta_records\": 66, \"bad_build_ids\": 4, \"device_calls\": 0, \"domain\": \"PC_ARCHIVED_RTL_META_REPLAY\", \"new_RTL_simulation\": false, \"tamper_rejections\": 396}], \"dependencies\": 9}\n",
+  "stderr": ""
+}

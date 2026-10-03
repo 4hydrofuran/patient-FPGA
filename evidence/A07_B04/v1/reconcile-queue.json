@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a07/b04/reconcile_failed_queue.py",
+    "01791037101273317275-A-a06-windows-csim-v2-7ced06d1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T14:22:15.885958+00:00",
+  "elapsed_s": 0.9174350000685081,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a07/b04/reconcile_failed_queue.py\", line 9, in <module>\n    active=json.loads((q/'active.json').read_text())\n  File \"/usr/lib/python3.10/pathlib.py\", line 1134, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/usr/lib/python3.10/pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: '/home/member-a/kv260-build/ra02-coordinator/active.json'\n"
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "run-next"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T14:18:27.857915+00:00",
+  "elapsed_s": 0.6261531000491232,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 124, in <module>\n    raise SystemExit(main())\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 113, in main\n    result = run_next(CENTRAL)\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 65, in run_next\n    with exclusive(base):\n  File \"/usr/lib/python3.10/contextlib.py\", line 135, in __enter__\n    return next(self.gen)\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 58, in exclusive\n    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)\nBlockingIOError: [Errno 11] Resource temporarily unavailable\n"
+}
