@@ -1,0 +1,897 @@
+{
+  "status": "READY_FOR_A_REVIEW",
+  "created_at_local": "2026-10-03T09:06:37.923703+08:00",
+  "selected_current_receipts_all_inputs_exactly_resolved": {
+    "reports/b03/double/20261002-193315-8220172/synth.receipt.json": {
+      "receipt_sha256": "2f33bd2a28c5dcfbbbaff0225d68aa9687782252800381768f481236b56d0372",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double.cfg": {
+          "sha256": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0",
+          "exact_file": "hls_prefill_double.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-193223-6192304/native_test.receipt.json": {
+      "receipt_sha256": "d8f68c38b18a817e80e51252e582ff961969927e471b06213d2fdccb24f1a266",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double.cfg": {
+          "sha256": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0",
+          "exact_file": "hls_prefill_double.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-193223-6192304/real_test.receipt.json": {
+      "receipt_sha256": "8fc9dcf4bbd534d9741adc532a8acb52982897d7015f00511d461d1f8b877720",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double.cfg": {
+          "sha256": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0",
+          "exact_file": "hls_prefill_double.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-193238-0731631/csim.receipt.json": {
+      "receipt_sha256": "b9c39d1f7e652e2cd3dfdbab3a7ec32ced6ac27e6bb31d42d261be54c7bee1ee",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double.cfg": {
+          "sha256": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0",
+          "exact_file": "hls_prefill_double.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-193530-4772723/cosim_smoke.receipt.json": {
+      "receipt_sha256": "a0349920fb2c79a7c7acfb2bcc7aae2ea33a8c7fe9e34c7df878d2dc4c9cbdb8",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_smoke.cfg": {
+          "sha256": "c0113472bd1fbc6247ce6015af5836ab56f15d7910d508f5c3eb9c094dec191e",
+          "exact_file": "hls_prefill_double_smoke.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-193927-5197977/cosim_gate_t1.receipt.json": {
+      "receipt_sha256": "26c74336c0729a9e13f4a9c097429731ac8b3f681f3e608db1af9072c9ff3685",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_gate_t1.cfg": {
+          "sha256": "6298c5ab7f0f585cfdd2b742c251b0c12ea15b97484c5cd5f3c4bfb45e1021bb",
+          "exact_file": "hls_prefill_double_gate_t1.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-195043-1382988/cosim_gate_t8.receipt.json": {
+      "receipt_sha256": "38d35659256f416d96b513090aef2916b425a8c23f9dc8f5b50827d78b8146de",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_gate_t8.cfg": {
+          "sha256": "072cccee9f08dd175476c9bc98613dc5bcc862561e44e7867b878df30cf81056",
+          "exact_file": "hls_prefill_double_gate_t8.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-200043-3511744/cosim_down_t1.receipt.json": {
+      "receipt_sha256": "c28148151aec0abd4ba929cf18ac4d0089c36a27499e6321b7788e189ce78384",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_down_t1.cfg": {
+          "sha256": "d2f5259b86ce8a01529f32a6193b957936bb0ae33264ee602388e1f9c17b71eb",
+          "exact_file": "hls_prefill_double_down_t1.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-200737-4719513/cosim_down_t8.receipt.json": {
+      "receipt_sha256": "fd3275cc4a2c3b4adcef550e7cc686498a5f7a7511b804ed9479dc5efbdfb357",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_v1.cpp": {
+          "sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+          "exact_file": "tb/tb_prefill_v1.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_down_t8.cfg": {
+          "sha256": "dcf713dd8368e4281fd3f3b703439a24b4dc5074dee5f5377a0e09265c579694",
+          "exact_file": "hls_prefill_double_down_t8.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "95c40dd57a0add18563f3569d32995d7dacfac535f82a5cc238941aad7e2637a",
+          "exact_file": "evidence/b03/sw32_nominal_runner/run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-203031-8566555/stall_cosim_basic.receipt.json": {
+      "receipt_sha256": "2a477dec6531afec4f1048c87b52bf520bd4f6611b18e797c60f6a6b15c6a793",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_bounds.cpp": {
+          "sha256": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+          "exact_file": "tb/tb_prefill_bounds.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_stall_basic.cfg": {
+          "sha256": "6144d3569dcc7016a7172fa1f1704b66a98faa02a5d0c5fac872bb48c41b3ab9",
+          "exact_file": "hls_prefill_double_stall_basic.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "0ec03054c30dd197900d5e1b803a1d1187d22b5b8869e35c574fc86f444e0491",
+          "exact_file": "run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/prefill_axi_stall.json": {
+          "sha256": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+          "exact_file": "tests/support/prefill_axi_stall.json",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-203501-2611087/stall_cosim_lifecycle.receipt.json": {
+      "receipt_sha256": "ae5adb94feb640d86abe5dbbe98b33f31dd813c5e62e6230fcc24d0a0a4adc68",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_bounds.cpp": {
+          "sha256": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+          "exact_file": "tb/tb_prefill_bounds.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_stall_lifecycle.cfg": {
+          "sha256": "c32fc03cdb9bebe873361961d95b2b6c14aae169d63098fb55f0331ff21d6689",
+          "exact_file": "hls_prefill_double_stall_lifecycle.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "0ec03054c30dd197900d5e1b803a1d1187d22b5b8869e35c574fc86f444e0491",
+          "exact_file": "run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/prefill_axi_stall.json": {
+          "sha256": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+          "exact_file": "tests/support/prefill_axi_stall.json",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-203926-5210555/stall_cosim_tail.receipt.json": {
+      "receipt_sha256": "57d66d531e5de0feadddd0c64e3698ffc3f490d440c4696ca6b1c53c3b2a83c1",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_bounds.cpp": {
+          "sha256": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+          "exact_file": "tb/tb_prefill_bounds.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_stall_tail.cfg": {
+          "sha256": "6a77908d27f1f2efd82e0d572e225c345a2ea1677f231fa9f902867e741389cc",
+          "exact_file": "hls_prefill_double_stall_tail.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "0ec03054c30dd197900d5e1b803a1d1187d22b5b8869e35c574fc86f444e0491",
+          "exact_file": "run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/prefill_axi_stall.json": {
+          "sha256": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+          "exact_file": "tests/support/prefill_axi_stall.json",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-205343-5552810/stall_cosim_max_k_postcheck_only.receipt.json": {
+      "receipt_sha256": "283445cb100ebd007bd2fd182eada3c642abc7e3b6aa3a6f4ee89e4093b47108",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_bounds.cpp": {
+          "sha256": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+          "exact_file": "tb/tb_prefill_bounds.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_stall_max_k.cfg": {
+          "sha256": "fcdf4b13dd10658bcdee11924c9d80e971b8a0092595c5f1ce4c95c235f7d6b7",
+          "exact_file": "hls_prefill_double_stall_max_k.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "0ec03054c30dd197900d5e1b803a1d1187d22b5b8869e35c574fc86f444e0491",
+          "exact_file": "run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/prefill_axi_stall.json": {
+          "sha256": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+          "exact_file": "tests/support/prefill_axi_stall.json",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    },
+    "reports/b03/double/20261002-205356-0523658/stall_cosim_max_n.receipt.json": {
+      "receipt_sha256": "402b7562a826d840becc2b810516cfe23431167998a3668147a9b56b698a2bba",
+      "input_resolution": {
+        "src/w4a8_prefill_v1.cpp": {
+          "sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+          "exact_file": "src/w4a8_prefill_v1.cpp",
+          "role": "design_source"
+        },
+        "src/w4a8_linear_v1.hpp": {
+          "sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+          "exact_file": "src/w4a8_linear_v1.hpp",
+          "role": "design_source"
+        },
+        "baseline/b02/src/w4a8_linear_v1.hpp": {
+          "sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+          "exact_file": "baseline/b02/src/w4a8_linear_v1.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/tb_prefill_bounds.cpp": {
+          "sha256": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+          "exact_file": "tb/tb_prefill_bounds.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tb/golden_w4a8.hpp": {
+          "sha256": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+          "exact_file": "tb/golden_w4a8.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "host/linear_validation.hpp": {
+          "sha256": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+          "exact_file": "host/linear_validation.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "reference/quantization.hpp": {
+          "sha256": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+          "exact_file": "reference/quantization.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/quantization_checks.hpp": {
+          "sha256": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+          "exact_file": "tests/support/quantization_checks.hpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/numerical/prefill_tensor_replay.cpp": {
+          "sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+          "exact_file": "tests/numerical/prefill_tensor_replay.cpp",
+          "role": "test/config/helper/auxiliary"
+        },
+        "hls_prefill_double_stall_max_n.cfg": {
+          "sha256": "8321cec8ca1e4e57e208b3066910d38ccff69fb45e514724305cd9c589cc8c42",
+          "exact_file": "hls_prefill_double_stall_max_n.cfg",
+          "role": "test/config/helper/auxiliary"
+        },
+        "run_prefill.ps1": {
+          "sha256": "0ec03054c30dd197900d5e1b803a1d1187d22b5b8869e35c574fc86f444e0491",
+          "exact_file": "run_prefill.ps1",
+          "role": "test/config/helper/auxiliary"
+        },
+        "tests/support/prefill_axi_stall.json": {
+          "sha256": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+          "exact_file": "tests/support/prefill_axi_stall.json",
+          "role": "test/config/helper/auxiliary"
+        }
+      }
+    }
+  },
+  "baseline_actual_design_header": "baseline/b02/src/w4a8_linear_v1.hpp",
+  "baseline_auxiliary_root_header_initial_sha256": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+  "historical_missing_tb_sha256": "f51a3a0d2c62b96239ad82e3a9f3492b94b9dcfdd7eb86ff26c0e0da890dfd00",
+  "historical_missing_tb_status": "NOT_RECOVERED_ORIGINAL_OLD_RECEIPTS_RETAINED_AS_HISTORY_ONLY",
+  "baseline_canonical_fresh_receipts": {
+    "status": "PASS",
+    "directory": "evidence/b03/supplement/baseline_refresh/20261003-010222-8758749",
+    "fresh_csim_transactions": 50,
+    "synthesis": "PASS",
+    "original_history_retained": true,
+    "double_candidate_unchanged": true,
+    "input_sha256": {
+      "baseline/b02/src/w4a8_linear_v1.cpp": "3b7eb37172fd9264b1db8eaffdbf92183542f0eeb4f8fe52b7eb599e20ec9625",
+      "baseline/b02/src/w4a8_linear_v1.hpp": "b19301fdad51d5292e707176c1e0170cf8cfc2862c65c425e16dae0df5db8fba",
+      "tb/tb_prefill_v1.cpp": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+      "tb/golden_w4a8.hpp": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+      "host/linear_validation.hpp": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+      "reference/quantization.hpp": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+      "tests/support/quantization_checks.hpp": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+      "hls_prefill_baseline.cfg": "cd6835a32d87bd4b22c26cdee75bae63f4b5edf803611b91b7d349c9c490e1a9",
+      "tools/refresh_prefill_baseline_provenance.ps1": "766537c0caf0cdaba8df769404b977aea6ba23e445bb3c77d73a08d07493d4a3"
+    }
+  },
+  "interpretation": "Fresh current-TB baseline Csim50/synthesis removes the missing historical TB from active source-to-test provenance. It does not reconstruct or retroactively authenticate the old TB.",
+  "A_static_audit_detail_provided": false,
+  "A_acceptance": "NOT_SIGNED_BY_B"
+}

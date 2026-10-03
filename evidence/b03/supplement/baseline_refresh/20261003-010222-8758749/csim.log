@@ -1,0 +1,419 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Sat Oct  3 09:02:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+INFO: [HLS 200-2005] Using work_dir D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749 
+
+INFO: [HLS 200-2006] Changing directory to D:/KV260-project-HLS/b_qwen35/build
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/vitis-comp.json
+
+INFO: [HLS 200-10] Creating and opening component 'D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749'.
+
+INFO: [HLS 200-2174] Applying component config ini file ../hls_prefill_baseline.cfg
+
+INFO: [HLS 200-1465] Applying config ini 'syn.file=baseline/b02/src/w4a8_linear_v1.cpp' from ../hls_prefill_baseline.cfg(5)
+
+INFO: [HLS 200-10] Adding design file 'D:/KV260-project-HLS/b_qwen35/baseline/b02/src/w4a8_linear_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -ffp-contract=off' from ../hls_prefill_baseline.cfg(7)
+
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb/tb_prefill_v1.cpp' from ../hls_prefill_baseline.cfg(8)
+
+INFO: [HLS 200-10] Adding test bench file 'D:/KV260-project-HLS/b_qwen35/tb/tb_prefill_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -ffp-contract=off' from ../hls_prefill_baseline.cfg(9)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.top=w4a8_linear_v1' from ../hls_prefill_baseline.cfg(6)
+
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vitis' from ../hls_prefill_baseline.cfg(4)
+
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vitis' value see below messsages for equivalent options.
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -default_axi=1
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from ../hls_prefill_baseline.cfg(1)
+
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+
+INFO: [HLS 200-1465] Applying config ini 'clock=6.667' from ../hls_prefill_baseline.cfg(10)
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=--suite b03_cosim' from ../hls_prefill_baseline.cfg(14)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=verilog' from ../hls_prefill_baseline.cfg(15)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from ../hls_prefill_baseline.cfg(16)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=port' from ../hls_prefill_baseline.cfg(17)
+
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=--suite full' from ../hls_prefill_baseline.cfg(13)
+
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=xo' from ../hls_prefill_baseline.cfg(18)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from ../hls_prefill_baseline.cfg(12)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.unsafe_math_optimizations=0' from ../hls_prefill_baseline.cfg(11)
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/vitis-comp.json
+
+INFO: [SIM 211-2] *************** CSIM start ***************
+
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+
+   Compiling ../../../../../tb/tb_prefill_v1.cpp in debug mode
+   Compiling ../../../../../baseline/b02/src/w4a8_linear_v1.cpp in debug mode
+   Generating csim.exe
+TRANSACTION index=0 case=hand_sample T=1 N=2 K=2 job=1000
+
+TRANSACTION index=1 case=hand_sample T=1 N=2 K=2 job=7777
+
+METRICS case=hand_sample max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=hand_sample T=1 N=2 K=2 source=synthetic seed=1
+
+TRANSACTION index=2 case=tile_random T=1 N=32 K=128 job=1002
+
+METRICS case=tile_random max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=tile_random T=1 N=32 K=128 source=synthetic seed=539365377
+
+TRANSACTION index=3 case=nk_tail T=1 N=33 K=129 job=1003
+
+METRICS case=nk_tail max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=nk_tail T=1 N=33 K=129 source=synthetic seed=539365378
+
+TRANSACTION index=4 case=three_groups T=1 N=65 K=257 job=1004
+
+METRICS case=three_groups max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=three_groups T=1 N=65 K=257 source=synthetic seed=539365379
+
+TRANSACTION index=5 case=single T=1 N=1 K=1 job=1005
+
+METRICS case=single max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=single T=1 N=1 K=1 source=synthetic seed=539365380
+
+TRANSACTION index=6 case=zeros T=1 N=33 K=129 job=1006
+
+METRICS case=zeros max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=zeros T=1 N=33 K=129 source=synthetic seed=539365381
+
+TRANSACTION index=7 case=extremes T=1 N=32 K=128 job=1007
+
+METRICS case=extremes max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=extremes T=1 N=32 K=128 source=synthetic seed=539365382
+
+TRANSACTION index=8 case=t4_compat T=4 N=33 K=129 job=1008
+
+METRICS case=t4_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=t4_compat T=4 N=33 K=129 source=synthetic seed=539365383
+
+TRANSACTION index=9 case=t8_compat T=8 N=1 K=1 job=1009
+
+METRICS case=t8_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=t8_compat T=8 N=1 K=1 source=synthetic seed=539365384
+
+TRANSACTION index=10 case=nonbinary_scale T=1 N=32 K=128 job=1010
+
+METRICS case=nonbinary_scale max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=nonbinary_scale T=1 N=32 K=128 source=synthetic seed=539365385
+
+TRANSACTION index=11 case=padding_reserved T=1 N=1 K=1 job=1011
+
+METRICS case=padding_reserved max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=padding_reserved T=1 N=1 K=1 source=synthetic seed=17
+
+PASS quantization checks=27 execution=HOST_REFERENCE
+
+PASS host_rejection=zero_job public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=zero_t public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=t_overflow public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=n_overflow public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=zero_k public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_weight public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_sw public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_x public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_sx public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_y public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_weight public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_sw public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_x public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_sx public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_y public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_a8 public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=activation_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_w4_low public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_w4_high public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=weight_k_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=weight_n_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=scale_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_zero public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_zero public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_negative public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_negative public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_nan public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_nan public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_positive_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_positive_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_negative_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_negative_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_validation rejection_cases=32 domain=HOST_ADAPTER
+
+TRANSACTION index=12 case=repeat_jobs T=2 N=33 K=129 job=1012
+
+TRANSACTION index=13 case=repeat_jobs T=2 N=33 K=129 job=7777
+
+METRICS case=repeat_jobs max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=repeat_jobs T=2 N=33 K=129 source=synthetic seed=539365410
+
+TRANSACTION index=14 case=repeat_jobs T=2 N=33 K=129 job=7777
+
+TRANSACTION index=15 case=repeat_jobs T=2 N=33 K=129 job=8888
+
+TRANSACTION index=16 case=repeat_jobs T=2 N=33 K=129 job=8888
+
+TRANSACTION index=17 case=repeat_jobs T=2 N=33 K=129 job=9999
+
+PASS repeat_jobs same_and_different=verified successes=5 rejected=1 kernel_count=46 output_consumed_on_error=false
+
+TRANSACTION index=18 case=errors T=1 N=33 K=129 job=9001
+
+TRANSACTION index=19 case=errors T=1 N=33 K=129 job=9002
+
+TRANSACTION index=20 case=errors T=1 N=33 K=129 job=9003
+
+TRANSACTION index=21 case=errors T=1 N=33 K=129 job=9004
+
+TRANSACTION index=22 case=high_reserved T=1 N=2 K=1 job=9005
+
+PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble
+
+TRANSACTION index=23 case=prefill_tail_t2 T=2 N=65 K=257 job=1023
+
+METRICS case=prefill_tail_t2 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t2 T=2 N=65 K=257 source=synthetic seed=539365381
+
+TRANSACTION index=24 case=prefill_tail_t3 T=3 N=65 K=257 job=1024
+
+METRICS case=prefill_tail_t3 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t3 T=3 N=65 K=257 source=synthetic seed=539365382
+
+TRANSACTION index=25 case=prefill_tail_t5 T=5 N=65 K=257 job=1025
+
+METRICS case=prefill_tail_t5 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t5 T=5 N=65 K=257 source=synthetic seed=539365384
+
+TRANSACTION index=26 case=prefill_tail_t6 T=6 N=65 K=257 job=1026
+
+METRICS case=prefill_tail_t6 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t6 T=6 N=65 K=257 source=synthetic seed=539365385
+
+TRANSACTION index=27 case=prefill_tail_t7 T=7 N=65 K=257 job=1027
+
+METRICS case=prefill_tail_t7 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t7 T=7 N=65 K=257 source=synthetic seed=539365386
+
+TRANSACTION index=28 case=prefill_tail_t8 T=8 N=65 K=257 job=1028
+
+TRANSACTION index=29 case=prefill_tail_t8 T=8 N=65 K=257 job=7777
+
+METRICS case=prefill_tail_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t8 T=8 N=65 K=257 source=synthetic seed=539365387
+
+TRANSACTION index=30 case=mlp_up_synthetic T=1 N=4864 K=896 job=1030
+
+METRICS case=mlp_up_synthetic max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=mlp_up_synthetic T=1 N=4864 K=896 source=synthetic seed=1214515350
+
+TRANSACTION index=31 case=mlp_down_synthetic T=1 N=896 K=4864 job=1031
+
+METRICS case=mlp_down_synthetic max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=mlp_down_synthetic T=1 N=896 K=4864 source=synthetic seed=1214515351
+
+TRANSACTION index=32 case=projection_synthetic T=1 N=896 K=896 job=1032
+
+METRICS case=projection_synthetic max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=projection_synthetic T=1 N=896 K=896 source=synthetic seed=1214515352
+
+TRANSACTION index=33 case=small_projection_synthetic T=1 N=128 K=896 job=1033
+
+METRICS case=small_projection_synthetic max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=small_projection_synthetic T=1 N=128 K=896 source=synthetic seed=1214515353
+
+TRANSACTION index=34 case=qwen35_gate_up_t1 T=1 N=3584 K=1024 job=1034
+
+METRICS case=qwen35_gate_up_t1 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t1 T=1 N=3584 K=1024 source=synthetic seed=539365379
+
+TRANSACTION index=35 case=qwen35_gate_up_t2 T=2 N=3584 K=1024 job=1035
+
+METRICS case=qwen35_gate_up_t2 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t2 T=2 N=3584 K=1024 source=synthetic seed=539365380
+
+TRANSACTION index=36 case=qwen35_gate_up_t3 T=3 N=3584 K=1024 job=1036
+
+METRICS case=qwen35_gate_up_t3 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t3 T=3 N=3584 K=1024 source=synthetic seed=539365381
+
+TRANSACTION index=37 case=qwen35_gate_up_t4 T=4 N=3584 K=1024 job=1037
+
+METRICS case=qwen35_gate_up_t4 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t4 T=4 N=3584 K=1024 source=synthetic seed=539365382
+
+TRANSACTION index=38 case=qwen35_gate_up_t5 T=5 N=3584 K=1024 job=1038
+
+METRICS case=qwen35_gate_up_t5 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t5 T=5 N=3584 K=1024 source=synthetic seed=539365383
+
+TRANSACTION index=39 case=qwen35_gate_up_t6 T=6 N=3584 K=1024 job=1039
+
+METRICS case=qwen35_gate_up_t6 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t6 T=6 N=3584 K=1024 source=synthetic seed=539365384
+
+TRANSACTION index=40 case=qwen35_gate_up_t7 T=7 N=3584 K=1024 job=1040
+
+METRICS case=qwen35_gate_up_t7 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t7 T=7 N=3584 K=1024 source=synthetic seed=539365385
+
+TRANSACTION index=41 case=qwen35_gate_up_t8 T=8 N=3584 K=1024 job=1041
+
+METRICS case=qwen35_gate_up_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_gate_up_t8 T=8 N=3584 K=1024 source=synthetic seed=539365386
+
+TRANSACTION index=42 case=qwen35_down_t1 T=1 N=1024 K=3584 job=1042
+
+METRICS case=qwen35_down_t1 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t1 T=1 N=1024 K=3584 source=synthetic seed=539365635
+
+TRANSACTION index=43 case=qwen35_down_t2 T=2 N=1024 K=3584 job=1043
+
+METRICS case=qwen35_down_t2 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t2 T=2 N=1024 K=3584 source=synthetic seed=539365636
+
+TRANSACTION index=44 case=qwen35_down_t3 T=3 N=1024 K=3584 job=1044
+
+METRICS case=qwen35_down_t3 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t3 T=3 N=1024 K=3584 source=synthetic seed=539365637
+
+TRANSACTION index=45 case=qwen35_down_t4 T=4 N=1024 K=3584 job=1045
+
+METRICS case=qwen35_down_t4 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t4 T=4 N=1024 K=3584 source=synthetic seed=539365638
+
+TRANSACTION index=46 case=qwen35_down_t5 T=5 N=1024 K=3584 job=1046
+
+METRICS case=qwen35_down_t5 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t5 T=5 N=1024 K=3584 source=synthetic seed=539365639
+
+TRANSACTION index=47 case=qwen35_down_t6 T=6 N=1024 K=3584 job=1047
+
+METRICS case=qwen35_down_t6 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t6 T=6 N=1024 K=3584 source=synthetic seed=539365640
+
+TRANSACTION index=48 case=qwen35_down_t7 T=7 N=1024 K=3584 job=1048
+
+METRICS case=qwen35_down_t7 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t7 T=7 N=1024 K=3584 source=synthetic seed=539365641
+
+TRANSACTION index=49 case=qwen35_down_t8 T=8 N=1024 K=3584 job=1049
+
+METRICS case=qwen35_down_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=qwen35_down_t8 T=8 N=1024 K=3584 source=synthetic seed=539365642
+
+B03 PASS suite=full source=synthetic transactions=50 int32_partial_checks=2146524 fp32_output_checks=176704
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+
+INFO: [SIM 211-3] *************** CSIM finish ***************
+
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 6 seconds. Total elapsed time: 25.198 seconds; peak allocated memory: 428.652 MB.
+
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 30s

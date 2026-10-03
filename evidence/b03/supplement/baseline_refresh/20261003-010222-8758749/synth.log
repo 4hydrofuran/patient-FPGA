@@ -1,0 +1,741 @@
+
+****** v++ v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Sat Oct  3 09:03:04 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+INFO: [HLS 200-2005] Using work_dir D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749 
+
+INFO: [HLS 200-2006] Changing directory to D:/KV260-project-HLS/b_qwen35/build
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/vitis-comp.json
+
+INFO: [HLS 200-10] Creating and opening component 'D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749'.
+
+INFO: [HLS 200-2174] Applying component config ini file ../hls_prefill_baseline.cfg
+
+INFO: [HLS 200-1465] Applying config ini 'syn.file=baseline/b02/src/w4a8_linear_v1.cpp' from ../hls_prefill_baseline.cfg(5)
+
+INFO: [HLS 200-10] Adding design file 'D:/KV260-project-HLS/b_qwen35/baseline/b02/src/w4a8_linear_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -ffp-contract=off' from ../hls_prefill_baseline.cfg(7)
+
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb/tb_prefill_v1.cpp' from ../hls_prefill_baseline.cfg(8)
+
+INFO: [HLS 200-10] Adding test bench file 'D:/KV260-project-HLS/b_qwen35/tb/tb_prefill_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -ffp-contract=off' from ../hls_prefill_baseline.cfg(9)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.top=w4a8_linear_v1' from ../hls_prefill_baseline.cfg(6)
+
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vitis' from ../hls_prefill_baseline.cfg(4)
+
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vitis' value see below messsages for equivalent options.
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -default_axi=1
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from ../hls_prefill_baseline.cfg(1)
+
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+
+INFO: [HLS 200-1465] Applying config ini 'clock=6.667' from ../hls_prefill_baseline.cfg(10)
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=--suite b03_cosim' from ../hls_prefill_baseline.cfg(14)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=verilog' from ../hls_prefill_baseline.cfg(15)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from ../hls_prefill_baseline.cfg(16)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=port' from ../hls_prefill_baseline.cfg(17)
+
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=--suite full' from ../hls_prefill_baseline.cfg(13)
+
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=xo' from ../hls_prefill_baseline.cfg(18)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from ../hls_prefill_baseline.cfg(12)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.unsafe_math_optimizations=0' from ../hls_prefill_baseline.cfg(11)
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/vitis-comp.json
+
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 6 seconds. Elapsed time: 10.023 seconds; current allocated memory: 427.734 MB.
+
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+
+INFO: [HLS 200-10] Analyzing design file '../baseline/b02/src/w4a8_linear_v1.cpp' ... 
+
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.15 seconds; current allocated memory: 431.016 MB.
+
+INFO: [HLS 200-1995] There were 663 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::load_weight_tile(unsigned char const*, unsigned long long, unsigned char*)' into '(anonymous namespace)::contains_invalid_w4(unsigned char const*, unsigned int, unsigned int, unsigned int)' (../baseline/b02/src/w4a8_linear_v1.cpp:102:13)
+
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::load_weight_tile(unsigned char const*, unsigned long long, unsigned char*)' into 'w4a8_linear_v1' (../baseline/b02/src/w4a8_linear_v1.cpp:454:17)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_57_2' is marked as complete unroll implied by the pipeline pragma (../baseline/b02/src/w4a8_linear_v1.cpp:57:26)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_174_3' is marked as complete unroll implied by the pipeline pragma (../baseline/b02/src/w4a8_linear_v1.cpp:174:27)
+
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_114_4' is marked as complete unroll implied by the pipeline pragma (../baseline/b02/src/w4a8_linear_v1.cpp:114:35)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_57_2' (../baseline/b02/src/w4a8_linear_v1.cpp:57:26) in function 'w4a8_linear_v1' completely with a factor of 16 (../baseline/b02/src/w4a8_linear_v1.cpp:249:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_174_3' (../baseline/b02/src/w4a8_linear_v1.cpp:174:27) in function 'w4a8_tile_group_sums' completely with a factor of 32 (../baseline/b02/src/w4a8_linear_v1.cpp:146:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_155_1' (../baseline/b02/src/w4a8_linear_v1.cpp:155:23) in function 'w4a8_tile_group_sums' completely with a factor of 32 (../baseline/b02/src/w4a8_linear_v1.cpp:146:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_57_2' (../baseline/b02/src/w4a8_linear_v1.cpp:57:26) in function '(anonymous namespace)::contains_invalid_w4' completely with a factor of 16 (../baseline/b02/src/w4a8_linear_v1.cpp:73:0)
+
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_114_4' (../baseline/b02/src/w4a8_linear_v1.cpp:114:35) in function '(anonymous namespace)::contains_invalid_w4' completely with a factor of 32 (../baseline/b02/src/w4a8_linear_v1.cpp:73:0)
+
+INFO: [HLS 200-1995] There were 1,951 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,521 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-178] Inlining function '(anonymous namespace)::round_up(unsigned int, unsigned int)' into 'w4a8_linear_v1' (../baseline/b02/src/w4a8_linear_v1.cpp:249:0)
+
+INFO: [HLS 200-1995] There were 1,361 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,347 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-248] Applying array_partition to 'sums': Complete partitioning on dimension 1. (../baseline/b02/src/w4a8_linear_v1.cpp:412:18)
+
+INFO: [HLS 200-1995] There were 1,471 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,471 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,471 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-248] Applying array_reshape to 'weight_tile': Cyclic reshaping with factor 16 on dimension 1. (../baseline/b02/src/w4a8_linear_v1.cpp:75:18)
+
+INFO: [HLS 214-248] Applying array_reshape to 'weight_tile': Cyclic reshaping with factor 16 on dimension 1. (../baseline/b02/src/w4a8_linear_v1.cpp:394:18)
+
+INFO: [HLS 200-1995] There were 1,825 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,397 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,377 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,342 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,341 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,341 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 has been inferred on bundle 'gmem_w'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../baseline/b02/src/w4a8_linear_v1.cpp:85:22)
+
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 has been inferred on bundle 'gmem_x'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../baseline/b02/src/w4a8_linear_v1.cpp:428:27)
+
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 has been inferred on bundle 'gmem_w'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../baseline/b02/src/w4a8_linear_v1.cpp:435:27)
+
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'gmem_sw'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../baseline/b02/src/w4a8_linear_v1.cpp:435:27)
+
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 has been inferred on bundle 'gmem_y'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../baseline/b02/src/w4a8_linear_v1.cpp:435:27)
+
+INFO: [HLS 200-1995] There were 1,599 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-1995] There were 1,572 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/report/csynth_design_size.rpt:2)
+
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.731 seconds; current allocated memory: 434.184 MB.
+
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 434.184 MB.
+
+INFO: [HLS 200-10] Starting code transformations ...
+
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 440.602 MB.
+
+INFO: [HLS 200-10] Checking synthesizability ...
+
+INFO: [XFORM 203-602] Inlining function '(anonymous namespace)::decode_w4' into 'w4a8_tile_group_sums' (../baseline/b02/src/w4a8_linear_v1.cpp:186) automatically.
+
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 442.969 MB.
+
+WARNING: [XFORM 203-561] Updating loop trip count lower bound from 0 to 1 for loop 'VITIS_LOOP_448_5' (../baseline/b02/src/w4a8_linear_v1.cpp:448:50) in function 'w4a8_linear_v1'.
+
+WARNING: [XFORM 203-561] Updating loop trip count lower bound from 0 to 1 for loop 'VITIS_LOOP_435_3' (../baseline/b02/src/w4a8_linear_v1.cpp:435:46) in function 'w4a8_linear_v1'.
+
+INFO: [XFORM 203-602] Inlining function '(anonymous namespace)::decode_w4' into 'w4a8_tile_group_sums' (../baseline/b02/src/w4a8_linear_v1.cpp:186) automatically.
+
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../baseline/b02/src/w4a8_linear_v1.cpp:503:1) to (../baseline/b02/src/w4a8_linear_v1.cpp:500:31) in function 'w4a8_linear_v1'... converting 3 basic blocks.
+
+INFO: [XFORM 203-11] Balancing expressions in function 'w4a8_linear_v1' (../baseline/b02/src/w4a8_linear_v1.cpp:10:35)...4 expression(s) balanced.
+
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 465.949 MB.
+
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.401 seconds; current allocated memory: 567.461 MB.
+
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+
+INFO: [HLS 200-10] Starting hardware synthesis ...
+
+INFO: [HLS 200-10] Synthesizing 'w4a8_linear_v1' ...
+
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)write_meta' to 'p_anonymous_namespace_write_meta'.
+
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)contains_invalid_w4_Pipeline_VITIS_LOOP_51_1' to 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1'.
+
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)contains_invalid_w4_Pipeline_VITIS_LOOP_105_3' to 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3'.
+
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)contains_invalid_w4' to 'p_anonymous_namespace_contains_invalid_w4'.
+
+INFO: [HLS 200-10] ----------------------------------------------------------------
+
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_write_meta' 
+
+INFO: [HLS 200-10] ----------------------------------------------------------------
+
+INFO: [SCHED 204-11] Starting scheduling ...
+
+INFO: [SCHED 204-11] Finished scheduling.
+
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.939 seconds; current allocated memory: 571.848 MB.
+
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 573.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_51_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 574.543 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 574.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_105_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_105_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 576.562 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 576.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_contains_invalid_w4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 577.930 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 578.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_428_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_428_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.428 seconds; current allocated memory: 578.582 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 578.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_438_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_438_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_438_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 578.848 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 578.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_51_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 578.980 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 579.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_469_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_469_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 579.375 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 579.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_tile_group_sums' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln189) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_165_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_165_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.915 seconds; current allocated memory: 583.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.879 seconds; current allocated memory: 584.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_486_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_486_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 21, loop 'VITIS_LOOP_486_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 584.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 584.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_500_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_500_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_500_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.054 seconds; current allocated memory: 584.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 584.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_510_9'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_510_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 584.988 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 585.027 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'w4a8_linear_v1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 588.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.469 seconds; current allocated memory: 589.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_write_meta' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_write_meta'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 592.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1' pipeline 'VITIS_LOOP_51_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.396 seconds; current allocated memory: 595.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3' pipeline 'VITIS_LOOP_105_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 597.426 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_contains_invalid_w4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_27ns_52_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_contains_invalid_w4'.
+INFO: [RTMG 210-278] Implementing memory 'w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_weight_tile_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.258 seconds; current allocated memory: 603.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2' pipeline 'VITIS_LOOP_428_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2/m_axi_gmem_x_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_428_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.372 seconds; current allocated memory: 606.539 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_438_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_438_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 607.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1' pipeline 'VITIS_LOOP_51_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1/m_axi_gmem_w_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.3 seconds; current allocated memory: 607.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6' pipeline 'VITIS_LOOP_469_6' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6/m_axi_gmem_sw_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_469_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 608.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_tile_group_sums' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_tile_group_sums' pipeline 'VITIS_LOOP_165_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_4s_19s_19_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_5s_20s_20_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_tile_group_sums'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 616.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_486_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_486_7' pipeline 'VITIS_LOOP_486_7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_6_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_65_5_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_486_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.585 seconds; current allocated memory: 625.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_500_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_500_8' pipeline 'VITIS_LOOP_500_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_500_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 626.340 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9' pipeline 'VITIS_LOOP_510_9' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9/m_axi_gmem_y_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1_Pipeline_VITIS_LOOP_510_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 626.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'w4a8_linear_v1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/gmem_w' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/gmem_sw' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/gmem_x' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/gmem_y' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/gmem_meta' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/w_packed' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/sw' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/xq' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/sx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/meta' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/t' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/n' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/k' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/w_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/sw_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/x_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/sx_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/y_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/meta_bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/job_id' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'w4a8_linear_v1/abi_version' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'w4a8_linear_v1' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'w_packed', 'sw', 'xq', 'sx', 'y', 'meta', 't', 'n', 'k', 'w_bytes', 'sw_bytes', 'x_bytes', 'sx_bytes', 'y_bytes', 'meta_bytes', 'job_id', 'abi_version' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_25ns_27ns_52_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_25ns_57_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_62_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'w4a8_linear_v1'.
+INFO: [RTMG 210-278] Implementing memory 'w4a8_linear_v1_weight_tile_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'w4a8_linear_v1_token_activations_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'w4a8_linear_v1_scale_tile_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'w4a8_linear_v1_totals_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.926 seconds; current allocated memory: 637.180 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.796 seconds; current allocated memory: 645.605 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 4.324 seconds; current allocated memory: 662.938 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for w4a8_linear_v1.
+INFO: [VLOG 209-307] Generating Verilog RTL for w4a8_linear_v1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 190.81 MHz
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 18-sep-2026.
+
+
+
+****** Vivado v2026.1 (64-bit)
+
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+
+  **** Start of session at: Sat Oct  3 09:04:08 2026
+
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+INFO: [Common 17-1239] XILINX_LOCAL_USER_DATA is set to 'D:/codex-vivado-userdata'.
+
+source run_ippack.tcl -notrace
+
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/hls_data.json outdir=D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip srcdir=D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls ippack_options_dict= ippack_options_dict=
+
+INFO: Copied 1 ipmisc file(s) to D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/misc
+
+INFO: Copied 35 verilog file(s) to D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/verilog
+
+INFO: Copied 35 vhdl file(s) to D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/vhdl
+
+INFO: Copied 10 swdriver file(s) to D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/drivers
+
+Generating 3 subcores in D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/subcore_prj:
+
+impl/misc/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip.tcl
+
+impl/misc/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+
+impl/misc/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip.tcl
+
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+
+Current project path is 'D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/subcore_prj'
+
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 703.289 ; gain = 272.477
+
+INFO: Using COE_DIR=D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/verilog
+
+INFO: Generating w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip via file impl/misc/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip.tcl
+
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2026.1/2026.1/Vivado/data/ip'.
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip'...
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip'...
+
+INFO: Done generating w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip via file impl/misc/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip.tcl
+
+INFO: Generating w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+
+INFO: Done generating w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+
+INFO: Generating w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip via file impl/misc/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip.tcl
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip'...
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip'...
+
+INFO: Done generating w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip via file impl/misc/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip.tcl
+
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+
+INFO: Copied 3 subcore files: D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/ip/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip.xci D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/ip/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/ip/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip.xci
+
+INFO: Import ports from HDL: D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/hdl/vhdl/w4a8_linear_v1.vhd (w4a8_linear_v1)
+
+INFO: Add axi4lite interface s_axi_control
+
+INFO: Add clock interface ap_clk
+
+INFO: Add reset interface ap_rst_n
+
+INFO: Add interrupt interface interrupt
+
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2026.1/2026.1/Vivado/data/ip'.
+
+INFO: Add axi4full interface m_axi_gmem_w
+
+INFO: Add axi4full interface m_axi_gmem_sw
+
+INFO: Add axi4full interface m_axi_gmem_x
+
+INFO: Add axi4full interface m_axi_gmem_y
+
+INFO: Add axi4full interface m_axi_gmem_meta
+
+INFO: Calling post_process_vitis to specialize IP
+
+INFO: Calling post_process_sysgen to specialize IP
+
+Generating sysgen info xml from json file
+
+INFO: Created IP D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/component.xml
+
+Generating XO file: w4a8_linear_v1.xo in directory D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/..
+
+Running: package_xo -xo_path D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/../w4a8_linear_v1.xo -kernel_xml D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/kernel.xml -kernel_name w4a8_linear_v1 -ip_directory D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip -kernel_files D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/../../../baseline/b02/src/w4a8_linear_v1.cpp -hls_directory D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/misc/hls_files -kernel_json D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/hls_data.json
+
+INFO: Created IP archive D:/KV260-project-HLS/b_qwen35/build/b03_baseline_supplement_20261003-010222-8758749/hls/impl/ip/xilinx_com_hls_w4a8_linear_v1_1_0.zip
+
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  3 09:04:56 2026...
+
+INFO: [HLS 200-802] Generated output file b03_baseline_supplement_20261003-010222-8758749/w4a8_linear_v1.xo
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 13 seconds. Total elapsed time: 107.077 seconds; peak allocated memory: 669.742 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 52s

@@ -1,0 +1,49 @@
+{
+  "failures": [
+    {
+      "attempt": "b03_supplement_replay_original",
+      "status": "FAIL_NOT_ACCEPTED",
+      "reason": "Binary TV first header field is reserved zero, not the transaction index; parser corrected before acceptance",
+      "logs": [
+        {
+          "path": "evidence/b03/supplement/attempts/b03_supplement_replay_original/compile.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "original_rtl_unchanged": true
+    },
+    {
+      "attempt": "b03_supplement_replay_v2",
+      "status": "FAIL_NOT_ACCEPTED",
+      "reason": "Windows CRT could not convert Chinese absolute job path; no numerical acceptance",
+      "logs": [
+        {
+          "path": "evidence/b03/supplement/attempts/b03_supplement_replay_v2/compile.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/b03/supplement/attempts/b03_supplement_replay_v2/smoke/0/replay.log",
+          "sha256": "8747d2376e7b586b72d8a420bfc9aeb41a4d399e9f6d1417e22f92817753b975"
+        }
+      ],
+      "original_rtl_unchanged": true
+    },
+    {
+      "attempt": "b03_supplement_replay_v3",
+      "status": "FAIL_NOT_ACCEPTED",
+      "reason": "UTF-8 path construction alone insufficient for CRT argv; corrected with ASCII relative job paths",
+      "logs": [
+        {
+          "path": "evidence/b03/supplement/attempts/b03_supplement_replay_v3/compile.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/b03/supplement/attempts/b03_supplement_replay_v3/smoke/0/replay.log",
+          "sha256": "8747d2376e7b586b72d8a420bfc9aeb41a4d399e9f6d1417e22f92817753b975"
+        }
+      ],
+      "original_rtl_unchanged": true
+    }
+  ],
+  "accepted_replay": "reports/b03/supplement_rtl_replay.json"
+}

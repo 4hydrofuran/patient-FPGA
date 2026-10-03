@@ -1,0 +1,348 @@
+
+
+================================================================
+== Vitis HLS Report for 'w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2'
+================================================================
+* Date:           Sat Oct  3 03:34:19 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        b03_double_hls
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  2.351 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      133|      133|  0.887 us|  0.887 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_165_2  |      131|      131|         5|          1|          1|   128|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|    32|       -|       -|    -|
+|Expression       |        -|     -|       0|      65|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     612|    -|
+|Register         |        -|     -|     690|      32|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|    32|     690|     709|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     2|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    +----------------------------------+-----------------------------+--------------+
+    |             Instance             |            Module           |  Expression  |
+    +----------------------------------+-----------------------------+--------------+
+    |mac_muladd_8s_4s_19s_19_4_1_U91   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U92   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U93   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U94   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U95   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U96   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U97   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U98   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U99   |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U100  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U101  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U102  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U103  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U104  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U105  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U106  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U107  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U108  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U109  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U110  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U111  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U112  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U113  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U114  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U115  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U116  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U117  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U118  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U119  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U120  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U121  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    |mac_muladd_8s_4s_19s_19_4_1_U122  |mac_muladd_8s_4s_19s_19_4_1  |  i0 * i1 + i2|
+    +----------------------------------+-----------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln165_fu_814_p2    |         +|   0|  0|  15|           8|           1|
+    |add_ln171_1_fu_835_p2  |         +|   0|  0|  16|          16|          16|
+    |add_ln171_fu_829_p2    |         +|   0|  0|  16|          16|          16|
+    |icmp_ln165_fu_808_p2   |      icmp|   0|  0|  16|           8|           9|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  65|          49|          44|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                     |   9|          2|    1|          2|
+    |ap_sig_allocacmp_remainder_1                |   9|          2|    8|         16|
+    |ap_sig_allocacmp_sums_write_assign_32_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_33_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_34_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_35_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_36_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_37_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_38_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_39_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_40_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_41_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_42_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_43_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_44_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_45_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_46_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_47_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_48_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_49_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_50_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_51_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_52_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_53_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_54_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_55_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_56_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_57_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_58_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_59_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_60_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_61_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_62_load  |   9|          2|   19|         38|
+    |ap_sig_allocacmp_sums_write_assign_load     |   9|          2|   19|         38|
+    |remainder_fu_374                            |   9|          2|    8|         16|
+    |sums_write_assign_32_fu_250                 |   9|          2|   19|         38|
+    |sums_write_assign_33_fu_254                 |   9|          2|   19|         38|
+    |sums_write_assign_34_fu_258                 |   9|          2|   19|         38|
+    |sums_write_assign_35_fu_262                 |   9|          2|   19|         38|
+    |sums_write_assign_36_fu_266                 |   9|          2|   19|         38|
+    |sums_write_assign_37_fu_270                 |   9|          2|   19|         38|
+    |sums_write_assign_38_fu_274                 |   9|          2|   19|         38|
+    |sums_write_assign_39_fu_278                 |   9|          2|   19|         38|
+    |sums_write_assign_40_fu_282                 |   9|          2|   19|         38|
+    |sums_write_assign_41_fu_286                 |   9|          2|   19|         38|
+    |sums_write_assign_42_fu_290                 |   9|          2|   19|         38|
+    |sums_write_assign_43_fu_294                 |   9|          2|   19|         38|
+    |sums_write_assign_44_fu_298                 |   9|          2|   19|         38|
+    |sums_write_assign_45_fu_302                 |   9|          2|   19|         38|
+    |sums_write_assign_46_fu_306                 |   9|          2|   19|         38|
+    |sums_write_assign_47_fu_310                 |   9|          2|   19|         38|
+    |sums_write_assign_48_fu_314                 |   9|          2|   19|         38|
+    |sums_write_assign_49_fu_318                 |   9|          2|   19|         38|
+    |sums_write_assign_50_fu_322                 |   9|          2|   19|         38|
+    |sums_write_assign_51_fu_326                 |   9|          2|   19|         38|
+    |sums_write_assign_52_fu_330                 |   9|          2|   19|         38|
+    |sums_write_assign_53_fu_334                 |   9|          2|   19|         38|
+    |sums_write_assign_54_fu_338                 |   9|          2|   19|         38|
+    |sums_write_assign_55_fu_342                 |   9|          2|   19|         38|
+    |sums_write_assign_56_fu_346                 |   9|          2|   19|         38|
+    |sums_write_assign_57_fu_350                 |   9|          2|   19|         38|
+    |sums_write_assign_58_fu_354                 |   9|          2|   19|         38|
+    |sums_write_assign_59_fu_358                 |   9|          2|   19|         38|
+    |sums_write_assign_60_fu_362                 |   9|          2|   19|         38|
+    |sums_write_assign_61_fu_366                 |   9|          2|   19|         38|
+    |sums_write_assign_62_fu_370                 |   9|          2|   19|         38|
+    |sums_write_assign_fu_246                    |   9|          2|   19|         38|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       | 612|        136| 1234|       2468|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |icmp_ln165_reg_2200               |   1|   0|    1|          0|
+    |remainder_fu_374                  |   8|   0|    8|          0|
+    |sums_write_assign_32_fu_250       |  19|   0|   19|          0|
+    |sums_write_assign_33_fu_254       |  19|   0|   19|          0|
+    |sums_write_assign_34_fu_258       |  19|   0|   19|          0|
+    |sums_write_assign_35_fu_262       |  19|   0|   19|          0|
+    |sums_write_assign_36_fu_266       |  19|   0|   19|          0|
+    |sums_write_assign_37_fu_270       |  19|   0|   19|          0|
+    |sums_write_assign_38_fu_274       |  19|   0|   19|          0|
+    |sums_write_assign_39_fu_278       |  19|   0|   19|          0|
+    |sums_write_assign_40_fu_282       |  19|   0|   19|          0|
+    |sums_write_assign_41_fu_286       |  19|   0|   19|          0|
+    |sums_write_assign_42_fu_290       |  19|   0|   19|          0|
+    |sums_write_assign_43_fu_294       |  19|   0|   19|          0|
+    |sums_write_assign_44_fu_298       |  19|   0|   19|          0|
+    |sums_write_assign_45_fu_302       |  19|   0|   19|          0|
+    |sums_write_assign_46_fu_306       |  19|   0|   19|          0|
+    |sums_write_assign_47_fu_310       |  19|   0|   19|          0|
+    |sums_write_assign_48_fu_314       |  19|   0|   19|          0|
+    |sums_write_assign_49_fu_318       |  19|   0|   19|          0|
+    |sums_write_assign_50_fu_322       |  19|   0|   19|          0|
+    |sums_write_assign_51_fu_326       |  19|   0|   19|          0|
+    |sums_write_assign_52_fu_330       |  19|   0|   19|          0|
+    |sums_write_assign_53_fu_334       |  19|   0|   19|          0|
+    |sums_write_assign_54_fu_338       |  19|   0|   19|          0|
+    |sums_write_assign_55_fu_342       |  19|   0|   19|          0|
+    |sums_write_assign_56_fu_346       |  19|   0|   19|          0|
+    |sums_write_assign_57_fu_350       |  19|   0|   19|          0|
+    |sums_write_assign_58_fu_354       |  19|   0|   19|          0|
+    |sums_write_assign_59_fu_358       |  19|   0|   19|          0|
+    |sums_write_assign_60_fu_362       |  19|   0|   19|          0|
+    |sums_write_assign_61_fu_366       |  19|   0|   19|          0|
+    |sums_write_assign_62_fu_370       |  19|   0|   19|          0|
+    |sums_write_assign_fu_246          |  19|   0|   19|          0|
+    |icmp_ln165_reg_2200               |  64|  32|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 690|  32|  627|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |                  Source Object                 |    C Type    |
++---------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2|  return value|
+|empty                            |   in|   16|   ap_stable|                                           empty|        scalar|
+|mul_ln171                        |   in|   16|     ap_none|                                       mul_ln171|        scalar|
+|activations_address0             |  out|   16|   ap_stable|                                     activations|         array|
+|activations_ce0                  |  out|    1|   ap_stable|                                     activations|         array|
+|activations_q0                   |   in|    8|   ap_stable|                                     activations|         array|
+|weights_address0                 |  out|    7|   ap_stable|                                         weights|         array|
+|weights_ce0                      |  out|    1|   ap_stable|                                         weights|         array|
+|weights_q0                       |   in|  128|   ap_stable|                                         weights|         array|
+|sums_write_assign_62_out         |  out|   19|      ap_vld|                        sums_write_assign_62_out|       pointer|
+|sums_write_assign_62_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_62_out|       pointer|
+|sums_write_assign_61_out         |  out|   19|      ap_vld|                        sums_write_assign_61_out|       pointer|
+|sums_write_assign_61_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_61_out|       pointer|
+|sums_write_assign_60_out         |  out|   19|      ap_vld|                        sums_write_assign_60_out|       pointer|
+|sums_write_assign_60_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_60_out|       pointer|
+|sums_write_assign_59_out         |  out|   19|      ap_vld|                        sums_write_assign_59_out|       pointer|
+|sums_write_assign_59_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_59_out|       pointer|
+|sums_write_assign_58_out         |  out|   19|      ap_vld|                        sums_write_assign_58_out|       pointer|
+|sums_write_assign_58_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_58_out|       pointer|
+|sums_write_assign_57_out         |  out|   19|      ap_vld|                        sums_write_assign_57_out|       pointer|
+|sums_write_assign_57_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_57_out|       pointer|
+|sums_write_assign_56_out         |  out|   19|      ap_vld|                        sums_write_assign_56_out|       pointer|
+|sums_write_assign_56_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_56_out|       pointer|
+|sums_write_assign_55_out         |  out|   19|      ap_vld|                        sums_write_assign_55_out|       pointer|
+|sums_write_assign_55_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_55_out|       pointer|
+|sums_write_assign_54_out         |  out|   19|      ap_vld|                        sums_write_assign_54_out|       pointer|
+|sums_write_assign_54_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_54_out|       pointer|
+|sums_write_assign_53_out         |  out|   19|      ap_vld|                        sums_write_assign_53_out|       pointer|
+|sums_write_assign_53_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_53_out|       pointer|
+|sums_write_assign_52_out         |  out|   19|      ap_vld|                        sums_write_assign_52_out|       pointer|
+|sums_write_assign_52_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_52_out|       pointer|
+|sums_write_assign_51_out         |  out|   19|      ap_vld|                        sums_write_assign_51_out|       pointer|
+|sums_write_assign_51_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_51_out|       pointer|
+|sums_write_assign_50_out         |  out|   19|      ap_vld|                        sums_write_assign_50_out|       pointer|
+|sums_write_assign_50_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_50_out|       pointer|
+|sums_write_assign_49_out         |  out|   19|      ap_vld|                        sums_write_assign_49_out|       pointer|
+|sums_write_assign_49_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_49_out|       pointer|
+|sums_write_assign_48_out         |  out|   19|      ap_vld|                        sums_write_assign_48_out|       pointer|
+|sums_write_assign_48_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_48_out|       pointer|
+|sums_write_assign_47_out         |  out|   19|      ap_vld|                        sums_write_assign_47_out|       pointer|
+|sums_write_assign_47_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_47_out|       pointer|
+|sums_write_assign_46_out         |  out|   19|      ap_vld|                        sums_write_assign_46_out|       pointer|
+|sums_write_assign_46_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_46_out|       pointer|
+|sums_write_assign_45_out         |  out|   19|      ap_vld|                        sums_write_assign_45_out|       pointer|
+|sums_write_assign_45_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_45_out|       pointer|
+|sums_write_assign_44_out         |  out|   19|      ap_vld|                        sums_write_assign_44_out|       pointer|
+|sums_write_assign_44_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_44_out|       pointer|
+|sums_write_assign_43_out         |  out|   19|      ap_vld|                        sums_write_assign_43_out|       pointer|
+|sums_write_assign_43_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_43_out|       pointer|
+|sums_write_assign_42_out         |  out|   19|      ap_vld|                        sums_write_assign_42_out|       pointer|
+|sums_write_assign_42_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_42_out|       pointer|
+|sums_write_assign_41_out         |  out|   19|      ap_vld|                        sums_write_assign_41_out|       pointer|
+|sums_write_assign_41_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_41_out|       pointer|
+|sums_write_assign_40_out         |  out|   19|      ap_vld|                        sums_write_assign_40_out|       pointer|
+|sums_write_assign_40_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_40_out|       pointer|
+|sums_write_assign_39_out         |  out|   19|      ap_vld|                        sums_write_assign_39_out|       pointer|
+|sums_write_assign_39_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_39_out|       pointer|
+|sums_write_assign_38_out         |  out|   19|      ap_vld|                        sums_write_assign_38_out|       pointer|
+|sums_write_assign_38_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_38_out|       pointer|
+|sums_write_assign_37_out         |  out|   19|      ap_vld|                        sums_write_assign_37_out|       pointer|
+|sums_write_assign_37_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_37_out|       pointer|
+|sums_write_assign_36_out         |  out|   19|      ap_vld|                        sums_write_assign_36_out|       pointer|
+|sums_write_assign_36_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_36_out|       pointer|
+|sums_write_assign_35_out         |  out|   19|      ap_vld|                        sums_write_assign_35_out|       pointer|
+|sums_write_assign_35_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_35_out|       pointer|
+|sums_write_assign_34_out         |  out|   19|      ap_vld|                        sums_write_assign_34_out|       pointer|
+|sums_write_assign_34_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_34_out|       pointer|
+|sums_write_assign_33_out         |  out|   19|      ap_vld|                        sums_write_assign_33_out|       pointer|
+|sums_write_assign_33_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_33_out|       pointer|
+|sums_write_assign_32_out         |  out|   19|      ap_vld|                        sums_write_assign_32_out|       pointer|
+|sums_write_assign_32_out_ap_vld  |  out|    1|      ap_vld|                        sums_write_assign_32_out|       pointer|
+|sums_write_assign_out            |  out|   19|      ap_vld|                           sums_write_assign_out|       pointer|
+|sums_write_assign_out_ap_vld     |  out|    1|      ap_vld|                           sums_write_assign_out|       pointer|
++---------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+

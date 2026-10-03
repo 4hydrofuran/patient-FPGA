@@ -1,0 +1,205 @@
+{
+  "candidate": "double",
+  "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+  "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "scope": "Static inferred structure/capacity and finite random-stall acceptance; no measured internal AXI FIFO occupancy.",
+  "array_buffer_bytes": {
+    "weights_first": 2048,
+    "weights_second": 2048,
+    "scales_first": 128,
+    "scales_second": 128,
+    "activations": 38912,
+    "token_scales": 32,
+    "totals": 1024
+  },
+  "user_hls_stream_channels": [],
+  "overlap_fifo_resource_row": [
+    "|FIFO             |        -|     -|       -|       -|    -|"
+  ],
+  "user_stream_fifo_occupancy": "NOT_APPLICABLE_NO_USER_STREAM_CHANNEL",
+  "generated_axi_fifo_peak_occupancy": null,
+  "random_stall_transactions_passed": 32,
+  "ownership": "load(next slot) and compute(current slot) use disjoint arrays; ownership swaps only after both functions return; last group disables prefetch",
+  "reports_and_rtl_extracted_from_exact_xo": {
+    "evidence/b03/supplement/synthesis/reports/csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/csynth.rpt",
+      "sha256": "ff7e0502591843f5b42f90f5aafdd2cedc4663f766ffbadefbb03f2f2b002840",
+      "bytes": 163338
+    },
+    "evidence/b03/supplement/synthesis/reports/csynth.xml": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/csynth.xml",
+      "sha256": "15e8263e248bc258c76ea9625f940292d78a3744a8055b42c94ff2c7d42bb9c1",
+      "bytes": 492593
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_csynth.rpt",
+      "sha256": "8dac8c477db7001030aef7ea4e6a1bffdc68bdaf09f940ed8c86488d21c5acbf",
+      "bytes": 50588
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_group_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_group_csynth.rpt",
+      "sha256": "709118839e919b437383162ceb6d5ffc41052dadc7581ba7f8daaa491cba1ead",
+      "bytes": 18482
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_csynth.rpt",
+      "sha256": "45700215eb1fb559494c63de126041a985acd673e32988c4b720748bc60f98ae",
+      "bytes": 17857
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2_csynth.rpt",
+      "sha256": "1949b8739a0b8f531ae8c06204453ad36aa12f86e70e99134a3714d28220f1dc",
+      "bytes": 27340
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5_csynth.rpt",
+      "sha256": "2a2c1bd83511de0bfbd4cc45fc861d47619100cf496ed81bb513b6022f390775",
+      "bytes": 8869
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_csynth.rpt",
+      "sha256": "929bf25f2ebcc765ecf47ea6289634491b56cb3322b148136c09acc68b106af7",
+      "bytes": 30040
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_contains_invalid_w4_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_contains_invalid_w4_csynth.rpt",
+      "sha256": "904f4dfe9bfb38b7290557619e4144c71b8e34a774d1e40d9ffce807c9052845",
+      "bytes": 28426
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3_csynth.rpt",
+      "sha256": "5b135dafc7ed1adde89d5ec7f6109691c7adf50ca3db0eb386106e24381ba6bd",
+      "bytes": 21397
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1_csynth.rpt",
+      "sha256": "6eee3f6280b62b823f85834b8714f825b89f540bb752d1c604e58bf1f27dc149",
+      "bytes": 14966
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_1_csynth.rpt",
+      "sha256": "c9b89d55adbca948599115fb2c2cbb2ace9f1a8d4548e9f7fc957816f30a79c2",
+      "bytes": 24549
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_251_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_251_1_csynth.rpt",
+      "sha256": "2eb8567d96221a9efd9e882ac1e4e018d1e5e127019454de7be31aa964253169",
+      "bytes": 15141
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_51_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_51_1_csynth.rpt",
+      "sha256": "341424cbce967df551cc4d1c63a95cecb0b4b703b8c65e5d0d5755e13d3c2cd1",
+      "bytes": 15028
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_csynth.rpt",
+      "sha256": "eb0ab42ca48d14931e7c163b15be0e7c0a0df6b568fac114fc194a7340005dcf",
+      "bytes": 23588
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1_csynth.rpt",
+      "sha256": "03fe66c9d85cc9be538b4c673a116da127465f70f060b2a109cd54af26ea2fe4",
+      "bytes": 15017
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1_csynth.rpt",
+      "sha256": "ae1912399a039f694c71bf3861051ecb18fae9f18173b1b953ad82bf9e8036ee",
+      "bytes": 14904
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_prefill_overlap_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_prefill_overlap_csynth.rpt",
+      "sha256": "75c3b61dba3b0e9a154a3588584bd7f627021b910ad1c409a89feea400572bb8",
+      "bytes": 28583
+    },
+    "evidence/b03/supplement/synthesis/reports/p_anonymous_namespace_write_meta_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/p_anonymous_namespace_write_meta_csynth.rpt",
+      "sha256": "c98615889f9ae08e0d4058a59f51c022fb9ae2b0e1627050290c8f41bc0d6a60",
+      "bytes": 13621
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_csynth.rpt",
+      "sha256": "43ef241fc58c86336ed81e5cd4d26dc5ef6827c872916c53ec5573d5208aabed",
+      "bytes": 58439
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1_csynth.rpt",
+      "sha256": "5057a2ac2355fabe366512deb1f5430b01c82c4b360e05ef826a8296555dab04",
+      "bytes": 13353
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2_csynth.rpt",
+      "sha256": "cf637dad5786d197545f011e036740fc114230b5f702933ec1868e9e7fe2b16d",
+      "bytes": 14549
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4_csynth.rpt",
+      "sha256": "0b40789479d34366222e5777977d0153a72c631e0479c48e3468798585b7b6ee",
+      "bytes": 6841
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6_csynth.rpt",
+      "sha256": "9f33656b498d44cf2999a1b0a6195834bc21bfbd8ccd76b7006d7eb95831ed44",
+      "bytes": 13466
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_csynth.rpt",
+      "sha256": "fb291d22d5a3b8ad366364b74fb04d07cccf2e923615e54a804e8eb11fdf83d1",
+      "bytes": 16235
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8_csynth.rpt",
+      "sha256": "347d32d1aff87de5bd5f8066449b8c92de95aed3492b8d3a4042e2445e5d9c09",
+      "bytes": 8049
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9_csynth.rpt",
+      "sha256": "619be3591d0b201a6a29ee58cd8a376b2d09366a5cee015c1ce4f29736027f06",
+      "bytes": 12939
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_tile_group_sums_1_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_tile_group_sums_1_csynth.rpt",
+      "sha256": "163119b82db7ee4155e70468fe20d9ef2eecfae7ac813cb980ce205754f2a5cb",
+      "bytes": 24869
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_tile_group_sums_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_tile_group_sums_csynth.rpt",
+      "sha256": "874d234d347a90ad2974487349b20de5a8a379be32dc29d29faf07d7021f0290",
+      "bytes": 11737
+    },
+    "evidence/b03/supplement/synthesis/reports/w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2_csynth.rpt": {
+      "xo_member": "w4a8_linear_v1/hls/hls/syn/report/w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2_csynth.rpt",
+      "sha256": "f2815413c30a5ba1bbae3cd19f71ee0bcacc5e43b96317f58b1c435626bd1753",
+      "bytes": 28002
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_gmem_meta_m_axi.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_gmem_meta_m_axi.v",
+      "sha256": "d4bab280725581e90a8b414433fb959656ab40314e8365bd434cb58b03de1b3e",
+      "bytes": 156257
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_gmem_sw_m_axi.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_gmem_sw_m_axi.v",
+      "sha256": "c87a1676d4e24d944838f89f089289641175521963bd16c8b789800350b1d316",
+      "bytes": 93385
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_gmem_w_m_axi.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_gmem_w_m_axi.v",
+      "sha256": "6a209304b1c6d92e5af49b2e6e2e61e3ccc775e1a1f80305764c5fd4afa3d428",
+      "bytes": 93356
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_gmem_x_m_axi.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_gmem_x_m_axi.v",
+      "sha256": "e8365590c7b4f702354d627f0d646c797f78dc17ab2f3aeeae352dfbda5c1f0a",
+      "bytes": 93356
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_gmem_y_m_axi.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_gmem_y_m_axi.v",
+      "sha256": "64b180cdc86c5cff4b85b70ef61dae260120153b35ed490dc065ced01456e016",
+      "bytes": 121394
+    },
+    "evidence/b03/supplement/synthesis/generated_rtl/w4a8_linear_v1_p_anonymous_namespace_prefill_overlap.v": {
+      "xo_member": "ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0/hdl/verilog/w4a8_linear_v1_p_anonymous_namespace_prefill_overlap.v",
+      "sha256": "24680402a529d4016f65c0a6eb90411522e27712e1d3381c587c617dc282bb0a",
+      "bytes": 40363
+    }
+  }
+}
