@@ -1,0 +1,33 @@
+{
+  "stage": "B03",
+  "variant": "reuse",
+  "step": "cosim_gate_t8",
+  "executable": "D:\\2026.1\\2026.1\\Vitis\\bin\\vitis-run.bat",
+  "arguments": [
+    "--mode",
+    "hls",
+    "--cosim",
+    "--config",
+    "hls_prefill_reuse_gate_t8.cfg",
+    "--work_dir",
+    "build/b03_reuse_hls"
+  ],
+  "working_directory": "D:\\KV260-project-HLS\\b_qwen35",
+  "exit_code": 0,
+  "elapsed_seconds": 1460.8727819,
+  "log": "logs/b03/reuse/20261002-183817-9817793/cosim_gate_t8.log",
+  "input_sha256": {
+    "src/w4a8_prefill_v1.cpp": "7E1EB3450C0839254148C5FECEBF4BE1B2D76CA7C18F39E8DF8E63769D5874D2",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_v1.cpp": "69952372C1C5CC980C13CE68E931AF2243866B48F725A650FD84CCF1F1A61178",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_reuse_gate_t8.cfg": "31646B0563FC52C083FE21A849ADB1AF246D8C47BB03181E1184A0EB5AF9AC04",
+    "run_prefill.ps1": "95C40DD57A0ADD18563F3569D32995D7DACFAC535F82A5CC238941AAD7E2637A"
+  },
+  "finished_at_utc": "2026-10-02T19:02:39.8470695Z"
+}

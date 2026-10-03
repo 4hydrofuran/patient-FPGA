@@ -1,0 +1,7 @@
+   Build using "D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++.exe"
+D:/codex-vitis-shims/mkdir.exe postcheck_objects >/dev/null
+> postcheck_objects/.dir
+   Compiling apatb_w4a8_linear_v1.cpp
+D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++ -fno-builtin-isinf -fno-builtin-isnan -c --sysroot=D:/2026.1/2026.1/Vitis/tps/mingw/10.0.0/win64.o/nt -g -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/include/ap_sysc" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_FP_comp" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -I "D:/2026.1/2026.1/Vitis/win64/tools/auto_cc/include" -D__VITIS_HLS__ -D__HLS_COSIM__ -D__SIM_FPO__ -D__SIM_FFT__ -D__SIM_VRF_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E2__ -DNT -D__RTL_SIMULATION__ -D__xilinx_ip_top= -I . -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -DPOST_CHECK -DUSE_BINARY_TV_FILE --target=x86_64-w64-windows-gnu apatb_w4a8_linear_v1.cpp -o postcheck_objects/apatb_w4a8_linear_v1.o
+sh: D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++.exe: 找不到指定的模块。 Error 0xc0000135
+make: *** [cosim.pc.mk:86: postcheck_objects/apatb_w4a8_linear_v1.o] Error 53

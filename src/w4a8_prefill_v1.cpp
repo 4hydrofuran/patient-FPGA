@@ -475,8 +475,8 @@ extern "C" void w4a8_linear_v1(
     // 它只决定 cosim 包装器的固定拷贝窗口；板端运行时容量仍由地址和 *_bytes 校验决定。
 #pragma HLS INTERFACE m_axi port = w_packed offset = slave bundle = gmem_w depth = 2179072 max_read_burst_length = 128 max_widen_bitwidth = 128
 
-    // scale 仍使用冻结的独立 master；连续 32 个 scale 可合并请求。
-#pragma HLS INTERFACE m_axi port = sw offset = slave bundle = gmem_sw depth = 34048 max_read_burst_length = 32
+    // 固定原32位scale master，避免prefill自动拓宽后取消T1的连续突发读取。
+#pragma HLS INTERFACE m_axi port = sw offset = slave bundle = gmem_sw depth = 34048 max_read_burst_length = 32 max_widen_bitwidth = 32
 
     // X128 消融只限制同一 gmem_x 的最大物理宽度；地址、burst 与数据不变。
 #ifdef B02_AXI_X128

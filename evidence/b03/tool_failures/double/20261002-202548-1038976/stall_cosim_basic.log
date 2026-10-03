@@ -1,0 +1,126 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Sat Oct  3 04:26:22 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+INFO: [HLS 200-2005] Using work_dir D:/KV260-project-HLS/b_qwen35/build/b03_double_hls 
+
+INFO: [HLS 200-2006] Changing directory to D:/KV260-project-HLS/b_qwen35/build
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/vitis-comp.json
+
+INFO: [HLS 200-10] Creating and opening component 'D:/KV260-project-HLS/b_qwen35/build/b03_double_hls'.
+
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+
+INFO: [HLS 200-2174] Applying component config ini file ../hls_prefill_double_stall_basic.cfg
+
+INFO: [HLS 200-1465] Applying config ini 'syn.file=src/w4a8_prefill_v1.cpp' from ../hls_prefill_double_stall_basic.cfg(5)
+
+INFO: [HLS 200-10] Adding design file 'D:/KV260-project-HLS/b_qwen35/src/w4a8_prefill_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -DB03_REUSE -DB03_DOUBLE_BUFFER -ffp-contract=off' from ../hls_prefill_double_stall_basic.cfg(7)
+
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb/tb_prefill_bounds.cpp' from ../hls_prefill_double_stall_basic.cfg(8)
+
+INFO: [HLS 200-10] Adding test bench file 'D:/KV260-project-HLS/b_qwen35/tb/tb_prefill_bounds.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -DB03_REUSE -DB03_DOUBLE_BUFFER -ffp-contract=off' from ../hls_prefill_double_stall_basic.cfg(9)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.top=w4a8_linear_v1' from ../hls_prefill_double_stall_basic.cfg(6)
+
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vitis' from ../hls_prefill_double_stall_basic.cfg(4)
+
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vitis' value see below messsages for equivalent options.
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -default_axi=1
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from ../hls_prefill_double_stall_basic.cfg(1)
+
+INFO: [HLS 200-1465] Applying config ini 'clock=6.667' from ../hls_prefill_double_stall_basic.cfg(10)
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=--suite stress_basic' from ../hls_prefill_double_stall_basic.cfg(14)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.random_stall=1' from ../hls_prefill_double_stall_basic.cfg(19)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=verilog' from ../hls_prefill_double_stall_basic.cfg(15)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from ../hls_prefill_double_stall_basic.cfg(16)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=port' from ../hls_prefill_double_stall_basic.cfg(17)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.user_stall=tests/support/prefill_axi_stall.json' from ../hls_prefill_double_stall_basic.cfg(20)
+
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=--suite stress_basic' from ../hls_prefill_double_stall_basic.cfg(13)
+
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=xo' from ../hls_prefill_double_stall_basic.cfg(18)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from ../hls_prefill_double_stall_basic.cfg(12)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.unsafe_math_optimizations=0' from ../hls_prefill_double_stall_basic.cfg(11)
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/vitis-comp.json
+
+WARNING: [HLS 200-1480] No Json file: 'tests/support/prefill_axi_stall.json' found when using option '-svuvm_userstall'.
+
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+
+   Build using "D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_w4a8_linear_v1.cpp
+   Compiling tb_prefill_bounds.cpp_pre.cpp
+   Compiling w4a8_prefill_v1.cpp_pre.cpp
+   Compiling apatb_w4a8_linear_v1_ir.ll
+   Generating cosim.tv.exe
+In file included from apatb_w4a8_linear_v1.cpp:14:
+In file included from D:/2026.1/2026.1/Vitis/include\ap_fixed.h:9:
+In file included from D:/2026.1/2026.1/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2026.1/2026.1/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2026.1/2026.1/Vitis/include\hls_half.h:26:
+In file included from D:/2026.1/2026.1/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2026.1/2026.1/Vitis/include\hls_fpo.h:140:
+In file included from D:/2026.1/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2026.1/2026.1/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2026.1/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024/cygdrive/d/2026.1/2026.1/Vitis/tps/win64/msys2_bash/usr/bin/sh: line 1: D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++: Permission denied
+mingw32-make: *** [Makefile.rules:347: cosim.tv.exe] Error 126
+ERROR: [COSIM 212-317] C++ compile error.
+
+ERROR: [COSIM 212-321] EXE file generate failed.
+
+ERROR: [COSIM 212-321] EXE file generate failed.
+
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+
+ERROR: 
+
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 7 seconds. Total elapsed time: 21.975 seconds; peak allocated memory: 497.309 MB.
+

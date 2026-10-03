@@ -54,16 +54,16 @@
       }
     },
     "reuse": {
-      "source_sha256": "25f3f4cb73733b74f9d78661f162be62fc5f9006b1f2b6141055873da58bca95",
+      "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
       "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
-      "synthesis_receipt": "reports/b03/reuse/20261002-134218-2620940/synth.receipt.json",
-      "xo_sha256": "9243e29a29cbd26513cd85b78e3f22d838f64ab3ce0208d610c664ef70c615a7",
-      "xo_bytes": 19548525,
-      "kernel_xml_sha256": "4abc8b62c2823f299c400272ac8e7d2509a3e9d707fe70691ab80f364fd6fea0",
+      "synthesis_receipt": "reports/b03/reuse/20261002-182606-2629789/synth.receipt.json",
+      "xo_sha256": "ef783966e4a1bdc9e23b7133d01a9e095adbe6ee1440dc862e0a95c6379a4422",
+      "xo_bytes": 19525815,
+      "kernel_xml_sha256": "5d12f6d53a7e60c053b5b1844fcf4ec980d99f882623d10b660fe081ea28c37b",
       "private_abi_matches_baseline": true,
       "physical_port_width_bits": {
         "M_AXI_GMEM_W": 128,
-        "M_AXI_GMEM_SW": 512,
+        "M_AXI_GMEM_SW": 32,
         "M_AXI_GMEM_X": 128,
         "M_AXI_GMEM_Y": 32,
         "M_AXI_GMEM_META": 512,
@@ -71,16 +71,16 @@
       }
     },
     "double": {
-      "source_sha256": "25f3f4cb73733b74f9d78661f162be62fc5f9006b1f2b6141055873da58bca95",
+      "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
       "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
-      "synthesis_receipt": "reports/b03/double/20261002-134315-5763672/synth.receipt.json",
-      "xo_sha256": "b33383c83fd5e986a9b95289a36bd0529a507f8437bc372cbbcdd38bcb6c7e4d",
-      "xo_bytes": 19621131,
-      "kernel_xml_sha256": "139c5acba9bfda48c4967e4f40d4a1bc72a270b874ff4b6d68cd5c3c69f85dcd",
+      "synthesis_receipt": "reports/b03/double/20261002-193315-8220172/synth.receipt.json",
+      "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+      "xo_bytes": 19596752,
+      "kernel_xml_sha256": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
       "private_abi_matches_baseline": true,
       "physical_port_width_bits": {
         "M_AXI_GMEM_W": 128,
-        "M_AXI_GMEM_SW": 512,
+        "M_AXI_GMEM_SW": 32,
         "M_AXI_GMEM_X": 128,
         "M_AXI_GMEM_Y": 32,
         "M_AXI_GMEM_META": 512,
@@ -111,5 +111,5 @@
     }
   },
   "private_meta_bytes": 40,
-  "scope": "Public/B02 source unchanged; synthesized sources and XO private metadata checked. Physical scale port expands 32 to 512 bits; argument/control offsets remain frozen. Not implementation or BOARD proof."
+  "scope": "Public/B02 source unchanged; synthesized sources and XO private metadata checked. Final SW32 variants retain baseline physical port widths and frozen argument/control offsets. Not implementation or BOARD proof."
 }

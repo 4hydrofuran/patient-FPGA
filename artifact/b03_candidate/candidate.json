@@ -1,0 +1,102 @@
+{
+  "stage": "B03",
+  "status": "COMPLETE_OFF_BOARD",
+  "variant": "double",
+  "kernel_build_id_hex": "0xB3030002",
+  "private_meta_bytes": 40,
+  "frozen_at": "2026-10-03T05:04:43.692927+08:00",
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "artifact": {
+    "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+    "synthesis_receipt": "reports/b03/double/20261002-193315-8220172/synth.receipt.json",
+    "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+    "xo_bytes": 19596752,
+    "kernel_xml_sha256": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
+    "private_abi_matches_baseline": true,
+    "physical_port_width_bits": {
+      "M_AXI_GMEM_W": 128,
+      "M_AXI_GMEM_SW": 32,
+      "M_AXI_GMEM_X": 128,
+      "M_AXI_GMEM_Y": 32,
+      "M_AXI_GMEM_META": 512,
+      "S_AXI_CONTROL": 32
+    }
+  },
+  "nominal": {
+    "synthesis": {
+      "clock_slack_ns_estimate": -0.4,
+      "bram18k_estimate": 110,
+      "dsp_estimate": 102,
+      "ff_estimate": 20848,
+      "lut_estimate": 35817,
+      "dataflow_task_detected": true
+    },
+    "rtl_transactions": 34,
+    "split_coverage_matches_original": true,
+    "targets": {
+      "qwen35_gate_up_t1": {
+        "case": "qwen35_gate_up_t1",
+        "T": 1,
+        "N": 3584,
+        "K": 1024,
+        "job": 1000,
+        "cycles": 530254,
+        "cycles_per_token": 530254.0,
+        "change_vs_baseline_cycles": 0,
+        "improvement_percent": 0.0
+      },
+      "qwen35_gate_up_t8": {
+        "case": "qwen35_gate_up_t8",
+        "T": 8,
+        "N": 3584,
+        "K": 1024,
+        "job": 1000,
+        "cycles": 1683165,
+        "cycles_per_token": 210395.625,
+        "change_vs_baseline_cycles": -918018,
+        "improvement_percent": 35.29232660677853
+      },
+      "qwen35_down_t1": {
+        "case": "qwen35_down_t1",
+        "T": 1,
+        "N": 1024,
+        "K": 3584,
+        "job": 1000,
+        "cycles": 524414,
+        "cycles_per_token": 524414.0,
+        "change_vs_baseline_cycles": 0,
+        "improvement_percent": 0.0
+      },
+      "qwen35_down_t8": {
+        "case": "qwen35_down_t8",
+        "T": 8,
+        "N": 1024,
+        "K": 3584,
+        "job": 1000,
+        "cycles": 1724525,
+        "cycles_per_token": 215565.625,
+        "change_vs_baseline_cycles": -831058,
+        "improvement_percent": 32.51931164043586
+      }
+    },
+    "receipts": {
+      "native_test": "reports/b03/double/20261002-193223-6192304/native_test.receipt.json",
+      "real_test": "reports/b03/double/20261002-193223-6192304/real_test.receipt.json",
+      "csim": "reports/b03/double/20261002-193238-0731631/csim.receipt.json",
+      "synth": "reports/b03/double/20261002-193315-8220172/synth.receipt.json"
+    },
+    "cosim_batch_receipts": [
+      "reports/b03/double/20261002-193530-4772723/cosim_smoke.receipt.json",
+      "reports/b03/double/20261002-193927-5197977/cosim_gate_t1.receipt.json",
+      "reports/b03/double/20261002-195043-1382988/cosim_gate_t8.receipt.json",
+      "reports/b03/double/20261002-200043-3511744/cosim_down_t1.receipt.json",
+      "reports/b03/double/20261002-200737-4719513/cosim_down_t8.receipt.json"
+    ]
+  },
+  "selection_reason": "Both T1 shapes preserve baseline cycles; double improves both tested T8 shapes beyond reuse, with five additional BRAM18K and twelve DSP in HLS estimates. All numerical, nominal RTL and selected random-stall gates passed.",
+  "random_stall_transactions": 32,
+  "public_library": "NOT_IMPLEMENTED_B04",
+  "implementation": "NOT_TESTED",
+  "BOARD": "NOT_TESTED"
+}

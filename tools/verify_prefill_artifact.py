@@ -89,7 +89,7 @@ def main():
     report = {"stage": "B03", "status": "PASS", "frozen_checks": checks,
               "variants": variants, "fixed_input_expected_identity": identity,
               "private_meta_bytes": 40,
-              "scope": "Public/B02 source unchanged; synthesized sources and XO private metadata checked. Physical scale port expands 32 to 512 bits; argument/control offsets remain frozen. Not implementation or BOARD proof."}
+              "scope": "Public/B02 source unchanged; synthesized sources and XO private metadata checked. Final SW32 variants retain baseline physical port widths and frozen argument/control offsets. Not implementation or BOARD proof."}
     (ROOT / "reports/b03/artifact_guard.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print("PASS: frozen contracts/B02 source, synthesized core identity, XO CRC/ABI, same fixed inputs/expected vectors")
 

@@ -1,0 +1,421 @@
+{
+  "status": "PASS_NATIVE",
+  "variant": "double",
+  "group": "stall_basic",
+  "receipt": "reports/b03/double/20261002-203031-8566555/stall_cosim_basic.receipt.json",
+  "trace_level": "port",
+  "transactions": 12,
+  "cases": {
+    "0": {
+      "case": "hand_sample",
+      "T": 1,
+      "N": 2,
+      "K": 2,
+      "job": 1000,
+      "cycles": 1655
+    },
+    "1": {
+      "case": "hand_sample",
+      "T": 1,
+      "N": 2,
+      "K": 2,
+      "job": 7777,
+      "cycles": 1651
+    },
+    "2": {
+      "case": "tile_random",
+      "T": 1,
+      "N": 32,
+      "K": 128,
+      "job": 1002,
+      "cycles": 1650
+    },
+    "3": {
+      "case": "nk_tail",
+      "T": 1,
+      "N": 33,
+      "K": 129,
+      "job": 1003,
+      "cycles": 3907
+    },
+    "4": {
+      "case": "three_groups",
+      "T": 1,
+      "N": 65,
+      "K": 257,
+      "job": 1004,
+      "cycles": 7443
+    },
+    "5": {
+      "case": "single",
+      "T": 1,
+      "N": 1,
+      "K": 1,
+      "job": 1005,
+      "cycles": 1708
+    },
+    "6": {
+      "case": "zeros",
+      "T": 1,
+      "N": 33,
+      "K": 129,
+      "job": 1006,
+      "cycles": 3797
+    },
+    "7": {
+      "case": "extremes",
+      "T": 1,
+      "N": 32,
+      "K": 128,
+      "job": 1007,
+      "cycles": 1676
+    },
+    "8": {
+      "case": "t4_compat",
+      "T": 4,
+      "N": 33,
+      "K": 129,
+      "job": 1008,
+      "cycles": 11984
+    },
+    "9": {
+      "case": "t8_compat",
+      "T": 8,
+      "N": 1,
+      "K": 1,
+      "job": 1009,
+      "cycles": 9533
+    },
+    "10": {
+      "case": "nonbinary_scale",
+      "T": 1,
+      "N": 32,
+      "K": 128,
+      "job": 1010,
+      "cycles": 1631
+    },
+    "11": {
+      "case": "padding_reserved",
+      "T": 1,
+      "N": 1,
+      "K": 1,
+      "job": 1011,
+      "cycles": 1643
+    }
+  },
+  "files": {
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_abi_version.dat": {
+      "bytes": 741,
+      "sha256": "e5c686573b3caa46fa8bf57528fc2e587a4e095e5755df8bd4954436f02fc921"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_meta.dat": {
+      "bytes": 2181,
+      "sha256": "df50d4b266b138698947e8e2090a830364adb3594d95659e7b1738a218ca25ce"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_sw.dat": {
+      "bytes": 1634408,
+      "sha256": "a4f117f4146a27c4725e7d1469a5a2d4fae35d1c21bc8da0603d50c866b5a85a"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_w.dat": {
+      "bytes": 26148968,
+      "sha256": "c46bb02aa9cdaffc5c334541a8104bf429f1bf926041fc630d4158a38e1094a2"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_x.dat": {
+      "bytes": 467432,
+      "sha256": "9dd4fa8e3dd0ec905ad242be2229e1a0387221a70f3dcfb973a0f1e52e18daa8"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_gmem_y.dat": {
+      "bytes": 1867880,
+      "sha256": "1ae8b6cadf3c181ba79b0607dd6255c70c36d95ad515e94a0f56c9ee0cda9f99"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_job_id.dat": {
+      "bytes": 837,
+      "sha256": "7f7d98f36a12955159eb4925d6edd197b3ada85fbc6ef526160212bda5830a16"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_k.dat": {
+      "bytes": 741,
+      "sha256": "3971eecead62074edccd0fa541ecf6dea0c2c03a6fae039e6fdd06a26acb97d0"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_meta.dat": {
+      "bytes": 741,
+      "sha256": "e8f40ba46bbb26d96da4ec98bfd14321104b86e463d83e19f57b23ea3fc3bff7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_meta_bytes.dat": {
+      "bytes": 837,
+      "sha256": "72d2adb519f67d386d7913e466dc988f25d12796afedb00363f8c57542228fd1"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_n.dat": {
+      "bytes": 741,
+      "sha256": "7cad59d43b2f87d83cf2182e418ee0985b03c335479aefee893b594d975046fd"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_sw.dat": {
+      "bytes": 741,
+      "sha256": "e8f40ba46bbb26d96da4ec98bfd14321104b86e463d83e19f57b23ea3fc3bff7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_sw_bytes.dat": {
+      "bytes": 837,
+      "sha256": "cd4252fc62855ab26a3be5a8adfe122ad47b59a91d0bdc65c030596b331efccd"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_sx.dat": {
+      "bytes": 741,
+      "sha256": "f2fc2b7fedd7ee44d48fc5a095f4ae6473ac18acdf8189d88abbc274132f9ad9"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_sx_bytes.dat": {
+      "bytes": 837,
+      "sha256": "d51cd0a489a55b1d1a1f0bcc72a8609b9fad384c7860eb9a93b736f025e2f4ce"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_t.dat": {
+      "bytes": 741,
+      "sha256": "efae23e2ac4a9b2e96623daebe3da10e078d14230c2b474aadeff8624d16835f"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_w_bytes.dat": {
+      "bytes": 837,
+      "sha256": "0402de4a457fadb800b0b056db5e6b9580d872f6f844616e53cf752c5ed7598d"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_w_packed.dat": {
+      "bytes": 741,
+      "sha256": "e8f40ba46bbb26d96da4ec98bfd14321104b86e463d83e19f57b23ea3fc3bff7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_xq.dat": {
+      "bytes": 741,
+      "sha256": "e8f40ba46bbb26d96da4ec98bfd14321104b86e463d83e19f57b23ea3fc3bff7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_x_bytes.dat": {
+      "bytes": 837,
+      "sha256": "1b3a2a5b470801ca53614fc0cc2d0be5d0c06845a818387b27efe91d1b00f0f7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_y.dat": {
+      "bytes": 741,
+      "sha256": "e8f40ba46bbb26d96da4ec98bfd14321104b86e463d83e19f57b23ea3fc3bff7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvin_y_bytes.dat": {
+      "bytes": 837,
+      "sha256": "1b3a2a5b470801ca53614fc0cc2d0be5d0c06845a818387b27efe91d1b00f0f7"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvout_gmem_meta.dat": {
+      "bytes": 2181,
+      "sha256": "604f5eba4bfc54e0f8a3b3afd4bbde8ba2e3ea02752f79becdcbb32c65d79f24"
+    },
+    "tv/cdatafile/c.w4a8_linear_v1.autotvout_gmem_y.dat": {
+      "bytes": 1867880,
+      "sha256": "cb09092ed19d6f55ae8dae67b2f765c2cdd8bb93c6d7491c641ef7589d0bc0a3"
+    },
+    "tv/cdatafile/ref.tcl": {
+      "bytes": 853,
+      "sha256": "c7b367ce8848f7300abfa752acc9577525430306f68180405fc8dc7f15dcf58c"
+    },
+    "tv/rtldatafile/rtl.w4a8_linear_v1.autotvout_gmem_meta.dat": {
+      "bytes": 2179,
+      "sha256": "237301427002fd048c88453d695d649582ceb65c3178e2aaf1da212ec0961e70"
+    },
+    "tv/rtldatafile/rtl.w4a8_linear_v1.autotvout_gmem_y.dat": {
+      "bytes": 1867880,
+      "sha256": "cb09092ed19d6f55ae8dae67b2f765c2cdd8bb93c6d7491c641ef7589d0bc0a3"
+    },
+    "verilog/w4a8_linear_v1.wdb": {
+      "bytes": 6759237,
+      "sha256": "e00749b1a591555038d09cab5766a8a1030ae5fb9b51163981a2f02330d68ed6"
+    },
+    "verilog/w4a8_linear_v1.performance.result.transaction.xml": {
+      "bytes": 702,
+      "sha256": "b1b04c3c169037e5589ebc7693d4cc14b428ef1d10e76acbfff97bd278914222"
+    },
+    "verilog/run_xsim.bat": {
+      "bytes": 880,
+      "sha256": "fd230df10a74cadaef536df5dbe4257550d34042fb311aa9e74076f343761c66"
+    },
+    "verilog/w4a8_linear_v1.tcl": {
+      "bytes": 32704,
+      "sha256": "388e0cfc44e202eeab72d23c1be4b3c7496b56fdddb04fabd80d446d9f537e52"
+    },
+    "report/w4a8_linear_v1_cosim.rpt": {
+      "bytes": 1258,
+      "sha256": "47228528b90d5380ec97fdceaf52d76356acc868f59d6efb023a7298db698c5a"
+    },
+    "verilog/axivip/axi_base_sequence.sv": {
+      "bytes": 1573,
+      "sha256": "bb70194439026ddaae50ba55bdb8cdd92d44eab061eb4bb442a70737032dab1b"
+    },
+    "verilog/axivip/axi_cfg.sv": {
+      "bytes": 1929,
+      "sha256": "f707ccc0905cbda68baa7640b035b4e41ce98bd886f50abaeb3f4f15250aebb0"
+    },
+    "verilog/axivip/axi_driver_base.sv": {
+      "bytes": 3141,
+      "sha256": "5d5d8e31ba247736fcdd83259cbbe94098b22a47a51bc1c02b00d598574548e1"
+    },
+    "verilog/axivip/axi_env.sv": {
+      "bytes": 4002,
+      "sha256": "982568cef9740200bd47b450c0bb56abcfb2cf6b45d61ed5a421cd7cb55effb8"
+    },
+    "verilog/axivip/axi_if.sv": {
+      "bytes": 2960,
+      "sha256": "e98946481b2aaf428ef2c6972fbf4acf602756997ccc5276b6451aa6fa0f6285"
+    },
+    "verilog/axivip/axi_info.sv": {
+      "bytes": 928,
+      "sha256": "5b500d014a6c4f42e9ea81ba82cf753f4c9b5aa0126a801e629249ae2f5f4eff"
+    },
+    "verilog/axivip/axi_master_agent.sv": {
+      "bytes": 3242,
+      "sha256": "09208b4e507886644de414ed692313c2ecc21cf7f0c71ecb9208b54327509eef"
+    },
+    "verilog/axivip/axi_master_ardrv.sv": {
+      "bytes": 2534,
+      "sha256": "a934e0d16c9b06b024add1c6cc7bade6f47554b55b19550250510da7066c7b9b"
+    },
+    "verilog/axivip/axi_master_awdrv.sv": {
+      "bytes": 2552,
+      "sha256": "a4abc7fd5edb480bde8fb6bc8f39a785428a6b75f60894677e2b74f8ff4c5e32"
+    },
+    "verilog/axivip/axi_master_bdrv.sv": {
+      "bytes": 1992,
+      "sha256": "7baa8077a4b3d2e22613736219569691c5a9f8349ba67eeed7a012206ae25892"
+    },
+    "verilog/axivip/axi_master_rdrv.sv": {
+      "bytes": 1986,
+      "sha256": "3886e7d36ce4c19e802bd18ac7190a0f6ffb3ea535db4473da619ec205d1d348"
+    },
+    "verilog/axivip/axi_master_seq_lib.sv": {
+      "bytes": 14356,
+      "sha256": "7b36f7339f9db7af505f67d226e6039e7a9c9ac78b7d54187bc38836c0330635"
+    },
+    "verilog/axivip/axi_master_wdrv.sv": {
+      "bytes": 2377,
+      "sha256": "10a57289b68baae3258e0e8cfa7557576626dab459dd329b59deb1356c05e908"
+    },
+    "verilog/axivip/axi_monitor.sv": {
+      "bytes": 14215,
+      "sha256": "8dd99bc983d7f8660a772a894378f3c7c100a2f0cffc4bf8b1317f337e09bab6"
+    },
+    "verilog/axivip/axi_pkg.sv": {
+      "bytes": 1408,
+      "sha256": "37b2eeb8d212b33a1de06d4d62e748af0f5bd420a372b82dcf4fc89e64f3c5a9"
+    },
+    "verilog/axivip/axi_sequencer.sv": {
+      "bytes": 940,
+      "sha256": "cb081edd2a557549f29e761994f7ed911b04563747de987cde778ee087501bdb"
+    },
+    "verilog/axivip/axi_slave_agent.sv": {
+      "bytes": 3228,
+      "sha256": "2f0864bac648112733d97c53192a9f3f9951855118b4fde63f6009711449c953"
+    },
+    "verilog/axivip/axi_slave_ardrv.sv": {
+      "bytes": 1957,
+      "sha256": "27dd2d1175c3525f755cf60546b8ff0e00c9ed4e1595aef93388d3ea92ae6f96"
+    },
+    "verilog/axivip/axi_slave_awdrv.sv": {
+      "bytes": 1959,
+      "sha256": "42f63eb060aa4a8c93d7370b2fe611e5ca9b89ab67604bdad8d7573e0ba38b38"
+    },
+    "verilog/axivip/axi_slave_bdrv.sv": {
+      "bytes": 2121,
+      "sha256": "b3787d5792bc095e8746f9e9d13b78be867407f833da28d4bbda33a78c0f7203"
+    },
+    "verilog/axivip/axi_slave_rdrv.sv": {
+      "bytes": 2346,
+      "sha256": "7b2971151dd6b8518fa7c834f2a7f4daaf82f2e9c36ad2e481ffe750f0f4cb48"
+    },
+    "verilog/axivip/axi_slave_seq_lib.sv": {
+      "bytes": 10829,
+      "sha256": "830feca38472f6b45f7f8089d655e766a1fc659276b88f0269a60a4a0d7f0fda"
+    },
+    "verilog/axivip/axi_slave_wdrv.sv": {
+      "bytes": 1954,
+      "sha256": "1f667e54cd6e311e8f5ad1af737eb854c5e5c369e3bb03ec7ca04617094da54d"
+    },
+    "verilog/axivip/axi_state.sv": {
+      "bytes": 13947,
+      "sha256": "34bf02181684f03a5c4f789c2133a95ff42d2d77f1c3f7c60399823c011ad4fa"
+    },
+    "verilog/axivip/axi_transfer.sv": {
+      "bytes": 10661,
+      "sha256": "6e480f7375382f126b39d98be9ae63b0c217e5504904a54a2d9e3fe8306e378c"
+    },
+    "verilog/axivip/axi_type.sv": {
+      "bytes": 3887,
+      "sha256": "c502678148128911dd309ed27b38758125ecc5589f3c085d2e3e0b87c7f3de71"
+    },
+    "verilog/axivip/axi_virtual_sequencer.sv": {
+      "bytes": 1379,
+      "sha256": "9645fc34b60089da7b6c117c1c628962732f6f2aaee779a342bfda1a2209286b"
+    },
+    "verilog/svtb/misc_interface.sv": {
+      "bytes": 1302,
+      "sha256": "6c24a54955cd1643932e17f8cd47594302a1cce71a892ac4ab52a2ad9968b758"
+    },
+    "verilog/svtb/svtb_pkg.sv": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verilog/svtb/sv_module_top.sv": {
+      "bytes": 21644,
+      "sha256": "1427dc3dc277195eb42661edc7715bb697de62e234670fe282595883b0c51a7d"
+    },
+    "verilog/svtb/w4a8_linear_v1_subsys_test_sequence_lib.sv": {
+      "bytes": 28657,
+      "sha256": "f7d7650f1293307e51544f37717c8961b6e4a8e655e46abcf13c16084d62e80c"
+    },
+    "verilog/svtb/w4a8_linear_v1_test_lib.sv": {
+      "bytes": 2913,
+      "sha256": "42854cab33e39643e497a22a70510f13de035bd44adbaac5e2ef2d15ef617c4b"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_config.sv": {
+      "bytes": 2375,
+      "sha256": "7f4614e2820649c38b07bda5e202805931463f5ffac48fee9c5483faf199a68b"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_env.sv": {
+      "bytes": 26452,
+      "sha256": "446921b9da4f9ec401cfc258fecbff720706da13b30fb05370f88d776cb93279"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_pkg_sequence_lib.sv": {
+      "bytes": 577,
+      "sha256": "32116778e6c3d5bd5a454184186b0a6893e2e6002b01178011dfb505e242bd2a"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_reference_model.sv": {
+      "bytes": 19128,
+      "sha256": "2b313999b6553993d8b5b938fdd91e5649a03807bdfd35c2166447a6e27caf00"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_scoreboard.sv": {
+      "bytes": 7004,
+      "sha256": "2817ed70e64fbe072e0edaa834af85be4f8673a8ff7f1b89847819e49f597443"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_subsystem_monitor.sv": {
+      "bytes": 5952,
+      "sha256": "fd4f012aa586679de93de7bf4fe7ae3a32c4a0ba7d258222a714102838e28541"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_subsystem_pkg.sv": {
+      "bytes": 1581,
+      "sha256": "0835060128f42dacc37b8b458e5561dc95e97f241cba93bed840066471f3654f"
+    },
+    "verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_virtual_sequencer.sv": {
+      "bytes": 1599,
+      "sha256": "c967e3ac36b135119a690eb6aec290b53d73405016f8f6a555a9bd0ab997e22c"
+    },
+    "cosim.log": {
+      "bytes": 185769,
+      "sha256": "be90a00ac080f8f6f4e2614be97b16651aba58f842c1c38ff662fc82053276ff"
+    },
+    "receipt.json": {
+      "bytes": 1849,
+      "sha256": "2a477dec6531afec4f1048c87b52bf520bd4f6611b18e797c60f6a6b15c6a793"
+    },
+    "csynth.rpt": {
+      "bytes": 163338,
+      "sha256": "ff7e0502591843f5b42f90f5aafdd2cedc4663f766ffbadefbb03f2f2b002840"
+    },
+    "kernel.xml": {
+      "bytes": 4109,
+      "sha256": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597"
+    },
+    "combined_tags.log": {
+      "bytes": 185769,
+      "sha256": "be90a00ac080f8f6f4e2614be97b16651aba58f842c1c38ff662fc82053276ff"
+    }
+  },
+  "execution": {
+    "elapsed_seconds": 231.6542562,
+    "recovered_rtl_elapsed_seconds": null,
+    "xsim_peak_memory_KB": 5300984
+  }
+}

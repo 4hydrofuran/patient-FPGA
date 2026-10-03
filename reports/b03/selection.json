@@ -1,0 +1,234 @@
+{
+  "stage": "B03",
+  "status": "SELECTED_OFF_BOARD",
+  "variant": "double",
+  "reason": "Both T1 shapes preserve baseline cycles; double improves both tested T8 shapes beyond reuse, with five additional BRAM18K and twelve DSP in HLS estimates. All numerical, nominal RTL and selected random-stall gates passed.",
+  "comparison": {
+    "baseline": {
+      "synthesis": {
+        "clock_slack_ns_estimate": -0.37,
+        "bram18k_estimate": 78,
+        "dsp_estimate": 58,
+        "ff_estimate": 15105,
+        "lut_estimate": 28006,
+        "dataflow_task_detected": false
+      },
+      "rtl_transactions": 34,
+      "split_coverage_matches_original": true,
+      "targets": {
+        "qwen35_gate_up_t1": {
+          "case": "qwen35_gate_up_t1",
+          "T": 1,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 530254,
+          "cycles_per_token": 530254.0
+        },
+        "qwen35_gate_up_t8": {
+          "case": "qwen35_gate_up_t8",
+          "T": 8,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 2601183,
+          "cycles_per_token": 325147.875
+        },
+        "qwen35_down_t1": {
+          "case": "qwen35_down_t1",
+          "T": 1,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 524414,
+          "cycles_per_token": 524414.0
+        },
+        "qwen35_down_t8": {
+          "case": "qwen35_down_t8",
+          "T": 8,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 2555583,
+          "cycles_per_token": 319447.875
+        }
+      },
+      "receipts": {
+        "native_test": "reports/b03/baseline/20261002-150348-7159923/native_test.receipt.json",
+        "real_test": "reports/b03/baseline/20261002-150348-7159923/real_test.receipt.json",
+        "csim": "reports/b03/baseline/20261002-150403-2068532/csim.receipt.json",
+        "synth": "reports/b03/baseline/20261002-133955-4534622/synth.receipt.json"
+      },
+      "cosim_batch_receipts": [
+        "reports/b03/baseline/20261002-153013-8575876/cosim_smoke_postcheck.receipt.json",
+        "reports/b03/baseline/20261002-153925-4502751/cosim_gate_t1_postcheck.receipt.json",
+        "reports/b03/baseline/20261002-155535-1692026/cosim_gate_t8_postcheck.receipt.json",
+        "reports/b03/baseline/20261002-163242-6103638/cosim_down_t1.receipt.json",
+        "reports/b03/baseline/20261002-171355-5951792/cosim_down_t8_postcheck_only.receipt.json"
+      ]
+    },
+    "reuse": {
+      "synthesis": {
+        "clock_slack_ns_estimate": -0.4,
+        "bram18k_estimate": 105,
+        "dsp_estimate": 90,
+        "ff_estimate": 19538,
+        "lut_estimate": 33713,
+        "dataflow_task_detected": false
+      },
+      "rtl_transactions": 34,
+      "split_coverage_matches_original": true,
+      "targets": {
+        "qwen35_gate_up_t1": {
+          "case": "qwen35_gate_up_t1",
+          "T": 1,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 530254,
+          "cycles_per_token": 530254.0,
+          "change_vs_baseline_cycles": 0,
+          "improvement_percent": 0.0
+        },
+        "qwen35_gate_up_t8": {
+          "case": "qwen35_gate_up_t8",
+          "T": 8,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 1871997,
+          "cycles_per_token": 233999.625,
+          "change_vs_baseline_cycles": -729186,
+          "improvement_percent": 28.032860433118316
+        },
+        "qwen35_down_t1": {
+          "case": "qwen35_down_t1",
+          "T": 1,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 524414,
+          "cycles_per_token": 524414.0,
+          "change_vs_baseline_cycles": 0,
+          "improvement_percent": 0.0
+        },
+        "qwen35_down_t8": {
+          "case": "qwen35_down_t8",
+          "T": 8,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 1913517,
+          "cycles_per_token": 239189.625,
+          "change_vs_baseline_cycles": -642066,
+          "improvement_percent": 25.12405192865972
+        }
+      },
+      "receipts": {
+        "native_test": "reports/b03/reuse/20261002-182515-0363304/native_test.receipt.json",
+        "real_test": "reports/b03/reuse/20261002-182515-0363304/real_test.receipt.json",
+        "csim": "reports/b03/reuse/20261002-182529-8191066/csim.receipt.json",
+        "synth": "reports/b03/reuse/20261002-182606-2629789/synth.receipt.json"
+      },
+      "cosim_batch_receipts": [
+        "reports/b03/reuse/20261002-182812-0700865/cosim_smoke.receipt.json",
+        "reports/b03/reuse/20261002-183222-7028270/cosim_gate_t1.receipt.json",
+        "reports/b03/reuse/20261002-183817-9817793/cosim_gate_t8.receipt.json",
+        "reports/b03/reuse/20261002-190240-8523543/cosim_down_t1.receipt.json",
+        "reports/b03/reuse/20261002-191612-8995391/cosim_down_t8.receipt.json"
+      ]
+    },
+    "double": {
+      "synthesis": {
+        "clock_slack_ns_estimate": -0.4,
+        "bram18k_estimate": 110,
+        "dsp_estimate": 102,
+        "ff_estimate": 20848,
+        "lut_estimate": 35817,
+        "dataflow_task_detected": true
+      },
+      "rtl_transactions": 34,
+      "split_coverage_matches_original": true,
+      "targets": {
+        "qwen35_gate_up_t1": {
+          "case": "qwen35_gate_up_t1",
+          "T": 1,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 530254,
+          "cycles_per_token": 530254.0,
+          "change_vs_baseline_cycles": 0,
+          "improvement_percent": 0.0
+        },
+        "qwen35_gate_up_t8": {
+          "case": "qwen35_gate_up_t8",
+          "T": 8,
+          "N": 3584,
+          "K": 1024,
+          "job": 1000,
+          "cycles": 1683165,
+          "cycles_per_token": 210395.625,
+          "change_vs_baseline_cycles": -918018,
+          "improvement_percent": 35.29232660677853
+        },
+        "qwen35_down_t1": {
+          "case": "qwen35_down_t1",
+          "T": 1,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 524414,
+          "cycles_per_token": 524414.0,
+          "change_vs_baseline_cycles": 0,
+          "improvement_percent": 0.0
+        },
+        "qwen35_down_t8": {
+          "case": "qwen35_down_t8",
+          "T": 8,
+          "N": 1024,
+          "K": 3584,
+          "job": 1000,
+          "cycles": 1724525,
+          "cycles_per_token": 215565.625,
+          "change_vs_baseline_cycles": -831058,
+          "improvement_percent": 32.51931164043586
+        }
+      },
+      "receipts": {
+        "native_test": "reports/b03/double/20261002-193223-6192304/native_test.receipt.json",
+        "real_test": "reports/b03/double/20261002-193223-6192304/real_test.receipt.json",
+        "csim": "reports/b03/double/20261002-193238-0731631/csim.receipt.json",
+        "synth": "reports/b03/double/20261002-193315-8220172/synth.receipt.json"
+      },
+      "cosim_batch_receipts": [
+        "reports/b03/double/20261002-193530-4772723/cosim_smoke.receipt.json",
+        "reports/b03/double/20261002-193927-5197977/cosim_gate_t1.receipt.json",
+        "reports/b03/double/20261002-195043-1382988/cosim_gate_t8.receipt.json",
+        "reports/b03/double/20261002-200043-3511744/cosim_down_t1.receipt.json",
+        "reports/b03/double/20261002-200737-4719513/cosim_down_t8.receipt.json"
+      ]
+    }
+  },
+  "artifact": {
+    "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+    "synthesis_receipt": "reports/b03/double/20261002-193315-8220172/synth.receipt.json",
+    "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+    "xo_bytes": 19596752,
+    "kernel_xml_sha256": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
+    "private_abi_matches_baseline": true,
+    "physical_port_width_bits": {
+      "M_AXI_GMEM_W": 128,
+      "M_AXI_GMEM_SW": 32,
+      "M_AXI_GMEM_X": 128,
+      "M_AXI_GMEM_Y": 32,
+      "M_AXI_GMEM_META": 512,
+      "S_AXI_CONTROL": 32
+    }
+  },
+  "limits": [
+    "HLS negative slack remains; implemented timing/resources and board performance untested.",
+    "One selected candidate, not a claim of optimality for all workloads or platforms."
+  ]
+}

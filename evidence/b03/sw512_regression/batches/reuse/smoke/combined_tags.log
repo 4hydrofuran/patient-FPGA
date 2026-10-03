@@ -1,0 +1,1558 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:14:00
+  **** Start of session at: Sat Oct  3 01:48:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+
+INFO: [HLS 200-2005] Using work_dir D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls 
+
+INFO: [HLS 200-2006] Changing directory to D:/KV260-project-HLS/b_qwen35/build
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/vitis-comp.json
+
+INFO: [HLS 200-10] Creating and opening component 'D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls'.
+
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+
+INFO: [HLS 200-2174] Applying component config ini file ../hls_prefill_reuse_smoke.cfg
+
+INFO: [HLS 200-1465] Applying config ini 'syn.file=src/w4a8_prefill_v1.cpp' from ../hls_prefill_reuse_smoke.cfg(5)
+
+INFO: [HLS 200-10] Adding design file 'D:/KV260-project-HLS/b_qwen35/src/w4a8_prefill_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -DB03_REUSE -ffp-contract=off' from ../hls_prefill_reuse_smoke.cfg(7)
+
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb/tb_prefill_v1.cpp' from ../hls_prefill_reuse_smoke.cfg(8)
+
+INFO: [HLS 200-10] Adding test bench file 'D:/KV260-project-HLS/b_qwen35/tb/tb_prefill_v1.cpp' to the project
+
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -DB03_REUSE -ffp-contract=off' from ../hls_prefill_reuse_smoke.cfg(9)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.top=w4a8_linear_v1' from ../hls_prefill_reuse_smoke.cfg(6)
+
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vitis' from ../hls_prefill_reuse_smoke.cfg(4)
+
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vitis' value see below messsages for equivalent options.
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -default_axi=1
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from ../hls_prefill_reuse_smoke.cfg(1)
+
+INFO: [HLS 200-1465] Applying config ini 'clock=6.667' from ../hls_prefill_reuse_smoke.cfg(10)
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=--suite smoke' from ../hls_prefill_reuse_smoke.cfg(14)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=verilog' from ../hls_prefill_reuse_smoke.cfg(15)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from ../hls_prefill_reuse_smoke.cfg(16)
+
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from ../hls_prefill_reuse_smoke.cfg(17)
+
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=--suite full' from ../hls_prefill_reuse_smoke.cfg(13)
+
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=xo' from ../hls_prefill_reuse_smoke.cfg(18)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.pipeline_loops=0' from ../hls_prefill_reuse_smoke.cfg(12)
+
+INFO: [HLS 200-1465] Applying config ini 'syn.compile.unsafe_math_optimizations=0' from ../hls_prefill_reuse_smoke.cfg(11)
+
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/vitis-comp.json
+
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+
+   Build using "D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_w4a8_linear_v1.cpp
+   Compiling tb_prefill_v1.cpp_pre.cpp
+   Compiling w4a8_prefill_v1.cpp_pre.cpp
+   Compiling apatb_w4a8_linear_v1_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+
+TRANSACTION index=0 case=hand_sample T=1 N=2 K=2 job=1000
+
+TRANSACTION index=1 case=hand_sample T=1 N=2 K=2 job=7777
+
+METRICS case=hand_sample max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=hand_sample T=1 N=2 K=2 source=synthetic seed=1
+
+TRANSACTION index=2 case=tile_random T=1 N=32 K=128 job=1002
+
+METRICS case=tile_random max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=tile_random T=1 N=32 K=128 source=synthetic seed=539365377
+
+TRANSACTION index=3 case=nk_tail T=1 N=33 K=129 job=1003
+
+METRICS case=nk_tail max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=nk_tail T=1 N=33 K=129 source=synthetic seed=539365378
+
+TRANSACTION index=4 case=three_groups T=1 N=65 K=257 job=1004
+
+METRICS case=three_groups max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=three_groups T=1 N=65 K=257 source=synthetic seed=539365379
+
+TRANSACTION index=5 case=single T=1 N=1 K=1 job=1005
+
+METRICS case=single max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=single T=1 N=1 K=1 source=synthetic seed=539365380
+
+TRANSACTION index=6 case=zeros T=1 N=33 K=129 job=1006
+
+METRICS case=zeros max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=zeros T=1 N=33 K=129 source=synthetic seed=539365381
+
+TRANSACTION index=7 case=extremes T=1 N=32 K=128 job=1007
+
+METRICS case=extremes max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=extremes T=1 N=32 K=128 source=synthetic seed=539365382
+
+TRANSACTION index=8 case=t4_compat T=4 N=33 K=129 job=1008
+
+METRICS case=t4_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=t4_compat T=4 N=33 K=129 source=synthetic seed=539365383
+
+TRANSACTION index=9 case=t8_compat T=8 N=1 K=1 job=1009
+
+METRICS case=t8_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=t8_compat T=8 N=1 K=1 source=synthetic seed=539365384
+
+TRANSACTION index=10 case=nonbinary_scale T=1 N=32 K=128 job=1010
+
+METRICS case=nonbinary_scale max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=nonbinary_scale T=1 N=32 K=128 source=synthetic seed=539365385
+
+TRANSACTION index=11 case=padding_reserved T=1 N=1 K=1 job=1011
+
+METRICS case=padding_reserved max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=padding_reserved T=1 N=1 K=1 source=synthetic seed=17
+
+PASS quantization checks=27 execution=HOST_REFERENCE
+
+PASS host_rejection=zero_job public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=zero_t public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=t_overflow public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=n_overflow public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=zero_k public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_weight public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_sw public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_x public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_sx public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=null_y public_status=1 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_weight public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_sw public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_x public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_sx public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=short_y public_status=3 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_a8 public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=activation_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_w4_low public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=reserved_w4_high public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=weight_k_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=weight_n_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=scale_padding public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_zero public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_zero public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_negative public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_negative public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_nan public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_nan public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_positive_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_positive_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sw_negative_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_rejection=sx_negative_inf public_status=9 kernel_started=false output_consumed=false
+
+PASS host_validation rejection_cases=32 domain=HOST_ADAPTER
+
+TRANSACTION index=12 case=repeat_jobs T=2 N=33 K=129 job=1012
+
+TRANSACTION index=13 case=repeat_jobs T=2 N=33 K=129 job=7777
+
+METRICS case=repeat_jobs max_abs=0 nrmse=0 atol=1e-06 rtol=0
+
+PASS case=repeat_jobs T=2 N=33 K=129 source=synthetic seed=539365410
+
+TRANSACTION index=14 case=repeat_jobs T=2 N=33 K=129 job=7777
+
+TRANSACTION index=15 case=repeat_jobs T=2 N=33 K=129 job=8888
+
+TRANSACTION index=16 case=repeat_jobs T=2 N=33 K=129 job=8888
+
+TRANSACTION index=17 case=repeat_jobs T=2 N=33 K=129 job=9999
+
+PASS repeat_jobs same_and_different=verified successes=5 rejected=1 kernel_count=46 output_consumed_on_error=false
+
+TRANSACTION index=18 case=errors T=1 N=33 K=129 job=9001
+
+TRANSACTION index=19 case=errors T=1 N=33 K=129 job=9002
+
+TRANSACTION index=20 case=errors T=1 N=33 K=129 job=9003
+
+TRANSACTION index=21 case=errors T=1 N=33 K=129 job=9004
+
+TRANSACTION index=22 case=high_reserved T=1 N=2 K=1 job=9005
+
+PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble
+
+TRANSACTION index=23 case=prefill_tail_t2 T=2 N=65 K=257 job=1023
+
+METRICS case=prefill_tail_t2 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t2 T=2 N=65 K=257 source=synthetic seed=539365381
+
+TRANSACTION index=24 case=prefill_tail_t3 T=3 N=65 K=257 job=1024
+
+METRICS case=prefill_tail_t3 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t3 T=3 N=65 K=257 source=synthetic seed=539365382
+
+TRANSACTION index=25 case=prefill_tail_t5 T=5 N=65 K=257 job=1025
+
+METRICS case=prefill_tail_t5 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t5 T=5 N=65 K=257 source=synthetic seed=539365384
+
+TRANSACTION index=26 case=prefill_tail_t6 T=6 N=65 K=257 job=1026
+
+METRICS case=prefill_tail_t6 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t6 T=6 N=65 K=257 source=synthetic seed=539365385
+
+TRANSACTION index=27 case=prefill_tail_t7 T=7 N=65 K=257 job=1027
+
+METRICS case=prefill_tail_t7 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t7 T=7 N=65 K=257 source=synthetic seed=539365386
+
+TRANSACTION index=28 case=prefill_tail_t8 T=8 N=65 K=257 job=1028
+
+TRANSACTION index=29 case=prefill_tail_t8 T=8 N=65 K=257 job=7777
+
+METRICS case=prefill_tail_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+
+PASS case=prefill_tail_t8 T=8 N=65 K=257 source=synthetic seed=539365387
+
+B03 PASS suite=smoke source=synthetic transactions=30 int32_partial_checks=6876 fp32_output_checks=4032
+
+INFO: [COSIM 212-333] Generating C post check test bench ...
+
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 18-sep-2026.
+
+
+
+
+
+****** Vivado v2026.1 (64-bit)
+
+
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+
+
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+
+
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+
+
+  **** Start of session at: Sat Oct  3 01:49:20 2026
+
+
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+
+
+INFO: [Common 17-1239] XILINX_LOCAL_USER_DATA is set to 'D:/codex-vivado-userdata'.
+
+
+source run_vivado_gen_ip.tcl -notrace
+
+
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 703.195 ; gain = 275.277
+
+
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+
+
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+
+
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2026.1/2026.1/Vivado/data/ip'.
+
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip'...
+
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip'...
+
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+
+
+WARNING: [IP_Flow 19-4832] The IP name 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+
+
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip'...
+
+
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip'...
+
+
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  3 01:49:42 2026...
+
+
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+
+INFO: [COSIM 212-323] Starting verilog simulation. 
+
+INFO: [COSIM 212-15] Starting XSIM ...
+
+
+
+D:\KV260-project-HLS\b_qwen35\build\b03_reuse_hls\hls\sim\verilog>set PATH= 
+
+
+
+D:\KV260-project-HLS\b_qwen35\build\b03_reuse_hls\hls\sim\verilog>call D:/2026.1/2026.1/Vivado/bin/xelab xil_defaultlib.apatb_w4a8_linear_v1_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj w4a8_linear_v1.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_22 -L floating_point_v7_0_27 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./w4a8_linear_v1_subsystem  -s w4a8_linear_v1  
+
+Vivado Simulator v2026.1
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Running: D:/2026.1/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_w4a8_linear_v1_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj w4a8_linear_v1.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_22 -L floating_point_v7_0_27 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./w4a8_linear_v1_subsystem -s w4a8_linear_v1 
+
+Multi-threading is on. Using 16 slave threads.
+
+Determining compilation order of HDL files.
+
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+
+    CPATH
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/glbl.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module glbl
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1.autotb.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module apatb_w4a8_linear_v1_top
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_control_s_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_control_s_axi
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_flow_control_loop_pipe_sequential_init
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_gmem_meta_m_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_load
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_store
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_read
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_write
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_burst_converter
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_burst_interleave
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_burst_sequential
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_throttle
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_reg_slice
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_fifo
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_srl
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_meta_m_axi_mem
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_gmem_sw_m_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_load
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_read
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_burst_converter
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_burst_interleave
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_burst_sequential
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_reg_slice
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_fifo
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_srl
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_sw_m_axi_mem
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_gmem_w_m_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_load
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_read
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_burst_converter
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_burst_interleave
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_burst_sequential
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_reg_slice
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_fifo
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_srl
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_w_m_axi_mem
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_gmem_x_m_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_load
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_read
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_burst_converter
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_burst_interleave
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_burst_sequential
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_reg_slice
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_fifo
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_srl
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_x_m_axi_mem
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_gmem_y_m_axi.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_store
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_write
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_burst_converter
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_burst_interleave
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_burst_sequential
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_throttle
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_reg_slice
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_fifo
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_srl
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_gmem_y_m_axi_mem
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mac_muladd_8s_4s_19s_19_4_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mac_muladd_8s_4s_19s_19_4_1_DSP48_0
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mac_muladd_8s_4s_19s_19_4_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mac_muladd_8s_5s_20s_20_4_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mac_muladd_8s_5s_20s_20_4_1_DSP48_0
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mac_muladd_8s_5s_20s_20_4_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_25ns_27ns_52_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_25ns_27ns_52_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_27ns_25ns_52_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_27ns_25ns_52_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_32ns_25ns_57_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_32ns_25ns_57_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_32ns_32ns_62_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_32ns_32ns_62_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_32ns_32ns_64_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_32ns_32ns_64_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_4ns_14ns_16_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_4ns_14ns_16_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_mul_4ns_32ns_36_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_mul_4ns_32ns_36_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_activations_RAM_1P_BRAM_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_activations_RAM_1P_BRAM_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_group.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_group
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_scales_first_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_scales_first_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_token_scales_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_token_scales_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_totals_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_totals_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_compute_prefill_weights_first_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_compute_prefill_weights_first_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_weight_tile_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_contains_invalid_w4_weight_tile_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_load_prefill_group.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_load_prefill_group
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_p_anonymous_namespace_write_meta.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_p_anonymous_namespace_write_meta
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_scale_tile_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_scale_tile_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_sparsemux_65_5_32_1_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_sparsemux_65_5_32_1_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_token_activations_RAM_1P_BRAM_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_token_activations_RAM_1P_BRAM_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_totals_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_totals_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_tile_group_sums.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_tile_group_sums
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_tile_group_sums_1.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_tile_group_sums_1
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_weight_tile_RAM_AUTO_1R1W.v" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module w4a8_linear_v1_weight_tile_RAM_AUTO_1R1W
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/axivip/axi_pkg.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/axivip/axi_if.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/w4a8_linear_v1_subsystem/w4a8_linear_v1_subsystem_pkg.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+
+INFO: [VRFC 10-311] analyzing module sv_module_top
+
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/ip/xil_defaultlib/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip.vhd" into library xil_defaultlib
+
+INFO: [VRFC 10-3107] analyzing entity 'w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip'
+
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/ip/xil_defaultlib/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd" into library xil_defaultlib
+
+INFO: [VRFC 10-3107] analyzing entity 'w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip'
+
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/KV260-project-HLS/b_qwen35/build/b03_reuse_hls/hls/sim/verilog/ip/xil_defaultlib/w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip.vhd" into library xil_defaultlib
+
+INFO: [VRFC 10-3107] analyzing entity 'w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip'
+
+Starting static elaboration
+
+Pass Through NonSizing Optimizer
+
+Completed static elaboration
+
+Starting simulation data flow analysis
+
+Completed simulation data flow analysis
+
+Time Resolution for simulation is 1ps
+
+Compiling package std.standard
+
+Compiling package std.textio
+
+Compiling package ieee.std_logic_1164
+
+Compiling package ieee.numeric_std
+
+Compiling package floating_point_v7_1_22.floating_point_v7_1_22_viv_comp
+
+Compiling package xbip_utils_v3_0_16.xbip_utils_v3_0_16_pkg
+
+Compiling package axi_utils_v2_0_12.axi_utils_v2_0_12_pkg
+
+Compiling package floating_point_v7_1_22.floating_point_v7_1_22_consts
+
+Compiling package ieee.math_real
+
+Compiling package floating_point_v7_1_22.floating_point_v7_1_22_exp_table...
+
+Compiling package mult_gen_v12_0_25.mult_gen_v12_0_25_pkg
+
+Compiling package floating_point_v7_1_22.floating_point_v7_1_22_pkg
+
+Compiling package floating_point_v7_1_22.flt_utils
+
+Compiling package xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv_comp
+
+Compiling package unisim.vcomponents
+
+Compiling package ieee.vital_timing
+
+Compiling package ieee.vital_primitives
+
+Compiling package unisim.vpkg
+
+Compiling package floating_point_v7_1_22.vt2mutils
+
+Compiling package floating_point_v7_1_22.vt2mcomps
+
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+
+Compiling package uvm.uvm_pkg
+
+Compiling package std.std
+
+Compiling package xil_defaultlib.axi_pkg
+
+Compiling package xil_defaultlib.w4a8_linear_v1_subsystem_pkg
+
+Compiling package xil_defaultlib.file_agent_pkg
+
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+
+Compiling module xil_defaultlib.w4a8_linear_v1_weight_tile_RAM_A...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_token_activations...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_scale_tile_RAM_AU...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_totals_RAM_AUTO_1...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_flow_control_loop...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_25ns_27ns_52_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_4ns_32ns_36_1...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mac_muladd_8s_4s_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mac_muladd_8s_4s_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mac_muladd_8s_5s_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mac_muladd_8s_5s_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_tile_group_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_4ns_14ns_16_1...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_tile_group_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_sparsemux_65_5_32...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_p_anonymous_names...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_tile_group_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_w4a8_linear_v1_Pi...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_control_s_axi
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_m...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_m...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_m...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_m...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_l...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_b...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_t...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_s...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_f...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_w...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi_r...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_meta_m_axi(C...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_srl...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_fif...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_mem...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_fif...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_loa...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_reg...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_bur...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_reg...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_srl...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_fif...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi_rea...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_sw_m_axi(C_M...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_load...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_burs...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi_read...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_w_m_axi(C_M_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_load...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_burs...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi_read...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_x_m_axi(C_M_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_mem(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_stor...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_burs...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_thro...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_reg_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_srl(...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_fifo...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi_writ...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_gmem_y_m_axi(C_M_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_27ns_25ns_52_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_32ns_25ns_57_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_32ns_32ns_62_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1_mul_32ns_32ns_64_...
+
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=7,length=0)\]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=24,length=0,fast_in...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=16,length=0)\]
+
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=4,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=48,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=24,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xck26-s...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [delay_default]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=13,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=27,length=0)\]
+
+Compiling architecture synth of entity floating_point_v7_1_22.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=5,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=3,length=0)\]
+
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=2)\]
+
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=25,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=9,length=0)\]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=8,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=10)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=4,length=0,fast_inp...]
+
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(fast_input=true)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.special_detect [\special_detect(c_xdevicefamily=...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.compare [\compare(c_xdevicefamily="zynqup...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=8)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=9)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=2,length=2,fast_inp...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(length=2,fast_input=true)...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(length=0,fast_input=true)...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=2,length=0,fast_inp...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=12,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=23)\]
+
+Compiling architecture synth of entity floating_point_v7_1_22.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="zy...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=32,length=0)\]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22_viv [\floating_point_v7_1_22_viv(c_xd...]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22 [\floating_point_v7_1_22(c_xdevic...]
+
+Compiling architecture w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_arch of entity xil_defaultlib.w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip [w4a8_linear_v1_fadd_32ns_32ns_32...]
+
+Compiling module xil_defaultlib.w4a8_linear_v1_fadd_32ns_32ns_32...
+
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=17,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.fix_mult [\fix_mult(c_xdevicefamily="zynqu...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=8,length=0,fast_inp...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.special_detect [\special_detect(c_xdevicefamily=...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=2,fast_input=true)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=4,fast_input=true)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=3,length=0,fast_inp...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=14,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=30,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=18,length=0)\]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+
+Compiling architecture synth of entity floating_point_v7_1_22.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_mult [\flt_mult(c_xdevicefamily="zynqu...]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22_viv [\floating_point_v7_1_22_viv(c_xd...]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22 [\floating_point_v7_1_22(c_xdevic...]
+
+Compiling architecture w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_arch of entity xil_defaultlib.w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip [w4a8_linear_v1_fmul_32ns_32ns_32...]
+
+Compiling module xil_defaultlib.w4a8_linear_v1_fmul_32ns_32ns_32...
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=31,length=0)\]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=32)\]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.norm_zero_det [\norm_zero_det(data_width=7,norm...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.shift_msb_first [\shift_msb_first(a_width=32,resu...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_has_ce=...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(width=2,length=0)\]
+
+Compiling architecture struct of entity floating_point_v7_1_22.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture rtl of entity floating_point_v7_1_22.delay [\delay(length=2)\]
+
+Compiling architecture synth of entity floating_point_v7_1_22.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
+
+Compiling architecture struct of entity floating_point_v7_1_22.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
+
+Compiling architecture synth of entity xbip_pipe_v3_0_12.xbip_pipe_v3_0_12_viv [\xbip_pipe_v3_0_12_viv(c_latency...]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22_viv [\floating_point_v7_1_22_viv(c_xd...]
+
+Compiling architecture xilinx of entity floating_point_v7_1_22.floating_point_v7_1_22 [\floating_point_v7_1_22(c_xdevic...]
+
+Compiling architecture w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip_arch of entity xil_defaultlib.w4a8_linear_v1_sitofp_32ns_32_5_no_dsp_1_ip [w4a8_linear_v1_sitofp_32ns_32_5_...]
+
+Compiling module xil_defaultlib.w4a8_linear_v1_sitofp_32ns_32_5_...
+
+Compiling module xil_defaultlib.w4a8_linear_v1
+
+Compiling module xil_defaultlib.misc_interface_default
+
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=8,STRB_WIDTH=4...
+
+Compiling module xil_defaultlib.sv_module_top
+
+Compiling module xil_defaultlib.nodf_module_intf_default
+
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=243)
+
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=78)
+
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=83)
+
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=4)
+
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+
+Compiling module xil_defaultlib.dataflow_monitor_1
+
+Compiling module xil_defaultlib.apatb_w4a8_linear_v1_top
+
+Compiling module xil_defaultlib.glbl
+
+ERROR: [XSIM 43-3409] Failed to compile generated C file xsim.dir/w4a8_linear_v1/obj/xsim_50.c.
+
+ERROR: [XSIM 43-3915] Encountered a fatal error. Cannot continue. Exiting... 
+
+ERROR: Please check the snapshot name which is created during 'xelab',the current snapshot name "xsim.dir/w4a8_linear_v1/xsimk.exe" does not exist 
+
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+
+ERROR: 
+
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 8 seconds. Total elapsed time: 132.309 seconds; peak allocated memory: 499.918 MB.
+
+TRANSACTION index=0 case=hand_sample T=1 N=2 K=2 job=1000
+TRANSACTION index=1 case=hand_sample T=1 N=2 K=2 job=7777
+METRICS case=hand_sample max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=hand_sample T=1 N=2 K=2 source=synthetic seed=1
+TRANSACTION index=2 case=tile_random T=1 N=32 K=128 job=1002
+METRICS case=tile_random max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=tile_random T=1 N=32 K=128 source=synthetic seed=539365377
+TRANSACTION index=3 case=nk_tail T=1 N=33 K=129 job=1003
+METRICS case=nk_tail max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=nk_tail T=1 N=33 K=129 source=synthetic seed=539365378
+TRANSACTION index=4 case=three_groups T=1 N=65 K=257 job=1004
+METRICS case=three_groups max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=three_groups T=1 N=65 K=257 source=synthetic seed=539365379
+TRANSACTION index=5 case=single T=1 N=1 K=1 job=1005
+METRICS case=single max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=single T=1 N=1 K=1 source=synthetic seed=539365380
+TRANSACTION index=6 case=zeros T=1 N=33 K=129 job=1006
+METRICS case=zeros max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=zeros T=1 N=33 K=129 source=synthetic seed=539365381
+TRANSACTION index=7 case=extremes T=1 N=32 K=128 job=1007
+METRICS case=extremes max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=extremes T=1 N=32 K=128 source=synthetic seed=539365382
+TRANSACTION index=8 case=t4_compat T=4 N=33 K=129 job=1008
+METRICS case=t4_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=t4_compat T=4 N=33 K=129 source=synthetic seed=539365383
+TRANSACTION index=9 case=t8_compat T=8 N=1 K=1 job=1009
+METRICS case=t8_compat max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=t8_compat T=8 N=1 K=1 source=synthetic seed=539365384
+TRANSACTION index=10 case=nonbinary_scale T=1 N=32 K=128 job=1010
+METRICS case=nonbinary_scale max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=nonbinary_scale T=1 N=32 K=128 source=synthetic seed=539365385
+TRANSACTION index=11 case=padding_reserved T=1 N=1 K=1 job=1011
+METRICS case=padding_reserved max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=padding_reserved T=1 N=1 K=1 source=synthetic seed=17
+PASS quantization checks=27 execution=HOST_REFERENCE
+PASS host_rejection=zero_job public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=zero_t public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=t_overflow public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=n_overflow public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=zero_k public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_weight public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_sw public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_x public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_sx public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=null_y public_status=1 kernel_started=false output_consumed=false
+PASS host_rejection=short_weight public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_sw public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_x public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_sx public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=short_y public_status=3 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_a8 public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=activation_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_w4_low public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=reserved_w4_high public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=weight_k_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=weight_n_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=scale_padding public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_zero public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_zero public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_negative public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_negative public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_nan public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_nan public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_positive_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_positive_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sw_negative_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_rejection=sx_negative_inf public_status=9 kernel_started=false output_consumed=false
+PASS host_validation rejection_cases=32 domain=HOST_ADAPTER
+TRANSACTION index=12 case=repeat_jobs T=2 N=33 K=129 job=1012
+TRANSACTION index=13 case=repeat_jobs T=2 N=33 K=129 job=7777
+METRICS case=repeat_jobs max_abs=0 nrmse=0 atol=1e-06 rtol=0
+PASS case=repeat_jobs T=2 N=33 K=129 source=synthetic seed=539365410
+TRANSACTION index=14 case=repeat_jobs T=2 N=33 K=129 job=7777
+TRANSACTION index=15 case=repeat_jobs T=2 N=33 K=129 job=8888
+TRANSACTION index=16 case=repeat_jobs T=2 N=33 K=129 job=8888
+TRANSACTION index=17 case=repeat_jobs T=2 N=33 K=129 job=9999
+PASS repeat_jobs same_and_different=verified successes=5 rejected=1 kernel_count=46 output_consumed_on_error=false
+TRANSACTION index=18 case=errors T=1 N=33 K=129 job=9001
+TRANSACTION index=19 case=errors T=1 N=33 K=129 job=9002
+TRANSACTION index=20 case=errors T=1 N=33 K=129 job=9003
+TRANSACTION index=21 case=errors T=1 N=33 K=129 job=9004
+TRANSACTION index=22 case=high_reserved T=1 N=2 K=1 job=9005
+PASS errors=bad_abi,bad_length,bad_dimension,late_reserved_code,high_nibble
+TRANSACTION index=23 case=prefill_tail_t2 T=2 N=65 K=257 job=1023
+METRICS case=prefill_tail_t2 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t2 T=2 N=65 K=257 source=synthetic seed=539365381
+TRANSACTION index=24 case=prefill_tail_t3 T=3 N=65 K=257 job=1024
+METRICS case=prefill_tail_t3 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t3 T=3 N=65 K=257 source=synthetic seed=539365382
+TRANSACTION index=25 case=prefill_tail_t5 T=5 N=65 K=257 job=1025
+METRICS case=prefill_tail_t5 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t5 T=5 N=65 K=257 source=synthetic seed=539365384
+TRANSACTION index=26 case=prefill_tail_t6 T=6 N=65 K=257 job=1026
+METRICS case=prefill_tail_t6 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t6 T=6 N=65 K=257 source=synthetic seed=539365385
+TRANSACTION index=27 case=prefill_tail_t7 T=7 N=65 K=257 job=1027
+METRICS case=prefill_tail_t7 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t7 T=7 N=65 K=257 source=synthetic seed=539365386
+TRANSACTION index=28 case=prefill_tail_t8 T=8 N=65 K=257 job=1028
+TRANSACTION index=29 case=prefill_tail_t8 T=8 N=65 K=257 job=7777
+METRICS case=prefill_tail_t8 max_abs=0 nrmse=0 atol=0.0001 rtol=1e-05
+PASS case=prefill_tail_t8 T=8 N=65 K=257 source=synthetic seed=539365387
+B03 PASS suite=smoke source=synthetic transactions=30 int32_partial_checks=6876 fp32_output_checks=4032

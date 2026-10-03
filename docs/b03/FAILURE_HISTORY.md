@@ -17,3 +17,10 @@
 
 - baseline down_t8尝试20261002-163922-9538795在clang启动阶段失败，未进入RTL；完整日志保留。重试20261002-164127-3944097的真实RTL在2026-10-03 01:07:45结束，完整1/1、周期2,555,583；原生C post checking启动失败导致CLI退出1，故当时未计PASS。20261002-171355-5951792显式POST_CHECK重建与真实输出回放退出0，原始RTL文件SHA不变，最终标PASS_POSTCHECK_RECOVERED。先前make别名启动失败也保留日志，最终改用既有make.exe。
 - 用户要求在基线完成后暂停开发并上传三方案。baseline五组34笔集合已完整验收，后续reuse/double RTL与随机背压未启动，本轮不冻结最终候选。
+
+- 2026-10-03用户恢复优化仿真。SW512 reuse的smoke30与gate_t1实际RTL及POST_CHECK通过，但gate_t1为558,926周期，比基线530,254慢5.41%。综合报告明确记录decode Sw突发因数据宽度与master不同而撤回；对应load循环估计由35变106周期。固定Sw为原32位后重新执行两版全部验证。旧源与成功结果在evidence/b03/sw512_regression/，正在运行的gate_t8被有范围地终止并标INTERRUPTED_NOT_ACCEPTED，进程/原始输入输出日志哈希见reports/b03/sw512_gate_t8_interrupted*.json。该次不计入通过。
+- 恢复仿真快照时还发现：最后主C编译成功后，xelab仍须生成并编译C++ DPI文件及xsim.svtype/version等支持文件；仅凭object连续或CLI退出0无法证明快照完整。缺少支持文件的首次启动被XSIM拒绝，POST_CHECK也失败，没有计PASS。runner现补编本次新鲜生成文件、保留其语言/编译参数及SHA，继续原xelab流程到支持文件完整，再实际RTL运行，并额外要求kernel Simulation completed。POST_CHECK使用每次独立object目录，避免make复用导致缺少本次编译证明。全部失败记录保留。
+- 2026-10-03默认random_stall首组12笔真实RTL通过，但检查生成BFM后发现五个内存master仅有固定64周期事务延迟，随机化只作用于control。该组移至evidence/b03/control_only_random_stall/basic，不计入最终内存背压验收。后续lifecycle准备被有范围地终止，进程记录见reports/b03/default_stall_interrupted.json。使用工具支持的cosim.user_stall JSON为五个内存master的wctrl/wdata/wbrsp/rctrl/rdata明确设置0..7周期随机延迟，control为0..3，事务延迟保留64；全部32笔从头重验。稳定普通RTL运行器保存在evidence/b03/sw32_nominal_runner/run_prefill.ps1，新增JSON输入指纹后的运行器只用于后续背压验收。
+- user_stall相对路径首轮被工具在另一工作目录解析，日志明确No Json file，故有范围地终止且不计验收；记录reports/b03/user_stall_path_interrupted.json。五组配置改用本机现存JSON绝对路径，收据仍以项目相对路径记录该输入SHA。移机时需更新这五个cfg的JSON绝对路径。
+- double最大K随机内存背压：20261002-204528-0763602原生RTL完整1/1并正常结束，原生回放启动失败，CLI退出1。20261002-205343-5552810显式POST_CHECK重建与实际Y/meta回放退出0，原始RTL SHA不变，标PASS_POSTCHECK_RECOVERED；不杜撰未观测的RTL子进程退出码。
+- 清洁解压交付检查首次full50通过，但检查脚本未创建真实权重回放的输出目录，real_test报cannot save；属于交付检查入口问题，未修改数值源码。首次日志与说明保留在evidence/b03/tool_failures/clean_delivery_first/和reports/b03/clean_delivery_first_failure.json；创建目录后用全新解压目录重验。

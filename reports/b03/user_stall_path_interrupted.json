@@ -1,0 +1,49 @@
+{
+  "at_local": "2026-10-03T04:28:14.1631436+08:00",
+  "status": "INTERRUPTED_NOT_ACCEPTED",
+  "reason": "Tool resolved relative user-stall file elsewhere and warned No Json file; use explicit existing absolute path before restarting.",
+  "processes": [
+    {
+      "ProcessId": 13992,
+      "ParentProcessId": 18324,
+      "Name": "pwsh.exe",
+      "CommandLine": "\"C:\\Users\\陈沐阳\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n& '.\\work\\run_selected_stress.ps1' -Variant double\""
+    },
+    {
+      "ProcessId": 34532,
+      "ParentProcessId": 13992,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 33648,
+      "ParentProcessId": 13992,
+      "Name": "cmd.exe",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c \"\"D:\\2026.1\\2026.1\\Vitis\\bin\\vitis-run.bat\" --mode hls --csim --config hls_prefill_double_stall_basic.cfg --work_dir build/b03_double_hls\""
+    },
+    {
+      "ProcessId": 10404,
+      "ParentProcessId": 33648,
+      "Name": "vitis-run.exe",
+      "CommandLine": "\"D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe\"   --mode hls --csim --config hls_prefill_double_stall_basic.cfg --work_dir build/b03_double_hls"
+    },
+    {
+      "ProcessId": 45140,
+      "ParentProcessId": 10404,
+      "Name": "xcd.exe",
+      "CommandLine": "D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/xcd.exe --port 54765 --client_pid 10404 --token_uuid 60c8efa2-a152-49df-8cb7-3a8e3efe1741"
+    },
+    {
+      "ProcessId": 44924,
+      "ParentProcessId": 10404,
+      "Name": "cmd.exe",
+      "CommandLine": " /c D:/2026.1/2026.1/Vitis/bin/loader -exec vitis_hls -run csim -config D:/KV260-project-HLS/b_qwen35/hls_prefill_double_stall_basic.cfg -cmdlineconfig D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/config.cmdline -work_dir D:/KV260-project-HLS/b_qwen35/build/b03_double_hls -nolog"
+    },
+    {
+      "ProcessId": 46480,
+      "ParentProcessId": 44924,
+      "Name": "vitis_hls.exe",
+      "CommandLine": "\"D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/vitis_hls.exe\"   -run csim -config D:/KV260-project-HLS/b_qwen35/hls_prefill_double_stall_basic.cfg -cmdlineconfig D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/config.cmdline -work_dir D:/KV260-project-HLS/b_qwen35/build/b03_double_hls -nolog"
+    }
+  ]
+}

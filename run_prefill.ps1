@@ -4,6 +4,7 @@ param(
     [ValidateSet('baseline','reuse','double')][string]$Variant='double',
     [ValidateSet('native','csim','synth','cosim','stall','all','recover')][string]$Target='native',
     [ValidateSet('combined','smoke','gate_t1','gate_t8','down_t1','down_t8')][string]$Group='combined',
+    [ValidateSet('combined','basic','lifecycle','tail','max_k','max_n')][string]$StressGroup='combined',
     [string]$PreparedReceipt='',
     [string]$VitisRoot='D:\2026.1\2026.1\Vitis',
     [string]$MingwRoot='D:\mingw64\bin'
@@ -24,7 +25,20 @@ $vectorDirectory="vectors/b03_$Variant"
 $realDirectory="vectors/b03_${Variant}_real"
 $config="hls_prefill_$Variant.cfg"
 if($Group -ne 'combined') { $config="hls_prefill_${Variant}_${Group}.cfg" }
-if($Target -eq 'stall') { $config="hls_prefill_${Variant}_stall.cfg" }
+if($Target -eq 'stall') {
+    $config=if($StressGroup -eq 'combined'){"hls_prefill_${Variant}_stall.cfg"}else{"hls_prefill_${Variant}_stall_${StressGroup}.cfg"}
+}
+$additionalFingerprintPaths=@()
+# 用户背压JSON属于本次仿真输入，必须与源码/config一起固定并留收据。
+$stallSetting=Get-Content -LiteralPath (Join-Path $root $config) | Select-String '^cosim.user_stall=(.+)$'
+if($stallSetting){
+    $stallPath=$stallSetting.Matches[0].Groups[1].Value.Trim()
+    if([IO.Path]::IsPathRooted($stallPath)){
+        if(!$stallPath.Replace('\','/').StartsWith($root.Replace('\','/')+'/')){throw 'Stall input must stay inside project'}
+        $stallPath=$stallPath.Substring($root.Length+1).Replace('\','/')
+    }
+    $additionalFingerprintPaths+= $stallPath
+}
 $testbench=if($Target -eq 'stall'){'tb/tb_prefill_bounds.cpp'}else{'tb/tb_prefill_v1.cpp'}
 $source=if($Variant -eq 'baseline'){'baseline/b02/src/w4a8_linear_v1.cpp'}else{'src/w4a8_prefill_v1.cpp'}
 $defines=@('-DB02_CACHE_X','-DB02_AXI_X128','-DB03_TEST')
@@ -32,11 +46,15 @@ if($Variant -ne 'baseline') { $defines+='-DB03_REUSE' }
 if($Variant -eq 'double') { $defines+='-DB03_DOUBLE_BUFFER' }
 function Invoke-Step {
     param([string]$Name,[string]$Executable,[string[]]$Arguments,[string]$WorkingDirectory=$root)
+    if($Executable -eq (Join-Path $MingwRoot 'g++.exe')) {
+        # 避免GCC以包含../的路径启动子进程，收据记录真正传给编译器的参数。
+        $Arguments=@("-B$healthyCompilerDirectory/")+$Arguments
+    }
     $fingerprints=[ordered]@{}
-    foreach($path in @($source,'src/w4a8_linear_v1.hpp','baseline/b02/src/w4a8_linear_v1.hpp',
+    foreach($path in (@($source,'src/w4a8_linear_v1.hpp','baseline/b02/src/w4a8_linear_v1.hpp',
         $testbench,'tb/golden_w4a8.hpp','host/linear_validation.hpp',
         'reference/quantization.hpp','tests/support/quantization_checks.hpp',
-        'tests/numerical/prefill_tensor_replay.cpp',$config,'run_prefill.ps1')) {
+        'tests/numerical/prefill_tensor_replay.cpp',$config,'run_prefill.ps1')+$additionalFingerprintPaths)) {
         $fingerprints[$path]=(Get-FileHash -LiteralPath (Join-Path $root $path) -Algorithm SHA256).Hash
     }
     $code=-1
@@ -84,9 +102,54 @@ function Invoke-CosimRecovery {
     }
     $sim=Join-Path $root "build/b03_${Variant}_hls/hls/sim/verilog"
     $objectDir=Join-Path $sim 'xsim.dir/w4a8_linear_v1/obj'
-    $objects=@(Get-ChildItem -LiteralPath $objectDir -Filter '*.win64.obj' | Sort-Object Name)
-    $generated=@(Get-ChildItem -LiteralPath $objectDir -Filter 'xsim_*.c')
     $started=([DateTime]::Parse($prepared.finished_at_utc)).ToUniversalTime().AddSeconds(-$prepared.elapsed_seconds)
+    # xelab已生成的新鲜C若仅缺object，使用同一Vivado GCC和原编译选项补编。
+    # -B只纠正包含../的子进程路径；C源码不改，旧object不补用。
+    $vivadoRoot=Join-Path (Split-Path $VitisRoot -Parent) 'Vivado'
+    $vendorBin=Join-Path $vivadoRoot 'tps/mingw/6.2.0/win64.o/nt/bin'
+    $vendorHelpers=Join-Path $vivadoRoot 'tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0'
+    $repairs=[ordered]@{}
+    for($round=1;$round -le 3;$round++) {
+    $generated=@(Get-ChildItem -LiteralPath $objectDir -Filter 'xsim_*.c')
+    foreach($c in $generated) {
+        $o=Join-Path $objectDir ($c.BaseName+'.win64.obj')
+        if(!(Test-Path -LiteralPath $o) -or (Get-Item -LiteralPath $o).LastWriteTimeUtc -lt $c.LastWriteTimeUtc) {
+            if($c.LastWriteTimeUtc -lt $started){throw "Stale generated C: $($c.Name)"}
+            $beforeC=(Get-FileHash -LiteralPath $c.FullName).Hash
+            $cRelative="xsim.dir/w4a8_linear_v1/obj/$($c.Name)"
+            $oRelative="xsim.dir/w4a8_linear_v1/obj/$($c.BaseName).win64.obj"
+            $languageArgs=if((Get-Content -LiteralPath $c.FullName -Raw) -match 'extern "C"'){@('-x','c++')}else{@()}
+            $compileArgs=@("-B$($vendorHelpers.Replace('\','/'))/","-B$($vendorBin.Replace('\','/'))/",'-fPIC')+$languageArgs+@('-c','-Wa,-W',"-I$vivadoRoot/data/xsim/include",$cRelative,'-O1','-o',$oRelative,'-DXILINX_SIMULATOR')
+            $vendorPath=$env:PATH
+            try {
+                $env:PATH="$vendorBin;$vendorPath"
+                Invoke-Step "${Step}_object_$($c.BaseName)_round$round" (Join-Path $vendorBin 'gcc.exe') $compileArgs $sim
+            } finally {$env:PATH=$vendorPath}
+            if((Get-FileHash -LiteralPath $c.FullName).Hash -ne $beforeC){throw 'Generated C changed while compiling'}
+            $repairs[$c.Name]=[ordered]@{generated_c_sha256=$beforeC;object_sha256=(Get-FileHash -LiteralPath $o).Hash}
+        }
+    }
+    # 部分C编译后，xelab还须生成DPI胶水和2026.1快照类型/版本文件。
+    # 不以object连续或CLI退出0代替快照完整性。
+    $snapshotSupport=@('xsim.svtype','xsim.version','xsim.mem','xsim.reloc','xsim.type')
+    $supportFresh=$true
+    foreach($name in $snapshotSupport) {
+        $file=Join-Path $sim "xsim.dir/w4a8_linear_v1/$name"
+        if(!(Test-Path -LiteralPath $file) -or (Get-Item -LiteralPath $file).Length -eq 0 -or
+           (Get-Item -LiteralPath $file).LastWriteTimeUtc -lt $started.AddSeconds(-2)) {$supportFresh=$false}
+    }
+    if($supportFresh){break}
+    if($round -eq 3){throw 'Current snapshot support files incomplete; RTL was not run'}
+    $elaborateLine=@(Get-Content -LiteralPath (Join-Path $sim 'run_xsim.bat') | Where-Object {$_ -like 'call *xelab *'})
+    if($elaborateLine.Count -ne 1){throw 'Generated xelab command is ambiguous'}
+    $elaborateBatch=Join-Path $root "$logDirectory/${Step}_elaborate_round$round.cmd"
+    @('@echo off',($elaborateLine[0]+' -v 1'),'exit /b %errorlevel%') | Set-Content -LiteralPath $elaborateBatch -Encoding ascii
+    try {Invoke-Step "${Step}_elaborate_round$round" $env:ComSpec @('/d','/c',$elaborateBatch) $sim}
+    catch {Write-Host 'Elaboration failure preserved; next round only repairs fresh generated files.'}
+    }
+    $generated=@(Get-ChildItem -LiteralPath $objectDir -Filter 'xsim_*.c')
+    if($repairs.Count){$repairs | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath "$receiptDirectory/${Step}_object_repairs.json" -Encoding utf8}
+    $objects=@(Get-ChildItem -LiteralPath $objectDir -Filter '*.win64.obj' | Sort-Object Name)
     $indices=@($objects | ForEach-Object {
         if($_.Name -notmatch '^xsim_(\d+)\.win64\.obj$' -or $_.Length -eq 0 -or $_.LastWriteTimeUtc -lt $started) {
             throw "Incomplete/stale compiled object: $($_.Name)"
@@ -103,12 +166,12 @@ function Invoke-CosimRecovery {
     $pc=Join-Path $sim '../wrapc_pc/cosim.pc.exe'
     # 本机basename启动失败可令Vitis把PC程序误命名为TV；明确强制POST_CHECK并隔离其object缓存。
     $nativeShim=$shim.Replace('\','/')
-    $postMakeArguments=@('-f','cosim.pc.mk','DIRECTORY=wrapc_pc','ObjDir=postcheck_objects','VERBOSE=1',
+    $postMakeArguments=@('-f','cosim.pc.mk','DIRECTORY=wrapc_pc',"ObjDir=postcheck_objects_$stamp",'VERBOSE=1',
         "MKDIR=$nativeShim/mkdir.exe","RM=$nativeShim/rm.exe","CP=$nativeShim/cp.exe","MV=$nativeShim/mv.exe")
     $postCompilerPath=$env:PATH
     try {
         $env:PATH="$VitisRoot\lib\win64.o;$VitisRoot\bin\unwrapped\win64.o;$postCompilerPath"
-        Invoke-Step "${Step}_postcompile" (Join-Path $MingwRoot 'mingw32-make.exe') $postMakeArguments (Join-Path $sim '../wrapc_pc')
+        Invoke-Step "${Step}_postcompile" (Join-Path $MingwRoot 'make.exe') $postMakeArguments (Join-Path $sim '../wrapc_pc')
     } finally { $env:PATH=$postCompilerPath }
     $postCompileLog=Get-Content -LiteralPath "$logDirectory/${Step}_postcompile.log" -Raw
     if($postCompileLog -notmatch 'POST_CHECK') { throw 'Explicit POST_CHECK compile flag absent' }
@@ -119,7 +182,6 @@ function Invoke-CosimRecovery {
     if(!(Test-Path -LiteralPath $pc) -or (Get-Item -LiteralPath $pc).LastWriteTimeUtc -lt $latestDependency) { throw 'Prepared postchecker is missing or older than its source' }
     $hashes=[ordered]@{}
     foreach($o in $objects) { $hashes[$o.Name]=(Get-FileHash -LiteralPath $o.FullName).Hash }
-    $vivadoRoot=Join-Path (Split-Path $VitisRoot -Parent) 'Vivado'
     $snapshot=Join-Path $sim 'xsim.dir/w4a8_linear_v1/xsimk.exe'
     # 使用相对object路径缩短Windows子进程命令行，并明确链接器搜索目录。
     $linkArgs=@('-Wa,-W','-O','-Wl,--stack,104857600,--image-base,0x400000','-o','xsim.dir/w4a8_linear_v1/xsimk.exe')+
@@ -139,6 +201,10 @@ function Invoke-CosimRecovery {
     $batch=Join-Path $root "$logDirectory/${Step}_rtl.cmd"
     @('@echo off',$xsimLine[0],'exit /b %errorlevel%') | Set-Content -LiteralPath $batch -Encoding ascii
     Invoke-Step "${Step}_rtl" $env:ComSpec @('/d','/c',$batch) $sim
+    $completedLog=Join-Path $sim 'xsim.dir/w4a8_linear_v1/xsimkernel.log'
+    if(!(Test-Path -LiteralPath $completedLog) -or (Get-Content -LiteralPath $completedLog -Raw) -notmatch 'Simulation completed') {
+        throw 'XSIM wrapper exit is not proof of completed RTL; kernel completion marker absent'
+    }
     $suiteLine=Get-Content -LiteralPath $config | Where-Object {$_ -like 'cosim.argv=*'}
     $suite=($suiteLine -split '--suite ')[1].Trim()
     $postPath=$env:PATH
@@ -147,6 +213,21 @@ function Invoke-CosimRecovery {
         $env:PATH="$toolParent\win64\lib\csim;$VitisRoot\tps\mingw\10.0.0\win64.o\nt\bin;$toolParent\win64\tools\fpo_v7_1;$postPath"
         Invoke-Step "${Step}_postcheck" $pc @('--suite',$suite) (Join-Path $sim '../wrapc_pc')
     } finally { $env:PATH=$postPath }
+}
+# 已完成的RTL只补做实际输出校验；准备阶段失败仍走新鲜object恢复路径。
+function Invoke-VerifiedRecovery {
+    param([string]$Step,[string]$Preparation,[string]$RecoveryGroup,[int]$Count)
+    $prepared=Get-Content -LiteralPath (Join-Path $root $Preparation) -Raw | ConvertFrom-Json
+    $nativeText=Get-Content -LiteralPath (Join-Path $root $prepared.log) -Raw
+    $kernelLog=Join-Path $root "build/b03_${Variant}_hls/hls/sim/verilog/xsim.dir/w4a8_linear_v1/xsimkernel.log"
+    if($nativeText -match "RTL Simulation\s*:\s*$Count / $Count" -and
+       $nativeText -match 'Starting C post checking' -and
+       (Test-Path -LiteralPath $kernelLog) -and
+       (Get-Content -LiteralPath $kernelLog -Raw) -match 'Simulation completed') {
+        & (Join-Path $root 'tools/complete_prefill_postcheck.ps1') -Variant $Variant -Group $RecoveryGroup -PreparedReceipt $Preparation -VitisRoot $VitisRoot -MingwRoot $MingwRoot
+    } else {
+        Invoke-CosimRecovery $Step $Preparation
+    }
 }
 Set-Location -LiteralPath $root
 try {
@@ -188,18 +269,25 @@ try {
     if($Target -in @('cosim','all')) {
         $cosimStep=if($Group -eq 'combined'){'cosim'}else{"cosim_$Group"}
         try { Invoke-Step $cosimStep $run @('--mode','hls','--cosim','--config',$config,'--work_dir',"build/b03_${Variant}_hls") }
-        catch { Invoke-CosimRecovery $cosimStep "$receiptDirectory/$cosimStep.receipt.json" }
+        catch {
+            if($Group -eq 'combined'){Invoke-CosimRecovery $cosimStep "$receiptDirectory/$cosimStep.receipt.json"}
+            else {Invoke-VerifiedRecovery $cosimStep "$receiptDirectory/$cosimStep.receipt.json" $Group $(if($Group -eq 'smoke'){30}else{1})}
+        }
     }
     if($Target -eq 'recover') {
         if(!$PreparedReceipt -or $Group -eq 'combined') { throw 'Recovery needs the exact preparation receipt and group' }
         Invoke-CosimRecovery "cosim_$Group" $PreparedReceipt
     }
     if($Target -eq 'stall') {
+        $stressSuffix=if($StressGroup -eq 'combined'){''}else{"_$StressGroup"}
+        $stressSuite=if($StressGroup -eq 'combined'){'smoke'}else{"stress_$StressGroup"}
+        $stressCount=@{combined=32;basic=12;lifecycle=11;tail=7;max_k=1;max_n=1}[$StressGroup]
         Invoke-Step 'stall_native_compile' $gpp (@('-std=c++17','-O2','-ffp-contract=off','-Wno-unknown-pragmas')+$defines+@($source,$testbench,'-o',"$buildDirectory/boundary_test.exe"))
-        Invoke-Step 'stall_native_test' (Join-Path $root "$buildDirectory/boundary_test.exe") @('--suite','smoke')
+        Invoke-Step 'stall_native_test' (Join-Path $root "$buildDirectory/boundary_test.exe") @('--suite',$stressSuite)
         Invoke-Step 'stall_csim' $run @('--mode','hls','--csim','--config',$config,'--work_dir',"build/b03_${Variant}_hls")
-        try { Invoke-Step 'stall_cosim' $run @('--mode','hls','--cosim','--config',$config,'--work_dir',"build/b03_${Variant}_hls") }
-        catch { Invoke-CosimRecovery 'stall_cosim' "$receiptDirectory/stall_cosim.receipt.json" }
+        $stallStep="stall_cosim$stressSuffix"
+        try { Invoke-Step $stallStep $run @('--mode','hls','--cosim','--config',$config,'--work_dir',"build/b03_${Variant}_hls") }
+        catch { Invoke-VerifiedRecovery $stallStep "$receiptDirectory/$stallStep.receipt.json" "stall$stressSuffix" $stressCount }
     }
 } finally {
     if($ownsMutex) { $runMutex.ReleaseMutex() }

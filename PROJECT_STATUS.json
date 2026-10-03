@@ -1,9 +1,9 @@
 {
   "role": "B",
   "stage": "B03",
-  "stage_status": "PAUSED_USER_AFTER_BASELINE",
-  "engineering_gate": "BASELINE_RTL_PASS_OPTIMIZED_RTL_PENDING",
-  "updated_at": "2026-10-03T01:20:03.346980+08:00",
+  "stage_status": "COMPLETE_OFF_BOARD",
+  "engineering_gate": "B03_OFF_BOARD_PASS",
+  "updated_at": "2026-10-03T05:07:03.291354+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -17,7 +17,7 @@
     "pc": "PASS_B03_ALL_VARIANTS",
     "csim": "PASS_B03_ALL_VARIANTS",
     "synthesis": "PASS_B03_ALL_VARIANTS",
-    "cosim": "PASS_BASELINE_34; REUSE_DOUBLE_PENDING",
+    "cosim": "PASS_B03_ALL_VARIANTS_102_NOMINAL_AND_SELECTED_32_STALL",
     "implementation": "NOT_TESTED",
     "aarch64_build": "NOT_TESTED",
     "board": "NOT_TESTED",
@@ -25,11 +25,11 @@
     "latency": "NOT_TESTED",
     "power": "NOT_TESTED"
   },
-  "domain_scope": "B03 baseline actual RTL 34/34 accepted, including both target shapes T1/T8. User requested pause before optimized RTL runs; B03 final acceptance and candidate selection incomplete.",
+  "domain_scope": "Three designs: PC50 + real-weight4 + full Csim50 each, nominal RTL34 each; selected double random-stall RTL32. Implementation/ARM/BOARD not tested.",
   "new_target_shapes": {
     "pc": "PASS_16_COMBINATIONS_T1_TO_T8",
     "csim": "PASS_CURRENT_AND_B2_16_COMBINATIONS",
-    "cosim": "PASS_B03_BASELINE_TWO_SHAPES_T1_T8; REUSE_DOUBLE_NOT_COMPLETED",
+    "cosim": "PASS_ALL_THREE_VARIANTS_BOTH_SHAPES_T1_T8",
     "real_tensors": "PASS_PC_TWO_WEIGHTS_TIMES_T1_T8_SYNTHETIC_ACTIVATIONS"
   },
   "inherited_b3_evidence": {
@@ -72,10 +72,15 @@
     "reports/b01/rtl_postcheck.receipt.json",
     "reports/b01/clean_repro.receipt.json",
     "reports/b01/source_guard.receipt.json",
-    "reports/b01/interface_metadata.receipt.json"
+    "reports/b01/interface_metadata.receipt.json",
+    "reports/b03/ablation.json",
+    "reports/b03/artifact_guard.json",
+    "reports/b03/stress_acceptance.json",
+    "reports/b03/selection.json",
+    "reports/b03/clean_delivery.receipt.json"
   ],
   "blockers": [],
-  "next_action": "Await user resume. Finish reuse/double five nominal groups each; compare actual T1/T8 cycles; then integrate five stress selectors into the runner, complete selected random-stall RTL and freeze one candidate.",
+  "next_action": "B04 public C ABI library/lifecycle, platform linking, implementation timing/resources and aarch64 build; do not claim board readiness.",
   "warnings": [
     "Client model/effort/speed selection is unverified.",
     "Do not treat old dimensions as new model validation.",
@@ -89,11 +94,10 @@
     "B02 X128 native Cosim passed 25/25; gate/up T1 improves 1.29 percent but down T1 slows 0.25 percent versus B01 in XSIM.",
     "B02 X128 HLS slack is -0.37 ns against 6.667 ns target after 1.80 ns uncertainty; implementation and board frequency NOT_TESTED.",
     "First X128 native compile failed in local MinGW CreateProcess; original log was overwritten on retry, terminal error summarized in evidence/b02/x128_attempt_first/NOTE.md.",
-    "B03 paused after baseline completion at explicit user request; optimized RTL and random-stall acceptance pending.",
     "Baseline down T8 native RTL completed; native postchecker startup failed. Explicit POST_CHECK recovery passed; native CLI remains exit 1 and unobserved RTL child exit is null.",
     "B2 original new-shape Cosim remains NOT_TESTED; B03 baseline T1/T8 acceptance does not extend that historical claim."
   ],
-  "clean_rebuild": "PASS_B01_SOURCE_ZIP_AND_328_VECTOR_HASHES",
+  "clean_rebuild": "PASS_B03_EXTRACTED_SELECTED_SOURCE_FULL50_REAL4",
   "b01_pc_results": {
     "synthetic_transactions": 43,
     "int32_partial_checks": 2140479,
@@ -187,14 +191,14 @@
       "real_weight_pc": "PASS_SYNTHETIC_ACTIVATIONS",
       "csim": "PASS",
       "synthesis": "PASS",
-      "cosim": "NOT_COMPLETED_INTERRUPTED_ATTEMPTS_ONLY"
+      "cosim": "PASS_34_NOMINAL_CALLS"
     },
     "double": {
       "pc": "PASS",
       "real_weight_pc": "PASS_SYNTHETIC_ACTIVATIONS",
       "csim": "PASS",
       "synthesis": "PASS",
-      "cosim": "NOT_COMPLETED_INTERRUPTED_ATTEMPTS_ONLY"
+      "cosim": "PASS_34_NOMINAL_CALLS"
     }
   },
   "b03_progress": {
@@ -205,11 +209,12 @@
     "evidence": "reports/b03/postcheck_consumer_proof.json",
     "nominal_passed_calls_by_variant": {
       "baseline": 34,
-      "reuse": 0,
-      "double": 0
+      "reuse": 34,
+      "double": 34
     },
-    "paused_by_user": true
+    "paused_by_user": false,
+    "selected_stall_passed_calls": 32
   },
-  "b03_candidate": "NOT_SELECTED",
-  "b03_random_stall_rtl": "NOT_TESTED"
+  "b03_candidate": "double",
+  "b03_random_stall_rtl": "PASS_32_SELECTED_CANDIDATE"
 }

@@ -1,0 +1,30 @@
+w64devkit: could not start busybox.exe
+   Build using "D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++.exe"
+D:/codex-vitis-shims/mkdir.exe postcheck_objects_20261002-205343-5552810 >/dev/null
+> postcheck_objects_20261002-205343-5552810/.dir
+   Compiling apatb_w4a8_linear_v1.cpp
+D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++ -fno-builtin-isinf -fno-builtin-isnan -c --sysroot=D:/2026.1/2026.1/Vitis/tps/mingw/10.0.0/win64.o/nt -g -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/include/ap_sysc" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_FP_comp" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -I "D:/2026.1/2026.1/Vitis/win64/tools/auto_cc/include" -D__VITIS_HLS__ -D__HLS_COSIM__ -D__SIM_FPO__ -D__SIM_FFT__ -D__SIM_VRF_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E2__ -DNT -D__RTL_SIMULATION__ -D__xilinx_ip_top= -I . -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -DPOST_CHECK -DUSE_BINARY_TV_FILE --target=x86_64-w64-windows-gnu apatb_w4a8_linear_v1.cpp -o postcheck_objects_20261002-205343-5552810/apatb_w4a8_linear_v1.o
+In file included from apatb_w4a8_linear_v1.cpp:14:
+In file included from D:/2026.1/2026.1/Vitis/include\ap_fixed.h:9:
+In file included from D:/2026.1/2026.1/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2026.1/2026.1/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2026.1/2026.1/Vitis/include\hls_half.h:26:
+In file included from D:/2026.1/2026.1/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2026.1/2026.1/Vitis/include\hls_fpo.h:140:
+In file included from D:/2026.1/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2026.1/2026.1/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2026.1/2026.1/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+   Compiling tb_prefill_bounds.cpp_pre.cpp
+D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang -Werror=uninitialized -Wno-error=c++11-narrowing -Wno-error=sometimes-uninitialized --target=x86_64-w64-windows-gnu --sysroot=D:/2026.1/2026.1/Vitis/tps/mingw/10.0.0/win64.o/nt -std=gnu++17 -fno-builtin-isinf -fno-builtin-isnan -c -ffp-contract=off -Wno-unknown-pragmas -Wno-unknown-pragmas -g -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/include/ap_sysc" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_FP_comp" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -I "D:/2026.1/2026.1/Vitis/win64/tools/auto_cc/include" -D__VITIS_HLS__ -D__HLS_COSIM__ -D__SIM_FPO__ -D__SIM_FFT__ -D__SIM_VRF_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E2__ -DNT -D__RTL_SIMULATION__ -D__xilinx_ip_top= -I . -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -DAESL_PIPELINE -D__USE_XOPEN2K8 tb_prefill_bounds.cpp_pre.cpp  -build-hls-cosim-wrapper=w4a8_linear_v1 -o postcheck_objects_20261002-205343-5552810/tb_prefill_bounds.cpp_pre.o; 
+   Compiling w4a8_prefill_v1.cpp_pre.cpp
+D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang -Werror=uninitialized -Wno-error=c++11-narrowing -Wno-error=sometimes-uninitialized --target=x86_64-w64-windows-gnu --sysroot=D:/2026.1/2026.1/Vitis/tps/mingw/10.0.0/win64.o/nt -std=gnu++17 -fno-builtin-isinf -fno-builtin-isnan -c -ffp-contract=off -g -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/include/ap_sysc" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_FP_comp" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -I "D:/2026.1/2026.1/Vitis/win64/tools/auto_cc/include" -D__VITIS_HLS__ -D__HLS_COSIM__ -D__SIM_FPO__ -D__SIM_FFT__ -D__SIM_VRF_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E2__ -DNT -D__RTL_SIMULATION__ -D__xilinx_ip_top= -I . -I "D:/2026.1/2026.1/Vitis/include" -I "D:/2026.1/2026.1/Vitis/common/technology/generic/SystemC/AESL_comp" -DAESL_PIPELINE -D__USE_XOPEN2K8 w4a8_prefill_v1.cpp_pre.cpp  -build-hls-cosim-wrapper=w4a8_linear_v1 -o postcheck_objects_20261002-205343-5552810/w4a8_prefill_v1.cpp_pre.o; 
+   Compiling apatb_w4a8_linear_v1_ir.ll
+D:/2026.1/2026.1/Vitis/win64/tools/clang-3.9-csynth/bin/llc -mtriple=x86_64-pc-mingw32 -relocation-model=pic -filetype=obj apatb_w4a8_linear_v1_ir.ll -o postcheck_objects_20261002-205343-5552810/apatb_w4a8_linear_v1_ir.o
+   Generating cosim.pc.exe
+D:/2026.1/2026.1/Vitis/win64/tools/clang-16/bin/clang++ postcheck_objects_20261002-205343-5552810/tb_prefill_bounds.cpp_pre.o postcheck_objects_20261002-205343-5552810/w4a8_prefill_v1.cpp_pre.o postcheck_objects_20261002-205343-5552810/apatb_w4a8_linear_v1.o postcheck_objects_20261002-205343-5552810/apatb_w4a8_linear_v1_ir.o -D_DEBUG -g -O1 --sysroot=D:/2026.1/2026.1/Vitis/tps/mingw/10.0.0/win64.o/nt -Wl,--stack,0x40000000 -lpthread -Wl,--enable-auto-import --target=x86_64-w64-windows-gnu -Wl,--as-needed -lpthread -fuse-ld=lld -Wl,--no-dynamicbase -static-libgcc -L "D:/2026.1/2026.1/Vitis/win64/lib/csim" -lhlsmc++-GCC95-x64 -fno-builtin -fno-inline -L "D:/2026.1/2026.1/Vitis/win64/lib/csim" -lhlsm-GCC95-x64 -L "D:/2026.1/2026.1/Vitis/win64/tools/fpo_v7_1" -lgmp -lmpfr -lIp_floating_point_v7_1_bitacc_cmodel -L "D:/2026.1/2026.1/Vitis/win64/tools/fft_v9_1" -lIp_xfft_v9_1_bitacc_cmodel -L "D:/2026.1/2026.1/Vitis/win64/tools/vrf_fft_v1_2" -lIp_vrf_fft_v1_2_bitacc_cmodel -L "D:/2026.1/2026.1/Vitis/win64/tools/fir_v7_0" -lgmp -lIp_fir_compiler_v7_2_bitacc_cmodel -L "D:/2026.1/2026.1/Vitis/win64/tools/dds_v6_0" -lIp_dds_compiler_v6_0_bitacc_cmodel  -o cosim.pc.exe
+e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024

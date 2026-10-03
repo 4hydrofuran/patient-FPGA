@@ -1,0 +1,36 @@
+{
+  "stage": "B03",
+  "variant": "reuse",
+  "step": "cosim_smoke_postcompile",
+  "executable": "D:\\mingw64\\bin\\make.exe",
+  "arguments": [
+    "-B",
+    "-f",
+    "cosim.pc.mk",
+    "DIRECTORY=wrapc_pc",
+    "ObjDir=postcheck_objects",
+    "VERBOSE=1",
+    "MKDIR=D:/codex-vitis-shims/mkdir.exe",
+    "RM=D:/codex-vitis-shims/rm.exe",
+    "CP=D:/codex-vitis-shims/cp.exe",
+    "MV=D:/codex-vitis-shims/mv.exe"
+  ],
+  "working_directory": "D:\\KV260-project-HLS\\b_qwen35\\build\\b03_reuse_hls\\hls\\sim\\verilog\\..\\wrapc_pc",
+  "exit_code": 2,
+  "elapsed_seconds": 1.6387575,
+  "log": "logs/b03/reuse/20261002-180317-0744707/cosim_smoke_postcompile.log",
+  "input_sha256": {
+    "src/w4a8_prefill_v1.cpp": "25F3F4CB73733B74F9D78661F162BE62FC5F9006B1F2B6141055873DA58BCA95",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_v1.cpp": "69952372C1C5CC980C13CE68E931AF2243866B48F725A650FD84CCF1F1A61178",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_reuse_smoke.cfg": "2D3AD71C1ECAB52FC28C1679BD36C5342E457275550204C722CDAEE501A78AB1",
+    "run_prefill.ps1": "87128CB67C5A54D2B6F2D7CD964D2E95A153411406E5210C8587CAC6463DFE8F"
+  },
+  "finished_at_utc": "2026-10-02T18:03:19.4141226Z"
+}

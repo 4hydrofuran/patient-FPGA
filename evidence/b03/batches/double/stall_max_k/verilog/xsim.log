@@ -1,0 +1,1114 @@
+#-----------------------------------------------------------
+# xsim v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct  3 04:48:26 2026
+# Process ID         : 11956
+# Current directory  : D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/w4a8_linear_v1/xsim_script.tcl}
+# Log file           : D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/sim/verilog/xsim.log
+# Journal file       : D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/sim/verilog\xsim.jou
+# Running On         : chenmuyang
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 5 125H
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 18
+# Host memory        : 33945 MB
+# Swap memory        : 6203 MB
+# Total Virtual      : 40149 MB
+# Available Virtual  : 15979 MB
+#-----------------------------------------------------------
+source xsim.dir/w4a8_linear_v1/xsim_script.tcl
+# xsim {w4a8_linear_v1} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=w4a8_linear_v1_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -view {{w4a8_linear_v1_dataflow_ana.wcfg}} -tclbatch {w4a8_linear_v1.tcl} -protoinst {w4a8_linear_v1.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file w4a8_linear_v1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1//AESL_inst_w4a8_linear_v1_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2_fu_306/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_373_2_fu_306_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5_fu_317/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_387_4_VITIS_LOOP_390_5_fu_317_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_fu_541_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_load_prefill_group_fu_323/grp_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1_fu_117/grp_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_251_1_fu_117_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_load_prefill_group_fu_323/grp_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1_fu_108/grp_p_anonymous_namespace_load_prefill_group_Pipeline_VITIS_LOOP_51_1_fu_108_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_load_prefill_group_fu_323/grp_p_anonymous_namespace_load_prefill_group_fu_323_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/grp_p_anonymous_namespace_prefill_overlap_fu_336_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_w4a8_tile_group_sums_fu_104/grp_w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2_fu_184/grp_w4a8_tile_group_sums_Pipeline_VITIS_LOOP_165_2_fu_184_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_w4a8_tile_group_sums_fu_104/grp_w4a8_tile_group_sums_fu_104_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/p_anonymous_namespace_compute_prefill_group_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_load_prefill_group_1_U0/grp_p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_251_1_fu_133/grp_p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_251_1_fu_133_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_load_prefill_group_1_U0/grp_p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_51_1_fu_124/grp_p_anonymous_namespace_load_prefill_group_1_Pipeline_VITIS_LOOP_51_1_fu_124_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_load_prefill_group_1_U0/p_anonymous_namespace_load_prefill_group_1_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/grp_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3_fu_241/grp_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_105_3_fu_241_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/grp_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1_fu_233/grp_p_anonymous_namespace_contains_invalid_w4_Pipeline_VITIS_LOOP_51_1_fu_233_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/grp_p_anonymous_namespace_contains_invalid_w4_fu_531_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_p_anonymous_namespace_write_meta_fu_508/grp_p_anonymous_namespace_write_meta_fu_508_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1_fu_577/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_51_1_fu_577_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2_fu_563/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_665_2_fu_563_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4_fu_572/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_675_4_fu_572_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6_fu_585/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_706_6_fu_585_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8_fu_593/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_737_8_fu_593_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9_fu_646/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_747_9_fu_646_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/grp_w4a8_tile_group_sums_1_fu_600/grp_w4a8_tile_group_sums_1_fu_600_activity
+Time resolution is 1 ps
+open_wave_config w4a8_linear_v1_dataflow_ana.wcfg
+source w4a8_linear_v1.tcl
+## log_wave [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/*]
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set meta_group [add_wave_group meta(axi_master) -into $cinoutgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $meta_group]
+## set wdata_group [add_wave_group "Write Channel" -into $meta_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $meta_group]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_BID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_meta_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group [add_wave_group w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return(axi_slave) -into $cinoutgroup]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/interrupt -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_BRESP -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_BREADY -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_BVALID -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_RRESP -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_RDATA -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_RREADY -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_RVALID -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_ARREADY -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_ARVALID -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_ARADDR -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_WSTRB -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_WDATA -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_WREADY -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_WVALID -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_AWREADY -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_AWVALID -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/s_axi_control_AWADDR -into $w_packed__sw__xq__sx__y__meta__t__n__k__w_bytes__sw_bytes__x_bytes__sx_bytes__y_bytes__meta_bytes__job_id__abi_version__return_group -radix hex
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set y_group [add_wave_group y(axi_master) -into $coutputgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $y_group]
+## set wdata_group [add_wave_group "Write Channel" -into $y_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $y_group]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_BID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_y_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set xq__sx_group [add_wave_group xq__sx(axi_master) -into $cinputgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $xq__sx_group]
+## set wdata_group [add_wave_group "Write Channel" -into $xq__sx_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $xq__sx_group]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_BID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_x_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set sw_group [add_wave_group sw(axi_master) -into $cinputgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $sw_group]
+## set wdata_group [add_wave_group "Write Channel" -into $sw_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $sw_group]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_BID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_sw_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set w_packed_group [add_wave_group w_packed(axi_master) -into $cinputgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $w_packed_group]
+## set wdata_group [add_wave_group "Write Channel" -into $w_packed_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $w_packed_group]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_BID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARID -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWID -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/m_axi_gmem_w_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_w4a8_linear_v1_top/AESL_inst_w4a8_linear_v1/ap_clk -into $clockgroup
+## save_wave_config w4a8_linear_v1.wcfg
+## run all
+UVM_INFO D:/2026.1/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO D:/2026.1/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO D:/2026.1/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-------------------------------------------------------------------------------------------
+Name                            Type                                Size  Value            
+-------------------------------------------------------------------------------------------
+uvm_test_top                    w4a8_linear_v1_test_lib             -     @378             
+  top_env                       w4a8_linear_v1_env                  -     @389             
+    axi_lite_control            uvm_env                             -     @576             
+      item_rtr_port             uvm_analysis_port                   -     @595             
+      item_wtr_port             uvm_analysis_port                   -     @585             
+      master                    uvm_agent                           -     @1068            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @1743            
+          item_read_imp         uvm_analysis_port                   -     @1772            
+          rsp_port              uvm_analysis_port                   -     @1762            
+          seq_item_port         uvm_seq_item_pull_port              -     @1752            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @1782            
+          rsp_export            uvm_analysis_export                 -     @1791            
+          seq_item_export       uvm_seq_item_pull_imp               -     @1909            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @1215            
+          item_read_imp         uvm_analysis_port                   -     @1244            
+          rsp_port              uvm_analysis_port                   -     @1234            
+          seq_item_port         uvm_seq_item_pull_port              -     @1224            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @1254            
+          rsp_export            uvm_analysis_export                 -     @1263            
+          seq_item_export       uvm_seq_item_pull_imp               -     @1381            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @1567            
+          item_read_imp         uvm_analysis_port                   -     @1596            
+          rsp_port              uvm_analysis_port                   -     @1586            
+          seq_item_port         uvm_seq_item_pull_port              -     @1576            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @1606            
+          rsp_export            uvm_analysis_export                 -     @1615            
+          seq_item_export       uvm_seq_item_pull_imp               -     @1733            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @1919            
+          item_read_imp         uvm_analysis_port                   -     @1948            
+          rsp_port              uvm_analysis_port                   -     @1938            
+          seq_item_port         uvm_seq_item_pull_port              -     @1928            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @1958            
+          rsp_export            uvm_analysis_export                 -     @1967            
+          seq_item_export       uvm_seq_item_pull_imp               -     @2085            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @1391            
+          item_read_imp         uvm_analysis_port                   -     @1420            
+          rsp_port              uvm_analysis_port                   -     @1410            
+          seq_item_port         uvm_seq_item_pull_port              -     @1400            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @1430            
+          rsp_export            uvm_analysis_export                 -     @1439            
+          seq_item_export       uvm_seq_item_pull_imp               -     @1557            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      monitor                   uvm_monitor                         -     @890             
+        item_ar2r_port          uvm_analysis_port                   -     @959             
+        item_ar_port            uvm_analysis_port                   -     @929             
+        item_aw2b_port          uvm_analysis_port                   -     @949             
+        item_aw_port            uvm_analysis_port                   -     @899             
+        item_b_port             uvm_analysis_port                   -     @919             
+        item_r_port             uvm_analysis_port                   -     @939             
+        item_w_port             uvm_analysis_port                   -     @909             
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      state                     axi_state                           -     @969             
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @1038            
+        ar_imp                  uvm_analysis_imp_ar                 -     @1008            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @1028            
+        aw_imp                  uvm_analysis_imp_aw                 -     @978             
+        b_imp                   uvm_analysis_imp_b                  -     @998             
+        item_rtr_port           uvm_analysis_port                   -     @1058            
+        item_wtr_port           uvm_analysis_port                   -     @1048            
+        r_imp                   uvm_analysis_imp_r                  -     @1018            
+        w_imp                   uvm_analysis_imp_w                  -     @988             
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @1077            
+        rsp_export              uvm_analysis_export                 -     @1086            
+        seq_item_export         uvm_seq_item_pull_imp               -     @1204            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @409             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    MASTER           
+        write_latency_mode      latency_mode_enum                   32    CHANNEL_FIRST    
+        read_latency_mode       latency_mode_enum                   32    CHANNEL_FIRST    
+        clatency                axi_latency_control                 -     @574             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    axi_master_gmem_meta        uvm_env                             -     @544             
+      item_rtr_port             uvm_analysis_port                   -     @563             
+      item_wtr_port             uvm_analysis_port                   -     @553             
+      monitor                   uvm_monitor                         -     @2168            
+        item_ar2r_port          uvm_analysis_port                   -     @2237            
+        item_ar_port            uvm_analysis_port                   -     @2207            
+        item_aw2b_port          uvm_analysis_port                   -     @2227            
+        item_aw_port            uvm_analysis_port                   -     @2177            
+        item_b_port             uvm_analysis_port                   -     @2197            
+        item_r_port             uvm_analysis_port                   -     @2217            
+        item_w_port             uvm_analysis_port                   -     @2187            
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      slave                     uvm_agent                           -     @2346            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @3023            
+          item_read_imp         uvm_analysis_port                   -     @3052            
+          rsp_port              uvm_analysis_port                   -     @3042            
+          seq_item_port         uvm_seq_item_pull_port              -     @3032            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @3062            
+          rsp_export            uvm_analysis_export                 -     @3071            
+          seq_item_export       uvm_seq_item_pull_imp               -     @3189            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @2495            
+          item_read_imp         uvm_analysis_port                   -     @2524            
+          rsp_port              uvm_analysis_port                   -     @2514            
+          seq_item_port         uvm_seq_item_pull_port              -     @2504            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @2534            
+          rsp_export            uvm_analysis_export                 -     @2543            
+          seq_item_export       uvm_seq_item_pull_imp               -     @2661            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @2847            
+          item_read_imp         uvm_analysis_port                   -     @2876            
+          rsp_port              uvm_analysis_port                   -     @2866            
+          seq_item_port         uvm_seq_item_pull_port              -     @2856            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @2886            
+          rsp_export            uvm_analysis_export                 -     @2895            
+          seq_item_export       uvm_seq_item_pull_imp               -     @3013            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @3199            
+          item_read_imp         uvm_analysis_port                   -     @3228            
+          rsp_port              uvm_analysis_port                   -     @3218            
+          seq_item_port         uvm_seq_item_pull_port              -     @3208            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @3238            
+          rsp_export            uvm_analysis_export                 -     @3247            
+          seq_item_export       uvm_seq_item_pull_imp               -     @3365            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @2671            
+          item_read_imp         uvm_analysis_port                   -     @2700            
+          rsp_port              uvm_analysis_port                   -     @2690            
+          seq_item_port         uvm_seq_item_pull_port              -     @2680            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @2710            
+          rsp_export            uvm_analysis_export                 -     @2719            
+          seq_item_export       uvm_seq_item_pull_imp               -     @2837            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      state                     axi_state                           -     @2247            
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @2316            
+        ar_imp                  uvm_analysis_imp_ar                 -     @2286            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @2306            
+        aw_imp                  uvm_analysis_imp_aw                 -     @2256            
+        b_imp                   uvm_analysis_imp_b                  -     @2276            
+        item_rtr_port           uvm_analysis_port                   -     @2336            
+        item_wtr_port           uvm_analysis_port                   -     @2326            
+        r_imp                   uvm_analysis_imp_r                  -     @2296            
+        w_imp                   uvm_analysis_imp_w                  -     @2266            
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @2355            
+        rsp_export              uvm_analysis_export                 -     @2364            
+        seq_item_export         uvm_seq_item_pull_imp               -     @2482            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @408             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_meta               -     @542             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    axi_master_gmem_sw          uvm_env                             -     @448             
+      item_rtr_port             uvm_analysis_port                   -     @467             
+      item_wtr_port             uvm_analysis_port                   -     @457             
+      monitor                   uvm_monitor                         -     @3446            
+        item_ar2r_port          uvm_analysis_port                   -     @3515            
+        item_ar_port            uvm_analysis_port                   -     @3485            
+        item_aw2b_port          uvm_analysis_port                   -     @3505            
+        item_aw_port            uvm_analysis_port                   -     @3455            
+        item_b_port             uvm_analysis_port                   -     @3475            
+        item_r_port             uvm_analysis_port                   -     @3495            
+        item_w_port             uvm_analysis_port                   -     @3465            
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      slave                     uvm_agent                           -     @3624            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @4301            
+          item_read_imp         uvm_analysis_port                   -     @4330            
+          rsp_port              uvm_analysis_port                   -     @4320            
+          seq_item_port         uvm_seq_item_pull_port              -     @4310            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @4340            
+          rsp_export            uvm_analysis_export                 -     @4349            
+          seq_item_export       uvm_seq_item_pull_imp               -     @4467            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @3773            
+          item_read_imp         uvm_analysis_port                   -     @3802            
+          rsp_port              uvm_analysis_port                   -     @3792            
+          seq_item_port         uvm_seq_item_pull_port              -     @3782            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @3812            
+          rsp_export            uvm_analysis_export                 -     @3821            
+          seq_item_export       uvm_seq_item_pull_imp               -     @3939            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @4125            
+          item_read_imp         uvm_analysis_port                   -     @4154            
+          rsp_port              uvm_analysis_port                   -     @4144            
+          seq_item_port         uvm_seq_item_pull_port              -     @4134            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @4164            
+          rsp_export            uvm_analysis_export                 -     @4173            
+          seq_item_export       uvm_seq_item_pull_imp               -     @4291            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @4477            
+          item_read_imp         uvm_analysis_port                   -     @4506            
+          rsp_port              uvm_analysis_port                   -     @4496            
+          seq_item_port         uvm_seq_item_pull_port              -     @4486            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @4516            
+          rsp_export            uvm_analysis_export                 -     @4525            
+          seq_item_export       uvm_seq_item_pull_imp               -     @4643            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @3949            
+          item_read_imp         uvm_analysis_port                   -     @3978            
+          rsp_port              uvm_analysis_port                   -     @3968            
+          seq_item_port         uvm_seq_item_pull_port              -     @3958            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @3988            
+          rsp_export            uvm_analysis_export                 -     @3997            
+          seq_item_export       uvm_seq_item_pull_imp               -     @4115            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      state                     axi_state                           -     @3525            
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @3594            
+        ar_imp                  uvm_analysis_imp_ar                 -     @3564            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @3584            
+        aw_imp                  uvm_analysis_imp_aw                 -     @3534            
+        b_imp                   uvm_analysis_imp_b                  -     @3554            
+        item_rtr_port           uvm_analysis_port                   -     @3614            
+        item_wtr_port           uvm_analysis_port                   -     @3604            
+        r_imp                   uvm_analysis_imp_r                  -     @3574            
+        w_imp                   uvm_analysis_imp_w                  -     @3544            
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @3633            
+        rsp_export              uvm_analysis_export                 -     @3642            
+        seq_item_export         uvm_seq_item_pull_imp               -     @3760            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @405             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_sw                 -     @446             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    axi_master_gmem_w           uvm_env                             -     @416             
+      item_rtr_port             uvm_analysis_port                   -     @435             
+      item_wtr_port             uvm_analysis_port                   -     @425             
+      monitor                   uvm_monitor                         -     @4724            
+        item_ar2r_port          uvm_analysis_port                   -     @4793            
+        item_ar_port            uvm_analysis_port                   -     @4763            
+        item_aw2b_port          uvm_analysis_port                   -     @4783            
+        item_aw_port            uvm_analysis_port                   -     @4733            
+        item_b_port             uvm_analysis_port                   -     @4753            
+        item_r_port             uvm_analysis_port                   -     @4773            
+        item_w_port             uvm_analysis_port                   -     @4743            
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      slave                     uvm_agent                           -     @4902            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @5579            
+          item_read_imp         uvm_analysis_port                   -     @5608            
+          rsp_port              uvm_analysis_port                   -     @5598            
+          seq_item_port         uvm_seq_item_pull_port              -     @5588            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @5618            
+          rsp_export            uvm_analysis_export                 -     @5627            
+          seq_item_export       uvm_seq_item_pull_imp               -     @5745            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @5051            
+          item_read_imp         uvm_analysis_port                   -     @5080            
+          rsp_port              uvm_analysis_port                   -     @5070            
+          seq_item_port         uvm_seq_item_pull_port              -     @5060            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @5090            
+          rsp_export            uvm_analysis_export                 -     @5099            
+          seq_item_export       uvm_seq_item_pull_imp               -     @5217            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @5403            
+          item_read_imp         uvm_analysis_port                   -     @5432            
+          rsp_port              uvm_analysis_port                   -     @5422            
+          seq_item_port         uvm_seq_item_pull_port              -     @5412            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @5442            
+          rsp_export            uvm_analysis_export                 -     @5451            
+          seq_item_export       uvm_seq_item_pull_imp               -     @5569            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @5755            
+          item_read_imp         uvm_analysis_port                   -     @5784            
+          rsp_port              uvm_analysis_port                   -     @5774            
+          seq_item_port         uvm_seq_item_pull_port              -     @5764            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @5794            
+          rsp_export            uvm_analysis_export                 -     @5803            
+          seq_item_export       uvm_seq_item_pull_imp               -     @5921            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @5227            
+          item_read_imp         uvm_analysis_port                   -     @5256            
+          rsp_port              uvm_analysis_port                   -     @5246            
+          seq_item_port         uvm_seq_item_pull_port              -     @5236            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @5266            
+          rsp_export            uvm_analysis_export                 -     @5275            
+          seq_item_export       uvm_seq_item_pull_imp               -     @5393            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      state                     axi_state                           -     @4803            
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @4872            
+        ar_imp                  uvm_analysis_imp_ar                 -     @4842            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @4862            
+        aw_imp                  uvm_analysis_imp_aw                 -     @4812            
+        b_imp                   uvm_analysis_imp_b                  -     @4832            
+        item_rtr_port           uvm_analysis_port                   -     @4892            
+        item_wtr_port           uvm_analysis_port                   -     @4882            
+        r_imp                   uvm_analysis_imp_r                  -     @4852            
+        w_imp                   uvm_analysis_imp_w                  -     @4822            
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @4911            
+        rsp_export              uvm_analysis_export                 -     @4920            
+        seq_item_export         uvm_seq_item_pull_imp               -     @5038            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @404             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_w                  -     @411             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    axi_master_gmem_x           uvm_env                             -     @480             
+      item_rtr_port             uvm_analysis_port                   -     @499             
+      item_wtr_port             uvm_analysis_port                   -     @489             
+      monitor                   uvm_monitor                         -     @6002            
+        item_ar2r_port          uvm_analysis_port                   -     @6071            
+        item_ar_port            uvm_analysis_port                   -     @6041            
+        item_aw2b_port          uvm_analysis_port                   -     @6061            
+        item_aw_port            uvm_analysis_port                   -     @6011            
+        item_b_port             uvm_analysis_port                   -     @6031            
+        item_r_port             uvm_analysis_port                   -     @6051            
+        item_w_port             uvm_analysis_port                   -     @6021            
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      slave                     uvm_agent                           -     @6180            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @6857            
+          item_read_imp         uvm_analysis_port                   -     @6886            
+          rsp_port              uvm_analysis_port                   -     @6876            
+          seq_item_port         uvm_seq_item_pull_port              -     @6866            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @6896            
+          rsp_export            uvm_analysis_export                 -     @6905            
+          seq_item_export       uvm_seq_item_pull_imp               -     @7023            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @6329            
+          item_read_imp         uvm_analysis_port                   -     @6358            
+          rsp_port              uvm_analysis_port                   -     @6348            
+          seq_item_port         uvm_seq_item_pull_port              -     @6338            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @6368            
+          rsp_export            uvm_analysis_export                 -     @6377            
+          seq_item_export       uvm_seq_item_pull_imp               -     @6495            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @6681            
+          item_read_imp         uvm_analysis_port                   -     @6710            
+          rsp_port              uvm_analysis_port                   -     @6700            
+          seq_item_port         uvm_seq_item_pull_port              -     @6690            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @6720            
+          rsp_export            uvm_analysis_export                 -     @6729            
+          seq_item_export       uvm_seq_item_pull_imp               -     @6847            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @7033            
+          item_read_imp         uvm_analysis_port                   -     @7062            
+          rsp_port              uvm_analysis_port                   -     @7052            
+          seq_item_port         uvm_seq_item_pull_port              -     @7042            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @7072            
+          rsp_export            uvm_analysis_export                 -     @7081            
+          seq_item_export       uvm_seq_item_pull_imp               -     @7199            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @6505            
+          item_read_imp         uvm_analysis_port                   -     @6534            
+          rsp_port              uvm_analysis_port                   -     @6524            
+          seq_item_port         uvm_seq_item_pull_port              -     @6514            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @6544            
+          rsp_export            uvm_analysis_export                 -     @6553            
+          seq_item_export       uvm_seq_item_pull_imp               -     @6671            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      state                     axi_state                           -     @6081            
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @6150            
+        ar_imp                  uvm_analysis_imp_ar                 -     @6120            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @6140            
+        aw_imp                  uvm_analysis_imp_aw                 -     @6090            
+        b_imp                   uvm_analysis_imp_b                  -     @6110            
+        item_rtr_port           uvm_analysis_port                   -     @6170            
+        item_wtr_port           uvm_analysis_port                   -     @6160            
+        r_imp                   uvm_analysis_imp_r                  -     @6130            
+        w_imp                   uvm_analysis_imp_w                  -     @6100            
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @6189            
+        rsp_export              uvm_analysis_export                 -     @6198            
+        seq_item_export         uvm_seq_item_pull_imp               -     @6316            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @406             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_x                  -     @478             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    axi_master_gmem_y           uvm_env                             -     @512             
+      item_rtr_port             uvm_analysis_port                   -     @531             
+      item_wtr_port             uvm_analysis_port                   -     @521             
+      monitor                   uvm_monitor                         -     @7280            
+        item_ar2r_port          uvm_analysis_port                   -     @7349            
+        item_ar_port            uvm_analysis_port                   -     @7319            
+        item_aw2b_port          uvm_analysis_port                   -     @7339            
+        item_aw_port            uvm_analysis_port                   -     @7289            
+        item_b_port             uvm_analysis_port                   -     @7309            
+        item_r_port             uvm_analysis_port                   -     @7329            
+        item_w_port             uvm_analysis_port                   -     @7299            
+        checks_enable           integral                            1     'h1              
+        coverage_enable         integral                            1     'h1              
+      slave                     uvm_agent                           -     @7458            
+        ardrv                   uvm_driver #(REQ,RSP)               -     @8135            
+          item_read_imp         uvm_analysis_port                   -     @8164            
+          rsp_port              uvm_analysis_port                   -     @8154            
+          seq_item_port         uvm_seq_item_pull_port              -     @8144            
+          m_num_sent            integral                            32    'h0              
+        arsqr                   axi_sequencer                       -     @8174            
+          rsp_export            uvm_analysis_export                 -     @8183            
+          seq_item_export       uvm_seq_item_pull_imp               -     @8301            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        awdrv                   uvm_driver #(REQ,RSP)               -     @7607            
+          item_read_imp         uvm_analysis_port                   -     @7636            
+          rsp_port              uvm_analysis_port                   -     @7626            
+          seq_item_port         uvm_seq_item_pull_port              -     @7616            
+          m_num_sent            integral                            32    'h0              
+        awsqr                   axi_sequencer                       -     @7646            
+          rsp_export            uvm_analysis_export                 -     @7655            
+          seq_item_export       uvm_seq_item_pull_imp               -     @7773            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        bdrv                    uvm_driver #(REQ,RSP)               -     @7959            
+          item_read_imp         uvm_analysis_port                   -     @7988            
+          rsp_port              uvm_analysis_port                   -     @7978            
+          seq_item_port         uvm_seq_item_pull_port              -     @7968            
+          m_num_sent            integral                            32    'h0              
+        bsqr                    axi_sequencer                       -     @7998            
+          rsp_export            uvm_analysis_export                 -     @8007            
+          seq_item_export       uvm_seq_item_pull_imp               -     @8125            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        rdrv                    uvm_driver #(REQ,RSP)               -     @8311            
+          item_read_imp         uvm_analysis_port                   -     @8340            
+          rsp_port              uvm_analysis_port                   -     @8330            
+          seq_item_port         uvm_seq_item_pull_port              -     @8320            
+          m_num_sent            integral                            32    'h0              
+        rsqr                    axi_sequencer                       -     @8350            
+          rsp_export            uvm_analysis_export                 -     @8359            
+          seq_item_export       uvm_seq_item_pull_imp               -     @8477            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+        wdrv                    uvm_driver #(REQ,RSP)               -     @7783            
+          item_read_imp         uvm_analysis_port                   -     @7812            
+          rsp_port              uvm_analysis_port                   -     @7802            
+          seq_item_port         uvm_seq_item_pull_port              -     @7792            
+          m_num_sent            integral                            32    'h0              
+        wsqr                    axi_sequencer                       -     @7822            
+          rsp_export            uvm_analysis_export                 -     @7831            
+          seq_item_export       uvm_seq_item_pull_imp               -     @7949            
+          arbitration_queue     array                               0     -                
+          lock_queue            array                               0     -                
+          num_last_reqs         integral                            32    'd1              
+          num_last_rsps         integral                            32    'd1              
+      state                     axi_state                           -     @7359            
+        ar2r_imp                uvm_analysis_imp_ar2r               -     @7428            
+        ar_imp                  uvm_analysis_imp_ar                 -     @7398            
+        aw2b_imp                uvm_analysis_imp_aw2b               -     @7418            
+        aw_imp                  uvm_analysis_imp_aw                 -     @7368            
+        b_imp                   uvm_analysis_imp_b                  -     @7388            
+        item_rtr_port           uvm_analysis_port                   -     @7448            
+        item_wtr_port           uvm_analysis_port                   -     @7438            
+        r_imp                   uvm_analysis_imp_r                  -     @7408            
+        w_imp                   uvm_analysis_imp_w                  -     @7378            
+        avg_rate                integral                            32    'h0              
+        exp_rate                integral                            32    'h0              
+        win_size                integral                            32    'h0              
+        bqnum_for_slaseq        integral                            32    'h0              
+        rq_from_model_num       integral                            32    'h0              
+      vsqr                      axi_virtual_sequencer               -     @7467            
+        rsp_export              uvm_analysis_export                 -     @7476            
+        seq_item_export         uvm_seq_item_pull_imp               -     @7594            
+        arbitration_queue       array                               0     -                
+        lock_queue              array                               0     -                
+        num_last_reqs           integral                            32    'd1              
+        num_last_rsps           integral                            32    'd1              
+      cfg                       axi_cfg                             -     @407             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_y                  -     @510             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+    refm                        w4a8_linear_v1_reference_model      -     @605             
+      trans_num_idx             integral                            32    'h0              
+    subsys_mon                  w4a8_linear_v1_subsystem_monitor    -     @618             
+      control_rtr_imp           uvm_analysis_imp_axi_rtr_control    -     @737             
+      control_wtr_imp           uvm_analysis_imp_axi_wtr_control    -     @727             
+      gmem_meta_rtr_imp         uvm_analysis_imp_axi_rtr_gmem_meta  -     @717             
+      gmem_meta_wtr_imp         uvm_analysis_imp_axi_wtr_gmem_meta  -     @707             
+      gmem_sw_rtr_imp           uvm_analysis_imp_axi_rtr_gmem_sw    -     @657             
+      gmem_sw_wtr_imp           uvm_analysis_imp_axi_wtr_gmem_sw    -     @647             
+      gmem_w_rtr_imp            uvm_analysis_imp_axi_rtr_gmem_w     -     @637             
+      gmem_w_wtr_imp            uvm_analysis_imp_axi_wtr_gmem_w     -     @627             
+      gmem_x_rtr_imp            uvm_analysis_imp_axi_rtr_gmem_x     -     @677             
+      gmem_x_wtr_imp            uvm_analysis_imp_axi_wtr_gmem_x     -     @667             
+      gmem_y_rtr_imp            uvm_analysis_imp_axi_rtr_gmem_y     -     @697             
+      gmem_y_wtr_imp            uvm_analysis_imp_axi_wtr_gmem_y     -     @687             
+      scbd                      w4a8_linear_v1_scoreboard           -     @8562            
+        refm                    w4a8_linear_v1_reference_model      -     @605             
+          trans_num_idx         integral                            32    'h0              
+    w4a8_linear_v1_virtual_sqr  w4a8_linear_v1_virtual_sequencer    -     @747             
+      rsp_export                uvm_analysis_export                 -     @756             
+      seq_item_export           uvm_seq_item_pull_imp               -     @874             
+      arbitration_queue         array                               0     -                
+      lock_queue                array                               0     -                
+      num_last_reqs             integral                            32    'd1              
+      num_last_rsps             integral                            32    'd1              
+    refm                        w4a8_linear_v1_reference_model      -     @605             
+    w4a8_linear_v1_virtual_sqr  w4a8_linear_v1_virtual_sequencer    -     @747             
+    w4a8_linear_v1_cfg          w4a8_linear_v1_config               -     @403             
+      gmem_w_cfg                axi_cfg                             -     @404             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_w                  -     @411             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      gmem_sw_cfg               axi_cfg                             -     @405             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_sw                 -     @446             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      gmem_x_cfg                axi_cfg                             -     @406             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_x                  -     @478             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      gmem_y_cfg                axi_cfg                             -     @407             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_y                  -     @510             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      gmem_meta_cfg             axi_cfg                             -     @408             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    SLAVE            
+        write_latency_mode      latency_mode_enum                   32    TRANSACTION_FIRST
+        read_latency_mode       latency_mode_enum                   32    TRANSACTION_FIRST
+        clatency                axi_latency_gmem_meta               -     @542             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      control_cfg               axi_cfg                             -     @409             
+        has_checker             integral                            1     'h1              
+        has_coverage            integral                            1     'h1              
+        id_num                  integral                            32    'h1              
+        reset_level             reset_level_enum                    32    RESET_LEVEL_LOW  
+        drv_type                drv_type_enum                       32    MASTER           
+        write_latency_mode      latency_mode_enum                   32    CHANNEL_FIRST    
+        read_latency_mode       latency_mode_enum                   32    CHANNEL_FIRST    
+        clatency                axi_latency_control                 -     @574             
+          wr_latency            integral                            32    'h0              
+          rd_latency            integral                            32    'h0              
+      check_ena                 integral                            32    'h0              
+      cover_ena                 integral                            32    'h0              
+-------------------------------------------------------------------------------------------
+
+UVM_INFO D:/2026.1/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "117000"
+// RTL Simulation : 1 / 1 [n/a] @ "2184910000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2184956190 ps : File "D:/2026.1/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:04:36 ; elapsed = 00:04:54 . Memory (MB): peak = 403.926 ; gain = 43.633
+## quit
+INFO: xsimkernel Simulation Memory Usage: 2353412 KB (Peak: 2353412 KB), Simulation CPU Usage: 105265 ms
+INFO: [Common 17-206] Exiting xsim at Sat Oct  3 04:53:29 2026...

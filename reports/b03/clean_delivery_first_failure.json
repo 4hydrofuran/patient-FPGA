@@ -1,0 +1,5 @@
+{
+  "status": "FAIL_DELIVERY_CHECK_OUTPUT_DIRECTORY",
+  "observed": "Extracted source full50 passed; real replay could not save output because the verification helper had not created vectors/clean_real. Numerical code and archive payload unchanged.",
+  "correction": "Create the output directory in the verification helper, preserve first logs, repeat in a fresh extraction."
+}

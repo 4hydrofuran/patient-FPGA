@@ -111,6 +111,19 @@ def archive(variant: str, group: str) -> None:
                 extra["postcompile.log"] = compile_log
             snapshot = rp.parent / f"{step}_snapshot.json"
             prepared = json.loads(snapshot.read_text(encoding="utf-8-sig"))
+            repairs = rp.parent / f"{step}_object_repairs.json"
+            if repairs.exists():
+                extra["object_repairs.json"] = repairs
+                for repaired in rp.parent.glob(f"{step}_object_*.receipt.json"):
+                    proof = json.loads(repaired.read_text(encoding="utf-8-sig"))
+                    if proof["exit_code"] != 0:
+                        raise RuntimeError("Generated simulator C compilation failed")
+                    extra[repaired.name] = repaired
+                    extra[repaired.stem.removesuffix(".receipt") + ".log"] = ROOT / proof["log"]
+            for elaborated in rp.parent.glob(f"{step}_elaborate_*.receipt.json"):
+                proof = json.loads(elaborated.read_text(encoding="utf-8-sig"))
+                extra[elaborated.name] = elaborated
+                extra[elaborated.stem.removesuffix(".receipt") + ".log"] = ROOT / proof["log"]
         native_path = ROOT / prepared["prepared_receipt"]
         native = json.loads(native_path.read_text(encoding="utf-8-sig"))
         extra["native_failed.receipt.json"] = native_path
@@ -121,6 +134,9 @@ def archive(variant: str, group: str) -> None:
     for name, expected in data["input_sha256"].items():
         if sha(ROOT / name).upper() != expected.upper():
             raise RuntimeError(f"Source/config changed during verification: {name}")
+    probe_record = rp.parent / "os_probe_interruption.json"
+    if probe_record.exists():
+        extra["os_probe_interruption.json"] = probe_record
     suite = "smoke" if group in ("smoke", "stall") else "stress_" + group[6:] if stress else "b03_" + group
     count = 32 if group == "stall" else STRESS_COUNTS[group[6:]] if stress else 30 if group == "smoke" else 1
     if not re.search(

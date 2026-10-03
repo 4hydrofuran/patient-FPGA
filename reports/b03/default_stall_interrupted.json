@@ -1,0 +1,61 @@
+{
+  "at_local": "2026-10-03T04:24:06.9525935+08:00",
+  "status": "INTERRUPTED_NOT_ACCEPTED_MEMORY_STALL",
+  "reason": "Default random_stall randomizes control only; augment all memory channel constraints before restarting selected acceptance.",
+  "processes": [
+    {
+      "ProcessId": 38356,
+      "ParentProcessId": 18324,
+      "Name": "pwsh.exe",
+      "CommandLine": "\"C:\\Users\\陈沐阳\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n& '.\\work\\run_selected_stress.ps1' -Variant double\""
+    },
+    {
+      "ProcessId": 32464,
+      "ParentProcessId": 38356,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 30112,
+      "ParentProcessId": 38356,
+      "Name": "cmd.exe",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c \"\"D:\\2026.1\\2026.1\\Vitis\\bin\\vitis-run.bat\" --mode hls --cosim --config hls_prefill_double_stall_lifecycle.cfg --work_dir build/b03_double_hls\""
+    },
+    {
+      "ProcessId": 47000,
+      "ParentProcessId": 30112,
+      "Name": "vitis-run.exe",
+      "CommandLine": "\"D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe\"   --mode hls --cosim --config hls_prefill_double_stall_lifecycle.cfg --work_dir build/b03_double_hls"
+    },
+    {
+      "ProcessId": 14440,
+      "ParentProcessId": 47000,
+      "Name": "xcd.exe",
+      "CommandLine": "D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/xcd.exe --port 62634 --client_pid 47000 --token_uuid f1d99002-3802-49f6-a393-97d8066ebdfe"
+    },
+    {
+      "ProcessId": 1008,
+      "ParentProcessId": 47000,
+      "Name": "cmd.exe",
+      "CommandLine": " /c D:/2026.1/2026.1/Vitis/bin/loader -exec vitis_hls -run cosim -config D:/KV260-project-HLS/b_qwen35/hls_prefill_double_stall_lifecycle.cfg -cmdlineconfig D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/config.cmdline -work_dir D:/KV260-project-HLS/b_qwen35/build/b03_double_hls -nolog"
+    },
+    {
+      "ProcessId": 47184,
+      "ParentProcessId": 1008,
+      "Name": "vitis_hls.exe",
+      "CommandLine": "\"D:/2026.1/2026.1/Vitis/bin/unwrapped/win64.o/vitis_hls.exe\"   -run cosim -config D:/KV260-project-HLS/b_qwen35/hls_prefill_double_stall_lifecycle.cfg -cmdlineconfig D:/KV260-project-HLS/b_qwen35/build/b03_double_hls/hls/config.cmdline -work_dir D:/KV260-project-HLS/b_qwen35/build/b03_double_hls -nolog"
+    },
+    {
+      "ProcessId": 33960,
+      "ParentProcessId": 47184,
+      "Name": "cmd.exe",
+      "CommandLine": " /c D:/2026.1/2026.1/Vivado/bin/vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl"
+    },
+    {
+      "ProcessId": 35416,
+      "ParentProcessId": 33960,
+      "Name": "vivado.exe",
+      "CommandLine": "\"D:/2026.1/2026.1/Vivado/bin/unwrapped/win64.o/vivado.exe\"   -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl"
+    }
+  ]
+}

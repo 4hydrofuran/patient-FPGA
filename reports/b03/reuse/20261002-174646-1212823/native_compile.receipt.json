@@ -1,0 +1,40 @@
+{
+  "stage": "B03",
+  "variant": "reuse",
+  "step": "native_compile",
+  "executable": "D:\\mingw64\\bin\\g++.exe",
+  "arguments": [
+    "-std=c++17",
+    "-O2",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-Wno-unknown-pragmas",
+    "-DB02_CACHE_X",
+    "-DB02_AXI_X128",
+    "-DB03_TEST",
+    "-DB03_REUSE",
+    "src/w4a8_prefill_v1.cpp",
+    "tb/tb_prefill_v1.cpp",
+    "-o",
+    "build/b03_reuse/numerical_test.exe"
+  ],
+  "working_directory": "D:\\KV260-project-HLS\\b_qwen35",
+  "exit_code": 0,
+  "elapsed_seconds": 3.7875025,
+  "log": "logs/b03/reuse/20261002-174646-1212823/native_compile.log",
+  "input_sha256": {
+    "src/w4a8_prefill_v1.cpp": "25F3F4CB73733B74F9D78661F162BE62FC5F9006B1F2B6141055873DA58BCA95",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_v1.cpp": "69952372C1C5CC980C13CE68E931AF2243866B48F725A650FD84CCF1F1A61178",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_reuse.cfg": "D222916D188D03047470F1422AF21DF8F86FED055479D01E4B397970D0D84449",
+    "run_prefill.ps1": "686F3C7DCF6B5379AAD14A298B3A3742BBB3870B7F39741FD68BB3B57CEB19ED"
+  },
+  "finished_at_utc": "2026-10-02T17:46:50.5352940Z"
+}

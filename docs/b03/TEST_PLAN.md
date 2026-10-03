@@ -18,3 +18,5 @@ smoke运行原前30笔事务；其余各组运行原同seed的大矩阵一笔。
 随机背压的原smoke32笔入口保留。为控制内存，同一testbench新增stress_basic/lifecycle/tail/max_k/max_n五组选择，事务数分别为12/11/7/1/1，总计32。配置hls_prefill_<variant>_stall_<group>.cfg启用random_stall=1和trace_level=port；五组均须真实RTL及原生POST_CHECK通过。verify_prefill_stress.py核验五组(case,T,N,K)多重集合与原smoke32笔一致，并保留生成BFM的延迟约束和实际端口波形。分组不修改核源码、数学、公共布局或容差。
 
 选型先要求全部数值/RTL通过，再比较T1 decode、T8总周期/每token周期、HLS资源和时序估计。只冻结一个候选；资源/时序仍须B04实现验证。逻辑请求字节数不冒充DDR实测。实现、aarch64、BOARD、模型质量/整机时延/功耗继续NOT_TESTED。
+
+2026-10-03补充：实际默认BFM的random_stall仅随机化control，不能据此验收内存突发背压。最终double五组通过cosim.user_stall=tests/support/prefill_axi_stall.json指定五个内存master每个wctrl/wdata/wbrsp/rctrl/rdata通道0..7周期、control各通道0..3周期随机延迟，整体事务延迟保持64。verify_prefill_stress.py必须检查JSON指纹、实际绑定的BFM函数约束和端口trace，默认首组单独保留为control_only历史证据。此配置验证有限背压范围，不声称所有AXI调度。

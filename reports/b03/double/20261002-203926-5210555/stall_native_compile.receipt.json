@@ -1,0 +1,41 @@
+{
+  "stage": "B03",
+  "variant": "double",
+  "step": "stall_native_compile",
+  "executable": "D:\\mingw64\\bin\\g++.exe",
+  "arguments": [
+    "-BD:/mingw64/libexec/gcc/x86_64-w64-mingw32/16.2.0/",
+    "-std=c++17",
+    "-O2",
+    "-ffp-contract=off",
+    "-Wno-unknown-pragmas",
+    "-DB02_CACHE_X",
+    "-DB02_AXI_X128",
+    "-DB03_TEST",
+    "-DB03_REUSE",
+    "-DB03_DOUBLE_BUFFER",
+    "src/w4a8_prefill_v1.cpp",
+    "tb/tb_prefill_bounds.cpp",
+    "-o",
+    "build/b03_double/boundary_test.exe"
+  ],
+  "working_directory": "D:\\KV260-project-HLS\\b_qwen35",
+  "exit_code": 0,
+  "elapsed_seconds": 3.6792194,
+  "log": "logs/b03/double/20261002-203926-5210555/stall_native_compile.log",
+  "input_sha256": {
+    "src/w4a8_prefill_v1.cpp": "7E1EB3450C0839254148C5FECEBF4BE1B2D76CA7C18F39E8DF8E63769D5874D2",
+    "src/w4a8_linear_v1.hpp": "6E1D86FB735F91B30A86F867889D75AFA9933349D195C75B9F41A4509D6B069B",
+    "baseline/b02/src/w4a8_linear_v1.hpp": "B19301FDAD51D5292E707176C1E0170CF8CFC2862C65C425E16DAE0DF5DB8FBA",
+    "tb/tb_prefill_bounds.cpp": "241101BB6179C1698D5BE0974C47171B08DE5C9F36C36EE2F098FD5D475D4B8E",
+    "tb/golden_w4a8.hpp": "3B04E4693415B502490136ECE295007D35146377C652757C49F56DA59D9EB85F",
+    "host/linear_validation.hpp": "F6000EDD154ECA2EF84992362059731804DF227D5BCB7312DCB878EE4FF64203",
+    "reference/quantization.hpp": "21962D0280C6447CF881B41814353DA95F700F1BA4149A52DB20A419AD3B4190",
+    "tests/support/quantization_checks.hpp": "8A2D0F04C8B4891EB76E47ED3C4E41C0B44B184C6D34441CA040BD5681B7A0D8",
+    "tests/numerical/prefill_tensor_replay.cpp": "4A32CF3895D6B9EC85D0073AC7688A47527A3241BB2005B5C3ACB7BDE4653B05",
+    "hls_prefill_double_stall_tail.cfg": "6A77908D27F1F2EFD82E0D572E225C345A2EA1677F231FA9F902867E741389CC",
+    "run_prefill.ps1": "0EC03054C30DD197900D5E1B803A1D1187D22B5B8869E35C574FC86F444E0491",
+    "tests/support/prefill_axi_stall.json": "EB492384DBDED873361BCD8998A2B1621E80A057B1BA7691B4B91D2E6D3B3A3D"
+  },
+  "finished_at_utc": "2026-10-02T20:39:30.5705055Z"
+}

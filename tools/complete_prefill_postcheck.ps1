@@ -2,7 +2,7 @@
 [CmdletBinding()]
 param(
  [ValidateSet('baseline','reuse','double')][string]$Variant='baseline',
- [ValidateSet('smoke','gate_t1','gate_t8','down_t1','down_t8')][string]$Group='down_t8',
+ [ValidateSet('smoke','gate_t1','gate_t8','down_t1','down_t8','stall','stall_basic','stall_lifecycle','stall_tail','stall_max_k','stall_max_n')][string]$Group='down_t8',
  [Parameter(Mandatory=$true)][string]$PreparedReceipt,
  [string]$VitisRoot='D:\2026.1\2026.1\Vitis',
  [string]$MingwRoot='D:\mingw64\bin'
@@ -18,14 +18,15 @@ $owned=$false
 $stamp=[DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss-fffffff')
 $receiptDirectory="reports/b03/$Variant/$stamp"
 $logDirectory="logs/b03/$Variant/$stamp"
-$step="cosim_${Group}_postcheck_only"
+$expectedStep=if($Group -eq 'stall'){'stall_cosim'}elseif($Group.StartsWith('stall_')){"stall_cosim_"+$Group.Substring(6)}else{"cosim_$Group"}
+$step="${expectedStep}_postcheck_only"
 try {
  try{$owned=$lock.WaitOne(0)}catch [Threading.AbandonedMutexException]{$owned=$true}
  if(!$owned){throw 'Another B03 verification is running'}
  Set-Location -LiteralPath $root
  if(@(Get-CimInstance Win32_Process | Where-Object {$_.Name -eq 'xsimk.exe' -and $_.ExecutablePath -like "$root\build\b03_*"}).Count){throw 'RTL process is still active'}
  $prepared=Get-Content -LiteralPath $PreparedReceipt -Raw | ConvertFrom-Json
- if($prepared.variant -ne $Variant -or $prepared.step -ne "cosim_$Group" -or $prepared.exit_code -eq 0){throw 'Exact failed native preparation receipt required'}
+ if($prepared.variant -ne $Variant -or $prepared.step -ne $expectedStep -or $prepared.exit_code -eq 0){throw 'Exact failed native preparation receipt required'}
  foreach($entry in $prepared.input_sha256.PSObject.Properties){
   if($entry.Name -eq 'run_prefill.ps1'){continue}
   if((Get-FileHash -LiteralPath $entry.Name).Hash -ne $entry.Value){throw "Changed input: $($entry.Name)"}
@@ -34,7 +35,7 @@ try {
  $sim=Join-Path $root "build/b03_${Variant}_hls/hls/sim"
  $nativeText=Get-Content -LiteralPath $prepared.log -Raw
  $kernelLog=Join-Path $sim 'verilog/xsim.dir/w4a8_linear_v1/xsimkernel.log'
- $count=if($Group -eq 'smoke'){30}else{1}
+ $count=if($Group -eq 'smoke'){30}elseif($Group -eq 'stall'){32}elseif($Group.StartsWith('stall_')){@{basic=12;lifecycle=11;tail=7;max_k=1;max_n=1}[$Group.Substring(6)]}else{1}
  if($nativeText -notmatch "RTL Simulation\s*:\s*$count / $count" -or
     $nativeText -notmatch 'Starting C post checking' -or
     (Get-Content -LiteralPath $kernelLog -Raw) -notmatch 'Simulation completed'){
@@ -57,7 +58,7 @@ try {
  $compileLog="$logDirectory/${step}_compile.log"
  $compileStart=[DateTime]::UtcNow
  Set-Location -LiteralPath "$sim/wrapc_pc"
- & (Join-Path $MingwRoot 'make.exe') -f cosim.pc.mk DIRECTORY=wrapc_pc ObjDir=postcheck_objects VERBOSE=1 "MKDIR=$nativeShim/mkdir.exe" "RM=$nativeShim/rm.exe" "CP=$nativeShim/cp.exe" "MV=$nativeShim/mv.exe" *> (Join-Path $root $compileLog)
+ & (Join-Path $MingwRoot 'make.exe') -f cosim.pc.mk DIRECTORY=wrapc_pc "ObjDir=postcheck_objects_$stamp" VERBOSE=1 "MKDIR=$nativeShim/mkdir.exe" "RM=$nativeShim/rm.exe" "CP=$nativeShim/cp.exe" "MV=$nativeShim/mv.exe" *> (Join-Path $root $compileLog)
  $compileCode=$LASTEXITCODE
  if($compileCode -ne 0){throw "Explicit POST_CHECK compile failed: $compileCode; $compileLog"}
  if((Get-Content -LiteralPath (Join-Path $root $compileLog) -Raw) -notmatch 'POST_CHECK'){throw 'POST_CHECK flag absent'}
@@ -65,7 +66,7 @@ try {
  if(!(Test-Path -LiteralPath $pc) -or (Get-Item -LiteralPath $pc).LastWriteTimeUtc -lt $compileStart.AddSeconds(-2)){throw 'Fresh postchecker missing'}
  $toolParent=Split-Path $VitisRoot -Parent
  $env:PATH="$toolParent\win64\lib\csim;$VitisRoot\tps\mingw\10.0.0\win64.o\nt\bin;$toolParent\win64\tools\fpo_v7_1;$env:PATH"
- $suite=if($Group -eq 'smoke'){'smoke'}else{"b03_$Group"}
+ $suite=if($Group -in @('smoke','stall')){'smoke'}elseif($Group.StartsWith('stall_')){'stress_'+$Group.Substring(6)}else{"b03_$Group"}
  $log="$logDirectory/$step.log"
  $watch=[Diagnostics.Stopwatch]::StartNew()
  & $pc --suite $suite *> (Join-Path $root $log)

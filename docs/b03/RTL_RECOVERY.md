@@ -16,6 +16,12 @@ reports/b03/postcheck_consumer_proof.json记录额外验收：用明确POST_CHEC
 
 完整实现/板端DDR、XRT库、超时DMA生命周期不属于本次证明。
 
+## 2026-10-03工具启动与快照完整性补充
+
+xelab最后的主C对象完成后仍需C++ DPI对象和xsim.svtype/version/mem/reloc/type支持文件。恢复入口检查本次源/config指纹与生成物时间；缺少对象时仅使用本次生成C和已安装Vivado GCC补编，保留C/C++语言、参数、前后SHA与退出码，再继续工具原有xelab命令。支持文件不全或kernel没有Simulation completed时拒绝计PASS。POST_CHECK使用独立postcheck_objects_<时间>目录，避免旧缓存掩盖本次编译证据。自动恢复同样适用于五个背压分组。
+
+本机MinGW的Windows/Linux检测子进程也曾停在精确的uname | grep -i Linux命令。tools/check_prefill_os_probe.ps1只处理超过120秒、父make命令指向本工程cosim.tv/pc.mk的该探测进程；保留PID、父命令及时间到os_probe_interruption.json。原有MAKEFLAGS指定Windows_NT，随后仍须实际RTL与POST_CHECK完整通过。此恢复不终止编译或仿真进程，也不把探测恢复本身当作功能PASS。
+
 ## 原生RTL完成后的仅回放恢复
 
 baseline down_t8原生RTL完整结束，但basename辅助启动问题导致wrapc_pc目录生成了cosim.tv.exe，原生POST_CHECK未能启动，整个CLI仍退出1。xelab已清理object，因此不能套用重新链接保护入口，也不应重复长仿真。

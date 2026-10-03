@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "variant": "double",
+  "finished_at_local": "2026-10-03T05:06:16.587232+08:00",
+  "scope": "Clean extracted candidate PC full50 and real-weight4. Final package must retain these exact tested payload hashes.",
+  "source_payload_sha256": {
+    "contracts/contract_lock.json": "247b84c4304f6719539b668b9ea3843087f8ebda2609697ba55220f0c293de3d",
+    "contracts/quant_v1.json": "890297e8bca2eeb5b9579ca7e7dc8a6b3126eb98a7dd0474ee1c5fe46dabeb25",
+    "contracts/sp_linear_v1.h": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+    "contracts/voice_examples.jsonl": "55590befbeca0aa89402113ed72bdf88f7fc6b8e8ac115e1d6bbad4360dc61a2",
+    "contracts/voice_v1.json": "0ba9699bbf738baf940adf56d202c503ed6343390aaf9086ba1a644b76e6910a",
+    "host/linear_validation.hpp": "f6000edd154eca2ef84992362059731804df227d5bcb7312dcb878ee4ff64203",
+    "reference/quantization.hpp": "21962d0280c6447cf881b41814353da95f700f1ba4149a52db20a419ad3b4190",
+    "reference/README.md": "62cfdb7b21c06f2aeb15d60735b0c68fa3face1b9874644fa0cb69fd7b7d1548",
+    "src/w4a8_linear_v1.cpp": "3b7eb37172fd9264b1db8eaffdbf92183542f0eeb4f8fe52b7eb599e20ec9625",
+    "src/w4a8_linear_v1.hpp": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+    "src/w4a8_prefill_v1.cpp": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "tb/compare_b2.cpp": "44c400587c9e360668cf511b20d344b17a4fc3bb072f9a4e1dcc86498511867c",
+    "tb/golden_w4a8.hpp": "3b04e4693415b502490136ece295007d35146377c652757c49f56da59d9eb85f",
+    "tb/tb_prefill_bounds.cpp": "241101bb6179c1698d5be0974c47171b08de5c9f36c36ee2f098fd5d475d4b8e",
+    "tb/tb_prefill_v1.cpp": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+    "tb/tb_w4a8_linear_v1.cpp": "c530343fe78872f3e9dd8618e085a509b6c449d098ed5c0540347df1834e2952",
+    "tests/numerical/fixture_replay.cpp": "86a40c6c02e9aa7ed78c62ab8655fe09d66be4ba9663d023104e5e40b80999cb",
+    "tests/numerical/model_tensor_replay.cpp": "ec3794961323693f3aad5f3e12fe4144e81b6a613bbfbb0208d1eb6da44eeaeb",
+    "tests/numerical/prefill_tensor_replay.cpp": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+    "tests/numerical/quantization_reference.cpp": "7922e9038b36ca05085a70ca19972a5149b2864abf6b6246e29631328fccd3ec",
+    "tests/support/prefill_axi_stall.json": "eb492384dbded873361bcd8998a2b1621e80a057b1ba7691b4b91d2e6d3b3a3d",
+    "tests/support/quantization_checks.hpp": "8a2d0f04c8b4891eb76e47ed3c4e41c0b44b184c6d34441ca040bd5681b7a0d8",
+    "vectors/model_source/config.json": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+    "vectors/model_source/down_proj.fp32.bin": "cd776f65ba064083c91503a5ac624289ff63682404092d3e8cf4cafe7e4a1dd0",
+    "vectors/model_source/gate_proj.fp32.bin": "f08132f6e2895034a77515bb350c6dd80d681d5d4b0cd71a8917e8a0bff1f56d",
+    "vectors/model_source/LICENSE": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "vectors/model_source/source_manifest.json": "4f0132f0dbc69c69988f91c99c618f486f27fd6e4ca77278aec90cc174a73e7f"
+  },
+  "steps": {
+    "native_compile": {
+      "exit_code": 0,
+      "arguments": [
+        "D:/mingw64/bin/g++.exe",
+        "-BD:/mingw64/libexec/gcc/x86_64-w64-mingw32/16.2.0/",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wno-unknown-pragmas",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "src/w4a8_prefill_v1.cpp",
+        "tb/tb_prefill_v1.cpp",
+        "-o",
+        "clean_numerical.exe"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native_test": {
+      "exit_code": 0,
+      "arguments": [
+        "C:\\Users\\\u9648\u6c90\u9633\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_clean_delivery_retry\\clean_numerical.exe",
+        "--suite",
+        "full"
+      ],
+      "log_sha256": "e82433927adbfc5d1d139673ed8c50fce99d5287f91dbdd8180767224885bd1c"
+    },
+    "real_compile": {
+      "exit_code": 0,
+      "arguments": [
+        "D:/mingw64/bin/g++.exe",
+        "-BD:/mingw64/libexec/gcc/x86_64-w64-mingw32/16.2.0/",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wno-unknown-pragmas",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "src/w4a8_prefill_v1.cpp",
+        "tests/numerical/prefill_tensor_replay.cpp",
+        "-o",
+        "clean_real.exe"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "real_test": {
+      "exit_code": 0,
+      "arguments": [
+        "C:\\Users\\\u9648\u6c90\u9633\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_clean_delivery_retry\\clean_real.exe",
+        "vectors/clean_real"
+      ],
+      "log_sha256": "05ef3bb019f1bb99fa46e63c77bdb9836c278e01b01edf71b55fa21be9237f13"
+    }
+  }
+}

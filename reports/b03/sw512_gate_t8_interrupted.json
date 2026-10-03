@@ -1,0 +1,83 @@
+{
+  "status": "INTERRUPTED_FOR_IDENTIFIED_DECODE_REGRESSION",
+  "variant": "reuse",
+  "group": "gate_t8",
+  "native_log": "logs/b03/reuse/20261002-181734-4883534/cosim_gate_t8.log",
+  "interrupted_at": "2026-10-03T02:24:21.6761283+08:00",
+  "accepted": false,
+  "source_sha256": "25F3F4CB73733B74F9D78661F162BE62FC5F9006B1F2B6141055873DA58BCA95",
+  "processes": [
+    {
+      "Name": "pwsh.exe",
+      "ProcessId": 42776,
+      "ParentProcessId": 18324,
+      "ExecutablePath": "C:\\Users\\陈沐阳\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+    },
+    {
+      "Name": "conhost.exe",
+      "ProcessId": 32496,
+      "ParentProcessId": 42776,
+      "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe"
+    },
+    {
+      "Name": "cmd.exe",
+      "ProcessId": 9532,
+      "ParentProcessId": 42776,
+      "ExecutablePath": "C:\\WINDOWS\\system32\\cmd.exe"
+    },
+    {
+      "Name": "vitis-run.exe",
+      "ProcessId": 21548,
+      "ParentProcessId": 9532,
+      "ExecutablePath": "D:\\2026.1\\2026.1\\Vitis\\bin\\unwrapped\\win64.o\\vitis-run.exe"
+    },
+    {
+      "Name": "xcd.exe",
+      "ProcessId": 41036,
+      "ParentProcessId": 21548,
+      "ExecutablePath": "D:\\2026.1\\2026.1\\Vitis\\bin\\unwrapped\\win64.o\\xcd.exe"
+    },
+    {
+      "Name": "cmd.exe",
+      "ProcessId": 29660,
+      "ParentProcessId": 21548,
+      "ExecutablePath": "C:\\WINDOWS\\system32\\cmd.exe"
+    },
+    {
+      "Name": "vitis_hls.exe",
+      "ProcessId": 44752,
+      "ParentProcessId": 29660,
+      "ExecutablePath": "D:\\2026.1\\2026.1\\Vitis\\bin\\unwrapped\\win64.o\\vitis_hls.exe"
+    },
+    {
+      "Name": "cmd.exe",
+      "ProcessId": 46480,
+      "ParentProcessId": 44752,
+      "ExecutablePath": "C:\\WINDOWS\\system32\\cmd.exe"
+    },
+    {
+      "Name": "tee.exe",
+      "ProcessId": 22472,
+      "ParentProcessId": 44752,
+      "ExecutablePath": "D:\\2026.1\\2026.1\\Vitis\\tps\\win64\\msys2_bash\\usr\\bin\\tee.exe"
+    },
+    {
+      "Name": "xsim.exe",
+      "ProcessId": 28084,
+      "ParentProcessId": 46480,
+      "ExecutablePath": "D:\\2026.1\\2026.1\\Vivado\\bin\\unwrapped\\win64.o\\xsim.exe"
+    },
+    {
+      "Name": "xsimk.exe",
+      "ProcessId": 5056,
+      "ParentProcessId": 28084,
+      "ExecutablePath": "D:\\KV260-project-HLS\\b_qwen35\\build\\b03_reuse_hls\\hls\\sim\\verilog\\xsim.dir\\w4a8_linear_v1\\xsimk.exe"
+    },
+    {
+      "Name": "conhost.exe",
+      "ProcessId": 41104,
+      "ParentProcessId": 5056,
+      "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe"
+    }
+  ]
+}
