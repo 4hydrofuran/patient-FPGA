@@ -1,0 +1,74 @@
+{
+  "status": "PASS_A06_PREBOARD_ACCEPTED_BY_A",
+  "provider": "B",
+  "acceptance_owner": "A",
+  "B_signature": "NOT_CLAIMED",
+  "A_local_Csim": {
+    "status": "PASS",
+    "cases": 61,
+    "checks": 2800022,
+    "build_id": 3003318274,
+    "board": "NOT_TESTED"
+  },
+  "reused_exact_version_evidence": [
+    {
+      "requirement": "A06.1 receipt/source/XO/reports/vectors",
+      "status": "PASS",
+      "evidence": "supplement-v1/inventory.json + static.json; 1925 archive files / 14 exact input receipts"
+    },
+    {
+      "requirement": "A06.2 header/XO binary ABI and A07 mapping",
+      "status": "PASS",
+      "evidence": "supplement-v1/interface-map.json; 17 arguments + meta40 + hw/linear_A/A07_KERNEL_INTEGRATION.md"
+    },
+    {
+      "requirement": "A06.3 A independent PC arithmetic",
+      "status": "PASS",
+      "evidence": "supplement-v1/tests/pc.json; 61 cases / 2800022 checks"
+    },
+    {
+      "requirement": "A06.3 A local Vitis Csim of current source",
+      "status": "BLOCKED",
+      "evidence": "Linux license mismatch before simulation; windows-csim-v2/csim.json exit1 at K26 part check"
+    },
+    {
+      "requirement": "A06.4 actual shapes/required Csim and Cosim coverage",
+      "status": "PASS_REUSED_EXACT_VERSION",
+      "evidence": "supplement-v1/final-checks-v2/REPORT.json; B full50; gate/down T1/T8 native Cosim; A04 RTL66 replay"
+    },
+    {
+      "requirement": "A06.5 part/tool/150MHz/resource/II/reuse review",
+      "status": "PASS_REVIEW_NOT_TIMING_CLOSURE",
+      "evidence": "supplement-v1/static.json and XO-embedded reports; HLS slack -0.40ns"
+    },
+    {
+      "requirement": "A06.6 final accepted/frozen kernel",
+      "status": "NOT_PASSED",
+      "evidence": "KERNEL_SOURCE accepted=false/frozen=false until actual local Csim passes"
+    },
+    {
+      "requirement": "Delivery clean portable vector byte reproduction",
+      "status": "PASS_A_REPAIR",
+      "evidence": "portable-receipt.json + portable-logs/*; all382 SHA identical; B originals unchanged"
+    }
+  ],
+  "prior_report_sha256": "ac6bfb4a753f2d6f73dff9bce3d212c61880fbf269f1a55c07358b27a13b19cc",
+  "B04_remote_commit": "9a75600e0df8816f4b9134b5c39d67965310dcd3",
+  "B04_files_reverified": 210,
+  "Csim_evidence": {
+    "acceptance.cfg": "67ac344fb34633fa996e5bf254a99e9b856903f66404dabadd1bf22a06d0e56d",
+    "csim.json": "e3976cd0f8febdb82cafcba7c70f36607172e724220bd9bfe2b1ea3ff6e15465",
+    "host.json": "bd52b02e8c4dab1248c259a2723f9b95f3d3136a6a2e6d9e0c57143bc4e4c6ed",
+    "result.json": "8298fff82e8e24ceba712f708d7fbb55253761a8e12f45074feb524987b34358"
+  },
+  "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+  "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "limitations": [
+    "65 native Cosim PASS plus 1 maxK original failure/postcheck recovered; not 66 native PASS",
+    "5 WDB databases not supplied; raw TV/logs received and independently replayed",
+    "AXI internal FIFO occupancy unmeasured; no user-stream FIFO; P2 instrumentation only",
+    "HLS timing estimate is not implementation timing closure"
+  ],
+  "BOARD": "NOT_TESTED",
+  "note": "Prior matrix records historical blocked states; new local Csim supersedes only that blocker. P&R remains A07."
+}

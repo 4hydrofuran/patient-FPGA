@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/a07/control/audit_link.py", line 27, in <module>
+    run(['xclbinutil','--input',W/'w4a8.xclbin','--dump-section',f'{section}:{fmt}:{OUT/section}.{suffix}'],section+'-command.json')
+  File "/mnt/c/Patientqwen/platform/qwen35/a07/control/audit_link.py", line 13, in run
+    assert q.returncode==0,(name,q.returncode)
+AssertionError: ('SYSTEM_METADATA-command.json', 255)

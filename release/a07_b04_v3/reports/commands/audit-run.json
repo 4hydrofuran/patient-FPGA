@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "wsl.exe",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "/mnt/c/Patientqwen/platform/ra02/build_queue.py",
+    "run-next"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T18:32:04.969948+00:00",
+  "elapsed_s": 1.6102245999500155,
+  "exit_code": 1,
+  "stdout": "{\n  \"job\": \"01791051290147868066-A-a07-audit-20261004-v1-2752eb76\",\n  \"owner\": \"A\",\n  \"argv\": [\n    \"/bin/bash\",\n    \"/mnt/c/Patientqwen/platform/qwen35/a07/control/audit_link.sh\",\n    \"/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8\"\n  ],\n  \"submitted_utc\": \"2026-10-03T18:14:50.147913+00:00\",\n  \"scope\": \"OFFLINE_BUILD_ONLY\",\n  \"board_authorized\": false,\n  \"cwd\": \"/home/member-a/kv260-build/ra02-coordinator/work/01791051290147868066-A-a07-audit-20261004-v1-2752eb76\",\n  \"elapsed_s\": 1.3333807110002454,\n  \"exit_code\": 1,\n  \"status\": \"FAILED\",\n  \"hardware_execution\": \"NOT_TESTED\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,301 @@
+{
+    "build_metadata": {
+        "dsa": {
+            "vendor": "xilinx.com",
+            "board_id": "kv260_som_som240_1_connector_kv260_carrier_som240_1_connector",
+            "name": "kv260_som_som240_1_connector_kv260_carrier_som240_1_connector_base",
+            "version_major": "1",
+            "version_minor": "0",
+            "description": "",
+            "generated_by": {
+                "name": "Vivado",
+                "version": "2026.1",
+                "cl": "6502307",
+                "time_stamp": "Mon Jun  8 13:44:20 2026"
+            },
+            "board": {
+                "name": "xilinx.com:kv260_som:2.0",
+                "vendor": "xilinx.com",
+                "part": "xck26-sfvc784-2LV-c",
+                "board_part": "xilinx.com:kv260_som:part0:2.0"
+            },
+            "feature_roms": [
+                {
+                    "time_epoch": "0"
+                }
+            ]
+        },
+        "xclbin": {
+            "generated_by": {
+                "name": "v++",
+                "version": "2026.1",
+                "cl": "6511674",
+                "time_stamp": "2026-06-16-13:16:19",
+                "options": "\/home\/member-a\/AMDDesignTools\/2026.1\/Vitis\/bin\/unwrapped\/lnx64.o\/v++ --config \/home\/member-a\/kv260-build\/ra02-coordinator\/work\/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8\/inputs\/link.cfg --connectivity.nk w4a8_linear_v1:1:w4a8_linear_v1_1 --input_files \/mnt\/c\/Patientqwen\/hw\/linear_B_received\/B03-supplement-e227297-20261003\/payload\/artifact\/b03_candidate\/w4a8_linear_v1.xo --link --optimize 0 --output w4a8.xclbin --platform \/home\/member-a\/AMDDesignTools\/2026.1\/Vitis\/base_platforms\/kv260_base\/kv260_base.xpfm --report_level 0 --save-temps --target hw --vivado.impl.jobs 2 --vivado.synth.jobs 2 "
+            },
+            "user_regions": [
+                {
+                    "name": "OCL_REGION_0",
+                    "type": "clc_region",
+                    "instance_path": "",
+                    "base_address": "",
+                    "kernels": [
+                        {
+                            "name": "w4a8_linear_v1",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM_W",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "128",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM_SW",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM_X",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "128",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM_Y",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM_META",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0xCC",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "w_packed",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM_W",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "sw",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM_SW",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "xq",
+                                    "address_qualifier": "1",
+                                    "id": "2",
+                                    "port": "M_AXI_GMEM_X",
+                                    "size": "0x8",
+                                    "offset": "0x28",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "sx",
+                                    "address_qualifier": "1",
+                                    "id": "3",
+                                    "port": "M_AXI_GMEM_X",
+                                    "size": "0x8",
+                                    "offset": "0x34",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "y",
+                                    "address_qualifier": "1",
+                                    "id": "4",
+                                    "port": "M_AXI_GMEM_Y",
+                                    "size": "0x8",
+                                    "offset": "0x40",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "meta",
+                                    "address_qualifier": "1",
+                                    "id": "5",
+                                    "port": "M_AXI_GMEM_META",
+                                    "size": "0x8",
+                                    "offset": "0x4C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "t",
+                                    "address_qualifier": "0",
+                                    "id": "6",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x58",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "n",
+                                    "address_qualifier": "0",
+                                    "id": "7",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x60",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "k",
+                                    "address_qualifier": "0",
+                                    "id": "8",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x68",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "w_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "9",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x70",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "sw_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "10",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x7C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "x_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "11",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x88",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "sx_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "12",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0x94",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "y_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "13",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0xA0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "meta_bytes",
+                                    "address_qualifier": "0",
+                                    "id": "14",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0xAC",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "job_id",
+                                    "address_qualifier": "0",
+                                    "id": "15",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x8",
+                                    "offset": "0xB8",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "unsigned long long"
+                                },
+                                {
+                                    "name": "abi_version",
+                                    "address_qualifier": "0",
+                                    "id": "16",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0xC4",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "w4a8_linear_v1_1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "packaged_by": {
+                "name": "xclbinutil",
+                "version": "2.19.0",
+                "hash": "f02de266f785111094b02d32a9012bd0da3abd58",
+                "time_stamp": "Fri, 07 Feb 2025 10:52:04 -0700"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "submit",
+    "--owner",
+    "A",
+    "--label",
+    "a07-a53-origin-v2",
+    "--",
+    "/bin/bash",
+    "/mnt/c/Patientqwen/platform/qwen35/a07/build_a53.sh"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T05:39:59.332072+00:00",
+  "elapsed_s": 0.26418360002571717,
+  "exit_code": 0,
+  "stdout": "01791005999565534417-A-a07-a53-origin-v2-d20534d2\n",
+  "stderr": ""
+}

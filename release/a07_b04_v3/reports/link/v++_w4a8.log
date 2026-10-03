@@ -1,0 +1,288 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/reports/link
+	Log files: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin.link_summary, at Sun Oct  4 02:03:24 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/reports/link/v++_link_w4a8_guidance.html', at Sun Oct  4 02:03:24 2026
+INFO: [v++ 60-895]   Target platform: /home/member-a/AMDDesignTools/2026.1/Vitis/base_platforms/kv260_base/kv260_base.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/member-a/AMDDesignTools/2026.1/Vitis/base_platforms/kv260_base/hw/hw.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: kv260_base
+INFO: [v++ 82-31] Launching aie baremetal script for: link
+WARNING: [v++ 82-11894] The baremetal metadata cpp file was not created successfully.
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [02:03:45] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/c/Patientqwen/hw/linear_B_received/B03-supplement-e227297-20261003/payload/artifact/b03_candidate/w4a8_linear_v1.xo -keep --config /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/syslinkConfig.ini --xpfm /home/member-a/AMDDesignTools/2026.1/Vitis/base_platforms/kv260_base/kv260_base.xpfm --target hw --output_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int --temp_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/c/Patientqwen/hw/linear_B_received/B03-supplement-e227297-20261003/payload/artifact/b03_candidate/w4a8_linear_v1.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [02:03:48] build_xd_ip_db started: /home/member-a/AMDDesignTools/2026.1/Vitis/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/hw.hpfm -clkid 0 -ip /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/iprepo/xilinx_com_hls_w4a8_linear_v1_1_0,w4a8_linear_v1 -o /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [02:03:49] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.41 . Memory (MB): peak = 551.590 ; gain = 0.000 ; free physical = 13687 ; free virtual = 18650
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [02:03:49] cfgen started: /home/member-a/AMDDesignTools/2026.1/Vitis/bin/cfgen  -nk w4a8_linear_v1:1:w4a8_linear_v1_1 -dpa_mem_offload false -dpa_aie_mem_offload false -dmclkid 0 -r /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: w4a8_linear_v1, num: 1  {w4a8_linear_v1_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.w_packed to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.sw to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.xq to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.sx to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.y to HP0
+INFO: [CFGEN 83-2226] Inferring mapping for argument w4a8_linear_v1_1.meta to HP0
+INFO: [SYSTEM_LINK 82-37] [02:03:50] cfgen finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 551.590 ; gain = 0.000 ; free physical = 13656 ; free virtual = 18621
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [02:03:50] cf2bd started: /home/member-a/AMDDesignTools/2026.1/Vitis/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.xsd --temp_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link --output_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -dn dr -dp /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [02:03:53] cf2bd finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 551.590 ; gain = 0.000 ; free physical = 13620 ; free virtual = 18589
+INFO: [v++ 60-1441] [02:03:53] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 13709 ; free virtual = 18678
+INFO: [v++ 60-1443] [02:03:53] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/sdsl.dat -rtd /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/cf2sw.rtd -nofilter /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/cf2sw_full.rtd -xclbin /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/xclbin_orig.xml -o /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+INFO: [v++ 60-1441] [02:03:55] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 13625 ; free virtual = 18596
+INFO: [v++ 60-1443] [02:03:55] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+INFO: [v++ 60-1441] [02:03:55] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.08 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 13688 ; free virtual = 18659
+INFO: [v++ 60-1443] [02:03:55] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /home/member-a/AMDDesignTools/2026.1/Vitis/base_platforms/kv260_base/kv260_base.xpfm -s --remote_ip_cache /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/.ipcache --output_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int --log_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/logs/link --report_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/reports/link --config /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/vplConfig.ini -k /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/kernel_info.dat --temp_dir /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link --no-info --iprepo /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/xo/ip_repo/xilinx_com_hls_w4a8_linear_v1_1_0 --messageDb /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link/vpl.pb /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+
+****** vpl v2026.1 (64-bit)
+  **** SW Build 6511674 on 2026-06-16-13:16:19
+  **** Start of session at: Sun Oct  4 02:03:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: kv260_base
+INFO: [VPL 60-1032] Extracting hardware platform to /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/vivado/vpl/.local/hw_platform
+[02:04:09] Run vpl: Step create_project: Started
+Creating Vivado project.
+[02:04:18] Run vpl: Step create_project: Completed
+[02:04:18] Run vpl: Step create_bd: Started
+[02:04:25] Run vpl: Step create_bd: Completed
+[02:04:25] Run vpl: Step update_bd: Started
+[02:04:25] Run vpl: Step update_bd: Completed
+[02:04:25] Run vpl: Step generate_target: Started
+[02:05:12] Run vpl: Step generate_target: Completed
+[02:05:12] Run vpl: Step config_hw_runs: Started
+[02:05:18] Run vpl: Step config_hw_runs: Completed
+[02:05:18] Run vpl: Step synth: Started
+[02:05:50] Block-level synthesis in progress, 0 of 20 jobs complete, 2 jobs running.
+[02:06:20] Block-level synthesis in progress, 0 of 20 jobs complete, 2 jobs running.
+[02:06:50] Block-level synthesis in progress, 3 of 20 jobs complete, 2 jobs running.
+[02:07:20] Block-level synthesis in progress, 3 of 20 jobs complete, 2 jobs running.
+[02:07:50] Block-level synthesis in progress, 4 of 20 jobs complete, 2 jobs running.
+[02:08:20] Block-level synthesis in progress, 4 of 20 jobs complete, 2 jobs running.
+[02:08:50] Block-level synthesis in progress, 5 of 20 jobs complete, 2 jobs running.
+[02:09:20] Block-level synthesis in progress, 6 of 20 jobs complete, 2 jobs running.
+[02:09:50] Block-level synthesis in progress, 7 of 20 jobs complete, 2 jobs running.
+[02:10:20] Block-level synthesis in progress, 8 of 20 jobs complete, 1 job running.
+[02:10:50] Block-level synthesis in progress, 9 of 20 jobs complete, 1 job running.
+[02:11:21] Block-level synthesis in progress, 9 of 20 jobs complete, 2 jobs running.
+[02:11:51] Block-level synthesis in progress, 10 of 20 jobs complete, 2 jobs running.
+[02:12:21] Block-level synthesis in progress, 11 of 20 jobs complete, 2 jobs running.
+[02:12:51] Block-level synthesis in progress, 12 of 20 jobs complete, 2 jobs running.
+[02:13:21] Block-level synthesis in progress, 13 of 20 jobs complete, 2 jobs running.
+[02:13:51] Block-level synthesis in progress, 14 of 20 jobs complete, 2 jobs running.
+[02:14:21] Block-level synthesis in progress, 15 of 20 jobs complete, 2 jobs running.
+[02:14:51] Block-level synthesis in progress, 16 of 20 jobs complete, 1 job running.
+[02:15:21] Block-level synthesis in progress, 16 of 20 jobs complete, 2 jobs running.
+[02:15:52] Block-level synthesis in progress, 17 of 20 jobs complete, 1 job running.
+[02:16:22] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:16:52] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:17:22] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:17:52] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:18:22] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:18:52] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:19:22] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:19:53] Block-level synthesis in progress, 18 of 20 jobs complete, 2 jobs running.
+[02:20:23] Block-level synthesis in progress, 19 of 20 jobs complete, 1 job running.
+[02:20:53] Block-level synthesis in progress, 19 of 20 jobs complete, 1 job running.
+[02:21:23] Block-level synthesis in progress, 20 of 20 jobs complete, 0 jobs running.
+[02:21:53] Top-level synthesis in progress.
+[02:22:23] Top-level synthesis in progress.
+[02:22:32] Run vpl: Step synth: Completed
+[02:22:32] Run vpl: Step impl: Started
+[02:24:03] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 20m 06s 
+
+[02:24:03] Starting logic optimization..
+[02:24:03] Phase 1 Initialization
+[02:24:03] Phase 1.1 Core Generation And Design Setup
+[02:24:03] Phase 1.2 Setup Constraints And Sort Netlist
+[02:24:03] Phase 2 Timer Update And Timing Data Collection
+[02:24:03] Phase 2.1 Detect if minReqCache needed
+[02:24:03] Phase 2.2 Timer Update
+[02:24:03] Phase 2.3 Timing Data Collection
+[02:24:03] Phase 3 Retarget
+[02:24:03] Phase 4 Constant propagation
+[02:24:03] Phase 5 Sweep
+[02:24:33] Phase 6 BUFG optimization
+[02:24:33] Phase 7 Shift Register Optimization
+[02:24:33] Phase 8 Post Processing Netlist
+[02:24:33] Phase 9 Finalization
+[02:24:33] Phase 9.1 Finalizing Design Cores and Updating Shapes
+[02:24:33] Phase 9.2 Verifying Netlist Connectivity
+[02:25:03] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 01m 00s 
+
+[02:25:03] Starting logic placement..
+[02:25:03] Phase 1 Placer Initialization
+[02:25:03] Phase 1.1 Placer Initialization Netlist Sorting
+[02:25:03] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[02:25:33] Phase 1.3 Build Placer Netlist Model
+[02:25:33] Phase 1.4 Constrain Clocks/Macros
+[02:25:33] Phase 2 Global Placement
+[02:25:33] Phase 2.1 Floorplanning
+[02:26:04] Phase 2.1.1 Partition Driven Placement
+[02:26:04] Phase 2.1.1.1 PBP: Partition Driven Placement
+[02:26:04] Phase 2.1.1.2 PBP: Clock Region Placement
+[02:26:04] Phase 2.1.1.3 PBP: Discrete Incremental
+[02:26:04] Phase 2.1.1.4 PBP: Compute Congestion
+[02:26:04] Phase 2.1.1.5 PBP: Macro Placement
+[02:26:04] Phase 2.1.1.6 PBP: UpdateTiming
+[02:26:04] Phase 2.1.1.7 PBP: Add part constraints
+[02:26:04] Phase 2.2 Update Timing before SLR Path Opt
+[02:26:04] Phase 2.3 Post-Processing in Floorplanning
+[02:26:04] Phase 2.4 Global Place Phase1
+[02:27:04] Phase 2.5 Global Place Phase2
+[02:27:04] Phase 2.5.1 UpdateTiming Before Physical Synthesis
+[02:27:04] Phase 2.5.2 Physical Synthesis In Placer
+[02:27:04] Phase 3 Detail Placement
+[02:27:04] Phase 3.1 Commit Multi Column Macros
+[02:27:04] Phase 3.2 Commit Most Macros & LUTRAMs
+[02:27:34] Phase 3.3 Small Shape DP
+[02:27:34] Phase 3.3.1 Small Shape Clustering
+[02:27:34] Phase 3.3.2 Slice Area Swap
+[02:27:34] Phase 3.3.2.1 Slice Area Swap Initial
+[02:28:04] Phase 3.4 Re-assign LUT pins
+[02:28:04] Phase 3.5 Pipeline Register Optimization
+[02:28:04] Phase 4 Post Placement Optimization and Clean-Up
+[02:28:04] Phase 4.1 Post Commit Optimization
+[02:28:04] Phase 4.1.1 Post Placement Optimization
+[02:28:04] Phase 4.1.1.1 BUFG Insertion
+[02:28:04] Phase 1 Physical Synthesis Initialization
+[02:28:04] Phase 4.1.1.2 Post Placement Timing Optimization
+[02:28:34] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 03m 31s 
+
+[02:28:34] Starting logic routing..
+[02:28:34] Phase 1 Build RT Design
+[02:28:34] Phase 2 Router Initialization
+[02:28:34] Phase 2.1 Fix Topology Constraints
+[02:28:34] Phase 2.2 Pre Route Cleanup
+[02:28:34] Phase 2.3 Global Clock Net Routing
+[02:28:34] Phase 2.4 Update Timing
+[02:28:34] Phase 4.2 Post Placement Cleanup
+[02:28:34] Phase 4.3 Placer Reporting
+[02:28:34] Phase 4.3.1 Print Estimated Congestion
+[02:28:34] Phase 4.4 Final Placement Cleanup
+[02:29:05] Phase 2.5 Soft Constraint Pins - Fast Budgeting
+[02:29:05] Phase 3 Global Routing
+[02:29:05] Phase 4 Initial Routing
+[02:29:05] Phase 4.1 Initial Net Routing Pass
+[02:29:05] Phase 5 Rip-up And Reroute
+[02:29:05] Phase 5.1 Global Iteration 0
+[02:30:05] Phase 5.2 Global Iteration 1
+[02:30:05] Phase 6 Delay and Skew Optimization
+[02:30:05] Phase 6.1 Delay CleanUp
+[02:30:35] Phase 6.2 Clock Skew Optimization
+[02:30:35] Phase 7 Post Hold Fix
+[02:30:35] Phase 7.1 Hold Fix Iter
+[02:30:35] Phase 8 Route finalize
+[02:30:35] Phase 9 Verifying routed nets
+[02:30:35] Phase 10 Depositing Routes
+[02:30:35] Phase 11 Resolve XTalk
+[02:30:35] Phase 12 Post Process Routing
+[02:30:35] Phase 13 Post Router Timing
+[02:30:35] Phase 14 Post-Route Event Processing
+[02:30:35] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 02m 00s 
+
+[02:30:35] Starting bitstream generation..
+[02:31:32] Creating bitmap...
+[02:31:32] Writing bitstream ./MPSoC_ext_platform_wrapper.bit...
+[02:31:32] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 00m 56s 
+Check VPL, containing 6 checks, has run: 0 errors
+[02:31:31] Run vpl: Step impl: Completed
+[02:31:32] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [02:31:32] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:27:37 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 10092 ; free virtual = 17705
+INFO: [v++ 60-1443] [02:31:32] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/address_map.xml -sdsl /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/sdsl.dat -xclbin /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/xclbin_orig.xml -rtd /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8.rtd -o /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [02:31:34] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 11086 ; free virtual = 18700
+INFO: [v++ 60-1443] [02:31:34] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/system.bit --force --target hw --key-value SYS:dfx_enable:false --add-section :JSON:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8_xml.rtd --add-section BUILD_METADATA:JSON:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8.xml --add-section SYSTEM_METADATA:RAW:/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx.com_kv260_som_som240_1_connector_kv260_carrier_som240_1_connector_kv260_som_som240_1_connector_kv260_carrier_som240_1_connector_base_1_0 --output /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+XRT Build Version: 2.19.0 (Vitis)
+       Build Date: 2025-02-07 10:52:04
+          Hash ID: f02de266f785111094b02d32a9012bd0da3abd58
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 7797917 bytes
+Format : RAW
+File   : '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/system.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+Format : JSON
+File   : '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 5184 bytes
+Format : JSON
+File   : '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 6045 bytes
+Format : RAW
+File   : '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/w4a8.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 21681 bytes
+Format : RAW
+File   : '/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+Successfully wrote (7842283 bytes) to the output file: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [02:31:34] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.27 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 11048 ; free virtual = 18673
+INFO: [v++ 60-1443] [02:31:34] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin.info --input /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/link/run_link
+INFO: [v++ 60-1441] [02:31:34] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.29 . Memory (MB): peak = 563.059 ; gain = 0.000 ; free physical = 11031 ; free virtual = 18656
+INFO: [v++ 60-2397] Platform default or user specified output type sd_card detected but is not a supported output for v++ --link. Use the v++ --package option instead to create SD card output.
+INFO: [v++ 60-586] Created w4a8.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/reports/link/v++_link_w4a8_guidance.html
+	Timing Report: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/reports/link/imp/impl_1_MPSoC_ext_platform_wrapper_timing_summary_routed.rpt
+	Vivado Log: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/logs/link/vivado.log
+	Steps Log File: /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the Vitis Unified IDE to visualize and navigate the reports. Run the following command. 
+    vitis -a/ --analyze /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/w4a8.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 28m 13s
+INFO: [v++ 60-1653] Closing dispatch client.
