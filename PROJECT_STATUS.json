@@ -3,7 +3,7 @@
   "stage": "B04",
   "stage_status": "PAUSED_PARTIAL",
   "engineering_gate": "B04_PARTIAL_WAITING_A",
-  "updated_at": "2026-10-03T19:20:33+08:00",
+  "updated_at": "2026-10-03T19:37:16+08:00",
   "workspace": "D:\\KV260-project-HLS\\b_qwen35",
   "branch": "b/qwen35-compute",
   "model_on_board": "Qwen/Qwen3.5-0.8B",
@@ -83,7 +83,11 @@
     "reports/b04/selftest_20261003_02.receipt.json",
     "reports/b04/export_meta_20261003_01.receipt.json",
     "reports/b04/packaging_checks_20261003_04.receipt.json",
-    "reports/b04/fresh_stage_trial_20261003_02.receipt.json"
+    "reports/b04/fresh_stage_trial_20261003_02.receipt.json",
+    "reports/b04/final_stage_extraction_20261003.receipt.json",
+    "reports/b04/final_stage_package_20261003.receipt.json",
+    "reports/b04/release_delivery_20261003.json",
+    "reports/b04/source_bytes_20261003.receipt.json"
   ],
   "blockers": [
     "A public runtime, XRT lifecycle evidence, matching xclbin/implementation and ARM64 library/host not delivered"
@@ -271,6 +275,16 @@
       "fresh_kernel_fixture_output_checks": 32
     },
     "paused_by_user": true,
-    "development_cutoff": "2026-10-03T19:20:33+08:00"
+    "development_cutoff": "2026-10-03T19:20:33+08:00",
+    "delivery": {
+      "status": "PASS_REMOTE_BYTES_VERIFIED",
+      "source_stage_commit": "2e7c81cab18e2dedb4aebda3c60822c220754c5b",
+      "release_url": "https://github.com/4hydrofuran/patient-FPGA/releases/tag/b04-b-stage-20261003",
+      "zip_sha256": "b0faf5a8155a65dde449e88226c1a284df9702e782ec8e7d1907abdd744fce37",
+      "zip_bytes": 19682938,
+      "formal_fresh_extraction": "PASS",
+      "notifications": "CANCELLED_BY_USER",
+      "scheduled_wrap": "CANCELLED_BY_USER"
+    }
   }
 }
