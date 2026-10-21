@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-21T17:18:47+08:00",
+  "delivery": "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021",
+  "outputs": {
+    "host_rules": {
+      "domain": "PC_HOST_LOGIC_ONLY",
+      "assertions": 970,
+      "device_calls": 0,
+      "BOARD": "NOT_TESTED"
+    },
+    "meta_replay": {
+      "BOARD": "NOT_TESTED",
+      "actual_meta_records": 66,
+      "bad_build_ids": 4,
+      "device_calls": 0,
+      "domain": "PC_ARCHIVED_RTL_META_REPLAY",
+      "new_RTL_simulation": false,
+      "tamper_rejections": 396
+    },
+    "control": {
+      "domain": "PC_CONTROL_DOUBLE_NOT_FPGA",
+      "cases": 29,
+      "checks": 554,
+      "mathematical_verification": false,
+      "hardware_performance": null,
+      "BOARD": "NOT_TESTED"
+    },
+    "kernel_fixture": {
+      "transactions": 3,
+      "output_checks": 32,
+      "execution": "PC_NATIVE_FROZEN_KERNEL_INDEPENDENT_HAND_GOLDEN"
+    }
+  },
+  "steps": {
+    "host_rules_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\contracts\\qwen35",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\third_party\\nlohmann",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\platform\\qwen35\\a07\\test_host.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt\\host_contract.cpp",
+        "-o",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\host_rules.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "host_rules_run": {
+      "arguments": [
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\host_rules.exe",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021"
+      ],
+      "exit_code": 0,
+      "log_sha256": "4755926ff63078ed8c0c145bbfab117343fb979b1fbed1074a6d46518929e17f"
+    },
+    "meta_replay_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\contracts\\qwen35",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\third_party\\nlohmann",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\platform\\qwen35\\a07\\b04\\meta_replay.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt\\host_contract.cpp",
+        "-o",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\meta_replay.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "meta_replay_run": {
+      "arguments": [
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\meta_replay.exe",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\vectors\\b04_meta"
+      ],
+      "exit_code": 0,
+      "log_sha256": "ac502afe54e3633f8f65eb7274787a06cf2110135ec0f9fcb5d9d5e4b19e0236"
+    },
+    "control_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\contracts\\qwen35",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\third_party\\nlohmann",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\platform\\qwen35\\a07\\control\\test_api.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt\\backend.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt\\host_contract.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\tests\\b04\\native\\file_lock.cpp",
+        "-DSP_LINEAR_CONTROL_TEST=1",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\platform\\qwen35\\a07\\control\\stubs",
+        "-pthread",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\tests\\b04\\native",
+        "C:\\Users\\陈沐阳\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\mingw64\\bin\\libcrypto-3-x64.dll",
+        "-o",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\control.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "control_run": {
+      "arguments": [
+        "C:\\Users\\陈沐阳\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\platform\\qwen35\\a07\\control\\run_cases.py",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\control.exe",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\control_cases"
+      ],
+      "exit_code": 0,
+      "log_sha256": "74661238e35330efaeb6175d6854cd2e7ff88ccaf324f0261f4fa430f136eb3a"
+    },
+    "kernel_fixture_compile": {
+      "arguments": [
+        "D:/mingw64/bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\contracts\\qwen35",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\modules\\linear_A\\xrt",
+        "-ID:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\evidence\\b04\\a07_received_20261021\\third_party\\nlohmann",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\tests\\numerical\\fixture_replay.cpp",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\src\\w4a8_prefill_v1.cpp",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "-Wno-unknown-pragmas",
+        "-o",
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\kernel_fixture.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "kernel_fixture_run": {
+      "arguments": [
+        "D:\\KV260-project-HLS\\b_qwen35\\build\\b04\\joint_20261021\\fresh_trial\\build\\b04\\fresh_pc\\kernel_fixture.exe"
+      ],
+      "exit_code": 0,
+      "log_sha256": "a53d2887dc33cd0ecc5e8d45b6468957dc15f5d7a82603ba2464394ca25420a2"
+    }
+  },
+  "source_sha256": {
+    "evidence/b04/a07_received_20261021/platform/qwen35/a07/test_host.cpp": "91008c7579aaef0c454ecdfc5f31c439bc83fd7143807e3556fd821801e469e1",
+    "evidence/b04/a07_received_20261021/modules/linear_A/xrt/host_contract.cpp": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749",
+    "evidence/b04/a07_received_20261021/platform/qwen35/a07/b04/meta_replay.cpp": "b8225132b662fc284d6ae2b619cb7295f8312031fa474af48491be5ea5fd8a80",
+    "evidence/b04/a07_received_20261021/platform/qwen35/a07/control/test_api.cpp": "a5257337bb80024650c54dded5127ab9f7156f54494e79a7fd9ca853abc61247",
+    "evidence/b04/a07_received_20261021/modules/linear_A/xrt/backend.cpp": "c9e2032ec4853feed0e37112e9305afe9dd2e59b5eece15ae3797464447c8170",
+    "tests/b04/native/file_lock.cpp": "a58aff6ff44b9b8ce00365e7995073806dbfa5ebc61519a5747c2fd1eba6e6d0",
+    "tests/numerical/fixture_replay.cpp": "86a40c6c02e9aa7ed78c62ab8655fe09d66be4ba9663d023104e5e40b80999cb",
+    "src/w4a8_prefill_v1.cpp": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "tools/b04_joint_pc.py": "87b32ffc76e03f9db1ee3abdb136b49884e9e0dd0a3a2b7e625bc02e14a5a81d",
+    "tools/b04_common.py": "f704a1b66a0f9e528b754f4bff9c1bdbd7417d5ca533cca2068fa3cd55d9890c",
+    "tests/b04/native/openssl/evp.h": "f963ed7b6e4040553fa091ff7c295e34166cad2b2acf7228ec900f5019c8d5cf",
+    "tests/b04/native/sys/file.h": "d1aa06adc8b16172a18e3d872e6e132070c856dd7440f4abf1f661a79bf5fa6b"
+  },
+  "native_adapter": {
+    "scope": "Windows PC control only; Linux O_NOFOLLOW/O_CLOEXEC/flock NOT_REEXECUTED",
+    "crypto_dll": "C:\\Users\\陈沐阳\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\mingw64\\bin\\libcrypto-3-x64.dll",
+    "crypto_sha256": "bbd134743911f569138075ddc4261c20ec0328dcdca67b09879a974fa93fcfd2",
+    "headers": {
+      "tests/b04/native/openssl/evp.h": "f963ed7b6e4040553fa091ff7c295e34166cad2b2acf7228ec900f5019c8d5cf",
+      "tests/b04/native/sys/file.h": "d1aa06adc8b16172a18e3d872e6e132070c856dd7440f4abf1f661a79bf5fa6b"
+    }
+  },
+  "new_sanitizer_run": false,
+  "A_archived_sanitizers": "REVIEW_SEPARATELY_ORIGINAL_LINUX_EVIDENCE",
+  "BOARD": "NOT_TESTED",
+  "ARM_execution": "NOT_TESTED",
+  "scope": "Actual unchanged A host rules/parser/backend control tests, existing XRT doubles. Numeric kernel fixture is separate PC execution, not end-to-end FPGA."
+}

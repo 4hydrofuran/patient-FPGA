@@ -1,0 +1,674 @@
+
+D:\KV260-project-HLS\b_qwen35\evidence\b04\a07_received_20261021\artifacts\sp-linear-host:     file format elf64-littleaarch64
+
+
+Disassembly of section .init:
+
+0000000000000d58 <_init>:
+ d58:	paciasp
+ d5c:	stp	x29, x30, [sp, #-16]!
+ d60:	mov	x29, sp
+ d64:	bl	14b4 <call_weak_fn>
+ d68:	ldp	x29, x30, [sp], #16
+ d6c:	autiasp
+ d70:	ret
+
+Disassembly of section .plt:
+
+0000000000000d80 <.plt>:
+ d80:	bti	c
+ d84:	stp	x16, x30, [sp, #-16]!
+ d88:	adrp	x16, 1f000 <__FRAME_END__+0x1d5cc>
+ d8c:	ldr	x17, [x16, #4088]
+ d90:	add	x16, x16, #0xff8
+ d94:	br	x17
+ d98:	nop
+ d9c:	nop
+
+0000000000000da0 <_ZNSo3putEc@plt>:
+ da0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ da4:	ldr	x17, [x16]
+ da8:	add	x16, x16, #0x0
+ dac:	br	x17
+
+0000000000000db0 <__stack_chk_fail@plt>:
+ db0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ db4:	ldr	x17, [x16, #8]
+ db8:	add	x16, x16, #0x8
+ dbc:	br	x17
+
+0000000000000dc0 <memset@plt>:
+ dc0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ dc4:	ldr	x17, [x16, #16]
+ dc8:	add	x16, x16, #0x10
+ dcc:	br	x17
+
+0000000000000dd0 <sp_linear_load_v1@plt>:
+ dd0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ dd4:	ldr	x17, [x16, #24]
+ dd8:	add	x16, x16, #0x18
+ ddc:	br	x17
+
+0000000000000de0 <__cxa_finalize@plt>:
+ de0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ de4:	ldr	x17, [x16, #32]
+ de8:	add	x16, x16, #0x20
+ dec:	br	x17
+
+0000000000000df0 <sp_linear_report_v1@plt>:
+ df0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ df4:	ldr	x17, [x16, #40]
+ df8:	add	x16, x16, #0x28
+ dfc:	br	x17
+
+0000000000000e00 <__libc_start_main@plt>:
+ e00:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e04:	ldr	x17, [x16, #48]
+ e08:	add	x16, x16, #0x30
+ e0c:	br	x17
+
+0000000000000e10 <pause@plt>:
+ e10:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e14:	ldr	x17, [x16, #56]
+ e18:	add	x16, x16, #0x38
+ e1c:	br	x17
+
+0000000000000e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+ e20:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e24:	ldr	x17, [x16, #64]
+ e28:	add	x16, x16, #0x40
+ e2c:	br	x17
+
+0000000000000e30 <_Znwm@plt>:
+ e30:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e34:	ldr	x17, [x16, #72]
+ e38:	add	x16, x16, #0x48
+ e3c:	br	x17
+
+0000000000000e40 <_ZdlPvm@plt>:
+ e40:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e44:	ldr	x17, [x16, #80]
+ e48:	add	x16, x16, #0x50
+ e4c:	br	x17
+
+0000000000000e50 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@plt>:
+ e50:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e54:	ldr	x17, [x16, #88]
+ e58:	add	x16, x16, #0x58
+ e5c:	br	x17
+
+0000000000000e60 <sp_linear_run_v1@plt>:
+ e60:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e64:	ldr	x17, [x16, #96]
+ e68:	add	x16, x16, #0x60
+ e6c:	br	x17
+
+0000000000000e70 <strcmp@plt>:
+ e70:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e74:	ldr	x17, [x16, #104]
+ e78:	add	x16, x16, #0x68
+ e7c:	br	x17
+
+0000000000000e80 <sp_linear_open_v1@plt>:
+ e80:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e84:	ldr	x17, [x16, #112]
+ e88:	add	x16, x16, #0x70
+ e8c:	br	x17
+
+0000000000000e90 <sp_linear_close_v1@plt>:
+ e90:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ e94:	ldr	x17, [x16, #120]
+ e98:	add	x16, x16, #0x78
+ e9c:	br	x17
+
+0000000000000ea0 <abort@plt>:
+ ea0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ ea4:	ldr	x17, [x16, #128]
+ ea8:	add	x16, x16, #0x80
+ eac:	br	x17
+
+0000000000000eb0 <__gxx_personality_v0@plt>:
+ eb0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ eb4:	ldr	x17, [x16, #136]
+ eb8:	add	x16, x16, #0x88
+ ebc:	br	x17
+
+0000000000000ec0 <_ZNSolsEi@plt>:
+ ec0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ ec4:	ldr	x17, [x16, #144]
+ ec8:	add	x16, x16, #0x90
+ ecc:	br	x17
+
+0000000000000ed0 <_Unwind_Resume@plt>:
+ ed0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ ed4:	ldr	x17, [x16, #152]
+ ed8:	add	x16, x16, #0x98
+ edc:	br	x17
+
+0000000000000ee0 <__gmon_start__@plt>:
+ ee0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ ee4:	ldr	x17, [x16, #160]
+ ee8:	add	x16, x16, #0xa0
+ eec:	br	x17
+
+0000000000000ef0 <sp_linear_unload_v1@plt>:
+ ef0:	adrp	x16, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+ ef4:	ldr	x17, [x16, #168]
+ ef8:	add	x16, x16, #0xa8
+ efc:	br	x17
+
+Disassembly of section .text:
+
+0000000000000f00 <main>:
+     f00:	paciasp
+     f04:	sub	sp, sp, #0x180
+     f08:	adrp	x2, 1f000 <__FRAME_END__+0x1d5cc>
+     f0c:	ldr	x2, [x2, #4008]
+     f10:	cmp	w0, #0x3
+     f14:	stp	x29, x30, [sp, #320]
+     f18:	add	x29, sp, #0x140
+     f1c:	stp	x19, x20, [sp, #336]
+     f20:	ldr	x0, [x2]
+     f24:	str	x0, [sp, #312]
+     f28:	mov	x0, #0x0                   	// #0
+     f2c:	b.ne	11d0 <main+0x2d0>  // b.any
+     f30:	mov	x19, x1
+     f34:	stp	x21, x22, [sp, #352]
+     f38:	adrp	x20, 1000 <main+0x100>
+     f3c:	add	x1, x20, #0x720
+     f40:	ldr	x21, [x19, #8]
+     f44:	mov	x0, x21
+     f48:	bl	e70 <strcmp@plt>
+     f4c:	cbz	w0, f64 <main+0x64>
+     f50:	adrp	x1, 1000 <main+0x100>
+     f54:	add	x1, x1, #0x738
+     f58:	mov	x0, x21
+     f5c:	bl	e70 <strcmp@plt>
+     f60:	cbnz	w0, 11cc <main+0x2cc>
+     f64:	ldr	x0, [x19, #16]
+     f68:	add	x1, sp, #0x28
+     f6c:	str	xzr, [sp, #40]
+     f70:	bl	e80 <sp_linear_open_v1@plt>
+     f74:	mov	w2, w0
+     f78:	ldr	x0, [x19, #8]
+     f7c:	add	x1, x20, #0x720
+     f80:	mov	w19, w2
+     f84:	bl	e70 <strcmp@plt>
+     f88:	cbnz	w0, fe0 <main+0xe0>
+     f8c:	ldr	x0, [sp, #40]
+     f90:	cbz	x0, 1260 <main+0x360>
+     f94:	bl	e90 <sp_linear_close_v1@plt>
+     f98:	sub	w0, w0, #0x6
+     f9c:	cmp	w0, #0x1
+     fa0:	b.ls	123c <main+0x33c>  // b.plast
+     fa4:	ldp	x21, x22, [sp, #352]
+     fa8:	mov	w19, #0x1                   	// #1
+     fac:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+     fb0:	ldr	x0, [x0, #4008]
+     fb4:	ldr	x2, [sp, #312]
+     fb8:	ldr	x1, [x0]
+     fbc:	subs	x2, x2, x1
+     fc0:	mov	x1, #0x0                   	// #0
+     fc4:	b.ne	13bc <main+0x4bc>  // b.any
+     fc8:	ldp	x29, x30, [sp, #320]
+     fcc:	mov	w0, w19
+     fd0:	ldp	x19, x20, [sp, #336]
+     fd4:	add	sp, sp, #0x180
+     fd8:	autiasp
+     fdc:	ret
+     fe0:	cbnz	w19, 1210 <main+0x310>
+     fe4:	mov	x0, #0x800                 	// #2048
+     fe8:	stp	x23, x24, [sp, #368]
+     fec:	bl	e30 <_Znwm@plt>
+     ff0:	mov	x21, x0
+     ff4:	mov	x2, #0x800                 	// #2048
+     ff8:	mov	w1, #0x0                   	// #0
+     ffc:	add	x19, x0, x2
+    1000:	str	x0, [sp, #160]
+    1004:	str	x19, [sp, #176]
+    1008:	bl	dc0 <memset@plt>
+    100c:	mov	w2, #0x21                  	// #33
+    1010:	mov	w1, #0xffffffef            	// #-17
+    1014:	strb	w2, [x21]
+    1018:	mov	x0, #0x80                  	// #128
+    101c:	strb	w1, [x21, #16]
+    1020:	stp	xzr, xzr, [sp, #72]
+    1024:	str	x19, [sp, #168]
+    1028:	bl	e30 <_Znwm@plt>
+    102c:	fmov	v0.4s, #1.000000000000000000e+00
+    1030:	mov	x22, x0
+    1034:	mov	x1, x0
+    1038:	add	x2, x0, #0x80
+    103c:	str	x0, [sp, #64]
+    1040:	str	x2, [sp, #80]
+    1044:	nop
+    1048:	str	q0, [x1], #16
+    104c:	cmp	x1, x2
+    1050:	b.ne	1048 <main+0x148>  // b.any
+    1054:	mov	x0, #0x80                  	// #128
+    1058:	str	x1, [sp, #72]
+    105c:	stp	xzr, xzr, [sp, #104]
+    1060:	bl	e30 <_Znwm@plt>
+    1064:	mov	x19, x0
+    1068:	adrp	x0, 1000 <main+0x100>
+    106c:	ldr	q0, [x0, #2032]
+    1070:	mov	x8, x19
+    1074:	add	x1, x19, #0x80
+    1078:	str	x19, [sp, #96]
+    107c:	str	x1, [sp, #112]
+    1080:	str	q0, [x8], #16
+    1084:	cmp	x8, x1
+    1088:	b.ne	1080 <main+0x180>  // b.any
+    108c:	ldr	x0, [sp, #40]
+    1090:	add	x9, sp, #0xc8
+    1094:	movi	v0.4s, #0x0
+    1098:	mov	x10, #0x103                 	// #259
+    109c:	mov	x11, #0x0                   	// #0
+    10a0:	fmov	s1, #1.000000000000000000e+00
+    10a4:	mov	w2, #0x2                   	// #2
+    10a8:	add	x7, sp, #0x30
+    10ac:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    10b0:	ldr	x23, [x23, #4008]
+    10b4:	mov	w1, w2
+    10b8:	mov	x5, x22
+    10bc:	mov	x3, x21
+    10c0:	mov	x6, #0x80                  	// #128
+    10c4:	mov	x4, #0x800                 	// #2048
+    10c8:	stp	q0, q0, [x9]
+    10cc:	stp	q0, q0, [x9, #32]
+    10d0:	str	s1, [sp, #36]
+    10d4:	str	xzr, [sp, #48]
+    10d8:	stp	q0, q0, [x9, #64]
+    10dc:	str	q0, [x9, #96]
+    10e0:	str	x8, [sp, #104]
+    10e4:	stp	x10, x11, [sp, #184]
+    10e8:	bl	dd0 <sp_linear_load_v1@plt>
+    10ec:	mov	w20, w0
+    10f0:	cbnz	w0, 1130 <main+0x230>
+    10f4:	ldp	x0, x1, [sp, #40]
+    10f8:	mov	w3, #0x1388                	// #5000
+    10fc:	mov	x2, #0x1                   	// #1
+    1100:	mov	x4, #0x80                  	// #128
+    1104:	stp	x4, x2, [sp]
+    1108:	mov	x7, x19
+    110c:	add	x5, sp, #0x24
+    1110:	str	w3, [sp, #16]
+    1114:	mov	x6, #0x4                   	// #4
+    1118:	add	x3, sp, #0xb8
+    111c:	str	x22, [sp, #72]
+    1120:	str	x21, [sp, #168]
+    1124:	bl	e60 <sp_linear_run_v1@plt>
+    1128:	mov	w20, w0
+    112c:	cbz	w0, 1298 <main+0x398>
+    1130:	ldr	x0, [sp, #40]
+    1134:	add	x19, sp, #0x38
+    1138:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    113c:	ldr	x23, [x23, #4008]
+    1140:	mov	x3, x19
+    1144:	mov	x2, #0x0                   	// #0
+    1148:	mov	x1, #0x0                   	// #0
+    114c:	str	xzr, [sp, #56]
+    1150:	bl	df0 <sp_linear_report_v1@plt>
+    1154:	mov	w21, w0
+    1158:	cbnz	w0, 1170 <main+0x270>
+    115c:	ldr	x22, [sp, #56]
+    1160:	mov	x0, #0xffffe               	// #1048574
+    1164:	sub	x24, x22, #0x1
+    1168:	cmp	x24, x0
+    116c:	b.ls	1338 <main+0x438>  // b.plast
+    1170:	ldp	x0, x1, [sp, #40]
+    1174:	cbnz	x1, 11ec <main+0x2ec>
+    1178:	mov	w22, w20
+    117c:	ldr	x0, [sp, #40]
+    1180:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    1184:	ldr	x23, [x23, #4008]
+    1188:	bl	e90 <sp_linear_close_v1@plt>
+    118c:	mov	w19, w0
+    1190:	sub	w0, w0, #0x6
+    1194:	cmp	w0, #0x1
+    1198:	b.ls	1320 <main+0x420>  // b.plast
+    119c:	cbnz	w22, 1318 <main+0x418>
+    11a0:	cmp	w21, #0x0
+    11a4:	csel	w19, w19, w21, eq	// eq = none
+    11a8:	add	x0, sp, #0x60
+    11ac:	bl	1640 <_ZNSt6vectorIfSaIfEED1Ev>
+    11b0:	add	x0, sp, #0x40
+    11b4:	bl	1640 <_ZNSt6vectorIfSaIfEED1Ev>
+    11b8:	add	x0, sp, #0xa0
+    11bc:	bl	1620 <_ZNSt6vectorIhSaIhEED1Ev>
+    11c0:	ldp	x21, x22, [sp, #352]
+    11c4:	ldp	x23, x24, [sp, #368]
+    11c8:	b	fac <main+0xac>
+    11cc:	ldp	x21, x22, [sp, #352]
+    11d0:	adrp	x1, 1000 <main+0x100>
+    11d4:	add	x1, x1, #0x748
+    11d8:	mov	w19, #0x2                   	// #2
+    11dc:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    11e0:	ldr	x0, [x0, #4064]
+    11e4:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    11e8:	b	fac <main+0xac>
+    11ec:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    11f0:	ldr	x23, [x23, #4008]
+    11f4:	bl	ef0 <sp_linear_unload_v1@plt>
+    11f8:	mov	w22, w0
+    11fc:	sub	w0, w0, #0x6
+    1200:	cmp	w0, #0x1
+    1204:	b.ls	1300 <main+0x400>  // b.plast
+    1208:	cbz	w20, 117c <main+0x27c>
+    120c:	b	1178 <main+0x278>
+    1210:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    1214:	ldr	x0, [x0, #4064]
+    1218:	adrp	x1, 1000 <main+0x100>
+    121c:	add	x1, x1, #0x7e0
+    1220:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1224:	mov	w1, w19
+    1228:	bl	ec0 <_ZNSolsEi@plt>
+    122c:	mov	w1, #0xa                   	// #10
+    1230:	bl	15d0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c.isra.0>
+    1234:	ldp	x21, x22, [sp, #352]
+    1238:	b	fac <main+0xac>
+    123c:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    1240:	ldr	x0, [x0, #4008]
+    1244:	ldr	x2, [sp, #312]
+    1248:	ldr	x1, [x0]
+    124c:	subs	x2, x2, x1
+    1250:	mov	x1, #0x0                   	// #0
+    1254:	stp	x23, x24, [sp, #368]
+    1258:	b.ne	13c4 <main+0x4c4>  // b.any
+    125c:	bl	15a0 <_ZL16retain_if_unsafei.part.0>
+    1260:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    1264:	ldr	x0, [x0, #4032]
+    1268:	adrp	x1, 1000 <main+0x100>
+    126c:	add	x1, x1, #0x798
+    1270:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1274:	mov	w1, w19
+    1278:	bl	ec0 <_ZNSolsEi@plt>
+    127c:	adrp	x1, 1000 <main+0x100>
+    1280:	add	x1, x1, #0x7c0
+    1284:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1288:	cmp	w19, #0x4
+    128c:	ldp	x21, x22, [sp, #352]
+    1290:	cset	w19, ne	// ne = any
+    1294:	b	fac <main+0xac>
+    1298:	movi	v3.4s, #0x0
+    129c:	adrp	x0, 1000 <main+0x100>
+    12a0:	ldr	q2, [x0, #2048]
+    12a4:	mov	x0, #0x0                   	// #0
+    12a8:	movi	v18.4s, #0x4
+    12ac:	movi	v17.4s, #0x1
+    12b0:	fmov	v16.4s, #2.000000000000000000e+00
+    12b4:	fmov	v5.4s, #4.000000000000000000e+00
+    12b8:	movi	v4.4s, #0x9
+    12bc:	mov	v1.16b, v2.16b
+    12c0:	ldr	q6, [x19, x0]
+    12c4:	add	x0, x0, #0x10
+    12c8:	add	v2.4s, v2.4s, v18.4s
+    12cc:	cmp	x0, #0x80
+    12d0:	cmeq	v0.4s, v1.4s, v17.4s
+    12d4:	cmtst	v7.4s, v1.4s, v1.4s
+    12d8:	cmeq	v1.4s, v1.4s, #0
+    12dc:	bic	v0.16b, v7.16b, v0.16b
+    12e0:	bsl	v1.16b, v16.16b, v5.16b
+    12e4:	bic	v0.16b, v1.16b, v0.16b
+    12e8:	fcmeq	v0.4s, v0.4s, v6.4s
+    12ec:	bif	v3.16b, v4.16b, v0.16b
+    12f0:	b.ne	12bc <main+0x3bc>  // b.any
+    12f4:	smaxv	s3, v3.4s
+    12f8:	fmov	w20, s3
+    12fc:	b	1130 <main+0x230>
+    1300:	ldr	x0, [sp, #312]
+    1304:	ldr	x1, [x23]
+    1308:	subs	x0, x0, x1
+    130c:	mov	x1, #0x0                   	// #0
+    1310:	b.ne	13c4 <main+0x4c4>  // b.any
+    1314:	bl	15a0 <_ZL16retain_if_unsafei.part.0>
+    1318:	mov	w19, w22
+    131c:	b	11a8 <main+0x2a8>
+    1320:	ldr	x0, [sp, #312]
+    1324:	ldr	x1, [x23]
+    1328:	subs	x0, x0, x1
+    132c:	mov	x1, #0x0                   	// #0
+    1330:	b.ne	13c4 <main+0x4c4>  // b.any
+    1334:	bl	15a0 <_ZL16retain_if_unsafei.part.0>
+    1338:	mov	x0, x22
+    133c:	stp	xzr, xzr, [sp, #136]
+    1340:	bl	e30 <_Znwm@plt>
+    1344:	mov	x4, x0
+    1348:	add	x21, x0, x22
+    134c:	str	x0, [sp, #128]
+    1350:	mov	x23, x0
+    1354:	str	x21, [sp, #144]
+    1358:	cmp	x22, #0x1
+    135c:	strb	wzr, [x4], #1
+    1360:	b.eq	1378 <main+0x478>  // b.none
+    1364:	mov	x0, x4
+    1368:	mov	x2, x24
+    136c:	mov	w1, #0x0                   	// #0
+    1370:	bl	dc0 <memset@plt>
+    1374:	mov	x4, x21
+    1378:	ldr	x0, [sp, #40]
+    137c:	mov	x3, x19
+    1380:	ldr	x2, [sp, #56]
+    1384:	mov	x1, x23
+    1388:	str	x4, [sp, #136]
+    138c:	bl	df0 <sp_linear_report_v1@plt>
+    1390:	mov	w21, w0
+    1394:	cbnz	w0, 13b0 <main+0x4b0>
+    1398:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    139c:	ldr	x0, [x0, #4032]
+    13a0:	mov	x1, x23
+    13a4:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    13a8:	mov	w1, #0xa                   	// #10
+    13ac:	bl	15d0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c.isra.0>
+    13b0:	add	x0, sp, #0x80
+    13b4:	bl	1660 <_ZNSt6vectorIcSaIcEED1Ev>
+    13b8:	b	1170 <main+0x270>
+    13bc:	stp	x21, x22, [sp, #352]
+    13c0:	stp	x23, x24, [sp, #368]
+    13c4:	bl	db0 <__stack_chk_fail@plt>
+    13c8:	bti	j
+    13cc:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    13d0:	ldr	x23, [x23, #4008]
+    13d4:	mov	x19, x0
+    13d8:	add	x0, sp, #0x80
+    13dc:	bl	1660 <_ZNSt6vectorIcSaIcEED1Ev>
+    13e0:	add	x0, sp, #0x60
+    13e4:	bl	1640 <_ZNSt6vectorIfSaIfEED1Ev>
+    13e8:	add	x0, sp, #0x40
+    13ec:	bl	1640 <_ZNSt6vectorIfSaIfEED1Ev>
+    13f0:	add	x0, sp, #0xa0
+    13f4:	bl	1620 <_ZNSt6vectorIhSaIhEED1Ev>
+    13f8:	ldr	x0, [sp, #312]
+    13fc:	ldr	x1, [x23]
+    1400:	subs	x0, x0, x1
+    1404:	mov	x1, #0x0                   	// #0
+    1408:	b.ne	13c4 <main+0x4c4>  // b.any
+    140c:	mov	x0, x19
+    1410:	bl	ed0 <_Unwind_Resume@plt>
+    1414:	bti	j
+    1418:	mov	x19, x0
+    141c:	b	13e0 <main+0x4e0>
+    1420:	bti	j
+    1424:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    1428:	ldr	x23, [x23, #4008]
+    142c:	mov	x19, x0
+    1430:	b	13e8 <main+0x4e8>
+    1434:	bti	j
+    1438:	adrp	x23, 1f000 <__FRAME_END__+0x1d5cc>
+    143c:	ldr	x23, [x23, #4008]
+    1440:	mov	x19, x0
+    1444:	b	13f0 <main+0x4f0>
+    1448:	nop
+    144c:	nop
+    1450:	nop
+    1454:	nop
+    1458:	nop
+    145c:	nop
+    1460:	nop
+    1464:	nop
+    1468:	nop
+    146c:	nop
+    1470:	nop
+    1474:	nop
+    1478:	nop
+    147c:	nop
+
+0000000000001480 <_start>:
+    1480:	bti	c
+    1484:	mov	x29, #0x0                   	// #0
+    1488:	mov	x30, #0x0                   	// #0
+    148c:	mov	x5, x0
+    1490:	ldr	x1, [sp]
+    1494:	add	x2, sp, #0x8
+    1498:	mov	x6, sp
+    149c:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    14a0:	ldr	x0, [x0, #4016]
+    14a4:	mov	x3, #0x0                   	// #0
+    14a8:	mov	x4, #0x0                   	// #0
+    14ac:	bl	e00 <__libc_start_main@plt>
+    14b0:	bl	ea0 <abort@plt>
+
+00000000000014b4 <call_weak_fn>:
+    14b4:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    14b8:	ldr	x0, [x0, #4048]
+    14bc:	cbz	x0, 14c4 <call_weak_fn+0x10>
+    14c0:	b	ee0 <__gmon_start__@plt>
+    14c4:	ret
+    14c8:	nop
+    14cc:	nop
+
+00000000000014d0 <deregister_tm_clones>:
+    14d0:	adrp	x0, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    14d4:	add	x0, x0, #0xc8
+    14d8:	adrp	x1, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    14dc:	add	x1, x1, #0xc8
+    14e0:	cmp	x1, x0
+    14e4:	b.eq	14fc <deregister_tm_clones+0x2c>  // b.none
+    14e8:	adrp	x1, 1f000 <__FRAME_END__+0x1d5cc>
+    14ec:	ldr	x1, [x1, #4040]
+    14f0:	cbz	x1, 14fc <deregister_tm_clones+0x2c>
+    14f4:	mov	x16, x1
+    14f8:	br	x16
+    14fc:	ret
+
+0000000000001500 <register_tm_clones>:
+    1500:	adrp	x0, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    1504:	add	x0, x0, #0xc8
+    1508:	adrp	x1, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    150c:	add	x1, x1, #0xc8
+    1510:	sub	x1, x1, x0
+    1514:	lsr	x2, x1, #63
+    1518:	add	x1, x2, x1, asr #3
+    151c:	asr	x1, x1, #1
+    1520:	cbz	x1, 1538 <register_tm_clones+0x38>
+    1524:	adrp	x2, 1f000 <__FRAME_END__+0x1d5cc>
+    1528:	ldr	x2, [x2, #4056]
+    152c:	cbz	x2, 1538 <register_tm_clones+0x38>
+    1530:	mov	x16, x2
+    1534:	br	x16
+    1538:	ret
+    153c:	nop
+
+0000000000001540 <__do_global_dtors_aux>:
+    1540:	paciasp
+    1544:	stp	x29, x30, [sp, #-32]!
+    1548:	mov	x29, sp
+    154c:	str	x19, [sp, #16]
+    1550:	adrp	x19, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    1554:	ldrb	w0, [x19, #200]
+    1558:	tbnz	w0, #0, 1580 <__do_global_dtors_aux+0x40>
+    155c:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    1560:	ldr	x0, [x0, #4024]
+    1564:	cbz	x0, 1574 <__do_global_dtors_aux+0x34>
+    1568:	adrp	x0, 20000 <_ZNSo3putEc@GLIBCXX_3.4>
+    156c:	ldr	x0, [x0, #184]
+    1570:	bl	de0 <__cxa_finalize@plt>
+    1574:	bl	14d0 <deregister_tm_clones>
+    1578:	mov	w0, #0x1                   	// #1
+    157c:	strb	w0, [x19, #200]
+    1580:	ldr	x19, [sp, #16]
+    1584:	ldp	x29, x30, [sp], #32
+    1588:	autiasp
+    158c:	ret
+
+0000000000001590 <frame_dummy>:
+    1590:	bti	c
+    1594:	b	1500 <register_tm_clones>
+    1598:	nop
+    159c:	nop
+
+00000000000015a0 <_ZL16retain_if_unsafei.part.0>:
+    15a0:	adrp	x0, 1f000 <__FRAME_END__+0x1d5cc>
+    15a4:	ldr	x0, [x0, #4064]
+    15a8:	paciasp
+    15ac:	stp	x29, x30, [sp, #-16]!
+    15b0:	adrp	x1, 1000 <main+0x100>
+    15b4:	add	x1, x1, #0x6a8
+    15b8:	mov	x29, sp
+    15bc:	bl	e20 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    15c0:	bl	e10 <pause@plt>
+    15c4:	bl	e10 <pause@plt>
+    15c8:	b	15c0 <_ZL16retain_if_unsafei.part.0+0x20>
+    15cc:	nop
+
+00000000000015d0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c.isra.0>:
+    15d0:	paciasp
+    15d4:	stp	x29, x30, [sp, #-32]!
+    15d8:	mov	x29, sp
+    15dc:	ldr	x3, [x0]
+    15e0:	strb	w1, [sp, #31]
+    15e4:	ldur	x3, [x3, #-24]
+    15e8:	add	x2, x0, x3
+    15ec:	ldr	x2, [x2, #16]
+    15f0:	cbz	x2, 160c <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c.isra.0+0x3c>
+    15f4:	add	x1, sp, #0x1f
+    15f8:	mov	x2, #0x1                   	// #1
+    15fc:	bl	e50 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@plt>
+    1600:	ldp	x29, x30, [sp], #32
+    1604:	autiasp
+    1608:	ret
+    160c:	bl	da0 <_ZNSo3putEc@plt>
+    1610:	b	1600 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c.isra.0+0x30>
+    1614:	nop
+    1618:	nop
+    161c:	nop
+
+0000000000001620 <_ZNSt6vectorIhSaIhEED1Ev>:
+    1620:	bti	c
+    1624:	mov	x2, x0
+    1628:	ldr	x0, [x0]
+    162c:	cbz	x0, 163c <_ZNSt6vectorIhSaIhEED1Ev+0x1c>
+    1630:	ldr	x1, [x2, #16]
+    1634:	sub	x1, x1, x0
+    1638:	b	e40 <_ZdlPvm@plt>
+    163c:	ret
+
+0000000000001640 <_ZNSt6vectorIfSaIfEED1Ev>:
+    1640:	bti	c
+    1644:	mov	x2, x0
+    1648:	ldr	x0, [x0]
+    164c:	cbz	x0, 165c <_ZNSt6vectorIfSaIfEED1Ev+0x1c>
+    1650:	ldr	x1, [x2, #16]
+    1654:	sub	x1, x1, x0
+    1658:	b	e40 <_ZdlPvm@plt>
+    165c:	ret
+
+0000000000001660 <_ZNSt6vectorIcSaIcEED1Ev>:
+    1660:	bti	c
+    1664:	mov	x2, x0
+    1668:	ldr	x0, [x0]
+    166c:	cbz	x0, 167c <_ZNSt6vectorIcSaIcEED1Ev+0x1c>
+    1670:	ldr	x1, [x2, #16]
+    1674:	sub	x1, x1, x0
+    1678:	b	e40 <_ZdlPvm@plt>
+    167c:	ret
+
+Disassembly of section .fini:
+
+0000000000001680 <_fini>:
+    1680:	paciasp
+    1684:	stp	x29, x30, [sp, #-16]!
+    1688:	mov	x29, sp
+    168c:	ldp	x29, x30, [sp], #16
+    1690:	autiasp
+    1694:	ret

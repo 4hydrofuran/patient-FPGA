@@ -1,0 +1,43 @@
+{
+  "status": "PASS_CLEAN_DELIVERY_REBUILD",
+  "queue_job": {
+    "job": "01791052959941885830-A-a07-clean-20261004-v3-24a9ddc2",
+    "owner": "A",
+    "argv": [
+      "/bin/bash",
+      "/mnt/c/Patientqwen/platform/qwen35/a07/control/verify_package.sh"
+    ],
+    "submitted_utc": "2026-10-03T18:42:39.941919+00:00",
+    "scope": "OFFLINE_BUILD_ONLY",
+    "board_authorized": false,
+    "cwd": "/home/member-a/kv260-build/ra02-coordinator/work/01791052959941885830-A-a07-clean-20261004-v3-24a9ddc2",
+    "elapsed_s": 187.72008934900077,
+    "exit_code": 0,
+    "status": "COMPLETED",
+    "hardware_execution": "NOT_TESTED"
+  },
+  "isolated_copy_hash_manifest_sha256": "09498c2f1d3df83328c1ddd2fe08375dbc3120ed18d52dd26d0fe46cea257ac1",
+  "PC_host_checks": 970,
+  "PC_archived_meta": 66,
+  "PC_tamper_checks": 396,
+  "PC_build_checks": 4,
+  "PC_control_cases": 29,
+  "PC_control_checks": 554,
+  "same_tests_ASAN_UBSAN": "PASS",
+  "ARM64_rebuilt": {
+    "libsp_linear_xrt_candidate.so": {
+      "sha256": "207ab524678ef8cf3a2da8de496d1addede00809d940902a28585536e8032feb",
+      "original_sha256": "cecb7228619f8b4c6bd131304bcc37e700a41efab05cc782aaac6a9347c39645",
+      "byte_identical": false
+    },
+    "sp-linear-host": {
+      "sha256": "57d4ee54e96d2d191de8fbe6cc8e09caaec668c49d0448303c06a8ce8248a4c0",
+      "original_sha256": "57d4ee54e96d2d191de8fbe6cc8e09caaec668c49d0448303c06a8ce8248a4c0",
+      "byte_identical": true
+    }
+  },
+  "ARM64_execution": "NOT_TESTED",
+  "BOARD": "NOT_TESTED",
+  "model_scope": "Existing A53 full S1 model reused by exact artifact hashes; not recompiled or executed in this package check.",
+  "original_delivery_manifest_sha256": "755cdaada1e9da99df31970fb05b77b6acaa267d28b1f5c344fd1ebdb264f378"
+}

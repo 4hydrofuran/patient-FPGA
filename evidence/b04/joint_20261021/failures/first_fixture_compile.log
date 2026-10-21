@@ -1,0 +1,127 @@
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:45: error: ignoring '#pragma HLS INLINE' [-Werror=unknown-pragmas]
+   45 | #pragma HLS INLINE
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:48: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+   48 | #pragma HLS ARRAY_RESHAPE variable = weight_tile cyclic factor = 16 dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:54: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+   54 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:60: error: ignoring '#pragma HLS UNROLL' [-Werror=unknown-pragmas]
+   60 | #pragma HLS UNROLL
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:78: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+   78 | #pragma HLS ARRAY_RESHAPE variable = weight_tile cyclic factor = 16 dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:108: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  108 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:117: error: ignoring '#pragma HLS UNROLL' [-Werror=unknown-pragmas]
+  117 | #pragma HLS UNROLL
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:149: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  149 | #pragma HLS ARRAY_RESHAPE variable = weights cyclic factor = 16 dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:152: error: ignoring '#pragma HLS ARRAY_PARTITION' [-Werror=unknown-pragmas]
+  152 | #pragma HLS ARRAY_PARTITION variable = sums complete dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:158: error: ignoring '#pragma HLS UNROLL' [-Werror=unknown-pragmas]
+  158 | #pragma HLS UNROLL
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:168: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  168 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:177: error: ignoring '#pragma HLS UNROLL' [-Werror=unknown-pragmas]
+  177 | #pragma HLS UNROLL
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:207: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  207 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:239: error: ignoring '#pragma HLS INLINE' [-Werror=unknown-pragmas]
+  239 | #pragma HLS INLINE off
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:242: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  242 | #pragma HLS ARRAY_RESHAPE variable=weights cyclic factor=16 dim=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:254: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  254 | #pragma HLS PIPELINE II=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:269: error: ignoring '#pragma HLS INLINE' [-Werror=unknown-pragmas]
+  269 | #pragma HLS INLINE off
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:272: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  272 | #pragma HLS ARRAY_RESHAPE variable=weights cyclic factor=16 dim=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:281: error: ignoring '#pragma HLS ARRAY_PARTITION' [-Werror=unknown-pragmas]
+  281 | #pragma HLS ARRAY_PARTITION variable=sums complete dim=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:290: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  290 | #pragma HLS PIPELINE II=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:311: error: ignoring '#pragma HLS INLINE' [-Werror=unknown-pragmas]
+  311 | #pragma HLS INLINE off
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:314: error: ignoring '#pragma HLS DATAFLOW' [-Werror=unknown-pragmas]
+  314 | #pragma HLS DATAFLOW
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:332: error: ignoring '#pragma HLS INLINE' [-Werror=unknown-pragmas]
+  332 | #pragma HLS INLINE off
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:338: error: ignoring '#pragma HLS BIND_STORAGE' [-Werror=unknown-pragmas]
+  338 | #pragma HLS BIND_STORAGE variable=activations type=ram_1p impl=bram
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:350: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  350 | #pragma HLS ARRAY_RESHAPE variable=weights_first cyclic factor=16 dim=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:360: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  360 | #pragma HLS ARRAY_RESHAPE variable=weights_second cyclic factor=16 dim=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:376: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  376 | #pragma HLS PIPELINE II=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:393: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  393 | #pragma HLS PIPELINE II=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:443: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  443 | #pragma HLS PIPELINE II=1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:476: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  476 | #pragma HLS INTERFACE m_axi port = w_packed offset = slave bundle = gmem_w depth = 2179072 max_read_burst_length = 128 max_widen_bitwidth = 128
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:479: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  479 | #pragma HLS INTERFACE m_axi port = sw offset = slave bundle = gmem_sw depth = 34048 max_read_burst_length = 32 max_widen_bitwidth = 32
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:483: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  483 | #pragma HLS INTERFACE m_axi port = xq offset = slave bundle = gmem_x depth = 38912 max_read_burst_length = 128 max_widen_bitwidth = 128
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:490: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  490 | #pragma HLS INTERFACE m_axi port = sx offset = slave bundle = gmem_x depth = 8
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:493: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  493 | #pragma HLS INTERFACE m_axi port = y offset = slave bundle = gmem_y depth = 38912 max_write_burst_length = 32
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:494: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  494 | #pragma HLS INTERFACE m_axi port = meta offset = slave bundle = gmem_meta depth = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:496: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  496 | #pragma HLS INTERFACE s_axilite port = w_packed bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:497: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  497 | #pragma HLS INTERFACE s_axilite port = sw bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:498: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  498 | #pragma HLS INTERFACE s_axilite port = xq bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:499: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  499 | #pragma HLS INTERFACE s_axilite port = sx bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:500: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  500 | #pragma HLS INTERFACE s_axilite port = y bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:501: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  501 | #pragma HLS INTERFACE s_axilite port = meta bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:502: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  502 | #pragma HLS INTERFACE s_axilite port = t bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:503: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  503 | #pragma HLS INTERFACE s_axilite port = n bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:504: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  504 | #pragma HLS INTERFACE s_axilite port = k bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:505: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  505 | #pragma HLS INTERFACE s_axilite port = w_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:506: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  506 | #pragma HLS INTERFACE s_axilite port = sw_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:507: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  507 | #pragma HLS INTERFACE s_axilite port = x_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:508: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  508 | #pragma HLS INTERFACE s_axilite port = sx_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:509: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  509 | #pragma HLS INTERFACE s_axilite port = y_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:510: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  510 | #pragma HLS INTERFACE s_axilite port = meta_bytes bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:511: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  511 | #pragma HLS INTERFACE s_axilite port = job_id bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:512: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  512 | #pragma HLS INTERFACE s_axilite port = abi_version bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:515: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  515 | #pragma HLS INTERFACE ap_ctrl_hs port = return
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:516: error: ignoring '#pragma HLS INTERFACE' [-Werror=unknown-pragmas]
+  516 | #pragma HLS INTERFACE s_axilite port = return bundle = control
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:634: error: ignoring '#pragma HLS ARRAY_RESHAPE' [-Werror=unknown-pragmas]
+  634 | #pragma HLS ARRAY_RESHAPE variable = weight_tile cyclic factor = 16 dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:639: error: ignoring '#pragma HLS BIND_STORAGE' [-Werror=unknown-pragmas]
+  639 | #pragma HLS BIND_STORAGE variable = token_activations type = ram_1p impl = bram
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:652: error: ignoring '#pragma HLS ARRAY_PARTITION' [-Werror=unknown-pragmas]
+  652 | #pragma HLS ARRAY_PARTITION variable = sums complete dim = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:666: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  666 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:678: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  678 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:709: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  709 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:726: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  726 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:740: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  740 | #pragma HLS PIPELINE II = 1
+D:\KV260-project-HLS\b_qwen35\src\w4a8_prefill_v1.cpp:750: error: ignoring '#pragma HLS PIPELINE' [-Werror=unknown-pragmas]
+  750 | #pragma HLS PIPELINE II = 1
+cc1plus.exe: all warnings being treated as errors

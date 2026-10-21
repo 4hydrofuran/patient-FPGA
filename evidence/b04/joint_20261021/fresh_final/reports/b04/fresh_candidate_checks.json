@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-10-21T17:23:32+08:00",
+  "checks": [
+    {
+      "case": "unsafe path '../escape'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path '/absolute'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'C:/outside'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a\\\\..\\\\b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a/../b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a//b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path './b'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a/NUL.txt'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a/trailing.'",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path 'a/trailing '",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "unsafe path ''",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "actual complete candidate inventory and receipts",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong externally supplied archive hash",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "fabricated BOARD pass",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "corrupted xclbin bytes",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "missing required shared library",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "incomplete A source closure",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "PASS label with zero control coverage",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "source changed after PC receipt",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "wrong kernel identity with resealed file hash",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "missing archived RTL probe coverage",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "formal promotion without fresh rebuild receipt",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "symlink ZIP member",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "case": "case-colliding ZIP names",
+      "status": "REJECTED_AS_EXPECTED"
+    }
+  ],
+  "count": 24,
+  "scope": "Candidate corruption/incomplete/false acceptance rejection; no device execution."
+}

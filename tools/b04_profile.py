@@ -100,7 +100,9 @@ def build(args):
         'data_sync': {'host_to_device': ['w_packed', 'sw', 'xq', 'sx', 'meta_initial_state'],
                       'device_to_host': ['meta_before_consuming_y', 'y_only_after_valid_success']},
         'hardware_measurements': {'runtime_memory_groups': None, 'measured_bus_bytes': None, 'board_latency_ms': None},
-        'readiness': {'B_profile': 'PASS', 'XRT_runtime': 'WAITING_A', 'implementation': 'NOT_TESTED',
+        'readiness': {'B_profile': 'PASS',
+                      'scope': 'Private kernel metadata only; current runtime/implementation/ARM build acceptance is recorded in the joint report.',
+                      'joint_report': 'docs/b04/B04_JOINT_REPORT_20261021.md',
                       'ARM64_runtime': 'NOT_TESTED', 'BOARD': 'NOT_TESTED'},
     }
     write_json(ROOT / 'config/b04/kernel_profile.json', profile)

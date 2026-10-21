@@ -1,0 +1,54 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
+| Date              : Sun Oct  4 02:35:36 2026
+| Host              : LAPTOP-J288H04V running 64-bit Ubuntu 22.04.5 LTS
+| Command           : report_clocks -file /home/member-a/kv260-build/ra02-coordinator/work/01791052430687741878-A-a07-audit-20261004-v3-c8ddfa46/audit/routed/clocks.rpt
+| Design            : MPSoC_ext_platform_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.31 12-08-2025
+| Design State      : Routed
+| Temperature Grade : C
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                                    Period(ns)  Waveform(ns)   Attributes  Sources
+clk_pl_0                                 10.000      {0.000 5.000}  P           {MPSoC_ext_platform_i/ps_e/inst/PS8_i/PLCLK[0]}
+clk_out1_MPSoC_ext_platform_clk_wiz_0_0  6.667       {0.000 3.333}  P,G,A       {MPSoC_ext_platform_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : clk_out1_MPSoC_ext_platform_clk_wiz_0_0
+Master Source       : MPSoC_ext_platform_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKIN1
+Master Clock        : clk_pl_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -1.667 -3.333}
+Generated Sources   : {MPSoC_ext_platform_i/clk_wiz_0/inst/mmcme4_adv_inst/CLKOUT0}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+

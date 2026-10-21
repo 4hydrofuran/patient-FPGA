@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "candidate": "B03_double",
+  "kernel_name": "w4a8_linear_v1",
+  "build_id": 3003318274,
+  "build_id_hex": "0xB3030002",
+  "private_abi_version": 1,
+  "public_api_version": 1,
+  "public_contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "part": "xck26-sfvc784-2LV-c",
+  "hls_clock_target_ns": 6.667,
+  "compile_options": "-DB02_CACHE_X -DB02_AXI_X128 -DB03_TEST -DB03_REUSE -DB03_DOUBLE_BUFFER -ffp-contract=off",
+  "hls_estimates": {
+    "clock_slack_ns_estimate": -0.4,
+    "bram18k_estimate": 110,
+    "dsp_estimate": 102,
+    "ff_estimate": 20848,
+    "lut_estimate": 35817,
+    "dataflow_task_detected": true
+  },
+  "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "frozen_files": {
+    "src/w4a8_prefill_v1.cpp": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+    "src/w4a8_linear_v1.hpp": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+    "artifact/b03_candidate/w4a8_linear_v1.xo": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+    "artifact/b03_candidate/kernel.xml": "7b518dcd07cc87981b227997990d6ba51c7762a2b3a065e320b2642a01649597",
+    "hls_prefill_double.cfg": "0b82ff83976c972237a895dba1e2c5cd12be8a8a0b8b4ddd7a76bc5ac70364d0"
+  },
+  "embedded_kernel_xml_sha256": "dadfa622dc114a373af9195778f64e34f4d715ea190426fa745dfd39f818d1de",
+  "kernel_xml_semantic_sha256": "4ed6422dbfba36ce4f35a7718ebbdef616a590777d30ff3b9856ae3dc33c2ae3",
+  "control_protocol": "ap_ctrl_hs",
+  "arguments": [
+    {
+      "index": 0,
+      "name": "w_packed",
+      "kind": "BO",
+      "control_offset": 16,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_W",
+      "port_width_bits": 128,
+      "role": "weight_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 1,
+      "name": "sw",
+      "kind": "BO",
+      "control_offset": 28,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_SW",
+      "port_width_bits": 32,
+      "role": "weight_scale_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 2,
+      "name": "xq",
+      "kind": "BO",
+      "control_offset": 40,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_X",
+      "port_width_bits": 128,
+      "role": "activation_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 3,
+      "name": "sx",
+      "kind": "BO",
+      "control_offset": 52,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_X",
+      "port_width_bits": 128,
+      "role": "activation_scale_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 4,
+      "name": "y",
+      "kind": "BO",
+      "control_offset": 64,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_Y",
+      "port_width_bits": 32,
+      "role": "output",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 5,
+      "name": "meta",
+      "kind": "BO",
+      "control_offset": 76,
+      "control_bytes": 8,
+      "port": "M_AXI_GMEM_META",
+      "port_width_bits": 512,
+      "role": "completion_record",
+      "runtime_memory_group": null,
+      "memory_group_rule": "Query matching loaded xclbin metadata for this argument; do not equate argument index with bank number"
+    },
+    {
+      "index": 6,
+      "name": "t",
+      "kind": "scalar",
+      "control_offset": 88,
+      "control_bytes": 4,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 7,
+      "name": "n",
+      "kind": "scalar",
+      "control_offset": 96,
+      "control_bytes": 4,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 8,
+      "name": "k",
+      "kind": "scalar",
+      "control_offset": 104,
+      "control_bytes": 4,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 9,
+      "name": "w_bytes",
+      "kind": "scalar",
+      "control_offset": 112,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 10,
+      "name": "sw_bytes",
+      "kind": "scalar",
+      "control_offset": 124,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 11,
+      "name": "x_bytes",
+      "kind": "scalar",
+      "control_offset": 136,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 12,
+      "name": "sx_bytes",
+      "kind": "scalar",
+      "control_offset": 148,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 13,
+      "name": "y_bytes",
+      "kind": "scalar",
+      "control_offset": 160,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 14,
+      "name": "meta_bytes",
+      "kind": "scalar",
+      "control_offset": 172,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 15,
+      "name": "job_id",
+      "kind": "scalar",
+      "control_offset": 184,
+      "control_bytes": 8,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    },
+    {
+      "index": 16,
+      "name": "abi_version",
+      "kind": "scalar",
+      "control_offset": 196,
+      "control_bytes": 4,
+      "port": "S_AXI_CONTROL",
+      "port_width_bits": 32,
+      "role": "control_input",
+      "runtime_memory_group": null,
+      "memory_group_rule": null
+    }
+  ],
+  "meta": {
+    "bytes": 40,
+    "endianness": "little",
+    "magic": 1463042360,
+    "fields": [
+      {
+        "name": "abi_magic",
+        "offset": 0,
+        "bytes": 4
+      },
+      {
+        "name": "kernel_build_id",
+        "offset": 4,
+        "bytes": 4
+      },
+      {
+        "name": "job_id",
+        "offset": 8,
+        "bytes": 8
+      },
+      {
+        "name": "status",
+        "offset": 16,
+        "bytes": 4
+      },
+      {
+        "name": "done",
+        "offset": 20,
+        "bytes": 4
+      },
+      {
+        "name": "hw_completed_count",
+        "offset": 24,
+        "bytes": 8
+      },
+      {
+        "name": "algorithm_weight_bytes",
+        "offset": 32,
+        "bytes": 8
+      }
+    ],
+    "done_means": "call finished, including errors; success additionally requires private status zero",
+    "counter_storage": "meta BO memory, read and updated by kernel; not a persistent device-global register"
+  },
+  "buffer_minimum_bytes": {
+    "w_packed": "Np*Kp/2",
+    "sw": "Np*(Kp/128)*4",
+    "xq": "T*Kp",
+    "sx": "T*4",
+    "y": "T*Np*4",
+    "meta": 40
+  },
+  "dimensions": {
+    "T": [
+      1,
+      8
+    ],
+    "N": [
+      1,
+      4864
+    ],
+    "K": [
+      1,
+      4864
+    ],
+    "N_alignment": 32,
+    "K_alignment": 128
+  },
+  "private_to_public_status": {
+    "0": 0,
+    "1": 2,
+    "2": 1,
+    "3": 3,
+    "4": 1,
+    "5": 9
+  },
+  "private_status_mapping_owner": "B supplies conformance rules; A owns runtime translation/isolation",
+  "data_sync": {
+    "host_to_device": [
+      "w_packed",
+      "sw",
+      "xq",
+      "sx",
+      "meta_initial_state"
+    ],
+    "device_to_host": [
+      "meta_before_consuming_y",
+      "y_only_after_valid_success"
+    ]
+  },
+  "hardware_measurements": {
+    "runtime_memory_groups": null,
+    "measured_bus_bytes": null,
+    "board_latency_ms": null
+  },
+  "readiness": {
+    "B_profile": "PASS",
+    "XRT_runtime": "WAITING_A",
+    "implementation": "NOT_TESTED",
+    "ARM64_runtime": "NOT_TESTED",
+    "BOARD": "NOT_TESTED"
+  }
+}

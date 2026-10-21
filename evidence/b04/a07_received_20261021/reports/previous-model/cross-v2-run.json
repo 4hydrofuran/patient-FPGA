@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "run-next"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T05:40:00.963511+00:00",
+  "elapsed_s": 152.01960509998025,
+  "exit_code": 0,
+  "stdout": "{\n  \"job\": \"01791005999565534417-A-a07-a53-origin-v2-d20534d2\",\n  \"owner\": \"A\",\n  \"argv\": [\n    \"/bin/bash\",\n    \"/mnt/c/Patientqwen/platform/qwen35/a07/build_a53.sh\"\n  ],\n  \"submitted_utc\": \"2026-10-03T05:39:59.565571+00:00\",\n  \"scope\": \"OFFLINE_BUILD_ONLY\",\n  \"board_authorized\": false,\n  \"cwd\": \"/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2\",\n  \"elapsed_s\": 151.75295006499994,\n  \"exit_code\": 0,\n  \"status\": \"COMPLETED\",\n  \"hardware_execution\": \"NOT_TESTED\"\n}\n",
+  "stderr": ""
+}

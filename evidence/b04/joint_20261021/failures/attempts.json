@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-21T17:11:46+08:00",
+  "attempts": [
+    {
+      "stage": "receive_git",
+      "command": "git fetch --no-tags origin a/a07-complete-20261004",
+      "exit_code": 1,
+      "error": "RPC failed; curl 28 Recv failure: Connection was reset; expected flush after ref listing",
+      "fix": "Pinned Git tree/raw reception; actual files individually verified"
+    },
+    {
+      "stage": "first_pc_fixture",
+      "exit_code": 1,
+      "evidence": "first_fixture_compile.log",
+      "error": "unknown HLS pragmas under ordinary GCC -Werror",
+      "fix": "Only frozen PC kernel replay uses -Wno-unknown-pragmas; kernel and tolerances unchanged"
+    },
+    {
+      "stage": "artifact_audit_source_manifest",
+      "exit_code": 1,
+      "error": "KeyError platform/qwen35/a07/control/test_api.cpp",
+      "fix": "Use actual control-build-inputs.json for control source, original production source manifest for its covered files"
+    },
+    {
+      "stage": "artifact_audit_build_output",
+      "exit_code": 1,
+      "error": "No Cortex-A53 build flag evidence in stdout.txt",
+      "fix": "Read both actual stdout and stderr because bash xtrace is stderr"
+    },
+    {
+      "stage": "artifact_audit_encoding",
+      "exit_code": 1,
+      "error": "UnicodeDecodeError gbk byte 0x99 reading UTF-8 stderr",
+      "fix": "Explicit UTF-8 for original A text logs"
+    },
+    {
+      "stage": "Chinese_path_full_extraction",
+      "exit_code": 1,
+      "observed": "B profile/private pass; A host970 pass; A archived meta replay failed filesystem Illegal byte sequence",
+      "evidence": "chinese_extraction/",
+      "disposition": "Document native MinGW ASCII path requirement; do not modify A production source or claim Unicode-path joint acceptance"
+    }
+  ],
+  "note": "Tracebacks were observed in command outputs. Only the fixture compiler log was persisted by the original subprocess; other traceback summaries are transcribed, not fabricated raw logs."
+}

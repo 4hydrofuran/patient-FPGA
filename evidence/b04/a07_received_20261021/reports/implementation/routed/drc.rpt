@@ -1,0 +1,595 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
+| Date         : Sun Oct  4 02:35:08 2026
+| Host         : LAPTOP-J288H04V running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_drc -file /home/member-a/kv260-build/ra02-coordinator/work/01791052430687741878-A-a07-audit-20261004-v3-c8ddfa46/audit/routed/drc.rpt
+| Design       : MPSoC_ext_platform_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_MPSoC_ext_platform_wrapper_routed
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 111
++----------+----------+---------------------------------------------------------------------+--------+
+| Rule     | Severity | Description                                                         | Checks |
++----------+----------+---------------------------------------------------------------------+--------+
+| DPIP-2   | Warning  | Input pipelining                                                    | 28     |
+| DPOP-3   | Warning  | PREG Output pipelining                                              | 37     |
+| DPOP-4   | Warning  | MREG Output pipelining                                              | 28     |
+| AVAL-155 | Advisory | enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 14     |
+| AVAL-156 | Advisory | enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND    | 4      |
++----------+----------+---------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0 input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg__0 input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#20 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#21 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#22 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#23 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#24 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#25 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#26 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#27 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#28 Warning
+Input pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP input MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#17 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#18 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#19 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#20 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#21 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#22 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#23 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#24 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#25 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#26 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#27 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#28 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__1 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#29 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__2 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#30 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#31 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#32 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__1 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#33 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__2 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#34 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#35 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__0 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#36 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__1 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#37 Warning
+PREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__2 output MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_32ns_32ns_62_1_1_U231/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_compute_prefill_Pipeline_VITIS_LOOP_437_7_VITIS_LOOP_440_8_fu_358/mul_ln446_reg_449_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_contains_invalid_w4_fu_531/mul_27ns_25ns_52_1_1_U48/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_25ns_27ns_52_1_1_U352/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_25ns_57_1_1_U353/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#17 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#18 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#19 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__1 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#20 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__2 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_62_1_1_U354/tmp_product__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#21 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#22 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#23 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__1 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#24 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__2 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U355/tmp_product__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#25 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#26 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__0 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#27 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__1 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#28 Warning
+MREG Output pipelining  
+DSP MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__2 multiplier stage MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/mul_32ns_32ns_64_1_1_U356/tmp_product__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+AVAL-155#1 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fadd_32ns_32ns_32_6_full_dsp_1_U164/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#2 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#3 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#4 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#5 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#6 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#7 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#8 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fadd_32ns_32ns_32_6_full_dsp_1_U306/w4a8_linear_v1_fadd_32ns_32ns_32_6_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#9 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#10 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#11 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#12 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#13 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-155#14 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-156#1 Advisory
+enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U165/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-156#2 Advisory
+enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_p_anonymous_namespace_compute_prefill_fu_541/grp_p_anonymous_namespace_prefill_overlap_fu_336/p_anonymous_namespace_compute_prefill_group_U0/grp_p_anonymous_namespace_compute_prefill_group_Pipeline_VITIS_LOOP_287_2_fu_114/fmul_32ns_32ns_32_4_max_dsp_1_U166/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-156#3 Advisory
+enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U307/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-156#4 Advisory
+enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+MPSoC_ext_platform_i/w4a8_linear_v1_1/inst/grp_w4a8_linear_v1_Pipeline_VITIS_LOOP_723_7_fu_607/fmul_32ns_32ns_32_4_max_dsp_1_U308/w4a8_linear_v1_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+

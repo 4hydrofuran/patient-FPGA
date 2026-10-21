@@ -1,0 +1,39 @@
+{
+  "status": "PASS_LIMITED_STATIC_ISA_AND_RUNTIME_PATH_REVIEW",
+  "results": {
+    "arm64_library": {
+      "argv": [
+        "D:\\2026.1\\gnu\\aarch64\\nt\\aarch64-linux\\bin\\aarch64-linux-gnu-objdump.exe",
+        "-d",
+        "--no-show-raw-insn",
+        "--wide",
+        "D:\\KV260-project-HLS\\b_qwen35\\evidence\\b04\\a07_received_20261021\\artifacts\\libsp_linear_xrt_candidate.so"
+      ],
+      "exit_code": 0,
+      "artifact_sha256": "cecb7228619f8b4c6bd131304bcc37e700a41efab05cc782aaac6a9347c39645",
+      "disassembly_sha256": "f6dfa7140750c19dd367dc80dcc9b0541f7191ecfb3d488c5e1b8bcad5d5d4f9",
+      "decoded_instruction_lines": 34913,
+      "RPATH_RUNPATH": [],
+      "newer_extension_matches": []
+    },
+    "arm64_host": {
+      "argv": [
+        "D:\\2026.1\\gnu\\aarch64\\nt\\aarch64-linux\\bin\\aarch64-linux-gnu-objdump.exe",
+        "-d",
+        "--no-show-raw-insn",
+        "--wide",
+        "D:\\KV260-project-HLS\\b_qwen35\\evidence\\b04\\a07_received_20261021\\artifacts\\sp-linear-host"
+      ],
+      "exit_code": 0,
+      "artifact_sha256": "57d4ee54e96d2d191de8fbe6cc8e09caaec668c49d0448303c06a8ce8248a4c0",
+      "disassembly_sha256": "9b592741dd1e85e189106ef5b8f4038bbfbde6343b0ceb8d1646b848a3b03c2f",
+      "decoded_instruction_lines": 565,
+      "RPATH_RUNPATH": [
+        "$ORIGIN"
+      ],
+      "newer_extension_matches": []
+    }
+  },
+  "compile_target": "A actual build log -mcpu=cortex-a53",
+  "limits": "Limited dot-product/i8mm/bfloat/SVE mnemonic scan is supplementary, not an exhaustive CPU compatibility proof. ARM execution and BOARD remain NOT_TESTED."
+}

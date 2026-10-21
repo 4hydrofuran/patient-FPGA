@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\KV260-project-HLS\b_qwen35\build\b04\joint_20261021\全新试包复现\tools\b04_joint_pc.py", line 104, in <module>
+    execute(parser.parse_args())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KV260-project-HLS\b_qwen35\build\b04\joint_20261021\全新试包复现\tools\b04_joint_pc.py", line 46, in execute
+    output, steps['meta_replay_run'] = run([str(executable), str(ROOT / 'vectors/b04_meta')], work,
+                                       ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                        work / 'meta_replay.log', env)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KV260-project-HLS\b_qwen35\build\b04\joint_20261021\全新试包复现\tools\b04_common.py", line 77, in run
+    raise RuntimeError('Command failed; original log preserved: ' + str(log))
+RuntimeError: Command failed; original log preserved: D:\KV260-project-HLS\b_qwen35\build\b04\joint_20261021\全新试包复现\build\b04\fresh_pc\meta_replay.log

@@ -1,0 +1,40 @@
+{
+  "scope": "A1_AUTHORIZED_OFFLINE_PREPARATION",
+  "as_of": "2026-09-28",
+  "status": "PREPARATION_IMPLEMENTED_EXTERNAL_BOOT_CLARIFICATION_AND_BOARD_PENDING",
+  "g1": "NOT_PASSED",
+  "deployment_authorized": false,
+  "selected_deployable_boot_bundle": null,
+  "preferred_platform_software_candidate": "kv260_base 2026.1 + PetaLinux Common Image, per UG1701 exception; not boot verified",
+  "alternative_boot_candidate": "Kria-specific EDF WIC + KV260 1.07, kept separate; not assumed compatible with kv260_base",
+  "offline_completed": [
+    "2026.1 Linux tools and K26 availability/license check",
+    "A-vadd Csim/synthesis/RTL cosim and real hardware link",
+    "ARM64 XRT host cross-link and static BO range guard",
+    "official download integrity, offline rootfs/kernel/XRT/SDK audit",
+    "final XSA/bit/DTBO creation, bitstream identity and static DT overlay audit",
+    "fixed source interrupt binding audit; runtime status left unknown",
+    "model/source/license/template/256-token fixture and PC S0 preparation",
+    "lease/deployment lock and read-only collection implementation with PC tests",
+    "Common candidate native build RPM cache and isolated RPM DB test attempt",
+    "curated reproducible preboard materials builder and verifier",
+    "A-to-B and A-to-C constraints/dependency handoffs prepared, not delivered or signed"
+  ],
+  "external_clarification": [
+    "AMD KV260 2026.1 validated boot chain for shipped kv260_base: PetaLinux exception versus Kria EDF/UEFI docs",
+    "Which base DT/memory reservation configuration is intended for this exact platform and boot chain"
+  ],
+  "board_required": [
+    "physical identity, actual boot firmware, trusted serial/SSH and central lease",
+    "exact boot/rootfs/kernel/zocl/XRT chain and runtime overlay loading",
+    "actual DT/MemTotal/CMA/XRT topology/BO ranges and approved bounded allocation budget",
+    "20 legal lengths, 1000 whole-vector comparisons, host invalid rejection and execution mode logs",
+    "normal reload/retest and separately authorized failure recovery",
+    "native RPM transaction/build and S0 256-token prompt with 1/2/4 CPU threads"
+  ],
+  "native_rpm_test": "EXIT_5_CROSS_ARCH_REJECTED_NOT_INSTALL_PASS; no architecture or dependency bypass",
+  "native_rpm_evidence": "platform/a1/evidence/native-db-transaction-test-20260928.json",
+  "linux_safe_budget_bytes": null,
+  "pl_safe_budget_bytes": null,
+  "review": "docs/handoffs/A1_PREBOARD_20260928.md"
+}

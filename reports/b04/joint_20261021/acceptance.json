@@ -1,0 +1,70 @@
+{
+  "status": "PASS_B04_OFFLINE_G1_G6",
+  "finished_at": "2026-10-21T17:21:43+08:00",
+  "A_revision": "6dd1a93c2fa44b045276c24f4cc79d94e54b88b3",
+  "kernel_modified": false,
+  "public_contract_modified": false,
+  "joint_gates": {
+    "G1": "PASS_OFFLINE",
+    "G2": "PASS_OFFLINE",
+    "G3": "PASS_OFFLINE",
+    "G4": "PASS_OFFLINE",
+    "G5": "PASS_OFFLINE",
+    "G6": "PASS_OFFLINE"
+  },
+  "evidence": {
+    "arm_static.json": {
+      "sha256": "6fb064390fcfafff0781eac4764b28a04161c0365e4bc666daf6c95b10d8af07",
+      "path": "reports/b04/joint_20261021/arm_static.json"
+    },
+    "artifact_review.json": {
+      "sha256": "a8c4b0a2e80040ca977e94b90da32d8f25a1ed1857fa606748f81b399567d8d5",
+      "path": "reports/b04/joint_20261021/artifact_review.json"
+    },
+    "a_preflight.json": {
+      "sha256": "ff573b1171885fc4a429f797b73b34d02a74fb4cfa61b5618bf1e2fec309af21",
+      "path": "reports/b04/joint_20261021/a_preflight.json"
+    },
+    "candidate_checks.json": {
+      "sha256": "adae3874f0cad31e9c7460de70570abb46ad76ec1759f1ea2506f45454026c38",
+      "path": "reports/b04/joint_20261021/candidate_checks.json"
+    },
+    "pc.json": {
+      "sha256": "59f4059e8a7a5c8bbfd094cee6dcedb2bffac394ab501025e421633ed86dc50b",
+      "path": "reports/b04/joint_20261021/pc.json"
+    },
+    "private.json": {
+      "sha256": "0d1dee0af431c89ba239b760fc46fe29f6c44aa1311664a08e25e17439324928",
+      "path": "reports/b04/joint_20261021/private.json"
+    },
+    "profile.json": {
+      "sha256": "a8912d63eb007a60f0058b9095cbc0fe6577b579c7602386ba14eb7fb98296b9",
+      "path": "reports/b04/joint_20261021/profile.json"
+    },
+    "raw_inventory.json": {
+      "sha256": "1198839a9f72a84ab8a58be8cc6418bc794cad0e77a33cdecadd27722f751180",
+      "path": "reports/b04/joint_20261021/raw_inventory.json"
+    },
+    "receive.json": {
+      "sha256": "1e2a55bda0cb416c73bded1b482195461d895cbf04037227d09342e1ddb3efbf",
+      "path": "reports/b04/joint_20261021/receive.json"
+    },
+    "trial_extraction.json": {
+      "sha256": "18b4ce185606b3fdfd1fcda1985330dc01dc320e6ea23d9c6b91e0077044a467",
+      "path": "reports/b04/joint_20261021/trial_extraction.json"
+    }
+  },
+  "G6_basis": "Full trial extracted and recompiled in a new ASCII directory; final ZIP receives a separate exact-byte extraction receipt.",
+  "signoff": {
+    "A": "Original PASS_A07_OFFLINE artifacts and command evidence",
+    "B": "Current independent receipt/review/rebuild/package acceptance",
+    "A_current_round_signature": "NOT_REQUESTED_OR_CLAIMED"
+  },
+  "BOARD": "NOT_TESTED",
+  "ARM_execution": "NOT_TESTED",
+  "limits": [
+    "Windows native test has documented OS lock adapter and ASCII path restriction.",
+    "No new matched SDK ARM build, sanitizer, RTL or routed DCP execution by B.",
+    "SDK/runtime libraries are externally provided by exact original dependency identity."
+  ]
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="w4a8">
+  <platform vendor="xilinx.com" boardid="kv260_som_som240_1_connector_kv260_carrier_som240_1_connector" name="kv260_som_som240_1_connector_kv260_carrier_som240_1_connector_base" featureRomTime="0">
+    <version major="1" minor="0"/>
+    <description/>
+    <board name="xilinx.com:kv260_som:2.0" vendor="xilinx.com" fpga="xck26-sfvc784-2LV-c">
+      <interfaces/>
+      <images>
+        <image name="kv260_board.png" type="HDPI"/>
+        <image name="" type="MDPI"/>
+        <image name="" type="LDPI"/>
+      </images>
+      <id>
+        <vendor/>
+        <device/>
+        <subsystem/>
+      </id>
+    </board>
+    <build_flow/>
+    <host architecture="unknown"/>
+    <device name="fpga0" fpgaDevice="zynquplus:xck26:sfvc784:-2LV:c" addrWidth="0">
+      <core name="OCL_REGION_0" target="bitstream" type="clc_region" clockFreq="0MHz" numComputeUnits="60">
+        <kernelClocks>
+          <clock port="KERNEL_CLK" frequency="299.997000MHz"/>
+          <clock port="DATA_CLK" frequency="149.998500MHz"/>
+        </kernelClocks>
+        <kernel name="w4a8_linear_v1" language="c" vlnv="xilinx.com:hls:w4a8_linear_v1:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_hs" countedAutoRestart="0" deadlockDetection="local" mailbox="none" swReset="false">
+          <port name="M_AXI_GMEM_W" mode="master" range="0xFFFFFFFF" dataWidth="128" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM_SW" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM_X" mode="master" range="0xFFFFFFFF" dataWidth="128" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM_Y" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM_META" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0xCC" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="w_packed" addressQualifier="1" id="0" port="M_AXI_GMEM_W" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="sw" addressQualifier="1" id="1" port="M_AXI_GMEM_SW" size="0x8" offset="0x1C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="xq" addressQualifier="1" id="2" port="M_AXI_GMEM_X" size="0x8" offset="0x28" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="sx" addressQualifier="1" id="3" port="M_AXI_GMEM_X" size="0x8" offset="0x34" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="y" addressQualifier="1" id="4" port="M_AXI_GMEM_Y" size="0x8" offset="0x40" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="meta" addressQualifier="1" id="5" port="M_AXI_GMEM_META" size="0x8" offset="0x4C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="t" addressQualifier="0" id="6" port="S_AXI_CONTROL" size="0x4" offset="0x58" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <arg name="n" addressQualifier="0" id="7" port="S_AXI_CONTROL" size="0x4" offset="0x60" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <arg name="k" addressQualifier="0" id="8" port="S_AXI_CONTROL" size="0x4" offset="0x68" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <arg name="w_bytes" addressQualifier="0" id="9" port="S_AXI_CONTROL" size="0x8" offset="0x70" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="sw_bytes" addressQualifier="0" id="10" port="S_AXI_CONTROL" size="0x8" offset="0x7C" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="x_bytes" addressQualifier="0" id="11" port="S_AXI_CONTROL" size="0x8" offset="0x88" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="sx_bytes" addressQualifier="0" id="12" port="S_AXI_CONTROL" size="0x8" offset="0x94" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="y_bytes" addressQualifier="0" id="13" port="S_AXI_CONTROL" size="0x8" offset="0xA0" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="meta_bytes" addressQualifier="0" id="14" port="S_AXI_CONTROL" size="0x8" offset="0xAC" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="job_id" addressQualifier="0" id="15" port="S_AXI_CONTROL" size="0x8" offset="0xB8" hostOffset="0x0" hostSize="0x8" type="unsigned long long"/>
+          <arg name="abi_version" addressQualifier="0" id="16" port="S_AXI_CONTROL" size="0x4" offset="0xC4" hostOffset="0x0" hostSize="0x4" type="unsigned int"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="w4a8_linear_v1_1">
+            <addrRemap base="0x00B0000000" range="0x10000" port="S_AXI_CONTROL"/>
+          </instance>
+        </kernel>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_M_AXI_HPM1_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="S_AXI_CONTROL"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_S_AXI_HP0_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="M_AXI_GMEM_W"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_S_AXI_HP0_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="M_AXI_GMEM_SW"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_S_AXI_HP0_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="M_AXI_GMEM_X"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_S_AXI_HP0_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="M_AXI_GMEM_Y"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="ps_e_S_AXI_HP0_FPD" dstType="kernel" dstInst="w4a8_linear_v1_1" dstPort="M_AXI_GMEM_META"/>
+      </core>
+    </device>
+  </platform>
+</project>

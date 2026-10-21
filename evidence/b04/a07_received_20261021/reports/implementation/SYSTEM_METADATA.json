@@ -1,0 +1,922 @@
+{
+ "system_diagram_metadata": {
+  "schema_version": {
+   "major": "2",
+   "minor": "0",
+   "patch": "0"
+  },
+  "xsa": {
+   "vendor": "xilinx.com",
+   "board_id": "kv260_som_som240_1_connector_kv260_carrier_som240_1_connector",
+   "name": "kv260_base",
+   "version_major": "1",
+   "version_minor": "0",
+   "description": " A base platform targeting kv260 kria SOM",
+   "generated_by": {
+    "name": "Vivado",
+    "version": "2026.1",
+    "cl": "6502307",
+    "time_stamp": "Mon Jun  8 13:44:20 2026"
+   },
+   "board": {
+    "name": "xilinx.com:kv260_som:2.0",
+    "vendor": "xilinx.com",
+    "part": "xck26-sfvc784-2LV-c",
+    "board_part": "xilinx.com:kv260_som:part0:2.0"
+   },
+   "available_resources": {
+    "LUT": "117120",
+    "REG": "",
+    "BRAM": "144",
+    "DSP": "1248",
+    "URAM": ""
+   },
+   "device_topology": [
+    {
+     "id": "0",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x200000",
+     "base_address": "0x0",
+     "tag": "LPD",
+     "slr": "",
+     "spTag": "LPD"
+    },
+    {
+     "id": "1",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x0",
+     "base_address": "0x0",
+     "tag": "HPC0",
+     "slr": "",
+     "spTag": "HPC0"
+    },
+    {
+     "id": "2",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x0",
+     "base_address": "0x0",
+     "tag": "HPC1",
+     "slr": "",
+     "spTag": "HPC1"
+    },
+    {
+     "id": "3",
+     "type": "Dram",
+     "used": "yes",
+     "sizeKB": "0x200000",
+     "base_address": "0x0",
+     "tag": "HP0",
+     "slr": "",
+     "spTag": "HP0"
+    },
+    {
+     "id": "4",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x0",
+     "base_address": "0x0",
+     "tag": "HP1",
+     "slr": "",
+     "spTag": "HP1"
+    },
+    {
+     "id": "5",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x0",
+     "base_address": "0x0",
+     "tag": "HP2",
+     "slr": "",
+     "spTag": "HP2"
+    },
+    {
+     "id": "6",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x200000",
+     "base_address": "0x0",
+     "tag": "HP3",
+     "slr": "",
+     "spTag": "HP3"
+    }
+   ],
+   "design_intent": [
+    "embedded"
+   ],
+   "clocks": [
+    {
+     "name": "CPU",
+     "orig_name": "CPU",
+     "id": -1,
+     "default": false,
+     "type": "RESERVED",
+     "spec_frequency": 1333.333008,
+     "spec_period": 0.75,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 0",
+     "orig_name": "clk_wiz_0_clk_out1",
+     "id": 0,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 149.9985,
+     "spec_period": 6.666733,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 1",
+     "orig_name": "clk_wiz_0_clk_out2",
+     "id": 1,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 299.997,
+     "spec_period": 3.333367,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 2",
+     "orig_name": "clk_wiz_0_clk_out3",
+     "id": 2,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 74.99925,
+     "spec_period": 13.333467,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 3",
+     "orig_name": "clk_wiz_0_clk_out4",
+     "id": 3,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 99.999,
+     "spec_period": 10.0001,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 4",
+     "orig_name": "clk_wiz_0_clk_out5",
+     "id": 4,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 199.998,
+     "spec_period": 5.00005,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 5",
+     "orig_name": "clk_wiz_0_clk_out6",
+     "id": 5,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 399.996,
+     "spec_period": 2.500025,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 6",
+     "orig_name": "clk_wiz_0_clk_out7",
+     "id": 6,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 599.994,
+     "spec_period": 1.666683,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    }
+   ]
+  },
+  "xclbin": {
+   "generated_by": {
+    "name": "v++",
+    "version": "2026.1",
+    "cl": "6511674",
+    "time_stamp": "2026-06-16-13:16:19",
+    "options": "/home/member-a/AMDDesignTools/2026.1/Vitis/bin/unwrapped/lnx64.o/v++ --link --target hw --save-temps --platform /home/member-a/AMDDesignTools/2026.1/Vitis/base_platforms/kv260_base/kv260_base.xpfm --config /home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8/inputs/link.cfg --vivado.synth.jobs 2 --vivado.impl.jobs 2 --output w4a8.xclbin /mnt/c/Patientqwen/hw/linear_B_received/B03-supplement-e227297-20261003/payload/artifact/b03_candidate/w4a8_linear_v1.xo ",
+    "xclbin_name": "w4a8",
+    "uuid": "b5439819-6a00-48a0-9fb8-de0f6bde84e3",
+    "link_uuid": "b5439819-6a00-48a0-9fb8-de0f6bde84e3",
+    "package_uuid": "",
+    "system_compile_flow": false
+   },
+   "user_regions": [
+    {
+     "name": "OCL_REGION_0",
+     "type": "clc_region",
+     "instance_path": "",
+     "available_resources": {
+      "LUT": "",
+      "REG": "",
+      "BRAM": "",
+      "DSP": "",
+      "by_SLR": [],
+      "URAM": ""
+     },
+     "kernels": [
+      {
+       "name": "w4a8_linear_v1",
+       "ports": [
+        {
+         "name": "M_AXI_GMEM_W",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "128",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "M_AXI_GMEM_SW",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "M_AXI_GMEM_X",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "128",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "M_AXI_GMEM_Y",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "M_AXI_GMEM_META",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0xCC",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "w_packed",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_W",
+         "size": "0x8",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "1",
+         "name": "sw",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_SW",
+         "size": "0x8",
+         "offset": "0x1C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "2",
+         "name": "xq",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_X",
+         "size": "0x8",
+         "offset": "0x28",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "3",
+         "name": "sx",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_X",
+         "size": "0x8",
+         "offset": "0x34",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "4",
+         "name": "y",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_Y",
+         "size": "0x8",
+         "offset": "0x40",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "5",
+         "name": "meta",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM_META",
+         "size": "0x8",
+         "offset": "0x4C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "6",
+         "name": "t",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x58",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "7",
+         "name": "n",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x60",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "8",
+         "name": "k",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x68",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "9",
+         "name": "w_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0x70",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "10",
+         "name": "sw_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0x7C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "11",
+         "name": "x_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0x88",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "12",
+         "name": "sx_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0x94",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "13",
+         "name": "y_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0xA0",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "14",
+         "name": "meta_bytes",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0xAC",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "15",
+         "name": "job_id",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x8",
+         "offset": "0xB8",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "unsigned long long",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "16",
+         "name": "abi_version",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0xC4",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": [
+        {
+         "port_name": "ap_clk",
+         "id": "",
+         "requested_frequency": 149.99250037498123,
+         "achieved_frequency": 0,
+         "associated_busif": "",
+         "annotation": ""
+        }
+       ]
+      }
+     ],
+     "compute_units": [
+      {
+       "id": "0",
+       "kernel_name": "w4a8_linear_v1",
+       "cu_name": "w4a8_linear_v1_1",
+       "base_address": "0xb0000000",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "14757",
+         "REG": "21027",
+         "BRAM": "44",
+         "DSP": "100",
+         "URAM": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "14757",
+         "REG": "21027",
+         "BRAM": "44",
+         "DSP": "100",
+         "URAM": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "15372",
+         "REG": "21095",
+         "BRAM": "44",
+         "DSP": "100",
+         "URAM": "0"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": [
+        {
+         "port_name": "ap_clk",
+         "id": "not_specified",
+         "requested_frequency": 149.9985,
+         "achieved_frequency": 0,
+         "associated_busif": "s_axi_control:m_axi_gmem_w:m_axi_gmem_sw:m_axi_gmem_x:m_axi_gmem_y:m_axi_gmem_meta",
+         "annotation": ""
+        }
+       ],
+       "reset_port_names": [
+        "ap_rst_n"
+       ],
+       "slr_resources": []
+      }
+     ],
+     "connectivity": [
+      {
+       "id": "0",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "0",
+        "arg_name": "w_packed",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "1",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "1",
+        "arg_name": "sw",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "2",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "2",
+        "arg_name": "xq",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "3",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "3",
+        "arg_name": "sx",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "4",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "4",
+        "arg_name": "y",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "5",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "5",
+        "arg_name": "meta",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "3",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "6",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "m_axi_gmem_meta"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_S_AXI_HP0_FPD",
+        "port_name": "S04_AXI"
+       }
+      },
+      {
+       "id": "7",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "m_axi_gmem_sw"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_S_AXI_HP0_FPD",
+        "port_name": "S01_AXI"
+       }
+      },
+      {
+       "id": "8",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "m_axi_gmem_w"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_S_AXI_HP0_FPD",
+        "port_name": "S00_AXI"
+       }
+      },
+      {
+       "id": "9",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "m_axi_gmem_x"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_S_AXI_HP0_FPD",
+        "port_name": "S02_AXI"
+       }
+      },
+      {
+       "id": "10",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "m_axi_gmem_y"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_S_AXI_HP0_FPD",
+        "port_name": "S03_AXI"
+       }
+      },
+      {
+       "id": "11",
+       "node1": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "smc_ic_ps_e_M_AXI_HPM1_FPD",
+        "port_name": "M00_AXI"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "s_axi_control"
+       }
+      },
+      {
+       "id": "12",
+       "node1": {
+        "type": "ip_clock",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "clk_wiz_0",
+        "port_name": "clk_out1"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "ap_clk"
+       }
+      },
+      {
+       "id": "13",
+       "node1": {
+        "type": "ip_reset",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "proc_sys_reset_0",
+        "port_name": "peripheral_aresetn"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "w4a8_linear_v1_1",
+        "port_name": "ap_rst_n"
+       }
+      },
+      {
+       "id": "14",
+       "node1": {
+        "type": "ip_clock",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "ps_e",
+        "port_name": "pl_clk0"
+       },
+       "node2": {
+        "type": "ip_clock",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "clk_wiz_0",
+        "port_name": "clk_in1"
+       }
+      }
+     ]
+    }
+   ],
+   "platform": {
+    "static_used": [],
+    "dynamic_used": [
+     {
+      "design_state": "routed",
+      "LUT": "12817",
+      "REG": "19638",
+      "BRAM": "0",
+      "DSP": "0",
+      "URAM": "0"
+     }
+    ]
+   }
+  }
+ }
+}
+

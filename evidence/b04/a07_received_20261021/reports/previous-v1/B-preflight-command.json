@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "/mnt/c/Patientqwen/release/a07_b04_v1/hw/linear_B_received/B04-scope-9a75600-20261003/tools/b04_a_preflight.py",
+    "/mnt/c/Patientqwen/release/a07_b04_v1",
+    "--readelf",
+    "/usr/bin/readelf",
+    "--receipt",
+    "/mnt/c/Patientqwen/release/a07_b04_v1/reports/B-preflight-receipt.json"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/release/a07_b04_v1/hw/linear_B_received/B04-scope-9a75600-20261003/tools/b04_a_preflight.py\", line 107, in <module>\n    inspect(args.folder, args.readelf, args.receipt)\n  File \"/mnt/c/Patientqwen/release/a07_b04_v1/hw/linear_B_received/B04-scope-9a75600-20261003/tools/b04_a_preflight.py\", line 74, in inspect\n    delivery, paths = inventory(folder)\n  File \"/mnt/c/Patientqwen/release/a07_b04_v1/hw/linear_B_received/B04-scope-9a75600-20261003/tools/b04_a_preflight.py\", line 63, in inventory\n    raise ValueError('A delivery role missing: ' + role)\nValueError: A delivery role missing: xclbin\n"
+}

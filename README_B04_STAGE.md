@@ -1,5 +1,7 @@
 # B04：B 侧阶段交付
 
+> 历史阶段说明（2026-10-03）。2026-10-21已接收A07并执行完整候选验收；最新入口为 `README_B04_CANDIDATE.md` 和 `docs/b04/B04_JOINT_REPORT_20261021.md`。下文及旧ZIP保留原阶段范围，不用于代表当前状态。
+
 本包是 `B04_B_STAGE_PARTIAL`，用于 A07 接入 B03 double 核。用户已采用 A07/B04 分工边界，并确认 A 尚未交付。本包完成 B 侧核适配资料、独立检查和阶段包复现准备；完整 B04 仍等待 A 运行时、目标实现及联合验收。
 
 候选 build_id 为 `0xB3030002`，私有 meta 为 40 字节。`config/b04/kernel_profile.json` 来自实际 XO/XML 和真实核头编译结果；`docs/b04/KERNEL_ADAPTER.md` 说明参数、容量、同步和错误语义。公共契约、HLS 源码和 XO 保持 B03 冻结摘要。
