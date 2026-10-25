@@ -1,0 +1,370 @@
+{
+  "schema": "A12_TT10_APPLICATION_TIMING_V1",
+  "clock": "Linux CLOCK_MONOTONIC",
+  "stamps": {
+    "request_received_ns": 247309187716,
+    "backend_enter_ns": 247309383187,
+    "prompt_ready_ns": 247337048408,
+    "worker_send_ns": 247337054460,
+    "worker_result_ns": 248731686263,
+    "first_token_ns": 248351534493,
+    "checked_ns": 248732419625
+  },
+  "TTFT_app_ms": 1042.346777,
+  "TTFT_worker_ms": 1014.480033,
+  "complete_app_ms": 1423.231909,
+  "prepare_before_worker_ms": 27.866744,
+  "validated_after_worker_ms": 0.733362,
+  "cache": {
+    "hit": true,
+    "lookup_ms": 18.352772,
+    "new_tokens": 37,
+    "policy": "TT10_REQUIRE_HIT",
+    "reason": "EXACT_FULL_STATE_HIT",
+    "restore_error": null,
+    "restore_ms": 33.995021,
+    "reused_tokens": 70,
+    "snapshot_bytes": 22058035
+  },
+  "answer_source": "MODEL",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "location"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "location"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "eos": true,
+  "deadline_10s_violation": false,
+  "clinical_review": "PENDING_TEACHER_REVIEW",
+  "software_test_only": true,
+  "session_setup_outside_clock": true,
+  "response": {
+    "type": "validated_answer",
+    "session_id": "70d6c2ba0ba348e6adfc4246b0f92a02",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "app_hit",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "疼痛在胸骨后。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "疼痛在胸骨后。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "location"
+      ],
+      "allowed_fact_ids": [
+        "location"
+      ],
+      "required_fact_ids": [
+        "location"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "location",
+          "span": [
+            5,
+            7
+          ],
+          "quote": "位置"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "bridge": {
+        "a12_route": {
+          "execution_kind": "CPU_REFERENCE",
+          "scope": "none",
+          "trace": []
+        },
+        "algorithm_weight_bytes": 1949696,
+        "api_version": 1,
+        "backend_id": "A_CPU_W4A8_V1",
+        "board": "NOT_TESTED",
+        "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+        "cpu_algorithm": "TILED",
+        "cpu_compute_ms": 0.564321,
+        "cpu_compute_ms_process_total": 4353.886918000005,
+        "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+        "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+        "cpu_quiescent": true,
+        "cpu_run_count": 2880,
+        "cpu_service_ms_process_total": 4383.495788000001,
+        "cpu_threads": 2,
+        "cycles": null,
+        "device_id": null,
+        "epoch": 3,
+        "error": "",
+        "execution_kind": "CPU_REFERENCE",
+        "executions": 7,
+        "gate_up_cache_hits": 264,
+        "gguf_target_ranges": null,
+        "hardware_done_count": null,
+        "input_sync_ms": null,
+        "job_id": 2880,
+        "kernel_build_id": null,
+        "kernel_ms": null,
+        "last_status_code": 0,
+        "legacy_timing_scope": {
+          "cpu_compute_ms": "LAST_COMPLETED_RUN",
+          "cpu_run_count": "PROCESS_LIFETIME",
+          "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+        },
+        "measured_bus_bytes": null,
+        "no_weight_quantization_at_runtime": true,
+        "output_sync_ms": null,
+        "owned_weight_bytes": 140378112,
+        "partial_sums_capacity_bytes": 0,
+        "partial_sums_capture_enabled": false,
+        "partial_sums_storage_mode": "OMITTED",
+        "physical_cpu_calls_by_T": {
+          "1": 432,
+          "5": 72,
+          "8": 288
+        },
+        "protected_gguf_rss_kib": null,
+        "protected_gguf_vma_bytes": null,
+        "quant_ms": null,
+        "quantization_blocks": 528,
+        "residency_measurement": "NOT_SAMPLED_PERFORMANCE_MODE",
+        "runtime_buffer_capacity_bytes": 378944,
+        "runtime_output_copy_ms": 0.978818999999999,
+        "runtime_quant_and_gather_ms": 23.158849999999756,
+        "scope": "all",
+        "service_ms": 0.567627,
+        "status": "READY",
+        "weight_count": 72,
+        "weight_load_count": 72,
+        "weight_resident": true,
+        "weights": null,
+        "workspace_capacity_bytes": 114688,
+        "xclbin_sha256": null
+      },
+      "decode_calls": 6,
+      "decode_ms": 375.914733,
+      "decode_rc": 0,
+      "domain": "PC",
+      "eos": true,
+      "gpu_layers": 0,
+      "id": "app_hit",
+      "kernel_threads": 2,
+      "last_prompt_logits_fnv64": 8262799899827623325,
+      "last_prompt_logits_sha256": "275209039025da637088ecc69a5524e412127f6cea49b900546cd1f1b0dbacfd",
+      "logits_comparison": null,
+      "logits_mode": "final",
+      "memory": null,
+      "output_tokens": [
+        108683,
+        95772,
+        97973,
+        97029,
+        95946,
+        1710
+      ],
+      "partial_output_usable": true,
+      "peak_rss_kib": 863480,
+      "physical_ubatch": 8,
+      "prefill_chunk": 256,
+      "prefill_ms": 955.731608,
+      "prefill_requested_logits": 1,
+      "prefix_cache": {
+        "binding_sha256": "679247043bb936a41ee77a9ef0525dab3bab5af30be6d543564fd0200d5e4234",
+        "enabled": true,
+        "entries": [
+          {
+            "charged_bytes": 22058035,
+            "id": "neutral",
+            "logits_bytes": 993280,
+            "logits_sha256": "4ff2fc4501bcbbbb2954e517945858d9fcad6b6e5ae5c56b97d6a9b1e5ffc984",
+            "owner": {
+              "kind": "public_neutral"
+            },
+            "position": 69,
+            "sequence_sha256": "16d427d2405322b5eeafa23cad3db0e715278775e950bf1dd18a0b99bac4a5ce",
+            "state_bytes": 21063938,
+            "state_sha256": "5200bbb6742f87b6eb21d56aa5d0ee30dc506be4b1329172630b1110e8d8e966",
+            "tokens": 70
+          }
+        ],
+        "identity": {
+          "context": 1024,
+          "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+          "executable_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "execution_kind": "CPU_REFERENCE",
+          "kernel_threads": 2,
+          "layout": "pinned_memory_state_plus_last_logits_v1",
+          "libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+          "model_sha256": "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+          "n_rs_seq": 0,
+          "n_seq_max": 1,
+          "physical_ubatch": 8,
+          "quantization": "A12_W4A8_MLP",
+          "runtime_base_commit": "81e39ad34368329b5db77620721510fd91107e80",
+          "sampler": "fresh_greedy_v1",
+          "sidecar_sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+          "template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+          "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+          "threads": 2,
+          "verified_loaded_libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          }
+        },
+        "max_slot_bytes": 67108864,
+        "max_slots": 2,
+        "retained_bytes": 22058035,
+        "sampling": "fresh stateless greedy; logits stored separately from pinned memory-only state API",
+        "schema": "TT10_FULL_PREFIX_V1",
+        "scratch_limit_bytes": 67108864
+      },
+      "prefix_cache_request": {
+        "hit": true,
+        "lookup_ms": 18.352772,
+        "new_tokens": 37,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 33.995021,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      },
+      "prompt_tokens": 107,
+      "quantization": "A12_W4A8_MLP",
+      "request_profile": {
+        "BOARD": "NOT_TESTED",
+        "cpu_counters": {
+          "compute_ms_delta": 900.2519920000013,
+          "run_count_begin": 2088,
+          "run_count_delta": 792,
+          "run_count_end": 2880,
+          "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+          "service_ms_delta": 905.6594469999986
+        },
+        "detail": false,
+        "enabled": false,
+        "native_request_wall_ms": 1392.681427,
+        "node_profile": {
+          "BOARD": "NOT_TESTED",
+          "attribution": "exclusive category by head op; roles/shapes are alternate views, never additive",
+          "custom_identity_limit": "MLP custom uses pinned name+structure; no custom weight source exposed",
+          "detail": false,
+          "enabled": false,
+          "graph_generations": 0,
+          "invalid_phase_callbacks": 0,
+          "invalid_phase_wall_us": 0,
+          "linear_attention_state_split": "FUSED_GATED_DELTA_NET_STATE_UPDATE_NOT_SEPARATELY_TIMED",
+          "metadata_lifetime": "one synchronous CPU execution; pointers cleared before graph ownership ends",
+          "nesting": "MLP node wall and nested OperationScope are alternate scopes; never add them",
+          "overlapping_graphs": 0,
+          "phases": null,
+          "schema": "A12_CPU_NODE_PROFILE_V2",
+          "scope": "thread0 elapsed including existing barrier; one interval per actual fused group; not CPU time"
+        },
+        "phases": null,
+        "pl_profile": {
+          "compact_completion": false,
+          "enabled": false,
+          "phases": {
+            "decode": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            },
+            "prefill": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            }
+          },
+          "timing_scope": "HOST_WALL_NOT_DEVICE_CYCLES; backend call includes permission; report is a sibling; backend fields are nested"
+        },
+        "request_id": "app_hit",
+        "sample_ms": 3.0514390000000002,
+        "schema": "N02_REQUEST_PROFILE_V1",
+        "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+        "session_epoch": 0,
+        "session_id": ""
+      },
+      "reset_ms": 0.7959,
+      "state_cleared_before_response": true,
+      "state_fingerprint": null,
+      "state_position_after_clear": -1,
+      "state_position_before_clear": 112,
+      "status": "OK",
+      "teacher_forced": false,
+      "text": "疼痛在胸骨后。",
+      "threads": 2,
+      "ttft_ms": 958.656978,
+      "type": "result"
+    },
+    "received_ns": 247309281414,
+    "validated_ns": 248731775783,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null
+  }
+}

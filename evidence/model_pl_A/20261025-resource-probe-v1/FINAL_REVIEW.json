@@ -1,0 +1,154 @@
+{
+  "status": "PC_PREPARED_UNBOUND_WAITING_BOARD_RECOVERY_AND_NEW_AUTHORIZATION",
+  "recorded_at": "2026-10-25T17:00:56.406707+08:00",
+  "commands": [
+    {
+      "command": "python scripts/release/check_contracts.py",
+      "exit_code": 0,
+      "domain": "PC_STATIC",
+      "status": "PASS_DRAFT_PRESERVED"
+    },
+    {
+      "command": "python scripts/release/qwen35_config.py",
+      "exit_code": 0,
+      "domain": "PC_CONFIGURATION",
+      "status": "PASS_RUNTIME_AND_BOARD_NOT_TESTED"
+    },
+    {
+      "command": "python -B platform/qwen35/a12/resource_probe_prepare.py",
+      "exit_code": 0,
+      "domain": "LOCAL_PACKAGE_V1"
+    },
+    {
+      "command": "python -B platform/qwen35/a12/resource_probe_prepare.py --destination evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2",
+      "exit_code": 0,
+      "domain": "LOCAL_PACKAGE_V2"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- bash -lc \"cd /mnt/c/Patientqwen && python3 -B platform/qwen35/a12/test_resource_probe.py --evidence evidence/model_pl_A/20261025-resource-probe-v1/pc-tests-03 --bundle evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2\"",
+      "exit_code": 0,
+      "domain": "PC_CONTROL_DOUBLES_LINUX",
+      "receipt": "pc-tests-03/RESULT.json"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- bash -lc \"cd /mnt/c/Patientqwen && python3 -B platform/qwen35/a12/resource_probe_native_pc.py --bundle /mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2 --evidence /mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/native-PC-02\"",
+      "exit_code": 0,
+      "domain": "PC_X86_CPU_REFERENCE",
+      "receipt": "native-PC-02/RESULT.json"
+    }
+  ],
+  "final_control_tests": {
+    "domain": "PC_CONTROL_DOUBLES_LINUX",
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS",
+    "BOARD": "NOT_TESTED",
+    "new_PL_calls": 0
+  },
+  "actual_native_scope": "PASS_ACTUAL_CPU_NATIVE_ORDINARY_R0_WARM_HIT",
+  "static_review": {
+    "status": "PASS_STATIC_IMMUTABILITY_AND_ZIP_REVIEW",
+    "protected_parent_files": 168,
+    "protected_contract_files": 5,
+    "unchanged_critical_payload_files": 46,
+    "normal_release_restore_block_byte_identical": true,
+    "zip_crc": "PASS",
+    "zip_sha256": "acd578ddd66140a3d0507d71ea9a1d30245c632c7537f0a940227935cc17a7fa",
+    "manifest_sha256": "4fcb6af2d9e7d5b89f876697de6bd8f11e36174666169544a9016009551f070f",
+    "BOARD": "NOT_TESTED",
+    "no_board_operations": true
+  },
+  "code": [
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_policy.py",
+      "bytes": 6084,
+      "sha256": "871bc6e95a8e8c67f3cc9e98efeee8fef38f9774f9e2cb320eadc580e079af93"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_observer.py",
+      "bytes": 5258,
+      "sha256": "c62d227b444a8d73d0ef939c63b384d87254129e4282fe15e86abd7b9b4d8509"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_case.py",
+      "bytes": 9429,
+      "sha256": "2f0b7b93e45824395c6d095c6dab803e5e9afd7575c7cb1fdc7213bc84802b1f"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_entry.py",
+      "bytes": 3367,
+      "sha256": "65132b54ba2a6c4bd2e17a5a60a3cfee1fb0b947365bd6a847e33c7e8de09a83"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_prepare.py",
+      "bytes": 10140,
+      "sha256": "28b4e2a93618581466c46d7b6a2ef6046e45d6ce9acd188736f5d516a108358e"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/resource_probe_native_pc.py",
+      "bytes": 7151,
+      "sha256": "0e948cbae36ca3b73821c255934985dc63d4005ad1dbf7dfdc92c8bc4d0e7c1c"
+    },
+    {
+      "path": "C:/Patientqwen/platform/qwen35/a12/test_resource_probe.py",
+      "bytes": 20998,
+      "sha256": "717ae94dd1bb29b31ce18edbc324539339e9e1abce900f2ef042377a5c85b8e8"
+    }
+  ],
+  "documentation": [
+    {
+      "path": "C:/Patientqwen/docs/handoffs/A_A12_RESOURCE_PROBE_PREBOARD_20261025.md",
+      "bytes": 5429,
+      "sha256": "a3d91633ef0898cefa7e2cd30af598c649f23ef45333a26f086b5f9d06ad29a1"
+    },
+    {
+      "path": "C:/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/REPORT.md",
+      "bytes": 4287,
+      "sha256": "c1a150a17c36f13650f8022f202c100de653a079055c5328405b9b0576e1dca4"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2.zip",
+      "bytes": 8325748,
+      "sha256": "acd578ddd66140a3d0507d71ea9a1d30245c632c7537f0a940227935cc17a7fa"
+    },
+    {
+      "path": "C:/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/manifest.json",
+      "bytes": 28338,
+      "sha256": "4fcb6af2d9e7d5b89f876697de6bd8f11e36174666169544a9016009551f070f"
+    },
+    {
+      "path": "C:/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/MANAGER-bundle-v2.patch",
+      "bytes": 9944,
+      "sha256": "58f336fda1c3b4c1000fa1bdf12e7040453abe4cbf70852f92226ba9b579bd17"
+    }
+  ],
+  "board_contacted": false,
+  "BOARD": "NOT_TESTED",
+  "new_PL_calls": 0,
+  "TTFT_board_s": null,
+  "cma_improvement": null,
+  "unchanged_runtime_and_hardware": true,
+  "public_contracts_unchanged": true,
+  "paused_candidate_resumed": false,
+  "full_numeric_acceptance": "NOT_PERFORMED",
+  "final_performance_acceptance": "NOT_PERFORMED",
+  "native_ARM_rebuild": "NOT_RUN_UNCHANGED_FROZEN_PAYLOAD",
+  "failure_recovery": "NOT_TESTED",
+  "limitations": [
+    "unbound manager intentionally refuses execution; separate fresh binding/authorization and independent release postchecks required",
+    "ordinary final logits and output checked; complete intermediate states not retested",
+    "phase samples are not continuous peaks or proof of CMA page ownership",
+    "old frozen prompt only; new short prompt remains separate"
+  ],
+  "preserved_read_only_environment_probe_failure": {
+    "exit_code": 1,
+    "stderr": "bash: line 1: rg: command not found; ls: cannot access pc04/libsp_linear*: No such file or directory",
+    "resolution": "Read existing BUILD metadata and actual loaded library maps; no installation"
+  },
+  "deepseek_used": false,
+  "core_design_delegated": false,
+  "actual_model_settings": "unknown"
+}

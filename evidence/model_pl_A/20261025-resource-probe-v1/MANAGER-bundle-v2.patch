@@ -1,0 +1,152 @@
+--- frozen/cpu01_manager.py
++++ probe/resource_probe_manager.py
+@@ -27,6 +27,9 @@
+ from isolated_idle_policy import BOOT_FILES, LIBRARIES, MACHINE, DEFAULT, trusted_file
+ from idle_board_trial import RESTORE, active_handle, check_loaded, check_removed
+ from accelerator_release_gate_v2 import require_release
++from resource_probe_case import execute_case
++os.environ['SP_TT10_CONFIG']=str(BUNDLE/'control/prefix-config.json')
++
+ SPEC = json.loads((BUNDLE / 'control/window-spec.json').read_text())
+ WINDOW = SPEC['window_id']
+ 
+@@ -193,100 +196,10 @@
+ 'Bounded normal/profile measurements; client clocks include ordinary IPC and completion.'
+ 
+ def run_case(worker, owner, path, *, real):
+-    ready = receive(worker, owner, path)
+-    save(path / 'ready.json', ready)
+-    save(path / 'startup-timing.json', dict(process_launch_monotonic_ns=worker.task10_launch_ns, ready_received_monotonic_ns=time.monotonic_ns(), process_to_ready_ms=(time.monotonic_ns() - worker.task10_launch_ns) / 1000000.0, cache_state='NOT_PROVEN_COLD_FILE_CACHE'))
+-    assert ready['type'] == 'ready'
+-    if real:
+-        route = ready['bridge']['a12_route']
+-        assert ready['execution_kind'] == 'FPGA_REAL'
+-        spans = validate_bo(route)
+-        assert worker.loads == 72 and worker.runs == route['host_verified_completions'] == 0
+-        owner.full_resident = True
+-        owner.health()
+-        save(path / 'actual-residency.json', dict(spans=spans, weight_loads=72))
+-    else:
+-        assert ready['execution_kind'] == 'CPU_REFERENCE'
+-    requests = json.loads((BUNDLE / 'control/requests.json').read_text())
+-    results = []
+-    previous = 0
+-    last = None
+-    assert len(requests) == SPEC['request_limit']
+-    for frozen in requests:
+-        case = path / frozen['id']
+-        case.mkdir()
+-        request = dict(frozen)
+-        assert len(request['tokens']) <= SPEC['prompt_token_limit'] and request['max_tokens'] <= SPEC['output_token_limit']
+-        assert not request.get('diagnostic_dir') and not request.get('a12_consumer_trace')
+-        if request['id'] == 'diag_exact':
+-            assert request['tokens'] == list(range(1,10)) and request['teacher_tokens'] == [10,11]
+-            assert request['max_tokens'] == 2 and request['logits_mode'] == 'all'
+-            assert request['state_fingerprint'] and request['dump_state'] and request['diagnostic_all_layers']
+-            request['diagnostic_dir'] = str(case / 'diag')
+-        else:
+-            assert not request.get('state_fingerprint') and not request.get('dump_state')
+-        if 'prompt' in request:
+-            worker.send(dict(id=request['id'], op='tokenize', prompt=request['prompt']))
+-            tokenized = receive(worker, owner, case)
+-            save(case / 'tokenization.json', tokenized)
+-            assert tokenized['type'] == 'tokens' and tokenized['tokens'] == request['tokens']
+-        save(case / 'request.json', request)
+-        usage_before = process_usage(worker.process.pid)
+-        ob.start_request(request)
+-        before = dict(getattr(worker, 'permission_metrics', {}))
+-        begin = time.monotonic_ns()
+-        worker.send(request)
+-        events = []
+-        while True:
+-            r = receive(worker, owner, case)
+-            stamp = time.monotonic_ns()
+-            if r['type'] == 'token':
+-                events.append(dict(index=r['index'], token=r['token'], received_monotonic_ns=stamp))
+-            if r['type'] in ('result', 'error'):
+-                break
+-        ended = time.monotonic_ns()
+-        save(case / 'result.json', r)
+-        save(case / 'worker-usage.json', dict(before=usage_before, after=process_usage(worker.process.pid), scope='worker process CPU and main-thread context switches; reads outside client clock'))
+-        assert r['type'] == 'result' and r['status'] == 'OK' and (r['gpu_layers'] == 0), r
+-        assert r['state_cleared_before_response'] and r['state_position_after_clear'] == -1
+-        if request['profile']:
+-            assert r['request_profile']['accounting_valid']
+-            save(case / 'profile-audit.json', audit_profile(r['request_profile']))
+-        first = events[0]['received_monotonic_ns'] if events else None
+-        after = dict(getattr(worker, 'permission_metrics', {}))
+-        save(case / 'health-metrics.json', dict(schedule=owner.platform.health_schedule.metrics, parts=owner.platform.health_parts, reader_records=owner.platform.kmsg_reader.records, reader_drains=owner.platform.kmsg_reader.drains))
+-        timing = dict(schema='A12_STEP10_CLIENT_TIMING_V1', begin_monotonic_ns=begin, end_monotonic_ns=ended, result_wall_ms=(ended - begin) / 1000000.0, first_token_wall_ms=(first - begin) / 1000000.0 if first else None, token_events=events, output_tokens=len(r['output_tokens']), complete_EOS=r['eos'], permission_metrics_delta={k: after.get(k, 0) - before.get(k, 0) for k in after}, after_first_token_ms=(ended - first) / 1000000.0 if first else None)
+-        save(case / 'client-timing.json', timing)
+-        ob.finish_request(r, case / 'management-profile.json')
+-        save(case / 'representation-metrics.json', dict(hits=CACHE.hits, misses=CACHE.misses, retained_snapshots=len(CACHE.entries), retained_payload_bytes=sum(len(v.payload) for v in CACHE.entries)))
+-        if request['id'] == 'diag_exact':
+-            comparisons = {}
+-            if real:
+-                comparisons['same_candidate_S1_S2'] = compare_cases(path.parent / 's1/diag_exact', case)
+-            if SPEC['baseline_path']:
+-                comparisons['old_new_same_backend'] = compare_cases(Path(SPEC['baseline_path']) / 'run-v1' / ('s2' if real else 's1') / 'diag_exact', case)
+-            save(case / 'numerical-gate.json', comparisons)
+-        elif SPEC['baseline_path']:
+-            old_result = json.loads((Path(SPEC['baseline_path']) / 'run-v1' / ('s2' if real else 's1') / request['id'] / 'result.json').read_text(encoding='utf-8'))
+-            assert all(old_result[k] == r[k] for k in ('output_tokens','text','eos','last_prompt_logits_fnv64'))
+-        if real:
+-            route = r['bridge']['a12_route']
+-            assert validate_bo(route) == spans
+-            assert route['a11_live_weights'] == ready['bridge']['a12_route']['a11_live_weights']
+-            expected = 72 * ((len(request['tokens']) + 7) // 8 + r['decode_calls'])
+-            assert route['host_verified_completions'] == worker.runs == previous + expected
+-            previous = worker.runs
+-        results.append(dict(id=r['id'], status=r['status'], text=r['text'], tokens=r['output_tokens'], eos=r['eos']))
+-        last = r
+-        owner.platform.emit('CASE_FINISHED', case_id=r['id'], real=real, permission_runs=worker.runs, weight_loads=worker.loads)
+-    assert worker.close(timeout=15), 'normal exit not proven; retain owner'
+-    save(path / 'exit.json', dict(pid=worker.process.pid, exit_code=worker.process.returncode, host_permission_runs=worker.runs, weight_load_permissions=worker.loads))
+-    save(path / 'results.json', results)
+-    if real:
+-        owner.full_resident = False
+-    return last
++    return execute_case(worker, owner, path, real=real, api=globals())
+ 
+ def main():
++    raise PermissionError('UNBOUND probe: future recovery, safe release, fresh binding and separate authorized driver required')
+     assert os.geteuid() == 0 and os.uname().machine == 'aarch64' and (os.uname().release == '6.8.12-a10irq2')
+     assert sha('/etc/machine-id') == MACHINE
+     os.umask(63)
+@@ -336,29 +249,13 @@
+     owner = None
+     try:
+         owner = Owner(p, review, s2)
+-        before = p.snapshot('archive_cache_before')
+-        rows = json.loads((BUNDLE / 'control/archive-pins.json').read_text())
+-        verified = review_archive_cache(rows)
+-        after = p.snapshot('archive_cache_after')
+-        save(run / 'archive-cache-review.json', dict(before=before['memory_kib'], after=after['memory_kib'], files=verified, model_pages_touched=False, drop_caches=False, files_deleted=False))
+         p.service('stop')
+-        s1 = run / 's1'
+-        s1.mkdir()
+-        args = [str(BUNDLE / 'bin/qwen35-a12'), '/opt/patient-qwen/artifacts/qwen35-0.8b/qwen35-text-Q4_K_M.gguf', '2', '1024', 'all', 'TILED', '2', '8']
+-        launch = time.monotonic_ns()
+-        cpu = CPUWorker(args, directory=s1 / 'worker', env=os.environ, health=owner.health, max_runs=1, max_loads=1, expires=owner.expires / 1000000000.0, owner_check=owner.owner_check)
+-        cpu.task10_launch_ns = launch
+-        save(s1 / 'identity.json', dict(pid=cpu.process.pid, argv=args, binary_sha256=sha(BUNDLE / 'bin/qwen35-a12'), physical_domain='BOARD'))
+-        run_case(cpu, owner, s1, real=False)
+         p.no_users(module_loaded=False)
+         pending = p.snapshot('before_full_BO_allocation')
+         capacity = admission(pending['memory_kib'], 140591104)
+         save(run / 'pre-allocation-admission.json', capacity)
+         if not capacity['allowed']:
+-            p.service('start')
+-            owner.finish(cpu)
+-            save(run / 'result.json', dict(status='FAIL_FRESH_FULL_CAPACITY_ADMISSION_NO_PL_MUTATION', scope='all', permission_submissions=0, backend_host_verified_completions=0, lease_archived=True, step10='IN_PROGRESS_' + SPEC['variant'] + '_PENDING_AUDIT'))
+-            return
++            raise RuntimeError('unchanged full BO capacity admission failed; owner retained')
+         p.wait_prepl_quiet()
+         p.target.mkdir(mode=493)
+         for name in ('a11-mlp.bit.bin', 'a11-mlp.dtbo', 'shell.json'):
+@@ -405,4 +302,4 @@
+         raise
+     print(json.dumps(dict(status='FULL_MODEL_WINDOW_NORMAL_EXIT', scope='all', variant=SPEC['variant'])), flush=True)
+ if __name__ == '__main__':
+-    main()
++    raise SystemExit('UNBOUND_RESOURCE_PROBE_NO_COMPUTE_AUTHORIZATION')

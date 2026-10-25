@@ -1,0 +1,159 @@
+{
+  "schema": "A12_CHECK_OPTIMIZATION_PLAN_REVIEW_V1",
+  "recorded_at": "2026-10-25T16:10:58.764904+08:00",
+  "status": "PLAN_WRITTEN_NO_IMPLEMENTATION",
+  "checks": [
+    {
+      "command": "python scripts/release/check_contracts.py",
+      "exit_code": 0,
+      "domain": "PC_TEST",
+      "result": "static_checks PASS; contract_version 0.1.0-draft.2; review_status DRAFT",
+      "content_sha256": "c398d47956043a1a3e4cd95ba96de2205eedc38d89db0d037ec0dfa5af0e3af0"
+    },
+    {
+      "command": "python scripts/release/qwen35_config.py",
+      "exit_code": 0,
+      "domain": "PC",
+      "result": "configuration PASS; selected backends PRESENT_UNVERIFIED; runtime and board NOT_TESTED",
+      "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6"
+    },
+    {
+      "check": "plan local links and line bounds",
+      "result": "PASS",
+      "count": 17
+    },
+    {
+      "check": "received selected source/header SHA matches KERNEL_SOURCE selection",
+      "result": "PASS_STATIC_IDENTITY_ONLY",
+      "actual": {
+        "w4a8_prefill_v1.cpp": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+        "w4a8_linear_v1.hpp": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b"
+      }
+    }
+  ],
+  "preserved_failures": [
+    {
+      "operation": "First local source-manifest creation through PowerShell here-string piped to python -",
+      "exit_code": 1,
+      "error": "zoneinfo.ZoneInfoNotFoundError: No time zone found with key Asia/Shanghai; tzdata package absent",
+      "effect": "Created empty evidence directory; no manifest or review files written",
+      "resolution": "Use explicit UTC+08:00 for current Shanghai timestamp; no dependency installed or global setting changed"
+    }
+  ],
+  "local_links": [
+    {
+      "label": "A10 至今工程总结",
+      "target": "C:/Patientqwen/docs/A10_TO_CURRENT_ENGINEERING_SUMMARY_FOR_B_20261025.md",
+      "exists": true,
+      "line_in_bounds": null
+    },
+    {
+      "label": "用户提供的许可检查建议",
+      "target": "C:/Users/Fang/Downloads/A12_PERMISSION_CHECK_RECOMMENDATIONS_20261025.md",
+      "exists": true,
+      "line_in_bounds": null
+    },
+    {
+      "label": "prefill 与诊断说明",
+      "target": "C:/Patientqwen/docs/A12_PREFILL_FLOW_AND_DIAGNOSTICS_20261025.md",
+      "exists": true,
+      "line_in_bounds": null
+    },
+    {
+      "label": "B 核选择记录",
+      "target": "C:/Patientqwen/hw/linear_A/KERNEL_SOURCE.json",
+      "exists": true,
+      "line_in_bounds": null
+    },
+    {
+      "label": "F 的 cpu01b_supervisor.py",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/window-20261025-v3/bundle-v4/platform/qwen35/a12/cpu01b_supervisor.py:59",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "F 的 cpu01b_window.py",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/window-20261025-v3/bundle-v4/platform/qwen35/a12/cpu01b_window.py:82",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "F 的 cpu01_manager.py",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/window-20261025-v3/bundle-v4/control/cpu01_manager.py:105",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "F 的 cpu02_support.py",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/window-20261025-v3/bundle-v4/platform/qwen35/a12/cpu02_support.py:59",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "S 的 supervisor_gate.hpp",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/source-04/supervisor_gate.hpp:11",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "S 的 backend.cpp",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/source-04/backend.cpp:185",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "S 的 backend.cpp",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/source-04/backend.cpp:219",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "S 的 route.cpp",
+      "target": "C:/Patientqwen/evidence/model_pl_A/20261024-ttft10-01-v1/source-04/route.cpp:55",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "当前 tt10_01_case.py",
+      "target": "C:/Patientqwen/platform/qwen35/a12/tt10_01_case.py:38",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "当前诊断读取候选",
+      "target": "C:/Patientqwen/platform/qwen35/a12/tt10_01_diag_reader.py:174",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "核头文件",
+      "target": "C:/Patientqwen/hw/linear_B_received/B03-supplement-e227297-20261003/payload/src/w4a8_linear_v1.hpp:49",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "主机核验",
+      "target": "C:/Patientqwen/modules/linear_A/xrt/host_contract.cpp:64",
+      "exists": true,
+      "line_in_bounds": true
+    },
+    {
+      "label": "B 核",
+      "target": "C:/Patientqwen/hw/linear_B_received/B03-supplement-e227297-20261003/payload/src/w4a8_prefill_v1.cpp:519",
+      "exists": true,
+      "line_in_bounds": true
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "performance_improvement": null,
+  "runtime_changed": false,
+  "board_contacted": false,
+  "paused_CMA_task_resumed": false,
+  "shared_status_changed": false,
+  "deepseek": {
+    "used": true,
+    "scope": "Mechanical extraction of five supplied Markdown stage headings only; exact output checked by primary agent",
+    "core_design_or_validation_delegated": false
+  },
+  "actual_assistant_settings": "unknown"
+}
