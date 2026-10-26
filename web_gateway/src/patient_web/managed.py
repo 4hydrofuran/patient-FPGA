@@ -69,14 +69,16 @@ class ManagedPLEngine(TextEngine):
         self.detached = True
 
 
-def create_managed_app(native_pl, *, is_ready, generation_timeout_s=180):
+def create_managed_app(native_pl, *, is_ready, generation_timeout_s=180, backend_options=None):
     """Call from the PS-owned process after constructing its approved NativePL.
 
     The supplied worker transport must keep servicing PS permits/health while the
     application is running. The PS owner remains responsible for final close.
     """
-    return create_app(backend="managed-pl", engine_factory=lambda: ManagedPLEngine(
-        native_pl, is_ready=is_ready, generation_timeout_s=generation_timeout_s))
+    factory = lambda: ManagedPLEngine(native_pl, is_ready=is_ready,
+                                     generation_timeout_s=generation_timeout_s)
+    return create_app(backend="managed-pl", engine_factory=factory,
+                      backend_options=backend_options)
 
 
 def serve_managed(native_pl, *, is_ready, generation_timeout_s=180, port=8000):

@@ -34,7 +34,7 @@ class Work:
 
 
 class Coordinator:
-    def __init__(self, engine_factory, backend_name="native", journal_capacity=256):
+    def __init__(self, engine_factory, backend_name="native", journal_capacity=256, backend_options=None):
         self.factory = engine_factory
         self.backend_name = backend_name
         self.lock = threading.RLock()
@@ -50,6 +50,10 @@ class Coordinator:
         self.stopping = False
         self.initialized = threading.Event()
         self.started = False
+        self.backend_options = backend_options or {
+            backend_name: {"label": {"demo": "规则演示", "native": "CPU", "managed-pl": "FPGA"}.get(backend_name, backend_name),
+                           "factory": engine_factory}}
+        self.backend_commands = {}
 
     def start(self):
         with self.lock:
@@ -84,6 +88,44 @@ class Coordinator:
             raise GatewayError("NOT_READY", "后端仍在加载。", 503, True)
         if not self.engine.healthy:
             raise GatewayError("BACKEND_UNAVAILABLE", "模型不可用，需要重启服务后再试。", 503)
+
+    def select_backend(self, request_id, backend):
+        with self.lock:
+            previous = self.backend_commands.get(request_id)
+            if previous is not None:
+                if previous["backend"] != backend:
+                    raise GatewayError("REQUEST_CONFLICT", "切换请求编号已用于其他模式。")
+                return dict(previous, replayed=True)
+            self._idle()
+            if self.stopping or self.phase in ("STARTING", "SWITCHING", "STOPPING"):
+                raise GatewayError("NOT_READY", "模式正在加载，请稍候。", 409)
+            if backend not in self.backend_options:
+                raise GatewayError("BACKEND_NOT_CONFIGURED", "当前服务未配置这种推理模式。", 400)
+            response = {"backend": backend, "status": "selected", "replayed": False}
+            if backend != self.backend_name or self.failure is not None:
+                old = self.engine
+                self.engine = None
+                self.factory = self.backend_options[backend]["factory"]
+                self.backend_name = backend
+                self.failure = None
+                self.phase = "SWITCHING"
+                self.executor.submit(self._switch_backend, old)
+                response["status"] = "switching"
+            self.backend_commands[request_id] = dict(response)
+            return response
+
+    def _switch_backend(self, old):
+        # Managed PL close only detaches the web wrapper; PS retains its worker.
+        try:
+            if old is not None:
+                old.close()
+        except Exception:
+            LOG.exception("Previous backend close failed")
+            with self.lock:
+                self.failure = GatewayError("BACKEND_SWITCH_FAILED", "上一模式未能正常退出，请检查服务日志。", 503)
+                self.phase = "FAILED"
+            return
+        self._initialize()
 
     def _conversation(self, session_id):
         if session_id not in self.conversations:
@@ -124,6 +166,8 @@ class Coordinator:
                                     "CPU_REFERENCE" if self.backend_name == "native" else None),
                                 "ready": ready, "hardware_enabled": bool(ready and self.engine
                                     and self.engine.execution_kind == "FPGA_REAL")},
+                    "backend_options": [{"id": name, "label": option["label"]}
+                                        for name, option in self.backend_options.items()],
                     "capabilities": {"text": True, "audio": False, "rule_score": True,
                                      "chief_narration": True, "chief_summary_kind": "RULE_TEMPLATE",
                                      "cancel_turn": bool(self.engine and self.engine.can_cancel),

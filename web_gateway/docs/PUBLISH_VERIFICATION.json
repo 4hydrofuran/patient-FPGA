@@ -1,15 +1,32 @@
 {
-  "recorded_at": "2026-10-26T13:46:25.677882+00:00",
-  "scope": "Standalone frontend source snapshot",
-  "normal_path_tests": 4,
+  "recorded_at": "2026-10-26T17:18:07.341870+00:00",
+  "scope": "CPU/FPGA backend switching and local desktop preparation",
+  "normal_path_tests": 3,
   "failures": 0,
   "errors": 0,
   "full_fault_matrix_run": false,
-  "javascript_syntax": "PASS_console_and_lab",
-  "frozen_reference_files": "8 SHA256-exact",
-  "board_rule_demo": "Previously verified on KV260 ARM64: one question and 10-point chief feedback",
-  "real_model_and_PL_joint_demo": "NOT_TESTED",
-  "physical_screen_and_touch": "NOT_TESTED",
-  "runtime_environment": "Python3.12.14 Windows; existing test dependencies",
-  "source_fixture_note": "NativePL normal wiring uses the frozen Python class with a synthetic worker; no model or PL execution"
+  "javascript_syntax": "PASS_console",
+  "real_model_and_PL_joint_demo": "PASS_ACTUAL_BOARD_FPGA_CPU_FPGA_AND_CHIEF_EVALUATION",
+  "actual_backend_sequence": [
+    "FPGA_REAL",
+    "CPU_REFERENCE",
+    "FPGA_REAL"
+  ],
+  "actual_answer_elapsed_s": [
+    35.129,
+    79.175,
+    33.623
+  ],
+  "model_sources": [
+    "MODEL",
+    "MODEL",
+    "MODEL"
+  ],
+  "chief_score": 10,
+  "board_poweroff": "CONFIRMED_SERIAL_POWER_DOWN_AFTER_NORMAL_MODEL_CLOSE",
+  "physical_screen_and_touch": "NOT_RETESTED_THIS_UPDATE",
+  "desktop": "LOCAL_FILE_AND_ARGUMENT_CHECK_ONLY_NOT_UPLOADED_TO_BOARD",
+  "ubuntu_desktop_gui_launch": "NOT_RUN_WSL_E_DRIVE_UNAVAILABLE",
+  "ui": "LOCAL_1024x600_SWITCH_AND_CHIEF_EVALUATION_PASSED",
+  "tests_note": "Three staged-source normal wiring tests use fixtures; actual board claims come from the separate saved board receipts."
 }

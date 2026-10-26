@@ -28,6 +28,9 @@ button:disabled { opacity: .5; cursor: default; }
 #error:empty { display: none; }
 .session-actions { display: flex; gap: var(--space-sm); align-items: center; flex-wrap: wrap; margin: var(--space-md) 0; }
 .session-actions select { max-width: 100%; min-width: 0; }
+#backend-control { display: inline-flex; align-items: center; gap: var(--space-xs); white-space: nowrap; }
+#backend-choice { max-width: 170px; }
+.turn-backend { font-size: var(--text-sm); color: var(--color-muted); }
 .session-actions #state { margin: 0 0 0 auto; font-size: var(--text-sm); color: var(--color-muted); }
 #question-form button { margin: var(--space-xs) var(--space-xs) 0 0; }
 textarea { width: 100%; min-height: 96px; resize: vertical; }

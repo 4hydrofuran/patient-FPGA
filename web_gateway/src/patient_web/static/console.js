@@ -6,7 +6,7 @@ let eventLog = [];
 let evaluationCache = null, evaluationView = "summary";
 const reviewViews = ["summary", "topics", "review", "transcript"];
 const reviewPanels = {summary:"chief-summary", topics:"topic-details", review:"review-details", transcript:"transcript-panel"};
-const labels = {STARTING:"模型加载中", READY:"等待提问", PROCESSING:"正在处理",
+const labels = {STARTING:"模型加载中", SWITCHING:"正在切换推理模式…", READY:"等待提问", PROCESSING:"正在处理",
   GENERATING:"患者正在思考", VALIDATING:"正在检查回答", CANCELLING:"正在取消并收尾",
   FINISHED:"问诊已结束", FAILED:"后端不可用", STOPPING:"服务正在停止"};
 function id(){ return crypto.randomUUID(); }
@@ -34,6 +34,8 @@ function controls(){
   el("cancel").disabled = service?.capabilities?.cancel_turn === false || !busy || current.phase === "CANCELLING";
   el("finish").disabled = !open || busy || submitting;
   el("new-session").disabled = !ready || open || busy || submitting;
+  el("backend-choice").disabled = busy || submitting || ["STARTING", "SWITCHING", "STOPPING"].includes(service?.phase);
+  if (service?.phase === "SWITCHING") el("state").textContent = labels.SWITCHING;
 }
 function clearEvaluation(){
   evaluationCache = null;
@@ -141,6 +143,13 @@ function render(snapshot){
       : turn.status === "CANCELLED" ? "本轮已取消，未发布患者回答。"
       : turn.status === "FAILED" ? turn.error?.message || "本轮失败。" : "正在等待回答…";
     p.append(answer); el("turns").append(p);
+    if (turn.answer) {
+      const kind = turn.delivery_receipt?.actual_backend;
+      const note = document.createElement("small"); note.className = "turn-backend";
+      note.textContent = kind === "FPGA_REAL" ? "FPGA" : kind === "CPU_REFERENCE" ? "CPU"
+        : turn.answer_source === "DEMO_RULE" ? "规则演示" : "规则模板";
+      p.append(document.createElement("br"), note);
+    }
   }
   transcript.scrollTop = followLatest || newQuestion ? transcript.scrollHeight : previousScroll;
   controls();
@@ -184,6 +193,16 @@ function connect(){
 async function poll(){
   try {
     service = await api("/ui/v1/status");
+    const options = service.backend_options || [];
+    el("backend-control").hidden = options.length < 2;
+    if (JSON.stringify(options) !== el("backend-choice").dataset.options) {
+      el("backend-choice").replaceChildren(...options.map(item => {
+        const option = document.createElement("option"); option.value = item.id;
+        option.textContent = item.label; return option;
+      }));
+      el("backend-choice").dataset.options = JSON.stringify(options);
+    }
+    el("backend-choice").value = service.backend.configured;
     if (current && current.instance_id !== service.instance_id) {
       if (stream) stream.close();
       sid = null; current = null; pending = null; cancelCommand = null;
@@ -195,7 +214,7 @@ async function poll(){
       document.body.classList.remove("consultation-active");
       showError(new Error("服务已重新启动，上一实例的内存会话已结束。"));
     }
-    el("backend").textContent = service.backend.configured === "demo"
+    el("backend").textContent = service.backend.execution_kind === "DEMO_RULE" || service.backend.configured === "demo"
       ? service.demo_lab ? "规则演示 · 联调场景已启用 · 未接入模型" : "规则演示 · 未接入模型"
       : service.ready ? service.backend.execution_kind === "FPGA_REAL" ? "板端模型已连接 · PL 参与计算" : "CPU 模型已连接"
       : service.failure?.message || "真实模型正在加载…";
@@ -209,7 +228,7 @@ async function poll(){
     if (!sid && stored && service.current_session_id === stored) { sid = stored; await refresh(); connect(); }
     if (!sid && service.current_session_id) { sid = service.current_session_id; await refresh(); connect(); }
     if (sid && current?.closed && !evaluationCache) await refresh();
-    if (!sid) el("state").textContent = labels[service.phase] || service.phase;
+    if (!sid || service.phase === "SWITCHING") el("state").textContent = labels[service.phase] || service.phase;
     controls();
   } catch (error) { showError(error); }
 }
@@ -220,6 +239,13 @@ el("start").onclick = async () => {
     sid = result.session_id; pending = null; cancelCommand = null; eventLog = []; clearEvaluation();
     sessionStorage.setItem("patient-web-session", sid); await refresh(); connect();
   } catch (error) { showError(error); } finally { submitting = false; controls(); }
+};
+el("backend-choice").onchange = async () => {
+  const backend = el("backend-choice").value;
+  submitting = true; controls(); showError(null);
+  try { await api("/ui/v1/backend", {request_id:id(), backend}); await poll(); }
+  catch (error) { showError(error); el("backend-choice").value = service.backend.configured; }
+  finally { submitting = false; controls(); }
 };
 el("question-form").onsubmit = async (event) => {
   event.preventDefault(); if (!sid || submitting) return;

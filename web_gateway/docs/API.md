@@ -1,5 +1,7 @@
 # 网页接口 ui.v1
 
+2026-10-27：新增 `POST /ui/v1/backend`（`{request_id,backend}`，202）和状态中的 `backend_options`。只有启动时已配置的模式可选择，回答进行中返回 BUSY。切换过程 phase 为 SWITCHING，ready 为 false；加载完成后返回 READY。历史回答的 actual_backend 不随当前模式改变。详见[模式切换](MODE_SWITCH.md)。
+
 2026-10-26最小适配补充：状态新增 `capabilities.generation_timeout_s`（默认180秒）、`capabilities.cancel_turn`；`backend.execution_kind` 按实际返回 `DEMO_RULE/CPU_REFERENCE/FPGA_REAL`，托管PL未初始化时为null。`actual_backend` 的回执/单轮Schema扩展接受 `FPGA_REAL`。既有PS托管入口的configured为 `managed-pl`，本轮不开放该模式的取消操作。单次演示详见 `BOARD_DEMO_QUICKSTART.md`。
 
 所有请求/响应为 UTF-8 JSON；SSE 使用 `text/event-stream`。网页接口独立于上游旧 `contracts/runtime_api_v1.yaml`，不修改计算或语音冻结契约。

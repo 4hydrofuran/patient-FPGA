@@ -45,6 +45,10 @@ class CancelTurn(Command):
     target_request_id: Identifier
 
 
+class SelectBackend(Command):
+    backend: Identifier
+
+
 class DemoScenario(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
     scenario: Literal["normal", "delayed", "wrong_fact", "timeout", "failure"]
@@ -58,7 +62,7 @@ def sse_frame(event):
 
 def create_app(*, backend="native", project_root=None, output=None, threads=3,
                engine_factory=None, journal_capacity=256, demo_lab=False,
-               generation_timeout_s=180):
+               generation_timeout_s=180, backend_options=None):
     if backend == "managed-pl" and engine_factory is None:
         raise ValueError("managed-pl requires an existing PS-owned NativePL instance")
     if demo_lab and (backend != "demo" or engine_factory is not None):
@@ -69,7 +73,7 @@ def create_app(*, backend="native", project_root=None, output=None, threads=3,
     coordinator = Coordinator(engine_factory or
                               (lambda: TextEngine(backend, project_root, output, threads,
                                                   generation_timeout_s=generation_timeout_s)),
-                              backend, journal_capacity)
+                              backend, journal_capacity, backend_options)
 
     @asynccontextmanager
     async def lifespan(app):
@@ -126,6 +130,10 @@ def create_app(*, backend="native", project_root=None, output=None, threads=3,
     @app.get("/ui/v1/status")
     def status():
         return dict(coordinator.status(), demo_lab=bool(demo_lab))
+
+    @app.post("/ui/v1/backend", status_code=202)
+    def select_backend(command: SelectBackend):
+        return coordinator.select_backend(command.request_id, command.backend)
 
     if demo_lab:
         @app.get("/lab", include_in_schema=False)
