@@ -1,0 +1,52 @@
+{
+  "status": "FAILED_MANUAL_SESSION_ENDED_IDLE_DEFAULT_RESTORED",
+  "worker_exit_code": 2,
+  "raw_wait_status": 512,
+  "worker_normal_exit": false,
+  "original_owner_finish": false,
+  "commands": [
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-listPackage"
+      ],
+      "exit": 0,
+      "stdout": "                   Accelerator  Accel_type                    Base    Pid   Base_type  #slots(RPU+PL+AIE)    slot->handle\n          a11-open-20261023-v5    XRT_FLAT    a11-open-20261023-v5  id_ok    XRT_FLAT             (0+0+0)              -1\na12-cpu02-baseline-20261024-v1    XRT_FLATa12-cpu02-baseline-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\na12-tt10-00-health-20261024-v1    XRT_FLATa12-tt10-00-health-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\na10-refcount-step5-20261022-v1    XRT_FLATa10-refcount-step5-20261022-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n     a10-vadd-minimal-20261021    XRT_FLATa10-vadd-minimal-20261021  id_ok    XRT_FLAT             (0+0+0)              -1\n      a12-capacity-20261024-v1    XRT_FLATa12-capacity-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n             a10-vadd-20261019    XRT_FLAT       a10-vadd-20261019  id_ok    XRT_FLAT             (0+0+0)              -1\n a12-perf-baseline-20261024-v1    XRT_FLATa12-perf-baseline-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n           a11-mlp-20261023-v1    XRT_FLAT     a11-mlp-20261023-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n          a11-open-20261023-v2    XRT_FLAT    a11-open-20261023-v2  id_ok    XRT_FLAT             (0+0+0)              -1\n   a12-single-gate-20261023-v1    XRT_FLATa12-single-gate-20261023-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n   a12-original-pl-20261026-v1    XRT_FLATa12-original-pl-20261026-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n       a12-mlp-l00-20261024-v1    XRT_FLAT a12-mlp-l00-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-cpu01b-off-20261024-v1    XRT_FLATa12-cpu01b-off-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\na12-cpu01-integrated-20261024-v1    XRT_FLATa12-cpu01-integrated-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n a12-state-context-20261024-v1    XRT_FLATa12-state-context-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\na12-full-diagnostic-20261024-v1    XRT_FLATa12-full-diagnostic-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\na12-full-generation-20261024-v1    XRT_FLATa12-full-generation-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n              k24-starter-kits    XRT_FLAT        k24-starter-kits  id_ok    XRT_FLAT             (0+0+0)              -1\n a10-isolated-idle-20261023-v4    XRT_FLATa10-isolated-idle-20261023-v4  id_ok    XRT_FLAT             (0+0+0)              -1\na12-perf-optimized-20261024-v1    XRT_FLATa12-perf-optimized-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n   a12-state-short-20261024-v1    XRT_FLATa12-state-short-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n     a12-cpu01b-on-20261024-v1    XRT_FLATa12-cpu01b-on-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n     a12-cpu01-old-20261024-v1    XRT_FLATa12-cpu01-old-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n   a10-vadd-20261021-candidate    XRT_FLATa10-vadd-20261021-candidate  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-pl-authfix-20261026-v1    XRT_FLATa12-pl-authfix-20261026-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n a12-tt10-00-cpu02-20261024-v2    XRT_FLATa12-tt10-00-cpu02-20261024-v2  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-health-opt-20261024-v1    XRT_FLATa12-health-opt-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n           a11-mlp-20261023-v3    XRT_FLAT     a11-mlp-20261023-v3  id_ok    XRT_FLAT             (0+0+0)              -1\n          a11-open-20261023-v4    XRT_FLAT    a11-open-20261023-v4  id_ok    XRT_FLAT             (0+0+0)              -1\na10-isolated-single-20261023-v1    XRT_FLATa10-isolated-single-20261023-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n       a10-irq2-step5-20261022    XRT_FLAT a10-irq2-step5-20261022  id_ok    XRT_FLAT             (0+0+0)              -1\n              k26-starter-kits    XRT_FLAT        k26-starter-kits  id_ok    XRT_FLAT             (0+0+0)              -1\n       a12-tt10-01-20261025-v3    XRT_FLAT a12-tt10-01-20261025-v3  id_ok    XRT_FLAT             (0+0+0)              -1\na12-cpu02-candidate-20261024-v1    XRT_FLATa12-cpu02-candidate-20261024-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-pl-authfix-20261026-v2    XRT_FLATa12-pl-authfix-20261026-v2  id_ok    XRT_FLAT             (0+0+0)              -1\n           a12-web-20261026-v1    XRT_FLAT     a12-web-20261026-v1  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-manual-web-20261026-v2    XRT_FLATa12-manual-web-20261026-v2  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-manual-web-20261026-v3    XRT_FLATa12-manual-web-20261026-v3  id_ok    XRT_FLAT             (0+0+0)              -1\n    a12-manual-web-20261026-v4    XRT_FLATa12-manual-web-20261026-v4  id_ok    XRT_FLAT             (0+0+0)           0->0,\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-remove",
+        "0"
+      ],
+      "exit": 0,
+      "stdout": "remove from slot 0 returns: 0 (Ok)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "rmmod",
+        "zocl"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-load",
+        "k26-starter-kits"
+      ],
+      "exit": 0,
+      "stdout": "k26-starter-kits: Loaded with slot_handle 0\n",
+      "stderr": ""
+    }
+  ],
+  "active_lease": false,
+  "zocl": false,
+  "overlays": {
+    "k26-starter-kits_image_1": "applied"
+  }
+}

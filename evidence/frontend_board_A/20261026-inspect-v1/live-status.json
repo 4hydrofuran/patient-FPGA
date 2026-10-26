@@ -1,0 +1,19 @@
+{
+  "listeners": {
+    "rc": 0,
+    "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      4096         0.0.0.0:111       0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:5006      0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096            [::]:111          [::]:*          \nLISTEN 0      4096            [::]:22           [::]:*          \nLISTEN 0      4096           [::1]:631          [::]:*          \n",
+    "err": ""
+  },
+  "processes": {
+    "rc": 0,
+    "out": "    PID    PPID ELAPSED COMMAND\n   2979       1    3476 systemd\n   2985    2979    3475 (sd-pam)\n   2993    2979    3473 pipewire\n   2995    2979    3473 pipewire\n   2997    1519    3473 bash\n   2998    2979    3473 wireplumber\n   2999    2979    3473 pipewire-pulse\n   3005    2979    3473 dbus-daemon\n   5947    2979     284 xdg-document-po\n   5951    2979     284 xdg-permission-\n   6322    2997       0 python3\n   6324    6322       0 ps\n",
+    "err": ""
+  },
+  "locks": "1: FLOCK  ADVISORY  WRITE 1577 00:38:69 0 EOF\n2: FLOCK  ADVISORY  WRITE 1577 00:38:68 0 EOF\n3: FLOCK  ADVISORY  WRITE 832 00:1c:2727 0 EOF\n4: FLOCK  ADVISORY  WRITE 2993 00:2f:69 0 EOF\n5: FLOCK  ADVISORY  WRITE 2993 00:2f:68 0 EOF\n6: FLOCK  ADVISORY  WRITE 1025 b3:02:86285 0 EOF\n7: POSIX  ADVISORY  WRITE 457 00:1c:1120 0 EOF\n8: FLOCK  ADVISORY  WRITE 1623 00:38:80 0 EOF\n9: FLOCK  ADVISORY  WRITE 1512 00:1c:2981 0 EOF\n",
+  "http_error": "<urlopen error [Errno 111] Connection refused>",
+  "known_processes": {
+    "6117": false,
+    "6124": false
+  },
+  "render_result_exists": false
+}

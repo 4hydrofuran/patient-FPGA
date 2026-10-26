@@ -1,0 +1,15 @@
+{
+  "candidate": "irq2",
+  "candidate_bytes": 65555004,
+  "component_sha256": [
+    "0a132d4ac3905ec9815c8b4874bc34e825beff2f3fd2aa9bb96e82c364598e44",
+    "ac4dd7766229ba57edb884909b5a32dfce1faa7f31d520d0908d9c317612f3c5",
+    "32dc08a08a87aba2ab0ca68bc5292c735943c20ecd0dc7472690bd152fb7c7a3"
+  ],
+  "preflight": "set -e; test \"$(cat /proc/sys/kernel/random/boot_id)\" = 0b85409e-f4e5-45bc-92cb-45291e8d81b3; test \"$(uname -r)\" = 6.8.0-1036-xilinx; test \"$(sha256sum /etc/machine-id | cut -d ' ' -f1)\" = ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec; test \"$(id -u)\" = 1000; test ! -d /sys/module/zocl; test -d /sys/kernel/config/device-tree/overlays/k26-starter-kits_image_1; python3 -c \"from pathlib import Path; t=[int(p.read_text()) for p in Path('/sys/class/hwmon').glob('hwmon*/temp*_input')]; print('temperatures_mC',t); assert t and all(0<x<55000 for x in t)\"; cat /proc/loadavg; cat /proc/sys/kernel/random/boot_id; test -d /usr/lib/modules/6.8.12-a10irq2; test \"$(sha256sum /boot/firmware/image.fit | cut -d ' ' -f1)\" = 23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e; test \"$(sha256sum /boot/firmware/boot.scr.uimg | cut -d ' ' -f1)\" = f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685; test \"$(sha256sum /boot/firmware/a10-candidate-irq2-20261021.fit | cut -d ' ' -f1)\" = e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b; python3 -c \"import json; from pathlib import Path; r=[json.loads(s) for s in Path('/home/ubuntu/a10-irq2-stage-20261021-v1/stage-result.jsonl').read_text().splitlines()]; assert r[-1]['event']=='STAGED_ONLY_NOT_BOOTED'\"; test ! -L /var/lock/kv260-a1/active; if test -d /var/lock/kv260-a1/active; then sudo -n /usr/bin/python3 -c \"import json; r=json.load(open('/var/lock/kv260-a1/active/lease.json')); assert r['window']=='a12-pl-authfix-20261026-v1' and r['identity'].endswith(':0978088a-8d10-45b2-8f43-726d00209313')\"; fi; test \"$(sha256sum /usr/lib/modules/6.8.12-a10irq2/extra/zocl.ko | cut -d ' ' -f1)\" = 38992846680c0ddbdad7a05f6506b66488473a96c52975fa35a126b8401344f8",
+  "load": "fatload mmc 1:1 0x10000000 a10-candidate-irq2-20261021.fit",
+  "inspect": "iminfo 0x10000000",
+  "temporary_bootargs": "setenv bootargs 'root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=800M'",
+  "boot": "bootm 0x10000000#conf-smk-k26-revA-sck-kv-g-revB",
+  "board_contact": false
+}

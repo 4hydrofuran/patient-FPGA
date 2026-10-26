@@ -1,0 +1,15 @@
+{
+  "scope": "PC_PROTOCOL_ONLY_NO_MODEL_NO_BOARD",
+  "command": "wsl -d KV260-A-2204 -u member-a -- bash -c 'cd /mnt/c/Patientqwen && python3 -B -m unittest discover -s bench/qwen35/web -p \"test_*.py\" -v'; python platform/qwen35/web/prepare.py --output evidence/frontend_board_A/20261026-integration-prep-v1/overlay-v1",
+  "exit_code": 0,
+  "output": "test_actual_native_and_delivered_correlation_keep_ids_and_state (test_managed.ManagedTests) ... ok\ntest_cpu_or_pc_fixture_cannot_enter_board_web_mode (test_managed.ManagedTests) ... ok\ntest_factory_reuses_installed_frontend_and_live_owner_callback (test_managed.ManagedTests) ... ok\ntest_invalid_budget_is_not_available (test_managed.ManagedTests) ... ok\ntest_native_failure_is_preserved_and_not_restarted (test_managed.ManagedTests) ... ok\ntest_owner_not_ready_makes_no_worker_request (test_managed.ManagedTests) ... ok\ntest_short_budget_does_not_extend_window_or_submit (test_managed.ManagedTests) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.045s\n\nOK\n{\r\n  \"status\": \"LOCAL_PREPARED_NOT_DEPLOYED\",\r\n  \"archive\": \"evidence\\\\frontend_board_A\\\\20261026-integration-prep-v1\\\\overlay-v1.zip\",\r\n  \"bytes\": 4746,\r\n  \"sha256\": \"3cb140a0bcf591e3f5a4dcef5ac1165fa9c531614614000f7e5b50ac56aad780\",\r\n  \"board_contact\": false\r\n}\r\n",
+  "tests": 7,
+  "board_contact": false,
+  "original_failure": {
+    "tests": 7,
+    "errors": 1,
+    "failures": 1,
+    "cause": "Jinja strips the final literal newline in the fixture; test template changed to emit the exact non-thinking suffix via an expression",
+    "production_change_to_fix_fixture": false
+  }
+}

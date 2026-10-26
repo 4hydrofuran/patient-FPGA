@@ -1,0 +1,118 @@
+{
+  "terminal": {
+    "decode_calls": 0,
+    "decode_ms": 0.0,
+    "decode_rc": 2,
+    "domain": "BOARD",
+    "eos": false,
+    "gpu_layers": 0,
+    "id": "a12-1",
+    "kernel_threads": 2,
+    "last_prompt_logits_fnv64": 0,
+    "last_prompt_logits_sha256": "",
+    "logits_comparison": null,
+    "logits_mode": "final",
+    "memory": null,
+    "output_tokens": [],
+    "partial_output_usable": false,
+    "peak_rss_kib": 650984,
+    "physical_ubatch": 8,
+    "prefill_chunk": 256,
+    "prefill_ms": 104.793108,
+    "prefill_requested_logits": 0,
+    "prompt_tokens": 107,
+    "quantization": "A12_W4A8_MLP",
+    "request_profile": {
+      "BOARD": "NOT_TESTED",
+      "cpu_counters": {
+        "compute_ms_delta": 0.0,
+        "run_count_begin": 0,
+        "run_count_delta": 0,
+        "run_count_end": 0,
+        "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+        "service_ms_delta": 0.0
+      },
+      "detail": false,
+      "enabled": false,
+      "native_request_wall_ms": 671.956421,
+      "node_profile": {
+        "BOARD": "NOT_TESTED",
+        "attribution": "exclusive category by head op; roles/shapes are alternate views, never additive",
+        "custom_identity_limit": "MLP custom uses pinned name+structure; no custom weight source exposed",
+        "detail": false,
+        "enabled": false,
+        "graph_generations": 0,
+        "invalid_phase_callbacks": 0,
+        "invalid_phase_wall_us": 0,
+        "linear_attention_state_split": "FUSED_GATED_DELTA_NET_STATE_UPDATE_NOT_SEPARATELY_TIMED",
+        "metadata_lifetime": "one synchronous CPU execution; pointers cleared before graph ownership ends",
+        "nesting": "MLP node wall and nested OperationScope are alternate scopes; never add them",
+        "overlapping_graphs": 0,
+        "phases": null,
+        "schema": "A12_CPU_NODE_PROFILE_V2",
+        "scope": "thread0 elapsed including existing barrier; one interval per actual fused group; not CPU time"
+      },
+      "phases": null,
+      "pl_profile": {
+        "compact_completion": true,
+        "enabled": false,
+        "phases": {
+          "decode": {
+            "backend": {},
+            "backend_call_wall_ms": 0.0,
+            "calls": 0,
+            "completion_report_wall_ms": 0.0
+          },
+          "prefill": {
+            "backend": {},
+            "backend_call_wall_ms": 0.0,
+            "calls": 0,
+            "completion_report_wall_ms": 0.0
+          }
+        },
+        "timing_scope": "HOST_WALL_NOT_DEVICE_CYCLES; backend call includes permission; report is a sibling; backend fields are nested"
+      },
+      "request_id": "a12-1",
+      "sample_ms": 0.0,
+      "schema": "N02_REQUEST_PROFILE_V1",
+      "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+      "session_epoch": 0,
+      "session_id": "4028f813994d41dab4ab3c8c3cdfd76e"
+    },
+    "reset_ms": 4.268832,
+    "state_cleared_before_response": true,
+    "state_fingerprint": null,
+    "state_position_after_clear": -1,
+    "state_position_before_clear": 77,
+    "status": "ERROR",
+    "teacher_forced": false,
+    "text": "",
+    "threads": 2,
+    "ttft_ms": 0.0,
+    "type": "result"
+  },
+  "route": {
+    "a11_bo_counter_scope": "host allocations for these six explicit buffers; excludes implicit XRT BOs",
+    "a11_explicit_bo_allocations_host_counter": 148,
+    "a12_hardware_global_completion_counter": null,
+    "a12_hardware_global_count": null,
+    "a12_max_runs": 5000,
+    "hardware_done_count": null,
+    "host_verified_completions": 648,
+    "last_status_code": 1,
+    "status": "READY",
+    "weight_load_count": 72
+  },
+  "worker_files": [
+    "stderr.txt",
+    "stdout.jsonl",
+    "events.jsonl"
+  ],
+  "stderr.txt": "sed by node 'Qcur-19' (ROPE)\nllama_graph_n_input_tensors: input tensor '                         inp_pos' [i32, ne = {    32,     1,     1,     1 }] is used by node 'Kcur-19' (ROPE)\nllama_graph_n_input_tensors: input tensor '                         inp_pos' [i32, ne = {    32,     1,     1,     1 }] is used by node 'Qcur-23' (ROPE)\nllama_graph_n_input_tensors: input tensor '                         inp_pos' [i32, ne = {    32,     1,     1,     1 }] is used by node 'Kcur-23' (ROPE)\nllama_graph_n_input_tensors: input tensor '                       rs_s_copy' [i32, ne = {     1,     1,     1,     1 }] is used by node 'rs_s_copy (view)' (VIEW)\nllama_graph_n_input_tensors: input tensor '                       rs_s_copy' [i32, ne = {     1,     1,     1,     1 }] is used by node 'rs_s_copy (view)' (VIEW)\nllama_graph_n_input_tensors: input tensor '                      inp_tokens' [i32, ne = {     8,     1,     1,     1 }] is used by node 'model.input_embed' (GET_ROWS)\nsched_reserve:        CPU compute buffer size =    18.11 MiB\nsched_reserve: graph (pp bs=8, tg bs=1): nodes = 3941 / 1411, splits = 1 / 1, input objects = 4 / 4, input tensors = 7 / 7\nsched_reserve: reserve took 141.38 ms, sched copies = 1\nstate_write_data: writing state\nstate_write_data: - writing model info\nstate_write_data: - writing memory module\nstate_write_data: writing state\nstate_write_data: - writing model info\nstate_write_data: - writing memory module\nstate_read_data: reading state\nstate_read_data: - reading model info\nstate_read_data: - reading memory module\ngraph_compute: ggml_backend_sched_graph_compute_async failed with error 1\nprocess_ubatch: failed to compute graph, compute status: 1\ndecode: removing memory module entries for seq_id = 0, pos = [70, +inf)\nllama_decode: failed to decode, ret = 2\n",
+  "events.jsonl": [
+    "{\"monotonic_ns\":6849080183400,\"event\":\"PERMISSION_FAULT_RETAIN_OWNER\",\"reason\":\"HealthBlocked: health schedule latched\"}"
+  ],
+  "closed_own_firefox_pids": [
+    16128
+  ]
+}

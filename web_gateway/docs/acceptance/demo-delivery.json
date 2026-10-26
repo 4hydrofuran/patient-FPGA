@@ -1,0 +1,88 @@
+{
+  "schema_version": "delivery-acceptance.v1",
+  "started_at": "2026-10-21T14:08:42.647583+00:00",
+  "expected_backend": "demo",
+  "base_url": "http://127.0.0.1:8766",
+  "verdict": "PASS_DEMO_TEXT_DELIVERY",
+  "checks": [
+    "explicit_backend_matches",
+    "service_ready_and_idle",
+    "session_created",
+    "turn_accepted",
+    "turn_completed",
+    "receipt_identity_and_hash_valid",
+    "retry_reuses_operation",
+    "snapshot_recovers_same_single_publication_without_browser_ack",
+    "changed_retry_rejected",
+    "late_cancel_cannot_retract_publication",
+    "session_finished",
+    "receipt_stable_after_finish",
+    "demo_does_not_claim_model_execution"
+  ],
+  "scope": "HTTP text delivery only; not medical, PL or board acceptance",
+  "service_status": {
+    "schema_version": "ui.v1",
+    "instance_id": "d31fc581873e47f585d5348c92531fee",
+    "phase": "READY",
+    "ready": true,
+    "busy": false,
+    "current_session_id": null,
+    "backend": {
+      "configured": "demo",
+      "execution_kind": "DEMO_RULE",
+      "ready": true,
+      "hardware_enabled": false
+    },
+    "capabilities": {
+      "text": true,
+      "audio": false,
+      "rule_score": true,
+      "chief_narration": false,
+      "max_active_turns": 1,
+      "pending_turn_queue": 0,
+      "max_turns": 200,
+      "max_sessions": 8
+    },
+    "failure": null,
+    "verification": {
+      "software_test_only": true,
+      "board": "NOT_TESTED",
+      "medical_review": "PENDING_TEACHER_REVIEW"
+    }
+  },
+  "turn_result": {
+    "request_id": "accept-8c3a3f5f42ea437d8091f3c1de1c54a3-q",
+    "operation_id": "36dfb699840d48048d1b0746322abe61",
+    "question": "每次疼痛持续多久？",
+    "status": "COMPLETED",
+    "answer": "每次疼痛持续10分钟。",
+    "answer_source": "DEMO_RULE",
+    "actual_backend": null,
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "d31fc581873e47f585d5348c92531fee",
+      "session_id": "97dd2e11746644fc86e4732c01fdc231",
+      "request_id": "accept-8c3a3f5f42ea437d8091f3c1de1c54a3-q",
+      "operation_id": "36dfb699840d48048d1b0746322abe61",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+      "answer_source": "DEMO_RULE",
+      "actual_backend": null,
+      "model_called": false,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "477564046000000",
+      "published_monotonic_ns": "477564046000000",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null
+  },
+  "joint_board_signoff": "NOT_TESTED",
+  "finished_at": "2026-10-21T14:08:42.871694+00:00"
+}

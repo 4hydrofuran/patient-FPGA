@@ -1,0 +1,194 @@
+{
+  "schema_version": "chief-evaluation.v1",
+  "evaluation_id": "3fdb755e5e41ae9e60554893e01b195546a353ea3af9c0adb3e7d8e2515f7872",
+  "instance_id": "9969512480b1407996d71fd0b8a135f5",
+  "session_id": "2d48d6356c5f4fc2acfb4d5043ad315a",
+  "case_id": "SYN_CP_03",
+  "case_version": "1.0-draft",
+  "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+  "frozen_at": "2026-10-26T10:37:52.927259+00:00",
+  "frozen_turn_count": 1,
+  "scoring_event_count": 1,
+  "rule_score": {
+    "rubric_version": "coverage-v1-draft",
+    "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+    "score": 10,
+    "max_score": 100,
+    "items": {
+      "location": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "quality": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "onset": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "duration": {
+        "points": 10,
+        "max_points": 10,
+        "evidence_turns": [
+          1
+        ]
+      },
+      "severity": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "radiation": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "trigger": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "relief": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "dyspnea": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      },
+      "allergy": {
+        "points": 0,
+        "max_points": 10,
+        "evidence_turns": []
+      }
+    },
+    "review_turns": [],
+    "meaning": "draft_question_topic_coverage_only",
+    "review_status": "PENDING_TEACHER_REVIEW",
+    "clinical_validity": null,
+    "personality_or_real_emotion_inference": false
+  },
+  "summary_status": "READY",
+  "summary_source": "RULE_TEMPLATE",
+  "summary_version": "chief-summary-v1",
+  "summary_text": "本次问诊话题覆盖得分为 10/100。\n已覆盖：持续时间。\n尚未覆盖：疼痛位置、疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+  "topics": [
+    {
+      "topic_id": "location",
+      "label": "疼痛位置",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "quality",
+      "label": "疼痛性质",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "onset",
+      "label": "起病时间",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "duration",
+      "label": "持续时间",
+      "points": 10,
+      "max_points": 10,
+      "covered": true,
+      "evidence": [
+        {
+          "turn_id": 1,
+          "question_number": 1,
+          "request_id": "7f99e9a2-01be-4c19-865b-c119f7804bf7",
+          "question": "每次疼痛持续多久？",
+          "turn_status": "COMPLETED",
+          "answer_published": true
+        }
+      ]
+    },
+    {
+      "topic_id": "severity",
+      "label": "疼痛程度",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "radiation",
+      "label": "放射部位",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "trigger",
+      "label": "诱发或加重因素",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "relief",
+      "label": "缓解因素",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "dyspnea",
+      "label": "呼吸困难",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    },
+    {
+      "topic_id": "allergy",
+      "label": "过敏史",
+      "points": 0,
+      "max_points": 10,
+      "covered": false,
+      "evidence": []
+    }
+  ],
+  "covered_topics": [
+    "duration"
+  ],
+  "missing_topics": [
+    "location",
+    "quality",
+    "onset",
+    "severity",
+    "radiation",
+    "trigger",
+    "relief",
+    "dyspnea",
+    "allergy"
+  ],
+  "review_items": [],
+  "recommendations": [
+    "下一次练习请补充询问：疼痛位置、疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。"
+  ],
+  "review_status": "PENDING_TEACHER_REVIEW",
+  "meaning": "draft_question_topic_coverage_only",
+  "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+  "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+}

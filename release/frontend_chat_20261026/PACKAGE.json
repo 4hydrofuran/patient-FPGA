@@ -1,0 +1,31 @@
+{
+  "schema": "FRONTEND_PACKAGE_V1",
+  "path": "release/frontend_chat_20261026/engineering-package.zip",
+  "bytes": 10837430,
+  "sha256": "445bdc3033df31a017f060423e7822dc400788178616ad1eaff41eb7c1a38a32",
+  "files": 515,
+  "manifest_sha256": "b91240a3744f5b9cddf3a6d80e4d6abdaa37f4a7b49a445bf862ec55dd86081f",
+  "offline_archive_validation": {
+    "archive_crc": "PASS",
+    "all_manifest_member_sha256": "PASS",
+    "isolated_extracted_tree_unittest_count": 22,
+    "unittest_exit_code": 0,
+    "command": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--cd",
+      "/mnt/c/Patientqwen/evidence/frontend_chat_publication/20261026-v1/extracted",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "bench/qwen35/web",
+      "-v"
+    ],
+    "board_access": false
+  },
+  "task_date": "2026-10-26",
+  "publication_date": "2026-10-27"
+}

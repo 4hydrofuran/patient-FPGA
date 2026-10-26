@@ -1,0 +1,17 @@
+python3 -B -I <<'PY_FRONTEND_CHECK'
+[?2004l[?2004h> import json,subprocess
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> def run(a):
+[?2004l[?2004h>     p=subprocess.run(a,capture_output=True,text=True,timeout=8)
+[?2004l[?2004h>     return {'rc':p.returncode,'out':p.stdout[:8000],'err':p.stderr[:1000]}
+[?2004l[?2004h> r={'gdm':run(['systemctl','is-active','gdm']),
+[?2004l[?2004h>    'sessions':run(['loginctl','list-sessions','--no-legend']),
+[?2004l[?2004h>    'displays':{str(p):p.read_text().strip() for p in Path('/sys/class/drm').glob('card*-*/status')},
+[?2004l[?2004h>    'user_processes':run(['ps','-u','ubuntu','-o','pid,comm']),
+[?2004l[?2004h>    'active_lease':Path('/var/lock/kv260-a1/active').exists()}
+[?2004l[?2004h> print('__FRONTEND_'+'BEGIN__');print(json.dumps(r));print('__FRONTEND_'+'END__')
+[?2004l[?2004h> PY_FRONTEND_CHECK
+[?2004l__FRONTEND_BEGIN__
+{"gdm": {"rc": 0, "out": "active\n", "err": ""}, "sessions": {"rc": 0, "out": "14 1000 ubuntu seat0 tty2   active no -\n 2 1000 ubuntu -     ttyPS1 active no -\n", "err": ""}, "displays": {"/sys/class/drm/card0-DP-1/status": "connected"}, "user_processes": {"rc": 0, "out": "    PID COMMAND\n   2083 systemd\n   2087 (sd-pam)\n   2099 pipewire\n   2100 pipewire\n   2102 wireplumber\n   2104 bash\n   2105 pipewire-pulse\n   2112 dbus-daemon\n   6941 gdm-wayland-ses\n   6947 gnome-session-b\n   6982 gcr-ssh-agent\n   6983 gnome-keyring-d\n   6984 gnome-session-c\n   6998 gvfsd\n   7012 gnome-session-b\n   7039 gnome-shell\n   7043 at-spi-bus-laun\n   7053 dbus-daemon\n   7105 at-spi2-registr\n   7124 xdg-permission-\n   7150 gjs\n   7165 gsd-a11y-settin\n   7169 gsd-color\n   7171 gsd-datetime\n   7175 gsd-housekeepin\n   7176 gsd-keyboard\n   7177 gsd-media-keys\n   7180 gsd-power\n   7181 gsd-print-notif\n   7186 gsd-rfkill\n   7189 gsd-screensaver\n   7190 gsd-sharing\n   7191 gsd-smartcard\n   7192 gsd-sound\n   7193 gsd-wacom\n   7287 gsd-printer\n   7316 gvfs-udisks2-vo\n   7364 gvfsd-trash\n   7384 dconf-service\n   7391 xdg-desktop-por\n   7396 xdg-document-po\n   7452 tracker-miner-f\n   7453 xdg-desktop-por\n   7483 gjs\n   7505 gvfsd-metadata\n   7519 xdg-desktop-por\n   7525 gjs\n   7649 update-notifier\n   8009 Xwayland\n   8015 gsd-xsettings\n   8042 mutter-x11-fram\n   8199 snap\n   9225 firefox\n   9290 crashhelper\n   9389 forkserver\n   9392 Socket Process\n   9426 Privileged Cont\n   9441 RDD Process\n   9504 WebExtensions\n   9563 Utility Process\n   9581 Isolated Web Co\n   9591 Web Content\n   9651 Web Content\n   9836 Web Content\n  10008 python3\n  10011 ps\n", "err": ""}, "active_lease": false}
+__FRONTEND_END__
+[?2004hubuntu@kria:~$ 

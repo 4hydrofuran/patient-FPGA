@@ -1,0 +1,16 @@
+{
+  "schema": "A12_HEALTH_OPT_BOUNDED_V1",
+  "profiles": [
+    {
+      "scope": "all",
+      "max_successful_runs": 60000,
+      "weight_load_limit": 72,
+      "explicit_bo_limit_bytes": 140591104,
+      "request_limit": 2000,
+      "prompt_token_limit": 1024,
+      "output_token_limit": 24,
+      "max_session_seconds": 14400
+    }
+  ],
+  "interactive_scope": "User requested continuous multiple turns and new consultations; new independent owner, not renewal of an old trial"
+}

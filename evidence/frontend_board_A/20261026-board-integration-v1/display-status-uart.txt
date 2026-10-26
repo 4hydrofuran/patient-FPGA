@@ -1,0 +1,17 @@
+python3 -B -I <<'PY_FRONTEND_CHECK'
+[?2004l[?2004h> import json,subprocess
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> def run(a):
+[?2004l[?2004h>     p=subprocess.run(a,capture_output=True,text=True,timeout=8)
+[?2004l[?2004h>     return {'rc':p.returncode,'out':p.stdout[:8000],'err':p.stderr[:1000]}
+[?2004l[?2004h> r={'gdm':run(['systemctl','is-active','gdm']),
+[?2004l[?2004h>    'sessions':run(['loginctl','list-sessions','--no-legend']),
+[?2004l[?2004h>    'displays':{str(p):p.read_text().strip() for p in Path('/sys/class/drm').glob('card*-*/status')},
+[?2004l[?2004h>    'user_processes':run(['ps','-u','ubuntu','-o','pid,comm']),
+[?2004l[?2004h>    'active_lease':Path('/var/lock/kv260-a1/active').exists()}
+[?2004l[?2004h> print('__FRONTEND_'+'BEGIN__');print(json.dumps(r));print('__FRONTEND_'+'END__')
+[?2004l[?2004h> PY_FRONTEND_CHECK
+[?2004l__FRONTEND_BEGIN__
+{"gdm": {"rc": 0, "out": "active\n", "err": ""}, "sessions": {"rc": 0, "out": " 2 1000 ubuntu -     ttyPS1 active no  -\nc3  114 gdm    seat0 tty1   active yes 4min 12s ago\n", "err": ""}, "displays": {"/sys/class/drm/card0-DP-1/status": "connected"}, "user_processes": {"rc": 0, "out": "    PID COMMAND\n   2083 systemd\n   2087 (sd-pam)\n   2099 pipewire\n   2100 pipewire\n   2102 wireplumber\n   2104 bash\n   2105 pipewire-pulse\n   2112 dbus-daemon\n   5956 python3\n   5959 ps\n", "err": ""}, "active_lease": false}
+__FRONTEND_END__
+[?2

@@ -1,0 +1,17 @@
+python3 -B -I <<'PY_FRONTEND_CHECK'
+[?2004l[?2004h> import json,os,subprocess
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> def cmd(a):
+[?2004l[?2004h>     p=subprocess.run(a,capture_output=True,text=True,timeout=5)
+[?2004l[?2004h>     return dict(rc=p.returncode,out=p.stdout[:2500],err=p.stderr[:500])
+[?2004l[?2004h> r=dict(kernel=os.uname().release,boot=Path('/proc/sys/kernel/random/boot_id').read_text().strip(),active=Path('/var/lock/kv260-a1/active').exists(),zocl=Path('/sys/module/zocl').exists())
+[?2004l[?2004h> r['sudo']=cmd(['sudo','-n','true'])
+[?2004l[?2004h> r['addresses']=cmd(['ip','-4','-br','addr','show','eth0'])
+[?2004l[?2004h> r['listeners']=cmd(['ss','-ltn'])
+[?2004l[?2004h> r['front']=Path('/home/ubuntu/patient-web-demo-20261026/web_gateway/src/patient_web/managed.py').is_file()
+[?2004l[?2004h> print('__FRONTEND_'+'BEGIN__');print(json.dumps(r));print('__FRONTEND_'+'END__')
+[?2004l[?2004h> PY_FRONTEND_CHECK
+[?2004l__FRONTEND_BEGIN__
+{"kernel": "6.8.12-a10irq2", "boot": "b0718166-5c3b-4c4f-b669-4f83d3340d00", "active": false, "zocl": false, "sudo": {"rc": 0, "out": "", "err": ""}, "addresses": {"rc": 0, "out": "eth0             UP             192.168.137.2/24 192.168.2.2/24 \n", "err": ""}, "listeners": {"rc": 0, "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:111       0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:5006      0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      4096           [::1]:631          [::]:*          \nLISTEN 0      4096            [::]:22           [::]:*          \nLISTEN 0      4096            [::]:111          [::]:*          \n", "err": ""}, "front": true}
+__FRONTEND_END__
+[?2004hubuntu@kria:~$ 

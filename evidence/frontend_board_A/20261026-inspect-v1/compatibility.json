@@ -1,0 +1,61 @@
+{
+  "scope": "STATIC_CURRENT_LOCAL_BACKEND_COMPARISON",
+  "references": [
+    {
+      "source": "system_qwen35/app/planning.py",
+      "board_sha256": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7",
+      "current_sha256": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/app/domain.py",
+      "board_sha256": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da",
+      "current_sha256": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/app/checking.py",
+      "board_sha256": "afac4ee61c9ce3d14ec2bd2e56db5a127f44c1b5dce005126eba5a96120dceb7",
+      "current_sha256": "942a8cdb2c0cf7cdeb6e9f2e25ada6e9d311826f4dcaf5c2a212f9c3d0da0ef9",
+      "matches": false
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_03.json",
+      "board_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "current_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/app/scoring.py",
+      "board_sha256": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb",
+      "current_sha256": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_01.json",
+      "board_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "current_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/app/session.py",
+      "board_sha256": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173",
+      "current_sha256": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173",
+      "matches": true
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_02.json",
+      "board_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "current_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "matches": true
+    }
+  ],
+  "matching_files": 7,
+  "total_files": 8,
+  "native_pl_current_sha256": "574a72225e252e462d46c9c4f547e158b25032c5f6fb73f3537343d0b6b626bd",
+  "native_pl_matches_delivered_fixture": true,
+  "checker_difference": "prompt_messages system prompt and question label only; validation functions unchanged",
+  "backend_runtime": "NOT_STARTED",
+  "real_model_integration": "NOT_TESTED",
+  "PL": "NOT_TESTED"
+}

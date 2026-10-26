@@ -1,0 +1,1861 @@
+{
+  "schema_version": "workflow-acceptance.v1",
+  "verdict": "PASS_DEMO_WORKFLOW",
+  "started_at": "2026-10-23T09:14:37.228566+00:00",
+  "base_url": "http://127.0.0.1:56681",
+  "scope": "No-model software workflow over real HTTP/SSE",
+  "checks": [
+    "explicit_demo_lab_required",
+    "fresh_service_required_preserve_existing_sessions",
+    "-visit:session_created",
+    "-location:accepted",
+    "-location:checked_text_and_honest_source",
+    "-duration:accepted",
+    "-duration:checked_text_and_honest_source",
+    "-review:accepted",
+    "refresh:same_process_history_restored",
+    "finish:accepted",
+    "evaluation:frozen_across_retry_and_query",
+    "visit:20_points_review_and_chief_template",
+    "visit:score_evidence_matches_questions",
+    "SSE:terminal_replayed",
+    "SSE:ordered_without_fake_model_events",
+    "visit:publish_before_complete",
+    "visit:check_before_publish",
+    "visit:publish_before_complete",
+    "visit:check_before_publish",
+    "visit:publish_before_complete",
+    "closed_visit:reject_more_questions",
+    "-faults:session_created",
+    "delayed:armed",
+    "-slow:accepted",
+    "delay:adapter_entered",
+    "delay:no_early_answer_on_refresh",
+    "retry:one_operation_while_busy",
+    "retry:changed_payload_rejected",
+    "busy:no_hidden_queue",
+    "busy:scenario_cannot_change_active_turn",
+    "delay:checked_text_and_honest_source",
+    "retry:single_history_entry",
+    "delayed:armed",
+    "-cancel:accepted",
+    "cancel:pending_until_unwind",
+    "cancel:finish_rejected_until_unwind",
+    "cancel:late_answer_not_published",
+    "wrong_fact:armed",
+    "-wrong_fact:accepted",
+    "wrong_fact:checked_text_and_honest_source",
+    "timeout:armed",
+    "-timeout:accepted",
+    "timeout:checked_text_and_honest_source",
+    "failure:armed",
+    "-failure:accepted",
+    "failure:no_answer_or_receipt",
+    "-recovered:accepted",
+    "recovery:checked_text_and_honest_source",
+    "recovery:service_ready",
+    "finish:accepted",
+    "evaluation:frozen_across_retry_and_query",
+    "scoring:accepted_questions_retained_after_cancel_or_failure",
+    "SSE:terminal_replayed",
+    "SSE:ordered_without_fake_model_events",
+    "SSE:no_cancelled_or_failed_answer",
+    "SSE:rejected_candidate_never_exposed",
+    "faults:injections_actually_executed",
+    "-empty:session_created",
+    "new_case:history_isolated",
+    "finish:accepted",
+    "evaluation:frozen_across_retry_and_query",
+    "empty_visit:zero_score_complete_feedback",
+    "new_case:previous_evaluation_unchanged",
+    "restart:new_instance_empty_memory_and_old_session_rejected"
+  ],
+  "sessions": [
+    {
+      "snapshot": {
+        "schema_version": "ui.v1",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "cursor": 17,
+        "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "epoch": 0,
+        "closed": true,
+        "phase": "FINISHED",
+        "active_request_id": null,
+        "operation_id": null,
+        "turns": [
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+            "operation_id": "067f9951294143fcbc39e8a2bcd468af",
+            "question": "哪里疼？",
+            "status": "COMPLETED",
+            "answer": "疼痛在胸骨后。",
+            "answer_source": "DEMO_RULE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+              "operation_id": "067f9951294143fcbc39e8a2bcd468af",
+              "epoch": 0,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "8fdd1270a10220dc263f0720eb828b7850b9ddf6fc80b75f42dbac5119821878",
+              "answer_source": "DEMO_RULE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632718968000000",
+              "published_monotonic_ns": "632718968000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+            "operation_id": "cc6a967fe3e749d3bfe6e3d88e6b4129",
+            "question": "每次疼痛持续多久？",
+            "status": "COMPLETED",
+            "answer": "每次疼痛持续10分钟。",
+            "answer_source": "DEMO_RULE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+              "operation_id": "cc6a967fe3e749d3bfe6e3d88e6b4129",
+              "epoch": 0,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+              "answer_source": "DEMO_RULE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632719015000000",
+              "published_monotonic_ns": "632719015000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+            "operation_id": "36e119f9591f462da227061b0612c731",
+            "question": "不是没有呼吸困难吗？",
+            "status": "COMPLETED",
+            "answer": "您想了解疼痛的哪个方面，请具体说明？",
+            "answer_source": "TEMPLATE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+              "operation_id": "36e119f9591f462da227061b0612c731",
+              "epoch": 0,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "254e13419d3da4ba94ed75fcaf12a7686b4e0b4c2fda98253c3e642de1a7eaae",
+              "answer_source": "TEMPLATE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632719046000000",
+              "published_monotonic_ns": "632719046000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          }
+        ],
+        "evaluation_ready": true
+      },
+      "evaluation": {
+        "schema_version": "chief-evaluation.v1",
+        "evaluation_id": "c6df7c5664c52f93943280acd6807613e250a222fc74684118b792bdd9dfbb10",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+        "frozen_at": "2026-10-23T09:14:37.465775+00:00",
+        "frozen_turn_count": 3,
+        "scoring_event_count": 3,
+        "rule_score": {
+          "rubric_version": "coverage-v1-draft",
+          "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+          "score": 20,
+          "max_score": 100,
+          "items": {
+            "location": {
+              "points": 10,
+              "max_points": 10,
+              "evidence_turns": [
+                1
+              ]
+            },
+            "quality": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "onset": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "duration": {
+              "points": 10,
+              "max_points": 10,
+              "evidence_turns": [
+                2
+              ]
+            },
+            "severity": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "radiation": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "trigger": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "relief": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "dyspnea": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "allergy": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            }
+          },
+          "review_turns": [
+            3
+          ],
+          "meaning": "draft_question_topic_coverage_only",
+          "review_status": "PENDING_TEACHER_REVIEW",
+          "clinical_validity": null,
+          "personality_or_real_emotion_inference": false
+        },
+        "summary_status": "READY",
+        "summary_source": "RULE_TEMPLATE",
+        "summary_version": "chief-summary-v1",
+        "summary_text": "本次问诊话题覆盖得分为 20/100。\n已覆盖：疼痛位置、持续时间。\n尚未覆盖：疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n另有 1 条提问待复核，未作为已确认的得分依据。\n建议在下一次练习中补充上述未覆盖话题。\n请结合原始提问核对待复核项。",
+        "topics": [
+          {
+            "topic_id": "location",
+            "label": "疼痛位置",
+            "points": 10,
+            "max_points": 10,
+            "covered": true,
+            "evidence": [
+              {
+                "turn_id": 1,
+                "question_number": 1,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+                "question": "哪里疼？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              }
+            ]
+          },
+          {
+            "topic_id": "quality",
+            "label": "疼痛性质",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "onset",
+            "label": "起病时间",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "duration",
+            "label": "持续时间",
+            "points": 10,
+            "max_points": 10,
+            "covered": true,
+            "evidence": [
+              {
+                "turn_id": 2,
+                "question_number": 2,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              }
+            ]
+          },
+          {
+            "topic_id": "severity",
+            "label": "疼痛程度",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "radiation",
+            "label": "放射部位",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "trigger",
+            "label": "诱发或加重因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "relief",
+            "label": "缓解因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "dyspnea",
+            "label": "呼吸困难",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "allergy",
+            "label": "过敏史",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          }
+        ],
+        "covered_topics": [
+          "location",
+          "duration"
+        ],
+        "missing_topics": [
+          "quality",
+          "onset",
+          "severity",
+          "radiation",
+          "trigger",
+          "relief",
+          "dyspnea",
+          "allergy"
+        ],
+        "review_items": [
+          {
+            "turn_id": 3,
+            "question_number": 3,
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+            "question": "不是没有呼吸困难吗？",
+            "turn_status": "COMPLETED",
+            "answer_published": true,
+            "reason": "double_negation_ambiguous",
+            "reason_label": "问题含双重否定，含义需要复核"
+          }
+        ],
+        "recommendations": [
+          "下一次练习请补充询问：疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。",
+          "请查看待复核提问，确认表述含义，再由教师复核。"
+        ],
+        "review_status": "PENDING_TEACHER_REVIEW",
+        "meaning": "draft_question_topic_coverage_only",
+        "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+        "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+      }
+    },
+    {
+      "snapshot": {
+        "schema_version": "ui.v1",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "cursor": 47,
+        "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "epoch": 1,
+        "closed": true,
+        "phase": "FINISHED",
+        "active_request_id": null,
+        "operation_id": null,
+        "turns": [
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+            "operation_id": "ba4a4f6fe64d48d69ca7f5c3480c569c",
+            "question": "每次疼痛持续多久？",
+            "status": "COMPLETED",
+            "answer": "每次疼痛持续10分钟。",
+            "answer_source": "DEMO_RULE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+              "operation_id": "ba4a4f6fe64d48d69ca7f5c3480c569c",
+              "epoch": 0,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+              "answer_source": "DEMO_RULE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632720765000000",
+              "published_monotonic_ns": "632720765000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+            "operation_id": "5b4dffc074f846ada236dfe9bb696594",
+            "question": "哪里疼？",
+            "status": "CANCELLED",
+            "answer": null,
+            "answer_source": null,
+            "actual_backend": null,
+            "delivery_kind": null,
+            "delivery_receipt": null,
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+            "operation_id": "3dcac4b7036d4806bcb13eed4d6c7c19",
+            "question": "每次疼痛持续多久？",
+            "status": "COMPLETED",
+            "answer": "每次疼痛持续10分钟。",
+            "answer_source": "TEMPLATE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+              "operation_id": "3dcac4b7036d4806bcb13eed4d6c7c19",
+              "epoch": 1,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+              "answer_source": "TEMPLATE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632722421000000",
+              "published_monotonic_ns": "632722421000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+            "operation_id": "b5f1b0670a754a50a7cf853ab81f7e74",
+            "question": "每次疼痛持续多久？",
+            "status": "COMPLETED",
+            "answer": "每次疼痛持续10分钟。",
+            "answer_source": "TEMPLATE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+              "operation_id": "b5f1b0670a754a50a7cf853ab81f7e74",
+              "epoch": 1,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+              "answer_source": "TEMPLATE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632722671000000",
+              "published_monotonic_ns": "632722671000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+            "operation_id": "3fa125d96d3245e09ae09ec0bc5d188f",
+            "question": "每次疼痛持续多久？",
+            "status": "FAILED",
+            "answer": null,
+            "answer_source": null,
+            "actual_backend": null,
+            "delivery_kind": null,
+            "delivery_receipt": null,
+            "error": {
+              "code": "MODEL_ERROR",
+              "message": "回答模块处理失败；本轮没有发布回答。"
+            }
+          },
+          {
+            "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+            "operation_id": "1277d924a46a45a28d4f5578ddbcb3de",
+            "question": "每次疼痛持续多久？",
+            "status": "COMPLETED",
+            "answer": "每次疼痛持续10分钟。",
+            "answer_source": "DEMO_RULE",
+            "actual_backend": null,
+            "delivery_kind": "WEB_TEXT_PUBLISHED",
+            "delivery_receipt": {
+              "schema_version": "text-delivery.v1",
+              "delivery_kind": "WEB_TEXT_PUBLISHED",
+              "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+              "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+              "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+              "operation_id": "1277d924a46a45a28d4f5578ddbcb3de",
+              "epoch": 1,
+              "case_id": "SYN_CP_01",
+              "case_version": "1.0-draft",
+              "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+              "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+              "answer_source": "DEMO_RULE",
+              "actual_backend": null,
+              "model_called": false,
+              "validation_status": "pass",
+              "validated_monotonic_ns": "632722968000000",
+              "published_monotonic_ns": "632722968000000",
+              "audio_played": false,
+              "browser_render_verified": false,
+              "user_read_verified": false
+            },
+            "error": null
+          }
+        ],
+        "evaluation_ready": true
+      },
+      "evaluation": {
+        "schema_version": "chief-evaluation.v1",
+        "evaluation_id": "0e04c00cadd131af314ad74808350b50f2e3459b8fad583fa1004c4afbd82234",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+        "frozen_at": "2026-10-23T09:14:41.369543+00:00",
+        "frozen_turn_count": 6,
+        "scoring_event_count": 6,
+        "rule_score": {
+          "rubric_version": "coverage-v1-draft",
+          "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+          "score": 20,
+          "max_score": 100,
+          "items": {
+            "location": {
+              "points": 10,
+              "max_points": 10,
+              "evidence_turns": [
+                2
+              ]
+            },
+            "quality": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "onset": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "duration": {
+              "points": 10,
+              "max_points": 10,
+              "evidence_turns": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "severity": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "radiation": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "trigger": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "relief": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "dyspnea": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "allergy": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            }
+          },
+          "review_turns": [],
+          "meaning": "draft_question_topic_coverage_only",
+          "review_status": "PENDING_TEACHER_REVIEW",
+          "clinical_validity": null,
+          "personality_or_real_emotion_inference": false
+        },
+        "summary_status": "READY",
+        "summary_source": "RULE_TEMPLATE",
+        "summary_version": "chief-summary-v1",
+        "summary_text": "本次问诊话题覆盖得分为 20/100。\n已覆盖：疼痛位置、持续时间。\n尚未覆盖：疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+        "topics": [
+          {
+            "topic_id": "location",
+            "label": "疼痛位置",
+            "points": 10,
+            "max_points": 10,
+            "covered": true,
+            "evidence": [
+              {
+                "turn_id": 2,
+                "question_number": 2,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+                "question": "哪里疼？",
+                "turn_status": "CANCELLED",
+                "answer_published": false
+              }
+            ]
+          },
+          {
+            "topic_id": "quality",
+            "label": "疼痛性质",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "onset",
+            "label": "起病时间",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "duration",
+            "label": "持续时间",
+            "points": 10,
+            "max_points": 10,
+            "covered": true,
+            "evidence": [
+              {
+                "turn_id": 1,
+                "question_number": 1,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              },
+              {
+                "turn_id": 3,
+                "question_number": 3,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              },
+              {
+                "turn_id": 4,
+                "question_number": 4,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              },
+              {
+                "turn_id": 5,
+                "question_number": 5,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "FAILED",
+                "answer_published": false
+              },
+              {
+                "turn_id": 6,
+                "question_number": 6,
+                "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+                "question": "每次疼痛持续多久？",
+                "turn_status": "COMPLETED",
+                "answer_published": true
+              }
+            ]
+          },
+          {
+            "topic_id": "severity",
+            "label": "疼痛程度",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "radiation",
+            "label": "放射部位",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "trigger",
+            "label": "诱发或加重因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "relief",
+            "label": "缓解因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "dyspnea",
+            "label": "呼吸困难",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "allergy",
+            "label": "过敏史",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          }
+        ],
+        "covered_topics": [
+          "location",
+          "duration"
+        ],
+        "missing_topics": [
+          "quality",
+          "onset",
+          "severity",
+          "radiation",
+          "trigger",
+          "relief",
+          "dyspnea",
+          "allergy"
+        ],
+        "review_items": [],
+        "recommendations": [
+          "下一次练习请补充询问：疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。"
+        ],
+        "review_status": "PENDING_TEACHER_REVIEW",
+        "meaning": "draft_question_topic_coverage_only",
+        "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+        "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+      }
+    },
+    {
+      "snapshot": {
+        "schema_version": "ui.v1",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "cursor": 50,
+        "session_id": "630006f25f62451a930392c306c6f262",
+        "case_id": "SYN_CP_02",
+        "case_version": "1.0-draft",
+        "epoch": 0,
+        "closed": true,
+        "phase": "FINISHED",
+        "active_request_id": null,
+        "operation_id": null,
+        "turns": [],
+        "evaluation_ready": true
+      },
+      "evaluation": {
+        "schema_version": "chief-evaluation.v1",
+        "evaluation_id": "448b5ad1d29285e1301c1eae7e2115c69402b30e063c67f7e903bfbcf2f551c9",
+        "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+        "session_id": "630006f25f62451a930392c306c6f262",
+        "case_id": "SYN_CP_02",
+        "case_version": "1.0-draft",
+        "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+        "frozen_at": "2026-10-23T09:14:41.464577+00:00",
+        "frozen_turn_count": 0,
+        "scoring_event_count": 0,
+        "rule_score": {
+          "rubric_version": "coverage-v1-draft",
+          "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+          "score": 0,
+          "max_score": 100,
+          "items": {
+            "location": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "quality": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "onset": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "duration": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "severity": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "radiation": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "trigger": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "relief": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "dyspnea": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            },
+            "allergy": {
+              "points": 0,
+              "max_points": 10,
+              "evidence_turns": []
+            }
+          },
+          "review_turns": [],
+          "meaning": "draft_question_topic_coverage_only",
+          "review_status": "PENDING_TEACHER_REVIEW",
+          "clinical_validity": null,
+          "personality_or_real_emotion_inference": false
+        },
+        "summary_status": "READY",
+        "summary_source": "RULE_TEMPLATE",
+        "summary_version": "chief-summary-v1",
+        "summary_text": "本次问诊话题覆盖得分为 0/100。\n本次尚无可计分的话题覆盖记录。\n尚未覆盖：疼痛位置、疼痛性质、起病时间、持续时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+        "topics": [
+          {
+            "topic_id": "location",
+            "label": "疼痛位置",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "quality",
+            "label": "疼痛性质",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "onset",
+            "label": "起病时间",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "duration",
+            "label": "持续时间",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "severity",
+            "label": "疼痛程度",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "radiation",
+            "label": "放射部位",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "trigger",
+            "label": "诱发或加重因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "relief",
+            "label": "缓解因素",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "dyspnea",
+            "label": "呼吸困难",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          },
+          {
+            "topic_id": "allergy",
+            "label": "过敏史",
+            "points": 0,
+            "max_points": 10,
+            "covered": false,
+            "evidence": []
+          }
+        ],
+        "covered_topics": [],
+        "missing_topics": [
+          "location",
+          "quality",
+          "onset",
+          "duration",
+          "severity",
+          "radiation",
+          "trigger",
+          "relief",
+          "dyspnea",
+          "allergy"
+        ],
+        "review_items": [],
+        "recommendations": [
+          "下一次练习请补充询问：疼痛位置、疼痛性质、起病时间、持续时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。"
+        ],
+        "review_status": "PENDING_TEACHER_REVIEW",
+        "meaning": "draft_question_topic_coverage_only",
+        "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+        "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+      }
+    }
+  ],
+  "events": [
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 1,
+      "event": "service.ready",
+      "session_id": null,
+      "request_id": null,
+      "epoch": 0,
+      "data": {
+        "backend": "demo"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 2,
+      "event": "session.created",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-visit",
+      "epoch": 0,
+      "data": {
+        "case_id": "SYN_CP_01"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 3,
+      "event": "turn.accepted",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "epoch": 0,
+      "data": {
+        "operation_id": "067f9951294143fcbc39e8a2bcd468af"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 4,
+      "event": "response.preparing",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 5,
+      "event": "validation.started",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 6,
+      "event": "answer.ready",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "epoch": 0,
+      "data": {
+        "text": "疼痛在胸骨后。",
+        "answer_source": "DEMO_RULE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+          "operation_id": "067f9951294143fcbc39e8a2bcd468af",
+          "epoch": 0,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "8fdd1270a10220dc263f0720eb828b7850b9ddf6fc80b75f42dbac5119821878",
+          "answer_source": "DEMO_RULE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632718968000000",
+          "published_monotonic_ns": "632718968000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 7,
+      "event": "turn.completed",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "epoch": 0,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 8,
+      "event": "turn.accepted",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "epoch": 0,
+      "data": {
+        "operation_id": "cc6a967fe3e749d3bfe6e3d88e6b4129"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 9,
+      "event": "response.preparing",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 10,
+      "event": "validation.started",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 11,
+      "event": "answer.ready",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "epoch": 0,
+      "data": {
+        "text": "每次疼痛持续10分钟。",
+        "answer_source": "DEMO_RULE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+          "operation_id": "cc6a967fe3e749d3bfe6e3d88e6b4129",
+          "epoch": 0,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+          "answer_source": "DEMO_RULE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632719015000000",
+          "published_monotonic_ns": "632719015000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 12,
+      "event": "turn.completed",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "epoch": 0,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 13,
+      "event": "turn.accepted",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+      "epoch": 0,
+      "data": {
+        "operation_id": "36e119f9591f462da227061b0612c731"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 14,
+      "event": "answer.ready",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+      "epoch": 0,
+      "data": {
+        "text": "您想了解疼痛的哪个方面，请具体说明？",
+        "answer_source": "TEMPLATE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+          "operation_id": "36e119f9591f462da227061b0612c731",
+          "epoch": 0,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "254e13419d3da4ba94ed75fcaf12a7686b4e0b4c2fda98253c3e642de1a7eaae",
+          "answer_source": "TEMPLATE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632719046000000",
+          "published_monotonic_ns": "632719046000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 15,
+      "event": "turn.completed",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+      "epoch": 0,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 16,
+      "event": "session.finished",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-finish-1",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 17,
+      "event": "evaluation.ready",
+      "session_id": "bdb3eb9c7c774b1bb8bf7554c18e8829",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-finish-1",
+      "epoch": 0,
+      "data": {
+        "evaluation_id": "c6df7c5664c52f93943280acd6807613e250a222fc74684118b792bdd9dfbb10",
+        "summary_source": "RULE_TEMPLATE"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 1,
+      "event": "service.ready",
+      "session_id": null,
+      "request_id": null,
+      "epoch": 0,
+      "data": {
+        "backend": "demo"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 18,
+      "event": "session.created",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-faults",
+      "epoch": 0,
+      "data": {
+        "case_id": "SYN_CP_01"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 19,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "epoch": 0,
+      "data": {
+        "operation_id": "ba4a4f6fe64d48d69ca7f5c3480c569c"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 20,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 21,
+      "event": "validation.started",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 22,
+      "event": "answer.ready",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "epoch": 0,
+      "data": {
+        "text": "每次疼痛持续10分钟。",
+        "answer_source": "DEMO_RULE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+          "operation_id": "ba4a4f6fe64d48d69ca7f5c3480c569c",
+          "epoch": 0,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+          "answer_source": "DEMO_RULE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632720765000000",
+          "published_monotonic_ns": "632720765000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 23,
+      "event": "turn.completed",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "epoch": 0,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 24,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+      "epoch": 0,
+      "data": {
+        "operation_id": "5b4dffc074f846ada236dfe9bb696594"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 25,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+      "epoch": 0,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 26,
+      "event": "cancel.pending",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+      "epoch": 1,
+      "data": {
+        "command_request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel-command"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 27,
+      "event": "turn.cancelled",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+      "epoch": 1,
+      "data": {
+        "status": "CANCELLED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 28,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "epoch": 1,
+      "data": {
+        "operation_id": "3dcac4b7036d4806bcb13eed4d6c7c19"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 29,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 30,
+      "event": "validation.started",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 31,
+      "event": "answer.ready",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "epoch": 1,
+      "data": {
+        "text": "每次疼痛持续10分钟。",
+        "answer_source": "TEMPLATE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+          "operation_id": "3dcac4b7036d4806bcb13eed4d6c7c19",
+          "epoch": 1,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+          "answer_source": "TEMPLATE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632722421000000",
+          "published_monotonic_ns": "632722421000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 32,
+      "event": "turn.completed",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "epoch": 1,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 33,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "epoch": 1,
+      "data": {
+        "operation_id": "b5f1b0670a754a50a7cf853ab81f7e74"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 34,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 35,
+      "event": "validation.started",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 36,
+      "event": "answer.ready",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "epoch": 1,
+      "data": {
+        "text": "每次疼痛持续10分钟。",
+        "answer_source": "TEMPLATE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+          "operation_id": "b5f1b0670a754a50a7cf853ab81f7e74",
+          "epoch": 1,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+          "answer_source": "TEMPLATE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632722671000000",
+          "published_monotonic_ns": "632722671000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 37,
+      "event": "turn.completed",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "epoch": 1,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 38,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+      "epoch": 1,
+      "data": {
+        "operation_id": "3fa125d96d3245e09ae09ec0bc5d188f"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 39,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 40,
+      "event": "turn.failed",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+      "epoch": 1,
+      "data": {
+        "status": "FAILED",
+        "ready": true,
+        "error": {
+          "code": "MODEL_ERROR",
+          "message": "回答模块处理失败；本轮没有发布回答。"
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 41,
+      "event": "turn.accepted",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "epoch": 1,
+      "data": {
+        "operation_id": "1277d924a46a45a28d4f5578ddbcb3de"
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 42,
+      "event": "response.preparing",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 43,
+      "event": "validation.started",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 44,
+      "event": "answer.ready",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "epoch": 1,
+      "data": {
+        "text": "每次疼痛持续10分钟。",
+        "answer_source": "DEMO_RULE",
+        "actual_backend": null,
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "delivery_receipt": {
+          "schema_version": "text-delivery.v1",
+          "delivery_kind": "WEB_TEXT_PUBLISHED",
+          "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+          "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+          "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+          "operation_id": "1277d924a46a45a28d4f5578ddbcb3de",
+          "epoch": 1,
+          "case_id": "SYN_CP_01",
+          "case_version": "1.0-draft",
+          "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+          "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+          "answer_source": "DEMO_RULE",
+          "actual_backend": null,
+          "model_called": false,
+          "validation_status": "pass",
+          "validated_monotonic_ns": "632722968000000",
+          "published_monotonic_ns": "632722968000000",
+          "audio_played": false,
+          "browser_render_verified": false,
+          "user_read_verified": false
+        }
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 45,
+      "event": "turn.completed",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "epoch": 1,
+      "data": {
+        "status": "COMPLETED",
+        "ready": true,
+        "error": null
+      }
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 46,
+      "event": "session.finished",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-finish-2",
+      "epoch": 1,
+      "data": {}
+    },
+    {
+      "schema_version": "ui.v1",
+      "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+      "seq": 47,
+      "event": "evaluation.ready",
+      "session_id": "94f8cce42d044ebd80d5e79ef0b803e0",
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-finish-2",
+      "epoch": 1,
+      "data": {
+        "evaluation_id": "0e04c00cadd131af314ad74808350b50f2e3459b8fad583fa1004c4afbd82234",
+        "summary_source": "RULE_TEMPLATE"
+      }
+    }
+  ],
+  "not_verified": [
+    "real_model",
+    "KV260",
+    "physical_touch",
+    "soft_keyboard",
+    "audio",
+    "PL"
+  ],
+  "restart": {
+    "verdict": "PASS",
+    "new_instance_id": "e04d6ade767341178df7f2d3b9a1c9e2",
+    "old_session_http_status": 404
+  },
+  "instance_id": "b14c106490954cba9ba80d9f9a62f2bf",
+  "simulation_history": [
+    {
+      "scenario": "normal",
+      "delay_s": 3.0,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-location",
+      "adapter_invoked": true,
+      "injection": "normal",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "normal",
+      "delay_s": 3.0,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-duration",
+      "adapter_invoked": true,
+      "injection": "normal",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "normal",
+      "delay_s": 3.0,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-review",
+      "adapter_invoked": false,
+      "injection": null,
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "delayed",
+      "delay_s": 1.5,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-slow",
+      "adapter_invoked": true,
+      "injection": "delayed",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "delayed",
+      "delay_s": 1.5,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-cancel",
+      "adapter_invoked": true,
+      "injection": "delayed",
+      "outcome": "NO_CHECKED_RESULT"
+    },
+    {
+      "scenario": "wrong_fact",
+      "delay_s": 0.2,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-wrong_fact",
+      "adapter_invoked": true,
+      "injection": "wrong_fact",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "timeout",
+      "delay_s": 0.2,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-timeout",
+      "adapter_invoked": true,
+      "injection": "timeout",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    },
+    {
+      "scenario": "failure",
+      "delay_s": 0.2,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-failure",
+      "adapter_invoked": true,
+      "injection": "failure",
+      "outcome": "NO_CHECKED_RESULT"
+    },
+    {
+      "scenario": "normal",
+      "delay_s": 3.0,
+      "request_id": "flow-1917bfa2f71a4711b2d0d66bc1e7c467-recovered",
+      "adapter_invoked": true,
+      "injection": "normal",
+      "outcome": "CHECKED_RESULT_RETURNED"
+    }
+  ],
+  "finished_at": "2026-10-23T09:14:41.886430+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS_CONTINUOUS_GUI_MULTI_TURN_AND_NEW_SESSION",
+  "turns": [
+    {
+      "session_id": "8a8f98a6af794af2be9b9d68fcbbf02d",
+      "case_id": "SYN_CP_03",
+      "question": "每次疼痛持续多久？",
+      "answer": "每次疼痛持续 20 分钟。",
+      "wall_seconds": 38.25075974699985,
+      "backend": "FPGA_REAL",
+      "cache": {
+        "hit": true,
+        "lookup_ms": 264.652207,
+        "new_tokens": 38,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 308.412555,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      }
+    },
+    {
+      "session_id": "8a8f98a6af794af2be9b9d68fcbbf02d",
+      "case_id": "SYN_CP_03",
+      "question": "疼痛在哪里？",
+      "answer": "疼痛在胸前正中。",
+      "wall_seconds": 29.267050466,
+      "backend": "FPGA_REAL",
+      "cache": {
+        "hit": true,
+        "lookup_ms": 252.266573,
+        "new_tokens": 34,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 269.848309,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      }
+    },
+    {
+      "session_id": "ad389b8414954de7b2d60f19e46a14d2",
+      "case_id": "SYN_CP_01",
+      "question": "每次疼痛持续多久？",
+      "answer": "每次疼痛持续 10 分钟。",
+      "wall_seconds": 36.32227337899985,
+      "backend": "FPGA_REAL",
+      "cache": {
+        "hit": true,
+        "lookup_ms": 252.088602,
+        "new_tokens": 38,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 269.262453,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      }
+    }
+  ],
+  "sessions": [
+    "8a8f98a6af794af2be9b9d68fcbbf02d",
+    "ad389b8414954de7b2d60f19e46a14d2"
+  ],
+  "user_session_id": "b27a6b5d4602410fad67e8eceeb5970a",
+  "user_questions_sent": 0,
+  "weight_loads": 72,
+  "permission_runs": 3384,
+  "worker_pid": 6596,
+  "remaining_seconds": 14211.917798775
+}

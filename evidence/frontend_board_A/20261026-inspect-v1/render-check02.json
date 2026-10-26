@@ -1,0 +1,49 @@
+{
+  "scope": "BOARD_FIREFOX_RENDER_ONLY_RULE_DEMO",
+  "profile_fix": "create missing explicit profile directory",
+  "port_check_fix": "SO_REUSEADDR accounts for prior closed HTTP connections",
+  "owned_server_pid": 6343,
+  "status": {
+    "schema_version": "ui.v1",
+    "instance_id": "2fe0d52ca6c64931b517a347cba26e9d",
+    "phase": "READY",
+    "ready": true,
+    "busy": false,
+    "current_session_id": null,
+    "backend": {
+      "configured": "demo",
+      "execution_kind": "DEMO_RULE",
+      "ready": true,
+      "hardware_enabled": false
+    },
+    "capabilities": {
+      "text": true,
+      "audio": false,
+      "rule_score": true,
+      "chief_narration": true,
+      "chief_summary_kind": "RULE_TEMPLATE",
+      "cancel_turn": true,
+      "generation_timeout_s": 180.0,
+      "max_active_turns": 1,
+      "pending_turn_queue": 0,
+      "max_turns": 200,
+      "max_sessions": 8
+    },
+    "failure": null,
+    "verification": {
+      "software_test_only": true,
+      "board": "NOT_TESTED",
+      "medical_review": "PENDING_TEACHER_REVIEW"
+    },
+    "demo_lab": false
+  },
+  "owned_browser_pid": 6350,
+  "firefox_rc": 0,
+  "firefox_stdout": "",
+  "firefox_stderr": "*** You are running in headless mode.\n",
+  "screenshot_path": "/home/ubuntu/snap/firefox/common/frontend-check-20261026-v1/home.png",
+  "screenshot_bytes": 31055,
+  "screenshot_sha256": "9a88fbe86895ee8645037e7935dff1006d7fe7e54beb7215d3d7dc8e8d2aa97d",
+  "owned_server_exit": -15,
+  "server_log": "INFO:     Started server process [6343]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:55294 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37252 - \"GET / HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37252 - \"GET /display/evaluation.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37256 - \"GET /console.js HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37256 - \"GET /display/chief-physician.png HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37268 - \"GET /display/tokens.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37256 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:37256 - \"GET /ui/v1/cases HTTP/1.1\" 200 OK\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [6343]\n"
+}

@@ -1,0 +1,23 @@
+python3 -B -I <<'PY_FRONTEND_CHECK'
+[?2004l[?2004h> import json,subprocess,urllib.request,os
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> def run(a):
+[?2004l[?2004h>     p=subprocess.run(a,capture_output=True,text=True,timeout=5)
+[?2004l[?2004h>     return dict(rc=p.returncode,out=p.stdout,err=p.stderr)
+[?2004l[?2004h> r={'listeners':run(['ss','-ltnp']),'processes':run(['ps','-u','ubuntu','-o','pid,ppid,etimes,comm']),'locks':Path('/proc/locks').read_text()}
+[?2004l[?2004h> try:
+[?2004l[?2004h>     with urllib.request.urlopen('http://127.0.0.1:8000/ui/v1/status',timeout=3) as f:r['status']=json.load(f)
+[?2004l[?2004h> except Exception as e:r['http_error']=str(e)
+[?2004l[?2004h> r['known_processes']={}
+[?2004l[?2004h> for pid in (6117,6124):
+[?2004l[?2004h>     p=Path('/proc')/str(pid)
+[?2004l[?2004h>     r['known_processes'][pid]=p.exists()
+[?2004l[?2004h> r['render_result_exists']=Path('/home/ubuntu/patient-web-demo-20261026/inspection-20261026-v1/render-result.json').exists()
+[?2004l[?2004h> print('__FRONTEND_'+'BEGIN__',flush=True)
+[?2004l[?2004h> print(json.dumps(r,ensure_ascii=True),flush=True)
+[?2004l[?2004h> print('__FRONTEND_'+'END__',flush=True)
+[?2004l[?2004h> PY_FRONTEND_CHECK
+[?2004l__FRONTEND_BEGIN__
+{"listeners": {"rc": 0, "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      4096         0.0.0.0:111       0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:5006      0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096            [::]:111          [::]:*          \nLISTEN 0      4096            [::]:22           [::]:*          \nLISTEN 0      4096           [::1]:631          [::]:*          \n", "err": ""}, "processes": {"rc": 0, "out": "    PID    PPID ELAPSED COMMAND\n   2979       1    3476 systemd\n   2985    2979    3475 (sd-pam)\n   2993    2979    3473 pipewire\n   2995    2979    3473 pipewire\n   2997    1519    3473 bash\n   2998    2979    3473 wireplumber\n   2999    2979    3473 pipewire-pulse\n   3005    2979    3473 dbus-daemon\n   5947    2979     284 xdg-document-po\n   5951    2979     284 xdg-permission-\n   6322    2997       0 python3\n   6324    6322       0 ps\n", "err": ""}, "locks": "1: FLOCK  ADVISORY  WRITE 1577 00:38:69 0 EOF\n2: FLOCK  ADVISORY  WRITE 1577 00:38:68 0 EOF\n3: FLOCK  ADVISORY  WRITE 832 00:1c:2727 0 EOF\n4: FLOCK  ADVISORY  WRITE 2993 00:2f:69 0 EOF\n5: FLOCK  ADVISORY  WRITE 2993 00:2f:68 0 EOF\n6: FLOCK  ADVISORY  WRITE 1025 b3:02:86285 0 EOF\n7: POSIX  ADVISORY  WRITE 457 00:1c:1120 0 EOF\n8: FLOCK  ADVISORY  WRITE 1623 00:38:80 0 EOF\n9: FLOCK  ADVISORY  WRITE 1512 00:1c:2981 0 EOF\n", "http_error": "<urlopen error [Errno 111] Connection refused>", "known_processes": {"6117": false, "6124": false}, "render_result_exists": false}
+__FRONTEND_END__
+[?2004hubuntu@kria:~$ 

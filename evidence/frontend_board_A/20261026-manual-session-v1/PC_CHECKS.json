@@ -1,0 +1,49 @@
+[
+  {
+    "argv": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--cd",
+      "/mnt/c/Patientqwen",
+      "python3",
+      "scripts/release/check_contracts.py"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"static_checks\": \"PASS\",\n  \"verification_level\": \"PC_TEST\",\n  \"contract_version\": \"0.1.0-draft.2\",\n  \"content_sha256\": \"c398d47956043a1a3e4cd95ba96de2205eedc38d89db0d037ec0dfa5af0e3af0\",\n  \"review_status\": \"DRAFT\",\n  \"hardware_test\": \"NOT_TESTED\",\n  \"validator_scope\": \"Local references, schema subset and static event fixtures; not full OpenAPI conformance or live service tests\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--cd",
+      "/mnt/c/Patientqwen",
+      "python3",
+      "scripts/release/qwen35_config.py"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"domain\": \"PC\",\n  \"configuration\": \"PASS\",\n  \"contract_sha256\": \"83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6\",\n  \"selected\": {\n    \"linear_backend\": {\n      \"owner\": \"A\",\n      \"manifest\": \"modules/linear_A/manifest.json\",\n      \"status\": \"PRESENT_UNVERIFIED\"\n    },\n    \"voice_backend\": {\n      \"owner\": \"A\",\n      \"manifest\": \"modules/voice_A/manifest.json\",\n      \"status\": \"PRESENT_UNVERIFIED\"\n    }\n  },\n  \"runtime\": \"NOT_TESTED\",\n  \"board\": \"NOT_TESTED\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--cd",
+      "/mnt/c/Patientqwen",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "bench/qwen35/web",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_manager_main_only_removes_unbound_stop (test_board_case.Tests) ... ok\ntest_transport_tracks_token_and_terminal_without_closing_owner (test_board_case.Tests) ... ok\ntest_unknown_manager_entry_is_not_executed (test_board_case.Tests) ... ok\ntest_graphical_admission_uses_real_pool_and_retains_memory_floor (test_interactive.Tests) ... ok\ntest_graphical_entry_accepts_only_the_pinned_early_heuristic (test_interactive.Tests) ... ok\ntest_graphical_variant_keeps_desktop_but_checks_existing_pl_holders (test_interactive.Tests) ... ok\ntest_miss_is_not_silently_accepted (test_interactive.Tests) ... ok\ntest_warm_and_request_use_exact_binding_and_require_hit (test_interactive.Tests) ... ok\ntest_actual_native_and_delivered_correlation_keep_ids_and_state (test_managed.ManagedTests) ... ok\ntest_cpu_or_pc_fixture_cannot_enter_board_web_mode (test_managed.ManagedTests) ... ok\ntest_factory_reuses_installed_frontend_and_live_owner_callback (test_managed.ManagedTests) ... ok\ntest_invalid_budget_is_not_available (test_managed.ManagedTests) ... ok\ntest_native_failure_is_preserved_and_not_restarted (test_managed.ManagedTests) ... ok\ntest_owner_not_ready_makes_no_worker_request (test_managed.ManagedTests) ... ok\ntest_short_budget_does_not_extend_window_or_submit (test_managed.ManagedTests) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.215s\n\nOK\n"
+  }
+]

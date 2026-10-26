@@ -1,0 +1,79 @@
+python3 -B -I <<'PY_FRONTEND_CHECK'
+[?2004l[?2004h> import os,json,socket,struct,base64,hashlib,time,subprocess,urllib.request
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> class Bidi:
+[?2004l[?2004h>     def __init__(self):
+[?2004l[?2004h>         self.s=socket.create_connection(('127.0.0.1',9222),timeout=12);self.i=0
+[?2004l[?2004h>         key=base64.b64encode(os.urandom(16)).decode()
+[?2004l[?2004h>         request='GET /session HTTP/1.1\r\nHost: 127.0.0.1:9222\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: '+key+'\r\nSec-WebSocket-Version: 13\r\n\r\n'
+[?2004l[?2004h>         self.s.sendall(request.encode());head=b''
+[?2004l[?2004h>         while not head.endswith(b'\r\n\r\n'):head+=self.exact(1)
+[?2004l[?2004h>         if b' 101 ' not in head:raise RuntimeError('WebSocket upgrade failed: '+head.decode())
+[?2004l[?2004h>     def exact(self,n):
+[?2004l[?2004h>         data=b''
+[?2004l[?2004h>         while len(data)<n:
+[?2004l[?2004h>             p=self.s.recv(n-len(data))
+[?2004l[?2004h>             if not p:raise EOFError('Browser connection closed')
+[?2004l[?2004h>             data+=p
+[?2004l[?2004h>         return data
+[?2004l[?2004h>     def send(self,payload,opcode=1):
+[?2004l[?2004h>         key=os.urandom(4);n=len(payload)
+[?2004l[?2004h>         head=bytes([128|opcode,128|n]) if n<126 else bytes([128|opcode,128|126])+struct.pack('!H',n) if n<65536 else bytes([128|opcode,128|127])+struct.pack('!Q',n)
+[?2004l[?2004h>         self.s.sendall(head+key+bytes(x^key[i%4] for i,x in enumerate(payload)))
+[?2004l[?2004h>     def receive(self):
+[?2004l[?2004h>         parts=[]
+[?2004l[?2004h>         while True:
+[?2004l[?2004h>             a,b=self.exact(2);n=b&127
+[?2004l[?2004h>             if n==126:n=struct.unpack('!H',self.exact(2))[0]
+[?2004l[?2004h>             elif n==127:n=struct.unpack('!Q',self.exact(8))[0]
+[?2004l[?2004h>             mask=self.exact(4) if b&128 else None;p=self.exact(n)
+[?2004l[?2004h>             if mask:p=bytes(x^mask[i%4] for i,x in enumerate(p))
+[?2004l[?2004h>             op=a&15
+[?2004l[?2004h>             if op==8:raise EOFError('WebSocket close')
+[?2004l[?2004h>             if op==9:self.send(p,10);continue
+[?2004l[?2004h>             parts.append(p)
+[?2004l[?2004h>             if a&128:return json.loads(b''.join(parts))
+[?2004l[?2004h>     def call(self,method,params):
+[?2004l[?2004h>         self.i+=1;self.send(json.dumps(dict(id=self.i,method=method,params=params)).encode())
+[?2004l[?2004h>         while True:
+[?2004l[?2004h>             r=self.receive()
+[?2004l[?2004h>             if r.get('id')!=self.i:continue
+[?2004l[?2004h>             if r.get('type')=='error':raise RuntimeError(json.dumps(r))
+[?2004l[?2004h>             return r['result']
+[?2004l[?2004h> b=Path('/home/ubuntu/patient-web-demo-20261026');out=b/'inspection-20261026-v1'
+[?2004l[?2004h> shots=Path.home()/'snap/firefox/common/frontend-check-20261026-v1'
+[?2004l[?2004h> profile=shots/'interactive-profile';profile.mkdir(exist_ok=False)
+[?2004l[?2004h> r={'scope':'ACTUAL_BOARD_FIREFOX_DOM_AND_SSE_RULE_DEMO_ONLY','screenshots':{}} [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K}
+[?2004l[?2004h> server=None;browser=None;ws=None
+[?2004l[?2004h> try:
+[?2004l[?2004h>     for port in (8000,9222):
+[?2004l[?2004h>         with socket.socket() as s:s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1);s.bind(('127.0.0.1',port))
+[?2004l[?2004h>     log=(out/'interactive-server.log').open('xb')
+[?2004l[?2004h>     server=subprocess.Popen([str(b/'start-demo.sh')],stdout=log,stderr=subprocess.STDOUT);r['server_pid']=server.pid
+[?2004l[?2004h>     for i in range(60):
+[?2004l[?2004h>         try:
+[?2004l[?2004h>             with urllib.request.urlopen('http://127.0.0.1:8000/ui/v1/status',timeout=1) as f:r['initial_status']=json.load(f)
+[?2004l[?2004h>             break
+[?2004l[?2004h>         except OSError:time.sleep(.25)
+[?2004l[?2004h>     else:raise RuntimeError('Service startup timeout')
+[?2004l[?2004h>     blog=(out/'interactive-firefox.log').open('xb')
+[?2004l[?2004h>     browser=subprocess.Popen(['/snap/bin/firefox','--headless','--no-remote','--profile',str(profile),'--remote-debugging-port','9222','about:blank'],stdout=blog,stderr=subprocess.STDOUT);r['browser_pid']=browser.pid
+[?2004l[?2004h>     for i in range(100):
+[?2004l[?2004h>         try:ws=Bidi();break
+[?2004l[?2004h>         except ConnectionRefusedError:time.sleep(.25)
+[?2004l[?2004h>     else:raise RuntimeError('Browser startup timeout')
+[?2004l[?2004h>     caps=ws.call('session.new',{'capabilities':{}});r['browser_version']=caps['capabilities'].get('browserVersion')
+[?2004l[?2004h>     context=ws.call('browsingContext.create',{'type':'tab'})['context']
+[?2004l[?2004h>     ws.call('browsingContext.setViewport',{'context':context,'viewport':{'width':1024,'height':600},'devicePixelRatio':1})
+[?2004l[?2004h>     ws.call('browsingContext.navigate',{'context':context,'url':'http://127.0.0.1:8000/','wait':'complete'})
+[?2004l[?2004h>     def evaluate(code):
+[?2004l[?2004h>         result=ws.call('script.evaluate',{'expression':code,'target':{'context':context},'awaitPromise':True})
+[?2004l[?2004h>         if result.get('type')=='exception':raise RuntimeError(json.dumps(result))
+[?2004l[?2004h>         return result.get('result',{}).get('value')
+[?2004l[?2004h>     def await_true(condition):
+[?2004l[?2004h>         expression='(async()=>{for(let i=0;i<60;i++){if('+condition+')return true;await new Promise(r=>setTimeout(r,100));}return false;})()'
+[?2004l[?2004h>         if evaluate(expression) is not True:raise RuntimeError('DOM condition timeout: '+condition)
+[?2004l[?2004__FRONTEND_BEGIN__
+{"scope": "ACTUAL_BOARD_FIREFOX_DOM_AND_SSE_RULE_DEMO_ONLY", "screenshots": {"ready.png": {"bytes": 34689, "sha256": "ca780ee41f6594d921e8eca63fed40312ccd3a1f9e0dc3c09bf815b12fcec95b"}, "answered.png": {"bytes": 43721, "sha256": "cc99be569d4f580579e1797986ebccf82c60c7cd78932ef7167dd0ae56c532b9"}, "evaluation.png": {"bytes": 308376, "sha256": "fec5822ce539b46f4b7b1d396d0db3c6c748070a6b0bf6a51938daea2c85c73b"}}, "server_pid": 6864, "initial_status": {"schema_version": "ui.v1", "instance_id": "dcb1f6f0441e4d7581af964864d51189", "phase": "READY", "ready": true, "busy": false, "current_session_id": null, "backend": {"configured": "demo", "execution_kind": "DEMO_RULE", "ready": true, "hardware_enabled": false}, "capabilities": {"text": true, "audio": false, "rule_score": true, "chief_narration": true, "chief_summary_kind": "RULE_TEMPLATE", "cancel_turn": true, "generation_timeout_s": 180.0, "max_active_turns": 1, "pending_turn_queue": 0, "max_turns": 200, "max_sessions": 8}, "failure": null, "verification": {"software_test_only": true, "board": "NOT_TESTED", "medical_review": "PENDING_TEACHER_REVIEW"}, "demo_lab": false}, "browser_pid": 6867, "browser_version": "158.0", "ready_dom": {"cases": 3, "startEnabled": true, "state": "\u7b49\u5f85\u63d0\u95ee"}, "answer_dom": "\u533b\u751f\uff1a\u6bcf\u6b21\u75bc\u75db\u6301\u7eed\u591a\u4e45\uff1f\u60a3\u8005\uff1a\u6bcf\u6b21\u75bc\u75db\u6301\u7eed10\u5206\u949f\u3002", "evaluation_dom": {"score": "10", "summary": "\u5df2\u8986\u76d6\uff1a\u6301\u7eed\u65f6\u95f4\u3002\n\u5c1a\u672a\u8986\u76d6\uff1a\u75bc\u75db\u4f4d\u7f6e\u3001\u75bc\u75db\u6027\u8d28\u3001\u8d77\u75c5\u65f6\u95f4\u3001\u75bc\u75db\u7a0b\u5ea6\u3001\u653e\u5c04\u90e8\u4f4d\u3001\u8bf1\u53d1\u6216\u52a0\u91cd\u56e0\u7d20\u3001\u7f13\u89e3\u56e0\u7d20\u3001\u547c\u5438\u56f0\u96be\u3001\u8fc7\u654f\u53f2\u3002\n\u5efa\u8bae\u5728\u4e0b\u4e00\u6b21\u7ec3\u4e60\u4e2d\u8865\u5145\u4e0a\u8ff0\u672a\u8986\u76d6\u8bdd\u9898\u3002", "error": ""}, "verdict": "PASS_BOARD_FIREFOX_RULE_WORKFLOW", "browser_exit": -15, "server_exit": -15, "interactive-firefox.log": "*** You are running in headless mode.\nWebDriver BiDi listening on ws://127.0.0.1:9222\n1792994157934\tRemoteAgent\tINFO\tPerform WebSocket upgrade for incoming connection from 127.0.0.1:33168\n[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt\nconsole.error: RSLoader: \n  Failed to retrieve recipes from Remote Settings\n  Message: Error: Could not sync nimbus-desktop-experiments: get-exception\n  Stack:\n    RemoteSettingsSyncError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1562:5\ngetRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:816:13\n\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\n", "interactive-server.log": "INFO:     Started server process [6864]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:46272 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET / HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET /display/evaluation.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /console.js HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /display/chief-physician.png HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /display/tokens.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /favicon.ico HTTP/1.1\" 404 Not Found\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/cases HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"POST /ui/v1/sessions HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/events?session_id=e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"POST /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/turns HTTP/1.1\" 202 Accepted\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48936 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"POST /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/finish HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /display/clinic-background.png HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48936 - \"GET /display/chief-physician-speaking.png HTTP/1.1\" 200 OK\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [6864]\n"}
+__FRONTEND_END__
+[?2004hubuntu@kria:~$ 

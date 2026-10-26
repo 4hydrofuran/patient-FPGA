@@ -1,0 +1,13 @@
+{
+  "listeners": {
+    "rc": 0,
+    "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      4096         0.0.0.0:111       0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:5006      0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096            [::]:111          [::]:*          \nLISTEN 0      4096            [::]:22           [::]:*          \nLISTEN 0      4096           [::1]:631          [::]:*          \n",
+    "err": ""
+  },
+  "user_processes": {
+    "rc": 0,
+    "out": "    PID    PPID ELAPSED COMMAND\n   2979       1    3745 systemd\n   2985    2979    3745 (sd-pam)\n   2993    2979    3742 pipewire\n   2995    2979    3742 pipewire\n   2997    1519    3742 bash\n   2998    2979    3742 wireplumber\n   2999    2979    3742 pipewire-pulse\n   3005    2979    3742 dbus-daemon\n   5947    2979     554 xdg-document-po\n   5951    2979     554 xdg-permission-\n   7117    2979      49 snap\n   7399    2997       0 python3\n   7401    7399       0 ps\n",
+    "err": ""
+  },
+  "owned_processes_remaining": []
+}

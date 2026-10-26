@@ -1,0 +1,142 @@
+{
+  "host": "kria",
+  "kernel": "6.8.0-1036-xilinx",
+  "boot": "a009c890-e320-408d-9334-bd43bfa52807",
+  "processes": {
+    "rc": 0,
+    "out": "    PID    PPID ELAPSED COMMAND\n      1       0    4143 systemd\n      2       0    4143 kthreadd\n      3       2    4143 pool_workqueue_release\n      4       2    4143 kworker/R-rcu_g\n      5       2    4143 kworker/R-rcu_p\n      6       2    4143 kworker/R-slub_\n      7       2    4143 kworker/R-netns\n     12       2    4143 kworker/R-mm_pe\n     13       2    4143 rcu_tasks_kthread\n     14       2    4143 rcu_tasks_rude_kthread\n     15       2    4143 rcu_tasks_trace_kthread\n     16       2    4143 ksoftirqd/0\n     17       2    4143 rcu_preempt\n     18       2    4143 migration/0\n     19       2    4143 idle_inject/0\n     20       2    4143 cpuhp/0\n     21       2    4143 cpuhp/1\n     22       2    4143 idle_inject/1\n     23       2    4143 migration/1\n     24       2    4143 ksoftirqd/1\n     27       2    4143 cpuhp/2\n     28       2    4143 idle_inject/2\n     29       2    4143 migration/2\n     30       2    4143 ksoftirqd/2\n     33       2    4143 cpuhp/3\n     34       2    4143 idle_inject/3\n     35       2    4143 migration/3\n     36       2    4143 ksoftirqd/3\n     39       2    4143 kdevtmpfs\n     40       2    4143 kworker/R-inet_\n     41       2    4143 kauditd\n     42       2    4143 khungtaskd\n     43       2    4143 oom_reaper\n     45       2    4143 kworker/R-write\n     46       2    4143 kcompactd0\n     47       2    4143 ksmd\n     49       2    4143 khugepaged\n     50       2    4143 kworker/R-kinte\n     51       2    4143 kworker/R-kbloc\n     52       2    4143 kworker/R-blkcg\n     53       2    4142 kworker/R-tpm_d\n     54       2    4142 kworker/R-ata_s\n     55       2    4142 kworker/R-md\n     56       2    4142 kworker/R-md_bi\n     57       2    4142 kworker/R-edac-\n     58       2    4142 kworker/R-devfr\n     59       2    4142 watchdogd\n     61       2    4142 kworker/R-quota\n     62       2    4142 kworker/2:1H-kblockd\n     63       2    4142 kworker/R-rpcio\n     64       2    4142 kworker/R-xprti\n     66       2    4142 kswapd0\n     67       2    4142 ecryptfs-kthread\n     68       2    4142 kworker/R-nfsio\n     69       2    4141 kworker/R-kthro\n     72       2    4141 kworker/R-uas\n     73       2    4141 zynqmp-aes.0-engine\n     74       2    4141 zynqmp-sha3-384.0-engine\n     75       2    4141 xilinx_rsa.0-engine\n     76       2    4141 kpktgend_0\n     77       2    4141 kpktgend_1\n     78       2    4141 kpktgend_2\n     79       2    4141 kpktgend_3\n     80       2    4141 kworker/R-mld\n     81       2    4141 kworker/R-ipv6_\n     88       2    4141 kworker/R-kstrp\n     91       2    4138 kworker/u9:0\n     93       2    4138 kworker/0:2-events\n     95       2    4135 irq/39-fd4a0000.display\n     96       2    4134 card0-crtc0\n     97       2    4134 card0-crtc1\n     98       2    4134 card0-crtc2\n     99       2    4134 spi2\n    101       2    4133 hwrng\n    104       2    4132 kworker/3:2-mm_percpu_wq\n    107       2    4132 kworker/R-charg\n    110       2    4132 kworker/1:3-mm_percpu_wq\n    111       2    4132 kworker/R-sdhci\n    112       2    4132 irq/48-mmc1\n    113       2    4132 kworker/R-mmc_c\n    114       2    4132 kworker/1:1H-kblockd\n    167       2    4131 kworker/3:1H-kblockd\n    284       2    4129 kworker/R-raid5\n    324       2    4128 jbd2/mmcblk1p2-8\n    325       2    4128 kworker/R-ext4-\n    326       2    4128 kworker/0:2H-mmc_complete\n    408       1    4124 systemd-journal\n    433       2    4123 kworker/R-kmpat\n    434       2    4123 kworker/R-kmpat\n    457       1    4123 multipathd\n    476       1    4123 systemd-udevd\n    507       2    4122 psimon\n    832       1    4117 rpcbind\n    843       1    4117 systemd-resolve\n    848       1    4117 systemd-timesyn\n    996       1    4107 accounts-daemon\n    998       2    4107 kpktgend_0\n    999       2    4107 kpktgend_1\n   1000       2    4107 kpktgend_2\n   1001       2    4107 kpktgend_3\n   1003       1    4107 dbus-daemon\n   1019       1    4107 polkitd\n   1025       1    4107 snapd\n   1030       1    4107 systemd-logind\n   1034       1    4107 udisksd\n   1046       1    4106 dfx-mgrd\n   1136       1    4106 fancontrol\n   1149       1    4106 rsyslogd\n   1262       1    4105 NetworkManager\n   1263       1    4105 wpa_supplicant\n   1276       1    4105 ModemManager\n   1467       1    4097 cupsd\n   1468       1    4097 kria-dashboard-\n   1469       1    4097 unattended-upgr\n   1508    1468    4095 python3\n   1512       1    4093 cron\n   1519       1    4093 login\n   1542       1    4090 gdm3\n   1549    1542    4090 gdm-session-wor\n   1556       2    4090 psimon\n   1558       1    4090 systemd\n   1559    1558    4090 (sd-pam)\n   1577    1558    4087 pipewire\n   1578    1558    4087 pipewire\n   1579    1558    4087 wireplumber\n   1580    1558    4087 pipewire-pulse\n   1581    1549    4087 gdm-wayland-ses\n   1584    1558    4087 dbus-daemon\n   1588    1581    4087 dbus-run-sessio\n   1591    1588    4087 dbus-daemon\n   1592    1588    4087 gnome-session-b\n   1623    1592    4086 gnome-shell\n   1654       1    4078 at-spi-bus-laun\n   1660    1654    4078 dbus-daemon\n   1661    1623    4078 Xwayland\n   1663       1    4078 at-spi2-registr\n   1664       1    4078 colord\n   1701       1    4075 xdg-permission-\n   1708       1    4074 gjs\n   1711       1    4074 upowerd\n   1722    1592    4074 gsd-sharing\n   1728    1592    4074 gsd-wacom\n   1732    1592    4074 gsd-color\n   1734    1592    4074 gsd-keyboard\n   1739    1592    4074 gsd-print-notif\n   1743    1592    4074 gsd-rfkill\n   1746    1592    4074 gsd-smartcard\n   1751    1592    4074 gsd-datetime\n   1753    1592    4074 gsd-media-keys\n   1757    1592    4074 gsd-screensaver\n   1760    1592    4074 gsd-sound\n   1764    1592    4074 gsd-a11y-settin\n   1771    1592    4074 gsd-housekeepin\n   1777    1592    4074 gsd-power\n   1813       1    4074 gsd-printer\n   1909    1623    4072 mutter-x11-fram\n   1953       1    4070 gjs\n   2671       2    3382 kworker/3:1-cgroup_free\n   2979       1    3125 systemd\n   2985    2979    3125 (sd-pam)\n   2993    2979    3123 pipewire\n   2995    2979    3123 pipewire\n   2997    1519    3123 bash\n   2998    2979    3123 wireplumber\n   2999    2979    3123 pipewire-pulse\n   3005    2979    3122 dbus-daemon\n   3347       1    2794 sshd\n   3363       2    2780 kworker/2:2\n   3364       2    2780 kworker/2:3-events\n   3962       2    2236 kworker/u8:1-events_power_efficient\n   4255       1    1889 fwupd\n   4517       2    1582 kworker/0:1-events\n   4652       2    1417 kworker/u8:2-events_power_efficient\n   5063       2     956 kworker/u8:3-events_power_efficient\n   5092       2     922 kworker/2:2H\n   5396       2     552 kworker/3:2H\n   5534       2     384 kworker/1:1\n   5559       2     353 kworker/1:2H\n   5568       2     343 kworker/u8:0-flush-179:0\n   5597       2     311 kworker/0:0H\n   5622       2     281 kworker/2:0H\n   5768       2      96 kworker/3:0H\n   5834       2      25 kworker/1:0H\n   5854    1136       1 sleep\n   5855    2997       0 python3\n   5856    5855       0 ps\n",
+    "err": ""
+  },
+  "locks": "1: FLOCK  ADVISORY  WRITE 1577 00:38:69 0 EOF\n2: FLOCK  ADVISORY  WRITE 1577 00:38:68 0 EOF\n3: FLOCK  ADVISORY  WRITE 832 00:1c:2727 0 EOF\n4: FLOCK  ADVISORY  WRITE 2993 00:2f:69 0 EOF\n5: FLOCK  ADVISORY  WRITE 2993 00:2f:68 0 EOF\n6: FLOCK  ADVISORY  WRITE 1025 b3:02:86285 0 EOF\n7: POSIX  ADVISORY  WRITE 457 00:1c:1120 0 EOF\n8: FLOCK  ADVISORY  WRITE 1623 00:38:80 0 EOF\n9: FLOCK  ADVISORY  WRITE 1512 00:1c:2981 0 EOF\n",
+  "lock_files": [
+    {
+      "path": "/var/lock/kv260-a1/deployment.lock",
+      "inode": 277086,
+      "device": 45826
+    },
+    {
+      "path": "/var/lock/kv260-a1/a12-finalize-coordinator.lock",
+      "inode": 277025,
+      "device": 45826
+    }
+  ],
+  "listeners": {
+    "rc": 0,
+    "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      4096         0.0.0.0:111       0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:5006      0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096            [::]:111          [::]:*          \nLISTEN 0      4096            [::]:22           [::]:*          \nLISTEN 0      4096           [::1]:631          [::]:*          \n",
+    "err": ""
+  },
+  "browser_paths": {
+    "firefox": "/snap/bin/firefox",
+    "chromium": null,
+    "chromium-browser": null,
+    "google-chrome": null,
+    "epiphany": null,
+    "cog": null,
+    "xdg-open": null
+  },
+  "packages": {
+    "rc": 1,
+    "out": "firefox  unknown ok not-installed\nfirefox-esr  unknown ok not-installed\ngir1.2-webkit-6.0 2.52.6-0ubuntu0.24.04.1 install ok installed\ngir1.2-webkit2-4.1 2.52.6-0ubuntu0.24.04.1 install ok installed\ngir1.2-webkit2webextension-4.1  unknown ok not-installed\ngir1.2-webkitwebprocessextension-6.0  unknown ok not-installed\nlibwebkit2gtk-4.1-0 2.52.6-0ubuntu0.24.04.1 install ok installed\nlibwebkitgtk-6.0-4 2.52.6-0ubuntu0.24.04.1 install ok installed\n",
+    "err": "dpkg-query: no packages found matching *chromium*\ndpkg-query: no packages found matching *epiphany*\ndpkg-query: no packages found matching *nginx*\ndpkg-query: no packages found matching *nodejs*\ndpkg-query: no packages found matching *python3-flask*\n"
+  },
+  "snap": {
+    "rc": 0,
+    "out": "Name               Version                         Rev    Tracking       Publisher    Notes\nbare               1.0                             5      latest/stable  canonical**  base\ncore20             20260901                        2924   latest/stable  canonical**  base\ncore22             20250315                        1912   latest/stable  canonical**  base\ncore24             20260824                        2125   latest/stable  canonical**  base\nfirefox            158.0-2                         9056   latest/stable  mozilla**    -\ngnome-46-2404      0+git.b31ceab-sdk0+git.f80dd8b  169    latest/stable  canonical**  -\ngtk-common-themes  0.1-81-g442e511                 1535   latest/stable  canonical**  -\nkria-dashboard     0.2                             14     latest/stable  tchavadar    -\nmesa-2404          25.2.8-snap288                  1836   latest/stable  canonical**  -\nsnapd              2.67.1                          23772  latest/stable  canonical**  snapd\n",
+    "err": "WARNING: There is 1 new warning. See 'snap warnings'.\n"
+  },
+  "sessions": {
+    "rc": 0,
+    "out": " 3 1000 ubuntu -     ttyPS1 active no  -\nc1  114 gdm    seat0 tty1   active yes 1h 2min ago\n",
+    "err": ""
+  },
+  "home_top": [
+    ".cache",
+    "Downloads",
+    "Templates",
+    "a12-step07-mlp-20261024-v1.tar",
+    "a10-isolated-idle-20261023-v3",
+    ".Xauthority",
+    "a12-step06-review-readback-20261024-v1.tar.gz",
+    "homeubuntua10-kernel-trial-20261020-v1",
+    "a10-irq2-stage-20261021-v1",
+    "a10-candidate-idle-20261021-v3",
+    "a11-open-upload-20261023-v1",
+    "a10-idle-candidate-20261021-v2",
+    "a11-mlp-20261023-v1",
+    ".bash_logout",
+    "a10-kernel-trial-20261020-v1",
+    "a11-compute-patch-20261023-v1",
+    "a10-unbound-cleanup-c23daaa46e6dda94.py",
+    "a12-health-opt-readback-20261024-v1.tar.gz",
+    "a10-isolated-idle-20261023-v2",
+    "a12-step06-20261023-v1.tar",
+    "Music",
+    "a12-step07-finalize-20261024-v1.tar.gz",
+    "a12-step08-generation-20261024-v1.tar",
+    "a12-step06-readback-20261023-v1.tar.gz",
+    "Videos",
+    "a12-step08-diagnostic-readback-20261024-v1.tar.gz",
+    "a12-step07-single-20261023-v1.tar",
+    "a10-candidate-idle-cleanup-20261021-v2.jsonl",
+    ".local",
+    ".profile",
+    "a10-step5-source-20261022.b64",
+    "Public",
+    "a10-minimal-20261021-v1",
+    "a10-idle-cleanup-20261019-v1",
+    "a12-step09-context-20261024-v1.tar",
+    "a12-step10-optimized-20261024-v1.tar",
+    "a12-step06-readback-20261023-v2.tar.gz",
+    "a10-idle-review-20261021-v1",
+    "Desktop",
+    "a10-isolated-idle-20261023-v4",
+    "a10-isolated-idle-20261023-v1",
+    ".bashrc",
+    "a12-cpu01b-driver-20261024-v1.py.gz",
+    "a12-step07-mlp-readback-20261024-v1.tar.gz",
+    "a10-unbound-cleanup-5edad81c2336d852.py",
+    "a12-step08-generation-readback-20261024-v1.tar.gz",
+    "a12-step10-optimized-readback-20261024-v1.tar.gz",
+    "a10-minimal-continue-20261021-v1",
+    "snap",
+    ".ssh",
+    "a12-step10-baseline-readback-20261024-v1.tar.gz",
+    "a10-driver-check-20261018-v1",
+    ".lesshst",
+    "patient-web-demo-20261026",
+    "a12-health-opt-stage-20261024-v1.py.gz",
+    "a12-step09-context-readback-20261024-v1.tar.gz",
+    "a10-refcount-build-20261022-v1",
+    "a12-step09-short-20261024-v1.tar",
+    "a12-cpu02-driver-20261024-v1.py.gz",
+    "a12-step08-diagnostic-20261024-v1.tar",
+    "Pictures",
+    "a10-isolated-single-20261023-v1",
+    "kv260-staging",
+    "a12-step10-baseline-20261024-v1.tar",
+    "a10-idle-once-20261019-v1",
+    "a10-irq2-step5-20261022",
+    ".bash_history",
+    "a10-candidate-idle-cleanup-20261021.jsonl",
+    "Documents",
+    ".sudo_as_admin_successful",
+    "a10-linkage-check-20261018-v1",
+    "a12-step06-review-20261024-v1.tar",
+    ".config",
+    "a10-driver-check-20261018-v2",
+    "a12-step07-single-stopped-readback-20261023-v1.tar.gz",
+    "a12-cpu01-integrated-driver-20261024-v1.py.gz",
+    "a12-step09-short-readback-20261024-v1.tar.gz",
+    ".python_history"
+  ],
+  "units": {
+    "rc": 0,
+    "out": "  accounts-daemon.service             loaded active running Accounts Service\n  colord.service                      loaded active running Manage, Install and Generate Color Profiles\n  cron.service                        loaded active running Regular background program processing daemon\n  cups.service                        loaded active running CUPS Scheduler\n  dbus.service                        loaded active running D-Bus System Message Bus\n  dfx-mgr.service                     loaded active running dfx-mgrd Dynamic Function eXchange\n  fancontrol.service                  loaded active running fan speed regulator\n  fwupd.service                       loaded active running Firmware update daemon\n  gdm.service                         loaded active running GNOME Display Manager\n  ModemManager.service                loaded active running Modem Manager\n  multipathd.service                  loaded active running Device-Mapper Multipath Device Controller\n  NetworkManager.service              loaded active running Network Manager\n  polkit.service                      loaded active running Authorization Manager\n  rpcbind.service                     loaded active running RPC bind portmap service\n  rsyslog.service                     loaded active running System Logging Service\n  serial-getty@ttyPS1.service         loaded active running Serial Getty on ttyPS1\n  snap.kria-dashboard.service.service loaded active running Service for snap application kria-dashboard.service\n  snapd.service                       loaded active running Snap Daemon\n  ssh.service                         loaded active running OpenBSD Secure Shell server\n  systemd-journald.service            loaded active running Journal Service\n  systemd-logind.service              loaded active running User Login Management\n  systemd-resolved.service            loaded active running Network Name Resolution\n  systemd-timesyncd.service           loaded active running Network Time Synchronization\n  systemd-udevd.service               loaded active running Rule-based Manager for Device Events and Files\n  udisks2.service                     loaded active running Disk Manager\n  unattended-upgrades.service         loaded active running Unattended Upgrades Shutdown\n  upower.service                      loaded active running Daemon for power management\n  user@1000.service                   loaded active running User Manager for UID 1000\n  user@114.service                    loaded active running User Manager for UID 114\n  wpa_supplicant.service              loaded active running WPA supplicant\n",
+    "err": ""
+  },
+  "app_files": {
+    "rc": 1,
+    "out": "/home/ubuntu/patient-web-demo-20261026/web_gateway/README.md\n/home/ubuntu/kv260-staging/a12-ordinary-resource-20261026-v1/bundle/README.md\n",
+    "err": "find: ???/home/ubuntu/a10-irq2-step5-20261022???: Permission denied\nfind: ???/opt/patient-qwen???: Permission denied\nfind: ???/var/www???: No such file or directory\n"
+  }
+}

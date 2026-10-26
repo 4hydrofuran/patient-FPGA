@@ -1,0 +1,389 @@
+{
+  "scope": "BOARD_FIREFOX_AND_RULE_DEMO_ONLY_NO_REAL_MODEL_OR_PL",
+  "output": "/home/ubuntu/patient-web-demo-20261026/inspection-20261026-v1",
+  "browser_screenshot": "/home/ubuntu/snap/firefox/common/frontend-check-20261026-v1/home.png",
+  "reference_files": [
+    {
+      "source": "system_qwen35/app/planning.py",
+      "expected": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7",
+      "actual": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7"
+    },
+    {
+      "source": "system_qwen35/app/domain.py",
+      "expected": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da",
+      "actual": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da"
+    },
+    {
+      "source": "system_qwen35/app/checking.py",
+      "expected": "afac4ee61c9ce3d14ec2bd2e56db5a127f44c1b5dce005126eba5a96120dceb7",
+      "actual": "afac4ee61c9ce3d14ec2bd2e56db5a127f44c1b5dce005126eba5a96120dceb7"
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_03.json",
+      "expected": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "actual": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced"
+    },
+    {
+      "source": "system_qwen35/app/scoring.py",
+      "expected": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb",
+      "actual": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb"
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_01.json",
+      "expected": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "actual": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7"
+    },
+    {
+      "source": "system_qwen35/app/session.py",
+      "expected": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173",
+      "actual": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173"
+    },
+    {
+      "source": "system_qwen35/cases/SYN_CP_02.json",
+      "expected": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "actual": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52"
+    }
+  ],
+  "owned_server_pid": 6117,
+  "status": {
+    "schema_version": "ui.v1",
+    "instance_id": "a6b2da1e3bae4224a1bd6954e7a14a75",
+    "phase": "READY",
+    "ready": true,
+    "busy": false,
+    "current_session_id": null,
+    "backend": {
+      "configured": "demo",
+      "execution_kind": "DEMO_RULE",
+      "ready": true,
+      "hardware_enabled": false
+    },
+    "capabilities": {
+      "text": true,
+      "audio": false,
+      "rule_score": true,
+      "chief_narration": true,
+      "chief_summary_kind": "RULE_TEMPLATE",
+      "cancel_turn": true,
+      "generation_timeout_s": 180.0,
+      "max_active_turns": 1,
+      "pending_turn_queue": 0,
+      "max_turns": 200,
+      "max_sessions": 8
+    },
+    "failure": null,
+    "verification": {
+      "software_test_only": true,
+      "board": "NOT_TESTED",
+      "medical_review": "PENDING_TEACHER_REVIEW"
+    },
+    "demo_lab": false
+  },
+  "api_paths": [
+    "/ui/v1/status",
+    "/ui/v1/cases",
+    "/ui/v1/sessions",
+    "/ui/v1/sessions/{session_id}",
+    "/ui/v1/sessions/{session_id}/turns",
+    "/ui/v1/sessions/{session_id}/turns/{request_id}",
+    "/ui/v1/sessions/{session_id}/cancel",
+    "/ui/v1/sessions/{session_id}/finish",
+    "/ui/v1/sessions/{session_id}/evaluation",
+    "/ui/v1/events"
+  ],
+  "owned_browser_pid": 6124,
+  "firefox_rc": 1,
+  "firefox_stdout": "",
+  "firefox_stderr": "*** You are running in headless mode.\nCould not find profile folder.\n",
+  "acceptance_rc": 0,
+  "acceptance_stdout": "{\"verdict\": \"PASS_DEMO_TEXT_DELIVERY\", \"output\": \"/home/ubuntu/patient-web-demo-20261026/inspection-20261026-v1/rule-demo-acceptance.json\"}\n",
+  "acceptance_stderr": "",
+  "acceptance": {
+    "schema_version": "delivery-acceptance.v1",
+    "started_at": "2026-10-26T05:49:45.481218+00:00",
+    "expected_backend": "demo",
+    "base_url": "http://127.0.0.1:8000",
+    "verdict": "PASS_DEMO_TEXT_DELIVERY",
+    "checks": [
+      "explicit_backend_matches",
+      "service_ready_and_idle",
+      "session_created",
+      "turn_accepted",
+      "turn_completed",
+      "receipt_identity_and_hash_valid",
+      "snapshot_recovers_same_single_publication_without_browser_ack",
+      "session_finished",
+      "receipt_stable_after_finish",
+      "evaluation_identity_schema_and_digest_valid",
+      "evaluation_matches_probe_question_evidence",
+      "demo_does_not_claim_model_execution"
+    ],
+    "scope": "HTTP text delivery and chief template evaluation; not medical, PL or board acceptance",
+    "single_demo": true,
+    "service_status": {
+      "schema_version": "ui.v1",
+      "instance_id": "a6b2da1e3bae4224a1bd6954e7a14a75",
+      "phase": "READY",
+      "ready": true,
+      "busy": false,
+      "current_session_id": null,
+      "backend": {
+        "configured": "demo",
+        "execution_kind": "DEMO_RULE",
+        "ready": true,
+        "hardware_enabled": false
+      },
+      "capabilities": {
+        "text": true,
+        "audio": false,
+        "rule_score": true,
+        "chief_narration": true,
+        "chief_summary_kind": "RULE_TEMPLATE",
+        "cancel_turn": true,
+        "generation_timeout_s": 180.0,
+        "max_active_turns": 1,
+        "pending_turn_queue": 0,
+        "max_turns": 200,
+        "max_sessions": 8
+      },
+      "failure": null,
+      "verification": {
+        "software_test_only": true,
+        "board": "NOT_TESTED",
+        "medical_review": "PENDING_TEACHER_REVIEW"
+      },
+      "demo_lab": false
+    },
+    "turn_result": {
+      "request_id": "accept-cdcbf9bf544045dc819dd6642361b48f-q",
+      "operation_id": "e821bc7ada2541a5bd0e76e161714634",
+      "question": "每次疼痛持续多久？",
+      "status": "COMPLETED",
+      "answer": "每次疼痛持续10分钟。",
+      "answer_source": "DEMO_RULE",
+      "actual_backend": null,
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "delivery_receipt": {
+        "schema_version": "text-delivery.v1",
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "instance_id": "a6b2da1e3bae4224a1bd6954e7a14a75",
+        "session_id": "e661e36abc9f46af8ca89e943a727b8c",
+        "request_id": "accept-cdcbf9bf544045dc819dd6642361b48f-q",
+        "operation_id": "e821bc7ada2541a5bd0e76e161714634",
+        "epoch": 0,
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+        "answer_sha256": "e551145a4ac8987aabfd90f6102e00026a73c62bc64362ea481bbb4cec70ce54",
+        "answer_source": "DEMO_RULE",
+        "actual_backend": null,
+        "model_called": false,
+        "validation_status": "pass",
+        "validated_monotonic_ns": "4336791136992",
+        "published_monotonic_ns": "4336792897399",
+        "audio_played": false,
+        "browser_render_verified": false,
+        "user_read_verified": false
+      },
+      "error": null
+    },
+    "evaluation": {
+      "schema_version": "chief-evaluation.v1",
+      "evaluation_id": "32ee0fd032261bb1688ed2887be5395e78eb811886d6ff70eb1bd875628435f1",
+      "instance_id": "a6b2da1e3bae4224a1bd6954e7a14a75",
+      "session_id": "e661e36abc9f46af8ca89e943a727b8c",
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "frozen_at": "2026-10-26T05:49:45.588517+00:00",
+      "frozen_turn_count": 1,
+      "scoring_event_count": 1,
+      "rule_score": {
+        "rubric_version": "coverage-v1-draft",
+        "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+        "score": 10,
+        "max_score": 100,
+        "items": {
+          "location": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "quality": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "onset": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "duration": {
+            "points": 10,
+            "max_points": 10,
+            "evidence_turns": [
+              1
+            ]
+          },
+          "severity": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "radiation": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "trigger": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "relief": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "dyspnea": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          },
+          "allergy": {
+            "points": 0,
+            "max_points": 10,
+            "evidence_turns": []
+          }
+        },
+        "review_turns": [],
+        "meaning": "draft_question_topic_coverage_only",
+        "review_status": "PENDING_TEACHER_REVIEW",
+        "clinical_validity": null,
+        "personality_or_real_emotion_inference": false
+      },
+      "summary_status": "READY",
+      "summary_source": "RULE_TEMPLATE",
+      "summary_version": "chief-summary-v1",
+      "summary_text": "本次问诊话题覆盖得分为 10/100。\n已覆盖：持续时间。\n尚未覆盖：疼痛位置、疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+      "topics": [
+        {
+          "topic_id": "location",
+          "label": "疼痛位置",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "quality",
+          "label": "疼痛性质",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "onset",
+          "label": "起病时间",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "duration",
+          "label": "持续时间",
+          "points": 10,
+          "max_points": 10,
+          "covered": true,
+          "evidence": [
+            {
+              "turn_id": 1,
+              "question_number": 1,
+              "request_id": "accept-cdcbf9bf544045dc819dd6642361b48f-q",
+              "question": "每次疼痛持续多久？",
+              "turn_status": "COMPLETED",
+              "answer_published": true
+            }
+          ]
+        },
+        {
+          "topic_id": "severity",
+          "label": "疼痛程度",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "radiation",
+          "label": "放射部位",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "trigger",
+          "label": "诱发或加重因素",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "relief",
+          "label": "缓解因素",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "dyspnea",
+          "label": "呼吸困难",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "topic_id": "allergy",
+          "label": "过敏史",
+          "points": 0,
+          "max_points": 10,
+          "covered": false,
+          "evidence": []
+        }
+      ],
+      "covered_topics": [
+        "duration"
+      ],
+      "missing_topics": [
+        "location",
+        "quality",
+        "onset",
+        "severity",
+        "radiation",
+        "trigger",
+        "relief",
+        "dyspnea",
+        "allergy"
+      ],
+      "review_items": [],
+      "recommendations": [
+        "下一次练习请补充询问：疼痛位置、疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。"
+      ],
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "meaning": "draft_question_topic_coverage_only",
+      "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+      "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+    },
+    "joint_board_signoff": "NOT_TESTED",
+    "finished_at": "2026-10-26T05:49:45.621740+00:00"
+  },
+  "owned_server_exit": -15,
+  "server_log": "INFO:     Started server process [6117]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:46210 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46218 - \"GET /openapi.json HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46220 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46226 - \"POST /ui/v1/sessions HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:46242 - \"POST /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c/turns HTTP/1.1\" 202 Accepted\nINFO:     127.0.0.1:46246 - \"GET /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c/turns/accept-cdcbf9bf544045dc819dd6642361b48f-q HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46260 - \"GET /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46274 - \"POST /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c/finish HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46282 - \"GET /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c/turns/accept-cdcbf9bf544045dc819dd6642361b48f-q HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46290 - \"GET /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:46298 - \"GET /ui/v1/sessions/e661e36abc9f46af8ca89e943a727b8c HTTP/1.1\" 200 OK\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [6117]\n"
+}

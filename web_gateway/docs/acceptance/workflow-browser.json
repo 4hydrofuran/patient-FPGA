@@ -1,0 +1,135 @@
+{
+  "schema_version": "workflow-browser.v1",
+  "target": "7-inch 1024x600",
+  "checks": [
+    {
+      "name": "normal_visit_refresh_finish",
+      "result": "PASS",
+      "score": 20,
+      "covered": 2,
+      "review": 1
+    },
+    {
+      "name": "evaluation_tabs_and_original_evidence",
+      "result": "PASS"
+    },
+    {
+      "name": "delay_busy_controls",
+      "result": "PASS",
+      "controls": {
+        "answer": "医生：哪里疼？\n正在等待回答…",
+        "cancelEnabled": true,
+        "finishDisabled": true,
+        "sendDisabled": true
+      }
+    },
+    {
+      "name": "cancel_late_result_discarded_controls_recovered",
+      "result": "PASS",
+      "text": "医生：哪里疼？\n本轮已取消，未发布患者回答。"
+    },
+    {
+      "name": "wrong_fact_never_rendered",
+      "result": "PASS",
+      "text": "医生：哪里疼？\n本轮已取消，未发布患者回答。\n\n医生：每次疼痛持续多久？\n患者：每次疼痛持续10分钟。"
+    },
+    {
+      "name": "simulated_timeout_checked_fallback",
+      "result": "PASS",
+      "text": "医生：哪里疼？\n本轮已取消，未发布患者回答。\n\n医生：每次疼痛持续多久？\n患者：每次疼痛持续10分钟。\n\n医生：每次疼痛持续多久？\n患者：每次疼痛持续10分钟。"
+    },
+    {
+      "name": "failed_round_explicit_no_answer_controls_recovered",
+      "result": "PASS",
+      "text": "医生：哪里疼？\n本轮已取消，未发布患者回答。\n\n医生：每次疼痛持续多久？\n患者：每次疼痛持续10分钟。\n\n医生：每次疼痛持续多久？\n患者：每次疼痛持续10分钟。\n\n医生：每次疼痛持续多久？\n回答模块处理失败；本轮没有发布回答。"
+    },
+    {
+      "name": "normal_question_after_failure",
+      "result": "PASS"
+    },
+    {
+      "name": "new_case_empty_history",
+      "result": "PASS",
+      "text": ""
+    },
+    {
+      "name": "empty_finish_and_evaluation_refresh",
+      "result": "PASS",
+      "score": 0,
+      "missing": 10
+    }
+  ],
+  "screenshots": [
+    "../workflow-evaluation.png",
+    "../workflow-cancelling.png",
+    "../workflow-failure.png",
+    "../workflow-lab.png"
+  ],
+  "evaluationLayout": {
+    "buttons": [
+      {
+        "bottom": 293.0520935058594,
+        "height": 48,
+        "id": "tab-summary"
+      },
+      {
+        "bottom": 293.0520935058594,
+        "height": 48,
+        "id": "tab-topics"
+      },
+      {
+        "bottom": 293.0520935058594,
+        "height": 48,
+        "id": "tab-review"
+      },
+      {
+        "bottom": 293.0520935058594,
+        "height": 48,
+        "id": "tab-transcript"
+      },
+      {
+        "bottom": 575.3333740234375,
+        "height": 48,
+        "id": "new-session"
+      }
+    ],
+    "height": 600,
+    "scrollHeight": 600,
+    "scrollWidth": 1024,
+    "width": 1024
+  },
+  "labLayout": {
+    "controls": [
+      {
+        "bottom": 205.53125,
+        "height": 48,
+        "id": "scenario"
+      },
+      {
+        "bottom": 205.53125,
+        "height": 48,
+        "id": "delay"
+      },
+      {
+        "bottom": 205.53125,
+        "height": 48,
+        "id": "arm"
+      }
+    ],
+    "height": 600,
+    "scrollWidth": 1024,
+    "width": 1024
+  },
+  "consoleErrors": [],
+  "notVerified": [
+    "real_model",
+    "KV260",
+    "physical_touch",
+    "soft_keyboard",
+    "audio",
+    "PL",
+    "browser_surviving_process_restart"
+  ],
+  "checkedAt": "2026-10-23T09:20:02.893Z",
+  "verdict": "PASS_LOCAL_DEMO_UI_WORKFLOW"
+}

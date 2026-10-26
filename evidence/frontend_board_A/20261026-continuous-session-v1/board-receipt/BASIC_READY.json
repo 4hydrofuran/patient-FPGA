@@ -1,0 +1,62 @@
+{
+  "status": "CONTINUOUS_SERVICE_VERIFIED_AND_READY",
+  "web_status": {
+    "schema_version": "ui.v1",
+    "instance_id": "d021b88b145f492cb7eb4e1ba629b2bb",
+    "phase": "READY",
+    "ready": true,
+    "busy": false,
+    "current_session_id": "b27a6b5d4602410fad67e8eceeb5970a",
+    "backend": {
+      "configured": "managed-pl",
+      "execution_kind": "FPGA_REAL",
+      "ready": true,
+      "hardware_enabled": true
+    },
+    "capabilities": {
+      "text": true,
+      "audio": false,
+      "rule_score": true,
+      "chief_narration": true,
+      "chief_summary_kind": "RULE_TEMPLATE",
+      "cancel_turn": false,
+      "generation_timeout_s": 180,
+      "max_active_turns": 1,
+      "pending_turn_queue": 0,
+      "max_turns": 200,
+      "max_sessions": 8,
+      "archived_sessions_readable": true
+    },
+    "failure": null,
+    "verification": {
+      "software_test_only": true,
+      "board": "NOT_TESTED",
+      "medical_review": "PENDING_TEACHER_REVIEW"
+    },
+    "service_mode": "continuous",
+    "remaining_seconds": 14139.585245806,
+    "demo_lab": false
+  },
+  "user_session": {
+    "schema_version": "ui.v1",
+    "instance_id": "d021b88b145f492cb7eb4e1ba629b2bb",
+    "cursor": 23,
+    "session_id": "b27a6b5d4602410fad67e8eceeb5970a",
+    "case_id": "SYN_CP_03",
+    "case_version": "1.0-draft",
+    "epoch": 0,
+    "closed": false,
+    "phase": "READY",
+    "active_request_id": null,
+    "operation_id": null,
+    "turns": [],
+    "evaluation_ready": false
+  },
+  "loaded_backend_run_budget": 60000,
+  "loaded_weight_count": 72,
+  "warm_count": 1,
+  "bo_bytes": 140591104,
+  "bo_count": 148,
+  "active_lease": true,
+  "zocl": true
+}

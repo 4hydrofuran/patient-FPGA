@@ -1,0 +1,70 @@
+{
+  "scope": "ACTUAL_BOARD_FIREFOX_DOM_AND_SSE_RULE_DEMO_ONLY",
+  "screenshots": {
+    "ready.png": {
+      "bytes": 34689,
+      "sha256": "ca780ee41f6594d921e8eca63fed40312ccd3a1f9e0dc3c09bf815b12fcec95b"
+    },
+    "answered.png": {
+      "bytes": 43721,
+      "sha256": "cc99be569d4f580579e1797986ebccf82c60c7cd78932ef7167dd0ae56c532b9"
+    },
+    "evaluation.png": {
+      "bytes": 308376,
+      "sha256": "fec5822ce539b46f4b7b1d396d0db3c6c748070a6b0bf6a51938daea2c85c73b"
+    }
+  },
+  "server_pid": 6864,
+  "initial_status": {
+    "schema_version": "ui.v1",
+    "instance_id": "dcb1f6f0441e4d7581af964864d51189",
+    "phase": "READY",
+    "ready": true,
+    "busy": false,
+    "current_session_id": null,
+    "backend": {
+      "configured": "demo",
+      "execution_kind": "DEMO_RULE",
+      "ready": true,
+      "hardware_enabled": false
+    },
+    "capabilities": {
+      "text": true,
+      "audio": false,
+      "rule_score": true,
+      "chief_narration": true,
+      "chief_summary_kind": "RULE_TEMPLATE",
+      "cancel_turn": true,
+      "generation_timeout_s": 180.0,
+      "max_active_turns": 1,
+      "pending_turn_queue": 0,
+      "max_turns": 200,
+      "max_sessions": 8
+    },
+    "failure": null,
+    "verification": {
+      "software_test_only": true,
+      "board": "NOT_TESTED",
+      "medical_review": "PENDING_TEACHER_REVIEW"
+    },
+    "demo_lab": false
+  },
+  "browser_pid": 6867,
+  "browser_version": "158.0",
+  "ready_dom": {
+    "cases": 3,
+    "startEnabled": true,
+    "state": "等待提问"
+  },
+  "answer_dom": "医生：每次疼痛持续多久？患者：每次疼痛持续10分钟。",
+  "evaluation_dom": {
+    "score": "10",
+    "summary": "已覆盖：持续时间。\n尚未覆盖：疼痛位置、疼痛性质、起病时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+    "error": ""
+  },
+  "verdict": "PASS_BOARD_FIREFOX_RULE_WORKFLOW",
+  "browser_exit": -15,
+  "server_exit": -15,
+  "interactive-firefox.log": "*** You are running in headless mode.\nWebDriver BiDi listening on ws://127.0.0.1:9222\n1792994157934\tRemoteAgent\tINFO\tPerform WebSocket upgrade for incoming connection from 127.0.0.1:33168\n[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt\nconsole.error: RSLoader: \n  Failed to retrieve recipes from Remote Settings\n  Message: Error: Could not sync nimbus-desktop-experiments: get-exception\n  Stack:\n    RemoteSettingsSyncError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1562:5\ngetRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:816:13\n\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\nExiting due to channel error.\n",
+  "interactive-server.log": "INFO:     Started server process [6864]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     127.0.0.1:46272 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET / HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET /display/evaluation.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /console.js HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /display/chief-physician.png HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /display/tokens.css HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /favicon.ico HTTP/1.1\" 404 Not Found\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/cases HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"POST /ui/v1/sessions HTTP/1.1\" 201 Created\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48904 - \"GET /ui/v1/events?session_id=e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"POST /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/turns HTTP/1.1\" 202 Accepted\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48886 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48936 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"POST /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/finish HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /display/clinic-background.png HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48894 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48922 - \"GET /ui/v1/status HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48916 - \"GET /ui/v1/sessions/e0534455efa24fbd934fe17159b776bf/evaluation HTTP/1.1\" 200 OK\nINFO:     127.0.0.1:48936 - \"GET /display/chief-physician-speaking.png HTTP/1.1\" 200 OK\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [6864]\n"
+}
