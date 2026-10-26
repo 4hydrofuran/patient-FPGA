@@ -1,0 +1,298 @@
+{
+  "$defs": {
+    "EvaluationEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "turn_id": {
+          "minimum": 1,
+          "title": "Turn Id",
+          "type": "integer"
+        },
+        "question_number": {
+          "minimum": 1,
+          "title": "Question Number",
+          "type": "integer"
+        },
+        "request_id": {
+          "title": "Request Id",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        },
+        "turn_status": {
+          "enum": [
+            "COMPLETED",
+            "CANCELLED",
+            "FAILED"
+          ],
+          "title": "Turn Status",
+          "type": "string"
+        },
+        "answer_published": {
+          "title": "Answer Published",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "turn_id",
+        "question_number",
+        "request_id",
+        "question",
+        "turn_status",
+        "answer_published"
+      ],
+      "title": "EvaluationEvidence",
+      "type": "object"
+    },
+    "EvaluationTopic": {
+      "additionalProperties": false,
+      "properties": {
+        "topic_id": {
+          "title": "Topic Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "points": {
+          "minimum": 0,
+          "title": "Points",
+          "type": "integer"
+        },
+        "max_points": {
+          "minimum": 0,
+          "title": "Max Points",
+          "type": "integer"
+        },
+        "covered": {
+          "title": "Covered",
+          "type": "boolean"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/EvaluationEvidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "topic_id",
+        "label",
+        "points",
+        "max_points",
+        "covered",
+        "evidence"
+      ],
+      "title": "EvaluationTopic",
+      "type": "object"
+    },
+    "ReviewItem": {
+      "additionalProperties": false,
+      "properties": {
+        "turn_id": {
+          "minimum": 1,
+          "title": "Turn Id",
+          "type": "integer"
+        },
+        "question_number": {
+          "minimum": 1,
+          "title": "Question Number",
+          "type": "integer"
+        },
+        "request_id": {
+          "title": "Request Id",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        },
+        "turn_status": {
+          "enum": [
+            "COMPLETED",
+            "CANCELLED",
+            "FAILED"
+          ],
+          "title": "Turn Status",
+          "type": "string"
+        },
+        "answer_published": {
+          "title": "Answer Published",
+          "type": "boolean"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "reason_label": {
+          "title": "Reason Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "turn_id",
+        "question_number",
+        "request_id",
+        "question",
+        "turn_status",
+        "answer_published",
+        "reason",
+        "reason_label"
+      ],
+      "title": "ReviewItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Public envelope; the original rule score is retained verbatim for audit.",
+  "properties": {
+    "schema_version": {
+      "const": "chief-evaluation.v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "evaluation_id": {
+      "title": "Evaluation Id",
+      "type": "string"
+    },
+    "instance_id": {
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    },
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "case_version": {
+      "title": "Case Version",
+      "type": "string"
+    },
+    "case_sha256": {
+      "title": "Case Sha256",
+      "type": "string"
+    },
+    "frozen_at": {
+      "title": "Frozen At",
+      "type": "string"
+    },
+    "frozen_turn_count": {
+      "title": "Frozen Turn Count",
+      "type": "integer"
+    },
+    "scoring_event_count": {
+      "title": "Scoring Event Count",
+      "type": "integer"
+    },
+    "rule_score": {
+      "additionalProperties": true,
+      "title": "Rule Score",
+      "type": "object"
+    },
+    "summary_status": {
+      "const": "READY",
+      "title": "Summary Status",
+      "type": "string"
+    },
+    "summary_source": {
+      "const": "RULE_TEMPLATE",
+      "title": "Summary Source",
+      "type": "string"
+    },
+    "summary_version": {
+      "const": "chief-summary-v1",
+      "title": "Summary Version",
+      "type": "string"
+    },
+    "summary_text": {
+      "title": "Summary Text",
+      "type": "string"
+    },
+    "topics": {
+      "items": {
+        "$ref": "#/$defs/EvaluationTopic"
+      },
+      "title": "Topics",
+      "type": "array"
+    },
+    "covered_topics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Covered Topics",
+      "type": "array"
+    },
+    "missing_topics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Topics",
+      "type": "array"
+    },
+    "review_items": {
+      "items": {
+        "$ref": "#/$defs/ReviewItem"
+      },
+      "title": "Review Items",
+      "type": "array"
+    },
+    "recommendations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recommendations",
+      "type": "array"
+    },
+    "review_status": {
+      "title": "Review Status",
+      "type": "string"
+    },
+    "meaning": {
+      "title": "Meaning",
+      "type": "string"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "type": "string"
+    },
+    "scoring_note": {
+      "title": "Scoring Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "evaluation_id",
+    "instance_id",
+    "session_id",
+    "case_id",
+    "case_version",
+    "case_sha256",
+    "frozen_at",
+    "frozen_turn_count",
+    "scoring_event_count",
+    "rule_score",
+    "summary_status",
+    "summary_source",
+    "summary_version",
+    "summary_text",
+    "topics",
+    "covered_topics",
+    "missing_topics",
+    "review_items",
+    "recommendations",
+    "review_status",
+    "meaning",
+    "disclaimer",
+    "scoring_note"
+  ],
+  "title": "EvaluationResult",
+  "type": "object"
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": "paper-review-ui.v1",
+  "target": {
+    "width": 1024,
+    "height": 600,
+    "inches": 7
+  },
+  "scope": "Local browser checks; no physical-screen or board acceptance",
+  "checks": [
+    "four_tabs_switch_panels",
+    "arrow_keys_and_home_move_selection_and_focus",
+    "topic_evidence_retains_original_question",
+    "review_reason_retained",
+    "transcript_retains_all_three_qa_questions",
+    "new_session_resets_previous_evaluation",
+    "empty_session_zero_and_empty_review_render",
+    "long_dialog_keeps_send_cancel_finish_visible",
+    "long_dialog_restores_latest_reply",
+    "refresh_restores_frozen_score"
+  ],
+  "longConversation": {
+    "buttons": [
+      {
+        "bottom": 575.3333740234375,
+        "height": 48,
+        "label": "发送问题"
+      },
+      {
+        "bottom": 575.3333740234375,
+        "height": 48,
+        "label": "取消本轮"
+      },
+      {
+        "bottom": 575.3333740234375,
+        "height": 48,
+        "label": "结束问诊"
+      }
+    ],
+    "clientHeight": 292,
+    "height": 600,
+    "pageHeight": 600,
+    "scrollHeight": 409,
+    "scrollTop": 116.66666412353516,
+    "width": 1024
+  },
+  "viewports": [
+    {
+      "action": {
+        "bottom": 1365.104248046875,
+        "height": 48,
+        "left": 32.66666793823242,
+        "right": 146.0000038146973,
+        "top": 1317.104248046875,
+        "width": 113.33333587646484,
+        "x": 32.66666793823242,
+        "y": 1317.104248046875
+      },
+      "clientWidth": 305,
+      "height": 800,
+      "scrollHeight": 1561,
+      "scrollWidth": 305,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 119.66667175292967
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 119.66667175292967
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 119.66667175292967
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 119.66667175292967
+        }
+      ],
+      "width": 320
+    },
+    {
+      "action": {
+        "bottom": 1207.4583740234375,
+        "height": 48,
+        "left": 214,
+        "right": 327.33333587646484,
+        "top": 1159.4583740234375,
+        "width": 113.33333587646484,
+        "x": 214,
+        "y": 1159.4583740234375
+      },
+      "clientWidth": 360,
+      "height": 800,
+      "scrollHeight": 1403,
+      "scrollWidth": 360,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 147.33334350585938
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 147.33334350585938
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 147.33334350585938
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 147.33334350585938
+        }
+      ],
+      "width": 375
+    },
+    {
+      "action": {
+        "bottom": 1177.0625,
+        "height": 48,
+        "left": 252.6666717529297,
+        "right": 366.0000076293946,
+        "top": 1129.0625,
+        "width": 113.33333587646484,
+        "x": 252.6666717529297,
+        "y": 1129.0625
+      },
+      "clientWidth": 399,
+      "height": 800,
+      "scrollHeight": 1373,
+      "scrollWidth": 399,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 166.6666717529297
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 166.6666717529297
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 166.6666717529297
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 166.6666717529297
+        }
+      ],
+      "width": 414
+    },
+    {
+      "action": {
+        "bottom": 1018.46875,
+        "height": 48,
+        "left": 606.6666870117188,
+        "right": 720.0000228881836,
+        "top": 970.46875,
+        "width": 113.33333587646484,
+        "x": 606.6666870117188,
+        "y": 970.46875
+      },
+      "clientWidth": 753,
+      "height": 1024,
+      "scrollHeight": 1192,
+      "scrollWidth": 753,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 343.66668701171875
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 343.66668701171875
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 343.66668701171875
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 343.66668701171875
+        }
+      ],
+      "width": 768
+    },
+    {
+      "action": {
+        "bottom": 775.3333740234375,
+        "height": 48,
+        "left": 1126,
+        "right": 1239.3333358764648,
+        "top": 727.3333740234375,
+        "width": 113.33333587646484,
+        "x": 1126,
+        "y": 727.3333740234375
+      },
+      "clientWidth": 1280,
+      "height": 800,
+      "scrollHeight": 800,
+      "scrollWidth": 1280,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 208.625
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 208.625
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 208.625
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 208.625
+        }
+      ],
+      "width": 1280
+    },
+    {
+      "action": {
+        "bottom": 495.3333435058594,
+        "height": 48,
+        "left": 870,
+        "right": 983.3333358764648,
+        "top": 447.3333435058594,
+        "width": 113.33333587646484,
+        "x": 870,
+        "y": 447.3333435058594
+      },
+      "clientWidth": 1024,
+      "height": 520,
+      "scrollHeight": 520,
+      "scrollWidth": 1024,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 162.71875
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "action": {
+        "bottom": 575.3333740234375,
+        "height": 48,
+        "left": 870,
+        "right": 983.3333358764648,
+        "top": 527.3333740234375,
+        "width": 113.33333587646484,
+        "x": 870,
+        "y": 527.3333740234375
+      },
+      "clientWidth": 1024,
+      "height": 600,
+      "scrollHeight": 600,
+      "scrollWidth": 1024,
+      "tabs": [
+        {
+          "height": 48,
+          "label": "评阅意见",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "评分依据",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "待复核 1",
+          "width": 162.70834350585938
+        },
+        {
+          "height": 48,
+          "label": "问诊记录",
+          "width": 162.71875
+        }
+      ],
+      "width": 1024
+    }
+  ],
+  "colorPairs": [
+    {
+      "background": "rgb(234, 231, 223)",
+      "color": "rgb(48, 47, 42)",
+      "name": "body"
+    },
+    {
+      "background": "rgb(251, 249, 243)",
+      "color": "rgb(48, 47, 42)",
+      "name": "summary"
+    },
+    {
+      "background": "rgb(251, 249, 243)",
+      "color": "rgb(104, 102, 93)",
+      "name": "muted"
+    },
+    {
+      "background": "rgb(251, 249, 243)",
+      "color": "rgb(139, 62, 50)",
+      "name": "score"
+    },
+    {
+      "background": "rgb(251, 249, 243)",
+      "color": "rgb(139, 62, 50)",
+      "name": "selected_tab"
+    },
+    {
+      "background": "rgb(62, 69, 61)",
+      "color": "rgb(255, 255, 255)",
+      "name": "primary"
+    }
+  ],
+  "errors": [],
+  "physicalTouch": "NOT_TESTED"
+}

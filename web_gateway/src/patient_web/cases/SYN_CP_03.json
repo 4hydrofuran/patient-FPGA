@@ -1,0 +1,117 @@
+{
+  "case_id": "SYN_CP_03",
+  "version": "1.0-draft",
+  "synthetic": true,
+  "review_status": "PENDING_TEACHER_REVIEW",
+  "provenance": "A-authored artificial dialogue fixture; no patient record or diagnosis",
+  "rubric_version": "coverage-v1-draft",
+  "unknown_policy": "explicit_unknown-v1-draft",
+  "forbidden": [
+    "diagnosis",
+    "treatment",
+    "self_scoring",
+    "other_case_disclosure",
+    "invented_negative"
+  ],
+  "facts": [
+    {
+      "slot": "location",
+      "status": "known",
+      "value": "胸前正中",
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "quality",
+      "status": "known",
+      "value": "烧灼感",
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "onset",
+      "status": "known",
+      "value": 6,
+      "unit": "小时前",
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "duration",
+      "status": "known",
+      "value": 20,
+      "unit": "分钟",
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "severity",
+      "status": "known",
+      "value": 5,
+      "unit": "分/10分",
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "radiation",
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "unknown",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "trigger",
+      "status": "known",
+      "value": "进食后",
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "positive",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "relief",
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "unknown",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "dyspnea",
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "time_scope": "本次模拟所述胸痛",
+      "polarity": "unknown",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "allergy",
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "time_scope": "病史未给定",
+      "polarity": "unknown",
+      "disclose": "on_slot"
+    },
+    {
+      "slot": "medications",
+      "status": "unknown",
+      "value": null,
+      "unit": null,
+      "time_scope": "病史未给定",
+      "polarity": "unknown",
+      "disclose": "on_slot"
+    }
+  ]
+}

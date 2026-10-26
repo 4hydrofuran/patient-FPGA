@@ -1,0 +1,280 @@
+{
+  "$defs": {
+    "DeliveryReceipt": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "text-delivery.v1",
+          "default": "text-delivery.v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "delivery_kind": {
+          "const": "WEB_TEXT_PUBLISHED",
+          "default": "WEB_TEXT_PUBLISHED",
+          "title": "Delivery Kind",
+          "type": "string"
+        },
+        "instance_id": {
+          "minLength": 1,
+          "title": "Instance Id",
+          "type": "string"
+        },
+        "session_id": {
+          "minLength": 1,
+          "title": "Session Id",
+          "type": "string"
+        },
+        "request_id": {
+          "minLength": 1,
+          "title": "Request Id",
+          "type": "string"
+        },
+        "operation_id": {
+          "minLength": 1,
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "epoch": {
+          "minimum": 0,
+          "title": "Epoch",
+          "type": "integer"
+        },
+        "case_id": {
+          "minLength": 1,
+          "title": "Case Id",
+          "type": "string"
+        },
+        "case_version": {
+          "minLength": 1,
+          "title": "Case Version",
+          "type": "string"
+        },
+        "case_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Case Sha256",
+          "type": "string"
+        },
+        "answer_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Answer Sha256",
+          "type": "string"
+        },
+        "answer_source": {
+          "enum": [
+            "MODEL",
+            "DEMO_RULE",
+            "TEMPLATE",
+            "TIMEOUT"
+          ],
+          "title": "Answer Source",
+          "type": "string"
+        },
+        "actual_backend": {
+          "anyOf": [
+            {
+              "enum": [
+                "CPU_REFERENCE",
+                "FPGA_REAL"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actual Backend"
+        },
+        "model_called": {
+          "title": "Model Called",
+          "type": "boolean"
+        },
+        "validation_status": {
+          "const": "pass",
+          "default": "pass",
+          "title": "Validation Status",
+          "type": "string"
+        },
+        "validated_monotonic_ns": {
+          "pattern": "^[1-9][0-9]*$",
+          "title": "Validated Monotonic Ns",
+          "type": "string"
+        },
+        "published_monotonic_ns": {
+          "pattern": "^[1-9][0-9]*$",
+          "title": "Published Monotonic Ns",
+          "type": "string"
+        },
+        "audio_played": {
+          "const": false,
+          "default": false,
+          "title": "Audio Played",
+          "type": "boolean"
+        },
+        "browser_render_verified": {
+          "const": false,
+          "default": false,
+          "title": "Browser Render Verified",
+          "type": "boolean"
+        },
+        "user_read_verified": {
+          "const": false,
+          "default": false,
+          "title": "User Read Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "instance_id",
+        "session_id",
+        "request_id",
+        "operation_id",
+        "epoch",
+        "case_id",
+        "case_version",
+        "case_sha256",
+        "answer_sha256",
+        "answer_source",
+        "actual_backend",
+        "model_called",
+        "validated_monotonic_ns",
+        "published_monotonic_ns"
+      ],
+      "title": "DeliveryReceipt",
+      "type": "object"
+    },
+    "TurnFailure": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "TurnFailure",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "operation_id": {
+      "title": "Operation Id",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "RUNNING",
+        "COMPLETED",
+        "CANCELLED",
+        "FAILED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Answer"
+    },
+    "answer_source": {
+      "anyOf": [
+        {
+          "enum": [
+            "MODEL",
+            "DEMO_RULE",
+            "TEMPLATE",
+            "TIMEOUT"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Answer Source"
+    },
+    "actual_backend": {
+      "anyOf": [
+        {
+          "enum": [
+            "CPU_REFERENCE",
+            "FPGA_REAL"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Actual Backend"
+    },
+    "delivery_kind": {
+      "anyOf": [
+        {
+          "const": "WEB_TEXT_PUBLISHED",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Delivery Kind"
+    },
+    "delivery_receipt": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DeliveryReceipt"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TurnFailure"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "request_id",
+    "operation_id",
+    "question",
+    "status",
+    "answer",
+    "answer_source",
+    "actual_backend",
+    "delivery_kind",
+    "delivery_receipt",
+    "error"
+  ],
+  "title": "TurnResult",
+  "type": "object"
+}

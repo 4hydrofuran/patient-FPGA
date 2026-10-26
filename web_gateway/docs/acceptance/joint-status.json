@@ -1,0 +1,28 @@
+{
+  "schema_version": "joint-delivery-status.v1",
+  "recorded_at": "2026-10-23T09:22:32.834757+00:00",
+  "local_software": "PASS",
+  "local_demo_http": "PASS_DEMO_TEXT_DELIVERY",
+  "joint_verdict": "PENDING_RUNTIME_ASSETS_AND_TARGET_ENVIRONMENT",
+  "real_native": "NOT_TESTED",
+  "KV260_board": "NOT_TESTED",
+  "native_cancellation_quiescence": "NOT_TESTED",
+  "native_R0_case_isolation": "NOT_TESTED",
+  "instructions": "../MODEL_HANDOFF.md",
+  "required_evidence": [
+    "native HTTP acceptance original JSON",
+    "runtime/architecture/manifest/model revision",
+    "cancel return and quiescence logs with HTTP events",
+    "R0 reset and case isolation logs",
+    "missing-asset failure evidence without silent fallback"
+  ],
+  "signed_by": null,
+  "local_chief_evaluation": "PASS",
+  "screen_target": "7-inch 1024x600 landscape",
+  "physical_7inch_touch": "NOT_TESTED",
+  "chief_instructions": "../EVALUATION.md",
+  "local_demo_workflow": "PASS_DEMO_WORKFLOW",
+  "workflow_report": "workflow-demo.json",
+  "workflow_instructions": "../WORKFLOW_ACCEPTANCE.md",
+  "board_workflow_checklist": "board-workflow-checklist.json"
+}
