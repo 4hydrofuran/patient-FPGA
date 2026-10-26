@@ -1,0 +1,64 @@
+{
+  "domain": "PC_XRT_CONTROL_ONLY_A53_UNBOUND",
+  "workspace": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4",
+  "revision": 4,
+  "probe": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/plm-control-probe",
+  "backend_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_backend_pc_control.so",
+  "router_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_router_legacy_probe.so",
+  "writer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_writer.so",
+  "writer_sha256": "4fe85e15b03c2948876e2212294e1a1da8a45994a8ac47342ee194fe7c5f0bdb",
+  "observer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_observer_ro.so",
+  "sanitizers": {
+    "probe_backend_router": "NONE",
+    "manager_writer": "NONE",
+    "leak_check": false
+  },
+  "artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_backend_pc_control.so",
+      "sha256": "78ed02c1c244baa38ae5cd8907e1c597605b72f5ed0a9a98d3064097590a88d1",
+      "bytes": 512320
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_router_legacy_probe.so",
+      "sha256": "4166ed797d3e7c6bcabf8e6192ea2fe0b02ec586e61ff3cc07039e297efdf10c",
+      "bytes": 190536
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_writer.so",
+      "sha256": "4fe85e15b03c2948876e2212294e1a1da8a45994a8ac47342ee194fe7c5f0bdb",
+      "bytes": 112832
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/plm-control-probe",
+      "sha256": "99b844ddeb95bc069795baf1f531518a5310d425febc535bdd5132e22226b17e",
+      "bytes": 279536
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_observer_ro.so",
+      "sha256": "eb2911f2bfa31c09c18550992b4f8628a16cc9f9cb45082572a8e13ec65f0388",
+      "bytes": 92192
+    }
+  ],
+  "source_snapshot_sha256": "59bfce741f174d9bd17a8f98d331d703f72487b8903208677294e0febe46f977",
+  "ARM_artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_a53_unbound.so",
+      "sha256": "afb86da4894bb99e7ace09103d71014aa86572369397d62098166bec598169f6",
+      "bytes": 503504
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_writer_a53.so",
+      "sha256": "4820173fc7eda087dfdcd57ad0e908d60f6fd8c709996b977517ef139d90fc86",
+      "bytes": 166016
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/plm_full_protocol_a53.o",
+      "sha256": "09d168105561fbb523013d1c941c6c622e69702b514969f7e364413bd8826e93",
+      "bytes": 448664
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "real_device_generation_approval": "UNBOUND"
+}

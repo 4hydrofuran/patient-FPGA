@@ -1,0 +1,21 @@
+{
+  "command": [
+    "cmake",
+    "-S",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v4/cmake",
+    "-B",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v4/pc",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DROOT=/mnt/c/Patientqwen",
+    "-DA12_SOURCE=/home/member-a/kv260-build/a12-model-route-20261026-v4/source",
+    "-DASSET_ROOT=/mnt/c/Patientqwen",
+    "-DLLAMA_SOURCE=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/llama-source",
+    "-DLLAMA_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama",
+    "-DBASE_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc",
+    "-DEXISTING_QUANT_OBJECT=/home/member-a/kv260-build/a12-tt10-01-20261024-v1/pc04/CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-model-route-20261026-v4",
+  "exit_code": 0,
+  "stdout": "-- The CXX compiler identification is GNU 11.4.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done\n-- Generating done\n-- Build files have been written to: /home/member-a/kv260-build/a12-model-route-20261026-v4/pc\n",
+  "stderr": ""
+}

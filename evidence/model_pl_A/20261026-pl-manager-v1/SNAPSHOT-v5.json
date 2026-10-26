@@ -1,0 +1,144 @@
+{
+  "workspace": "/home/member-a/kv260-build/a12-pl-manager-20261026-v5",
+  "parent_backend_sha256": "8a4d37222dc221ca8c0fa1701968893b4d952d757f6b08aecbc5566ab2de833d",
+  "derivation_reversible": true,
+  "edits": [
+    [
+      "#include \"pl_auth_gate.hpp\"",
+      "#include \"plm_control.hpp\"\n#ifdef SP_LINEAR_CONTROL_TEST\n#include \"control_xrt.hpp\"\n#endif"
+    ],
+    [
+      "    plauth::Gate authority;",
+      "    plm::Control authority;\n#ifdef SP_LINEAR_CONTROL_TEST\n    std::string plm_test_mode;uint64_t plm_test_job=0;\n#endif"
+    ],
+    [
+      "    std::shared_ptr<sp_linear_context> owner(std::move(c));auto raw=owner.get();",
+      "    c->authority.configure(c->authority_facts);\n    std::shared_ptr<sp_linear_context> owner(std::move(c));auto raw=owner.get();"
+    ],
+    [
+      "        c->authority.before_transfer(job);",
+      "        c->authority.before_transfer(job,t);\n#ifdef SP_LINEAR_CONTROL_TEST\n        if(c->plm_test_job==job){\n            if(c->plm_test_mode==\"revoke_claim\")c->authority.fail();\n            else if(c->plm_test_mode==\"nan_y\")control::fault=\"nan_y\";\n            else if(c->plm_test_mode==\"start\")control::fault=\"start\";\n            else if(c->plm_test_mode==\"timeout\")control::fault=\"timeout\";\n            else if(c->plm_test_mode==\"pause_claim\")std::this_thread::sleep_for(std::chrono::milliseconds(100));\n        }\n#endif"
+    ],
+    [
+      "    j[\"a12_hardware_global_completion_counter\"]=nullptr;",
+      "    j[\"a12_hardware_global_completion_counter\"]=nullptr;\n    j[\"plm_control\"]=c->authority.report();"
+    ],
+    [
+      "    j[\"host_verified_completions\"]=c->runs;",
+      "    j[\"host_verified_completions\"]=c->runs;\n    j[\"plm_control\"]=c->authority.report();"
+    ],
+    [
+      "    // Remove run's previous BO bindings while quiescent before releasing the selected weight.",
+      "    if(!c->authority.maintenance_allowed()){c->authority.fail();c->life.poison();c->last={{\"last_status_code\",SP_POISONED},{\"output_consumable\",false}};return SP_POISONED;}\n    // Remove run's previous BO bindings while quiescent before releasing the selected weight."
+    ],
+    [
+      "    require(!c->authority.unknown(),SP_POISONED);",
+      "    if(c->authority.unknown()||!c->authority.maintenance_allowed()){c->authority.fail();c->life.poison();c->last={{\"last_status_code\",SP_POISONED},{\"output_consumable\",false}};return SP_POISONED;}"
+    ]
+  ],
+  "source": [
+    {
+      "name": "backend.cpp",
+      "sha256": "9520455420cc4506e1c09ab541b3a952fccfa787a19dd6c8502daab5229ebe9c",
+      "bytes": 27586
+    },
+    {
+      "name": "control_xrt.hpp",
+      "sha256": "f1ca1e6d9277523b7a46c9f80564a5aa8d09328f5b9cfe98fbc9f8150645f78a",
+      "bytes": 5769
+    },
+    {
+      "name": "host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749",
+      "bytes": 4678
+    },
+    {
+      "name": "host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf",
+      "bytes": 1809
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+      "bytes": 953436
+    },
+    {
+      "name": "managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6",
+      "bytes": 2740
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e",
+      "bytes": 5908
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec",
+      "bytes": 5233
+    },
+    {
+      "name": "plm_observer.cpp",
+      "sha256": "27fb72782f2410bb39c9520b6c2317d9436f2dfc8f8f35b8d3defd02736deaa5",
+      "bytes": 793
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175",
+      "bytes": 6225
+    },
+    {
+      "name": "plm_portable_probe.cpp",
+      "sha256": "9899b87801c014166d0bb6c632dd382b6fd047e7ee130eb5e823126b81f87a46",
+      "bytes": 442
+    },
+    {
+      "name": "plm_probe.cpp",
+      "sha256": "afdbed612fc90602b63f213ff4c13e6b9f3a282fb579e55a1c400b47631dc1f8",
+      "bytes": 4811
+    },
+    {
+      "name": "plm_router_shim.cpp",
+      "sha256": "4285f93ba1a83a63222617983e9ffadee66bd34a0b0aae5f6dd95d87f3dc3c4d",
+      "bytes": 290
+    },
+    {
+      "name": "plm_writer.cpp",
+      "sha256": "2f0dae0b063338aaf59728395ed05cd163df3a59633040902acd058474c0de3b",
+      "bytes": 1781
+    },
+    {
+      "name": "release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9",
+      "bytes": 1575
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "13140052ce691dda246619a0594b85c4464bfbd6cd6d34aac13293a00c8de1bf",
+      "bytes": 1364
+    },
+    {
+      "name": "xrt/xrt_bo.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    },
+    {
+      "name": "xrt/xrt_device.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    },
+    {
+      "name": "xrt/xrt_kernel.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    }
+  ],
+  "original_gate_sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102",
+  "legacy_production_body_unchanged": true,
+  "BOARD": "NOT_TESTED"
+}

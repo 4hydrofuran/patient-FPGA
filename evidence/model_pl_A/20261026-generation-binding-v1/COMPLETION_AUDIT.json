@@ -1,0 +1,126 @@
+{
+  "goal_objective": "继续推进无板工作,遇到阻碍则分析原因，思考解决办法，解决问题",
+  "previous_turn_classification": "progress",
+  "current_turn_classification": "progress",
+  "whole_goal_achieved": false,
+  "goal_status": "active",
+  "requirements_basis": [
+    "docs/A12_SAFETY_CHECK_OPTIMIZATION_PLAN_20261025.md",
+    "docs/A12_CMA_AWARE_ACCEPTANCE_ADJUSTMENT_20261025.md"
+  ],
+  "requirements": [
+    {
+      "id": "P0-0",
+      "requirement": "Freeze versions/ordinary resource baseline",
+      "offline": "ORDINARY_PACKAGE_AND_PC_NATIVE_VERIFIED",
+      "BOARD": "NOT_TESTED",
+      "evidence": "docs/handoffs/A_A12_RESOURCE_PROBE_PREBOARD_20261025.md"
+    },
+    {
+      "id": "P0-1",
+      "requirement": "Bounded complete-original handoff and numerical gates",
+      "offline": "PC_FULL_RAW_HANDOFF_PASSED_PRIOR_SCOPE",
+      "BOARD": "NOT_TESTED",
+      "evidence": "docs/handoffs/A_A12_OFFLINE_FOLLOWUP_20261025.md"
+    },
+    {
+      "id": "P1-1",
+      "requirement": "Request journal integrated with real native",
+      "offline": "REAL_PC_MODEL_AND_FAILURE_FENCES_PASSED",
+      "real_PL_controller_binding": "NOT_IMPLEMENTED",
+      "evidence": "docs/handoffs/A_A12_NATIVE_REQUEST_JOURNAL_PC_20261026.md"
+    },
+    {
+      "id": "P1-2",
+      "requirement": "Move static checks; bounded fresh periodic health and invalidation",
+      "offline": "FRESH_FD_IO_AND_INDEPENDENT_FENCES_REAL_PC_VALIDATED",
+      "BOARD": "NOT_TESTED",
+      "safety_parameters": "PC_EXPERIMENT_ONLY_BOARD_RESPONSE_REQUIREMENTS_STILL_REQUIRED",
+      "real_PL_controller_binding": "NOT_IMPLEMENTED",
+      "periodic_snapshot_reuse": "NOT_ENABLED",
+      "evidence": "docs/handoffs/A_A12_FRESH_HEALTH_FENCE_PC_20261026.md"
+    },
+    {
+      "id": "P1-3",
+      "requirement": "Microbatch authorization, local budget/revocation/restart proofs",
+      "offline": "ACTUAL_CPU_BACKEND_LOCAL_BUDGET_AND_MODEL_VERIFIED",
+      "BOARD": "NOT_TESTED",
+      "real_PL_binding": "NOT_IMPLEMENTED",
+      "board_device_generation_binding": "NOT_IMPLEMENTED",
+      "trusted_controlled_worker_only": true,
+      "evidence": "docs/handoffs/A_A12_MICROBATCH_LOCAL_BUDGET_PC_20261026.md"
+    },
+    {
+      "id": "P1-4",
+      "requirement": "Mode selection, strict fallback and closeout",
+      "offline": "REAL_PC_WINDOW_SWITCH_AND_STRICT_FALLBACK_VERIFIED",
+      "production_mode_transition": "NOT_IMPLEMENTED",
+      "BOARD": "NOT_TESTED",
+      "service_request_routing": "NOT_IMPLEMENTED",
+      "real_PL_binding": "NOT_IMPLEMENTED",
+      "evidence": "docs/handoffs/A_A12_MODE_WINDOW_CONTROL_PC_20261026.md"
+    },
+    {
+      "id": "SHORT_PROMPT",
+      "requirement": "Safe/fast new prompt accepted on all frozen inputs",
+      "offline": "NOT_ACCEPTED",
+      "evidence": "evidence/model_pl_A/20261025-request-journal-v2/short-prompt-review-01/RESULT.json"
+    },
+    {
+      "id": "FINAL_ACCEPTANCE",
+      "requirement": "Applicable numerical/lifecycle/TT10/A12 step11 and long-run acceptance",
+      "status": "INCOMPLETE",
+      "medical_or_teacher_review": "NOT_COMPLETED"
+    },
+    {
+      "id": "PL_BACKEND_LIFECYCLE",
+      "requirement": "Real backend authorization at BO transfer/start/completion",
+      "offline": "DERIVED_ACTUAL_XRT_BACKEND_41_PC_FAULT_CASES_AND_A53_FULL_GATE_COMPILE",
+      "real_runtime_manager_binding": "NOT_IMPLEMENTED",
+      "device_generation_approval": "UNBOUND",
+      "BOARD": "NOT_TESTED",
+      "production_enabled": false,
+      "evidence": "docs/handoffs/A_A12_PL_MANAGER_PROTOCOL_OFFLINE_20261026.md",
+      "private_control_protocol": "IMPLEMENTED_PC_XRT_DSO_AND_ATOMIC_PAGE_TESTED",
+      "real_runtime_model_route_binding": "NOT_IMPLEMENTED",
+      "actual_Qwen_front_Route_private_hooks": "IMPLEMENTED_PC_REAL_MATH_VALIDATED_A53_COMPILED",
+      "actual_PL_results_consumed": "NOT_TESTED",
+      "latest_evidence": "docs/handoffs/A_A12_ACTUAL_MODEL_PRIVATE_ROUTE_OFFLINE_20261026.md"
+    },
+    {
+      "id": "PL_MANAGER_PROTOCOL",
+      "requirement": "Dual-lane manager, inherited atomic writer, bounded grants and request persistence",
+      "offline": "PC_DSO_WIRE_17_PLUS_17_SCENARIOS_11_POLICY_TESTS_AND_ACTUAL_MANAGER_DEATH",
+      "ARM_build": "BACKEND_WRITER_FULL_PROTOCOL_OBJECT_AND_RO_OBSERVER_COMPILE_ONLY",
+      "actual_model_route_hooks": "NOT_IMPLEMENTED",
+      "BOARD": "NOT_TESTED",
+      "production_enabled": false,
+      "evidence": "docs/handoffs/A_A12_PL_MANAGER_PROTOCOL_OFFLINE_20261026.md",
+      "actual_Qwen_front_Route_private_hooks": "IMPLEMENTED_PC_REAL_MATH_VALIDATED_A53_COMPILED",
+      "actual_PL_results_consumed": "NOT_TESTED",
+      "device_generation_approval": "UNBOUND",
+      "latest_evidence": "docs/handoffs/A_A12_ACTUAL_MODEL_PRIVATE_ROUTE_OFFLINE_20261026.md"
+    },
+    {
+      "id": "REAL_MODEL_ROUTE",
+      "requirement": "Actual Qwen request/Route private bootstrap, begin/end/abort and verified graph copy",
+      "offline": "ACTUAL_CPU_MODEL_11_TARGETED_SCENARIOS_FROZEN_OUTPUT_LOGITS_AND_RUNTIME_PREFIX_DIGESTS_MATCH",
+      "ARM_build": "ACTUAL_FRONT_ROUTE_PRIVATE_ABI_COMPILE_ONLY",
+      "real_PL_results_consumed": false,
+      "BOARD": "NOT_TESTED",
+      "evidence": "docs/handoffs/A_A12_ACTUAL_MODEL_PRIVATE_ROUTE_OFFLINE_20261026.md"
+    },
+    {
+      "id": "GENERATION_CONSUMER",
+      "offline": "21_LINUX_ISSUER_TESTS_22_NATIVE_ASSERTIONS_NORMAL_AND_ASAN_UBSAN_SIX_ACTUAL_MODEL_WINDOWS",
+      "ARM": "COMPILE_ONLY_BOARD_DOMAIN_PC_CREDENTIAL_REFUSED",
+      "live_Board_issuer": "NOT_IMPLEMENTED",
+      "BOARD": "NOT_TESTED",
+      "evidence": "docs/handoffs/A_A12_GENERATION_CONSUMER_OFFLINE_20261026.md"
+    }
+  ],
+  "next_safe_action": "Wire the independent issuer to the original already-owned platform/lease/dual-lock, live boot/driver/kernel and native BO-inventory gates; cover all platform mutation paths with revoke-before-mutation and original release interlock. PC fixture issuer must never become Board authority.",
+  "blockers_do_not_prevent_other_offline_work": true,
+  "board_work_still_excluded": true,
+  "no_board_action_or_new_compute_authorization": true
+}

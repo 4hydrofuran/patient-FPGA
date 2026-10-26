@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ACTUAL_STREAM_REJECTED_BY_OLD_8_TOKEN_BOUND_ACCEPTED_BY_DERIVED_24_TOKEN_BOUND",
+  "cohort_id": "DEV-005",
+  "actual_stream_packets": 35,
+  "formal_new_packet_bound": 53,
+  "old": {
+    "faults": [
+      "real-model stdout: bounded native stream exceeded"
+    ],
+    "queued_packets": 32,
+    "EOF_observed": false
+  },
+  "new": {
+    "faults": [],
+    "queued_packets": 35,
+    "EOF_observed": true
+  },
+  "scope": "ACTUAL_SAVED_CPU_STDOUT_WITH_PC_STRINGIO_QUEUE_PROXY_NOT_A_NEW_MODEL_OR_BOARD_RUN",
+  "BOARD": "NOT_TESTED"
+}

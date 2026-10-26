@@ -1,0 +1,955 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "tag": "batch1-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 2,
+      "grant_size": 1,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "a2bdf59fcc6e16fb7cfa3b4bc7044689b5477a5e4b4f05c5d0e2a8ff83d923c3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "9ed5a847030ed1b00103160758ae1f89d3b2904f6700ee9fc75f5269df6c7db7"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "50e7d2510dce4a9322d97b1b2dd42b42c55bc53f2a73bad49c589394ed30d328"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "cf7e70a4a58f15bb571c85e7323dd04f58f67700dd10cd9f1c98236f56b3d00e"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/events.jsonl",
+          "bytes": 4366174,
+          "sha256": "675fcae59602250c8f2ed95263de576324e54279274e14f70924e69be710020f"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "378eed677caec8baef02f623a02f0db180a5ccc587f86df3538ed8c28186f408"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-01/stdout.jsonl",
+          "bytes": 55374,
+          "sha256": "46ea838769fe49a369e47a6288a40fbc4602d54ed3c31147dbcadac52f25c0b0"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch1-v4-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 4,
+      "grant_size": 1,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "f5b0445e4405a92baa6f7d2da5266cd028d6f099ff2f5093f7d6896da3c34944"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "3525bbd0d4fb4f9a4f4355ac645190b61993c91e45e86f40463814fb9f5c70d7"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "13359e597d300d5dc022d3b3b28fd7a12b7ba1e766cffc3db2cf4198e3653251"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "83ff124087bf5887286fc6c051513f7ab251447de468bd9dd851d294311382f4"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/events.jsonl",
+          "bytes": 4559128,
+          "sha256": "3eae54b1b0a2d1ac7b6cd05b31303c5503c3791a5e874753e0a80a8a8a4f2f05"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "4ac20cba982cbbe71ab8e2135ff22a9217c8ed17a1bd610fdde50a96cac290ef"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v4-01/stdout.jsonl",
+          "bytes": 55603,
+          "sha256": "5246c76602be0f4c00751ca857d94d20e31674b98f8305dbc356366424b3d3d0"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch1-v5-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 5,
+      "grant_size": 1,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "a002ed8100b394dc07834c81195533c8902989ac254f12287077e12ca93b08aa"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "8e4682f9c7bd9a09e50a26006f55c6ac127d002c353ba0f16661f0fa5a7685c5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "67effc9a487717a2fecc7e53380bad826963b4bdc8b5738e9ddd18928b65de43"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "d763b57980a91f369c6365e668042a31bad47d14338366540ffa68ff16d79086"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/events.jsonl",
+          "bytes": 4551800,
+          "sha256": "f2e00ba35f22f1324a08da26588f61bd9db2d70b7eaa08e34264d3eed5c4ebcc"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "a8933e7275b1ab9638937f720071e8a5acb049e5d1ac6b214f158b72e2611485"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-01/stdout.jsonl",
+          "bytes": 55710,
+          "sha256": "d19462f654145fae41567fb430878b55bf0697bd6dd23d6c558118aed2137f37"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch1-v5-03",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": true,
+      "build_revision": 5,
+      "grant_size": 1,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "7e485ba3c68b928f7184b8a86c1a5efc391191fe1b7bf656a4f50eab838d6add"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "baa12e4f42015b47650c9b162a48d1511924133b1d50a696fdffe87f5c4db937"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "d5201375d1fe10cc1d7d7a46e2ede6513381bfbcc9ffe896599ad0ef7a8d1044"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "50761a0fd54d0dc4f48896b830ecccf40d3f28f76080d9938fee3864598374c4"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/events.jsonl",
+          "bytes": 4551378,
+          "sha256": "544be5d9294af2edbc763e9ccd2f48dcc548eae720b67ae5ac5dd2565ce811b5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/stderr.txt",
+          "bytes": 104884,
+          "sha256": "2cb46063829d8640bfdf154c3552bedc9eb0b69bc9b136eeab2ae9aa1cf7d6bb"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch1-v5-03/stdout.jsonl",
+          "bytes": 55687,
+          "sha256": "a447f5e85df851cf2d498743f4aec6616e5fb0f61a3e9aca57f563ec12cf1ea2"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 2,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "d5a064b0ba580b90aac3d42b91d891c0ab676010dfcbb55b32bb70c4e1c7c0c4"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "c9e10b381401bbff8468e05ba90bda3cbb2574baaf5a8e6a08fe52216343f281"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "0c07770ec61ddd55fd963af1c98cffcb8082f8209ac40d86807460f30381671b"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "1681626c1113908ee37850175a693afc03c4354e14fa9eda6bf86ba69feb13e0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/events.jsonl",
+          "bytes": 147995,
+          "sha256": "de0c6402e8a7953a25bf682ed04a81721df09281ea065abbbdafb753b74718ff"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "4fd9835c99d285f37a834188188cf6df64e6b4c9b670b1b096c8129f6b62f301"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-01/stdout.jsonl",
+          "bytes": 55344,
+          "sha256": "28287c4c3c5ed80f559802cfbeb0e82b7bb232ee76746ec40349b3cfd2761cd8"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v3-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 3,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "afa36979bde05bb045d6f7ce0a47584712c5e7c271cb7d7592513cbf07ad6a32"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "49303ea96785f11fa869da5d0e98aaadd76a93e9bc6c04c1337e33c0c2a650cf"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "aa9ba8f59081040dc5b9b50dbc4845f0b47ff0f9aaaed793adfe20f7247a3574"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "47689990c693b9457dddd2052d39f0f696f038431a82c3f3f3bc1c25b284f7bd"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/events.jsonl",
+          "bytes": 151183,
+          "sha256": "2d508c5d388ad820f73c240c80aa0c13b02ed70bb56cb4a8a327aef546527fd3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "08c3a4c5d77629f99846d913bd510a443254c948af34de2a92645000ea5c0f44"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v3-01/stdout.jsonl",
+          "bytes": 55572,
+          "sha256": "4150d09e77006e8b3ef24c792b1706cdeedad0fa81a94bd083f302b8f958adf7"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v4-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 4,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "8dbeb97d180b39a3d3659df61f16bb94dd0cb30bc77497fd9a85709bc7c25bfa"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "5b992cf3e83077871e568dcde21a96e8b9f4202ee6c54654145d11304cfebcf0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "b6156aeb34c0411dda4199678f7a1b2c6744e80eba8cddfc2d8345c10f7637eb"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "0b41d7cc496c9e543fbf4e73b2d0dbe22dd751240a6281cf6fe05c9aab7472a0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/events.jsonl",
+          "bytes": 152670,
+          "sha256": "87f786cef2bdcd23abe55a03ee04a311cc2a8a4b139fbdfe2c5dfd5844bfb040"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "7fac32b3824c00771991cf5f354ec390cb910a0a59683d52fb9833e815ba28e2"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-01/stdout.jsonl",
+          "bytes": 55559,
+          "sha256": "1e49268dcff5ca5980ae13f0c3b03cf597c5d7fdd83e87a35c49a2ba4967ba84"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v4-fail-end-01",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": false,
+      "build_revision": 4,
+      "grant_size": 72,
+      "manager_reserved_jobs": 1440,
+      "shared_claims": 1440,
+      "native_final_cpu_core_count": 1440,
+      "native_final_started": 1440,
+      "native_final_verified": 1440,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-end-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "96b0684b6f79d9a05f9fde46e78181be46b2f8544eb8d42b7e0c46e654c5305d"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-end-01/events.jsonl",
+          "bytes": 110323,
+          "sha256": "6097588e1f0c3bedbfc3f9ac711514dc5d894f4a8352c9d52e10fb569632dadb"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-end-01/stderr.txt",
+          "bytes": 104478,
+          "sha256": "105f383ea0589d6c7e857958a486bd779d1f78240972c9122265912ac87f33f0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-end-01/stdout.jsonl",
+          "bytes": 39116,
+          "sha256": "e063781db252772c13e458cc2c4cc4b6f6c05d899559d096507057131f76f1ab"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v4-fail-revoke-01",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": false,
+      "build_revision": 4,
+      "grant_size": 72,
+      "manager_reserved_jobs": 72,
+      "shared_claims": 5,
+      "native_final_cpu_core_count": 5,
+      "native_final_started": 5,
+      "native_final_verified": 4,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-revoke-01/events.jsonl",
+          "bytes": 79679,
+          "sha256": "e6cfec6a3e396f02a65b43e2360cefa6fbaeaf4bcb44b825bb82d2dbd7454127"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-revoke-01/stderr.txt",
+          "bytes": 104722,
+          "sha256": "2771c2945b2aa24f518e20b19adc92b9701135efa04291a35bdb84811d5af1d9"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v4-fail-revoke-01/stdout.jsonl",
+          "bytes": 38585,
+          "sha256": "83f36b6a5da7fd9a8dc0d99ef5124ff7721e91565da3bb4e4011683eb52bd9bd"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-01",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "ea6ead3e5e39dfe534119bdd30865c5165ba6f0819f4e2133824053fec513140"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "baf8cbca09d1f93e1767e1f1e4c7bcda6f9b2f04800b07a07fa73c3b4259e2c3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "77da540a7f738db743d9f74f9adc908a8172df2a53fd060f514b17fd67bc1969"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "48d2923f6b273ac9ac7c8157711f22f5ce2bb78d10a02d358f62eacf73f3c2e8"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/events.jsonl",
+          "bytes": 152887,
+          "sha256": "71cb28f8dcb807026de9a41c43e8178954dfba7bded45df5e0a517562de59b7c"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/stderr.txt",
+          "bytes": 104884,
+          "sha256": "c847086a05cce381cb36ba4a7b60ff68ab8d51b2eefc7de57d13d86d08a4c097"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-01/stdout.jsonl",
+          "bytes": 55706,
+          "sha256": "b783ecef463da6a6ed8ef091feb306e887c4273bf768148fd0e8bae9b23c0b94"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-02",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": false,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "4af6bbd1eeb8a14f5126d8592114b6c6bcd4cf31cbc40f9c6d7b3cec17702ef5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "d3dac47c8eaed9799f09557d328c2c92a92705ba384c83065854ac5783258d19"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "6a1dbab26c63fd24b7a0fa6ec61515bbc55f715765030ea80bc6378acd972413"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "168903b63bc2c34776468d855671b69683f13e9a99f76c3c798d275a4bd8ccd5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/events.jsonl",
+          "bytes": 152505,
+          "sha256": "e5b7101ee9317e04309d9f2326dcc71eb5e1429355db1fa6db875c1a4d6564aa"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/stderr.txt",
+          "bytes": 104884,
+          "sha256": "7467c27547ab1316ad4c144f06957ccc52e2afa2db0a3211f5c8ffc03458bfe1"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-02/stdout.jsonl",
+          "bytes": 55684,
+          "sha256": "c449bb06e031d0d3c9c72c7d786fc6c07e29ee36f207db6fd8f772f669661927"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-03",
+      "status": "PASS_REAL_CPU_NATIVE_RANGE_JOURNAL_AND_RECEIPTS",
+      "final_source": true,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 2880,
+      "shared_claims": 2880,
+      "native_final_cpu_core_count": 2880,
+      "native_final_started": 2880,
+      "native_final_verified": 2880,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "b178a305eba106676e8a922d449b679d3072001fbb39c06a4fe7a389f0f9782b"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "d1f1cbf953b593f89d1fe788aef641b068bb6a6be69cfeea83cff8c7e408a77d"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "e9186ec9162968a1d249b2b87ae5a3f83ec962b3cc8680ba3423b8be4662c832"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "2aca9b56a759a8778effa3c2e3371065eea12f5af6675c71abf34fcbc27c5d2f"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/events.jsonl",
+          "bytes": 152520,
+          "sha256": "ffa7486f69537f7e50bbc103e029d1b3a365f589e7a445712844805b21c195fd"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/stderr.txt",
+          "bytes": 104884,
+          "sha256": "488b338f3b415daeb6b486b8c6b582eff313b196c60fd4270fa67f024e2c73b3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-03/stdout.jsonl",
+          "bytes": 55693,
+          "sha256": "bbdd1bad3f4f3e437d004919712c9cf60a04244025f31bc64b4256b1ba01c350"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-fail-end-01",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": false,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 1440,
+      "shared_claims": 1440,
+      "native_final_cpu_core_count": 1440,
+      "native_final_started": 1440,
+      "native_final_verified": 1440,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-01/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "5b88978ed6eaacf5e2e81aeab3955a30f447c4d00d15e1428f3f804ffb1ac7ca"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-01/events.jsonl",
+          "bytes": 110342,
+          "sha256": "58cb81a593944cf1228056b24848d44cf8c8d2bb09ca3c702f4c980e9ff0e0b3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-01/stderr.txt",
+          "bytes": 104478,
+          "sha256": "250f6af013f7626041f9a4ddcc46319d3a9be2a03d64a8dd5817cb7c2483dc6b"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-01/stdout.jsonl",
+          "bytes": 39174,
+          "sha256": "b28ad52fcf8a331d04bb588f85d39b730c5005ed1c7fa12b3a84afe8742f1030"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-fail-end-03",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": true,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 1440,
+      "shared_claims": 1440,
+      "native_final_cpu_core_count": 1440,
+      "native_final_started": 1440,
+      "native_final_verified": 1440,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-03/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "745871cfab20d34bc10cd9adda5c6816eea2a127b35901d2c1b07240098d021b"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-03/events.jsonl",
+          "bytes": 110329,
+          "sha256": "e6c5abc5227284b7ce6170cb1307fae02e5240cb54e04199cef158ff9cad6d79"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-03/stderr.txt",
+          "bytes": 104478,
+          "sha256": "3ac7af6eee74bc1f40be10fab7b4dfe99d2b20bfbaac71d5e9cf3cc31ce6243e"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-end-03/stdout.jsonl",
+          "bytes": 39165,
+          "sha256": "70543ba8411c998b10ede3b12265ba9571888c30a0f1a1027f4d5bd93b3a062a"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-fail-revoke-01",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": false,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 72,
+      "shared_claims": 5,
+      "native_final_cpu_core_count": 5,
+      "native_final_started": 5,
+      "native_final_verified": 4,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-01/events.jsonl",
+          "bytes": 79569,
+          "sha256": "0033bd82156408d31c4379838b75c26ef4af53361280f25cc67071b6d9407d25"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-01/stderr.txt",
+          "bytes": 104722,
+          "sha256": "fe3eaf1756b0ff0840e3fbf822050c6f49a438f633019c1181511b6debda48a0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-01/stdout.jsonl",
+          "bytes": 38620,
+          "sha256": "8626d39f32402345c1aad94cb246b68b1c2890617b366eef77edce5b93925304"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    },
+    {
+      "tag": "batch72-v5-fail-revoke-03",
+      "status": "PASS_INJECTED_REVOKE_RETAINED_NO_DELIVERY_OR_REPLAY",
+      "final_source": true,
+      "build_revision": 5,
+      "grant_size": 72,
+      "manager_reserved_jobs": 72,
+      "shared_claims": 5,
+      "native_final_cpu_core_count": 5,
+      "native_final_started": 5,
+      "native_final_verified": 4,
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-03/events.jsonl",
+          "bytes": 79456,
+          "sha256": "615e3c519ddc9fd0045e73ed34992dbc8f33ee100e45b660a96e1b7a2f4a7262"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-03/stderr.txt",
+          "bytes": 104722,
+          "sha256": "78778d143ed37f159ac464581858fe8065a59c3c3fd3d6f5637f69c30c755293"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-microbatch-v1/native-transcripts/batch72-v5-fail-revoke-03/stdout.jsonl",
+          "bytes": 38639,
+          "sha256": "be329b65e79f06990048eebb03e0684ace832ff0ca200ff0ca9f27c9f252206a"
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0
+    }
+  ],
+  "release_allowed": false,
+  "replay_allowed": false,
+  "limitation": "Original private WSL transcript audit, mirrored bytes; not historical fsync or real DMA proof"
+}

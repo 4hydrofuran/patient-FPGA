@@ -1,0 +1,9 @@
+In file included from /home/member-a/kv260-build/a12-microbatch-20261026-v5/source/native_cpu_microbatch.cpp:7:
+/home/member-a/kv260-build/a12-microbatch-20261026-v5/source/prefix_cache.hpp: In static member function ‘static tt10::json tt10::PrefixStore::owner_of(const json&)’:
+/home/member-a/kv260-build/a12-microbatch-20261026-v5/source/prefix_cache.hpp:97:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |         ^~
+/home/member-a/kv260-build/a12-microbatch-20261026-v5/source/prefix_cache.hpp:97:92: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |                                                                                            ^~~~~~
+

@@ -1,0 +1,38 @@
+{
+  "status": "PASS_FRESH_LIFECYCLE_AUTHORIZATION_AFTER_DURABLE_CALL_WITH_UNCHANGED_FAULT_LATCH_AND_250MS_BOUND",
+  "before": {
+    "error": "foreign/reused/stale health ticket",
+    "sent": [],
+    "rows": 1,
+    "faults": [
+      "HealthBlocked: foreign/reused/stale health ticket"
+    ],
+    "max_age_ns": 250000000,
+    "health_fault_latched": true
+  },
+  "after": {
+    "error": null,
+    "sent": [
+      {
+        "allow": true,
+        "sequence": 39
+      }
+    ],
+    "rows": 1,
+    "faults": [],
+    "max_age_ns": 250000000,
+    "health_fault_latched": false
+  },
+  "health_failure_during_io": {
+    "error": "RuntimeError: synthetic health failure during lifecycle fsync",
+    "sent": [],
+    "rows": 1,
+    "faults": [
+      "RuntimeError: synthetic health failure during lifecycle fsync"
+    ],
+    "max_age_ns": 250000000,
+    "health_fault_latched": true
+  },
+  "scope": "REAL_HEALTHFENCE_THREADS_WITH_EXPLICIT_BLOCKING_JOURNAL_AND_HEALTH_PROXIES",
+  "BOARD": "NOT_TESTED"
+}

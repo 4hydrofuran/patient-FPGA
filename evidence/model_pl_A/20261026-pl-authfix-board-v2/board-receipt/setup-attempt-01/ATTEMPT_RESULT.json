@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_OR_OWNER_RETAINED",
+  "manager_pid": 2276,
+  "exit_code": 1,
+  "stdout_tail": "{\"event\": \"READBACK\", \"window_id\": \"a12-pl-authfix-20261026-v2\", \"phase\": \"initial\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-pl-authfix-20261026-v2\", \"phase\": \"a12_serialized_health\", \"action\": \"none\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-pl-authfix-20261026-v2\"}\n",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/var/lib/kv260-a12/pl-authfix-20261026-v2/run_bound_original.py\", line 18, in <module>\n    module.run_bound_original()\n  File \"/var/lib/kv260-a12/pl-authfix-20261026-v2/bundle/control/resource_probe_manager.py#fresh-authfix-binding\", line 253, in run_bound_original\n  File \"/var/lib/kv260-a12/pl-authfix-20261026-v2/bundle/control/resource_probe_manager.py\", line 154, in __init__\n    super().__init__(review, evidence=evidence)\n  File \"/var/lib/kv260-a12/pl-authfix-20261026-v2/bundle/platform/qwen35/a12/cpu01b_window.py\", line 62, in __init__\n    require_no_users(snapshot, True, boot_id=self.boot)\n  File \"/var/lib/kv260-a12/pl-authfix-20261026-v2/bundle/platform/qwen35/a10/accelerator_release_gate_v2.py\", line 157, in require_no_users\n    raise RuntimeError(\"PROCESS_SCAN_INCOMPLETE_OR_WRONG_BOOT\")\nRuntimeError: PROCESS_SCAN_INCOMPLETE_OR_WRONG_BOOT\n",
+  "cases": {
+    "app_R0": {},
+    "warm_prefix": {},
+    "app_hit": {}
+  }
+}

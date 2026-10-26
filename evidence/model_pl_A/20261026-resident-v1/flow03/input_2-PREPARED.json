@@ -1,0 +1,93 @@
+{
+  "type": "validated_answer",
+  "session_id": "e3026170721c4637ab35ea3ee14aff6c",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "flow2",
+  "case_id": "SYN_CP_01",
+  "case_version": "1.0-draft",
+  "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+  "text": "疼痛是压迫感。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "疼痛是压迫感。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "quality"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "quality"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "quality"
+    ],
+    "allowed_fact_ids": [
+      "quality"
+    ],
+    "required_fact_ids": [
+      "quality"
+    ],
+    "facts": [
+      {
+        "slot": "quality",
+        "status": "known",
+        "value": "压迫感",
+        "unit": null,
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "quality",
+        "span": [
+          3,
+          7
+        ],
+        "quote": "什么感觉"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "疼痛是压迫感。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_2",
+    "result_sha256": "1f40f38cb88c130f37cc557743c7b1527431c48923bc115234705c666c5c6a7d"
+  },
+  "received_ns": 158660726103,
+  "validated_ns": 159880102463,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 158646114068,
+  "worker_pid": 409,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/native_health_audit.py", line 83, in <module>
+    results=[check(tag,final=tag.endswith('-02')) for tag in tags]
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/native_health_audit.py", line 83, in <listcomp>
+    results=[check(tag,final=tag.endswith('-02')) for tag in tags]
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/native_health_audit.py", line 35, in check
+    assert independent['status']=='COMPLETE_ACTUAL_PC_NATIVE_TRANSCRIPT',independent
+AssertionError: {'domain': 'PC_NATIVE_MATH_NOT_FPGA', 'BOARD': 'NOT_TESTED', 'PL_calls': 0, 'release_allowed': False, 'replay_allowed': False, 'hardware_completions': None, 'scope': 'PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE', 'status': 'REJECTED_OR_INCOMPLETE_RETAIN_OWNER', 'reason': 'HandoffBlocked: private owned source/output directory required'}

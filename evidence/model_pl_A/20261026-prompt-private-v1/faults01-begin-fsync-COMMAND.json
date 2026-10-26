@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/promptpl_trial.py",
+    "--suite",
+    "faults01-begin-fsync",
+    "--ids",
+    "DEV-012",
+    "--caps",
+    "72",
+    "--fault",
+    "begin_fsync"
+  ],
+  "exit_code": 0,
+  "stdout": "WINDOW DEV-012 72 EXPECTED 0\nCOMPLETED_ACTUAL_CPU_PRIVATE_PROMPT_WINDOWS 1\n",
+  "stderr": ""
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOARD_CPU_SINGLE_GENERATION_AND_ORIGINAL_CONTENT_CHECK",
+  "question": "疼痛在什么位置？",
+  "text": "疼痛在胸骨后。",
+  "eos": true,
+  "content_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "location"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "exit_code": 0,
+  "startup_s": 39.931651459,
+  "native_timing": {
+    "decode_ms": 8751.605289,
+    "prefill_ms": 30181.655344,
+    "reset_ms": 4.122941,
+    "ttft_ms": 30206.476362
+  },
+  "CPU_calls": 936,
+  "weight_count": 72,
+  "execution_kind": "CPU_REFERENCE",
+  "PL_calls": 0,
+  "review_of_existing_run": true,
+  "model_rerun": false,
+  "original_record": "RESULT.json",
+  "harness_error": "Missing enabled field; disabled route declares execution_kind=CPU_REFERENCE",
+  "live_application_delivery_completed": false,
+  "private_PLM_or_PL_acceptance": false,
+  "task_scope": "USER_SELECTED_BOARD_CPU_BASIC_RUN",
+  "PL_acceptance": "NOT_TESTED",
+  "original_harness_failure_preserved": true,
+  "task_started_utc": "2026-10-26T09:50:10Z",
+  "completed_within_20_minutes": true
+}

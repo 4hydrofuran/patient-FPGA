@@ -1,0 +1,11 @@
+{
+  "schema": "A12_STEP08_UART_IDENTITY_ONLY",
+  "utc": "2026-10-26T11:38:16.1488313Z",
+  "port": "COM5",
+  "usb": "FTDIBUS\\VID_0403+PID_6011+XFL1CYYPZ52YB\\0000",
+  "status": "READONLY_IDENTITY_COLLECTED",
+  "raw": "\r\r\nkria login: ubuntu\r\r\nPassword: \r\r\nUbuntu 24.04.2 LTS kria ttyPS1\r\n\r\nkria login: ubuntu\r\r\nPassword: \r\nWelcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.12-a10irq2 aarch64)\r\n\r\n * Documentation:  https://help.ubuntu.com\r\n * Management:     https://landscape.canonical.com\r\n * Support:        https://ubuntu.com/pro\r\n\r\n System information as of Mon Oct 26 07:42:19 UTC 2026\r\n\r\n  System load:  0.0                Temperature:           30.9 C\r\n  Usage of /:   53.6% of 27.62GB   Processes:             184\r\n  Memory usage: 14%                Users logged in:       0\r\n  Swap usage:   0%                 IPv4 address for eth0: 192.168.137.2\r\n\r\n\r\nExpanded Security Maintenance for Applications is not enabled.\r\n\r\n93 updates can be applied immediately.\r\nTo see these additional updates run: apt list --upgradable\r\n\r\nEnable ESM Apps to receive additional future security updates.\r\nSee https://ubuntu.com/esm or run: sudo pro status\r\n\r\nNew release '26.04.1 LTS' available.\r\nRun 'do-release-upgrade' to upgrade to it.\r\n\r\n\r\n\u001b[?2004hubuntu@kria:~$ printf '\\nA12_ID_a4c34ae0319c47ac905e7ca105e95ba8_BEGIN\\n'; id; uname -r; sha256sum /etc/machine-id; cat /proc/sys/kernel/random/boot_id; ip -br addr show eth0; ip -4 route; cat /sys/class/net/eth0/carrier; systemctl is-active ssh.socket ssh.service; printf '\\nA12_ID_a4c34ae0319c47ac905e7ca105e95ba8_END\\n'\r\n\u001b[?2004l\r\r\nA12_ID_a4c34ae0319c47ac905e7ca105e95ba8_BEGIN\r\nuid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),101(lxd)\r\n6.8.12-a10irq2\r\nea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec  /etc/machine-id\r\n0978088a-8d10-45b2-8f43-726d00209313\r\neth0             UP             192.168.137.2/24 fe80::20a:35ff:fe0f:2d70/64 \r\ndefault via 192.168.137.1 dev eth0 proto static metric 100 \r\n192.168.137.0/24 dev eth0 proto kernel scope link src 192.168.137.2 metric 100 \r\n1\r\nactive\r\ninactive\r\n\r\nA12_ID_a4c34ae0319c47ac905e7ca105e95ba8_END\r\n\u001b[?2004hubuntu@kria:~$ ",
+  "reboot": false,
+  "configuration_changed": false,
+  "closed": true
+}

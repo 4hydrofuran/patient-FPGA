@@ -1,0 +1,17 @@
+{
+  "status": "NOT_ACCEPTED_CACHED_REVOKE_TARGET_NOT_REACHED",
+  "cause": "shared select.poll object was invoked concurrently by observer and protocol threads; cached-revoke window failed at startup claims0, not intended claims5",
+  "raw_reasons": {
+    "model01-begin-fsync": "journal: injected complete-record fsync failure",
+    "model01-cached-revoke": "service: concurrent poll() invocation",
+    "model01-drop-copy": "RuntimeError: actual native terminal status/identity differs",
+    "model01-end-fsync": "journal: injected complete-record fsync failure",
+    "model01-end-slow": "HealthBlocked: foreign/reused/stale health ticket",
+    "model01-grant-fsync": "journal: injected complete-record fsync failure",
+    "model01-grant-slow": "HealthBlocked: foreign/reused/stale health ticket",
+    "model01-receipt-fsync": "receipt: injected receipt fsync failure",
+    "model01-request-digest": "RuntimeError: actual native terminal status/identity differs"
+  },
+  "original_suite_kept": true,
+  "BOARD": "NOT_TESTED"
+}

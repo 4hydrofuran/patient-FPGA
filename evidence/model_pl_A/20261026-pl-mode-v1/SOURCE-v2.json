@@ -1,0 +1,159 @@
+{
+  "backend_reversible_edits": [
+    [
+      "#ifndef SP_LINEAR_CONTROL_TEST\n    // This candidate cannot be activated on a board by editing a JSON enable flag.",
+      "#if !defined(SP_LINEAR_CONTROL_TEST) && !defined(SP_A12_LIVE_BOARD_BOUND)\n    // This candidate cannot be activated on a board by editing a JSON enable flag."
+    ],
+    [
+      "#ifdef SP_LINEAR_CONTROL_TEST\n    require(digest);c->authority.bind_request(digest);return SP_OK;",
+      "#if defined(SP_LINEAR_CONTROL_TEST) || defined(SP_A12_LIVE_BOARD_BOUND)\n    require(digest);c->authority.bind_request(digest);return SP_OK;"
+    ],
+    [
+      "#ifdef SP_LINEAR_CONTROL_TEST\n    c->authority.end_request();return SP_OK;",
+      "#if defined(SP_LINEAR_CONTROL_TEST) || defined(SP_A12_LIVE_BOARD_BOUND)\n    c->authority.end_request();return SP_OK;"
+    ]
+  ],
+  "original_backend_sha256": "a0638f891d7b9d71b02c97a63e2db3e99876283068a33031a820c29bd2720e2e",
+  "source": [
+    {
+      "name": "backend.cpp",
+      "sha256": "09c65fed2091f60647dda30e72d7f5a37956a7aff53ce9b5282e88b48b4ae7b1"
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa"
+    },
+    {
+      "name": "host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749"
+    },
+    {
+      "name": "host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6"
+    },
+    {
+      "name": "observer.map",
+      "sha256": "0b4d68a8bfd2f11bfac975449c97db14dad54d38fdb6649e4485fec5bd6c90d4"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175"
+    },
+    {
+      "name": "plmode_observer.cpp",
+      "sha256": "121da4fa4c97cd0842707a4e585192b0be54198123f84c621414f19d3f2302e4"
+    },
+    {
+      "name": "private.map",
+      "sha256": "66e8d74122ad1aa983d06f39dd05195107f3df60b95a09f861bafffead159cc4"
+    },
+    {
+      "name": "release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "13140052ce691dda246619a0594b85c4464bfbd6cd6d34aac13293a00c8de1bf"
+    }
+  ],
+  "constructor_edits": [
+    [
+      "need(self.build['domain']=='PC_REAL_MODEL_PLM_V1','foreign build')",
+      "need(self.build['domain'] in ('PC_REAL_MODEL_PLM_V1','A12_PREPARED_BOARD_MODEL_PLM_V1'),'foreign build')"
+    ],
+    [
+      "self.page=Page(self.build['writer_library'],self.build['writer_sha256'])",
+      "self.page=AuthorityPage(self.build['writer_library'],self.build['writer_sha256'],deadline=self.control_deadline())"
+    ],
+    [
+      "pass_fds=(self.child_legacy.fileno(),self.child_private.fileno(),self.page.fd,self.journal.lock)",
+      "pass_fds=(self.child_legacy.fileno(),self.child_private.fileno(),self.page.fd,self.journal.lock,*self.inherited_fds())"
+    ],
+    [
+      "domain='PC_REAL_MODEL_CPU_REFERENCE',real_device_approval=False",
+      "domain=self.provider.domain,real_device_approval=False"
+    ],
+    [
+      "self.p=subprocess.Popen(argv,stdin=",
+      "self.launch_guard()\n    self.p=subprocess.Popen(argv,stdin="
+    ],
+    [
+      "for t in self.threads:t.start()",
+      "for t in self.threads:t.start()\n    if self.cancel_event.is_set():self._fail('mode cancellation latched during initialization')"
+    ]
+  ],
+  "request_edits": [
+    [
+      "execution_kind='PC_NATIVE_MATH_NOT_FPGA'",
+      "execution_kind=self.provider.wire_execution"
+    ],
+    [
+      "total=cpu_route(route)",
+      "total=self.provider.route_count(route,completed=True)"
+    ],
+    [
+      "{k:route[k] for k in self.resident}==self.resident",
+      "self.provider.residency(route)==self.resident"
+    ],
+    [
+      "result['domain']=='PC'",
+      "result['domain']==self.provider.native_domain"
+    ],
+    [
+      "route['pc_last_job']==route['job_id']==total and route['pc_output_consumable'] is True",
+      "self.last_verified(route,total)"
+    ],
+    [
+      "route['pc_plm']['bound_request_sha256']=='' and route['pc_plm']['local_generation']==0",
+      "self.provider.control(route)['bound_request_sha256']=='' and self.provider.control(route)['local_generation']==0"
+    ],
+    [
+      "actual_CPU_calls=expected,final_job=total",
+      "verified_backend_calls=expected,execution_kind=self.provider.execution_kind,final_job=total"
+    ],
+    [
+      "schema='PC_REAL_MODEL_PLM_RECEIPT_V1'",
+      "schema=self.provider.receipt_schema"
+    ],
+    [
+      "summary=dict(actual_CPU_calls=expected,cumulative_CPU_calls=total",
+      "summary=dict(verified_backend_calls=expected,cumulative_backend_calls=total,execution_kind=self.provider.execution_kind"
+    ],
+    [
+      "scope='PC_ONLY_RAW_TOKEN_NOT_USER_DELIVERY; SMALL_DESCRIPTIVE_SAMPLE_NOT_BOARD'",
+      "scope='BOUNDED_ACCEPTANCE_DELIVERY_GATE_NOT_UI_OR_SERVICE' "
+    ]
+  ],
+  "page_edits": [
+    [
+      "def __init__(self,library,expected):",
+      "def __init__(self,library,expected,*,deadline=None):"
+    ],
+    [
+      "self.deadline=time.monotonic_ns()+180_000_000_000",
+      "self.deadline=deadline if deadline is not None else time.monotonic_ns()+180_000_000_000"
+    ]
+  ],
+  "physical_execution": "NONE",
+  "deployment": "NOT_PERFORMED"
+}

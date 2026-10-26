@@ -1,0 +1,25 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-shared",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-DSP_A12_PC_TEST=1",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-I/home/member-a/kv260-build/a12-model-route-20261026-v1/source",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v1/source/modelpl_cpu.cpp",
+    "-o",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v1/liba12_native_cpu_control.so",
+    "-ldl",
+    "-l:libcrypto.so.3"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-model-route-20261026-v1",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "In file included from /home/member-a/kv260-build/a12-model-route-20261026-v1/source/modelpl_cpu.cpp:17:\n/home/member-a/kv260-build/a12-model-route-20261026-v1/source/plm_control.hpp:7:10: fatal error: openssl/evp.h: No such file or directory\n    7 | #include <openssl/evp.h>\n      |          ^~~~~~~~~~~~~~~\ncompilation terminated.\n"
+}

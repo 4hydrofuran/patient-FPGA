@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "8ae373b5032b475a84979c81e6e92638",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-021",
+    "case_id": "SYN_CP_03",
+    "case_version": "1.0-draft",
+    "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+    "text": "气短情况我不清楚。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "气短情况我不清楚。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "dyspnea"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "dyspnea"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "dyspnea"
+      ],
+      "allowed_fact_ids": [
+        "dyspnea"
+      ],
+      "required_fact_ids": [
+        "dyspnea"
+      ],
+      "facts": [
+        {
+          "slot": "dyspnea",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "dyspnea",
+          "span": [
+            4,
+            8
+          ],
+          "quote": "呼吸费力"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "气短情况我不清楚。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_2",
+      "result_sha256": "0076ad737ab5a8bc07cf4518dacaaaf66ef604b70f5aacd474dc9ba3c2fcd3c9"
+    },
+    "received_ns": 217569541243,
+    "validated_ns": 218985593696,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 217552764339,
+    "worker_pid": 428,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.438949619,
+    "application_delivered_ns": 218991713958,
+    "delivery_fence": {
+      "serial": 114,
+      "sample": 617,
+      "epoch": "b3078f7f5cbe4778abed16b76060c3c4",
+      "requested_ns": 218990580558,
+      "started_ns": 218990721821,
+      "ended_ns": 218991602402,
+      "authorized_ns": 218991696155
+    },
+    "prepared_response_sha256": "c086da9f778e9a21158c13971be61da7da6c34e77e053b43193a973c0688149a",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

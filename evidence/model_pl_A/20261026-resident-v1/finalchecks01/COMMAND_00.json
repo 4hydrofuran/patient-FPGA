@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "-v",
+    "test_resident_control",
+    "test_resident_admission",
+    "test_resident_relocate"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_active_and_revoked_refuse (test_resident_control.ControlTests) ... ok\ntest_nine_then_tenth_rejected (test_resident_control.ControlTests) ... ok\ntest_old_three_not_silently_extended (test_resident_control.ControlTests) ... ok\ntest_original_5000_budget (test_resident_control.ControlTests) ... ok\ntest_cap_one_capacity_before_begin (test_resident_admission.AdmissionTests) ... ok\ntest_capacity_each_bound (test_resident_admission.AdmissionTests) ... ok\ntest_input_transport_keeps_original_identity (test_resident_admission.AdmissionTests) ... ok\ntest_no_json_board_authority (test_resident_admission.AdmissionTests) ... ok\ntest_worst_case_no_eos_guess (test_resident_admission.AdmissionTests) ... ok\ntest_changed_backend (test_resident_relocate.RelocationTests) ... ok\ntest_old_baseline_manifest_required (test_resident_relocate.RelocationTests) ... ok\ntest_placed_layout_and_policy (test_resident_relocate.RelocationTests) ... ok\ntest_symlink_payload (test_resident_relocate.RelocationTests) ... ok\ntest_tampered_application (test_resident_relocate.RelocationTests) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.677s\n\nOK\n"
+}

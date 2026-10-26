@@ -1,0 +1,12 @@
+{
+  "commands": [
+    ["wsl", "-d", "KV260-A-2204", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/plmode_audit.py", "--tag", "normal02"],
+    ["wsl", "-d", "KV260-A-2204", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/plmode_audit.py", "--tag", "fallback02"]
+  ],
+  "exit_codes": [1, 1],
+  "error": "plmode_frozen_journal.ModeBlocked: unsafe/oversize journal",
+  "cause": "Linux private-file ownership/mode validation was applied to the DrvFS evidence mirror",
+  "resolution": "Validate the current private Linux original with the unchanged permission gate, then independently compare every mirror byte hash; do not exempt permissive mirrors from the gate",
+  "acceptance_threshold_changed": false,
+  "BOARD": "NOT_TESTED"
+}

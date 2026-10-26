@@ -1,0 +1,11 @@
+{
+  "command": [
+    "promptcopy_candidate.py",
+    "prepare"
+  ],
+  "exit_code": 1,
+  "reason": "Original finite checker rejects newlines between approved sentences; first candidate was stopped by the added input fixture gate.",
+  "fix": "Join whole fact sentences directly with their original full stops; original checker unchanged. Keep partial facts-only-01.",
+  "model_started": false,
+  "BOARD": "NOT_TESTED"
+}

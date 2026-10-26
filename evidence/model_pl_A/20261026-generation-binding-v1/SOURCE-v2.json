@@ -1,0 +1,97 @@
+{
+  "workspace": "/home/member-a/kv260-build/a12-generation-binding-20261026-v2",
+  "source": [
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569",
+      "bytes": 1555
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02",
+      "bytes": 1386
+    },
+    {
+      "name": "generation_cpu.cpp",
+      "sha256": "f70231bbc5c5ea3929e3ef8b0db2bc117098547393a484b8c264284447ec1a20",
+      "bytes": 12396
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "260069588cf754d56ffc2e36317e724dd802f643a291bb385052c3da16466049",
+      "bytes": 5737
+    },
+    {
+      "name": "generation_writer.cpp",
+      "sha256": "f2c61b4b2ad7d6e5748c8552e1d64a39b0286f8aee93a6ce465f71f414a61584",
+      "bytes": 973
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+      "bytes": 953436
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e",
+      "bytes": 5908
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec",
+      "bytes": 5233
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175",
+      "bytes": 6225
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5",
+      "bytes": 10134
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720",
+      "bytes": 5803
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda",
+      "bytes": 2625
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e",
+      "bytes": 583
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102",
+      "bytes": 1492
+    },
+    {
+      "name": "test_generation_slot.cpp",
+      "sha256": "f6d8df47f9dd723ed41f19ef443229e32af1f5f05f38c04cc1120f8d33ab2011",
+      "bytes": 2404
+    }
+  ],
+  "CPU_adapter_reversible_edits": [
+    [
+      "#include \"plm_control.hpp\"",
+      "#include \"generation_slot.hpp\""
+    ],
+    [
+      "plm::Control authority;",
+      "generation::Control<generation::PC_FIXTURE> authority;"
+    ]
+  ],
+  "original_CPU_adapter_sha256": "70636413cc28272651195a38ec6b3a1cdb83556e605dc153773708784a84fc11",
+  "BOARD": "NOT_TESTED"
+}

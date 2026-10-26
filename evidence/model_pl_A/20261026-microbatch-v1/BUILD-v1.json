@@ -1,0 +1,63 @@
+{
+  "status": "PASS_PC_ADAPTER_BUILD",
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fvisibility=hidden",
+    "-DSP_A12_PC_TEST=1",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-I/home/member-a/kv260-build/a12-microbatch-20261026-v1/source",
+    "-I/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/llama-source/vendor/nlohmann",
+    "/home/member-a/kv260-build/a12-microbatch-20261026-v1/source/native_cpu_microbatch.cpp",
+    "-o",
+    "/home/member-a/kv260-build/a12-microbatch-20261026-v1/liba12_native_cpu_control.so",
+    "-ldl",
+    "-l:libcrypto.so.3"
+  ],
+  "exit_code": 0,
+  "workspace": "/home/member-a/kv260-build/a12-microbatch-20261026-v1",
+  "library": "/home/member-a/kv260-build/a12-microbatch-20261026-v1/liba12_native_cpu_control.so",
+  "revision": 1,
+  "source_sha256": "c4f4421a3f923793633e192dcdb6d7b516bdbe925a2ff83bf2008931253a9c1b",
+  "public_header_sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+  "existing_native": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/pc04/qwen35-a12",
+  "existing_native_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+  "existing_cpu_library": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+  "existing_cpu_library_sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+  "native_executable_rebuilt": false,
+  "CPU_math_rebuilt": false,
+  "ARM_build": "NOT_PERFORMED_PC_ONLY_SOURCE",
+  "BOARD": "NOT_TESTED",
+  "library_sha256": "4a79b621c43d95af8c0335564ca5af02b0b6fa659ee030ca671537e945b4eca1",
+  "source": [
+    {
+      "name": "microbatch_guard.hpp",
+      "bytes": 10386,
+      "sha256": "7e80821eeef3f7b4c650b3d7c95857cf66ea89afddea7cba928cc0f7ddb04274"
+    },
+    {
+      "name": "native_cpu_microbatch.cpp",
+      "bytes": 7911,
+      "sha256": "d12de00eb9e8e70320bab080e739f683a82ed0cba084f5a4aab36f279d3a061c"
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "bytes": 10134,
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "bytes": 1696,
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    }
+  ],
+  "original_adapter_sha256": "c4f4421a3f923793633e192dcdb6d7b516bdbe925a2ff83bf2008931253a9c1b",
+  "PC_only": true,
+  "local_budget_requires_trusted_worker": true
+}

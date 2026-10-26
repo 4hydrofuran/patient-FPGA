@@ -1,0 +1,264 @@
+{
+  "status": "PASS_INDEPENDENT_CONTROL_JOURNALS_META_AND_RECEIPTS",
+  "windows": [
+    {
+      "tag": "san01-strict",
+      "status": "COMPLETE_CONTROL_WINDOW",
+      "cap": 1,
+      "claims": 2880,
+      "grant_records": 2880,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "native_result_count": 3,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-batch",
+      "status": "COMPLETE_CONTROL_WINDOW",
+      "cap": 72,
+      "claims": 2880,
+      "grant_records": 40,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "native_result_count": 3,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-begin-fsync",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 0,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-grant-fsync",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-end-fsync",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 1440,
+      "grant_records": 20,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-receipt-fsync",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 1440,
+      "grant_records": 20,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-grant-slow",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-end-slow",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 1440,
+      "grant_records": 20,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-request-digest",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 0,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-legacy-replay",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 0,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 0
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-revoke-claim",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 5,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-nan-y",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 5,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-start",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 5,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-timeout",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 5,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-premature-unload",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 0,
+      "grant_records": 0,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-cached-T",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 1,
+      "grant_records": 1,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    },
+    {
+      "tag": "san01-reuse-generation",
+      "status": "FAILED_WINDOW_DIRTY_NO_RELEASE",
+      "cap": 72,
+      "claims": 1440,
+      "grant_records": 20,
+      "legacy_sequences": {
+        "router": 1,
+        "backend": 73
+      },
+      "native_result_count": 0,
+      "hardware_completions": null,
+      "release_allowed": false,
+      "replay_allowed": false
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "model_numerical_verification": false,
+  "release_allowed": false,
+  "replay_allowed": false
+}

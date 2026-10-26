@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/promptpl_trial.py",
+    "--suite",
+    "strict01",
+    "--caps",
+    "1",
+    "--ids",
+    "DEV-001,DEV-004,DEV-005,DEV-011,DEV-012,V08"
+  ],
+  "exit_code": 0,
+  "stdout": "WINDOW DEV-001 1 EXPECTED 1872\nWINDOW DEV-004 1 EXPECTED 2304\nWINDOW DEV-005 1 EXPECTED 3240\nWINDOW DEV-011 1 EXPECTED 1656\nWINDOW DEV-012 1 EXPECTED 3096\nWINDOW V08 1 EXPECTED 2664\nCOMPLETED_ACTUAL_CPU_PRIVATE_PROMPT_WINDOWS 6\n",
+  "stderr": ""
+}

@@ -1,0 +1,89 @@
+{
+  "header_reversible_edits": [
+    [
+      "Writer(int fd,const char*id,const char*epoch){",
+      "Writer(int fd,const char*id,const char*epoch,uint64_t requested_domain=PC_FIXTURE){"
+    ],
+    [
+      "s->domain=PC_FIXTURE; // There is deliberately NO Board-positive issuer.",
+      "need(requested_domain==PC_FIXTURE||requested_domain==BOARD);s->domain=requested_domain; // issuer selects a compile/runtime fenced domain"
+    ],
+    [
+      "uint64_t zero=0;need(s->state.compare_exchange_strong(zero,LOADING));live(p,PC_FIXTURE,LOADING);}",
+      "uint64_t zero=0;need(s->state.compare_exchange_strong(zero,LOADING));live(p,s->domain,LOADING);}"
+    ],
+    [
+      "void resident(const char*sha){auto s=slot(p);auto h=plm::words(sha);live(p,PC_FIXTURE,LOADING);",
+      "void resident(const char*sha){auto s=slot(p);auto h=plm::words(sha);live(p,s->domain,LOADING);"
+    ]
+  ],
+  "writer_append": "\n#include <sys/utsname.h>\nGEN_API void* a12_livegen_board_open_v1(int fd,const char*id,const char*epoch){\n#if defined(__aarch64__)\n    try{\n        generation::need(id&&epoch&&geteuid()==0);utsname u{};generation::need(!uname(&u)&&std::string(u.release)==\"6.8.12-a10irq2\");\n        std::ifstream input(\"/etc/machine-id\");char buffer[4097];input.read(buffer,sizeof buffer);auto count=input.gcount();\n        generation::need(count>0&&count<=4096);std::string text(buffer,size_t(count));unsigned char bytes[32];unsigned n=0;uint64_t words[4];\n        generation::need(EVP_Digest(text.data(),text.size(),bytes,&n,EVP_sha256(),nullptr)==1&&n==32);std::memcpy(words,bytes,32);\n        generation::need(plm::hex(words)==\"ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec\");\n        return new generation::Writer(fd,id,epoch,generation::BOARD);\n    }catch(...){return nullptr;}\n#else\n    (void)fd;(void)id;(void)epoch;return nullptr; // PC has no positive Board issuer.\n#endif\n}\n",
+  "original_header_sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa",
+  "original_writer_sha256": "f2c61b4b2ad7d6e5748c8552e1d64a39b0286f8aee93a6ce465f71f414a61584",
+  "source": [
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569"
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02"
+    },
+    {
+      "name": "exports.map",
+      "sha256": "81a54d5054b8ccc5faf9470f1ddbb6d31a17963c7c3de7a9a660694795677b5e"
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "ee4060c61d071ad23cad906fefb1ee417256f4c543cd0ad2cbc7fe751797bc33"
+    },
+    {
+      "name": "generation_writer.cpp",
+      "sha256": "4c1d80549049f5d2f4cd4f014fca961613301e115de058748f84096a43c2135d"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175"
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5"
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720"
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda"
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102"
+    },
+    {
+      "name": "test_generation_slot.cpp",
+      "sha256": "f6d8df47f9dd723ed41f19ef443229e32af1f5f05f38c04cc1120f8d33ab2011"
+    }
+  ]
+}

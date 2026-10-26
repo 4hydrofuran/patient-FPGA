@@ -1,0 +1,11 @@
+{
+  "status": "CURRENT_STARTUP_BASELINE_REVIEWED_FOR_ONE_ORDINARY_PL_WINDOW",
+  "sha256": "ce2ca13f0fa0a3b912b4cfab681ef21a12cad41dc3cdc131db14600da965fbc9",
+  "boot_id": "b0718166-5c3b-4c4f-b669-4f83d3340d00",
+  "comparison": "Compared with this task v1 baseline: known X509 startup trace runs on CPU2 instead of CPU0, one register value changes, and four repeated USB dummy-regulator messages are absent. No new diagnostic category.",
+  "diagnostic_rows": 186,
+  "known_limitations_remain_open": ["X509 certificate startup warning and trace", "pinctrl firmware limitations", "USB dummy-regulator startup messages", "default overlay lifecycle advisories", "module signature taint and boot RT throttling"],
+  "no_runtime_PL_fault_or_panic_in_captured_baseline": true,
+  "new_diagnostics_must_still_latch": true,
+  "thresholds_changed": false
+}

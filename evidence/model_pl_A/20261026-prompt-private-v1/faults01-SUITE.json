@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETED_TARGETED_CPU_PRIVATE_PROMPT_FAULTS",
+  "windows": [
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-begin-fsync/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "begin_fsync"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-grant-fsync/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "grant_fsync"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-end-fsync/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "end_fsync"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-receipt-fsync/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "receipt_fsync"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-end-slow/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "end_slow"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-request-digest/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "request_digest"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-same-uuid-reload/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "same_uuid_reload"
+    },
+    {
+      "id": "DEV-012",
+      "cap": 72,
+      "folder": "faults01-drop-copy/DEV-012-cap72",
+      "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+      "injection": "drop_copy"
+    }
+  ],
+  "BOARD": "NOT_TESTED"
+}

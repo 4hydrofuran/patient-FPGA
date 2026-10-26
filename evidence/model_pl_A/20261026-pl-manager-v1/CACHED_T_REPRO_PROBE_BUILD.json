@@ -1,0 +1,22 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I/home/member-a/kv260-build/a12-pl-manager-20261026-v4/source",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/source/plm_probe.cpp",
+    "-L/home/member-a/kv260-build/a12-pl-manager-20261026-v2",
+    "-lplm_backend_pc_control",
+    "-Wl,-rpath,/home/member-a/kv260-build/a12-pl-manager-20261026-v2",
+    "-ldl",
+    "-o",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v6-counterexample/plm-control-probe-old-backend"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-pl-manager-20261026-v6-counterexample",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

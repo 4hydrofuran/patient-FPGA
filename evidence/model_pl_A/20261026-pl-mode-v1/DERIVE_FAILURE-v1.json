@@ -1,0 +1,9 @@
+{
+  "command": ["wsl", "-d", "KV260-A-2204", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/plmode_build.py", "--revision", "1"],
+  "exit_code": 1,
+  "error": "AssertionError: unique device_open preprocessor anchor not found",
+  "cause": "Frozen source uses #ifndef plus an explanatory comment, rather than the assumed #if !defined form",
+  "resolution": "Match the actual complete original directive/comment uniquely and preserve inverse derivation; v1 workspace untouched, v2 compilation used",
+  "ARM_execution": "NOT_EXECUTED",
+  "BOARD": "NOT_TESTED"
+}

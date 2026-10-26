@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/pl_auth_review.py"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a12/pl_auth_review.py\", line 72, in <module>\n    if __name__=='__main__':main()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a12/pl_auth_review.py\", line 32, in main\n    assert len(normal['cases'])==42 and normal['cases']==san['cases']\nAssertionError\n",
+  "BOARD": "NOT_TESTED"
+}

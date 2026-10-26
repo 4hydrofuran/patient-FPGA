@@ -1,0 +1,42 @@
+{
+  "status": "PASS_REJECTED_HISTORY_LOCAL_FDS_CLOSED_DIRTY_PRESERVED",
+  "records": [
+    {
+      "source_sha256": "449db8566521c74d98a398476fb60b0198d8e2ba7fb4f3ba253ea34ffe48cd01",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Patientqwen/platform/qwen35/a12/test_plmode_init_cleanup.py",
+        "--child",
+        "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-pl-mode-v1/COORDINATOR_BEFORE_INIT_CLEANUP.py"
+      ],
+      "exit_code": 0,
+      "observation": {
+        "reason": "invalid session open",
+        "additional_fds": 3,
+        "DIRTY_retained": true,
+        "history_unchanged": true,
+        "native_started": false,
+        "release_allowed": false
+      }
+    },
+    {
+      "source_sha256": "276bf27815088336ae1c186e18cc458094b57d850b163892b9016a7e125d25c0",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Patientqwen/platform/qwen35/a12/test_plmode_init_cleanup.py",
+        "--child",
+        "/mnt/c/Patientqwen/platform/qwen35/a12/plmode_coordinator.py"
+      ],
+      "exit_code": 0,
+      "observation": {
+        "reason": "invalid session open",
+        "additional_fds": 0,
+        "DIRTY_retained": true,
+        "history_unchanged": true,
+        "native_started": false,
+        "release_allowed": false
+      }
+    }
+  ],
+  "BOARD": "NOT_TESTED"
+}

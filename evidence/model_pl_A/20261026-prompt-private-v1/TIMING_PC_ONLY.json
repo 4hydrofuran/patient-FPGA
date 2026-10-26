@@ -1,0 +1,39 @@
+{
+  "scope": "SEND_TO_VERIFIED_RESULT_INCLUDING_CONTENT_END_RECEIPT_FINAL_FENCE",
+  "units": "seconds",
+  "timing": {
+    "cap72_all_25": {
+      "app_R0": {
+        "min": 1.932234503,
+        "median": 2.160720389,
+        "max": 3.403471871
+      },
+      "app_hit": {
+        "min": 0.937805341,
+        "median": 1.132354499,
+        "max": 2.473522597
+      }
+    },
+    "cap1_six_representatives": {
+      "app_R0": {
+        "min": 5.866960008,
+        "median": 8.4080925465,
+        "max": 10.734763607
+      },
+      "app_hit": {
+        "min": 3.49352448,
+        "median": 6.108849442,
+        "max": 8.117738033
+      }
+    }
+  },
+  "repeated_same_input_distribution": false,
+  "cohort_pair_order": "ALL_CAP72_THEN_SIX_CAP1_NOT_RANDOMIZED",
+  "actual_input_routing_and_service_admission_included": false,
+  "load_and_warm_outside_request_clock": true,
+  "p95": null,
+  "BOARD": "NOT_TESTED",
+  "Board_CMA": null,
+  "Board_latency_saving_s": null,
+  "production_SLA": false
+}

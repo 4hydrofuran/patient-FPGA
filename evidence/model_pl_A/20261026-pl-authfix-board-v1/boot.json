@@ -1,0 +1,32 @@
+{
+  "schema": "A10_ONE_CANDIDATE_BOOT_V1",
+  "candidate": "irq2",
+  "utc": "2026-10-26T11:27:02.9326472Z",
+  "source_boot_id": "c995ba67-1bac-41e7-9f63-e14e9ca2e6a1",
+  "status": "STOPPED_BEFORE_REBOOT",
+  "events": [
+    {
+      "text": "\r\n\u001b[?2004l\r\u001b[?2004hubuntu@kria:~$ ",
+      "kind": "linux_handshake",
+      "utc": "2026-10-26T11:27:04.3042574Z"
+    },
+    {
+      "text": "( set -e; test \"$(cat /proc/sys/kernel/random/boot_id)\" = c995ba67-1bac-41e7-9f63-e14e9ca2e6a1; test \"$(uname -r)\" = 6.8.0-1036-xilinx; test \"$(sha256sum /etc/machine-id | cut -d ' ' -f1)\" = ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec; test \"$(id -u)\" = 1000; test ! -d /sys/module/zocl; test -d /sys/kernel/config/device-tree/overlays/k26-starter-kits_image_1; python3 -c \"from pathlib import Path; t=[int(p.read_text()) for p in Path('/sys/class/hwmon').glob('hwmon*/temp*_input')]; print('temperatures_mC',t); assert t and all(0<x<55000 for x in t)\"; cat /proc/loadavg; cat /proc/sys/kernel/random/boot_id; test -d /usr/lib/modules/6.8.12-a10irq2; test \"$(sha256sum /boot/firmware/image.fit | cut -d ' ' -f1)\" = 23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e; test \"$(sha256sum /boot/firmware/boot.scr.uimg | cut -d ' ' -f1)\" = f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685; test \"$(sha256sum /boot/firmware/a10-candidate-irq2-20261021.fit | cut -d ' ' -f1)\" = e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b; python3 -c \"import json; from pathlib import Path; r=[json.loads(s) for s in Path('/home/ubuntu/a10-irq2-stage-20261021-v1/stage-result.jsonl').read_text().splitlines()]; assert r[-1]['event']=='STAGED_ONLY_NOT_BOOTED'\"; test ! -e /var/lock/kv260-a1/active; test ! -L /var/lock/kv260-a1/active; test \"$(sha256sum /usr/lib/modules/6.8.12-a10irq2/extra/zocl.ko | cut -d ' ' -f1)\" = 38992846680c0ddbdad7a05f6506b66488473a96c52975fa35a126b8401344f8 ); a10_rc=$?; printf '\\nA10_80b51de31d0a43ba82409f21770d3c9d:%s\\n' \"$a10_rc\"",
+      "kind": "preflight_command",
+      "utc": "2026-10-26T11:27:04.3116091Z"
+    },
+    {
+      "text": "( set -e; test \"$(cat /proc/sys/kernel/random/boot_id)\" = c995ba67-1bac-41e7-9f63-e14e9ca2e6a1; test \"$(uname -r)\" = 6.8.0-1036-xilinx; test \"$(sha256sum /etc/machine-id | cut -d ' ' -f1)\" = ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec; test \"$(id -u)\" = 1000; test ! -d /sys/module/zocl; test -d /sys/kernel/config/device-tree/overlays/k26-starter-kits_image_1; python3 -c \"from pathlib import Path; t=[int(p.read_text()) for p in Path('/sys/class/hwmon').glob('hwmon*/temp*_input')]; print('temperatures_mC',t); assert t and all(0<x<55000 for x in t)\"; cat /proc/loadavg; cat /proc/sys/kernel/random/boot_id; test -d /usr/lib/modules/6.8.12-a10irq2; test \"$(sha256sum /boot/firmware/image.fit | cut -d ' ' -f1)\" = 23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e; test \"$(sha256sum /boot/firmware/boot.scr.uimg | cut -d ' ' -f1)\" = f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685; test \"$(sha256sum /boot/firmware/a10-candidate-irq2-20261021.fit | cut -d ' ' -f1)\" = e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b; python3 -c \"import json; from pathlib import Path; r=[json.loads(s) for s in Path('/home/ubuntu/a \r10-irq2-stage-20261021-v1/stage-result.jsonl').read_text().splitlines()]; assert r[-1]['event']=='STAGED_ONLY_NOT_BOOTED'\"; test ! -e /var/lock/kv260-a1/active; test ! -L /var/lock/kv260-a1/active; test \"$(sha256sum /usr/lib/modules/6.8.12-a10irq2/extra/zocl.ko | cut -d ' ' -f1)\" = 38992846680c0ddbdad7a05f6506b66488473a96c52975fa35a126b8401344f8 ); a10_rc=$?; printf '\\nA10_80b51de31d0a43ba82409f21770d3c9d:%s\\n' \"$a10_rc\"\r\n\u001b[?2004l\rtemperatures_mC [29570, 31536, 31288]\r\n0.05 0.07 0.10 1/390 2866\r\nc995ba67-1bac-41e7-9f63-e14e9ca2e6a1\r\n\r\nA10_80b51de31d0a43ba82409f21770d3c9d:1\r\n\u001b[?2004hubuntu@kria:~$ ",
+      "kind": "preflight_result",
+      "utc": "2026-10-26T11:27:10.6889735Z"
+    }
+  ],
+  "reboot_commands_sent": 0,
+  "autoboot_stop_bytes_sent": 0,
+  "candidate_load": "NOT_PERFORMED",
+  "candidate_boot_commands_sent": 0,
+  "persistent_boot_changes": "NOT_PERFORMED",
+  "board_compute": "NOT_TESTED",
+  "closed": true,
+  "error": "Preflight failed; reboot not sent"
+}

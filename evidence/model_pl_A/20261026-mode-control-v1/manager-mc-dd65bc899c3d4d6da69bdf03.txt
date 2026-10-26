@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py", line 148, in run
+    result,events,_,_,clock=app.measure(controller,receive,frozen.template,request)
+  File "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/tt10_00_app.py", line 54, in measure
+    assert hasattr(adapter,'result'), 'policy response is not a model baseline'
+AssertionError: policy response is not a model baseline
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/mode_child.py", line 77, in <module>
+    a=p.parse_args();run(a.tag,a.cap,a.build,a.notify_fd,a.session_epoch,a.window_id,a.runner_sha,a.fault)
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/mode_child.py", line 64, in run
+    try:module.run(tag,cap,build,fault=fault)
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/microbatch_run.py", line 68, in run
+    try:module.run('strict' if grant_size==1 else 'request',tag,build_path)
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py", line 154, in run
+    raise RuntimeError('native boundary failed: '+worker._io_fault) from exc
+RuntimeError: native boundary failed: PC injected revoke while cached grant remains

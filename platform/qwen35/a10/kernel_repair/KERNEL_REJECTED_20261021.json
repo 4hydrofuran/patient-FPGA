@@ -1,0 +1,13 @@
+{
+  "status": "REJECTED_BOARD_EMPTY_UNLOAD_DOUBLE_FREE",
+  "kernel_release": "6.8.12-a10irq1",
+  "fit_sha256": "a393f397a673a2f3636c8b9f85d8a59f7257c24d33c34d28a67b11c410a11b81",
+  "driver_sha256": "2aa089c3967e8fa72480310fe2cc12aaa7d920135f5322d8596819835ca087cc",
+  "do_not_redeploy_or_reboot_this_candidate_for_testing": true,
+  "raw_evidence": "evidence/board_platform/A10_20261018_intake/minimal-board-20261021-v1/continuation.jsonl",
+  "failure": "kernel BUG mm/slub.c:553; of_node_release+0x114 after second free of intc->data",
+  "minimal_pc_fix": "platform/build/a10-intc-data-owner-20261021-v1/repair.patch",
+  "fix_board_accepted": false,
+  "full_revised_fit_built": false,
+  "original_boot_files_were_not_modified_by_this_window": true
+}

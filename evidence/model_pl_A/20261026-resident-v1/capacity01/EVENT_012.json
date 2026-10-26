@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "bfbb53dc09c94c47a576a6f417124bd4",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "capacity3",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "休息可以减轻疼痛。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "休息可以减轻疼痛。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "relief"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "relief"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "relief"
+      ],
+      "allowed_fact_ids": [
+        "relief"
+      ],
+      "required_fact_ids": [
+        "relief"
+      ],
+      "facts": [
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "relief",
+          "span": [
+            5,
+            7
+          ],
+          "quote": "减轻"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "休息可以减轻疼痛。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_4",
+      "result_sha256": "c07f4aa6e33da3f7cff8a4f8404729ead4853c5041916b3bd85efee5b6cea91d"
+    },
+    "received_ns": 33591737878,
+    "validated_ns": 34822846089,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 33576998331,
+    "worker_pid": 410,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.251219667,
+    "application_delivered_ns": 34828217998,
+    "delivery_fence": {
+      "serial": 135,
+      "sample": 632,
+      "epoch": "a5059427cd164aa89a8a67b6fce8b5ee",
+      "requested_ns": 34827159086,
+      "started_ns": 34827241174,
+      "ended_ns": 34827931374,
+      "authorized_ns": 34828184084
+    },
+    "prepared_response_sha256": "5e3a7aae2105de783d9e5772b08cdf84dc9b3d5586ef2fa49bb1cc282bd52313",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

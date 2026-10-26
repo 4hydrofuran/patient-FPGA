@@ -1,0 +1,22 @@
+{
+  "status": "INITIAL_SCAN_USES_EXISTING_COMPLETE_SCAN_POLICY",
+  "before_sha256": "d066491144a7dc6d4ce381d9cbe07ffbfc8efdf58b05bbf4144ae51d68fae30a",
+  "after_sha256": "8b974bee5cfc33fe7ac7fe17ad56f0eac83513bb392cb1632436234367c52f57",
+  "old_scan_issues": [
+    {
+      "pid": 2307,
+      "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/proc/2307/stat'"
+    },
+    {
+      "pid": 2309,
+      "reason": "FileNotFoundError: [Errno 2] No such file or directory: '/proc/2309/stat'"
+    },
+    {
+      "reason": "PROCESS_SET_CHANGED"
+    }
+  ],
+  "actual_holders_still_rejected": true,
+  "unknown_errors_still_rejected": true,
+  "max_observations": 4,
+  "PL_mutations": 0
+}

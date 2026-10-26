@@ -1,0 +1,37 @@
+{
+  "status": "OBSERVED_ONE_SAMPLE_PER_MODE",
+  "pairs": [
+    {
+      "id": "app_R0",
+      "strict_first_token_s": 8.350582146,
+      "request_first_token_s": 4.780545436000001,
+      "strict_validated_answer_s": 10.944712149,
+      "request_validated_answer_s": 5.938259285,
+      "request_log_delta_s": 5.006452864000001,
+      "reopen_validated_answer_s": 6.015552548,
+      "FD_reuse_observed_delta_ms": 77.29326299999957,
+      "one_pair_PC_only": true,
+      "p95": null,
+      "board_expected_saving_s": null
+    },
+    {
+      "id": "app_hit",
+      "strict_first_token_s": 2.922812899,
+      "request_first_token_s": 1.735829471,
+      "strict_validated_answer_s": 5.483429585,
+      "request_validated_answer_s": 2.892459526,
+      "request_log_delta_s": 2.5909700589999995,
+      "reopen_validated_answer_s": 2.970349212,
+      "FD_reuse_observed_delta_ms": 77.88968599999998,
+      "one_pair_PC_only": true,
+      "p95": null,
+      "board_expected_saving_s": null
+    }
+  ],
+  "owner_check_total_ms": {
+    "persistent": 1704.80173,
+    "reopen": 1972.5728020000024
+  },
+  "independent_monitor_is_not_proven_faster_than_old_synchronous_health": true,
+  "limitation": "Same frozen question, sequential PC runs; no randomized/repeated trial or board prediction"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS_PC_ELF_INVERSE_PATCH_AND_PINNED_INPUTS",
+  "commands": [
+    {
+      "command": [
+        "readelf",
+        "-h",
+        "-d",
+        "/home/member-a/kv260-build/a12-microbatch-20261026-v5/liba12_native_cpu_control.so"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "nm",
+        "-D",
+        "--defined-only",
+        "/home/member-a/kv260-build/a12-microbatch-20261026-v5/liba12_native_cpu_control.so"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "original_adapter_normalized_bytes_restored_exactly": true,
+  "CPU_math_rebuilt": false,
+  "native_executable_rebuilt": false,
+  "library_sha256": "56b55e7331cfc360b63c94fa561408918be0750262af9492cc1c702f5252c229",
+  "generated_source_sha256": "d12de00eb9e8e70320bab080e739f683a82ed0cba084f5a4aab36f279d3a061c",
+  "private_header_sha256": "162689b2ebc750d0a6128db7ae97cc8f109aedc5997d01ee3918fd1ce2effa71",
+  "public_header_sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+  "existing_CPU_sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+  "existing_native_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+  "ARM_build": "NOT_PERFORMED",
+  "BOARD": "NOT_TESTED",
+  "XRT_link_dependency": false
+}

@@ -1,0 +1,279 @@
+{
+  "status": "PASS_REAL_PC_NATIVE_REQUEST_JOURNAL_AND_FAILURE_FENCES",
+  "domain": "PC_NATIVE_MATH_NOT_FPGA",
+  "audits": {
+    "strict": {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0,
+      "release_allowed": false,
+      "replay_allowed": false,
+      "hardware_completions": null,
+      "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+      "status": "COMPLETE_ACTUAL_PC_NATIVE_TRANSCRIPT",
+      "journal_mode": "strict",
+      "actual_cpu_calls": 2880,
+      "journal_rows": 2962,
+      "strict_submit_records": 2880,
+      "application_content": "PASS_FROZEN_CHECKER"
+    },
+    "request": {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "BOARD": "NOT_TESTED",
+      "PL_calls": 0,
+      "release_allowed": false,
+      "replay_allowed": false,
+      "hardware_completions": null,
+      "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+      "status": "COMPLETE_ACTUAL_PC_NATIVE_TRANSCRIPT",
+      "journal_mode": "request",
+      "actual_cpu_calls": 2880,
+      "journal_rows": 82,
+      "strict_submit_records": 0,
+      "application_content": "PASS_FROZEN_CHECKER"
+    }
+  },
+  "A_B_PC_only": [
+    {
+      "id": "app_R0",
+      "domain": "PC_ONLY_ONE_PAIR_SAME_FROZEN_INPUT",
+      "strict_first_token_s": 7.288213484,
+      "request_first_token_s": 3.947277862,
+      "strict_validated_answer_s": 9.508977510000001,
+      "request_validated_answer_s": 4.862332716,
+      "validated_answer_delta_s": 4.646644794000001,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    },
+    {
+      "id": "app_hit",
+      "domain": "PC_ONLY_ONE_PAIR_SAME_FROZEN_INPUT",
+      "strict_first_token_s": 2.715094363,
+      "request_first_token_s": 1.4324121680000002,
+      "strict_validated_answer_s": 5.00461514,
+      "request_validated_answer_s": 2.267200173,
+      "validated_answer_delta_s": 2.737414967,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    }
+  ],
+  "actual_cpu_calls_per_mode": 2880,
+  "owner_checks_per_mode": 2959,
+  "health_checks_per_mode": 2958,
+  "journal_rows": {
+    "strict": 2962,
+    "request": 82
+  },
+  "journal_bytes": {
+    "strict": 2231836,
+    "request": 71243
+  },
+  "result_delivery_after_END_proven": true,
+  "faults": [
+    {
+      "kind": "begin_fsync",
+      "runtime_failure": {
+        "status": "FAIL_RETAINED_NO_REPLAY",
+        "reason": "OSError: [Errno 5] PC injected begin_fsync on actual journal FD",
+        "mode": "request",
+        "pid": 399,
+        "PL_calls": 0,
+        "BOARD": "NOT_TESTED",
+        "fault_injection": "begin_fsync",
+        "fault_actually_injected": true,
+        "validated_answers": [],
+        "permission_runs": 0,
+        "root_boundary_failure": "OSError: [Errno 5] PC injected begin_fsync on actual journal FD",
+        "original_exception_cause": null,
+        "native_status": null,
+        "native_state_cleared": null,
+        "native_cpu_completed": null
+      },
+      "cooperative_CPU_close": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "original_failure": "OSError: [Errno 5] PC injected begin_fsync on actual journal FD",
+        "exit_code": 2,
+        "normal_close": false,
+        "forced_signal": false,
+        "platform_released": false
+      },
+      "audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "forensic_last_native_status": null,
+      "forensic_actual_cpu_completed": 0,
+      "accepted_by_runtime": false
+    },
+    {
+      "kind": "end_fsync",
+      "runtime_failure": {
+        "status": "FAIL_RETAINED_NO_REPLAY",
+        "reason": "OSError: [Errno 5] PC injected end_fsync on actual journal FD",
+        "mode": "request",
+        "pid": 375,
+        "PL_calls": 0,
+        "BOARD": "NOT_TESTED",
+        "fault_injection": "end_fsync",
+        "fault_actually_injected": true,
+        "validated_answers": [],
+        "permission_runs": 1440,
+        "root_boundary_failure": "OSError: [Errno 5] PC injected end_fsync on actual journal FD",
+        "original_exception_cause": null,
+        "native_status": "OK",
+        "native_state_cleared": true,
+        "native_cpu_completed": 1440
+      },
+      "cooperative_CPU_close": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "original_failure": "OSError: [Errno 5] PC injected end_fsync on actual journal FD",
+        "exit_code": 2,
+        "normal_close": false,
+        "forced_signal": false,
+        "platform_released": false
+      },
+      "audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "forensic_last_native_status": "OK",
+      "forensic_actual_cpu_completed": 1440,
+      "accepted_by_runtime": false
+    },
+    {
+      "kind": "health_submit",
+      "runtime_failure": {
+        "status": "FAIL_RETAINED_NO_REPLAY",
+        "reason": "RuntimeError: native boundary failed: RuntimeError: PC injected fresh health failure before CPU submit",
+        "mode": "request",
+        "pid": 385,
+        "PL_calls": 0,
+        "BOARD": "NOT_TESTED",
+        "fault_injection": "health_submit",
+        "fault_actually_injected": true,
+        "validated_answers": [],
+        "permission_runs": 0,
+        "root_boundary_failure": "RuntimeError: PC injected fresh health failure before CPU submit",
+        "original_exception_cause": "policy response is not a model baseline",
+        "native_status": null,
+        "native_state_cleared": null,
+        "native_cpu_completed": null
+      },
+      "cooperative_CPU_close": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "original_failure": "RuntimeError: native boundary failed: RuntimeError: PC injected fresh health failure before CPU submit",
+        "exit_code": 2,
+        "normal_close": false,
+        "forced_signal": false,
+        "platform_released": false
+      },
+      "audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "forensic_last_native_status": "ERROR",
+      "forensic_actual_cpu_completed": 0,
+      "accepted_by_runtime": false
+    }
+  ],
+  "copied_final_transcripts": [
+    {
+      "path": "native-transcripts/strict/COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "38bd8a6ab3faf83d57c1ac3687ae84f5497cd1286349611acd70e1ccd8eb241e"
+    },
+    {
+      "path": "native-transcripts/strict/COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "63a13af1a3961ddbd6263f72abfc38feecf119241113253865e8974cdf8c7478"
+    },
+    {
+      "path": "native-transcripts/strict/COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "e00fbf6cd0ae57ff62cf7b10457544a75fced11e913a054580d5226528ff03b3"
+    },
+    {
+      "path": "native-transcripts/strict/events.jsonl",
+      "bytes": 2231836,
+      "sha256": "c3398ec355e5ed4b416a8b3c7614dec752c0c0c80ffeaad5d2c55b10a059b8d3"
+    },
+    {
+      "path": "native-transcripts/strict/NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "0b2b5b9d41cd073b0d6ff4f2fb498f6e1b8444fe9c3baf59c2cc4b942d86b16d"
+    },
+    {
+      "path": "native-transcripts/strict/stderr.txt",
+      "bytes": 104884,
+      "sha256": "75a2f23c52f24fb492ac088e80b222a3a34c8b60a19ece5af2ea624b1ebc3a98"
+    },
+    {
+      "path": "native-transcripts/strict/stdout.jsonl",
+      "bytes": 53820,
+      "sha256": "1cbf20e9a11a7eac7388cf91877cacc9e4d623c7cd4d5fb5bee4671d311741df"
+    },
+    {
+      "path": "native-transcripts/request/COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "3aa952ba96515fe2d1b27e8372d79b34fc4c1f49ba006594d63ee36be3f530d8"
+    },
+    {
+      "path": "native-transcripts/request/COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "71c90fd4986d22b04583e5e48b2858336c9ac03f3732b41d2b0a5a7560431720"
+    },
+    {
+      "path": "native-transcripts/request/COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "58c18918cf9054a820def3dbb7ed0a21c7e698761c5edda189b9c8c4467b55ad"
+    },
+    {
+      "path": "native-transcripts/request/events.jsonl",
+      "bytes": 71243,
+      "sha256": "d22884cfdc4f0109a61167ade78c0b2160f8337227f2d2c62f4065179521f250"
+    },
+    {
+      "path": "native-transcripts/request/NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "fdbb923e53d8e02849db660a13eddc5e41009c0a61236174e72b1b4d8625ad52"
+    },
+    {
+      "path": "native-transcripts/request/stderr.txt",
+      "bytes": 104884,
+      "sha256": "a61d96d703cc1f9b79cac823df8a4fd4733750a494ce11e27aed6544c81c6a33"
+    },
+    {
+      "path": "native-transcripts/request/stdout.jsonl",
+      "bytes": 53769,
+      "sha256": "fe68c9838d583878326250c340a481f5ba1644dbbf8824b74d95430377733ecb"
+    }
+  ],
+  "statistical_scope": "ONE_FINAL_PAIR_PER_MODE_OLDER_DEVELOPMENT_RUNS_RETAINED_NOT_POOLED",
+  "PL_calls": 0,
+  "BOARD": "NOT_TESTED",
+  "board_latency_saving_s": null,
+  "board_CMA_improvement": null,
+  "original_resource_probe_changed": false,
+  "overall_goal_complete": false
+}

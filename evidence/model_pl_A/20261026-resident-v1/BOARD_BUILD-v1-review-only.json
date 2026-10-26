@@ -1,0 +1,156 @@
+{
+  "domain": "A12_PREPARED_BOARD_MODEL_PLM_V1",
+  "workspace": "/home/member-a/kv260-build/a12-resident-20261026-v1",
+  "native": "/home/member-a/kv260-build/a12-resident-20261026-v1/arm/qwen35-a12",
+  "runtime_artifacts": [
+    {
+      "role": "native",
+      "path": "/home/member-a/kv260-build/a12-resident-20261026-v1/arm/qwen35-a12",
+      "sha256": "5435c3fe8c83d3e292d992f6c48a572c8929eac2cce2f46a08b3ce9e7db13196"
+    },
+    {
+      "role": "backend",
+      "path": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1/liba12_resident_bound_candidate.so",
+      "sha256": "73d1bcaf5a7e8a4d54aed0f2f657420be62aa6091733ca479f01fed230b263ca",
+      "bytes": 513656
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/model/libsp_linear_cpu.so",
+      "sha256": "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f",
+      "bytes": 246536,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libllama.so.0.5.0",
+      "sha256": "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+      "bytes": 4523008,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml.so.0.25.3",
+      "sha256": "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+      "bytes": 80624,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+      "bytes": 874592,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+      "bytes": 1001488,
+      "role": "math_library"
+    }
+  ],
+  "backend_library": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1/liba12_resident_bound_candidate.so",
+  "backend_sha256": "73d1bcaf5a7e8a4d54aed0f2f657420be62aa6091733ca479f01fed230b263ca",
+  "writer_library": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1/libplm_writer_a53.so",
+  "writer_sha256": "28b3041a95af595fe4a2557bc460fab9361437fbb065b7bd40f4e4db34bd5956",
+  "generation_writer": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+  "generation_writer_sha256": "53764e5623c11cd778a917dca45892c6bab044d0d2db354d4cfa1adced456f04",
+  "observer_library": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/libplmode_observer_a53.so",
+  "observer_sha256": "f1a95cf3e9987f7a571d348815a2654808323f6cc9cc8ee5592f4e592a52295c",
+  "model": "/mnt/c/Patientqwen/artifacts/qwen35-0.8b/qwen35-text-Q4_K_M.gguf",
+  "kernel_source": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/KERNEL_SOURCE.json",
+  "xclbin": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/w4a8.xclbin",
+  "prefix_template": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/prefix-template-v3.json",
+  "prefix_libraries": {
+    "liba12_resident_bound_candidate.so": "73d1bcaf5a7e8a4d54aed0f2f657420be62aa6091733ca479f01fed230b263ca",
+    "libsp_linear_cpu.so": "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f",
+    "libllama.so": "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+    "libggml.so": "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+    "libggml-base.so": "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+    "libggml-cpu.so": "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b"
+  },
+  "library_search_path": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1:/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin:/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/model",
+  "base_bundle": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2",
+  "asset_root": "/mnt/c/Patientqwen",
+  "native_asset_root": "/opt/patient-qwen",
+  "loader_aliases": [
+    {
+      "name": "libsp_linear_cpu.so",
+      "target_basename": "libsp_linear_cpu.so",
+      "sha256": "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+    },
+    {
+      "name": "libllama.so.0",
+      "target_basename": "libllama.so.0.5.0",
+      "sha256": "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6"
+    },
+    {
+      "name": "libggml.so.0",
+      "target_basename": "libggml.so.0.25.3",
+      "sha256": "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3"
+    },
+    {
+      "name": "libggml-base.so.0",
+      "target_basename": "libggml-base.so.0.25.3",
+      "sha256": "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866"
+    },
+    {
+      "name": "libggml-cpu.so.0",
+      "target_basename": "libggml-cpu.so.0.25.3",
+      "sha256": "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b"
+    }
+  ],
+  "authorization_included": false,
+  "BOARD": "NOT_TESTED",
+  "ARM_execution": "NOT_EXECUTED",
+  "production_enabled": false,
+  "ordinary_probe_first": true,
+  "auxiliary_artifacts": [
+    {
+      "role": "page_writer",
+      "path": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1/libplm_writer_a53.so",
+      "sha256": "28b3041a95af595fe4a2557bc460fab9361437fbb065b7bd40f4e4db34bd5956"
+    },
+    {
+      "role": "source_writer",
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+      "sha256": "53764e5623c11cd778a917dca45892c6bab044d0d2db354d4cfa1adced456f04"
+    },
+    {
+      "role": "observer",
+      "path": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/libplmode_observer_a53.so",
+      "sha256": "f1a95cf3e9987f7a571d348815a2654808323f6cc9cc8ee5592f4e592a52295c"
+    },
+    {
+      "role": "prefix_template",
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/prefix-template-v3.json",
+      "sha256": "7b6c2613e82ea0c78cc6adcb3b374821871a5f47e14c50d56999430063011004"
+    },
+    {
+      "role": "kernel_source",
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/KERNEL_SOURCE.json",
+      "sha256": "a367dc1db97cf4ef5d7bcccbe95db06d4e202b03131da82c66218c55805db46a"
+    },
+    {
+      "role": "xclbin",
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/w4a8.xclbin",
+      "sha256": "bdcb66ca69279e0109928d7b32c3ea0325f617a267e1869636944ba3c193b5fa"
+    },
+    {
+      "role": "resident_policy",
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/resident-policy-v3.json",
+      "sha256": "62d50f2612f2cd9b121f96249af6510b837583d0d1266ed67b692b27e7d30bb7"
+    },
+    {
+      "role": "chat_template",
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/chat_template.jinja",
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+    }
+  ],
+  "resident_request_limit": 9,
+  "resident_policy": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/resident-policy-v3.json",
+  "resident_policy_sha256": "62d50f2612f2cd9b121f96249af6510b837583d0d1266ed67b692b27e7d30bb7",
+  "resident_app": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/resident-app",
+  "chat_template": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-resident-v1/chat_template.jinja",
+  "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+  "prefix_template_sha256": "7b6c2613e82ea0c78cc6adcb3b374821871a5f47e14c50d56999430063011004",
+  "physical_release_allowed": false,
+  "application_factory": "NOT_ENABLED_FOR_BOARD",
+  "relocation_required": true
+}

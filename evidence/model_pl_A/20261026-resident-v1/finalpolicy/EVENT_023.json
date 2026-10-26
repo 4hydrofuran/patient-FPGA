@@ -1,0 +1,71 @@
+{
+  "op": "close",
+  "value": {
+    "type": "closed",
+    "result": {
+      "status": "PASS_ACTUAL_QWEN_PLM_CPU_WINDOW_NOT_BOARD",
+      "cap": 72,
+      "completed": [
+        "warm_prefix"
+      ],
+      "claims": 360,
+      "model_requests": 1,
+      "validated_answers": 0,
+      "private_messages": 6,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "page": {
+        "BOARD": "NOT_TESTED",
+        "active": false,
+        "claims": 360,
+        "context_sha256": "eadecfb989cf5a3e35612b7a0d1ebc4602e8a6df74fe09f79407240d243de3a5",
+        "generation": 2,
+        "grant_limit": 360,
+        "hardware_completions": null,
+        "phase": 2,
+        "release_allowed": false,
+        "request_end": 360,
+        "request_serial": 1,
+        "request_sha256": "4e42cdcd71da866e20d79816f428bfd7d844028988287f540e41ff56d1d63c68",
+        "revoked": true,
+        "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+        "start_intent": false,
+        "state": 9223372045444710760,
+        "unknown_io": false,
+        "worker_pid": 461,
+        "worker_start_ticks": 35043
+      },
+      "journal_records": 88,
+      "journal_bytes": 37351,
+      "all_threads_stopped": true,
+      "worker_exit_code": 0,
+      "private_close_packet": {
+        "domain": "PC",
+        "private_control": {
+          "checked_copy_bytes": 26738688,
+          "closed": true,
+          "copy_checks": 360,
+          "enabled": true,
+          "failed": false,
+          "release_allowed": false,
+          "request_active": false,
+          "request_sha256": "4e42cdcd71da866e20d79816f428bfd7d844028988287f540e41ff56d1d63c68",
+          "schema": "A12_MODEL_PLM_ROUTE_V1"
+        },
+        "status": "NATIVE_CONTEXT_CLOSED_NOT_PLATFORM_RELEASE",
+        "type": "private_closed"
+      },
+      "actual_FPGA_calls": null,
+      "BOARD": "NOT_TESTED",
+      "production_enabled": false,
+      "release_allowed": false,
+      "provider_domain": "PC_CPU_MODEL"
+    },
+    "generated": [],
+    "software_test_only": true,
+    "actual_FPGA_calls": null,
+    "release_allowed": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS_A53_NATIVE_FRONT_ROUTE_AND_PRIVATE_BACKEND_COMPILE_ONLY",
+  "artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-model-route-20261026-v4/arm/qwen35-a12",
+      "sha256": "54ffbcb42aa12d696d815a4bd2787c253dba645ee5fe104d4c452c5c6abb0e16",
+      "bytes": 776088
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-model-route-20261026-v4/liba12_modelpl_xrt_unbound.so",
+      "sha256": "56f7936f9dac8d3453f2613dfb5200db7f53779124471a108124a26d67aab38c",
+      "bytes": 503472
+    }
+  ],
+  "original_math_before_and_after": [
+    {
+      "path": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/arm04/CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o",
+      "sha256": "6cf3b17afd3da47d5ae6d4eba679a619625488b2ce3f4749a72224aa1511dfcf",
+      "bytes": 17960
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/model/libsp_linear_cpu.so",
+      "sha256": "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f",
+      "bytes": 246536
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libllama.so.0.5.0",
+      "sha256": "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+      "bytes": 4523008
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml.so.0.25.3",
+      "sha256": "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+      "bytes": 80624
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+      "bytes": 874592
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+      "bytes": 1001488
+    }
+  ],
+  "original_XRT_backend_sha256": "9520455420cc4506e1c09ab541b3a952fccfa787a19dd6c8502daab5229ebe9c",
+  "derived_XRT_backend_sha256": "98dc4cd9b233922a1b8f251e48a9a20f4823cca87e8a41a1efff184b56c7973e",
+  "private_ABI_namespace": "A12_PLM_PRIVATE_V1",
+  "public_contract_unchanged": true,
+  "ARM_execution": "NOT_EXECUTED",
+  "production_open": "HARD_DISABLED_BEFORE_DEVICE_OPEN",
+  "CPU_math_adapter": "X86_PC_ONLY_NOT_BUILT_FOR_ARM",
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-shared",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-I/home/member-a/kv260-build/a12-pl-manager-20261026-v4/source",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/source/plm_observer.cpp",
+    "-Wl,--version-script=/home/member-a/kv260-build/a12-pl-manager-20261026-v4/observer-exports-v2.map",
+    "-Wl,-z,defs",
+    "-o",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_observer_ro_v2.so"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

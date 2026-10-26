@@ -1,0 +1,33 @@
+{
+  "command": [
+    "g++",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-no-pie",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-DSP_LINEAR_CONTROL_TEST=1",
+    "-I/home/member-a/kv260-build/a12-pl-auth-20261026-v4/source",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include/x86_64-linux-gnu",
+    "/home/member-a/kv260-build/a12-pl-auth-20261026-v4/source/test_pl_auth.cpp",
+    "/home/member-a/kv260-build/a12-pl-auth-20261026-v4/source/backend.cpp",
+    "/home/member-a/kv260-build/a12-pl-auth-20261026-v4/source/host_contract.cpp",
+    "-L/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/lib/x86_64-linux-gnu",
+    "-Wl,-rpath,/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/lib/x86_64-linux-gnu",
+    "-lcrypto",
+    "-pthread",
+    "-o",
+    "/home/member-a/kv260-build/a12-pl-auth-20261026-v4/pl-auth-control-sanitized"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-pl-auth-20261026-v4",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "BOARD": "NOT_TESTED"
+}

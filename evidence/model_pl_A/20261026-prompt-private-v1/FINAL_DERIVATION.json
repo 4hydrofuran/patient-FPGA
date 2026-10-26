@@ -1,0 +1,107 @@
+{
+  "status": "PASS_ALL_REVERSIBLE_EDITS",
+  "pieces": [
+    {
+      "name": "fixture",
+      "edits": [
+        [
+          "prefix=read(ROOT/'evidence/model_pl_A/20261025-resource-probe-v1/native-PC-02/prefix-config-PC.json')",
+          "prefix=copy.deepcopy(self.frozen.prefix)"
+        ]
+      ],
+      "parent_sha256": "e9ad2aa7ff55f3dd84e18f70300a44e907b7ed0a1e8e53c3596c99579dcaf049"
+    },
+    {
+      "name": "constructor",
+      "edits": [
+        [
+          "self.frozen=FrozenProbe();self.requests=copy.deepcopy(self.frozen.requests)",
+          "self.frozen=PromptProbe(self.build);self.requests=copy.deepcopy(self.frozen.requests)"
+        ]
+      ],
+      "parent_sha256": "f720303abae1c7414def84c60b33b7673240abf082ff8def297d5859f012e956"
+    },
+    {
+      "name": "init",
+      "edits": [
+        [
+          "need(type(provider) in (CPUProvider,BoardProvider),'trusted typed provider required; no JSON provider selection')",
+          "need(type(provider) is PromptProvider and read(build)['domain']=='PC_REAL_MODEL_PLM_V1','facts-only private experiment requires exact CPU provider/domain')"
+        ]
+      ],
+      "parent_sha256": "3771541038cb9b4049f336c827a5d99655f78f705105e2a7652c763848bbab69"
+    },
+    {
+      "name": "request",
+      "edits": [
+        [
+          "n=len(frozen['tokens'])-(70 if frozen['id']=='app_hit' else 0)",
+          "n=self.new_tokens(frozen)"
+        ],
+        [
+          "result['prefix_tokens']==70 and len(result['prefix_cache']['entries'])==1 and result['prefix_cache']['entries'][0]['tokens']==70",
+          "result['prefix_tokens']==self.prefix_tokens and len(result['prefix_cache']['entries'])==1 and result['prefix_cache']['entries'][0]['tokens']==self.prefix_tokens"
+        ],
+        [
+          "new=70;decode=0;content=None",
+          "self.frozen.check_warm(result);new=self.prefix_tokens;decode=0;content=None"
+        ],
+        [
+          "new=37 if hit else 107;decode=result['decode_calls']",
+          "new=self.new_tokens(frozen);decode=result['decode_calls']"
+        ],
+        [
+          "cache['reused_tokens']==(70 if hit else 0) and result['prompt_tokens']==107",
+          "cache['reused_tokens']==(self.prefix_tokens if hit else 0) and result['prompt_tokens']==len(frozen['tokens'])"
+        ],
+        [
+          "0<=decode<=7 and result['eos']",
+          "0<=decode<frozen['max_tokens'] and result['eos']"
+        ],
+        [
+          "0<len(tokens)<=8",
+          "0<len(tokens)<=frozen['max_tokens']"
+        ]
+      ],
+      "parent_sha256": "90d90d67d40e5cd0f02d3a2244d74d9d680ea1e0e2e4d3ffe886097a3184be5a"
+    },
+    {
+      "name": "stdout",
+      "edits": [
+        [
+          "packets<=32",
+          "packets<=5+sum(r['max_tokens'] for r in self.requests if r['op']=='generate')"
+        ]
+      ],
+      "parent_sha256": "c35a6e143f32d01471a7f377da8c386e378594527e369befa1f95ee2a0990e7b"
+    },
+    {
+      "name": "close",
+      "edits": [
+        [
+          "state['claims']==2880",
+          "state['claims']==self.claims"
+        ]
+      ],
+      "parent_sha256": "738ec583b295ac393608f8ab6bfe2ee2eab13964abb9f849051ea6320c57a902"
+    },
+    {
+      "name": "legacy",
+      "edits": [
+        [
+          "phase=q['phase'];ticket=self.monitor.fence()",
+          "phase=q['phase']"
+        ],
+        [
+          "self.legacy_sequences[lane]=q['sequence'];self.monitor.authorize(ticket,guard=self._guard)",
+          "ticket=self.monitor.fence();self.legacy_sequences[lane]=q['sequence'];self.monitor.authorize(ticket,guard=self._guard)"
+        ]
+      ],
+      "parent_sha256": "a1dc305e6da70d9b242e267e1abcb5792a63980368450fad3ffc8bef89279cfc"
+    }
+  ],
+  "non_reversible_changes": "NEW_TYPED_PC_PROVIDER_AND_PINNED_WORKLOAD_VALIDATOR_ONLY",
+  "existing_Board_and_native_sources_changed": false,
+  "mathematics_changed": false,
+  "ABI_changed": false
+}

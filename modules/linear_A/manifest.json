@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "api_version": 1,
+  "owner": "A",
+  "backend_id": "A_CPU_W4A8_V1",
+  "execution_kind": "CPU_REFERENCE",
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "status": "PASS_PC_A05_FULL_MODEL_PHYSICAL_T8",
+  "config": "modules/linear_A/cpu_config.json",
+  "native_entry": "/home/member-a/qwen35-a05/build-v8/qwen35-s1",
+  "shared_library": "/home/member-a/qwen35-a05/build-v8/libsp_linear_cpu.so",
+  "files": {
+    "/home/member-a/qwen35-a05/build-v8/qwen35-s1": {
+      "sha256": "965b8431e6d1a7134d66cbf4da8d7995ce071d16e8d2d47481a36d7c9f65f105",
+      "bytes": 513448
+    },
+    "/home/member-a/qwen35-a05/build-v8/libsp_linear_cpu.so": {
+      "sha256": "d46bd1cc785c56d718e7b2782ced73bd7b3ab9a3510177df0bb0bbeacf69ee90",
+      "bytes": 250200
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml-base.so": {
+      "sha256": "78b65da954965fa94cae7a379404ea9253102cf3544d6953bd4c7c52c4408aeb",
+      "bytes": 930392
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libllama.so": {
+      "sha256": "de119869e57038ec723b3d4ec5995bfe7187e31522157896ccbce45c0bdccd76",
+      "bytes": 4739968
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml-cpu.so": {
+      "sha256": "d7bf021176b2134f1f3789339dd92a750f518c8bbf30f7d0ff573e76e6a03bb2",
+      "bytes": 1407936
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml.so": {
+      "sha256": "39c8c156287b9d8b36f9761c37474e40f0e6564e2ff2fe1c4a409b9cf8768465",
+      "bytes": 59736
+    }
+  },
+  "physical_ubatch": 8,
+  "R1": "DISABLED",
+  "fallback": "disabled",
+  "board": "NOT_TESTED",
+  "fpga_available": false,
+  "deployment_budget_bytes": null,
+  "note": "Existing WSL paths, not portable installation package. These are CPU host artifacts, never an FPGA candidate.",
+  "non_mlp_projection_schedule": "STABLE_PER_TOKEN_SIMD_GEMV",
+  "attention_schedule": "SIMD_QUERY_ORDER_NO_SPLIT_KV_OR_QUERY_TILING",
+  "validation_report": "eval/qwen35/a05/batch-fix-v1/REPORT.json"
+}

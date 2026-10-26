@@ -1,0 +1,93 @@
+{
+  "type": "validated_answer",
+  "session_id": "76a9d5fa031545d3bab73ec131c10c8a",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "DEV-023",
+  "case_id": "SYN_CP_02",
+  "case_version": "1.0-draft",
+  "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+  "text": "胸痛从 24 小时前开始。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "胸痛从 24 小时前开始。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "onset"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "onset"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "onset"
+    ],
+    "allowed_fact_ids": [
+      "onset"
+    ],
+    "required_fact_ids": [
+      "onset"
+    ],
+    "facts": [
+      {
+        "slot": "onset",
+        "status": "known",
+        "value": 24,
+        "unit": "小时前",
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "onset",
+        "span": [
+          0,
+          2
+        ],
+        "quote": "何时"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "胸痛从 24 小时前开始。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_4",
+    "result_sha256": "3305e55b6ae7842caeb93fd2416cbd6b0ea1eb10fd16f8dedd115ef68d6df818"
+  },
+  "received_ns": 130451615134,
+  "validated_ns": 132036426599,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 130436494579,
+  "worker_pid": 422,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

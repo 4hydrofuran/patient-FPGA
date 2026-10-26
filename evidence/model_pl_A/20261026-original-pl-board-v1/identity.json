@@ -1,0 +1,37 @@
+{
+  "Scope": "AUTHENTICATED_UART_READ_ONLY_IDENTITY",
+  "Port": "COM5",
+  "Device": "FTDIBUS\\VID_0403+PID_6011+XFL1CYYPZ52YB\\0000",
+  "CredentialsLogged": false,
+  "UsedExistingShell": false,
+  "Identity": {
+    "scope": "READ_ONLY_IDENTITY_AND_NETWORK_NO_SUDO",
+    "uid": 1000,
+    "machine_sha256": "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec",
+    "boot_id": "8a0276fb-86d1-4ef8-b067-adcc903a999a",
+    "kernel": "6.8.12-a10irq2",
+    "hostname": "kria",
+    "interfaces": {
+      "exit_code": 0,
+      "stdout": "lo               UNKNOWN        127.0.0.1/8 \neth0             UP             192.168.137.2/24 \n",
+      "stderr": ""
+    },
+    "routes": {
+      "exit_code": 0,
+      "stdout": "default via 192.168.137.1 dev eth0 proto static metric 100 \n192.168.137.0/24 dev eth0 proto kernel scope link src 192.168.137.2 metric 100 \n",
+      "stderr": ""
+    },
+    "old_manager": {
+      "exists": false,
+      "observation_error": null
+    },
+    "old_worker": {
+      "exists": false,
+      "observation_error": null
+    },
+    "active_lease": {
+      "exists": false,
+      "observation_error": null
+    }
+  }
+}

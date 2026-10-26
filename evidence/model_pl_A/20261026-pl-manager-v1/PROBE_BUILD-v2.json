@@ -1,0 +1,31 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-I/home/member-a/kv260-build/a12-pl-manager-20261026-v2/source",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include/x86_64-linux-gnu",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/source/plm_probe.cpp",
+    "-L/home/member-a/kv260-build/a12-pl-manager-20261026-v2",
+    "-lplm_backend_pc_control",
+    "-Wl,-rpath,/home/member-a/kv260-build/a12-pl-manager-20261026-v2",
+    "-o",
+    "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/plm-control-probe",
+    "-ldl",
+    "-L/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/lib/x86_64-linux-gnu",
+    "-Wl,-rpath,/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/lib/x86_64-linux-gnu",
+    "-lcrypto",
+    "-pthread"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,45 @@
+{
+  "status": "CURRENT_SOURCE_SEQUENTIAL_SINGLE_SAMPLE_PAIR",
+  "pairs": [
+    {
+      "id": "app_R0",
+      "one_projection_first_token_s": 8.442306437,
+      "microbatch_first_token_s": 3.4008816499999996,
+      "one_projection_validated_answer_s": 11.103274071,
+      "microbatch_validated_answer_s": 4.023101104,
+      "observed_validated_answer_delta_s": 7.080172967,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    },
+    {
+      "id": "app_hit",
+      "one_projection_first_token_s": 3.061734409,
+      "microbatch_first_token_s": 1.269433732,
+      "one_projection_validated_answer_s": 5.727789317,
+      "microbatch_validated_answer_s": 1.953145686,
+      "observed_validated_answer_delta_s": 3.774643631,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    }
+  ],
+  "source_tags": [
+    "batch1-v5-03",
+    "batch72-v5-03"
+  ],
+  "actual_cpu_calls_each": 2880,
+  "permits": {
+    "one_projection": 2880,
+    "microbatch": 40
+  },
+  "journal_rows": {
+    "one_projection": 2962,
+    "microbatch": 122
+  },
+  "no_randomization_or_p95": true,
+  "startup_and_warm_outside_answer_time": true,
+  "previous_v5_samples_retained": [
+    "batch1-v5-01",
+    "batch72-v5-01",
+    "batch72-v5-02"
+  ]
+}

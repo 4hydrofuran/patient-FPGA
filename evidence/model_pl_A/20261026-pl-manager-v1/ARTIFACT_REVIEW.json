@@ -1,0 +1,95 @@
+{
+  "status": "PASS_PLM_PC_PROTOCOL_AND_A53_COMPILE_ONLY",
+  "current_source_matches_final_windows": true,
+  "ordinary_control_cases": 17,
+  "sanitized_control_cases": 17,
+  "additional_final_windows": 2,
+  "policy_tests": 11,
+  "abrupt_owned_manager_death": 1,
+  "actual_model_windows": 0,
+  "actual_FPGA_calls": null,
+  "cached_T_counterexample_retained": true,
+  "observer_exports": {
+    "command": [
+      "nm",
+      "-D",
+      "--defined-only",
+      "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_observer_ro_v2.so"
+    ],
+    "exit_code": 0,
+    "stdout": "0000000000002b90 T a12_plm_observe_fd_v1\n",
+    "stderr": ""
+  },
+  "ARM_public_exports": {
+    "command": [
+      "nm",
+      "-D",
+      "--defined-only",
+      "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_a53_unbound.so"
+    ],
+    "exit_code": 0,
+    "stdout": "0000000000000000 A SP_LINEAR_V1\n000000000000d640 T sp_a12_completion_report_v1@@SP_LINEAR_V1\n00000000000093e0 T sp_linear_close_v1@@SP_LINEAR_V1\n000000000000da30 T sp_linear_load_v1@@SP_LINEAR_V1\n00000000000108e0 T sp_linear_open_v1@@SP_LINEAR_V1\n000000000000b570 T sp_linear_report_v1@@SP_LINEAR_V1\n000000000000e100 T sp_linear_run_v1@@SP_LINEAR_V1\n0000000000008f90 T sp_linear_unload_v1@@SP_LINEAR_V1\n",
+    "stderr": ""
+  },
+  "comparison": {
+    "suite02-strict": {
+      "claims": 2880,
+      "private_messages": 2881,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "journal_records": 2965,
+      "journal_bytes": 1664669,
+      "boundary_journal_read_bytes": 12842972,
+      "boundary_artifact_read_bytes": 4911960
+    },
+    "suite02-batch": {
+      "claims": 2880,
+      "private_messages": 41,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "journal_records": 125,
+      "journal_bytes": 61061,
+      "boundary_journal_read_bytes": 552232,
+      "boundary_artifact_read_bytes": 4911960
+    },
+    "final-normal": {
+      "claims": 2880,
+      "private_messages": 41,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "journal_records": 125,
+      "journal_bytes": 60809,
+      "boundary_journal_read_bytes": 549818,
+      "boundary_artifact_read_bytes": 4911960
+    },
+    "final-san": {
+      "claims": 2880,
+      "private_messages": 41,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "journal_records": 125,
+      "journal_bytes": 60809,
+      "boundary_journal_read_bytes": 549818,
+      "boundary_artifact_read_bytes": 53404840
+    }
+  },
+  "ARM_execution": "NOT_EXECUTED",
+  "board_device_generation_approval": "UNBOUND",
+  "actual_Qwen_router_request_hooks": "NOT_IMPLEMENTED",
+  "actual_Board_health_and_lease_binding": "NOT_IMPLEMENTED",
+  "PL_mode_coordinator": "NOT_IMPLEMENTED",
+  "clinical_answers_delivered": 0,
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "release_allowed": false,
+  "replay_allowed": false,
+  "hardware_latency_saving_s": null
+}

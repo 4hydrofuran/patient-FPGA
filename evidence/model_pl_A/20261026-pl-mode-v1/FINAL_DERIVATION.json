@@ -1,0 +1,219 @@
+{
+  "constructor_edits": [
+    [
+      "need(self.build['domain']=='PC_REAL_MODEL_PLM_V1','foreign build')",
+      "need(self.build['domain'] in ('PC_REAL_MODEL_PLM_V1','A12_PREPARED_BOARD_MODEL_PLM_V1'),'foreign build')"
+    ],
+    [
+      "self.page=Page(self.build['writer_library'],self.build['writer_sha256'])",
+      "self.page=AuthorityPage(self.build['writer_library'],self.build['writer_sha256'],deadline=self.control_deadline())"
+    ],
+    [
+      "pass_fds=(self.child_legacy.fileno(),self.child_private.fileno(),self.page.fd,self.journal.lock)",
+      "pass_fds=(self.child_legacy.fileno(),self.child_private.fileno(),self.page.fd,self.journal.lock,*self.inherited_fds())"
+    ],
+    [
+      "domain='PC_REAL_MODEL_CPU_REFERENCE',real_device_approval=False",
+      "domain=self.provider.domain,real_device_approval=False"
+    ],
+    [
+      "self.p=subprocess.Popen(argv,stdin=",
+      "self.launch_guard()\n    self.p=subprocess.Popen(argv,stdin="
+    ],
+    [
+      "for t in self.threads:t.start()",
+      "for t in self.threads:t.start()\n    if self.cancel_event.is_set():self._fail('mode cancellation latched during initialization')"
+    ]
+  ],
+  "request_edits": [
+    [
+      "execution_kind='PC_NATIVE_MATH_NOT_FPGA'",
+      "execution_kind=self.provider.wire_execution"
+    ],
+    [
+      "total=cpu_route(route)",
+      "total=self.provider.route_count(route,completed=True)"
+    ],
+    [
+      "{k:route[k] for k in self.resident}==self.resident",
+      "self.provider.residency(route)==self.resident"
+    ],
+    [
+      "result['domain']=='PC'",
+      "result['domain']==self.provider.native_domain"
+    ],
+    [
+      "route['pc_last_job']==route['job_id']==total and route['pc_output_consumable'] is True",
+      "self.last_verified(route,total)"
+    ],
+    [
+      "route['pc_plm']['bound_request_sha256']=='' and route['pc_plm']['local_generation']==0",
+      "self.provider.control(route)['bound_request_sha256']=='' and self.provider.control(route)['local_generation']==0"
+    ],
+    [
+      "actual_CPU_calls=expected,final_job=total",
+      "verified_backend_calls=expected,execution_kind=self.provider.execution_kind,final_job=total"
+    ],
+    [
+      "schema='PC_REAL_MODEL_PLM_RECEIPT_V1'",
+      "schema=self.provider.receipt_schema"
+    ],
+    [
+      "summary=dict(actual_CPU_calls=expected,cumulative_CPU_calls=total",
+      "summary=dict(verified_backend_calls=expected,cumulative_backend_calls=total,execution_kind=self.provider.execution_kind"
+    ],
+    [
+      "scope='PC_ONLY_RAW_TOKEN_NOT_USER_DELIVERY; SMALL_DESCRIPTIVE_SAMPLE_NOT_BOARD'",
+      "scope='BOUNDED_ACCEPTANCE_DELIVERY_GATE_NOT_UI_OR_SERVICE' "
+    ]
+  ],
+  "page_edits": [
+    [
+      "def __init__(self,library,expected):",
+      "def __init__(self,library,expected,*,deadline=None):"
+    ],
+    [
+      "self.deadline=time.monotonic_ns()+180_000_000_000",
+      "self.deadline=deadline if deadline is not None else time.monotonic_ns()+180_000_000_000"
+    ]
+  ],
+  "close_edits": [
+    [
+      "need(self.monitor.stop(),'native health observer still live');self.normal_terminal_requested=True;self.page.revoke()",
+      "need(self.monitor.stop(),'native health observer still live');self.normal_terminal_requested=True;self.native_close_verified.set();self.closure_barrier();self.page.revoke()"
+    ]
+  ],
+  "journal_edits": [
+    [
+      "self._write(self.fd,raw);os.fsync(self.fd);os.fsync(self.parent)",
+      "self._write(self.fd,raw)\n            if getattr(self,'inject_event',None)==event:raise OSError('injected mode complete-record fsync failure')\n            os.fsync(self.fd);os.fsync(self.parent)"
+    ]
+  ],
+  "backend_reversible_edits": [
+    [
+      "#ifndef SP_LINEAR_CONTROL_TEST\n    // This candidate cannot be activated on a board by editing a JSON enable flag.",
+      "#if !defined(SP_LINEAR_CONTROL_TEST) && !defined(SP_A12_LIVE_BOARD_BOUND)\n    // This candidate cannot be activated on a board by editing a JSON enable flag."
+    ],
+    [
+      "#ifdef SP_LINEAR_CONTROL_TEST\n    require(digest);c->authority.bind_request(digest);return SP_OK;",
+      "#if defined(SP_LINEAR_CONTROL_TEST) || defined(SP_A12_LIVE_BOARD_BOUND)\n    require(digest);c->authority.bind_request(digest);return SP_OK;"
+    ],
+    [
+      "#ifdef SP_LINEAR_CONTROL_TEST\n    c->authority.end_request();return SP_OK;",
+      "#if defined(SP_LINEAR_CONTROL_TEST) || defined(SP_A12_LIVE_BOARD_BOUND)\n    c->authority.end_request();return SP_OK;"
+    ]
+  ],
+  "all_reversible_checks_passed": true,
+  "current_sources": [
+    {
+      "path": "platform/qwen35/a12/plmode_assets.py",
+      "bytes": 1589,
+      "sha256": "13406c2262a9e8d641beb4ed9c48d2cfb1062216ab88fe9a52e2a4fa676204bd"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_audit.py",
+      "bytes": 5288,
+      "sha256": "b2f012a8f421daa1a226f251ff3e68ee427fc941867dfa81f6c55dc2e3e2a123"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_build.py",
+      "bytes": 6405,
+      "sha256": "a7f411e7f724a6abb689b75a58cb5a29e8829f4bc8c94243d31f3d326cc69303"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_coordinator.py",
+      "bytes": 16935,
+      "sha256": "276bf27815088336ae1c186e18cc458094b57d850b163892b9016a7e125d25c0"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_evidence.py",
+      "bytes": 1167,
+      "sha256": "7339dcd54183fb2985edddabde4316dda03548c396578aeca7fc36f10e33c280"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_history.py",
+      "bytes": 6538,
+      "sha256": "5044c070075b1dc0d401558b25ee885cbfe67112e4a83189702023f576207142"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_journal.py",
+      "bytes": 1245,
+      "sha256": "e48a9aeeebdd49f0e217e468d5297d53bfdfa07cc48ea77a5e6197911bf5b513"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_manager.py",
+      "bytes": 13319,
+      "sha256": "9a25b345b0ce184aceb5127ff560db7b500c938b3e4cbab03c6687d6cb66b888"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_observer.cpp",
+      "bytes": 1584,
+      "sha256": "121da4fa4c97cd0842707a4e585192b0be54198123f84c621414f19d3f2302e4"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_provider.py",
+      "bytes": 8948,
+      "sha256": "f1c6cdc2b4745c13ced96c2233967f09dfce242178a2a0dcf927b927ee04a366"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_restart_snapshot.py",
+      "bytes": 1476,
+      "sha256": "a1997697c5839c2e06e907777fe14c0ca41799c29b82d8e107245e4ad556901e"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_review.py",
+      "bytes": 8393,
+      "sha256": "036d34a0697285bea142f8f31a2a05ebd8cc40fc6d3cacfcbfc178b13d76517d"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_runtime.py",
+      "bytes": 6039,
+      "sha256": "fce96b1d8abc6e7b091b8145beb9f5596451827164921b67a7d04c66a867915c"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_trial.py",
+      "bytes": 4937,
+      "sha256": "dcc8f6515e4284dd72a6cb64f8c301c2d18845140a744fe989c9774e61dc5c11"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_assets.py",
+      "bytes": 2949,
+      "sha256": "c98cd862647f869f799641e0a82fae111dd572bf4496baf9483865d13c965767"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_cancel.py",
+      "bytes": 2190,
+      "sha256": "8d01278c750734ff3b486eb4c549a04f10c8cb177a93a27d60fbfd279cefd3ec"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_close_cancel.py",
+      "bytes": 1479,
+      "sha256": "0a68f90db6da9341d60b012d00b55f4cb529f82f8be195e3d2020e1f10c43885"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_init_cleanup.py",
+      "bytes": 2318,
+      "sha256": "801dc63124a19b3e1af464e9029cd02d3822bc7d823675f0f3096758a9ff4f81"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_observer.py",
+      "bytes": 1462,
+      "sha256": "32ca4f92dae5b849d94eac00b399e860f7e9f9c587635cfa615cd7cb7468f983"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_owner.py",
+      "bytes": 4565,
+      "sha256": "ae68c38a4adb00c6b3f6cc12801633dfb631a23c48bff51b53a9cfc2f0bf872e"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_policy.py",
+      "bytes": 4340,
+      "sha256": "e1c46ac5a04ebceb13b786ecd6c628d27e763a599d860cf46a8a4393f5c0a164"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_runtime.py",
+      "bytes": 2826,
+      "sha256": "6459aa8687fca5c1cc6bb89a4d3477f85bb763aef981c82bb3c793728969e74e"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "da316c809d454a9fa8ab06b387ed3aaf",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-011",
+    "case_id": "SYN_CP_02",
+    "case_version": "1.0-draft",
+    "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+    "text": "用药情况我不清楚。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "用药情况我不清楚。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "medications"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "medications"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "medications"
+      ],
+      "allowed_fact_ids": [
+        "medications"
+      ],
+      "required_fact_ids": [
+        "medications"
+      ],
+      "facts": [
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "medications",
+          "span": [
+            2,
+            4
+          ],
+          "quote": "服药"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "用药情况我不清楚。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_3",
+      "result_sha256": "8c0cdcbb65d0afd39adc855768d0e888700cff580e81ade205b067d8cb832388"
+    },
+    "received_ns": 97692459088,
+    "validated_ns": 98940716535,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 97674963778,
+    "worker_pid": 416,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.271282855,
+    "application_delivered_ns": 98946246633,
+    "delivery_fence": {
+      "serial": 123,
+      "sample": 587,
+      "epoch": "2af63ec6632244d68387506d6209da11",
+      "requested_ns": 98945349356,
+      "started_ns": 98945434617,
+      "ended_ns": 98946095712,
+      "authorized_ns": 98946226625
+    },
+    "prepared_response_sha256": "76020dc3dc86d5020503a30b5583133d8f11bbb901641ba62803c4c363f29771",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

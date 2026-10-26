@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "0a5e25ae20494bdab205f1a778d52997",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "V04",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "疼痛程度是 6 分，满分 10 分。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "疼痛程度是 6 分，满分 10 分。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "severity"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "severity"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "severity"
+      ],
+      "allowed_fact_ids": [
+        "severity"
+      ],
+      "required_fact_ids": [
+        "severity"
+      ],
+      "facts": [
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 6,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "severity",
+          "span": [
+            3,
+            5
+          ],
+          "quote": "几分"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "疼痛程度是 6 分，满分 10 分。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_1",
+      "result_sha256": "7affb0daf1a2ed8dfacb4d418adfb978c0955b4636ded4a764ec8a33ec9e6cb5"
+    },
+    "received_ns": 282019753438,
+    "validated_ns": 284409105307,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 281999351639,
+    "worker_pid": 440,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 2.414721664,
+    "application_delivered_ns": 284414073303,
+    "delivery_fence": {
+      "serial": 107,
+      "sample": 589,
+      "epoch": "a88579109a334ed7b2c608c09a00a139",
+      "requested_ns": 284413193859,
+      "started_ns": 284413271877,
+      "ended_ns": 284413885371,
+      "authorized_ns": 284414053175
+    },
+    "prepared_response_sha256": "901f52a79164a42ee3bc9d49164330293606a51a89697ca39d07705bdba372b5",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

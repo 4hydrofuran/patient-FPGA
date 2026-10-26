@@ -1,0 +1,18 @@
+test_changed_log_marker_and_lock_are_refused (__main__.JournalTests) ... ok
+test_fsync_failure_keeps_dirty_even_when_close_bytes_exist (__main__.JournalTests) ... ok
+test_record_bound_is_enforced (__main__.JournalTests) ... ok
+test_second_lock_and_unclean_restart_refused (__main__.JournalTests) ... ok
+test_short_writes_are_completed_without_losing_bytes (__main__.JournalTests) ... ok
+test_unlisted_state_files_and_unsafe_permissions_refused (__main__.JournalTests) ... ok
+test_valid_close_and_reopen_preserves_chain (__main__.JournalTests) ... ok
+test_zero_progress_write_latches (__main__.JournalTests) ... ok
+test_observer_survives_writer_close_without_changing_page (__main__.ObserverTests) ... ok
+test_pidfd_acquired_live_reports_actual_terminal (__main__.ObserverTests) ... ok
+test_read_only_observer_sees_real_revoke_and_cannot_write (__main__.ObserverTests) ... ok
+test_reader_rejects_RW_FD (__main__.ObserverTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.227s
+
+OK
+

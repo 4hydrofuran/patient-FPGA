@@ -1,0 +1,500 @@
+{
+  "domain": "PC_REAL_MODEL_PLM_V1",
+  "workspace": "/home/member-a/kv260-build/a12-prompt-private-20261026-v1",
+  "revision": 3,
+  "native": "/home/member-a/kv260-build/a12-model-route-20261026-v5/pc/qwen35-a12",
+  "adapter": "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_native_cpu_control.so",
+  "CPU_library": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+  "CPU_library_sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+  "runtime_artifacts": [
+    {
+      "role": "native",
+      "path": "/home/member-a/kv260-build/a12-model-route-20261026-v5/pc/qwen35-a12",
+      "sha256": "da7999b9dfb43c70aab79e1430f9e4dac84f3f99f9e9b83c7e078d66fa2f7893",
+      "bytes": 807952
+    },
+    {
+      "role": "adapter",
+      "path": "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_native_cpu_control.so",
+      "sha256": "91e97035fe075ef9e41198ea96ac6975b69b0c50ffbf91f8fec8ea411e301707",
+      "bytes": 476792
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+      "sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+      "bytes": 233624,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0",
+      "sha256": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+      "bytes": 4752256,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3",
+      "sha256": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+      "bytes": 59736,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+      "bytes": 930392,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+      "bytes": 1412168,
+      "role": "math_library"
+    }
+  ],
+  "math_libraries_before_and_after": [
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+      "sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+      "bytes": 233624
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0",
+      "sha256": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+      "bytes": 4752256
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3",
+      "sha256": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+      "bytes": 59736
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+      "bytes": 930392
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+      "bytes": 1412168
+    }
+  ],
+  "imported_quant_object": {
+    "path": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/pc04/CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o",
+    "sha256": "c589bacdf0de9f68539d9482af6e8d5b51de12bd806da1ff7ee529b0aa248003"
+  },
+  "quant_math_recompiled": false,
+  "math_DSO_recompiled": false,
+  "writer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_writer.so",
+  "writer_sha256": "4fe85e15b03c2948876e2212294e1a1da8a45994a8ac47342ee194fe7c5f0bdb",
+  "observer_library": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/libplmode_observer.so",
+  "source": [
+    {
+      "name": "bridge.cpp",
+      "sha256": "efe0f235d757d41e59e807c02d801743f47c71ec3958d03a0799ecd5ca5b79ad",
+      "bytes": 13451
+    },
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569",
+      "bytes": 1555
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02",
+      "bytes": 1386
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+      "bytes": 953436
+    },
+    {
+      "name": "main.cpp",
+      "sha256": "e637455231463a65ffe10d958b79e18450f2285cdf2b6b2d7084d42857e3041a",
+      "bytes": 26400
+    },
+    {
+      "name": "modelpl_cpu.cpp",
+      "sha256": "70636413cc28272651195a38ec6b3a1cdb83556e605dc153773708784a84fc11",
+      "bytes": 12361
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e",
+      "bytes": 5908
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec",
+      "bytes": 5233
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175",
+      "bytes": 6225
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5",
+      "bytes": 10134
+    },
+    {
+      "name": "request_profile.cpp",
+      "sha256": "8684483f3114ea9f0722b14c03b4866a50727de89372af1cd59bc360d6587732",
+      "bytes": 20518
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720",
+      "bytes": 5803
+    },
+    {
+      "name": "route.cpp",
+      "sha256": "6e947a28ef70dde1c914dbb6397a89582106d2b1a598acaa0325a97214530347",
+      "bytes": 11828
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda",
+      "bytes": 2625
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e",
+      "bytes": 583
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102",
+      "bytes": 1492
+    }
+  ],
+  "frontend_derivation": {
+    "main.cpp": {
+      "parent_sha256": "8b4805e267294a3230cfe5befc0b01ebbd347414523635426fcf0528e15f1243",
+      "edits": [
+        [
+          "auto op=req.value(\"op\",\"generate\");if(op==\"shutdown\")break;",
+          "auto op=req.value(\"op\",\"generate\");if(op==\"shutdown\")break;\n        if(bridge.route.private_control&&op!=\"generate\"&&op!=\"cache_create\")throw std::runtime_error(\"private control forbids auxiliary compute/cache operations\");"
+        ],
+        [
+          "        auto cpu_before=bridge.report(false);",
+          "        bridge.route.begin_private_request(req);\n        auto cpu_before=bridge.report(false);"
+        ],
+        [
+          "            bridge.request_stats.active=false;\n            emit({{\"type\",\"cache_created\"}",
+          "            bridge.request_stats.active=false;\n            bridge.route.finish_private_request(true);route[\"a12_route\"]=bridge.route.report();\n            emit({{\"type\",\"cache_created\"}"
+        ],
+        [
+          "        emit({{\"prefix_cache_request\",cache_result}",
+          "        bridge.route.finish_private_request(status==\"OK\");bridge_report[\"a12_route\"]=bridge.route.report();\n        emit({{\"prefix_cache_request\",cache_result}"
+        ],
+        [
+          "      }catch(const std::exception&e){cache.clear_private();",
+          "      }catch(const std::exception&e){bridge.route.abort_private_request();\n        json private_CPU_report=nullptr;\n#ifdef SP_A12_PC_TEST\n        if(bridge.route.private_control)private_CPU_report=bridge.report(false);\n#endif\n        cache.clear_private();"
+        ],
+        [
+          "{\"request_profile\",prof}});}\n    }",
+          "{\"request_profile\",prof},{\"private_control\",bridge.route.private_status()},\n          {\"private_CPU_report\",private_CPU_report},{\"model_bridge_error\",bridge.error}});\n        if(bridge.route.private_control){\n#ifdef SP_A12_PC_TEST\n            return 2; // CPU-only cooperative exit; ARM keeps original quarantine.\n#else\n            bridge.route.park_if_unsafe();\n#endif\n        }\n      }\n    }"
+        ],
+        [
+          "    bridge.route.close_checked();",
+          "    bridge.route.close_checked();\n    if(bridge.route.private_control){\n        emit({{\"type\",\"private_closed\"},{\"domain\",bridge.route.real?\"BOARD\":\"PC\"},\n            {\"status\",\"NATIVE_CONTEXT_CLOSED_NOT_PLATFORM_RELEASE\"},{\"private_control\",bridge.route.private_status()}});\n        std::string acknowledgement;if(!std::getline(std::cin,acknowledgement)||acknowledgement.size()>1024||\n            json::parse(acknowledgement).at(\"op\")!=\"private_exit_ack\")throw std::runtime_error(\"private close acknowledgement absent\");\n    }"
+        ]
+      ],
+      "appended_private_methods": false,
+      "inverse_exact": true
+    },
+    "route.cpp": {
+      "parent_sha256": "5409205e9f67ab682513142fbc2e7a81e25864b05dac750b2defc03b12ff885a",
+      "edits": [
+        [
+          "    if(real)permit(\"router_open\",0);",
+          "    private_control=policy.value(\"a12_private_protocol\",std::string())==\"A12_PLM_PRIVATE_V1\";\n    need(!policy.contains(\"a12_private_protocol\")||private_control,\"unknown private protocol\");\n    if(real||private_control)permit(\"router_open\",0);"
+        ],
+        [
+          "#undef A12_LOAD",
+          "#undef A12_LOAD\n    if(private_control){\n        control_begin_fn=reinterpret_cast<decltype(control_begin_fn)>(dlsym(library,\"sp_a12_plm_request_v1\"));\n        control_end_fn=reinterpret_cast<decltype(control_end_fn)>(dlsym(library,\"sp_a12_plm_request_end_v1\"));\n        control_abort_fn=reinterpret_cast<decltype(control_abort_fn)>(dlsym(library,\"sp_a12_plm_request_abort_v1\"));\n        need(control_begin_fn&&control_end_fn&&control_abort_fn,\"private protocol ABI missing\");\n    }"
+        ],
+        [
+          "    r[\"a12_hardware_global_count\"]=nullptr;r[\"a12_trace\"]=ledger;return r;",
+          "    r[\"a12_hardware_global_count\"]=nullptr;r[\"a12_trace\"]=ledger;\n    r[\"a12_private_control\"]=private_status();return r;"
+        ],
+        [
+          "    if(real)permit(\"router_close\",0);",
+          "    need(!private_failed&&!control_active,\"private failed/active route cannot close\");\n    if(real||private_control)permit(\"router_close\",0);"
+        ],
+        [
+          "    unsafe=false;return rc;",
+          "    if(private_control&&!real)need(r.at(\"pc_adapter\")==\"A12_REAL_MODEL_PLM_CPU_V1\"&&\n        r.at(\"execution_kind\")==\"CPU_REFERENCE\"&&r.at(\"pc_output_consumable\")==true&&r.at(\"pc_poisoned\")==false&&\n        r.at(\"pc_last_job\")==job&&r.at(\"job_id\")==job,\"CPU private completion identity differs\");\n    unsafe=false;return rc;"
+        ],
+        [
+          "    if(!diagnostic)return;need(ledger.size()<trace_limit,\"A12 trace capacity exceeded\");",
+          "    if(private_control){\n        need(control_active&&!private_failed&&!unsafe&&!closed&&dst&&y&&t>0&&t<=8&&n>0&&n<=4864,\"private graph copy state\");\n        for(int row=0;row<t;++row)need(std::memcmp(static_cast<const char*>(dst->data)+(start+row)*dst->nb[1],y+size_t(row)*n,size_t(n)*4)==0,\"private graph copy differs\");\n        ++copy_checks;copy_bytes+=uint64_t(t)*n*4;\n    }\n    if(!diagnostic)return;need(ledger.size()<trace_limit,\"A12 trace capacity exceeded\");"
+        ]
+      ],
+      "appended_private_methods": true,
+      "inverse_exact": true
+    },
+    "route.hpp": {
+      "parent_sha256": "07ff53e1c3abdf7faa53dd0624934af0995fc9492ec7cee237bf1cb0583dd20b",
+      "edits": [
+        [
+          "    json policy,ledger=json::array();",
+          "    json policy,ledger=json::array();\n    int32_t(*control_begin_fn)(sp_linear_context*,const char*)=nullptr;\n    int32_t(*control_end_fn)(sp_linear_context*)=nullptr;\n    int32_t(*control_abort_fn)(sp_linear_context*)=nullptr;\n    bool control_active=false,private_failed=false;uint64_t copy_checks=0,copy_bytes=0;\n    std::string control_digest;"
+        ],
+        [
+          "    bool enabled=false,real=false;std::string scope=\"none\";",
+          "    bool enabled=false,real=false,private_control=false;std::string scope=\"none\";\n    void begin_private_request(const json&request);\n    void finish_private_request(bool ok);\n    void abort_private_request()noexcept;\n    json private_status()const;"
+        ]
+      ],
+      "appended_private_methods": false,
+      "inverse_exact": true
+    },
+    "bridge.cpp": {
+      "parent_sha256": "ae29ce3d672b770dee8e04bd5fdb737991e1f3ce9088f7145de010a6b88e47d5",
+      "edits": [
+        [
+          "            if(e.pl)b.route.returned(dst,start,count,n,job,b.y.data(),e.layer,e.op,b.epoch,b.execution);\n#ifdef SP_A12_PC_TEST\n            if(e.pl&&std::getenv(\"SP_A12_TEST_DROP_OUTPUT\"))for(int row=0;row<count;++row)std::memset(static_cast<char*>(dst->data)+(start+row)*dst->nb[1],0,n*4);\n#endif",
+          "#ifdef SP_A12_PC_TEST\n            if(e.pl&&std::getenv(\"SP_A12_TEST_DROP_OUTPUT\"))for(int row=0;row<count;++row)std::memset(static_cast<char*>(dst->data)+(start+row)*dst->nb[1],0,n*4);\n#endif\n            if(e.pl)b.route.returned(dst,start,count,n,job,b.y.data(),e.layer,e.op,b.epoch,b.execution);"
+        ]
+      ],
+      "appended_private_methods": false,
+      "inverse_exact": true
+    }
+  },
+  "CPU_adapter_derivation": {
+    "parent_sha256": "c4f4421a3f923793633e192dcdb6d7b516bdbe925a2ff83bf2008931253a9c1b",
+    "edits": [
+      [
+        "using json=nlohmann::json;",
+        "using json=nlohmann::json;\n#include \"plm_control.hpp\""
+      ],
+      [
+        "API api{};Control control;",
+        "API api{};Control control;plm::Control authority;"
+      ],
+      [
+        "r[\"pc_adapter\"]=\"A12_NATIVE_CPU_CONTROL_V1\";",
+        "r[\"pc_adapter\"]=\"A12_REAL_MODEL_PLM_CPU_V1\";r[\"pc_plm\"]=authority.report();"
+      ],
+      [
+        "void begin_close(){if(!closing){control.permit(\"router_close\",0);closing=true;}}",
+        "void begin_close(){if(!closing){need(authority.maintenance_allowed(),\"CPU private maintenance refused\");closing=true;}}"
+      ],
+      [
+        "cfg.at(\"schema\")==\"A12_NATIVE_CPU_CONTROL_V1\"",
+        "cfg.at(\"schema\")==\"A12_REAL_MODEL_PLM_CPU_V1\""
+      ],
+      [
+        "    c->control.permit(\"router_open\",0);c->control.permit(\"device_open\",0);",
+        "    c->control.permit(\"device_open\",0);"
+      ],
+      [
+        "    *out=c.release();return SP_OK;",
+        "    json facts={{\"schema\",\"A12_MODEL_PLM_CPU_CONTEXT_V1\"},{\"execution_kind\",\"CPU_REFERENCE\"},\n        {\"worker_pid\",getpid()},{\"worker_start_ticks\",plauth::ticks(getpid())},{\"context_generation\",plauth::nonce()},\n        {\"cpu_library_sha256\",cfg.at(\"cpu_library_sha256\")},{\"cpu_config_sha256\",cfg.at(\"cpu_config_sha256\")},\n        {\"contract_sha256\",CONTRACT},{\"actual_CPU_fresh_report\",r},\n        {\"boot_id\",a12_modelpl_boot_id()},{\"real_device_generation_approval\",\"UNBOUND_PC_CPU_ONLY\"}};\n    c->authority.configure(facts);\n    *out=c.release();return SP_OK;"
+      ],
+      [
+        "namespace {\nconstexpr",
+        "static std::string a12_modelpl_boot_id(){std::ifstream f(\"/proc/sys/kernel/random/boot_id\");return std::string(std::istreambuf_iterator<char>(f),{});}\nnamespace {\nconstexpr"
+      ],
+      [
+        "    int32_t rc=c->api.load(",
+        "    c->authority.before_load();\n    int32_t rc=c->api.load("
+      ],
+      [
+        "    ++c->loads;c->padded_n.emplace(*out,(n+31)/32*32);return SP_OK;",
+        "    c->authority.complete(0,true);\n    ++c->loads;c->padded_n.emplace(*out,(n+31)/32*32);return SP_OK;"
+      ],
+      [
+        "if(rc!=SP_OK){c->poisoned=true;return rc;}",
+        "if(rc!=SP_OK){c->authority.fail();c->poisoned=true;*out=0;return rc;}"
+      ],
+      [
+        "    ++c->loads;c->padded_n.emplace(*out,(n+31)/32*32);return SP_OK;\n}catch(...){if(c)c->poisoned=true;return SP_DEVICE_ERROR;}",
+        "    ++c->loads;c->padded_n.emplace(*out,(n+31)/32*32);return SP_OK;\n}catch(...){if(c){c->authority.fail();c->poisoned=true;}if(out)*out=0;return SP_DEVICE_ERROR;}"
+      ],
+      [
+        "    c->control.permit(\"submit\",job);++c->started;",
+        "    const size_t values=size_t(t)*c->padded_n.at(h);need(yb>=values*4,\"PC output length differs\");\n    std::vector<float> staged(values);c->authority.before_transfer(job,t);\n    if(const char*pause=std::getenv(\"SP_A12_MODELPL_TEST_PAUSE_JOB\")){\n        need(std::string(pause)==\"5\",\"PC pause fixture job differs\");\n        if(job==5)std::this_thread::sleep_for(std::chrono::milliseconds(100));\n    }\n    c->authority.before_start(job);++c->started;"
+      ],
+      [
+        "#include <cmath>",
+        "#include <cmath>\n#include <thread>\n#include <chrono>"
+      ],
+      [
+        "h,t,x,xb,sx,sb,y,yb,job,timeout);",
+        "h,t,x,xb,sx,sb,staged.data(),staged.size()*4,job,timeout);"
+      ],
+      [
+        "    const size_t values=size_t(t)*c->padded_n.at(h);need(yb>=values*4,\"PC output length differs\");\n    for(size_t i=0;i<values;++i)need(std::isfinite(y[i]),\"PC nonfinite output\");",
+        "    for(size_t i=0;i<values;++i)need(std::isfinite(staged[i]),\"PC nonfinite output\");\n    c->authority.complete(job);std::memcpy(y,staged.data(),values*4);"
+      ],
+      [
+        "if(rc!=SP_OK){++c->failed;c->poisoned=true;return rc;}",
+        "if(rc!=SP_OK){c->authority.fail();++c->failed;c->poisoned=true;return rc;}"
+      ],
+      [
+        "if(c){c->poisoned=true;c->last_consumable=false;++c->failed;}",
+        "if(c){c->authority.fail();c->poisoned=true;c->last_consumable=false;++c->failed;}"
+      ]
+    ],
+    "appended_private_ABI": true,
+    "inverse_exact": true
+  },
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "real_device_generation_approval": "UNBOUND_CURRENT_BOARD_WINDOW",
+  "generation_writer": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer.so",
+  "generation_writer_sha256": "99696e8c149d679d30e49c2e82d660518e09d2bb2845905ac1fe83aa9232e4c7",
+  "native_reused_unchanged": true,
+  "generation_domain": "PC_GENERATION_FIXTURE_NO_DEVICE",
+  "generation_source": [
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569",
+      "bytes": 1555
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02",
+      "bytes": 1386
+    },
+    {
+      "name": "generation.map",
+      "sha256": "5a9d698bbcf995254fb0acea2689c470042f398ea507b2b879780e911ae93850",
+      "bytes": 37
+    },
+    {
+      "name": "generation_cpu.cpp",
+      "sha256": "f70231bbc5c5ea3929e3ef8b0db2bc117098547393a484b8c264284447ec1a20",
+      "bytes": 12396
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa",
+      "bytes": 6509
+    },
+    {
+      "name": "generation_writer.cpp",
+      "sha256": "f2c61b4b2ad7d6e5748c8552e1d64a39b0286f8aee93a6ce465f71f414a61584",
+      "bytes": 973
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+      "bytes": 953436
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e",
+      "bytes": 5908
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec",
+      "bytes": 5233
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175",
+      "bytes": 6225
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5",
+      "bytes": 10134
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720",
+      "bytes": 5803
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda",
+      "bytes": 2625
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e",
+      "bytes": 583
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102",
+      "bytes": 1492
+    },
+    {
+      "name": "test_generation_slot.cpp",
+      "sha256": "f6d8df47f9dd723ed41f19ef443229e32af1f5f05f38c04cc1120f8d33ab2011",
+      "bytes": 2404
+    }
+  ],
+  "observer_sha256": "1c0e258862ea5f0138f8eac5a624004f498fa674eabe1f8d34a7871f012eab6f",
+  "source_binding": "LIVE_OWNER_PORTS_IMPLEMENTED_PC_FIXTURE_TESTS_NOT_BOARD_VALIDATED",
+  "manager_artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer.so",
+      "sha256": "99696e8c149d679d30e49c2e82d660518e09d2bb2845905ac1fe83aa9232e4c7",
+      "bytes": 33960
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+      "sha256": "53764e5623c11cd778a917dca45892c6bab044d0d2db354d4cfa1adced456f04",
+      "bytes": 79896
+    }
+  ],
+  "ARM_execution": "NOT_EXECUTED",
+  "prepared_Board_candidate": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/liba12_plmode_bound_candidate.so",
+  "prepared_Board_candidate_sha256": "38c7474708e6ddc86ae20cb8630ea5ddbfa8fb6436a65fef1189399bf89be0fa",
+  "ARM_artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/liba12_plmode_unbound.so",
+      "sha256": "57d1e33e8d2a4c1e4435923ad3fa1b70b9a9c04ba8711e0bf75b2a5c019301d6",
+      "bytes": 438696
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/liba12_plmode_bound_candidate.so",
+      "sha256": "38c7474708e6ddc86ae20cb8630ea5ddbfa8fb6436a65fef1189399bf89be0fa",
+      "bytes": 513552
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-mode-20261026-v2/libplmode_observer_a53.so",
+      "sha256": "f1a95cf3e9987f7a571d348815a2654808323f6cc9cc8ee5592f4e592a52295c",
+      "bytes": 162344
+    }
+  ],
+  "Board_deployed": false,
+  "prompt_cohort_id": "DEV-024",
+  "prefix_tokens": 34,
+  "requests_path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-prompt-private-v1/cohorts/DEV-024/requests.json",
+  "requests_sha256": "d6f14d09494a06c6f946324ee358343d3ffbaf039a447e0e1864c7e7fddd21fd",
+  "prompt_prefix_template": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-prompt-private-v1/cohorts/DEV-024/prefix-template.json",
+  "prompt_prefix_sha256": "f773694349a65260f8ada247aea9998da5312f057fe4845d8f62ac79e1476314",
+  "accepted_prompt_workloads": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-short-prompt-v1/facts-only-02/TOKENIZED_WORKLOADS.json",
+  "accepted_prompt_workloads_sha256": "50b3e53dcd2d71bb0dfda3f28411b660a772358c6312670c3b1181e5d8fb90a5",
+  "prompt_reference_artifacts": [
+    {
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-short-prompt-v1/facts-only-02/native-PC/DEV-024-R0/result.json",
+      "sha256": "5890dcd319e9a88d70f3995d8fd514dce7cf8ab5b7ff36cf15ddfe7e2a18a234"
+    },
+    {
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-short-prompt-v1/facts-only-02/native-PC/DEV-024-hit/result.json",
+      "sha256": "0b52ac7dd1cadc5d62bec7c96360b33bad99c164237baef070415dd0f103d5b3"
+    },
+    {
+      "path": "/mnt/c/Patientqwen/evidence/model_pl_A/20261026-short-prompt-v1/facts-only-02/native-PC/boundary-warm-34.json",
+      "sha256": "d0ab1bcf0c817ba5fbcd702e8e4493d526326c364852af2b5c2153774d68e1c1"
+    }
+  ]
+}

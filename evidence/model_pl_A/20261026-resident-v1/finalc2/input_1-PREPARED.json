@@ -1,0 +1,93 @@
+{
+  "type": "validated_answer",
+  "session_id": "54cfbcd5be744484991780e55f553f39",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "DEV-005",
+  "case_id": "SYN_CP_02",
+  "case_version": "1.0-draft",
+  "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+  "text": "疼痛程度是 4 分，满分 10 分。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "疼痛程度是 4 分，满分 10 分。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "severity"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "severity"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "severity"
+    ],
+    "allowed_fact_ids": [
+      "severity"
+    ],
+    "required_fact_ids": [
+      "severity"
+    ],
+    "facts": [
+      {
+        "slot": "severity",
+        "status": "known",
+        "value": 4,
+        "unit": "分/10分",
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "severity",
+        "span": [
+          4,
+          6
+        ],
+        "quote": "几分"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "疼痛程度是 4 分，满分 10 分。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_1",
+    "result_sha256": "9dbfac357d468ed0a41f2823e4c75496bae9cb819757474781c0bc4bf268dbc2"
+  },
+  "received_ns": 195426456060,
+  "validated_ns": 197730597267,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 195405266230,
+  "worker_pid": 432,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

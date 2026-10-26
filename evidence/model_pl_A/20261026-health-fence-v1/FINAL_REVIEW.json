@@ -1,0 +1,1311 @@
+{
+  "status": "PC_FRESH_HEALTH_FENCE_VALIDATED_GOAL_ACTIVE",
+  "recorded_at": "2026-10-25T18:08:42.591389+00:00",
+  "source": [
+    {
+      "path": "platform\\qwen35\\a12\\fresh_identity_io.py",
+      "bytes": 6082,
+      "sha256": "04ede03b7b5fee2a0ee97113e3a42156d03b48b54150450180dff21ba4aa4d9c"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\health_fence.py",
+      "bytes": 8103,
+      "sha256": "2bc1ac22a87fb984c086726f195ae7f7640721d35ec6555b36301be9a859d9b0"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\native_health_fence.py",
+      "bytes": 3781,
+      "sha256": "f25b2e3030ae13bf6be2e81096b18ab608f812a8e3c1af5705f64542caf53bda"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\native_health_run.py",
+      "bytes": 5821,
+      "sha256": "162738e48a4ef9ca7a66a75cbbc50d18b3edc95f0c0d4e7619b7587c4def0ee5"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\native_health_audit.py",
+      "bytes": 5559,
+      "sha256": "fbeb8709c963b3b153939689f1f5da509f540ef278e7aefdac543d7bec60e50d"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\test_health_fence.py",
+      "bytes": 8851,
+      "sha256": "0f9bf1d6b523c8cbd56d641e782f8df205ff78c8dae6b5db3681ee17d22c6fc4"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\test_health_boundaries.py",
+      "bytes": 3568,
+      "sha256": "b6e532329f2ab7091442a3b09dd2fba648078ebf4700252c24593ae312dc4c7d"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\test_frozen_health_fence.py",
+      "bytes": 5758,
+      "sha256": "275cf79054f6f07a9ecb3f91c1bdd843a2fe5843680eed77dbbf9d6973a79bad"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\health_fence_evidence.py",
+      "bytes": 2450,
+      "sha256": "5a39d400f5db939cfe3bd5e8c2ee70b29997e43d685283f7c9c41c0cb0b23ca7"
+    },
+    {
+      "path": "platform\\qwen35\\a12\\health_fence_closeout.py",
+      "bytes": 19009,
+      "sha256": "bce7744e0cdba165847d7e64da33a59df69e1adb59e2c5fc264c09147aed2ea5"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\ACTIVATION.json",
+      "bytes": 527,
+      "sha256": "13fc4a14490407a50bcfcca640e7b429353009505258f29990bb11543d307b57"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\AI_ASSISTANCE.before.md",
+      "bytes": 69907,
+      "sha256": "5d1af99f6a941ea066505cae917a428b3b82afd767780af308708a2e165ca85b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\BASELINE.json",
+      "bytes": 91416,
+      "sha256": "84dd86d3dcf96ea823e0bdcc325ac20fa2b5d18bc7f099fc1fe45a7a9308cfac"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\COMPLETION_AUDIT.json",
+      "bytes": 3020,
+      "sha256": "e215050c0de0f6d8d66acc7ec43b7a30123f23112d977a202b6eee5a08e38962"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\DECISIONS.before.md",
+      "bytes": 51127,
+      "sha256": "0c2eddfa2a6606a4b6ee1633b94a97ac5176a665bf5dbf26c5681e56170b59e9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\DESIGN_GAP.before.md",
+      "bytes": 82584,
+      "sha256": "2257c27aefadc7385dedee4d8e6c5525fef4c43ea08841d48ac5f8d16003a2b2"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\frozen-gate-tests-01\\RESULT.json",
+      "bytes": 174,
+      "sha256": "3516b08b376a2eeeb591b1375a0517052886b065f7f3bd0bcf51efa969a28e30"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\frozen-gate-tests-01\\unittest.txt",
+      "bytes": 499,
+      "sha256": "8db4d57d06d95a08dc61d9b599e9a5c99a9fc442212a10931ff9ac945f8607e6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\frozen-gate-tests-02.txt",
+      "bytes": 563,
+      "sha256": "aa4d64c878599379cf0c077fee299bff43826becc6cb260ac5acdb9beabbb595"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\GOVERNANCE_CHECKS.json",
+      "bytes": 1490,
+      "sha256": "173b09502f06319e9c3df979b8e0271e0a8e78206bb628f63f9868089f55d580"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-fail-end-01.txt",
+      "bytes": 1201,
+      "sha256": "3d2e6058c75cd26a5a7e9f928567723973fee82fab268b345f3e4dfcbc87c3fe"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-fail-end-02.txt",
+      "bytes": 1201,
+      "sha256": "375e0ca958b39d84fd4e3645ae8adbfc2b72c6c593384241c6e78f8e547c3afe"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-fail-permit-01.txt",
+      "bytes": 1201,
+      "sha256": "3d2e6058c75cd26a5a7e9f928567723973fee82fab268b345f3e4dfcbc87c3fe"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-fail-permit-02.txt",
+      "bytes": 1201,
+      "sha256": "375e0ca958b39d84fd4e3645ae8adbfc2b72c6c593384241c6e78f8e547c3afe"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-reopen-02.txt",
+      "bytes": 6119,
+      "sha256": "feed4262a6842affd3d412786bd42a870f99cee503b9b75175790387c38fae12"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-request-01.txt",
+      "bytes": 6114,
+      "sha256": "c3645167aa0e3f9a6a6edb64e4007543d7d46d13966b3a838a894418e56e82ff"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-request-02.txt",
+      "bytes": 6112,
+      "sha256": "4c765430c0b606857c55cd549d496ba3f50e04e32b4d546ab5d1c404506659d1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-strict-01.txt",
+      "bytes": 6120,
+      "sha256": "bdb462a1b35fe87e712121cfa30d8db0873940ecdfe949c53ea81f3128122255"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\health-strict-02.txt",
+      "bytes": 6120,
+      "sha256": "62ab77dd20440230cb47d04f47d749262de52ad57b0e7b6bb9a08e8f7dc60b87"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-audit-02.txt",
+      "bytes": 914,
+      "sha256": "ba9f0d94eb79e4921bf4d25f3c821b59eae5b416525180780149d742abe4b32c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-audit.txt",
+      "bytes": 909,
+      "sha256": "6c453c4e6a27786dbe5f5c1a200b43e74d6308b6170508ef0492a2032fd1d0e9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "c59b85d0bd5afa3070235b8f85eaa2fd3cc29d391561801acb6822a558df44e0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "8c10e7d62e628b6c05b73e91c7a90ee1e1730be3798977fcdaf15b425c613bc9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "f571a873e7e046d3b7edd66d0651a67a104d65c82058f392bf592d3dd644493d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\events.jsonl",
+      "bytes": 83429,
+      "sha256": "e4125817f35d9ea6c32900150ebc9b4fefb85cf409ff70bf4ae2bad3be658001"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "15ede0466b3d9624c46aab615032fc9f3eb6a7f25f7ce3ba3224f3ce94a3ba15"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "7178cb6bd0c8650f3f12c8f6249431d3e33f8f08c44815068384bb66387ce16e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts\\health-request-01\\stdout.jsonl",
+      "bytes": 53781,
+      "sha256": "11f9f75663696fc2142a19750b5682ed0613c1c4b9786f7d0a67b7c171437776"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-01\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "7d00c17d5f0e44d1f205194c4ceddc16dea1776ebfd4bd31bfcced2b6f43e21e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-01\\events.jsonl",
+      "bytes": 76700,
+      "sha256": "bbb82858fafa21831e8da8949c45563e8d63580415dd1ef240fbfdd4001d336f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-01\\stderr.txt",
+      "bytes": 104478,
+      "sha256": "dc5ee83fbc5cd8264a0c5655c1b604439fb4d1b3f3c506f2af95849fb3e674ba"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-01\\stdout.jsonl",
+      "bytes": 38224,
+      "sha256": "e3c0d1076ba4c4259491d4daa5fb6aa366081d45a5e56be0f3ab1ee88accd000"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-02\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "d10bb50f685dad6d9eb1ed09523bd7324bbdfe2ede2af6766eb8e83e264ef3a5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-02\\events.jsonl",
+      "bytes": 76673,
+      "sha256": "ab04923987e3c547cb154541f72e7fe92ee619aa084a2a831142b70cfdd80941"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-02\\stderr.txt",
+      "bytes": 104478,
+      "sha256": "af74c6fe6fce60c3b7dd37ade9705aad701314aee4bb10e21f81f0b1a75902c4"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-end-02\\stdout.jsonl",
+      "bytes": 38230,
+      "sha256": "41257d132859d4e5a2a6d333145817670cfdad81bc593e6fd253063b1e281a74"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-01\\events.jsonl",
+      "bytes": 70557,
+      "sha256": "aec50a1973b5ea75e80b2a072bf9c2267643e7f4381407799154b0d468c962ef"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-01\\stderr.txt",
+      "bytes": 104722,
+      "sha256": "dc2449a3ff7c934e8a3d3abe85ac4cc47fb1c372d3a241a4d6d7e3e28062e04f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-01\\stdout.jsonl",
+      "bytes": 37608,
+      "sha256": "db30ed58a97c15af3b7a25923a33f0ac267de6ced2abeeed2816c91f3c9a34c8"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-02\\events.jsonl",
+      "bytes": 70684,
+      "sha256": "41ec87587a5888b691c605371b05173fffc193a5f99d2753d6d3f5c3664243db"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-02\\stderr.txt",
+      "bytes": 104722,
+      "sha256": "db80ed55d4f0140d90ebb0121be71c98d4d6d3a6dc158617f8e88fe147a4baf9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-fail-permit-02\\stdout.jsonl",
+      "bytes": 37607,
+      "sha256": "13f3116a768f137bf7acc12faaa0752b968aadbc02ff21660f5712fc2b70ed2d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "9068d4b680074fd12e2feaeededcc53d6c4545b2d015ca8ef3f05495739cb016"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "3709d66fa8d54cb4af6104e00c311402da25cc93b383f486486d7763eb3ce5c0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "597942e03a25a57d7884ed4db4b98484699a8c8eacbb1d6611939b610a4f9cd3"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\events.jsonl",
+      "bytes": 83757,
+      "sha256": "b88da6b0bd6f2af77e72f392e4714e57cda6841103aec38c49ee3b055f42704c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "da449ee8b4152bfb10d48131a3e93428eb3e86c3089d17c9d7029d02d7efc3f0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "22ee36ef39fb76f920a0410fbf2a99fcfe46d429e18de60be12c67b633a98f82"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-reopen-02\\stdout.jsonl",
+      "bytes": 53803,
+      "sha256": "6af6d6d8f1a6a65d283b2f77b473001c2b0bd21e356d300d6f81c85e73f20a66"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "c59b85d0bd5afa3070235b8f85eaa2fd3cc29d391561801acb6822a558df44e0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "8c10e7d62e628b6c05b73e91c7a90ee1e1730be3798977fcdaf15b425c613bc9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "f571a873e7e046d3b7edd66d0651a67a104d65c82058f392bf592d3dd644493d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\events.jsonl",
+      "bytes": 83429,
+      "sha256": "e4125817f35d9ea6c32900150ebc9b4fefb85cf409ff70bf4ae2bad3be658001"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "15ede0466b3d9624c46aab615032fc9f3eb6a7f25f7ce3ba3224f3ce94a3ba15"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "7178cb6bd0c8650f3f12c8f6249431d3e33f8f08c44815068384bb66387ce16e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-01\\stdout.jsonl",
+      "bytes": 53781,
+      "sha256": "11f9f75663696fc2142a19750b5682ed0613c1c4b9786f7d0a67b7c171437776"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "90473ca87628ed04935d7da7d36660196ae9a868948d697e3f5be6461cc74872"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "b53acf8e8ea344a6a1ae018e1d20ba810ae9ba7b5b40a695b473bcde3cb20c5f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "226ba8ebd5a33fb87df85248d21b67bd140a776ccfe275ff5efd57d5f09793df"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\events.jsonl",
+      "bytes": 83684,
+      "sha256": "c2f6f56fa8670b16e0dfe44c917b73c4a564895b20b084f8c94cff899b16f706"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "05aac37f3a54485b86dbcc60fa841e78e1c40d1012f76ce5932210ace00e236e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "e55dc7ecc213ab99f7fa195848bf136c49a5e9a9fb074598d8e4e3bbe50e06fe"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-request-02\\stdout.jsonl",
+      "bytes": 53790,
+      "sha256": "e4acf2cbfc718b518668a6d1e8c3dcd56376c81a48f033530b18770fc7bd27ca"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "3394b53ce3a57d88db714e03dd66bacaa2f99eb69024155347de08c913f9532b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "5be84c1930a55b0d252fb51fdf69cfa0e265aa7578fe6c7ac53225fc5b189f9e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "9be87c17a9cde5cd9069a484fb2010ef144dbe31cc8340b38f7cfecb00c67e17"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\events.jsonl",
+      "bytes": 2732709,
+      "sha256": "dcfcfdb57ca1709850eb222318eb0968b9a59a2f4204ea485f40a5fd5c8647f9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "b112907e99e66feaee1d19fd55a47ff4e9cfbf58908942e6908a6156d7005c10"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "c6a669c2c5d23786d3e6765e7c1a8c8b668042812ca2910fa9e58d363e30d5db"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-01\\stdout.jsonl",
+      "bytes": 53814,
+      "sha256": "23b44445bfc7cbab9e0d5ea14590cc84a42e9200962b2e18d6233e230a7e2e72"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\COMMIT-app_hit.json",
+      "bytes": 940,
+      "sha256": "6a70ba651d6533757d32616d72b4e960c326f3113c1e6a7e57910a6e44ac9e14"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\COMMIT-app_R0.json",
+      "bytes": 936,
+      "sha256": "305e224a216b11c98ed58c2e452be620782c825b87e91e396056d31a6f9ff4f8"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\COMMIT-warm_prefix.json",
+      "bytes": 944,
+      "sha256": "efeea3733b7295f86e99281d5f48995a69e1408f5d735c9198d4f3b6306312a7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\events.jsonl",
+      "bytes": 2722175,
+      "sha256": "b91a01bdf10fd33c2c84a896593cacfc1d7d04727f76ef9ae7d8be823ae98ceb"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\NORMAL_CLOSE.json",
+      "bytes": 313,
+      "sha256": "9585163f61761afbb073688ca56360f3c05790d9d869dd4eb142eb6d4a87fb7e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\stderr.txt",
+      "bytes": 104884,
+      "sha256": "c9636856a5ee0f0a801a7affde8b42ee4f834bc6f4d2895eadbf88424ce25c2b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\native-transcripts-v2\\health-strict-02\\stdout.jsonl",
+      "bytes": 53810,
+      "sha256": "79b41558f3aff82774fcbb0dc8bc4ed5fc451b72e9f308f6af8ce8e00558b402"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\NATIVE_AUDIT.json",
+      "bytes": 21251,
+      "sha256": "868e1029532b889ae9c069abf89b0840b62807b9dc50681c3a9bd7abeb530df1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\pc-tests-01\\RESULT.json",
+      "bytes": 112,
+      "sha256": "f12064f34724c0457714d4043f0249f365d639c8911450b60d58de3f8d786230"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\pc-tests-01\\unittest.txt",
+      "bytes": 1296,
+      "sha256": "1a66b0f2946b60dbcec098285380514965df36dcd36ea7af180a96061a2947d5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\pc-tests-02.txt",
+      "bytes": 3870,
+      "sha256": "bdd73c5f57724412fb23d426522217423d4080188dbbcd0406744c1018b25b17"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\pc-tests-03.txt",
+      "bytes": 3109,
+      "sha256": "36cf7fb4386523104aedc645de2f6c943114e172cdad7baec7cda9e8a3608269"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\PRESERVATION.json",
+      "bytes": 91600,
+      "sha256": "2a3cf024eff9f4880a7223511bf885fa9854eebaa206504e035b7ff08b4077e7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\PROJECT_STATUS.before.json",
+      "bytes": 245449,
+      "sha256": "f4d6b726b066a953f6eac5c7bd73510c5bafa5d58f40a9968b0bd9e0a7518a07"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\app_R0\\result.json",
+      "bytes": 10358,
+      "sha256": "3e22aa047ad068a54c9bcc02b80ed03d7870b2b34524d0f8c2a4ade5881df9bb"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\CPU_FAILURE_CLOSE.json",
+      "bytes": 300,
+      "sha256": "f3d23f57eb9cc15072920719bb9de0dcd973746aaefd433270fa5e36a67a1c7e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\FAILURE.json",
+      "bytes": 673,
+      "sha256": "456dde2fe4c15fd4212d77025001dc5b6628a7cf9e88d1df495652505eb4449d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\HEALTH_FENCE.json",
+      "bytes": 17067,
+      "sha256": "cc19793daf335653f955d6a34142ff7945962e6f8b583cf96c00e415087bed0a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\INJECTION.json",
+      "bytes": 259,
+      "sha256": "528fd751adf1339f6d1d9c99ccbadcfde04930515ba5b1f983d815b084b80135"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "c671becc5a8ba53352e1e8238805ca660d79b03a62473c8518c4f8084431140f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\ready.json",
+      "bytes": 39514,
+      "sha256": "0c5af052dbcbae65578e921c45d7d751235fb028f41cc0adf7cb4d2e64a5a668"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-01\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\app_R0\\result.json",
+      "bytes": 10364,
+      "sha256": "dcc4157c7cdf7a62a1c596aa4ed2c1cb330d8656f1fb8dfcb67a313cf0020ac5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\CPU_FAILURE_CLOSE.json",
+      "bytes": 300,
+      "sha256": "f3d23f57eb9cc15072920719bb9de0dcd973746aaefd433270fa5e36a67a1c7e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\FAILURE.json",
+      "bytes": 673,
+      "sha256": "7c4384c73980db16723ba42ac698d1320d0135267ef026c56c643da837f01a5e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\HEALTH_FENCE.json",
+      "bytes": 17104,
+      "sha256": "a3c39de3c3716a1228b6d903626252b632a9cd1ab218e943d77dd2bfe70686e7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\INJECTION.json",
+      "bytes": 259,
+      "sha256": "87da62103bbce969972ac13772e51baace636a98ec2dd0f067d3237ce3b176b4"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "afadbd6e34eec717801c1b499cd8c6e050c48e62feb95f857a7f85d4e548ce9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\ready.json",
+      "bytes": 39514,
+      "sha256": "f4fdee113229acde49e77071dd8422ec8205e352765334108cfa7ee1c9cf7284"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-end-02\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\CPU_FAILURE_CLOSE.json",
+      "bytes": 300,
+      "sha256": "f3d23f57eb9cc15072920719bb9de0dcd973746aaefd433270fa5e36a67a1c7e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\FAILURE.json",
+      "bytes": 669,
+      "sha256": "60172ef60acc104900cd410e38349d6d7df0ebe9cf05d98cea8d1c0e744d2709"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\HEALTH_FENCE.json",
+      "bytes": 16835,
+      "sha256": "015a37cf9ae23f827912e4e0435606a7d874fa5bcafd9fbc4d99f108758bd9c0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\INJECTION.json",
+      "bytes": 262,
+      "sha256": "de7f68e4208243307f227561c982df56e21abf7893cbea0aae24e9f4626e2ddd"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "afadbd6e34eec717801c1b499cd8c6e050c48e62feb95f857a7f85d4e548ce9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\ready.json",
+      "bytes": 39514,
+      "sha256": "1b3ca051d12167f485440ec5e9e5f9db764e26243edd9306fa3a6d7a21aacb5a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-01\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\CPU_FAILURE_CLOSE.json",
+      "bytes": 300,
+      "sha256": "f3d23f57eb9cc15072920719bb9de0dcd973746aaefd433270fa5e36a67a1c7e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\FAILURE.json",
+      "bytes": 669,
+      "sha256": "5483ab77b4ecbeebf65fac26f969ae2e985a0cfd9a0b4697954e1b948c782a3f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\HEALTH_FENCE.json",
+      "bytes": 16874,
+      "sha256": "9cf6e6dec661a42fcc83576a5502cc574c042010220154663cb6c6ec6dac900b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\INJECTION.json",
+      "bytes": 262,
+      "sha256": "ec2fcfefc1fe2fe1551470a8b20156adebdf50c59fdc739cfec5c27389e9ada9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "c671becc5a8ba53352e1e8238805ca660d79b03a62473c8518c4f8084431140f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\ready.json",
+      "bytes": 39515,
+      "sha256": "3da12fd1319bde9a8a1c53355ce75f2cba56d3d86afa7376d70a72e85cd51d1b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-fail-permit-02\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_hit\\application-timing.json",
+      "bytes": 15665,
+      "sha256": "676e8938cc08d5fb6d47b1f0c25a49296dd3e39e9efea74f7cc144366d5e35f1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_hit\\request.json",
+      "bytes": 4578,
+      "sha256": "91fbf57bc4ff24fb7468054588fd2a0ed71adb91e45f39cb0ee6e7e678012006"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_hit\\result.json",
+      "bytes": 10972,
+      "sha256": "cb6a74b27f7b2afc9941c4dec9026ff6e4fbc075c4d98544ed4ca15e4d6e0827"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_hit\\verification.json",
+      "bytes": 462,
+      "sha256": "441fa1dc75f36ffab43a27fcdd09babc9dc6133edabeb07f860ab44f6b16c83c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_R0\\application-timing.json",
+      "bytes": 14929,
+      "sha256": "ea34f185e8dd41e6a940ea706f6d3361e9660ad21df805aab0518ecda2fad0b0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_R0\\result.json",
+      "bytes": 10370,
+      "sha256": "0546b2424a8017bfd6dbe1fa19a3e20a4fa3dba40fcf5ed18a058f0e1c9dfffc"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\app_R0\\verification.json",
+      "bytes": 464,
+      "sha256": "6cc75dfa1ee10102fcb82dded578a0ede3e6d9b423d04dc29791c0d005248c4e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\HEALTH_FENCE.json",
+      "bytes": 18218,
+      "sha256": "f22b68af87bd11648ab1cd93d85aa0816d7adedf51344b625ac2b465cd180a85"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "c671becc5a8ba53352e1e8238805ca660d79b03a62473c8518c4f8084431140f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\ready.json",
+      "bytes": 39513,
+      "sha256": "fd22f125c46b737f7a4fc18f906d97f5d1d8b5a8073d04bcffe57fe403637a0e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\RESULT.json",
+      "bytes": 5795,
+      "sha256": "de2d53bc70a596b1727d8ff2b5f8f1be62c3a8b301bf26ea57581216b8cabf4d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\warm_prefix\\request.json",
+      "bytes": 1200,
+      "sha256": "8504e852c7e90cab1c987dc8104bf3f3a6715d7a173151edf3909001b6d4bfb6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\warm_prefix\\result.json",
+      "bytes": 7796,
+      "sha256": "e536566f5ddbce21f154c76c38b58648cbc0919028c8a71eebd19d3f42cb2113"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-reopen-02\\warm_prefix\\verification.json",
+      "bytes": 322,
+      "sha256": "1490cf2cd7cd4f14d8daef16399996e43cf731fd80da2684960aaf62895b795a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_hit\\application-timing.json",
+      "bytes": 15651,
+      "sha256": "e366d9c441fdecc41f8525343d7edceb86396dd92dedd5733dfb2120d326c38b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_hit\\request.json",
+      "bytes": 4578,
+      "sha256": "91fbf57bc4ff24fb7468054588fd2a0ed71adb91e45f39cb0ee6e7e678012006"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_hit\\result.json",
+      "bytes": 10968,
+      "sha256": "125352da5edbffaf484db46aad9e39cf193e89d2efc1c0f0006455b5c92ffa6f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_hit\\verification.json",
+      "bytes": 462,
+      "sha256": "441fa1dc75f36ffab43a27fcdd09babc9dc6133edabeb07f860ab44f6b16c83c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_R0\\application-timing.json",
+      "bytes": 14908,
+      "sha256": "a4f8828e9541efab5ead2ea26dd88532391653c952bacb52732b97bf7287e4ad"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_R0\\result.json",
+      "bytes": 10356,
+      "sha256": "8cfdc4ff0835ee3bbdc88502ba4527c4acfa6c3e84108e4ce97d8254f21581e1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\app_R0\\verification.json",
+      "bytes": 464,
+      "sha256": "6cc75dfa1ee10102fcb82dded578a0ede3e6d9b423d04dc29791c0d005248c4e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\HEALTH_FENCE.json",
+      "bytes": 16858,
+      "sha256": "5d8602c151f5da77a4124b553310e53816e6c0a593878f0a7e7a1c9ec9303244"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "a720dfd9bae940e58822f28202d6ee60a56d868b31054fe7fe3440dc22cead04"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\ready.json",
+      "bytes": 39511,
+      "sha256": "5b6c129d35521a9be585ae2a430936912c64406d88fa7db021302d352a8fb11f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\RESULT.json",
+      "bytes": 5790,
+      "sha256": "9351bc489f49beb5ea2d20e12983b3e75fb6cce733b216bee70282c5762ce77c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\warm_prefix\\request.json",
+      "bytes": 1200,
+      "sha256": "8504e852c7e90cab1c987dc8104bf3f3a6715d7a173151edf3909001b6d4bfb6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\warm_prefix\\result.json",
+      "bytes": 7794,
+      "sha256": "446bb185757f6cdf76a2a94c9e85e127064e763b938997b1d3d71c60be1edb1b"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-01\\warm_prefix\\verification.json",
+      "bytes": 322,
+      "sha256": "1490cf2cd7cd4f14d8daef16399996e43cf731fd80da2684960aaf62895b795a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_hit\\application-timing.json",
+      "bytes": 15664,
+      "sha256": "ada0478360172c40ec2732fc718ef62fbb579c23aaed1600eb97522d0acbf11d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_hit\\request.json",
+      "bytes": 4578,
+      "sha256": "91fbf57bc4ff24fb7468054588fd2a0ed71adb91e45f39cb0ee6e7e678012006"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_hit\\result.json",
+      "bytes": 10971,
+      "sha256": "55b9ff2150c0e94f906b6d81c5e935e4ae11eb146c84b63d95078f9672373e1e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_hit\\verification.json",
+      "bytes": 462,
+      "sha256": "441fa1dc75f36ffab43a27fcdd09babc9dc6133edabeb07f860ab44f6b16c83c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_R0\\application-timing.json",
+      "bytes": 14918,
+      "sha256": "4e3e934d1fe0ebbaa121b8bc5833a0c95eebbeb18cdecdbb28b6a7df7ff756c1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_R0\\result.json",
+      "bytes": 10356,
+      "sha256": "00b0d1c5091c6142578cd98855c1f576da2d2b36ccb703ae3f031a50cc25f5d4"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\app_R0\\verification.json",
+      "bytes": 464,
+      "sha256": "6cc75dfa1ee10102fcb82dded578a0ede3e6d9b423d04dc29791c0d005248c4e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\HEALTH_FENCE.json",
+      "bytes": 18233,
+      "sha256": "7ce74a0b39607b2ec8b501a2fb12a6dbdef9ef3ecb9608248765d9a6a90a2534"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "afadbd6e34eec717801c1b499cd8c6e050c48e62feb95f857a7f85d4e548ce9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\ready.json",
+      "bytes": 39515,
+      "sha256": "2900032bc168d2cdf105e69e61223e69c50297d2f43517e97b024b08543687d0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\RESULT.json",
+      "bytes": 5788,
+      "sha256": "b9391ba5feaf2df86701ceed5278d0e17c0fdb9d85fba51a027d520c21b320dd"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\warm_prefix\\request.json",
+      "bytes": 1200,
+      "sha256": "8504e852c7e90cab1c987dc8104bf3f3a6715d7a173151edf3909001b6d4bfb6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\warm_prefix\\result.json",
+      "bytes": 7796,
+      "sha256": "0f0d2b8fd8cb844fa6f0271c6242ca302fb3e8a411847a740dc44d849da659f1"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-request-02\\warm_prefix\\verification.json",
+      "bytes": 322,
+      "sha256": "1490cf2cd7cd4f14d8daef16399996e43cf731fd80da2684960aaf62895b795a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_hit\\application-timing.json",
+      "bytes": 15670,
+      "sha256": "fd5efeaf24d231993cdf9023aad2625973e118679e5a9235dfddbf8955db1265"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_hit\\request.json",
+      "bytes": 4578,
+      "sha256": "91fbf57bc4ff24fb7468054588fd2a0ed71adb91e45f39cb0ee6e7e678012006"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_hit\\result.json",
+      "bytes": 10978,
+      "sha256": "fa5cd830bcfa77cab6d9f99434ce191149cdcf5bc504848984420fdc47323343"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_hit\\verification.json",
+      "bytes": 462,
+      "sha256": "441fa1dc75f36ffab43a27fcdd09babc9dc6133edabeb07f860ab44f6b16c83c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_R0\\application-timing.json",
+      "bytes": 14935,
+      "sha256": "8f132efbb18098664cf37a7b77f35420e90f42bd06080a54267a399a7bc7d678"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_R0\\result.json",
+      "bytes": 10374,
+      "sha256": "5f9228fe34a1ca5bc7fdb40f098c41d99d7bbce258b890fae103283f3e538a98"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\app_R0\\verification.json",
+      "bytes": 464,
+      "sha256": "6cc75dfa1ee10102fcb82dded578a0ede3e6d9b423d04dc29791c0d005248c4e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\HEALTH_FENCE.json",
+      "bytes": 16986,
+      "sha256": "39610577da4397a7df4a848448b8b676d11cf2e66c5721f378fcff81fa7350c6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "afadbd6e34eec717801c1b499cd8c6e050c48e62feb95f857a7f85d4e548ce9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\ready.json",
+      "bytes": 39515,
+      "sha256": "72dd4ebb7c6b973f16a4a141f657cb1135434986acf9ee77bdc2ecd9198ef329"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\RESULT.json",
+      "bytes": 5799,
+      "sha256": "5eec5746c71f7b8df2dd543e3b1ce991f120f6ba876bb6f241d57a2cbc4583d7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\warm_prefix\\request.json",
+      "bytes": 1200,
+      "sha256": "8504e852c7e90cab1c987dc8104bf3f3a6715d7a173151edf3909001b6d4bfb6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\warm_prefix\\result.json",
+      "bytes": 7795,
+      "sha256": "6c04b16b1ad82809277d5ac746b080e71ffce855a4bfb2ca2eae7fb2d0b08a7d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-01\\warm_prefix\\verification.json",
+      "bytes": 322,
+      "sha256": "1490cf2cd7cd4f14d8daef16399996e43cf731fd80da2684960aaf62895b795a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_hit\\application-timing.json",
+      "bytes": 15668,
+      "sha256": "c1a1c44e1e153cdc923a44f7aa72ea15a3037667cd41f275d8e638b44cd2cf90"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_hit\\request.json",
+      "bytes": 4578,
+      "sha256": "91fbf57bc4ff24fb7468054588fd2a0ed71adb91e45f39cb0ee6e7e678012006"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_hit\\result.json",
+      "bytes": 10982,
+      "sha256": "4b725022d8a32db1af460f588d70db5bdedaaac03daf2c12f6498f7783620f39"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_hit\\verification.json",
+      "bytes": 462,
+      "sha256": "441fa1dc75f36ffab43a27fcdd09babc9dc6133edabeb07f860ab44f6b16c83c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_R0\\application-timing.json",
+      "bytes": 14919,
+      "sha256": "7745a091d1b030bd1ab5e61e4a09ed7eaf2c186f783d4fc29a28c8d2a8fe62a9"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_R0\\request.json",
+      "bytes": 4444,
+      "sha256": "5aab0238b4d0e88479882c7f373c9ee305b5a39c15af4707e5818ebbd06008ab"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_R0\\result.json",
+      "bytes": 10367,
+      "sha256": "bf9422022349866962e0190fdae9a2b7f1c362316b9cb2950720ccc67be50e0e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\app_R0\\verification.json",
+      "bytes": 464,
+      "sha256": "6cc75dfa1ee10102fcb82dded578a0ede3e6d9b423d04dc29791c0d005248c4e"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\HEALTH_FENCE.json",
+      "bytes": 18225,
+      "sha256": "3c446dbe18a04ef122085213f86f9a4ec627463fcfe3f9b9137f60be0f5dbd80"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\LOADED_LIBRARIES.json",
+      "bytes": 544,
+      "sha256": "c671becc5a8ba53352e1e8238805ca660d79b03a62473c8518c4f8084431140f"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\ready.json",
+      "bytes": 39514,
+      "sha256": "6a3b50d9569f753eb4ee9ed2967282dd5e77195f06cf34f763ec498333cb927c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\RESULT.json",
+      "bytes": 5799,
+      "sha256": "53fc913994337bcc399fccf6a1eb81b1a1de98e81f4f817bf8164cbc375e847d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\SOURCE_AT_LAUNCH.json",
+      "bytes": 301,
+      "sha256": "a866a52dc79da0e3df17bd510b8e59a353a3c41eee95a8837935efe3f34c6264"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\warm_prefix\\request.json",
+      "bytes": 1200,
+      "sha256": "8504e852c7e90cab1c987dc8104bf3f3a6715d7a173151edf3909001b6d4bfb6"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\warm_prefix\\result.json",
+      "bytes": 7795,
+      "sha256": "8a680aa9a56ea297984ecfa2af60e17c1812dc0b6e8cf0d98015fcc43fffee82"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\run-health-strict-02\\warm_prefix\\verification.json",
+      "bytes": 322,
+      "sha256": "1490cf2cd7cd4f14d8daef16399996e43cf731fd80da2684960aaf62895b795a"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-01\\fresh_identity_io.py",
+      "bytes": 6082,
+      "sha256": "04ede03b7b5fee2a0ee97113e3a42156d03b48b54150450180dff21ba4aa4d9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-01\\health_fence.py",
+      "bytes": 7583,
+      "sha256": "0ecd3012a5c4c883abe0f6486b5138d496b2093448c216d5a041c38355ffa8f8"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-01\\native_health_fence.py",
+      "bytes": 3253,
+      "sha256": "b5d67711d9194f2ba7a39af848d4a706326eb1337252bd3af0c8e714b5d9d650"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-01\\native_health_run.py",
+      "bytes": 5740,
+      "sha256": "068522fafd0bb9508c0f736614c7440c13a467449949399fdbeee53feb90b858"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-01\\test_health_fence.py",
+      "bytes": 8851,
+      "sha256": "0f9bf1d6b523c8cbd56d641e782f8df205ff78c8dae6b5db3681ee17d22c6fc4"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\fresh_identity_io.py",
+      "bytes": 6082,
+      "sha256": "04ede03b7b5fee2a0ee97113e3a42156d03b48b54150450180dff21ba4aa4d9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\health_fence.py",
+      "bytes": 8103,
+      "sha256": "2bc1ac22a87fb984c086726f195ae7f7640721d35ec6555b36301be9a859d9b0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\native_health_fence.py",
+      "bytes": 3781,
+      "sha256": "f25b2e3030ae13bf6be2e81096b18ab608f812a8e3c1af5705f64542caf53bda"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\native_health_run.py",
+      "bytes": 5821,
+      "sha256": "162738e48a4ef9ca7a66a75cbbc50d18b3edc95f0c0d4e7619b7587c4def0ee5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\test_frozen_health_fence.py",
+      "bytes": 5758,
+      "sha256": "275cf79054f6f07a9ecb3f91c1bdd843a2fe5843680eed77dbbf9d6973a79bad"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-02\\test_health_boundaries.py",
+      "bytes": 3368,
+      "sha256": "0c3f51d05f0606502f08aaee04b4d931fe7f9d1c8e2f29147125eec5e56eaa66"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-03\\native_health_audit.py",
+      "bytes": 5250,
+      "sha256": "57f58039e4fd0d68c2dee2bb20e76946c5b48e6cc31f8af6f4f66ff117149809"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\fresh_identity_io.py",
+      "bytes": 6082,
+      "sha256": "04ede03b7b5fee2a0ee97113e3a42156d03b48b54150450180dff21ba4aa4d9c"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\health_fence.py",
+      "bytes": 8103,
+      "sha256": "2bc1ac22a87fb984c086726f195ae7f7640721d35ec6555b36301be9a859d9b0"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\health_fence_closeout.py",
+      "bytes": 19009,
+      "sha256": "bce7744e0cdba165847d7e64da33a59df69e1adb59e2c5fc264c09147aed2ea5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\health_fence_evidence.py",
+      "bytes": 2450,
+      "sha256": "5a39d400f5db939cfe3bd5e8c2ee70b29997e43d685283f7c9c41c0cb0b23ca7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\native_health_audit.py",
+      "bytes": 5559,
+      "sha256": "fbeb8709c963b3b153939689f1f5da509f540ef278e7aefdac543d7bec60e50d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\native_health_fence.py",
+      "bytes": 3781,
+      "sha256": "f25b2e3030ae13bf6be2e81096b18ab608f812a8e3c1af5705f64542caf53bda"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\native_health_run.py",
+      "bytes": 5821,
+      "sha256": "162738e48a4ef9ca7a66a75cbbc50d18b3edc95f0c0d4e7619b7587c4def0ee5"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\test_frozen_health_fence.py",
+      "bytes": 5758,
+      "sha256": "275cf79054f6f07a9ecb3f91c1bdd843a2fe5843680eed77dbbf9d6973a79bad"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\test_health_boundaries.py",
+      "bytes": 3568,
+      "sha256": "b6e532329f2ab7091442a3b09dd2fba648078ebf4700252c24593ae312dc4c7d"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\source-final\\test_health_fence.py",
+      "bytes": 8851,
+      "sha256": "0f9bf1d6b523c8cbd56d641e782f8df205ff78c8dae6b5db3681ee17d22c6fc4"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\TEST_MATRIX.before.md",
+      "bytes": 77405,
+      "sha256": "40a385f8e4cec518ecf92a8cb47503ee30c9ef2dfbbc3a27fd93f58894471dd7"
+    },
+    {
+      "path": "evidence\\model_pl_A\\20261026-health-fence-v1\\TIMING_COMPARISON_PC_ONLY.json",
+      "bytes": 1314,
+      "sha256": "8e97cfd80c409a49a9b42fca75b99a785d07a78242aec1e9a98b8a7cf2c89fee"
+    },
+    {
+      "path": "docs\\handoffs\\A_A12_FRESH_HEALTH_FENCE_PC_20261026.md",
+      "bytes": 7270,
+      "sha256": "ede9e57bf0f2c2d2da6fffbf0adeef1d85d7cc58c2bbd70ea6a71a360e1a58ed"
+    },
+    {
+      "path": "docs\\PROJECT_STATUS.json",
+      "bytes": 253318,
+      "sha256": "ab76165acb6da3abf76f87fbc9867ce1c77c57c9b196df4cad0b1e0d6431c0b2"
+    },
+    {
+      "path": "docs\\DESIGN_GAP.md",
+      "bytes": 83080,
+      "sha256": "7d8d268d311d7e3e75f2eabc0fa0b5b9d9a8629e4bc333bcf82b3a90ab5a37bb"
+    },
+    {
+      "path": "docs\\DECISIONS.md",
+      "bytes": 51588,
+      "sha256": "179690a8643739a52cf92a1de3a9703ac1f8e582c3e7ce7b41dc23a9f095781f"
+    },
+    {
+      "path": "docs\\TEST_MATRIX.md",
+      "bytes": 77955,
+      "sha256": "0735319089cc7beae19a0f9bc2fc4cf0b06615b6ccee3ba41ae108a08ea50cc9"
+    },
+    {
+      "path": "docs\\AI_ASSISTANCE.md",
+      "bytes": 70512,
+      "sha256": "19bd403277846a44cb5c2d621e4f7a9b790dfc85e0379e5dac2fda99c9379a70"
+    }
+  ],
+  "commands": [
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/test_health_fence.py",
+      "exit_code": 0,
+      "log": "pc-tests-01/unittest.txt",
+      "scope": "PC fixtures and actual private file/maps I/O"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/test_frozen_health_fence.py",
+      "exit_code": 0,
+      "log": "frozen-gate-tests-01/unittest.txt",
+      "scope": "Frozen predicate private PC fixtures"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -m unittest discover -s platform/qwen35/a12 -p test_health*.py -v",
+      "exit_code": 1,
+      "log": "pc-tests-02.txt",
+      "scope": "PC fixture error preserved then corrected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -m unittest discover -s platform/qwen35/a12 -p test_health*.py -v",
+      "exit_code": 0,
+      "log": "pc-tests-03.txt",
+      "scope": "PC fixture error preserved then corrected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -m unittest discover -s platform/qwen35/a12 -p test_frozen_health_fence.py -v",
+      "exit_code": 0,
+      "log": "frozen-gate-tests-02.txt",
+      "scope": "Current frozen predicate fixtures"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode request --tag health-request-01",
+      "exit_code": 0,
+      "log": "health-request-01.txt",
+      "scope": "Real native PC model"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode strict --tag health-strict-01",
+      "exit_code": 0,
+      "log": "health-strict-01.txt",
+      "scope": "Real native PC model"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode strict --tag health-fail-permit-01 --fault permit_log",
+      "exit_code": 1,
+      "log": "health-fail-permit-01.txt",
+      "scope": "Real native PC model; injected refusal expected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode request --tag health-fail-end-01 --fault end_log",
+      "exit_code": 1,
+      "log": "health-fail-end-01.txt",
+      "scope": "Real native PC model; injected refusal expected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode strict --tag health-strict-02",
+      "exit_code": 0,
+      "log": "health-strict-02.txt",
+      "scope": "Real native PC model"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode request --tag health-request-02",
+      "exit_code": 0,
+      "log": "health-request-02.txt",
+      "scope": "Real native PC model"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode request --tag health-reopen-02 --identity-mode reopen",
+      "exit_code": 0,
+      "log": "health-reopen-02.txt",
+      "scope": "Real native PC model"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode strict --tag health-fail-permit-02 --fault permit_log",
+      "exit_code": 1,
+      "log": "health-fail-permit-02.txt",
+      "scope": "Real native PC model; injected refusal expected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_run.py --mode request --tag health-fail-end-02 --fault end_log",
+      "exit_code": 1,
+      "log": "health-fail-end-02.txt",
+      "scope": "Real native PC model; injected refusal expected"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_audit.py health-request-01 health-strict-01 health-fail-permit-01 health-fail-end-01 health-strict-02 health-request-02 health-reopen-02 health-fail-permit-02 health-fail-end-02",
+      "exit_code": 1,
+      "log": "native-audit.txt",
+      "scope": "Original private native transcript audit; NTFS rejection retained"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/native_health_audit.py health-request-01 health-strict-01 health-fail-permit-01 health-fail-end-01 health-strict-02 health-request-02 health-reopen-02 health-fail-permit-02 health-fail-end-02",
+      "exit_code": 0,
+      "log": "native-audit-02.txt",
+      "scope": "Original private native transcript audit; NTFS rejection retained"
+    }
+  ],
+  "governance_commands": "GOVERNANCE_CHECKS.json",
+  "new_tests": 23,
+  "related_regression_tests": 15,
+  "BOARD": "NOT_TESTED",
+  "PL_calls": 0,
+  "hardware_completions": null,
+  "board_latency_saving_s": null,
+  "board_CMA": "NOT_TESTED",
+  "production_default": false,
+  "whole_goal_achieved": false,
+  "goal_status": "active",
+  "actual_model_settings": "unknown",
+  "DeepSeek_used": false,
+  "core_design_or_evidence_delegated": false,
+  "remote_pushed": false
+}

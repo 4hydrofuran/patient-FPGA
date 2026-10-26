@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+project(qwen35_cpu01_integrated LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+find_library(CRYPTO NAMES crypto libcrypto.so.3 REQUIRED)
+add_library(sp_linear_cpu SHARED IMPORTED)
+set_target_properties(sp_linear_cpu PROPERTIES IMPORTED_LOCATION "${BASE_BUILD}/libsp_linear_cpu.so")
+add_executable(qwen35-a12 ${A12_SOURCE}/main.cpp ${A12_SOURCE}/bridge.cpp ${A12_SOURCE}/route.cpp
+  ${A12_SOURCE}/request_profile.cpp ${ROOT}/quant/reference/w4a8.cpp)
+target_compile_definitions(qwen35-a12 PRIVATE SP_PROJECT_ROOT="${ASSET_ROOT}")
+if(NOT CMAKE_CROSSCOMPILING)
+ target_compile_definitions(qwen35-a12 PRIVATE SP_A12_PC_TEST=1)
+endif()
+target_include_directories(qwen35-a12 PRIVATE ${A12_SOURCE} ${ROOT}/contracts/qwen35 ${ROOT}/quant/reference
+  ${LLAMA_SOURCE}/include ${LLAMA_SOURCE}/ggml/include ${LLAMA_SOURCE}/vendor/nlohmann)
+target_compile_options(qwen35-a12 PRIVATE -O3 -fno-fast-math -ffp-contract=off -Wall -Wextra)
+target_link_libraries(qwen35-a12 PRIVATE sp_linear_cpu ${CRYPTO} dl ${LLAMA_BUILD}/bin/libllama.so
+  ${LLAMA_BUILD}/bin/libggml.so ${LLAMA_BUILD}/bin/libggml-base.so)
+target_link_options(qwen35-a12 PRIVATE -Wl,--export-dynamic-symbol=ggml_backend_graph_compute_async)
+if(CMAKE_CROSSCOMPILING)
+ set_target_properties(qwen35-a12 PROPERTIES BUILD_RPATH "\$ORIGIN" BUILD_WITH_INSTALL_RPATH TRUE INSTALL_RPATH "\$ORIGIN")
+endif()

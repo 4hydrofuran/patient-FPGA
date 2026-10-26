@@ -1,0 +1,22 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "sha256sum",
+    "--",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v5/pc/qwen35-a12",
+    "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_native_cpu_control.so",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3",
+    "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_generation_writer.so",
+    "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_generation_xrt_unbound.so"
+  ],
+  "exit_code": 0,
+  "stdout": "da7999b9dfb43c70aab79e1430f9e4dac84f3f99f9e9b83c7e078d66fa2f7893  /home/member-a/kv260-build/a12-model-route-20261026-v5/pc/qwen35-a12\n91e97035fe075ef9e41198ea96ac6975b69b0c50ffbf91f8fec8ea411e301707  /home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_native_cpu_control.so\n0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15  /home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so\n68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491  /home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0\n6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d  /home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3\n8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166  /home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3\nd3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44  /home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3\na5f9e282d9dcb8ada5f5f528eb3f8936fbfaff3e781821b1e7144117b83705e7  /home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_generation_writer.so\n0dc19b90347e8dde630fd4c69751b5720e2f990957b464d506e83657db10fafc  /home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_generation_xrt_unbound.so\n",
+  "stderr": ""
+}

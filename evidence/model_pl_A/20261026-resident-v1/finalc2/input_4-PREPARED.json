@@ -1,0 +1,93 @@
+{
+  "type": "validated_answer",
+  "session_id": "2c9c9bcf21bd4a4d879a5c7e660c67ab",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "DEV-008",
+  "case_id": "SYN_CP_02",
+  "case_version": "1.0-draft",
+  "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+  "text": "缓解方式我不清楚。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "缓解方式我不清楚。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "relief"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "relief"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "relief"
+    ],
+    "allowed_fact_ids": [
+      "relief"
+    ],
+    "required_fact_ids": [
+      "relief"
+    ],
+    "facts": [
+      {
+        "slot": "relief",
+        "status": "unknown",
+        "value": null,
+        "unit": null,
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "unknown",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "relief",
+        "span": [
+          4,
+          6
+        ],
+        "quote": "缓解"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "缓解方式我不清楚。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_4",
+    "result_sha256": "bd794c63df7d47e717ce9747781fadbc5620366a947264e75762b7c044fe5d53"
+  },
+  "received_ns": 200680859401,
+  "validated_ns": 201959071374,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 200665775101,
+  "worker_pid": 432,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

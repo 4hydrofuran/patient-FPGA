@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "5de9964f03c34d9aaa0cf84ce7abcc1c",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-004",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "每次疼痛持续 10 分钟。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "每次疼痛持续 10 分钟。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "duration"
+      ],
+      "allowed_fact_ids": [
+        "duration"
+      ],
+      "required_fact_ids": [
+        "duration"
+      ],
+      "facts": [
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 10,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "duration",
+          "span": [
+            0,
+            8
+          ],
+          "quote": "每次疼痛持续多久"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "每次疼痛持续 10 分钟。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_4",
+      "result_sha256": "cc2d993281a8c0ac7b9696cda605fb5fe64ff9350c2c82f72452f94fb1f098ad"
+    },
+    "received_ns": 120676422390,
+    "validated_ns": 122296802374,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 120660247085,
+    "worker_pid": 392,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.641104306,
+    "application_delivered_ns": 122301351391,
+    "delivery_fence": {
+      "serial": 144,
+      "sample": 675,
+      "epoch": "2cf7adf7dcff4b1387926cb20d0fb02c",
+      "requested_ns": 122300522563,
+      "started_ns": 122300596503,
+      "ended_ns": 122301205358,
+      "authorized_ns": 122301327496
+    },
+    "prepared_response_sha256": "99c89c5a962c2bebac1df16176c57826021103765b7ce96e5a6ba0feef879cb3",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

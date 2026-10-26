@@ -1,0 +1,113 @@
+{
+  "main_reversible_edits": [
+    [
+      "        if(bridge.route.private_control&&op!=\"generate\"&&op!=\"cache_create\")throw std::runtime_error(\"private control forbids auxiliary compute/cache operations\");",
+      "        if(bridge.route.private_control&&op==\"tokenize\"){\n            auto state=bridge.route.private_status();\n            if(state.at(\"enabled\")!=true||state.at(\"request_active\")!=false||state.at(\"failed\")!=false||state.at(\"closed\")!=false)\n                throw std::runtime_error(\"private vocab-only operation requires healthy idle native route\");\n            if(req.size()!=3||!req.contains(\"prompt\")||!req.at(\"prompt\").is_string()||!req.contains(\"id\")||!req.at(\"id\").is_string())\n                throw std::runtime_error(\"private vocab-only request fields\");\n            if(id.empty()||id.size()>48)throw std::runtime_error(\"private vocab-only ID bound\");\n            for(char c:id)if(!((c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||c=='_'||c=='-'))\n                throw std::runtime_error(\"private vocab-only ID syntax\");\n            std::string prompt=req.at(\"prompt\");if(prompt.empty()||prompt.size()>4096)throw std::runtime_error(\"private vocab-only prompt bound\");\n            int n=llama_tokenize(vocab,prompt.data(),prompt.size(),nullptr,0,true,true);\n            if(n>=0||n<-128)throw std::runtime_error(\"private vocab-only token bound\");\n            std::vector<llama_token> tokens(size_t(-n));n=llama_tokenize(vocab,prompt.data(),prompt.size(),tokens.data(),tokens.size(),true,true);\n            if(n<=0||n>128)throw std::runtime_error(\"private vocab-only tokenization\");tokens.resize(n);\n            emit({{\"type\",\"tokens\"},{\"id\",id},{\"tokens\",tokens},{\"domain\",bridge.route.real?\"BOARD\":\"PC\"},\n                {\"execution_kind\",\"VOCAB_ONLY_NO_BACKEND_CALL\"},{\"private_control\",state}});continue;\n        }\n        if(bridge.route.private_control&&op!=\"generate\"&&op!=\"cache_create\")throw std::runtime_error(\"private control forbids auxiliary compute/cache operations\");"
+    ]
+  ],
+  "original_main_sha256": "e637455231463a65ffe10d958b79e18450f2285cdf2b6b2d7084d42857e3041a",
+  "source": [
+    {
+      "name": "bridge.cpp",
+      "sha256": "efe0f235d757d41e59e807c02d801743f47c71ec3958d03a0799ecd5ca5b79ad"
+    },
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569"
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "main.cpp",
+      "sha256": "671235b09e73caf8871d2fe1682afa88421c3c09673b8a07f492fb67c830c03d"
+    },
+    {
+      "name": "modelpl_cpu.cpp",
+      "sha256": "70636413cc28272651195a38ec6b3a1cdb83556e605dc153773708784a84fc11"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175"
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5"
+    },
+    {
+      "name": "request_profile.cpp",
+      "sha256": "8684483f3114ea9f0722b14c03b4866a50727de89372af1cd59bc360d6587732"
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720"
+    },
+    {
+      "name": "route.cpp",
+      "sha256": "6e947a28ef70dde1c914dbb6397a89582106d2b1a598acaa0325a97214530347"
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda"
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102"
+    }
+  ],
+  "math_libraries": [
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+      "sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+      "bytes": 233624
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0",
+      "sha256": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+      "bytes": 4752256
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3",
+      "sha256": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+      "bytes": 59736
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+      "bytes": 930392
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+      "bytes": 1412168
+    }
+  ],
+  "imported_quant_object": {
+    "path": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/pc04/CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o",
+    "sha256": "c589bacdf0de9f68539d9482af6e8d5b51de12bd806da1ff7ee529b0aa248003"
+  },
+  "separate_tokenizer_model_created": false,
+  "extra_CMA_BOs": 0,
+  "ARM_execution": "NOT_EXECUTED"
+}

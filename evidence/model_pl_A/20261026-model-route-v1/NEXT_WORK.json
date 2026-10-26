@@ -1,0 +1,21 @@
+{
+  "goal_status": "active",
+  "remaining": [
+    {
+      "id": "DEVICE_GENERATION",
+      "work": "Implement independent live boot/lease/dual-lock/driver/kernel/BO-generation approval validation and consumption, with offline positive/negative fixtures and no current Board activation",
+      "BOARD_required": false
+    },
+    {
+      "id": "PL_MODE",
+      "work": "Bind actual model private manager/Route lifecycle to PL mode coordinator and retain unknown-inflight quarantine, durable history and explicit new-window strict fallback; ordinary 3-request acceptance window is not an unlimited SERVICE",
+      "BOARD_required": false
+    },
+    {
+      "id": "BOARD",
+      "work": "Separate fault recovery and safe-release confirmation, fresh original safety gates, unique lease/dual locks and new explicit compute authorization; run unchanged ordinary resource probe first",
+      "BOARD_required": true
+    }
+  ],
+  "automatic_Board_action": false
+}

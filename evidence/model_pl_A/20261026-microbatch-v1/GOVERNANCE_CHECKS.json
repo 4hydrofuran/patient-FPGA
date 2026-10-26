@@ -1,0 +1,19 @@
+{
+  "commands": [
+    {
+      "command": "python scripts/release/check_contracts.py",
+      "exit_code": 0,
+      "output": "{\r\n  \"static_checks\": \"PASS\",\r\n  \"verification_level\": \"PC_TEST\",\r\n  \"contract_version\": \"0.1.0-draft.2\",\r\n  \"content_sha256\": \"c398d47956043a1a3e4cd95ba96de2205eedc38d89db0d037ec0dfa5af0e3af0\",\r\n  \"review_status\": \"DRAFT\",\r\n  \"hardware_test\": \"NOT_TESTED\",\r\n  \"validator_scope\": \"Local references, schema subset and static event fixtures; not full OpenAPI conformance or live service tests\"\r\n}\r\n"
+    },
+    {
+      "command": "python scripts/release/qwen35_config.py",
+      "exit_code": 0,
+      "configuration": "PASS",
+      "domain": "PC",
+      "runtime": "NOT_TESTED",
+      "board": "NOT_TESTED",
+      "stdout_not_copied": true,
+      "evidence": "Actual tool response at this stage start; no new runtime/Board verification asserted"
+    }
+  ]
+}

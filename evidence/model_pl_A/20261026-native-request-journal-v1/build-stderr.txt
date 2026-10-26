@@ -1,0 +1,61 @@
+In file included from /home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:7:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/prefix_cache.hpp: In static member function ‘static tt10::json tt10::PrefixStore::owner_of(const json&)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/prefix_cache.hpp:97:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |         ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/prefix_cache.hpp:97:92: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |                                                                                            ^~~~~~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp: In function ‘int32_t sp_linear_open_v1(const char*, sp_linear_context**)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:77:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   77 |     if(!out||!path)return SP_BAD_ARGUMENT;*out=nullptr;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:77:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   77 |     if(!out||!path)return SP_BAD_ARGUMENT;*out=nullptr;
+      |                                           ^
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp: In function ‘int32_t sp_linear_load_v1(sp_linear_context*, uint32_t, uint32_t, const uint8_t*, uint64_t, const float*, uint64_t, uint64_t*)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:100:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  100 |     if(!c||!out)return SP_BAD_ARGUMENT;*out=0;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:100:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  100 |     if(!c||!out)return SP_BAD_ARGUMENT;*out=0;
+      |                                        ^
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:102:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  102 |     if(c->poisoned||c->closing)return SP_POISONED;if(c->loads>=72)return SP_BAD_ARGUMENT;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:102:51: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  102 |     if(c->poisoned||c->closing)return SP_POISONED;if(c->loads>=72)return SP_BAD_ARGUMENT;
+      |                                                   ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp: In function ‘int32_t sp_linear_report_v1(sp_linear_context*, char*, uint64_t, uint64_t*)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:132:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  132 |     if(capacity<*needed)return SP_BUFFER_TOO_SMALL;std::memcpy(dst,text.c_str(),*needed);return SP_OK;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:132:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  132 |     if(capacity<*needed)return SP_BUFFER_TOO_SMALL;std::memcpy(dst,text.c_str(),*needed);return SP_OK;
+      |                                                    ^~~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp: In function ‘int32_t sp_linear_unload_v1(sp_linear_context*, uint64_t)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:136:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  136 |     if(!c)return SP_BAD_ARGUMENT;std::unique_lock<std::mutex> lock(c->mutex,std::try_to_lock);if(!lock)return SP_BUSY;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:136:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  136 |     if(!c)return SP_BAD_ARGUMENT;std::unique_lock<std::mutex> lock(c->mutex,std::try_to_lock);if(!lock)return SP_BUSY;
+      |                                  ^~~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:137:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  137 |     if(c->poisoned)return SP_POISONED;c->begin_close();
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:137:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  137 |     if(c->poisoned)return SP_POISONED;c->begin_close();
+      |                                       ^
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp: In function ‘int32_t sp_linear_close_v1(sp_linear_context*)’:
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:142:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  142 |     if(!c)return SP_BAD_ARGUMENT;std::unique_lock<std::mutex> lock(c->mutex,std::try_to_lock);if(!lock)return SP_BUSY;
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:142:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  142 |     if(!c)return SP_BAD_ARGUMENT;std::unique_lock<std::mutex> lock(c->mutex,std::try_to_lock);if(!lock)return SP_BUSY;
+      |                                  ^~~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:143:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  143 |     if(c->poisoned)return SP_POISONED;c->begin_close();
+      |     ^~
+/home/member-a/kv260-build/a12-native-request-journal-20261026-v1/source/native_cpu_control.cpp:143:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  143 |     if(c->poisoned)return SP_POISONED;c->begin_close();
+      |                                       ^

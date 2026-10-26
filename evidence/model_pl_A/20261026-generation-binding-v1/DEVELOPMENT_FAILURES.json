@@ -1,0 +1,34 @@
+{
+  "status": "FAILURES_RETAINED_NO_TARGET_WAIVER",
+  "failures": [
+    {
+      "record": "CPU_ADAPTER-v1.json",
+      "exit_code": 1,
+      "cause": "Missing frozen prefix_cache.hpp include dependency",
+      "fix": "Copy all pinned original headers, no installation; v2/v3 compile succeeded"
+    },
+    {
+      "record": "IMPORT_FAILURE-v1.json",
+      "exit_code": 1,
+      "cause": "Dedented AST hook continuation indentation",
+      "fix": "Use dedented indentation; import and actual windows subsequently ran"
+    },
+    {
+      "record": "model01-cap72/RESULT.json",
+      "exit_code": 1,
+      "cause": "Journal epoch is reserved; duplicate keyword rejected at bootstrap, claims0",
+      "fix": "Use generation_epoch; retain DIRTY/failed window, no compute result accepted"
+    },
+    {
+      "record": "model02-bad-copy/RESULT.json",
+      "exit_code": 1,
+      "cause": "Expected-fault evaluator was called before last_native_message was attached; false negative despite correct target",
+      "fix": "Attach actual packet before exact evaluation; final graph-copy fault rerun passed with claims1/CPU1/copy0 and exact error"
+    }
+  ],
+  "development_windows_not_final_acceptance": [
+    "model01",
+    "model02"
+  ],
+  "earlier_PC_builds_and_model03_retained": true
+}

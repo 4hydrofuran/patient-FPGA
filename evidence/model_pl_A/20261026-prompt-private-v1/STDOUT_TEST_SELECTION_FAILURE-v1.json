@@ -1,0 +1,10 @@
+{
+  "command": [
+    "test_promptpl_stdout.py"
+  ],
+  "exit_code": 1,
+  "reason": "Fixture assumed V08 had more than 32 packets, but actual current V08 stream has 27. This is a selection error, not parser or model failure.",
+  "fix": "Select the longest actual stream among all 25 successful final windows. Original raw outputs and all gates unchanged.",
+  "native_rerun": false,
+  "BOARD": "NOT_TESTED"
+}

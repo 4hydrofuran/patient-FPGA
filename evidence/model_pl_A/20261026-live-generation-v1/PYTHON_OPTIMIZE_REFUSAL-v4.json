@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-O",
+    "-c",
+    "import sys;sys.path.insert(0,'/mnt/c/Patientqwen/platform/qwen35/a12');from livegen_platform import original_bo_validator;\ntry: original_bo_validator()\nexcept RuntimeError as e:\n assert_message=str(e);sys.exit(0 if 'unoptimized Python' in assert_message else 2)\nelse: sys.exit(3)"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

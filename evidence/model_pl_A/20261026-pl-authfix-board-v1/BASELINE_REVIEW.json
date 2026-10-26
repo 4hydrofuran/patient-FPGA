@@ -1,0 +1,11 @@
+{
+  "status": "CURRENT_STARTUP_BASELINE_REVIEWED_FOR_ONE_ORDINARY_PL_WINDOW",
+  "sha256": "a4def789db1e6d73966b36a493a886b88a6673632279a8c3695412ed8065df2a",
+  "boot_id": "0978088a-8d10-45b2-8f43-726d00209313",
+  "comparison": "Previous 20261026 original PL attempt baseline; after removing timestamps, one X509 trace register differs and four additional existing USB dummy-regulator messages occur during this startup.",
+  "diagnostic_rows": 190,
+  "known_limitations_remain_open": ["X509 certificate startup warning and trace", "pinctrl firmware limitations", "USB dummy-regulator startup messages", "default overlay lifecycle advisories", "module signature taint and boot RT throttling"],
+  "no_runtime_PL_fault_or_panic_in_captured_baseline": true,
+  "new_diagnostics_must_still_latch": true,
+  "thresholds_changed": false
+}

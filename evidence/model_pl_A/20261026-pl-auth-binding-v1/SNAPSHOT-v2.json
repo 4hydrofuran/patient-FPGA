@@ -1,0 +1,187 @@
+{
+  "workspace": "/home/member-a/kv260-build/a12-pl-auth-20261026-v2",
+  "inputs": [
+    {
+      "name": "pl_auth_gate.hpp",
+      "origin": "/mnt/c/Patientqwen/platform/qwen35/a12/pl_auth_gate.hpp",
+      "sha256": "0e029f3f8d9a31b813f61a54896f76106e936479dcd01083cbfe001a99e4b6af"
+    },
+    {
+      "name": "pl_auth_portable_probe.cpp",
+      "origin": "/mnt/c/Patientqwen/platform/qwen35/a12/pl_auth_portable_probe.cpp",
+      "sha256": "5a94622ead6b7bccbae9683ed153c4253ecc2d5397f1f3e7db8933a89ff67f22"
+    },
+    {
+      "name": "test_pl_auth.cpp",
+      "origin": "/mnt/c/Patientqwen/platform/qwen35/a12/test_pl_auth.cpp",
+      "sha256": "29dbadcaf32290786bdde7ab3647795d05ab0155f946b6320696f241c4d7943b"
+    },
+    {
+      "name": "host_contract.hpp",
+      "origin": "/mnt/c/Patientqwen/modules/linear_A/xrt/host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf"
+    },
+    {
+      "name": "host_contract.cpp",
+      "origin": "/mnt/c/Patientqwen/modules/linear_A/xrt/host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749"
+    },
+    {
+      "name": "release_gate.hpp",
+      "origin": "/mnt/c/Patientqwen/modules/linear_A/xrt/release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9"
+    },
+    {
+      "name": "managed_lock.hpp",
+      "origin": "/mnt/c/Patientqwen/platform/qwen35/a11/managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "origin": "/mnt/c/Patientqwen/contracts/qwen35/sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "origin": "/mnt/c/Patientqwen/evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/source/supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102"
+    },
+    {
+      "name": "json.hpp",
+      "origin": "/home/member-a/qwen35-a05/source-v3/vendor/nlohmann/json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    }
+  ],
+  "parent_backend_sha256": "bb0d6f439239606b79acbca541d28be9e63db5e7d882f7bcd8413dfa0dbd062c",
+  "derivation_reversible": true,
+  "edits": [
+    [
+      "#include \"supervisor_gate.hpp\"",
+      "#include \"supervisor_gate.hpp\"\n#include \"pl_auth_gate.hpp\""
+    ],
+    [
+      "    a07::Lifecycle life;",
+      "    a07::Lifecycle life;\n    plauth::Gate authority;\n    json authority_facts;\n    std::unique_ptr<Weight> pending; // retain uncertain weight-transfer ownership"
+    ],
+    [
+      "    a12::permit(\"device_open\",0);",
+      "#ifndef SP_LINEAR_CONTROL_TEST\n    // This candidate cannot be activated on a board by editing a JSON enable flag.\n    return SP_UNSUPPORTED;\n#endif\n    a12::permit(\"device_open\",0);"
+    ],
+    [
+      "    std::shared_ptr<sp_linear_context> owner(std::move(c));auto raw=owner.get();",
+      "    c->authority_facts={{\"schema\",\"A12_PL_CONTEXT_UNBOUND_V1\"},{\"production_enabled\",false},\n        {\"worker_pid\",getpid()},{\"worker_start_ticks\",plauth::ticks(getpid())},\n        {\"context_generation\",plauth::nonce()},\n        {\"xclbin_sha256\",c->bit_hash},{\"xclbin_uuid\",uuid.to_string()},\n        {\"kernel_build_id\",c->build},{\"device_name\",c->device_name},{\"device_index\",index},\n        {\"groups\",c->groups},{\"windows\",c->windows},\n        {\"io_addresses\",{c->x.address(),c->sx.address(),c->y.address(),c->meta.address()}},\n        {\"io_sizes\",{c->x.size(),c->sx.size(),c->y.size(),c->meta.size()}},\n        {\"boot_id\",a11::text(\"/proc/sys/kernel/random/boot_id\")},\n        {\"board_generation_approval\",\"UNBOUND\"}};\n    std::shared_ptr<sp_linear_context> owner(std::move(c));auto raw=owner.get();"
+    ],
+    [
+      "    auto v=std::make_unique<Weight>();v->shape=a;v->charged=amount;",
+      "    try{\n    c->authority.before_load();\n    c->pending=std::make_unique<Weight>();auto&v=c->pending;v->shape=a;v->charged=amount;"
+    ],
+    [
+      "    auto h=c->next;c->weights.emplace(h,std::move(v));++c->next;++c->loads;c->used+=amount;*out=h;return SP_OK;",
+      "    c->authority.complete(0,true);\n    auto h=c->next;c->weights.emplace(h,std::move(c->pending));++c->next;++c->loads;c->used+=amount;*out=h;return SP_OK;\n    }catch(...){c->authority.fail();c->life.poison();return error();}"
+    ],
+    [
+      "    a12::permit(\"submit\",job);",
+      "    // Private shared authority replaces only backend submit; legacy router/open/load lanes remain."
+    ],
+    [
+      "auto finish_error=[&](int rc){c->life.poison();",
+      "auto finish_error=[&](int rc){c->authority.fail();c->life.poison();"
+    ],
+    [
+      "    try{\n        std::memcpy(c->x.map<void*>(),x,a.x);",
+      "    try{\n        c->authority.before_transfer(job);\n        std::memcpy(c->x.map<void*>(),x,a.x);"
+    ],
+    [
+      "        c->run.start();const auto deadline=",
+      "        c->authority.before_start(job);\n        c->run.start();const auto deadline="
+    ],
+    [
+      "        c->life.completed_and_validated();++c->runs;",
+      "        c->authority.complete(job);\n        c->life.completed_and_validated();++c->runs;"
+    ],
+    [
+      "    c->closed=true;{std::lock_guard<std::mutex> g(registry_mutex);registry.erase(c);}",
+      "    require(!c->authority.unknown(),SP_POISONED);\n    c->closed=true;{std::lock_guard<std::mutex> g(registry_mutex);registry.erase(c);}"
+    ]
+  ],
+  "source": [
+    {
+      "name": "backend.cpp",
+      "sha256": "ad5808245e10fb456739c2c6aacc792b098f3b16e5ff5691aa640666eebd597c",
+      "bytes": 24881
+    },
+    {
+      "name": "control_xrt.hpp",
+      "sha256": "f1ca1e6d9277523b7a46c9f80564a5aa8d09328f5b9cfe98fbc9f8150645f78a",
+      "bytes": 5769
+    },
+    {
+      "name": "host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749",
+      "bytes": 4678
+    },
+    {
+      "name": "host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf",
+      "bytes": 1809
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+      "bytes": 953436
+    },
+    {
+      "name": "managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6",
+      "bytes": 2740
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "0e029f3f8d9a31b813f61a54896f76106e936479dcd01083cbfe001a99e4b6af",
+      "bytes": 5660
+    },
+    {
+      "name": "pl_auth_portable_probe.cpp",
+      "sha256": "5a94622ead6b7bccbae9683ed153c4253ecc2d5397f1f3e7db8933a89ff67f22",
+      "bytes": 432
+    },
+    {
+      "name": "release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9",
+      "bytes": 1575
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9",
+      "bytes": 1696
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102",
+      "bytes": 1492
+    },
+    {
+      "name": "test_pl_auth.cpp",
+      "sha256": "29dbadcaf32290786bdde7ab3647795d05ab0155f946b6320696f241c4d7943b",
+      "bytes": 11549
+    },
+    {
+      "name": "xrt/xrt_bo.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    },
+    {
+      "name": "xrt/xrt_device.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    },
+    {
+      "name": "xrt/xrt_kernel.h",
+      "sha256": "d78cab9fbb6393cfe9d3b457caac537e683055699b404d06ee999031aa71d3e1",
+      "bytes": 43
+    }
+  ],
+  "PC_XRT_doubles_not_math": true,
+  "ARM_activation": "HARD_DISABLED_BEFORE_DEVICE_OPEN",
+  "BOARD": "NOT_TESTED"
+}

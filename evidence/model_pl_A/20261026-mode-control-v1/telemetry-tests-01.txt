@@ -1,0 +1,15 @@
+test_mismatched_page_closes_new_native_pidfd (__main__.TelemetryTests) ... FAIL
+
+======================================================================
+FAIL: test_mismatched_page_closes_new_native_pidfd (__main__.TelemetryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/a12/test_mode_telemetry.py", line 32, in test_mismatched_page_closes_new_native_pidfd
+    after=len(list(Path('/proc/self/fd').iterdir()));self.assertEqual(after,before,'native pidfd leaked on rejected telemetry')
+AssertionError: 8 != 7 : native pidfd leaked on rejected telemetry
+
+----------------------------------------------------------------------
+Ran 1 test in 0.022s
+
+FAILED (failures=1)
+

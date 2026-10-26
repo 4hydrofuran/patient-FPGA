@@ -1,0 +1,93 @@
+{
+  "type": "validated_answer",
+  "session_id": "3692e7d02a9846f783bfada5ed4091aa",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "capacity1",
+  "case_id": "SYN_CP_01",
+  "case_version": "1.0-draft",
+  "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+  "text": "休息可以减轻疼痛。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "休息可以减轻疼痛。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "relief"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "relief"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "relief"
+    ],
+    "allowed_fact_ids": [
+      "relief"
+    ],
+    "required_fact_ids": [
+      "relief"
+    ],
+    "facts": [
+      {
+        "slot": "relief",
+        "status": "known",
+        "value": "休息",
+        "unit": null,
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "relief",
+        "span": [
+          5,
+          7
+        ],
+        "quote": "减轻"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "休息可以减轻疼痛。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_2",
+    "result_sha256": "5830818ffbfbfa27215e71f0097e1f330e47872a0d9f8f42e17da14ea49b4311"
+  },
+  "received_ns": 31014905627,
+  "validated_ns": 32235240806,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 31000807964,
+  "worker_pid": 410,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

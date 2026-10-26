@@ -1,0 +1,71 @@
+{
+  "original_XRT_backend_sha256": "98dc4cd9b233922a1b8f251e48a9a20f4823cca87e8a41a1efff184b56c7973e",
+  "derived_sha256": "a0638f891d7b9d71b02c97a63e2db3e99876283068a33031a820c29bd2720e2e",
+  "reversible_edits": [
+    [
+      "#include \"plm_control.hpp\"",
+      "#include \"generation_slot.hpp\""
+    ],
+    [
+      "    plm::Control authority;",
+      "    generation::Control<generation::BOARD> authority;"
+    ]
+  ],
+  "source": [
+    {
+      "name": "backend.cpp",
+      "sha256": "a0638f891d7b9d71b02c97a63e2db3e99876283068a33031a820c29bd2720e2e"
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa"
+    },
+    {
+      "name": "host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749"
+    },
+    {
+      "name": "host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175"
+    },
+    {
+      "name": "private.map",
+      "sha256": "66e8d74122ad1aa983d06f39dd05195107f3df60b95a09f861bafffead159cc4"
+    },
+    {
+      "name": "release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "13140052ce691dda246619a0594b85c4464bfbd6cd6d34aac13293a00c8de1bf"
+    }
+  ],
+  "script_sha256": "b5497281d61c664f7b8f551dc52b0aedbaa91ac96dfcaee2d83cb4e27de7277b",
+  "Board_issuer": "ABSENT",
+  "device_open": "HARD_DISABLED"
+}

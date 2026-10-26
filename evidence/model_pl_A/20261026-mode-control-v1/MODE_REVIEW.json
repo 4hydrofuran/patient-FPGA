@@ -1,0 +1,698 @@
+{
+  "status": "PASS_PC_MODE_HISTORIES_AND_NATIVE_TRANSCRIPTS",
+  "cases": [
+    {
+      "case": "transitions-01",
+      "status": "PASS_CLOSED_HISTORY_AND_LIVE_OBSERVATION_RECORDS",
+      "history": {
+        "session_open": false,
+        "active_window": null,
+        "candidate_disabled": true,
+        "used_inputs": [
+          "batch-failed-1",
+          "batch-new-1",
+          "strict-fresh-2",
+          "strict-new-1"
+        ],
+        "normal_release_allowed": false,
+        "replay_allowed": false
+      },
+      "windows": 4,
+      "refusals": 8,
+      "journal_sha256": "421c1633d9e06daff2ac829b9177b286e7e9d52e130bd2208c28ded1acecabf7"
+    },
+    {
+      "case": "cancel-01",
+      "status": "PASS_CLOSED_HISTORY_AND_LIVE_OBSERVATION_RECORDS",
+      "history": {
+        "session_open": false,
+        "active_window": null,
+        "candidate_disabled": true,
+        "used_inputs": [
+          "cancelled-new-1",
+          "strict-after-cancel-1"
+        ],
+        "normal_release_allowed": false,
+        "replay_allowed": false
+      },
+      "windows": 2,
+      "refusals": 3,
+      "journal_sha256": "88e96cb198af05c1473d18d34320c3c39a793ca9e451b7c6a7bcb596944314b3"
+    },
+    {
+      "case": "transitions-02",
+      "status": "PASS_CLOSED_HISTORY_AND_LIVE_OBSERVATION_RECORDS",
+      "history": {
+        "session_open": false,
+        "active_window": null,
+        "candidate_disabled": true,
+        "used_inputs": [
+          "batch-failed-1",
+          "batch-new-1",
+          "strict-fresh-2",
+          "strict-new-1"
+        ],
+        "normal_release_allowed": false,
+        "replay_allowed": false
+      },
+      "windows": 4,
+      "refusals": 8,
+      "journal_sha256": "f2ea65d1974d779eef20d14933214dbd9d241ed1f18841eb70703e16a9a4f12b"
+    },
+    {
+      "case": "restart-01",
+      "status": "PASS_UNCLEAN_RESTART_REFUSED_NOT_RECOVERED",
+      "history": {
+        "session_open": true,
+        "active_window": "07f3a64154f642c2a767ce2d584bbe0a",
+        "candidate_disabled": false,
+        "used_inputs": [
+          "abrupt-parent-new-1"
+        ],
+        "normal_release_allowed": false,
+        "replay_allowed": false
+      }
+    }
+  ],
+  "windows": [
+    {
+      "tag": "mc-07f3a64154f642c2a767ce2d",
+      "case": "restart-01",
+      "normal": false,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "worker_exit_code": 2,
+      "result_answers": [],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-07f3a64154f642c2a767ce2d/events.jsonl",
+          "bytes": 79560,
+          "sha256": "05044ac23a3ebc0a80921bda585c43024b2452f6b1105ee3317f0218d5c2fc57"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-07f3a64154f642c2a767ce2d/stderr.txt",
+          "bytes": 104722,
+          "sha256": "870f959c2ac8a5882af45f6002a98e56d8708d04160ca4ab71cc6b5f5343af2d"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-07f3a64154f642c2a767ce2d/stdout.jsonl",
+          "bytes": 38642,
+          "sha256": "cdb89e8a2fed5033a07277be12c5dc15d387a14664827a2f1c4f4ef7fa3da0cb"
+        }
+      ]
+    },
+    {
+      "tag": "mc-0ea2466b81ff4413a402604d",
+      "case": "transitions-02",
+      "normal": true,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v3",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "004905bfe11889725dd3ad6464b58413b2406a5781967a4bc95fcd6a4e90b2f0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "291aaa12ffa37f8f9a76670d38ffd39becaa26f30563cd14b337dd2b5f29d119"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "e1a72767361122ebf6db46bfb3ba641d25f83a2a5b4aad7743875a753f5c54e3"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "7baf07f1c7da3972c34c6a349ccf99ba2e7d807e7c8485668c65bbbd6a195e28"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/events.jsonl",
+          "bytes": 152594,
+          "sha256": "9d870ecd82a942f02a2dfc4517390b666f20f3012a3cea0a5cdf4b1619153dec"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/stderr.txt",
+          "bytes": 104884,
+          "sha256": "748570857dd13eca7a026f1fef767c9f3f138123d3b1f1aef9ef3eba3ad39952"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-0ea2466b81ff4413a402604d/stdout.jsonl",
+          "bytes": 55686,
+          "sha256": "853db2949669787d87e80f626c2f360da9d72bd0a539e60dc975ea2956ab2b63"
+        }
+      ]
+    },
+    {
+      "tag": "mc-40c4c7fc61c643ef9ab0e6dd",
+      "case": "transitions-02",
+      "normal": true,
+      "grant_size": 1,
+      "source_capsule": "CAPSULE-v3",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "eea06ed577ebc856c5c244086834ec6fc81900c3dd4dbb57a2846f4e15040cad"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "b3c01eae0c9b90204ef05fcc5b23451ffecdb0793bef00fce6f2aebf5886ff98"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "2c56c02d39a56f739c261ddbc994f0f6b2ecd49abed05340b1d5f90617bca854"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "2a2a82250c4c41840e58a09a08884a25db7eca898a4d5cd62d2682ef929c8689"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/events.jsonl",
+          "bytes": 4558616,
+          "sha256": "c7f7ceeedb65c7eef5ccf0f20974badfb2ce0bc62f41e223fc216ba8e5dcbf9d"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/stderr.txt",
+          "bytes": 104884,
+          "sha256": "f551b43c7ee94e1b656f0d6fa77a8e8aac3f66b0ff4a13fd4081be37821b1962"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-40c4c7fc61c643ef9ab0e6dd/stdout.jsonl",
+          "bytes": 55713,
+          "sha256": "769036b132a35f75425bab4c0a1d69fcea45287fbe47248c27376ffd23b85300"
+        }
+      ]
+    },
+    {
+      "tag": "mc-595c420f160f402694ad6f4f",
+      "case": "transitions-01",
+      "normal": true,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 122,
+        "batch_grants": 40,
+        "grant_size": 72,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "4c677c52b1a1e62420eba7a70cd50c6818b3142353a818720708857b473ca1d1"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "335119612151acc3b5df0ccab9ee48ab9b700396f13256746457fc18a93936df"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "f0d834e6349cce054967a557aa277ebe0371368f5f34a174f880404196f00887"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "ee38808f6049db11db0dc69c0c5ebb5ffe3aab0fd3c67bb8ada3a774a51746e8"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/events.jsonl",
+          "bytes": 152492,
+          "sha256": "783a448b5d382765cafd3f5ba497e4c1bf87af9760132f70fd69ffe74f502475"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/stderr.txt",
+          "bytes": 104884,
+          "sha256": "dae993e11a19f38a79b1a7bd95c7cc83e4093fc9de495fdf5b01a117c01d9191"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-595c420f160f402694ad6f4f/stdout.jsonl",
+          "bytes": 55692,
+          "sha256": "5365befa53cfe70f698cc039a943b91113a9526b198fba460490a5223c6a2b04"
+        }
+      ]
+    },
+    {
+      "tag": "mc-5fe5ef01e9c64b37bec13287",
+      "case": "transitions-02",
+      "normal": true,
+      "grant_size": 1,
+      "source_capsule": "CAPSULE-v3",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "52c7e316658873bf9f31a738a48a64922445f0e3d186af3a26e47a1332969013"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "ff85f566b1d0415659e020db55c20236a64095c49232b0ba052a026c9862f946"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "958bd4a90af752df2b1e30d03f6ec4163f62abe89214e274fb8712ac40be5314"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "654faaeb5891eebc94190477c6472fa1fb93d11a8bf8fb6a9ff430e01eb18446"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/events.jsonl",
+          "bytes": 4553721,
+          "sha256": "c38a77ad5793dcfe833c51a139cccc0d97c64babfb560cc957af036eae2e51e4"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/stderr.txt",
+          "bytes": 104884,
+          "sha256": "3207cad2ed34bdda7315876a6741c5c10ffe6158048640938a18f32d4558daab"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-5fe5ef01e9c64b37bec13287/stdout.jsonl",
+          "bytes": 55694,
+          "sha256": "c5848c735377e3abf636abd9af4f597b83a7783235dd67775bb323a8a991561f"
+        }
+      ]
+    },
+    {
+      "tag": "mc-75b29ce0c0ce4aacbc32b7d1",
+      "case": "transitions-01",
+      "normal": true,
+      "grant_size": 1,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "9525b9c6f5c88115687e7cbbe4a33b85735a87cbf619f5d57e170bf54e50cecc"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "9769fe81803c8920ba7bc71263705ec36a4a33b0df3de49b3d42be0eba0c01e0"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "f7a90f15918c63f6cd6d4d8fbc428e53e554f5bad799946929061d24b0aab35c"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "9b1aa58c578defa90509a0d8e873775eaeb0fe474628c51645583ca17c673c9f"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/events.jsonl",
+          "bytes": 4551626,
+          "sha256": "0d95a9e5e016faf96aab4c56c8d4c6b4435b05049faec32413e65e71788c6cd6"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/stderr.txt",
+          "bytes": 104884,
+          "sha256": "21d52305e3a42999f882532c7e405e414b2dff1c08c9d8142af962927c9e44f5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-75b29ce0c0ce4aacbc32b7d1/stdout.jsonl",
+          "bytes": 55697,
+          "sha256": "938d69fd060094fed0fed39b6aa67bc05c6145267702cb40c93290c3da7c904e"
+        }
+      ]
+    },
+    {
+      "tag": "mc-8d678451eb07465bbec6ca58",
+      "case": "transitions-01",
+      "normal": false,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "worker_exit_code": 2,
+      "result_answers": [],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-8d678451eb07465bbec6ca58/events.jsonl",
+          "bytes": 79532,
+          "sha256": "16b3ed30ccbb62d85dcb78981af9f72fda7908dc3b5e3702222b551584fe0c9c"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-8d678451eb07465bbec6ca58/stderr.txt",
+          "bytes": 104722,
+          "sha256": "43e0385c72c3678f87ad1d80440be20549a78e36635f541564654bbea6a99e69"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-8d678451eb07465bbec6ca58/stdout.jsonl",
+          "bytes": 38629,
+          "sha256": "39f914ef0756df128723c9e4a2722c3e76a5063e83ad3a30ed6c30979b23ce73"
+        }
+      ]
+    },
+    {
+      "tag": "mc-ac8077a0b5de4bb2869a2db4",
+      "case": "cancel-01",
+      "normal": true,
+      "grant_size": 1,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "0b77178a9fe565b370c00ab95930eae94e12d88d98b71e05eddd0c9ab60b1171"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "cd3c2dc0db60676ac81f6b28b638045b5048dcac853008cf65471833d1c639cd"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "2692de2c7c22e5263a5c021f9847623337d4f514a2d15c4080b01689775bf966"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "d1fbf60afea017655d1d9ad8abc9d10079e219b505626daf8ec649c2cf2a1808"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/events.jsonl",
+          "bytes": 4552407,
+          "sha256": "d622c66b1cedb006ed72ba48c3f149c81d6f0f4149127a1b20d8d7d76e7baf10"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/stderr.txt",
+          "bytes": 104884,
+          "sha256": "dbfe0cbf4cd908bb0b76bbc57c91cc0714b58256544991e685c39aac2042030e"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ac8077a0b5de4bb2869a2db4/stdout.jsonl",
+          "bytes": 55695,
+          "sha256": "857edc64e232ca8b4070559840320ac28887a67f58971558a6deb3143d1da85f"
+        }
+      ]
+    },
+    {
+      "tag": "mc-ccdbfdea8f8a4e9d9401b7da",
+      "case": "cancel-01",
+      "normal": false,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "worker_exit_code": 2,
+      "result_answers": [],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ccdbfdea8f8a4e9d9401b7da/events.jsonl",
+          "bytes": 79536,
+          "sha256": "5fa78397d8de93d1fcaacd7b77ba7a9fa2608e5707287666b11ce995141b4a6c"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ccdbfdea8f8a4e9d9401b7da/stderr.txt",
+          "bytes": 104722,
+          "sha256": "7a9dc86d8bac054ea721062aa1c278143dc03053acf609e5a65fb974885093dd"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-ccdbfdea8f8a4e9d9401b7da/stdout.jsonl",
+          "bytes": 38650,
+          "sha256": "f7d979160599022e9b670ea4f4dc69f9bb6cbb433897be10e21f953195e2451b"
+        }
+      ]
+    },
+    {
+      "tag": "mc-dd65bc899c3d4d6da69bdf03",
+      "case": "transitions-02",
+      "normal": false,
+      "grant_size": 72,
+      "source_capsule": "CAPSULE-v3",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "REJECTED_OR_INCOMPLETE_RETAIN_OWNER",
+        "reason": "RequestJournalBlocked: native request order/incomplete terminal"
+      },
+      "worker_exit_code": 2,
+      "result_answers": [],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-dd65bc899c3d4d6da69bdf03/events.jsonl",
+          "bytes": 79604,
+          "sha256": "5a0812952e39eae631e83a2cc8862b999d1bcf346b30bd0cea95f83043e70f51"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-dd65bc899c3d4d6da69bdf03/stderr.txt",
+          "bytes": 104722,
+          "sha256": "0d0bb77f3282a0057e40e4e942057f4191979d6f7235f072e086ec1a95125d41"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-dd65bc899c3d4d6da69bdf03/stdout.jsonl",
+          "bytes": 38623,
+          "sha256": "9e638d28ebeb8b59e0c257fc548c2e35ce179481af54381ba28e25dbeced4735"
+        }
+      ]
+    },
+    {
+      "tag": "mc-fbaf8cf0727343af9dca4eee",
+      "case": "transitions-01",
+      "normal": true,
+      "grant_size": 1,
+      "source_capsule": "CAPSULE-v2",
+      "independent_audit": {
+        "domain": "PC_NATIVE_MATH_NOT_FPGA",
+        "BOARD": "NOT_TESTED",
+        "PL_calls": 0,
+        "release_allowed": false,
+        "replay_allowed": false,
+        "hardware_completions": null,
+        "scope": "PC_NATIVE_BYTES_AND_COUNTERS_NOT_HISTORICAL_FSYNC_OR_BOARD_RELEASE",
+        "status": "COMPLETE_ACTUAL_PC_MICROBATCH_TRANSCRIPT",
+        "actual_cpu_calls": 2880,
+        "journal_rows": 2962,
+        "batch_grants": 2880,
+        "grant_size": 1,
+        "application_content": "PASS_FROZEN_CHECKER",
+        "private_batch_schema": "PC_NATIVE_MICROBATCH_JOURNAL_V1",
+        "trusted_controlled_worker_required": true
+      },
+      "worker_exit_code": 0,
+      "result_answers": [
+        "app_R0",
+        "app_hit"
+      ],
+      "transcripts": [
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/COMMIT-app_R0.json",
+          "bytes": 939,
+          "sha256": "421e7e864639e48f32e65789f042dc9e8e461f417d9274b61914b75325a1d0f5"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/COMMIT-app_hit.json",
+          "bytes": 943,
+          "sha256": "e1c4ecddd91561ff14a2cda899db4c46735e7c9392c12b227e4fe534a096c296"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/COMMIT-warm_prefix.json",
+          "bytes": 947,
+          "sha256": "c7c547631f3e2e0a4f126f53be7bf5c0caceb01aef2183a623b53300936cd4dc"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/NORMAL_CLOSE.json",
+          "bytes": 316,
+          "sha256": "c4c290961e1f9a339fe61850c05c8b0655931a3b8b2b82ab0650c5b574de5fbd"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/events.jsonl",
+          "bytes": 4558810,
+          "sha256": "c907718cd2dcf1a865fc445ec6ad1a92afacc23e62a08ed60a61bc4b5ef656ce"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/stderr.txt",
+          "bytes": 104884,
+          "sha256": "d01e3a937d227f2070ab726e24c3819b20edc43e2a3a030466cd440cdfbe20e8"
+        },
+        {
+          "path": "evidence/model_pl_A/20261026-mode-control-v1/native-transcripts/mc-fbaf8cf0727343af9dca4eee/stdout.jsonl",
+          "bytes": 55702,
+          "sha256": "ffaf1e775b6d346a2284c3c4f2fd7af495767eb0c160a3effd657ecdf02e8e11"
+        }
+      ]
+    }
+  ],
+  "normal_windows": 7,
+  "failure_windows": 4,
+  "final_capsule_v3_windows": 4,
+  "BOARD": "NOT_TESTED",
+  "PL_calls": 0,
+  "release_allowed": false,
+  "replay_allowed": false,
+  "production_mode_switch": "NOT_IMPLEMENTED",
+  "limitation": "Private live-run observations are recorded; retrospective files alone are not release or replay authority"
+}

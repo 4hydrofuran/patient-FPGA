@@ -1,0 +1,119 @@
+{
+  "schema": "A12_BOUNDED_RESIDENT_POLICY_V1",
+  "max_model_requests": 8,
+  "max_inputs": 24,
+  "max_rejections": 8,
+  "native_request_ids": [
+    "warm_prefix",
+    "model_1",
+    "model_2",
+    "model_3",
+    "model_4",
+    "model_5",
+    "model_6",
+    "model_7",
+    "model_8"
+  ],
+  "total_calls": 5000,
+  "max_loads": 72,
+  "output_tokens": 24,
+  "prefix_tokens": [
+    248045,
+    8678,
+    198,
+    99250,
+    100041,
+    103901,
+    1710,
+    96220,
+    97577,
+    96356,
+    99197,
+    123518,
+    111119,
+    96804,
+    3709,
+    97240,
+    101780,
+    99448,
+    96356,
+    96128,
+    134596,
+    3709,
+    97124,
+    98682,
+    1710,
+    248046,
+    198,
+    248045,
+    846,
+    198,
+    99201,
+    96804,
+    4960,
+    198
+  ],
+  "neutral_text": "<|im_start|>system\n你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。<|im_end|>\n<|im_start|>user\n事实句：\n",
+  "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+  "files": [
+    {
+      "path": "__init__.py",
+      "sha256": "3617de6ebf098b5345f958eab9808d442723e9542dae1b25f2c3f047f10b3856"
+    },
+    {
+      "path": "app/__init__.py",
+      "sha256": "1a11295a3fd02301fe42554257f80cc1cbb7e1a9456626a8dfabd9a211c856fc"
+    },
+    {
+      "path": "app/checking.py",
+      "sha256": "840b2563c0339ce5c37383b09a5eb53981e8619e730ec7c14c729b9a4a6ac81c"
+    },
+    {
+      "path": "app/domain.py",
+      "sha256": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da"
+    },
+    {
+      "path": "app/planning.py",
+      "sha256": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7"
+    },
+    {
+      "path": "app/scoring.py",
+      "sha256": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb"
+    },
+    {
+      "path": "app/session.py",
+      "sha256": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173"
+    },
+    {
+      "path": "cases/SYN_CP_01.json",
+      "sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7"
+    },
+    {
+      "path": "cases/SYN_CP_02.json",
+      "sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52"
+    },
+    {
+      "path": "cases/SYN_CP_03.json",
+      "sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced"
+    },
+    {
+      "path": "cases/schema.json",
+      "sha256": "a6ed30315e47acc9e09f45f020550275a7c18d7ed96c1df6f74c1c126fb9890b"
+    }
+  ],
+  "case_ids": [
+    "SYN_CP_01",
+    "SYN_CP_02",
+    "SYN_CP_03"
+  ],
+  "case_sha256": {
+    "SYN_CP_01": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "SYN_CP_02": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+    "SYN_CP_03": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced"
+  },
+  "max_window_seconds": 1800,
+  "CPU_window_seconds": 180,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "production_enabled": false,
+  "input_scope": "DYNAMIC_ORIGINAL_PLANNER_OVER_PINNED_SYNTHETIC_CASES_NOT_A_FROZEN_QUESTION_LIST"
+}

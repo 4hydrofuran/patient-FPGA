@@ -1,0 +1,29 @@
+{
+  "status": "PROTECTED_BYTES_VERIFIED_BEFORE_FURTHER_NATIVE_TESTS",
+  "prior_verified_journal_sources": [
+    {
+      "path": "platform/qwen35/a12/request_journal_verified.py",
+      "bytes": 18927,
+      "sha256": "8f036c806f52043ce5c90798ae907b21f109753ff558a43bff3c1e41a41431fe"
+    },
+    {
+      "path": "platform/qwen35/a12/request_journal_audit.py",
+      "bytes": 10939,
+      "sha256": "009574384f5e057a15c79e3af852439f3af94ca73a196e4e25e591a11ed7cd62"
+    },
+    {
+      "path": "platform/qwen35/a12/test_request_journal_verified.py",
+      "bytes": 24224,
+      "sha256": "2a4bab118dd12b034208c9c53eaeae101ffb744a7e2791b36f95db57bf9ab596"
+    },
+    {
+      "path": "platform/qwen35/a12/short_prompt_failure_review.py",
+      "bytes": 6458,
+      "sha256": "3714eabea36eb16a62cc6db2ad8f44f3f92d911249dfacd3df41840ca07a5232"
+    }
+  ],
+  "ordinary_probe_zip_sha256": "acd578ddd66140a3d0507d71ea9a1d30245c632c7537f0a940227935cc17a7fa",
+  "prior_goal_turn_classification": "progress",
+  "basis": "Added verified request journal and 20 PC tests; inspected current source/status before continuation",
+  "BOARD": "NOT_TESTED"
+}

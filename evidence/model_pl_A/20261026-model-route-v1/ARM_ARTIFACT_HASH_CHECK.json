@@ -1,0 +1,15 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "sha256sum",
+    "--",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v5/arm/qwen35-a12",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v5/liba12_modelpl_xrt_unbound.so"
+  ],
+  "exit_code": 0,
+  "stdout": "e2ff9aee8f92ad51ff194cac7711629652454b1c8a2c6312bc05910fbb6b9ae1  /home/member-a/kv260-build/a12-model-route-20261026-v5/arm/qwen35-a12\n02302d091e1ca7c09edd1af5fc208f9f232120bf2215e9371d14d1a96f2458e6  /home/member-a/kv260-build/a12-model-route-20261026-v5/liba12_modelpl_xrt_unbound.so\n",
+  "stderr": ""
+}

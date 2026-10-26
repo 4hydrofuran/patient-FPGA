@@ -1,0 +1,42 @@
+{
+  "domain": "PC_XRT_CONTROL_ONLY_A53_UNBOUND",
+  "purpose": "REPRODUCE_V2_MISSING_CACHED_T_CHECK_NOT_ACCEPTED",
+  "workspace": "/home/member-a/kv260-build/a12-pl-manager-20261026-v6-counterexample",
+  "revision": 6,
+  "probe": "/home/member-a/kv260-build/a12-pl-manager-20261026-v6-counterexample/plm-control-probe-old-backend",
+  "backend_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_backend_pc_control.so",
+  "router_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_router_legacy_probe.so",
+  "writer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_writer.so",
+  "writer_sha256": "d782e024f49ae7ae86edabd670c6883d8865c2b84d80b892d669947a629ff3cf",
+  "observer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v4/libplm_observer_ro.so",
+  "artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_backend_pc_control.so",
+      "sha256": "1a1768aee9eaea21e546eb4ef3b4c75d1390a2d40a83715879af0aa8fd76240e",
+      "bytes": 512320
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_router_legacy_probe.so",
+      "sha256": "5b6391478b3f16e72551c55bfd9f612962f4a74944197669c32c705b29a98422",
+      "bytes": 190536
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v2/libplm_writer.so",
+      "sha256": "d782e024f49ae7ae86edabd670c6883d8865c2b84d80b892d669947a629ff3cf",
+      "bytes": 112832
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v6-counterexample/plm-control-probe-old-backend",
+      "sha256": "68c4560621e71f3157c1b0abe749b59e74af8137684269851e43049697ef822b",
+      "bytes": 279536
+    }
+  ],
+  "sanitizers": {
+    "probe_backend_router": "NONE",
+    "manager_writer": "NONE",
+    "leak_check": false
+  },
+  "ARM_artifacts": [],
+  "production_enabled": false,
+  "BOARD": "NOT_TESTED"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS_ACTUAL_MODEL_PRIVATE_HOOKS_PC_AND_A53_COMPILE_ONLY",
+  "actual_current_source_scenarios": 11,
+  "normal_scenario_windows": 2,
+  "targeted_failure_windows": 9,
+  "additional_PC_exploration_windows": 4,
+  "held_pidfd_concurrency_regression": true,
+  "math_DSO_and_quant_objects_reused_unchanged": true,
+  "all_final_source_native_outputs_and_logits_match_frozen_ordinary_CPU": true,
+  "runtime_reported_prefix_state_sequence_logits_digests_match": true,
+  "full_intermediate_state": "NOT_TESTED",
+  "actual_PL_results_consumed": false,
+  "A53_private_ABI_exports": {
+    "command": [
+      "nm",
+      "-D",
+      "--defined-only",
+      "/home/member-a/kv260-build/a12-model-route-20261026-v5/liba12_modelpl_xrt_unbound.so"
+    ],
+    "exit_code": 0,
+    "stdout": "0000000000000000 A A12_PLM_PRIVATE_V1\n0000000000000000 A SP_LINEAR_V1\n000000000000d410 T sp_a12_completion_report_v1@@SP_LINEAR_V1\n0000000000009c40 T sp_a12_plm_request_abort_v1@@A12_PLM_PRIVATE_V1\n0000000000009940 T sp_a12_plm_request_end_v1@@A12_PLM_PRIVATE_V1\n0000000000009640 T sp_a12_plm_request_v1@@A12_PLM_PRIVATE_V1\n0000000000009140 T sp_linear_close_v1@@SP_LINEAR_V1\n000000000000f4e0 T sp_linear_load_v1@@SP_LINEAR_V1\n00000000000104c0 T sp_linear_open_v1@@SP_LINEAR_V1\n000000000000b4e0 T sp_linear_report_v1@@SP_LINEAR_V1\n000000000000d7d0 T sp_linear_run_v1@@SP_LINEAR_V1\n0000000000008d10 T sp_linear_unload_v1@@SP_LINEAR_V1\n",
+    "stderr": ""
+  },
+  "A53_native_ELF": {
+    "command": [
+      "readelf",
+      "-h",
+      "-d",
+      "/home/member-a/kv260-build/a12-model-route-20261026-v5/arm/qwen35-a12"
+    ],
+    "exit_code": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 03 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - GNU\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x19c80\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          774016 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         39\n  Section header string table index: 38\n\nDynamic section at offset 0x9f618 contains 37 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libsp_linear_cpu.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libcrypto.so.3]\n 0x0000000000000001 (NEEDED)             Shared library: [libllama.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml-base.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000000000000c (INIT)               0x63f8\n 0x000000000000000d (FINI)               0x7fce0\n 0x0000000000000019 (INIT_ARRAY)         0xaf3f0\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0xaf400\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2d0\n 0x0000000000000005 (STRTAB)             0x1db0\n 0x0000000000000006 (SYMTAB)             0x4a8\n 0x000000000000000a (STRSZ)              8955 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0xaf8a8\n 0x0000000000000002 (PLTRELSZ)           4752 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x5168\n 0x0000000000000007 (RELA)               0x44a8\n 0x0000000000000008 (RELASZ)             3264 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE\n 0x000000006ffffffe (VERNEED)            0x42c8\n 0x000000006fffffff (VERNEEDNUM)         7\n 0x000000006ffffff0 (VERSYM)             0x40ac\n 0x000000006ffffff9 (RELACOUNT)          93\n 0x0000000000000000 (NULL)               0x0\n",
+    "stderr": ""
+  },
+  "CPU_private_symbols": {
+    "command": [
+      "nm",
+      "-D",
+      "--defined-only",
+      "/home/member-a/kv260-build/a12-model-route-20261026-v5/liba12_native_cpu_control.so"
+    ],
+    "exit_code": 0,
+    "stdout": "000000000000fd90 W _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_\n000000000000d910 W _ZNKSt5ctypeIcE8do_widenEc\n000000000000fe70 W _ZNSt10unique_ptrINSt10filesystem7__cxx114path5_List5_ImplENS3_13_Impl_deleterEED1Ev\n000000000000fe70 W _ZNSt10unique_ptrINSt10filesystem7__cxx114path5_List5_ImplENS3_13_Impl_deleterEED2Ev\n0000000000010500 W _ZNSt11unique_lockISt5mutexE6unlockEv\n0000000000012160 W _ZNSt12_Vector_baseIcSaIcEED1Ev\n0000000000012160 W _ZNSt12_Vector_baseIcSaIcEED2Ev\n000000000001ce20 W _ZNSt13_Bvector_baseISaIbEE13_M_deallocateEv\n000000000000dd30 W _ZNSt14_Function_baseD1Ev\n000000000000dd30 W _ZNSt14_Function_baseD2Ev\n0000000000010530 W _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv\n0000000000015a30 W _ZNSt6vectorIbSaIbEE4backEv\n000000000001ce70 W _ZNSt6vectorIbSaIbEE9push_backEb\n000000000002bb40 W _ZNSt6vectorIcSaIcEE17_M_realloc_insertIJcEEEvN9__gnu_cxx17__normal_iteratorIPcS1_EEDpOT_\n000000000000dd60 W _ZNSt7__cxx119to_stringEm\n00000000000123b0 W _ZNSt8_Rb_treeImSt4pairIKmjESt10_Select1stIS2_ESt4lessImESaIS2_EE17_M_emplace_uniqueIJRmjEEES0_ISt17_Rb_tree_iteratorIS2_EbEDpOT_\n000000000005bc70 V _ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE\n000000000005bc80 V _ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE\n0000000000051760 V _ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE\n00000000000517c0 V _ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE\n0000000000051790 V _ZTSSt19_Sp_make_shared_tag\n00000000000525d0 u _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag\n0000000000052000 u _ZZNSt8__detail18__to_chars_10_implIjEEvPcjT_E8__digits\n0000000000051f20 u _ZZNSt8__detail18__to_chars_10_implImEEvPcjT_E8__digits\n0000000000009860 T sp_a12_completion_report_v1\n0000000000008580 T sp_a12_plm_request_abort_v1\n00000000000085f0 T sp_a12_plm_request_end_v1\n0000000000008770 T sp_a12_plm_request_v1\n00000000000089b0 T sp_linear_close_v1\n000000000000b100 T sp_linear_load_v1\n000000000000b540 T sp_linear_open_v1\n000000000000b3f0 T sp_linear_report_v1\n000000000000d170 T sp_linear_run_v1\n0000000000008c90 T sp_linear_unload_v1\n",
+    "stderr": ""
+  },
+  "ARM_runtime": "NOT_EXECUTED",
+  "real_device_generation_approval": "UNBOUND",
+  "PL_mode_coordinator": "NOT_IMPLEMENTED",
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "ordinary_resource_probe_replaced": false,
+  "release_allowed": false,
+  "hardware_latency_saving_s": null
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS_TT10_00_FROZEN_AND_BOUNDED_BOARD_BASELINES",
+  "plan": "docs/A12_SHORT_INPUT_TTFT10_PLAN_20261024.md",
+  "report": "evidence/model_pl_A/20261024-ttft10-00-v1/REPORT.md",
+  "next": "TT10-01 exact full-state prefix snapshot/restore",
+  "rollback": "/var/lib/kv260-a12/cpu02-candidate-20261024-v1",
+  "caveats": [
+    "Fixed health-then-cpu02 order",
+    "Different native observer schemas retained",
+    "Not a cache candidate or final 100-request acceptance"
+  ]
+}

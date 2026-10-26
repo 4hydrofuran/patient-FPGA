@@ -1,0 +1,231 @@
+{
+  "status": "PASS_ORIGINAL_RELEASE_GATE_WITHOUT_OBSERVER_EXEMPTION",
+  "rejected_old_review_archive_sha256": "0d2e2a36c780d0b96353ad5778bd93a59fbd168823755a02410195496ce4855d",
+  "old_source_sha256": "18c10e0f6027dd73869d8b830beb79577f62cfc7093cbaf82846c7551da242ac",
+  "records": [
+    {
+      "case": "old",
+      "worker_exit_code": 0,
+      "normal_terminal": true,
+      "finish_refusal": null,
+      "observer_pins_closed": false,
+      "before": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9710397146,
+        "scan_finished_ns": 9713823568,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [
+          {
+            "pid": 321,
+            "fd": "11",
+            "target": "/tmp/a12-opath-release-tp1hkjrc/source/device-generation/identity",
+            "identity": {
+              "mode": 33152,
+              "device": 2096,
+              "rdev": 0,
+              "inode": 1525174,
+              "uid": 1000
+            }
+          }
+        ],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "after": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9721918787,
+        "scan_finished_ns": 9725550781,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [
+          {
+            "pid": 321,
+            "fd": "11",
+            "target": "/tmp/a12-opath-release-tp1hkjrc/source/device-generation/identity",
+            "identity": {
+              "mode": 33152,
+              "device": 2096,
+              "rdev": 0,
+              "inode": 1525174,
+              "uid": 1000
+            }
+          }
+        ],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "original_release_refusal": "ACCELERATOR_DESCRIPTOR_STILL_OPEN",
+      "original_lease_dual_locks_retained": true,
+      "scope": "PC_PROC_PROXY_REAL_OWN_FD_TABLE_EXPLICIT_REGULAR_FILE_ALIAS_SYNTHETIC_REFCOUNT0_NOT_BOARD"
+    },
+    {
+      "case": "fixed",
+      "worker_exit_code": 0,
+      "normal_terminal": true,
+      "finish_refusal": null,
+      "observer_pins_closed": true,
+      "before": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9851701701,
+        "scan_finished_ns": 9854703688,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [
+          {
+            "pid": 321,
+            "fd": "11",
+            "target": "/tmp/a12-opath-release-fsj1t88b/source/device-generation/identity",
+            "identity": {
+              "mode": 33152,
+              "device": 2096,
+              "rdev": 0,
+              "inode": 1525174,
+              "uid": 1000
+            }
+          }
+        ],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "after": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9858702566,
+        "scan_finished_ns": 9861414522,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "original_release_refusal": null,
+      "original_lease_dual_locks_retained": true,
+      "scope": "PC_PROC_PROXY_REAL_OWN_FD_TABLE_EXPLICIT_REGULAR_FILE_ALIAS_SYNTHETIC_REFCOUNT0_NOT_BOARD"
+    },
+    {
+      "case": "nonzero",
+      "worker_exit_code": 7,
+      "normal_terminal": false,
+      "finish_refusal": "normal native exit not proven",
+      "observer_pins_closed": false,
+      "before": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9976425363,
+        "scan_finished_ns": 9979714364,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [
+          {
+            "pid": 321,
+            "fd": "11",
+            "target": "/tmp/a12-opath-release-tp8n9i2v/source/device-generation/identity",
+            "identity": {
+              "mode": 33152,
+              "device": 2096,
+              "rdev": 0,
+              "inode": 1525174,
+              "uid": 1000
+            }
+          }
+        ],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "after": {
+        "schema": "a10-accelerator-scan-v2",
+        "scan_started_ns": 9983473418,
+        "scan_finished_ns": 9986399430,
+        "boot_id": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "boot_id_after": "c26e5a89-b883-4996-9775-f2f65abe18fa",
+        "scan_complete": true,
+        "device_holders": [
+          {
+            "pid": 321,
+            "fd": "11",
+            "target": "/tmp/a12-opath-release-tp8n9i2v/source/device-generation/identity",
+            "identity": {
+              "mode": 33152,
+              "device": 2096,
+              "rdev": 0,
+              "inode": 1525174,
+              "uid": 1000
+            }
+          }
+        ],
+        "device_mappings": [],
+        "scan_issues": [],
+        "inspected_processes": [
+          {
+            "pid": 321,
+            "start_ticks": 463
+          }
+        ],
+        "ps_display_before": null,
+        "ps_display_after": null,
+        "ps_display_holders": [],
+        "ps_display_mappings": []
+      },
+      "original_release_refusal": "ACCELERATOR_DESCRIPTOR_STILL_OPEN",
+      "original_lease_dual_locks_retained": true,
+      "scope": "PC_PROC_PROXY_REAL_OWN_FD_TABLE_EXPLICIT_REGULAR_FILE_ALIAS_SYNTHETIC_REFCOUNT0_NOT_BOARD"
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "real_module_refcount": null,
+  "old_archive_acceptance": "NOT_ACCEPTED_FOR_RELEASE_INTERLOCK"
+}

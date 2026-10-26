@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/test_promptpl_stdout.py"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a12/test_promptpl_stdout.py\", line 28, in <module>\n    if __name__=='__main__':main()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a12/test_promptpl_stdout.py\", line 20, in main\n    requests=read(OUT/'cohorts/V08/requests.json');count=len(raw.splitlines());assert count>32 and meta['worker_exit_code']==0\nAssertionError\n"
+}

@@ -1,0 +1,78 @@
+{
+  "op": "close",
+  "value": {
+    "type": "closed",
+    "result": {
+      "status": "PASS_ACTUAL_QWEN_PLM_CPU_WINDOW_NOT_BOARD",
+      "cap": 72,
+      "completed": [
+        "warm_prefix",
+        "model_1",
+        "model_2",
+        "model_3"
+      ],
+      "claims": 2016,
+      "model_requests": 4,
+      "validated_answers": 3,
+      "private_messages": 29,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "page": {
+        "BOARD": "NOT_TESTED",
+        "active": false,
+        "claims": 2016,
+        "context_sha256": "ab84896692614e767a1a7f46fc84b9c7cada83b6b98c6e4b8a93d627c6075047",
+        "generation": 5,
+        "grant_limit": 2016,
+        "hardware_completions": null,
+        "phase": 2,
+        "release_allowed": false,
+        "request_end": 3312,
+        "request_serial": 4,
+        "request_sha256": "011b29ae23bd0ae260cbc9435d3c5072d73bd873e0af80d0243ab836de9f1138",
+        "revoked": true,
+        "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+        "start_intent": false,
+        "state": 9223372058329614304,
+        "unknown_io": false,
+        "worker_pid": 452,
+        "worker_start_ticks": 31918
+      },
+      "journal_records": 117,
+      "journal_bytes": 56126,
+      "all_threads_stopped": true,
+      "worker_exit_code": 0,
+      "private_close_packet": {
+        "domain": "PC",
+        "private_control": {
+          "checked_copy_bytes": 14942208,
+          "closed": true,
+          "copy_checks": 504,
+          "enabled": true,
+          "failed": false,
+          "release_allowed": false,
+          "request_active": false,
+          "request_sha256": "011b29ae23bd0ae260cbc9435d3c5072d73bd873e0af80d0243ab836de9f1138",
+          "schema": "A12_MODEL_PLM_ROUTE_V1"
+        },
+        "status": "NATIVE_CONTEXT_CLOSED_NOT_PLATFORM_RELEASE",
+        "type": "private_closed"
+      },
+      "actual_FPGA_calls": null,
+      "BOARD": "NOT_TESTED",
+      "production_enabled": false,
+      "release_allowed": false,
+      "provider_domain": "PC_CPU_MODEL"
+    },
+    "generated": [
+      "model_1",
+      "model_2",
+      "model_3"
+    ],
+    "software_test_only": true,
+    "actual_FPGA_calls": null,
+    "release_allowed": false
+  }
+}

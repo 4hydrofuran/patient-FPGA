@@ -1,0 +1,101 @@
+{
+  "type": "validated_answer",
+  "session_id": "d8568ab3015d4ec099de35da3d8c67a3",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "V07",
+  "case_id": "SYN_CP_01",
+  "case_version": "1.0-draft",
+  "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+  "text": "疼痛在快走时出现。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "疼痛在快走时出现。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "trigger"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "trigger"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "trigger"
+    ],
+    "allowed_fact_ids": [
+      "trigger"
+    ],
+    "required_fact_ids": [
+      "trigger"
+    ],
+    "facts": [
+      {
+        "slot": "trigger",
+        "status": "known",
+        "value": "快走",
+        "unit": null,
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "trigger",
+        "span": [
+          0,
+          5
+        ],
+        "quote": "什么情况下"
+      },
+      {
+        "slot": "trigger",
+        "span": [
+          8,
+          10
+        ],
+        "quote": "加重"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "疼痛在快走时出现。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_4",
+    "result_sha256": "0705041e40f19e1a5a7ef4797d8328703cbf2b2dfffe44bdf374e7088f3b5967"
+  },
+  "received_ns": 193722420069,
+  "validated_ns": 195092894140,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 193705924331,
+  "worker_pid": 434,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

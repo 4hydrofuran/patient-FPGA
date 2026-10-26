@@ -1,0 +1,69 @@
+{
+  "status": "ACTUAL_FROZEN_XRT_CALL_GRAPH_REVIEWED_NOT_IMPLEMENTED",
+  "sources": [
+    {
+      "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/source/backend.cpp",
+      "sha256": "bb0d6f439239606b79acbca541d28be9e63db5e7d882f7bcd8413dfa0dbd062c"
+    },
+    {
+      "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/source/supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102"
+    },
+    {
+      "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/runtime/qwen35_w4a8/a12/route.cpp",
+      "sha256": "ec03bc7192599e139a95b3163f82c1ee8b4f4ab99aba305861bad00be58db5a2"
+    }
+  ],
+  "sites": {
+    "argument_validation": {
+      "line": 225,
+      "source_line": "if(auto rc=a07::inputs(a,x,xb,sx,sb,y,yb)){c->last[\"last_status_code\"]=rc;return rc;}"
+    },
+    "old_submit_permission": {
+      "line": 229,
+      "source_line": "a12::permit(\"submit\",job);"
+    },
+    "input_sync": {
+      "line": 236,
+      "source_line": "c->x.sync(XCL_BO_SYNC_BO_TO_DEVICE,a.x,0);c->sx.sync(XCL_BO_SYNC_BO_TO_DEVICE,a.sx,0);c->meta.sync(XCL_BO_SYNC_BO_TO_DEVICE,64,0);"
+    },
+    "life_begin": {
+      "line": 242,
+      "source_line": "if(auto rc=c->life.begin(job,timeout))return rc;"
+    },
+    "kernel_start": {
+      "line": 245,
+      "source_line": "c->run.start();const auto deadline=start+std::chrono::milliseconds(timeout);"
+    },
+    "metadata_validation": {
+      "line": 255,
+      "source_line": "if(auto rc=a07::validate_meta(c->meta.map<const uint8_t*>(),64,c->build,job,0,a.w))return finish_error(rc);"
+    },
+    "output_validation": {
+      "line": 260,
+      "source_line": "if(auto rc=a07::output(a,result,a.y))return finish_error(rc);"
+    },
+    "commit_and_copy": {
+      "line": 280,
+      "source_line": "c->life.completed_and_validated();++c->runs;std::memcpy(y,result,a.y);return SP_OK;"
+    }
+  },
+  "finding": "Replacing only the old submit permit leaves BO sync/set_args between authority check and kernel start",
+  "required_binding": [
+    "Keep real lease/dual-lock/boot/kernel/CMA/temperature preconditions and the original resource probe package",
+    "Bind the new authority to the actual reviewed platform/device generation, BO ownership and kernel artifact identity",
+    "Reserve before any BO transfer and retain unknown IO ownership; recheck cancellation/epoch/deadline immediately before run.start",
+    "Promote exactly one start intent per reserved job; do not label host intent/credit as hardware completion",
+    "Keep RUNNING-before-start, timeout/ERT poisoning, exact metadata/finite-Y checks and no stale output",
+    "Complete private authorization only with confirmed completion; do not copy Y on a failed/revoked result",
+    "Accept legacy router and new backend sequence lanes without duplicating local authoritative budget",
+    "Port/compile the private gate for the existing A53 toolchain; current x86 guard is not ARM proof",
+    "First PC XRT-double fault closure, then actual ARM compile; Board activation remains separately prohibited"
+  ],
+  "B_HLS_and_public_ABI_changed": false,
+  "ARM_build": "NOT_PERFORMED",
+  "real_PL_binding": "NOT_IMPLEMENTED",
+  "BOARD": "NOT_TESTED",
+  "device_operations": 0,
+  "production_enabled": false
+}

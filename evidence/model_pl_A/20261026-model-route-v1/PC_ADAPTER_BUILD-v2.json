@@ -1,0 +1,27 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-shared",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-DSP_A12_PC_TEST=1",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-I/home/member-a/kv260-build/a12-model-route-20261026-v2/source",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include/x86_64-linux-gnu",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v2/source/modelpl_cpu.cpp",
+    "-o",
+    "/home/member-a/kv260-build/a12-model-route-20261026-v2/liba12_native_cpu_control.so",
+    "-ldl",
+    "-l:libcrypto.so.3"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-model-route-20261026-v2",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "In file included from /home/member-a/kv260-build/a12-model-route-20261026-v2/source/modelpl_cpu.cpp:7:\n/home/member-a/kv260-build/a12-model-route-20261026-v2/source/prefix_cache.hpp: In static member function ‘static tt10::json tt10::PrefixStore::owner_of(const json&)’:\n/home/member-a/kv260-build/a12-model-route-20261026-v2/source/prefix_cache.hpp:97:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n   97 |         if(owner.dump().size()>1024)throw std::runtime_error(\"checkpoint owner too large\");return owner;\n      |         ^~\n/home/member-a/kv260-build/a12-model-route-20261026-v2/source/prefix_cache.hpp:97:92: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’\n   97 |         if(owner.dump().size()>1024)throw std::runtime_error(\"checkpoint owner too large\");return owner;\n      |                                                                                            ^~~~~~\n"
+}

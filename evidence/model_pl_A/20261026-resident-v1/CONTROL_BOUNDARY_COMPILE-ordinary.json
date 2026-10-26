@@ -1,0 +1,20 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-pthread",
+    "-I/home/member-a/kv260-build/a12-resident-20261026-v1/control-v1/pc-source",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include/x86_64-linux-gnu",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/resident_control_boundary.cpp",
+    "-l:libcrypto.so.3",
+    "-o",
+    "/home/member-a/kv260-build/a12-resident-20261026-v1/control-boundary-v1/ordinary"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-resident-20261026-v1/control-boundary-v1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,9 @@
+{
+  "command": ["wsl", "-d", "KV260-A-2204", "--", "python3", "-c", "import sys;sys.path.insert(0,'/mnt/c/Patientqwen/platform/qwen35/a12');from livegen_platform import import_original_verified;m=import_original_verified();print(m.__file__);print(m.InterlockedPlatform.__mro__);print('PASS_IMPORT_ONLY_NO_ORIGINAL_OBJECTS_CREATED')"],
+  "exit_code": 1,
+  "error": "RuntimeError: original gate import collision: resource_probe_policy",
+  "cause": "Existing root control modules and frozen bundle use overlapping absolute module names",
+  "resolution": "Load pinned originals under a private namespace; qualify local imports only, compare inverse AST and prohibit hardware/command access during import tests",
+  "Board_objects_constructed": false,
+  "status": "RETAINED_FAILED_IMPORT_NO_GATE_WAIVER"
+}

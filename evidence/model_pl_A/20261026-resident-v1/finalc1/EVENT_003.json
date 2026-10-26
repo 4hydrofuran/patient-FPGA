@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "b08dd906435c4f9ab7cdb5e2826548f0",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-001",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "疼痛在胸骨后。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "疼痛在胸骨后。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "location"
+      ],
+      "allowed_fact_ids": [
+        "location"
+      ],
+      "required_fact_ids": [
+        "location"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "location",
+          "span": [
+            5,
+            7
+          ],
+          "quote": "位置"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "疼痛在胸骨后。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_1",
+      "result_sha256": "26f37c32718c703fba1c53c0d06ae20404a705f73cd2f425542c43f038710fd3"
+    },
+    "received_ns": 163210382272,
+    "validated_ns": 164596253577,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 163184902168,
+    "worker_pid": 424,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.417297151,
+    "application_delivered_ns": 164602199319,
+    "delivery_fence": {
+      "serial": 97,
+      "sample": 548,
+      "epoch": "e8bef86e8e7c451a8b1d782e7ecd0f67",
+      "requested_ns": 164601217841,
+      "started_ns": 164601312706,
+      "ended_ns": 164602077367,
+      "authorized_ns": 164602180012
+    },
+    "prepared_response_sha256": "1293ee4826084f84d8a59286bea1cb1eb72819c19f9327437a9108dea597a55b",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

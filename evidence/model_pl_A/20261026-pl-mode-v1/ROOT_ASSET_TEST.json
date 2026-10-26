@@ -1,0 +1,11 @@
+{
+  "command": ["wsl", "-d", "KV260-A-2204", "-u", "root", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/test_plmode_assets.py"],
+  "exit_code": 0,
+  "status": "PASS_ORIGINAL_ROOT_ASSET_GATE_SMALL_WSL_FIXTURES",
+  "tests": ["ROOT_OWNED_EXACT_BYTES_AND_BUDGET", "CHANGED_PAYLOAD", "CHANGED_REVIEW_BUDGET", "ROOT_FILE_GROUP_WORLD_WRITABLE", "SYMLINK_PAYLOAD", "CHANGED_MODEL_DIGEST"],
+  "scope": "SMALL_OWNED_WSL_TEMPORARY_FIXTURES_ROOT_METADATA_RULE_ONLY",
+  "actual_model_read": false,
+  "actual_Board_owner": false,
+  "actual_Board_health": false,
+  "BOARD": "NOT_TESTED"
+}

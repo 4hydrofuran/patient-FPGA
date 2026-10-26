@@ -1,0 +1,131 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "fe638de2cca3423a801a20f0bf46e7b9",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-012",
+    "case_id": "SYN_CP_03",
+    "case_version": "1.0-draft",
+    "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+    "text": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration",
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration",
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "location",
+        "duration"
+      ],
+      "allowed_fact_ids": [
+        "location",
+        "duration"
+      ],
+      "required_fact_ids": [
+        "location",
+        "duration"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 20,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "location",
+          "span": [
+            2,
+            4
+          ],
+          "quote": "哪里"
+        },
+        {
+          "slot": "duration",
+          "span": [
+            5,
+            11
+          ],
+          "quote": "每次持续多久"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_4",
+      "result_sha256": "11a723fba418940c8a9a7db5ed8a42752b76453744e827c872e34fdb7c5246e9"
+    },
+    "received_ns": 99006348254,
+    "validated_ns": 101247876756,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 98989920191,
+    "worker_pid": 416,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 2.263644303,
+    "application_delivered_ns": 101253564494,
+    "delivery_fence": {
+      "serial": 146,
+      "sample": 643,
+      "epoch": "2af63ec6632244d68387506d6209da11",
+      "requested_ns": 101252589198,
+      "started_ns": 101252676824,
+      "ended_ns": 101253415766,
+      "authorized_ns": 101253540599
+    },
+    "prepared_response_sha256": "70644e5eefc85b98f42aa80b326cdba5cfa4a5848dc354d2112e4d6252ca744d",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

@@ -1,0 +1,39 @@
+test_cancellation_expiry_or_quarantine_after_record_refuses_send (test_health_boundaries.BoundaryTests) ... ok
+test_completed_end_and_receipt_cannot_bypass_late_guard (test_health_boundaries.BoundaryTests) ... ok
+test_new_monitor_fault_after_record_refuses_send_and_ticket (test_health_boundaries.BoundaryTests) ... ok
+test_normal_send_once_and_sequence_binding (test_health_boundaries.BoundaryTests) ... ok
+test_router_close_keeps_old_cancel_exception_but_not_fault_exception (test_health_boundaries.BoundaryTests) ... ok
+test_callback_failure_does_not_clear_latch (test_health_fence.HealthTests) ... ok
+test_every_fence_requires_a_new_started_sample (test_health_fence.HealthTests) ... ok
+test_invalid_or_oversize_observations_latch (test_health_fence.HealthTests) ... ok
+test_reused_forged_foreign_and_wrong_thread_tickets_latch (test_health_fence.HealthTests) ... ok
+test_sample_in_progress_before_request_cannot_satisfy_fence (test_health_fence.HealthTests) ... ok
+test_slow_log_cannot_prevent_independent_fault_publication (test_health_fence.HealthTests) ... ok
+test_stale_ticket_after_slow_end_is_rejected (test_health_fence.HealthTests) ... ok
+test_stalled_sample_times_out_and_stop_never_fakes_join (test_health_fence.HealthTests) ... ok
+test_stop_refuses_new_fences_and_unused_tickets (test_health_fence.HealthTests) ... ok
+test_full_content_read_each_time_with_bounded_buffer_and_one_open (test_health_fence.IdentityTests) ... ok
+test_maps_cross_chunk_marker_decode_and_budget_fail_closed (test_health_fence.IdentityTests) ... ok
+test_mmap_second_write_can_keep_metadata_but_fresh_digest_rejects (test_health_fence.IdentityTests) ... ok
+test_real_proc_maps_fd_observes_later_cpu_mapping_named_xrt (test_health_fence.IdentityTests) ... ok
+test_replace_symlink_truncate_and_mutation_always_latch (test_health_fence.IdentityTests) ... ok
+test_empty_and_closed (test_health_opt.HealthTests) ... ok
+test_exact_and_incremental (test_health_opt.HealthTests) ... ok
+test_failed_observation_latches (test_health_opt.HealthTests) ... ok
+test_idle_does_not_block_active_permission (test_health_opt.HealthTests) ... ok
+test_idle_never_replaces_fresh (test_health_opt.HealthTests) ... ok
+test_io_overrun_and_latched (test_health_opt.HealthTests) ... ok
+test_kmsg_escape_is_decoded_once (test_health_opt.HealthTests) ... ok
+test_loss_replay_and_fragments (test_health_opt.HealthTests) ... ok
+test_pinned_non_kernel_priority (test_health_opt.HealthTests) ... ok
+test_sensor_value_missing_replacement_topology (test_health_opt.HealthTests) ... ok
+test_snapshot_mismatch (test_health_opt.HealthTests) ... ok
+test_actual_receive_reuses_fresh_observation (test_health_opt_integration.IntegrationTests) ... ok
+test_actual_receive_still_checks_when_idle (test_health_opt_integration.IntegrationTests) ... ok
+test_frozen_gate_does_not_allow_action_warning_during_compute (test_health_opt_integration.IntegrationTests) ... ok
+test_same_frozen_gate_rejects_new_warning (test_health_opt_integration.IntegrationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.501s
+
+OK

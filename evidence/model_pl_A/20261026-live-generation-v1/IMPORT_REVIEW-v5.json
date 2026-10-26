@@ -1,0 +1,453 @@
+{
+  "status": "PASS_PRIVATE_FROZEN_GATE_IMPORT_NO_BOARD_OBJECTS_OR_IO",
+  "modules": [
+    {
+      "module": "_a12_live_frozen_gates.accelerator_release_gate_v2",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/accelerator_release_gate_v2.py",
+        "bytes": 9184,
+        "sha256": "1db0bfbac7623309a922c0a56978b0bd3d519a68904884d86d578ef872363668"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.capacity_policy",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/capacity_policy.py",
+        "bytes": 2798,
+        "sha256": "278daea791a1c6116686eaff182312354e8b1f17b7478e8e73e1ae60f03ce1d3"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.common",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/common.py",
+        "bytes": 1599,
+        "sha256": "d420e7f9e2c693acae96e67665cbcdec5b6b336eb819feec5619aafdeeda7f82"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01_numeric",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01_numeric.py",
+        "bytes": 1650,
+        "sha256": "df26f9c558300051bf8d7c2836648afaade92a6bc093651897a8e23a6a9b1deb"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01_profile",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01_profile.py",
+        "bytes": 2760,
+        "sha256": "aebc909ac7a1d5eb6596e3e7f9fdfc4a91f0a8d91ed2c30a41ed2f31a0960516"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01_usage",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01_usage.py",
+        "bytes": 684,
+        "sha256": "a66233ca71f5a3d48868e8b10b25afdc64f61e8abaf318da766b2aca98599584"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_health",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_health.py",
+        "bytes": 6951,
+        "sha256": "cfd52cbf8a1d42f7c748ae82793d7ec38c58258a483ea3b24bbc67d20cbe4ecf"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "cpu02_support"
+        ],
+        [
+          "import",
+          "cpu01b_observer"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_healthrecord",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_healthrecord.py",
+        "bytes": 2116,
+        "sha256": "1eda1189f98e3b48f167ba8d72e7f9aa81b8738bbf3e820237d0ccbb93f71fec"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "cpu02_support"
+        ],
+        [
+          "import",
+          "cpu01b_observer"
+        ],
+        [
+          "from",
+          "capacity_policy"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_kernel_gate",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_kernel_gate.py",
+        "bytes": 2649,
+        "sha256": "df2b66b2b2543c5219100dff45d4405d7158dd6ab23fa5d9e170929401447c98"
+      },
+      "import_qualifications": [
+        [
+          "import",
+          "cpu01b_observer"
+        ],
+        [
+          "from",
+          "kernel_log_gate"
+        ],
+        [
+          "from",
+          "cpu02_support"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_observer",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_observer.py",
+        "bytes": 6493,
+        "sha256": "2a1f69ff23265143a289dbb7adabb4965cbb0e86af0d5adee62159ba3c4d848f"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_supervisor",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_supervisor.py",
+        "bytes": 6302,
+        "sha256": "296f8a558545273ca75772082db65a60c6d3e9ca339648fd8b45eaa4dd7fe3e0"
+      },
+      "import_qualifications": [
+        [
+          "import",
+          "cpu01b_observer"
+        ],
+        [
+          "from",
+          "cpu01b_supervisor_base"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_supervisor_base",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_supervisor_base.py",
+        "bytes": 8541,
+        "sha256": "b911e5668db27a62495c219fd633bd4e5c74c96a78e89a4b054d18e19bacb51e"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "cpu02_support"
+        ],
+        [
+          "import",
+          "cpu01b_observer"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu01b_window",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu01b_window.py",
+        "bytes": 15099,
+        "sha256": "d066491144a7dc6d4ce381d9cbe07ffbfc8efdf58b05bbf4144ae51d68fae30a"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "cpu02_support"
+        ],
+        [
+          "import",
+          "cpu01b_observer"
+        ],
+        [
+          "from",
+          "common"
+        ],
+        [
+          "from",
+          "accelerator_release_gate_v2"
+        ],
+        [
+          "from",
+          "isolated_idle_policy"
+        ],
+        [
+          "from",
+          "kernel_log_gate"
+        ],
+        [
+          "from",
+          "cpu01b_supervisor"
+        ],
+        [
+          "from",
+          "step07_finalize_policy"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.cpu02_support",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/cpu02_support.py",
+        "bytes": 4235,
+        "sha256": "081238cf1ac44f5ba01195141c41487f0e906c0272298c8c4b2a453214129d8f"
+      },
+      "import_qualifications": [
+        [
+          "import",
+          "cpu01b_observer"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.idle_board_trial",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/idle_board_trial.py",
+        "bytes": 15387,
+        "sha256": "c59f91ab17a1a984115599441aa55dd1e56a190a1f4680b6a9518dc275ae7089"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "kernel_log_gate"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.isolated_idle_policy",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/isolated_idle_policy.py",
+        "bytes": 7113,
+        "sha256": "4512d006dec590005d153567bf36beb0de2b627ef81e3a453577912f0aa060f6"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "accelerator_release_gate_v2"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.kernel_log_gate",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/kernel_log_gate.py",
+        "bytes": 2868,
+        "sha256": "2a9e5bb2a0cae4454277df1118103754ac043298cf729f98a1c9e4fd8a1ef396"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.mlp_base",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/mlp_base.py",
+        "bytes": 22202,
+        "sha256": "c6667530e2a1296b8a5ad0da2eb1875913a2a1f198d37a29f206e24007ca1d15"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "accelerator_release_gate_v2"
+        ],
+        [
+          "from",
+          "idle_board_trial"
+        ],
+        [
+          "from",
+          "isolated_idle_policy"
+        ],
+        [
+          "from",
+          "mlp_kernel_gate"
+        ],
+        [
+          "from",
+          "xrt_worker_boundary"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.mlp_kernel_gate",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/mlp_kernel_gate.py",
+        "bytes": 2632,
+        "sha256": "15baea6a63e4119827587fd8dbf0a4625577fe4452a755dd8922680eddf35e16"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "kernel_log_gate"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.resource_probe_case",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/resource_probe_case.py",
+        "bytes": 9429,
+        "sha256": "2f0b7b93e45824395c6d095c6dab803e5e9afd7575c7cb1fdc7213bc84802b1f"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "resource_probe_policy"
+        ],
+        [
+          "from",
+          "resource_probe_observer"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.resource_probe_manager",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/resource_probe_manager.py",
+        "bytes": 16728,
+        "sha256": "b8c08fb5e2919f9279e220c4cec4e391ccc14c21f7fc9f40ed62897b65959ac0"
+      },
+      "import_qualifications": [
+        [
+          "import",
+          "cpu01b_observer"
+        ],
+        [
+          "from",
+          "cpu02_support"
+        ],
+        [
+          "from",
+          "cpu01_profile"
+        ],
+        [
+          "from",
+          "cpu01_numeric"
+        ],
+        [
+          "from",
+          "cpu01_usage"
+        ],
+        [
+          "from",
+          "common"
+        ],
+        [
+          "from",
+          "cpu01b_window"
+        ],
+        [
+          "from",
+          "cpu01b_healthrecord"
+        ],
+        [
+          "from",
+          "cpu01b_health"
+        ],
+        [
+          "from",
+          "capacity_policy"
+        ],
+        [
+          "from",
+          "cpu01b_supervisor"
+        ],
+        [
+          "from",
+          "mlp_base"
+        ],
+        [
+          "from",
+          "cpu01b_kernel_gate"
+        ],
+        [
+          "from",
+          "isolated_idle_policy"
+        ],
+        [
+          "from",
+          "idle_board_trial"
+        ],
+        [
+          "from",
+          "accelerator_release_gate_v2"
+        ],
+        [
+          "from",
+          "resource_probe_case"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.resource_probe_observer",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/resource_probe_observer.py",
+        "bytes": 5258,
+        "sha256": "c62d227b444a8d73d0ef939c63b384d87254129e4282fe15e86abd7b9b4d8509"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "resource_probe_policy"
+        ]
+      ]
+    },
+    {
+      "module": "_a12_live_frozen_gates.resource_probe_policy",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/resource_probe_policy.py",
+        "bytes": 6084,
+        "sha256": "871bc6e95a8e8c67f3cc9e98efeee8fef38f9774f9e2cb320eadc580e079af93"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.step07_finalize_policy",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/platform/qwen35/a12/step07_finalize_policy.py",
+        "bytes": 3203,
+        "sha256": "7698967aa71b1a2e3a8e7d46b9ba30cf4e31a49efd7c9ed1cbc98129fe58e32b"
+      },
+      "import_qualifications": []
+    },
+    {
+      "module": "_a12_live_frozen_gates.xrt_worker_boundary",
+      "file": {
+        "path": "evidence/model_pl_A/20261025-resource-probe-v1/bundle-v2/control/support/xrt_worker_boundary.py",
+        "bytes": 7799,
+        "sha256": "cd16d858ecc645ec4984aa75eda4851d598572d0550c3b0267c82da2f1c274d7"
+      },
+      "import_qualifications": [
+        [
+          "from",
+          "accelerator_release_gate_v2"
+        ]
+      ]
+    }
+  ],
+  "original_functions_changed": false,
+  "only_local_import_names_qualified": true,
+  "AST_inverse_checked": true,
+  "global_root_modules_preserved": true,
+  "sys_path_environment_preserved": true,
+  "forbidden_command_hardware_attempts": [],
+  "PC_Board_issuer_refused": true,
+  "BOARD": "NOT_TESTED"
+}

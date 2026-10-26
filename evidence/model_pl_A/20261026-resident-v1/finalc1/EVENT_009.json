@@ -1,0 +1,117 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "b7ecfadf818a4946b8a2cbfeaac1567a",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-003",
+    "case_id": "SYN_CP_03",
+    "case_version": "1.0-draft",
+    "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+    "text": "胸痛从 6 小时前开始。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "胸痛从 6 小时前开始。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "onset"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "onset"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "onset"
+      ],
+      "allowed_fact_ids": [
+        "onset"
+      ],
+      "required_fact_ids": [
+        "onset"
+      ],
+      "facts": [
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 6,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "onset",
+          "span": [
+            2,
+            6
+          ],
+          "quote": "什么时候"
+        },
+        {
+          "slot": "onset",
+          "span": [
+            6,
+            8
+          ],
+          "quote": "开始"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "胸痛从 6 小时前开始。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_3",
+      "result_sha256": "bbf52b429b37b8e7087f2f876663648596ea40e4fd70d315db48b3e1ed92f4b2"
+    },
+    "received_ns": 166058110045,
+    "validated_ns": 167542107295,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 166042613944,
+    "worker_pid": 424,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.504620513,
+    "application_delivered_ns": 167547234457,
+    "delivery_fence": {
+      "serial": 127,
+      "sample": 622,
+      "epoch": "e8bef86e8e7c451a8b1d782e7ecd0f67",
+      "requested_ns": 167546112419,
+      "started_ns": 167546319236,
+      "ended_ns": 167547125877,
+      "authorized_ns": 167547218547
+    },
+    "prepared_response_sha256": "f65970f88fa762ee1af95717d2e777b35cdb66d1aab0b6abebd0713f861e1d40",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

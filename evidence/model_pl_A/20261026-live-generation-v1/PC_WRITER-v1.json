@@ -1,0 +1,26 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-I/home/member-a/kv260-build/a12-live-generation-20261026-v1/source",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include",
+    "-I/home/member-a/kv260-build/a07-pc-openssl-3.0.2-0ubuntu1.30/root/usr/include/x86_64-linux-gnu",
+    "-shared",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "/home/member-a/kv260-build/a12-live-generation-20261026-v1/source/generation_writer.cpp",
+    "-Wl,--version-script=/home/member-a/kv260-build/a12-live-generation-20261026-v1/source/exports.map",
+    "-o",
+    "/home/member-a/kv260-build/a12-live-generation-20261026-v1/liba12_livegen_writer.so",
+    "-l:libcrypto.so.3"
+  ],
+  "cwd": "/home/member-a/kv260-build/a12-live-generation-20261026-v1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

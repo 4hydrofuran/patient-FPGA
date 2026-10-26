@@ -1,0 +1,41 @@
+{
+  "status": "PASS_PC_READ_ONLY_OBSERVER_BUILD",
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fvisibility=hidden",
+    "-DSP_A12_PC_TEST=1",
+    "-Wall",
+    "-Wextra",
+    "-I/home/member-a/kv260-build/a12-mode-control-20261026-v1/source",
+    "-I/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/llama-source/vendor/nlohmann",
+    "/home/member-a/kv260-build/a12-mode-control-20261026-v1/source/mode_page_reader.cpp",
+    "-o",
+    "/home/member-a/kv260-build/a12-mode-control-20261026-v1/liba12_mode_page_reader.so",
+    "-l:libcrypto.so.3"
+  ],
+  "exit_code": 0,
+  "workspace": "/home/member-a/kv260-build/a12-mode-control-20261026-v1",
+  "library": "/home/member-a/kv260-build/a12-mode-control-20261026-v1/liba12_mode_page_reader.so",
+  "source": [
+    {
+      "name": "microbatch_guard.hpp",
+      "sha256": "162689b2ebc750d0a6128db7ae97cc8f109aedc5997d01ee3918fd1ce2effa71"
+    },
+    {
+      "name": "mode_page_reader.cpp",
+      "sha256": "58b05ac667c18b2974a68c9005ff2db89279928aff652b0678541ad27689c8a9"
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5"
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "CPU_math_rebuilt": false,
+  "native_rebuilt": false,
+  "library_sha256": "e86d399ccee4cbb7fd80cd7d81f27e9d9b332636741cb5f7e1956789007ffc71"
+}

@@ -10,12 +10,13 @@ import shutil
 import zipfile
 from resource_probe_entry import sha, validate_bundle
 from resource_probe_policy import HARD_RUNS, OFF, validate_plan, require
+from resource_probe_binding import adapt_initial_scan
 
 ROOT = Path(__file__).resolve().parents[3]
 PARENT = ROOT/'evidence/model_pl_A/20261024-ttft10-01-v1/window-20261025-v3/bundle-v4'
 OUT = ROOT/'evidence/model_pl_A/20261025-resource-probe-v1'
 NAMES = ('resource_probe_policy.py', 'resource_probe_observer.py', 'resource_probe_case.py',
-         'resource_probe_entry.py')
+         'resource_probe_entry.py', 'resource_probe_binding.py')
 
 
 def write(path, obj):
@@ -38,7 +39,7 @@ def derive_manager(before):
     return execute_case(worker, owner, path, real=real, api=globals())
 ''' + ''.join(lines[node.end_lineno:])
     marker = '\nSPEC ='
-    text = replace_once(text, marker, "\nfrom resource_probe_case import execute_case\nos.environ['SP_TT10_CONFIG']=str(BUNDLE/'control/prefix-config.json')\n"+marker)
+    text = replace_once(text, marker, "\nfrom resource_probe_case import execute_case\nsys.path.insert(0,str(BUNDLE/'application'))\nfrom tt10_00_app import measure as measure_application\nos.environ['SP_TT10_CONFIG']=str(BUNDLE/'control/prefix-config.json')\n"+marker)
     start = text.index("        before = p.snapshot('archive_cache_before')")
     end = text.index("        p.service('stop')", start)
     text = text[:start] + text[end:]
@@ -80,6 +81,8 @@ def prepare(destination):
         shutil.copyfile(PARENT/name, target)
     for name in NAMES:
         shutil.copyfile(ROOT/'platform/qwen35/a12'/name, destination/'platform/qwen35/a12'/name)
+    window=destination/'platform/qwen35/a12/cpu01b_window.py'
+    window.write_text(adapt_initial_scan(window.read_text(encoding='utf-8')),encoding='utf-8',newline='\n')
     parent_requests = json.loads((PARENT/'control/requests.json').read_text(encoding='utf-8'))
     r0 = copy.deepcopy(next(r for r in parent_requests if r['id'] == 'app_R0'))
     warm = copy.deepcopy(next(r for r in parent_requests if r['id'] == 'warm_prefix'))

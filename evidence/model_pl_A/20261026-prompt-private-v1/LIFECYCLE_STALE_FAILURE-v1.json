@@ -1,0 +1,15 @@
+{
+  "status": "PRESERVED_REAL_CPU_STARTUP_FAILURE_BEFORE_READY",
+  "suite": "cohort01",
+  "normal_windows_before_failure": 20,
+  "aborted_cohort": "V04",
+  "error": "HealthBlocked: foreign/reused/stale health ticket",
+  "CPU_claims": 0,
+  "worker_exit_code": 2,
+  "DIRTY_retained": true,
+  "release_allowed": false,
+  "old_manager_sha256": "ed61b12ae3b1ac356b95162a05fd15c16cfa2bf5a9e0cf4e00612b0646f40aa1",
+  "observation": "Stale health ticket after durable legacy weight permission. Real fsync/scheduling latency was not separately measured. Delayed journal-call proxy reproduces the ordering failure.",
+  "change": "Issue lifecycle-only fresh ticket after durable record; unchanged 250ms bound and health fault latch. Request/grant/END fences unchanged.",
+  "BOARD": "NOT_TESTED"
+}

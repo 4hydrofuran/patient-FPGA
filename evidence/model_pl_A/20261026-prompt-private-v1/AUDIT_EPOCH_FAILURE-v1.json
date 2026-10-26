@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "platform/qwen35/a12/promptpl_audit.py",
+    "--suite",
+    "pilot01"
+  ],
+  "exit_code": 1,
+  "reason": "Auditor incorrectly hashed Source.epoch hex text again. Source already stores a 256-bit epoch digest, and native generation::Writer decodes it directly.",
+  "fix": "Compare held read-only native epoch bytes with the original Source epoch encoding. No runtime/source/gate change or model restart.",
+  "BOARD": "NOT_TESTED"
+}

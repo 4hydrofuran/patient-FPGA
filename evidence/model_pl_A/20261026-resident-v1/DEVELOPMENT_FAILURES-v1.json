@@ -1,0 +1,42 @@
+{
+  "status": "PRESERVED_ACTUAL_PC_FAILURES_NOT_ACCEPTED",
+  "records": [
+    {
+      "tag": "pilot01",
+      "reason": "resident request: name 'IDS' is not defined",
+      "observed_error": "NameError: name 'IDS' is not defined",
+      "underlying_cause": "Missing IDS in derived Python request globals; rejected before any backend call.",
+      "actual_CPU_claims": 0,
+      "native_exit_code": 2,
+      "DIRTY_retained": true,
+      "writer_retained": true,
+      "release_allowed": false,
+      "result_sha256": "46fde61b27577f640680bde3600ccf091d5070b3dd1d831faee6a40720461313"
+    },
+    {
+      "tag": "pilot02",
+      "reason": "resident request: resident neutral state shape/sequence differs",
+      "observed_error": "RuntimeError: resident neutral state shape/sequence differs",
+      "underlying_cause": "Manager mistook zero-based last position and serialized sequence-state SHA for token count/token SHA.",
+      "actual_CPU_claims": 360,
+      "native_exit_code": 2,
+      "DIRTY_retained": true,
+      "writer_retained": true,
+      "release_allowed": false,
+      "result_sha256": "594e4a28d89d724c657e4d124a953cb82ddd1f5733db71ebdfb91d092d24dd53"
+    },
+    {
+      "tag": "pilot03",
+      "reason": "service: premature/duplicate close",
+      "observed_error": "RuntimeError: native EOF before requested result",
+      "underlying_cause": "Old backend maintenance gate required exactly three completed requests; one-warm close was refused.",
+      "actual_CPU_claims": 360,
+      "native_exit_code": 2,
+      "DIRTY_retained": true,
+      "writer_retained": true,
+      "release_allowed": false,
+      "result_sha256": "ee002b79740c55a4d919b268f52da922be3d7f26bb9b6c6eecbf68b1afc35d76"
+    }
+  ],
+  "BOARD": "NOT_TESTED"
+}

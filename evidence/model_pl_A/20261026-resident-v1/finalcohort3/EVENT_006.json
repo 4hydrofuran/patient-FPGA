@@ -1,0 +1,109 @@
+{
+  "op": "submit",
+  "value": {
+    "type": "validated_answer",
+    "session_id": "371a4170d8db4e9091564ce5e09a7ae2",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-010",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "过敏情况我不清楚。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "过敏情况我不清楚。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "allergy"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "allergy"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "allergy"
+      ],
+      "allowed_fact_ids": [
+        "allergy"
+      ],
+      "required_fact_ids": [
+        "allergy"
+      ],
+      "facts": [
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "allergy",
+          "span": [
+            4,
+            6
+          ],
+          "quote": "过敏"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "text": "过敏情况我不清楚。",
+      "status": "OK",
+      "eos": true,
+      "actual_backend": "CPU_REFERENCE",
+      "native_request_id": "model_2",
+      "result_sha256": "ede3a048ab7a56473502255861c9b9a250239f333c1d47348ac684d5058fe926"
+    },
+    "received_ns": 183991141878,
+    "validated_ns": 185219455301,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "application_received_ns": 183975322027,
+    "worker_pid": 409,
+    "warm_count": 1,
+    "weight_loads": 72,
+    "original_plan_route": "answer",
+    "input_to_verified_result_s": 1.250564093,
+    "application_delivered_ns": 185225886120,
+    "delivery_fence": {
+      "serial": 110,
+      "sample": 619,
+      "epoch": "d17d6f4a7b78482db506e9d6892e0b46",
+      "requested_ns": 185224530076,
+      "started_ns": 185224608103,
+      "ended_ns": 185225767133,
+      "authorized_ns": 185225866102
+    },
+    "prepared_response_sha256": "c982106fbc8a4c05150757d35a5c1144a9c2360242e7f48d98228145609bd461",
+    "timing_scope": "APPLICATION_RECEIPT_TO_VERIFIED_RETURN_PC_NOT_TRANSPORT_FLUSH_OR_BOARD"
+  }
+}

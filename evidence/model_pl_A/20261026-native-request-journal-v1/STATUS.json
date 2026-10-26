@@ -1,0 +1,52 @@
+{
+  "status": "ACTUAL_PC_NATIVE_REQUEST_JOURNAL_VALIDATED_GOAL_ACTIVE",
+  "report": "docs/handoffs/A_A12_NATIVE_REQUEST_JOURNAL_PC_20261026.md",
+  "final_review": "evidence/model_pl_A/20261026-native-request-journal-v1/FINAL_REVIEW.json",
+  "actual_PC_native_integration": "PASS_PC_MATH_DOUBLE_REAL_CPU_OUTPUTS",
+  "real_PL_binding": "NOT_IMPLEMENTED",
+  "final_ABI_tests": 5,
+  "final_recorded_native_integration_tests": 8,
+  "real_fault_cases": 3,
+  "actual_cpu_calls_per_successful_window": 2880,
+  "journal_rows": {
+    "strict": 2962,
+    "request": 82
+  },
+  "final_PC_timings": [
+    {
+      "id": "app_R0",
+      "domain": "PC_ONLY_ONE_PAIR_SAME_FROZEN_INPUT",
+      "strict_first_token_s": 7.288213484,
+      "request_first_token_s": 3.947277862,
+      "strict_validated_answer_s": 9.508977510000001,
+      "request_validated_answer_s": 4.862332716,
+      "validated_answer_delta_s": 4.646644794000001,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    },
+    {
+      "id": "app_hit",
+      "domain": "PC_ONLY_ONE_PAIR_SAME_FROZEN_INPUT",
+      "strict_first_token_s": 2.715094363,
+      "request_first_token_s": 1.4324121680000002,
+      "strict_validated_answer_s": 5.00461514,
+      "request_validated_answer_s": 2.267200173,
+      "validated_answer_delta_s": 2.737414967,
+      "BOARD": "NOT_TESTED",
+      "board_expected_saving_s": null
+    }
+  ],
+  "model_process_windows": 9,
+  "successful_model_windows": 6,
+  "injected_fault_windows": 3,
+  "new_short_prompt": "NOT_ACCEPTED_NOT_USED",
+  "original_resource_probe_unchanged": true,
+  "BOARD": "NOT_TESTED",
+  "new_PL_calls": 0,
+  "board_latency_saving_s": null,
+  "board_CMA_improvement": null,
+  "overall_goal_complete": false,
+  "goal_status": "active",
+  "actual_model_settings": "unknown",
+  "DeepSeek_or_subagent_delegation": false
+}

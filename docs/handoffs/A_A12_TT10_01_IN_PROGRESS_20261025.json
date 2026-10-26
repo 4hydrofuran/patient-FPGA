@@ -1,0 +1,74 @@
+{
+  "status": "INCOMPLETE_USER_ENDED_ROUND_BOARD_SCENE_RETAINED",
+  "updated_beijing": "2026-10-25T01:03:57.718474+08:00",
+  "task01_complete": false,
+  "source03": {
+    "model_PC_checks": 89,
+    "component_checks": 15,
+    "real_application_pairs": 25,
+    "cancel_PC": "PASS",
+    "A53_build": "PASS",
+    "model_quality_pass": 23,
+    "model_quality_rejected_same_R0_and_hit": [
+      "V07",
+      "V08"
+    ]
+  },
+  "BOARD": {
+    "status": "ISOLATED_DURING_CPU_DIAGNOSTIC",
+    "actual_PL_calls": 0,
+    "TTFT_app_s": null,
+    "reason": "HealthBlocked: full-model live extra reserve gate",
+    "manager_pid": 167484,
+    "cpu_worker_pid": 167575,
+    "last_scene_CmaFree_kib": 52816,
+    "original_required_CmaFree_kib": 98304,
+    "exact_rejection_instant_value": null,
+    "lease_retained": true,
+    "normal_release_and_GDM_restore": "NOT_COMPLETED",
+    "recovery_authorization": "USER_DECLINED_FOR_NOW_RETAIN_SCENE",
+    "recovery_executed": false,
+    "outer_controller": "Existing bounded monitor may remain waiting until its original 2100-second deadline; no new computation"
+  },
+  "source04": {
+    "change": "Owned diagnostic file fsync+DONTNEED only; computation/state logic unchanged",
+    "PC_build": "PASS",
+    "actual_file_IO_checks": 7,
+    "prefill_diagnostic_chunk": 8,
+    "saved_numerical_gate": {
+      "equal": true,
+      "projection_streams": 144,
+      "full_logits": 108,
+      "state_equal": true
+    },
+    "final_PC_reaudit": "INCOMPLETE_HARNESS_FAILURE",
+    "A53_build": "NOT_RUN",
+    "BOARD": "NOT_TESTED",
+    "deployed": false
+  },
+  "new_failures": [
+    {
+      "log": "logs/diagnostic_pc_01.json",
+      "cause": "Wrong reference path after numerical gate; worker normal exit0"
+    },
+    {
+      "log": "logs/diagnostic_pc_02.json",
+      "cause": "Saved JSON vs regenerated gate equality assertion; detailed diagnosis pending; worker normal exit0"
+    }
+  ],
+  "protected_sources_unchanged": true,
+  "default_backend_changed": false,
+  "TTFT10_goal": "NOT_VERIFIED_NO_NEW_BOARD_TIMING",
+  "next": [
+    "Preserve board scene until user authorizes recovery; do not run recovery script automatically",
+    "Fix source04 verification harness (check JSON integer/string map keys), complete ordinary application checks and A53 build",
+    "Implement and test CPU failure normal close/finalization with fresh closing-only observations; keep compute health latch",
+    "Prepare independent new package/window only after recovery; retain original failed window and all thresholds",
+    "Finish actual PL numerical/TTFT/normal restore audit before marking TT10-01 complete"
+  ],
+  "TT10_02": "NOT_STARTED",
+  "A12_step11": "PENDING",
+  "actual_model_settings": "unknown",
+  "subagents": 0,
+  "report": "evidence/model_pl_A/20261024-ttft10-01-v1/PROGRESS.md"
+}

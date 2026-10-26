@@ -1,0 +1,38 @@
+{
+  "observation_source": "Actual outer tool results; original native stdout.jsonl and per-request records are retained. Outer CLI text was not separately redirected.",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/a12/promptcopy_candidate.py",
+        "prepare"
+      ],
+      "exit_code": 0,
+      "candidate": "facts-only-02"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/a12/promptcopy_candidate.py",
+        "run"
+      ],
+      "exit_code": 0,
+      "candidate": "facts-only-02"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/a12/promptcopy_audit.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "earlier_failures": [
+    "PREPARE_FAILURE-v1.json",
+    "RUN_WITHOUT_PREPARED_FAILURE-v1.json"
+  ],
+  "BOARD": "NOT_TESTED"
+}

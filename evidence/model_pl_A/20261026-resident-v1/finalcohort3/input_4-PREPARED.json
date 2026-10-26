@@ -1,0 +1,115 @@
+{
+  "type": "validated_answer",
+  "session_id": "5040c08b5d024ca8a6d9b68dac64aaa0",
+  "epoch": 0,
+  "turn_id": 1,
+  "request_id": "DEV-012",
+  "case_id": "SYN_CP_03",
+  "case_version": "1.0-draft",
+  "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+  "text": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+  "answer_source": "MODEL",
+  "fallback_reason": null,
+  "failure_bucket": null,
+  "candidate": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+  "candidate_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "duration",
+      "location"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "final_check": {
+    "status": "pass",
+    "covered_fact_ids": [
+      "duration",
+      "location"
+    ],
+    "failure_bucket": null,
+    "reason": "whole_relation_grammar"
+  },
+  "answer_plan": {
+    "intent_ids": [
+      "location",
+      "duration"
+    ],
+    "allowed_fact_ids": [
+      "location",
+      "duration"
+    ],
+    "required_fact_ids": [
+      "location",
+      "duration"
+    ],
+    "facts": [
+      {
+        "slot": "location",
+        "status": "known",
+        "value": "胸前正中",
+        "unit": null,
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      },
+      {
+        "slot": "duration",
+        "status": "known",
+        "value": 20,
+        "unit": "分钟",
+        "time_scope": "本次模拟所述胸痛",
+        "polarity": "positive",
+        "disclose": "on_slot"
+      }
+    ],
+    "already_disclosed": [],
+    "played_history": [],
+    "unknown_policy": "explicit_unknown-v1-draft",
+    "answer_style": "first_person_short",
+    "max_sentences": 2,
+    "route": "answer",
+    "reason": "explicit_rule",
+    "evidence": [
+      {
+        "slot": "location",
+        "span": [
+          2,
+          4
+        ],
+        "quote": "哪里"
+      },
+      {
+        "slot": "duration",
+        "span": [
+          5,
+          11
+        ],
+        "quote": "每次持续多久"
+      }
+    ],
+    "rule_version": "route-v2-draft"
+  },
+  "llm_calls": 1,
+  "model_result": {
+    "text": "疼痛在胸前正中。每次疼痛持续 20 分钟。",
+    "status": "OK",
+    "eos": true,
+    "actual_backend": "CPU_REFERENCE",
+    "native_request_id": "model_4",
+    "result_sha256": "c7fc80d90b84883868c8166f38d82f4d57e6756697038931446ae416e30e3777"
+  },
+  "received_ns": 186645184762,
+  "validated_ns": 188853610222,
+  "tts_ready": true,
+  "tts_executed": false,
+  "audio_played": false,
+  "software_test_only": true,
+  "medical_review": "PENDING_TEACHER_REVIEW",
+  "asr_confirmation": null,
+  "application_received_ns": 186627962332,
+  "worker_pid": 409,
+  "warm_count": 1,
+  "weight_loads": 72,
+  "original_plan_route": "answer"
+}

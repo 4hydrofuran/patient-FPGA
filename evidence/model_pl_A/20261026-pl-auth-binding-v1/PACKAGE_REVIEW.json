@@ -1,0 +1,23 @@
+{
+  "status": "PASS_ZIP_ROUNDTRIP_AND_EXTRACTED_PC_DOUBLE",
+  "archive": {
+    "path": "evidence/model_pl_A/20261026-pl-auth-binding-v1/pl-auth-offline-unbound-v1.zip",
+    "bytes": 617229,
+    "sha256": "f691ec88dcbf933afa109f5152100838fae100d97be97ee1b9b9772b6c6e520c"
+  },
+  "entries": 35,
+  "manifest_sha256": "9612dab4aaa61e0bb7d8314e9ad1ba061b0d47f75cec471b48c664b3c936553b",
+  "extracted_PC_command": [
+    "/home/member-a/kv260-build/a12-pl-auth-20261026-v4/package-roundtrip/binaries/pc-control-test",
+    "normal",
+    "config.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"BOARD\":\"NOT_TESTED\",\"actual_FPGA_calls\":null,\"case\":\"normal\",\"checks\":23,\"domain\":\"PC_XRT_CONTROL_DOUBLE_ONLY\",\"production_enabled\":false}\n",
+  "stderr": "{\"actual_address\":4096,\"actual_size\":40960,\"argument\":2,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":40960,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n{\"actual_address\":49152,\"actual_size\":8192,\"argument\":3,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":8192,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n{\"actual_address\":61440,\"actual_size\":155648,\"argument\":4,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":155648,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n{\"actual_address\":221184,\"actual_size\":8192,\"argument\":5,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":8192,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n{\"actual_address\":233472,\"actual_size\":8192,\"argument\":0,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":8192,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n{\"actual_address\":245760,\"actual_size\":8192,\"argument\":1,\"compute_submissions\":0,\"event\":\"A11_BO_VALIDATION\",\"range_ok\":true,\"requested_bytes\":8192,\"size_ok\":true,\"window_base\":0,\"window_span\":10000000}\n",
+  "total_uncompressed_bytes": 2983534,
+  "BOARD": "NOT_TESTED",
+  "ARM_executed": false,
+  "ordinary_probe_replaced": false,
+  "production_enabled": false
+}

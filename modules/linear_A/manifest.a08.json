@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "api_version": 1,
+  "owner": "A",
+  "backend_id": "A_CPU_W4A8_V1",
+  "execution_kind": "CPU_REFERENCE",
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "status": "A08_BUILD_PENDING_REAL_REGRESSION",
+  "config": "modules/linear_A/cpu_config.json",
+  "native_entry": "/home/member-a/qwen35-a08/native-v1/qwen35-s1",
+  "shared_library": "/home/member-a/qwen35-a08/native-v1/libsp_linear_cpu.so",
+  "files": {
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml-base.so": {
+      "sha256": "78b65da954965fa94cae7a379404ea9253102cf3544d6953bd4c7c52c4408aeb",
+      "bytes": 930392
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libllama.so": {
+      "sha256": "de119869e57038ec723b3d4ec5995bfe7187e31522157896ccbce45c0bdccd76",
+      "bytes": 4739968
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml-cpu.so": {
+      "sha256": "d7bf021176b2134f1f3789339dd92a750f518c8bbf30f7d0ff573e76e6a03bb2",
+      "bytes": 1407936
+    },
+    "/home/member-a/qwen35-a05/llama-build-v4/bin/libggml.so": {
+      "sha256": "39c8c156287b9d8b36f9761c37474e40f0e6564e2ff2fe1c4a409b9cf8768465",
+      "bytes": 59736
+    },
+    "/home/member-a/qwen35-a08/native-v1/qwen35-s1": {
+      "sha256": "3c7adfa61f525382e95c3f4ddbb8abcd6a3ea271bdaba803abcdb8782decc270",
+      "bytes": 513416
+    },
+    "/home/member-a/qwen35-a08/native-v1/libsp_linear_cpu.so": {
+      "sha256": "d46bd1cc785c56d718e7b2782ced73bd7b3ab9a3510177df0bb0bbeacf69ee90",
+      "bytes": 250200
+    }
+  },
+  "physical_ubatch": 8,
+  "R1": "DISABLED",
+  "fallback": "disabled",
+  "board": "NOT_TESTED",
+  "fpga_available": false,
+  "deployment_budget_bytes": null,
+  "note": "Existing WSL paths, not portable installation package. These are CPU host artifacts, never an FPGA candidate.",
+  "non_mlp_projection_schedule": "STABLE_PER_TOKEN_SIMD_GEMV",
+  "attention_schedule": "SIMD_QUERY_ORDER_NO_SPLIT_KV_OR_QUERY_TILING",
+  "validation_report": "eval/qwen35/a05/batch-fix-v1/REPORT.json",
+  "change": "Same CPU math and pinned llama libraries; explicit optimized 2/3-thread kernel configurations",
+  "source_sha256": {
+    "runtime/qwen35_w4a8/main.cpp": "b8c2e35502637befb59c6a6343baaabe6a68c4a8e95af12e49a5b46a8742f4c4",
+    "runtime/qwen35_w4a8/bridge.cpp": "481bd212b8ec40b294400a05f68e1688a076be3e4f89c5658ed443a4588b2771",
+    "runtime/qwen35_w4a8/cpu_backend.cpp": "7dc1387a43333bf05a040b2db551b391b434407780115224d368a115093cc3e1",
+    "quant/reference/w4a8.cpp": "43800df586675c6b9d214db5a73fe13c1627385b0d6c426a20686b30d87e9734",
+    "modules/linear_A/cpu_threads2_config.json": "a55fa3d4d1c3757c670b4c80c5d64c3c6d319c44825d563962033d42eb085352",
+    "modules/linear_A/cpu_threads3_config.json": "7cded12285ad567e464bc0a3268605cde5d5ce7c7af32521805e906dedf78e65"
+  }
+}

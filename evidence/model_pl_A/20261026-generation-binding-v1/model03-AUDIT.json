@@ -1,0 +1,197 @@
+{
+  "status": "PASS_SIX_ACTUAL_MODEL_PC_GENERATION_WINDOWS",
+  "windows": [
+    {
+      "tag": "model03-cap72",
+      "status": "ACCEPTED_PC_MODEL_ORDINARY_WINDOW",
+      "actual_CPU_claims": 2880,
+      "grant_records": 40,
+      "normal_comparisons": [
+        {
+          "request_id": "app_R0",
+          "comparison": {
+            "equal": true,
+            "compared_fields": [
+              "status",
+              "output_tokens",
+              "text",
+              "eos",
+              "decode_calls",
+              "last_prompt_logits_fnv64",
+              "last_prompt_logits_sha256",
+              "state_position_before_clear",
+              "state_position_after_clear",
+              "state_cleared_before_response"
+            ],
+            "full_intermediate_state": "NOT_TESTED",
+            "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+          }
+        },
+        {
+          "request_id": "warm_prefix",
+          "runtime_reported_snapshot_fields_equal": true,
+          "fields": [
+            "tokens",
+            "position",
+            "state_bytes",
+            "state_sha256",
+            "sequence_sha256",
+            "logits_bytes",
+            "logits_sha256"
+          ],
+          "full_intermediate_state": "NOT_TESTED"
+        },
+        {
+          "request_id": "app_hit",
+          "comparison": {
+            "equal": true,
+            "compared_fields": [
+              "status",
+              "output_tokens",
+              "text",
+              "eos",
+              "decode_calls",
+              "last_prompt_logits_fnv64",
+              "last_prompt_logits_sha256",
+              "state_position_before_clear",
+              "state_position_after_clear",
+              "state_cleared_before_response"
+            ],
+            "full_intermediate_state": "NOT_TESTED",
+            "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+          }
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    },
+    {
+      "tag": "model03-cap1",
+      "status": "ACCEPTED_PC_MODEL_ORDINARY_WINDOW",
+      "actual_CPU_claims": 2880,
+      "grant_records": 2880,
+      "normal_comparisons": [
+        {
+          "request_id": "app_R0",
+          "comparison": {
+            "equal": true,
+            "compared_fields": [
+              "status",
+              "output_tokens",
+              "text",
+              "eos",
+              "decode_calls",
+              "last_prompt_logits_fnv64",
+              "last_prompt_logits_sha256",
+              "state_position_before_clear",
+              "state_position_after_clear",
+              "state_cleared_before_response"
+            ],
+            "full_intermediate_state": "NOT_TESTED",
+            "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+          }
+        },
+        {
+          "request_id": "warm_prefix",
+          "runtime_reported_snapshot_fields_equal": true,
+          "fields": [
+            "tokens",
+            "position",
+            "state_bytes",
+            "state_sha256",
+            "sequence_sha256",
+            "logits_bytes",
+            "logits_sha256"
+          ],
+          "full_intermediate_state": "NOT_TESTED"
+        },
+        {
+          "request_id": "app_hit",
+          "comparison": {
+            "equal": true,
+            "compared_fields": [
+              "status",
+              "output_tokens",
+              "text",
+              "eos",
+              "decode_calls",
+              "last_prompt_logits_fnv64",
+              "last_prompt_logits_sha256",
+              "state_position_before_clear",
+              "state_position_after_clear",
+              "state_cleared_before_response"
+            ],
+            "full_intermediate_state": "NOT_TESTED",
+            "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+          }
+        }
+      ],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    },
+    {
+      "tag": "model03-generation-change",
+      "status": "INTENDED_MODEL_FAULT_REJECTED_DIRTY",
+      "actual_CPU_claims": 5,
+      "grant_records": 1,
+      "normal_comparisons": [],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    },
+    {
+      "tag": "model03-slot-stale",
+      "status": "INTENDED_MODEL_FAULT_REJECTED_DIRTY",
+      "actual_CPU_claims": 5,
+      "grant_records": 1,
+      "normal_comparisons": [],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    },
+    {
+      "tag": "model03-begin-fsync",
+      "status": "INTENDED_MODEL_FAULT_REJECTED_DIRTY",
+      "actual_CPU_claims": 0,
+      "grant_records": 0,
+      "normal_comparisons": [],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    },
+    {
+      "tag": "model03-bad-copy",
+      "status": "INTENDED_MODEL_FAULT_REJECTED_DIRTY",
+      "actual_CPU_claims": 1,
+      "grant_records": 1,
+      "normal_comparisons": [],
+      "BOARD": "NOT_TESTED",
+      "real_PL_results_consumed": false,
+      "full_intermediate_state": "NOT_TESTED",
+      "release_allowed": false,
+      "generation_consumer": "PC_ONLY_NATIVE_CHECKS_PRESENT",
+      "live_Board_source": "NOT_IMPLEMENTED"
+    }
+  ],
+  "verification": "RAW_NATIVE_CURRENT_PRIVATE_FILES_HASH_CHAIN_FROZEN_TOKEN_LOGITS_PREFIX_DIGESTS_AND_SPECIFIC_FAULT_TARGETS",
+  "full_intermediate_state": "NOT_TESTED",
+  "BOARD": "NOT_TESTED",
+  "real_PL_results_consumed": false
+}

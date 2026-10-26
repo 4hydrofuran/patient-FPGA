@@ -1,0 +1,291 @@
+[
+  {
+    "id": "app_R0",
+    "op": "generate",
+    "prompt": "<|im_start|>system\n你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。<|im_end|>\n<|im_start|>user\n事实句：\n疼痛是压迫感。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "max_tokens": 24,
+    "logits_mode": "final",
+    "prefill_chunk": 256,
+    "cache_policy": "R0",
+    "state_fingerprint": true,
+    "profile": false,
+    "application": {
+      "case_id": "SYN_CP_01",
+      "question": "痛的性质怎样？",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "required_fact_ids": [
+        "quality"
+      ],
+      "plan": {
+        "intent_ids": [
+          "quality"
+        ],
+        "allowed_fact_ids": [
+          "quality"
+        ],
+        "required_fact_ids": [
+          "quality"
+        ],
+        "facts": [
+          {
+            "slot": "quality",
+            "status": "known",
+            "value": "压迫感",
+            "unit": null,
+            "time_scope": "本次模拟所述胸痛",
+            "polarity": "positive",
+            "disclose": "on_slot"
+          }
+        ],
+        "already_disclosed": [],
+        "played_history": [],
+        "unknown_policy": "explicit_unknown-v1-draft",
+        "answer_style": "first_person_short",
+        "max_sentences": 2,
+        "route": "answer",
+        "reason": "explicit_rule",
+        "evidence": [
+          {
+            "slot": "quality",
+            "span": [
+              0,
+              4
+            ],
+            "quote": "痛的性质"
+          }
+        ],
+        "rule_version": "route-v2-draft"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。"
+        },
+        {
+          "role": "user",
+          "content": "事实句：\n疼痛是压迫感。"
+        }
+      ]
+    },
+    "diagnostic_report": false,
+    "tokens": [
+      248045,
+      8678,
+      198,
+      99250,
+      100041,
+      103901,
+      1710,
+      96220,
+      97577,
+      96356,
+      99197,
+      123518,
+      111119,
+      96804,
+      3709,
+      97240,
+      101780,
+      99448,
+      96356,
+      96128,
+      134596,
+      3709,
+      97124,
+      98682,
+      1710,
+      248046,
+      198,
+      248045,
+      846,
+      198,
+      99201,
+      96804,
+      4960,
+      198,
+      108683,
+      95761,
+      114234,
+      96111,
+      1710,
+      248046,
+      198,
+      248045,
+      74455,
+      198,
+      248068,
+      271,
+      248069,
+      271
+    ]
+  },
+  {
+    "id": "warm_prefix",
+    "op": "cache_create",
+    "tokens": [
+      248045,
+      8678,
+      198,
+      99250,
+      100041,
+      103901,
+      1710,
+      96220,
+      97577,
+      96356,
+      99197,
+      123518,
+      111119,
+      96804,
+      3709,
+      97240,
+      101780,
+      99448,
+      96356,
+      96128,
+      134596,
+      3709,
+      97124,
+      98682,
+      1710,
+      248046,
+      198,
+      248045,
+      846,
+      198,
+      99201,
+      96804,
+      4960,
+      198
+    ],
+    "max_tokens": 1,
+    "cache_id": "short-neutral",
+    "cache_policy": "R0",
+    "confirmed_prefix": true,
+    "prefill_chunk": 256,
+    "logits_mode": "final",
+    "profile": false,
+    "diagnostic_report": false
+  },
+  {
+    "id": "app_hit",
+    "op": "generate",
+    "prompt": "<|im_start|>system\n你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。<|im_end|>\n<|im_start|>user\n事实句：\n疼痛是压迫感。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "max_tokens": 24,
+    "logits_mode": "final",
+    "prefill_chunk": 256,
+    "cache_policy": "TT10_REQUIRE_HIT",
+    "state_fingerprint": true,
+    "profile": false,
+    "application": {
+      "case_id": "SYN_CP_01",
+      "question": "痛的性质怎样？",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "required_fact_ids": [
+        "quality"
+      ],
+      "plan": {
+        "intent_ids": [
+          "quality"
+        ],
+        "allowed_fact_ids": [
+          "quality"
+        ],
+        "required_fact_ids": [
+          "quality"
+        ],
+        "facts": [
+          {
+            "slot": "quality",
+            "status": "known",
+            "value": "压迫感",
+            "unit": null,
+            "time_scope": "本次模拟所述胸痛",
+            "polarity": "positive",
+            "disclose": "on_slot"
+          }
+        ],
+        "already_disclosed": [],
+        "played_history": [],
+        "unknown_policy": "explicit_unknown-v1-draft",
+        "answer_style": "first_person_short",
+        "max_sentences": 2,
+        "route": "answer",
+        "reason": "explicit_rule",
+        "evidence": [
+          {
+            "slot": "quality",
+            "span": [
+              0,
+              4
+            ],
+            "quote": "痛的性质"
+          }
+        ],
+        "rule_version": "route-v2-draft"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。"
+        },
+        {
+          "role": "user",
+          "content": "事实句：\n疼痛是压迫感。"
+        }
+      ]
+    },
+    "diagnostic_report": false,
+    "tokens": [
+      248045,
+      8678,
+      198,
+      99250,
+      100041,
+      103901,
+      1710,
+      96220,
+      97577,
+      96356,
+      99197,
+      123518,
+      111119,
+      96804,
+      3709,
+      97240,
+      101780,
+      99448,
+      96356,
+      96128,
+      134596,
+      3709,
+      97124,
+      98682,
+      1710,
+      248046,
+      198,
+      248045,
+      846,
+      198,
+      99201,
+      96804,
+      4960,
+      198,
+      108683,
+      95761,
+      114234,
+      96111,
+      1710,
+      248046,
+      198,
+      248045,
+      74455,
+      198,
+      248068,
+      271,
+      248069,
+      271
+    ],
+    "cache_id": "short-neutral"
+  }
+]

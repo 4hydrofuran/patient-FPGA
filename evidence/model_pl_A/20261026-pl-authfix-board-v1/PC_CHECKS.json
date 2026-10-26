@@ -1,0 +1,17 @@
+{
+  "verification_level": "PC_TEST",
+  "checks": [
+    {"command": "python3 scripts/release/check_contracts.py", "exit_code": 0},
+    {"command": "python3 scripts/release/qwen35_config.py", "exit_code": 0},
+    {"command": "python3 -B -m unittest -v test_resource_probe_binding", "exit_code": 0, "tests": 2},
+    {"command": "python3 -B -m unittest -v test_resource_probe.CaseTests.test_ordinary_pair_completes_without_diagnostics", "exit_code": 0, "tests": 1}
+  ],
+  "old_failure_preserved": true,
+  "workload_authorization_included": false,
+  "owner_review_authorized_compute": true,
+  "thresholds_changed": false,
+  "heavy_diagnostics": false,
+  "BOARD": "PENDING",
+  "actual_model_settings": "unknown",
+  "delegation": "NONE"
+}

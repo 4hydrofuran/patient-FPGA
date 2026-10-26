@@ -1,0 +1,134 @@
+{
+  "status": "PASS_LIVE_SOURCE_PREPARATION_PC_BINDING_A53_ISSUER_COMPILE_ONLY",
+  "runtime_artifacts": [
+    {
+      "role": "native",
+      "path": "/home/member-a/kv260-build/a12-model-route-20261026-v5/pc/qwen35-a12",
+      "sha256": "da7999b9dfb43c70aab79e1430f9e4dac84f3f99f9e9b83c7e078d66fa2f7893",
+      "bytes": 807952
+    },
+    {
+      "role": "adapter",
+      "path": "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_native_cpu_control.so",
+      "sha256": "91e97035fe075ef9e41198ea96ac6975b69b0c50ffbf91f8fec8ea411e301707",
+      "bytes": 476792
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc/libsp_linear_cpu.so",
+      "sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+      "bytes": 233624,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libllama.so.0.5.0",
+      "sha256": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+      "bytes": 4752256,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml.so.0.25.3",
+      "sha256": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+      "bytes": 59736,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-base.so.0.25.3",
+      "sha256": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+      "bytes": 930392,
+      "role": "math_library"
+    },
+    {
+      "path": "/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama/bin/libggml-cpu.so.0.25.3",
+      "sha256": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+      "bytes": 1412168,
+      "role": "math_library"
+    }
+  ],
+  "manager_artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer.so",
+      "sha256": "99696e8c149d679d30e49c2e82d660518e09d2bb2845905ac1fe83aa9232e4c7",
+      "bytes": 33960
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+      "sha256": "53764e5623c11cd778a917dca45892c6bab044d0d2db354d4cfa1adced456f04",
+      "bytes": 79896
+    }
+  ],
+  "ARM_consumer": {
+    "path": "/home/member-a/kv260-build/a12-generation-binding-20261026-v3/liba12_generation_xrt_unbound.so",
+    "sha256": "0dc19b90347e8dde630fd4c69751b5720e2f990957b464d506e83657db10fafc",
+    "bytes": 504368
+  },
+  "manager_exports": [
+    {
+      "artifact": {
+        "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer.so",
+        "sha256": "99696e8c149d679d30e49c2e82d660518e09d2bb2845905ac1fe83aa9232e4c7",
+        "bytes": 33960
+      },
+      "symbols": [
+        "a12_gen_bind_v1",
+        "a12_gen_close_v1",
+        "a12_gen_health_v1",
+        "a12_gen_open_v1",
+        "a12_gen_resident_v1",
+        "a12_gen_revoke_v1",
+        "a12_livegen_board_open_v1"
+      ]
+    },
+    {
+      "artifact": {
+        "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+        "sha256": "53764e5623c11cd778a917dca45892c6bab044d0d2db354d4cfa1adced456f04",
+        "bytes": 79896
+      },
+      "symbols": [
+        "a12_gen_bind_v1",
+        "a12_gen_close_v1",
+        "a12_gen_health_v1",
+        "a12_gen_open_v1",
+        "a12_gen_resident_v1",
+        "a12_gen_revoke_v1",
+        "a12_livegen_board_open_v1"
+      ]
+    }
+  ],
+  "manager_dependencies": [
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer.so",
+      "needed": [
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ]
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-live-generation-20261026-v2/liba12_livegen_writer_a53.so",
+      "needed": [
+        "libcrypto.so.3",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libpthread.so.0",
+        "libc.so.6"
+      ]
+    }
+  ],
+  "manager_maps_XRT": false,
+  "original_native_CPU_XRT_consumers_unchanged": true,
+  "math_recompiled": false,
+  "quantization_recompiled": false,
+  "public_contract_unchanged": true,
+  "original_gate_AST_inverse_checked": true,
+  "extra_CMA_BOs": 0,
+  "private_page_used_bytes": 384,
+  "actual_Board_owner_ports_execution": "NOT_TESTED",
+  "current_Board_source_bound": false,
+  "current_Board_lease_acquired": false,
+  "ARM_execution": "NOT_EXECUTED",
+  "current_XRT_device_open": "HARD_DISABLED",
+  "PL_mode": "NOT_IMPLEMENTED",
+  "BOARD": "NOT_TESTED"
+}

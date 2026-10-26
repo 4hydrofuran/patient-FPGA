@@ -1,0 +1,914 @@
+{
+  "status": "PASS",
+  "old_source_pins": [
+    {
+      "path": "platform/qwen35/a12/resource_probe_policy.py",
+      "bytes": 6084,
+      "sha256": "871bc6e95a8e8c67f3cc9e98efeee8fef38f9774f9e2cb320eadc580e079af93"
+    },
+    {
+      "path": "platform/qwen35/a12/resource_probe_observer.py",
+      "bytes": 5258,
+      "sha256": "c62d227b444a8d73d0ef939c63b384d87254129e4282fe15e86abd7b9b4d8509"
+    },
+    {
+      "path": "platform/qwen35/a12/resource_probe_case.py",
+      "bytes": 9429,
+      "sha256": "2f0b7b93e45824395c6d095c6dab803e5e9afd7575c7cb1fdc7213bc84802b1f"
+    },
+    {
+      "path": "platform/qwen35/a12/resource_probe_entry.py",
+      "bytes": 3367,
+      "sha256": "65132b54ba2a6c4bd2e17a5a60a3cfee1fb0b947365bd6a847e33c7e8de09a83"
+    },
+    {
+      "path": "platform/qwen35/a12/resource_probe_prepare.py",
+      "bytes": 10140,
+      "sha256": "28b4e2a93618581466c46d7b6a2ef6046e45d6ce9acd188736f5d516a108358e"
+    },
+    {
+      "path": "platform/qwen35/a12/resource_probe_native_pc.py",
+      "bytes": 7151,
+      "sha256": "0e948cbae36ca3b73821c255934985dc63d4005ad1dbf7dfdc92c8bc4d0e7c1c"
+    },
+    {
+      "path": "platform/qwen35/a12/test_resource_probe.py",
+      "bytes": 20998,
+      "sha256": "717ae94dd1bb29b31ce18edbc324539339e9e1abce900f2ef042377a5c85b8e8"
+    },
+    {
+      "path": "platform/qwen35/a12/short_prompt_offline.py",
+      "bytes": 21643,
+      "sha256": "a675bae0886f33d99c3147fe0dfb6f2a4677b4189d3d4ee1e02887be04b08de4"
+    },
+    {
+      "path": "platform/qwen35/a12/offline_diag_handoff.py",
+      "bytes": 19543,
+      "sha256": "62af6bd90914aeaec275817b2ff34826b601c54331c0fc353ea032095c530954"
+    },
+    {
+      "path": "platform/qwen35/a12/offline_diag_replay.py",
+      "bytes": 5038,
+      "sha256": "1f2d71a0acc1c5dcceb255810e104964d9e5b8332d3110ff7bb97325bf2d506f"
+    },
+    {
+      "path": "platform/qwen35/a12/test_offline_followup.py",
+      "bytes": 10231,
+      "sha256": "1086f7cbe7d728084250c699f418dfabfbf341613a6a874e0186ca30c5105037"
+    },
+    {
+      "path": "platform/qwen35/a12/request_journal_candidate.py",
+      "bytes": 7311,
+      "sha256": "4965e099288b28b4867cfe9da9356f421fb57db936149530286c36b82b65533a"
+    },
+    {
+      "path": "platform/qwen35/a12/test_request_journal_candidate.py",
+      "bytes": 11668,
+      "sha256": "2d3ace5f5913950e8ce23823ea037bdf8f4cc9e06009db2c2a1ae9ee98301d3d"
+    },
+    {
+      "path": "platform/qwen35/a12/request_journal_verified.py",
+      "bytes": 18927,
+      "sha256": "8f036c806f52043ce5c90798ae907b21f109753ff558a43bff3c1e41a41431fe"
+    },
+    {
+      "path": "platform/qwen35/a12/request_journal_audit.py",
+      "bytes": 10939,
+      "sha256": "009574384f5e057a15c79e3af852439f3af94ca73a196e4e25e591a11ed7cd62"
+    },
+    {
+      "path": "platform/qwen35/a12/test_request_journal_verified.py",
+      "bytes": 24224,
+      "sha256": "2a4bab118dd12b034208c9c53eaeae101ffb744a7e2791b36f95db57bf9ab596"
+    },
+    {
+      "path": "platform/qwen35/a12/short_prompt_failure_review.py",
+      "bytes": 6458,
+      "sha256": "3714eabea36eb16a62cc6db2ad8f44f3f92d911249dfacd3df41840ca07a5232"
+    },
+    {
+      "path": "platform/qwen35/a12/native_cpu_control.cpp",
+      "bytes": 9057,
+      "sha256": "c4f4421a3f923793633e192dcdb6d7b516bdbe925a2ff83bf2008931253a9c1b"
+    },
+    {
+      "path": "platform/qwen35/a12/native_cpu_build.py",
+      "bytes": 3395,
+      "sha256": "cdcf814ce7f70be6dc0665ff7a062aebba2b474139476a900a6f906a333c164f"
+    },
+    {
+      "path": "platform/qwen35/a12/native_cpu_abi_probe.py",
+      "bytes": 2975,
+      "sha256": "7296d3d5d6e57b444749683697c9a112c733452a7e7cc9cef741676dc4d84258"
+    },
+    {
+      "path": "platform/qwen35/a12/test_native_cpu_adapter.py",
+      "bytes": 5827,
+      "sha256": "aba4b98d7ccab816ebcc5c025e9316d04a19ecbde4db04ae4e3963d103331eb5"
+    },
+    {
+      "path": "platform/qwen35/a12/native_request_journal.py",
+      "bytes": 13459,
+      "sha256": "7416272af99c86d6ad6418a6289c0d777e9cf1695a16605af9800c13a79ffa05"
+    },
+    {
+      "path": "platform/qwen35/a12/native_request_run.py",
+      "bytes": 13858,
+      "sha256": "329f6476be73f155ae5e1159751512442bf81346815e626b046575f99259e5d0"
+    },
+    {
+      "path": "platform/qwen35/a12/native_request_audit.py",
+      "bytes": 14092,
+      "sha256": "c78ab9ab400722b7e2cf9607f378d0aaa6b0a05e6e72d600113e75a7185d2f8a"
+    },
+    {
+      "path": "platform/qwen35/a12/test_native_request_integration.py",
+      "bytes": 9096,
+      "sha256": "9c89d3899a4ca3109e78644872fa57eb04dac228637faba97806ddd9b62b1957"
+    },
+    {
+      "path": "platform/qwen35/a12/native_cpu_artifact_audit.py",
+      "bytes": 2126,
+      "sha256": "22a83b542b8609b2e10ae20ce41d04a43d06a2f2a170648003df77a020f0b4da"
+    },
+    {
+      "path": "platform/qwen35/a12/native_request_review.py",
+      "bytes": 7677,
+      "sha256": "c59df0612768cb06014bcc179397a0833c32ed9977c4c12bc76a2ce3b797e502"
+    },
+    {
+      "path": "platform/qwen35/a12/fresh_identity_io.py",
+      "bytes": 6082,
+      "sha256": "04ede03b7b5fee2a0ee97113e3a42156d03b48b54150450180dff21ba4aa4d9c"
+    },
+    {
+      "path": "platform/qwen35/a12/health_fence.py",
+      "bytes": 8103,
+      "sha256": "2bc1ac22a87fb984c086726f195ae7f7640721d35ec6555b36301be9a859d9b0"
+    },
+    {
+      "path": "platform/qwen35/a12/native_health_fence.py",
+      "bytes": 3781,
+      "sha256": "f25b2e3030ae13bf6be2e81096b18ab608f812a8e3c1af5705f64542caf53bda"
+    },
+    {
+      "path": "platform/qwen35/a12/native_health_run.py",
+      "bytes": 5821,
+      "sha256": "162738e48a4ef9ca7a66a75cbbc50d18b3edc95f0c0d4e7619b7587c4def0ee5"
+    },
+    {
+      "path": "platform/qwen35/a12/native_health_audit.py",
+      "bytes": 5559,
+      "sha256": "fbeb8709c963b3b153939689f1f5da509f540ef278e7aefdac543d7bec60e50d"
+    },
+    {
+      "path": "platform/qwen35/a12/test_health_fence.py",
+      "bytes": 8851,
+      "sha256": "0f9bf1d6b523c8cbd56d641e782f8df205ff78c8dae6b5db3681ee17d22c6fc4"
+    },
+    {
+      "path": "platform/qwen35/a12/test_health_boundaries.py",
+      "bytes": 3568,
+      "sha256": "b6e532329f2ab7091442a3b09dd2fba648078ebf4700252c24593ae312dc4c7d"
+    },
+    {
+      "path": "platform/qwen35/a12/test_frozen_health_fence.py",
+      "bytes": 5758,
+      "sha256": "275cf79054f6f07a9ecb3f91c1bdd843a2fe5843680eed77dbbf9d6973a79bad"
+    },
+    {
+      "path": "platform/qwen35/a12/health_fence_evidence.py",
+      "bytes": 2450,
+      "sha256": "5a39d400f5db939cfe3bd5e8c2ee70b29997e43d685283f7c9c41c0cb0b23ca7"
+    },
+    {
+      "path": "platform/qwen35/a12/health_fence_closeout.py",
+      "bytes": 19009,
+      "sha256": "bce7744e0cdba165847d7e64da33a59df69e1adb59e2c5fc264c09147aed2ea5"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_abi_probe.py",
+      "bytes": 2885,
+      "sha256": "45fac5398f6301dedf94ceda0a68a227a4a82528d29efb1c614e7a32d5d175e1"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_artifact_audit.py",
+      "bytes": 3063,
+      "sha256": "55e28752b57e3978e591854752fc8957d9182a5ebc3f46b9a4634530d1d32d91"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_audit.py",
+      "bytes": 11989,
+      "sha256": "76f9e92f660e8d33703ad488c322733aa0bfc7d9e0c4c43a05e24591607024b5"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_build.py",
+      "bytes": 4412,
+      "sha256": "e32b327e5d517c7c3220161ebcacac5469acb33a961de93259add225d2a8a738"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_config.py",
+      "bytes": 1772,
+      "sha256": "7472cab9c6a5cb188e2f072702996281bb3655d0f2b7d1a3fd9456ea98e96310"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_evidence.py",
+      "bytes": 1392,
+      "sha256": "0ed1fe12d0477103f50c91abcc9f68ec019d9fb5fcc6cb1a705cdf4d85906af6"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_finalize.py",
+      "bytes": 20413,
+      "sha256": "feca17e75c457c8879da56a2801b0c8888c543390aeaf8dd55d580012e69bb08"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_guard.hpp",
+      "bytes": 12181,
+      "sha256": "162689b2ebc750d0a6128db7ae97cc8f109aedc5997d01ee3918fd1ce2effa71"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_manager_exit_probe.py",
+      "bytes": 569,
+      "sha256": "d80bc4ee0ac1008446f27a32de3362428fc9fc89d187c1585fd9353c2fc2db55"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_page.py",
+      "bytes": 2769,
+      "sha256": "51921dc576613a289b4f6c5825bea775a7c56e8e21945a8f019c93166adf287c"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_review.py",
+      "bytes": 5700,
+      "sha256": "cdbae367430ffdc568be914f889170caeb6aefb07491b50204a17e03ad962880"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_run.py",
+      "bytes": 6488,
+      "sha256": "8b8f149e0441be62ebc08084fb1622f1f1800ea5c92613498659caa5942341fe"
+    },
+    {
+      "path": "platform/qwen35/a12/microbatch_worker.py",
+      "bytes": 11566,
+      "sha256": "14164ef1d3d722829f83dc95fd76d5afe7bbc19494c8e4f5451f9d5070240db3"
+    },
+    {
+      "path": "platform/qwen35/a12/reproduce_microbatch_fixture.py",
+      "bytes": 1005,
+      "sha256": "96d76985c05d285e576347dfba72715deea465c884675d091298b503a8d0f4c0"
+    },
+    {
+      "path": "platform/qwen35/a12/reproduce_microbatch_unknown_end.py",
+      "bytes": 1214,
+      "sha256": "516ee9c12f7a2319685f7d01dd684286184d4b1b849b74cdd76227bb4f5f8bf2"
+    },
+    {
+      "path": "platform/qwen35/a12/test_microbatch_abi.py",
+      "bytes": 13657,
+      "sha256": "7da50ae091d4af9c8cb7fc51780cb9c1d03f827f85f09a9f0a0420911cd5f784"
+    },
+    {
+      "path": "platform/qwen35/a12/test_microbatch_audit.py",
+      "bytes": 5243,
+      "sha256": "01a85bde1db042e040c5c272c4f1621682ba9947c2828e52fb98fe6b58428a5a"
+    },
+    {
+      "path": "platform/qwen35/a12/test_microbatch_owner_close.py",
+      "bytes": 2547,
+      "sha256": "4eb177a07df6647b9f53a81c801b013551bf8d764f7fdb37cf59ea61df779006"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_abrupt_parent.py",
+      "bytes": 1290,
+      "sha256": "eab125016f6e630718b7b8e39aa999825a6069835aa672ac146faec1ca45b46c"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_child.py",
+      "bytes": 4084,
+      "sha256": "af1c2dc1f4b33512fdeb55130ee15c8ebc07a20ccca59768292fcd168e771460"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_clean_restart.py",
+      "bytes": 1394,
+      "sha256": "f574a8407afd383a93c1a3a2ebee4cd2c1ff00f7f7d0f4c4ccc02b794633ec68"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_coordinator.py",
+      "bytes": 12734,
+      "sha256": "bea36904a87abf15cab0c3d44d3b48bd8fd5f8a3780f1592f2bbe65133ffd199"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_evidence.py",
+      "bytes": 1380,
+      "sha256": "2814b237811971cacff54a6123c4da625b400a73891daf8735255bb966acc1eb"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_finalize.py",
+      "bytes": 17518,
+      "sha256": "2554144c315183687c1308cf05a80732f050096736d2aa9180efa276908fcdfa"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_history.py",
+      "bytes": 5734,
+      "sha256": "8302c38edb46c7ec9a7f5eaf08cab004dffdc45e238c6ce87b39c0db6db45155"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_journal.py",
+      "bytes": 6983,
+      "sha256": "f172b02733cdf8a58f259f6bc0b1f14b14686a387db9e3ae75c41e6da6e8cd53"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_page_reader.cpp",
+      "bytes": 1398,
+      "sha256": "8a5c647f7fb0ed85eeb2ed5ed2dfa92294fa901e25e7fb3b130bab6c060cbe62"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_reader.py",
+      "bytes": 2066,
+      "sha256": "8c2959fa808f83671172065012b619a6b185993fb7b3e35e2e299cc23a128e90"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_reader_build.py",
+      "bytes": 2171,
+      "sha256": "d3abec3a249814279fe9d7e87f619901a7cf7495e9f2829f2f67124587bb6228"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_registry.py",
+      "bytes": 3242,
+      "sha256": "bdca6dda73c17e4d76948ed9eab7cf7f5a704e1cf836a81ccb2e74a4f56c75b3"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_restart_test.py",
+      "bytes": 3472,
+      "sha256": "81b948473283459c1f749ebf2d3b3aff4b6e00008ebede06e00ed6d957eb35be"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_review.py",
+      "bytes": 5299,
+      "sha256": "0bdb2b867d022c465a65334de6ec511c07ab8d612eda7443133bbd0cd187d318"
+    },
+    {
+      "path": "platform/qwen35/a12/mode_scenario.py",
+      "bytes": 4809,
+      "sha256": "55419a84b64857cf07226c8a48000043605905a6276fe8faf3adac5d89a274ed"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_binding_sites.py",
+      "bytes": 2969,
+      "sha256": "79cb912261afabda77f0d70d2d02cbb8f76c1d6d94c5fd2772f1410eef861aae"
+    },
+    {
+      "path": "platform/qwen35/a12/test_mode_control.py",
+      "bytes": 6137,
+      "sha256": "53b9e200922725c4a91c3e22105ff52aa68a6d312471289cd90fc264a06108ef"
+    },
+    {
+      "path": "platform/qwen35/a12/test_mode_policy.py",
+      "bytes": 7726,
+      "sha256": "f8c089687a7cca5498251fcabf581842010c6c86a0c8ddc4b559d26aab3d2b1d"
+    },
+    {
+      "path": "platform/qwen35/a12/test_mode_telemetry.py",
+      "bytes": 2512,
+      "sha256": "2eb90ba0f32ffc3de02d0c35570a2cdf6c7964c308ba37e78cc430579f31be1f"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_build.py",
+      "bytes": 9250,
+      "sha256": "b1107465558eda172eca4f57e35b2e4aef738601ea4c465f4a83f59fd348b0a0"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_derive.py",
+      "bytes": 5216,
+      "sha256": "4deeb77081200f1f900a1ef1b1a07375a1fdc8392e9c7f7a6792b8a200d949af"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_evidence.py",
+      "bytes": 1395,
+      "sha256": "d9b9e785536e8a8a8372f42cc860391727bb1a845e83c712307100dadb66eac8"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_finalize.py",
+      "bytes": 13368,
+      "sha256": "d83f5a5c3f6b7fe7bc332a4308b7bab17f43b224b199e9eafbc2068ad08b5422"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_gate.hpp",
+      "bytes": 5908,
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_package.py",
+      "bytes": 5067,
+      "sha256": "38e0739e424bda82809eccad228d57cb302fbcfaff99185e8d3ad0ccde40130f"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_portable_probe.cpp",
+      "bytes": 432,
+      "sha256": "5a94622ead6b7bccbae9683ed153c4253ecc2d5397f1f3e7db8933a89ff67f22"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_review.py",
+      "bytes": 5491,
+      "sha256": "cfab7c576c3be44555901d681d62c3ac89e837802debde47daa5cbaccb96147f"
+    },
+    {
+      "path": "platform/qwen35/a12/pl_auth_run_stage.py",
+      "bytes": 492,
+      "sha256": "fed874f57fef55bd72cf182370ff93896f45e87da450c88a580e71cd30aee47e"
+    },
+    {
+      "path": "platform/qwen35/a12/test_pl_auth.cpp",
+      "bytes": 11780,
+      "sha256": "ba93ced918d7027c8d8a2b82bfc3c0300cf96b1eda92e9d483ffffe910edc69b"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_abrupt_manager.py",
+      "bytes": 1522,
+      "sha256": "532306861fe67034c5bc9739c892d182bd1c332002bbb8699f8253bc4e358761"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_abrupt_test.py",
+      "bytes": 5072,
+      "sha256": "50c0315cd455e7097617fd7479a2488dcd06b1ee1b21db69b5bea0419f0679f9"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_audit.py",
+      "bytes": 7391,
+      "sha256": "132339c24876312cb2ae2343ba260dd534a02987cf577b106e3213fcf72d463c"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_build.py",
+      "bytes": 7569,
+      "sha256": "afb0efde925a1b694e6185d87f9c07f32e4ab9d77fd9429f456dbb5b37158b37"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_cli.py",
+      "bytes": 494,
+      "sha256": "80adb6e81913fce6fad68e31a1f5c9d6ef8a3729200b434d91905ca4ff28e047"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_control.hpp",
+      "bytes": 5233,
+      "sha256": "3457ae23fc7c1bd27ab3efcab8a48eb58ac97da02d313ef39edff40effe72aec"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_derive.py",
+      "bytes": 4434,
+      "sha256": "772caf493e6a076ee9b2b4c75e9897d72e447e4d6ad87c632be1d08ae2796d0c"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_evidence.py",
+      "bytes": 1369,
+      "sha256": "2c16d109b5f3af5876b794017a47cbf7d308707c9e527d454a7633c1564a128d"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_finalize.py",
+      "bytes": 17354,
+      "sha256": "3116a400c871057e21182f93fc5626621c8cc2aab98dda8953816fd66df93e86"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_journal.py",
+      "bytes": 6471,
+      "sha256": "307df91fe362115fca119d25b134010eff48e6abc38dcdfdba89ae5b3e3e2375"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_manager.py",
+      "bytes": 22506,
+      "sha256": "04bf36097875f9a9b77a15e88b150814191f1e410edbc69285eddd39ddfd3656"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_observer.cpp",
+      "bytes": 793,
+      "sha256": "27fb72782f2410bb39c9520b6c2317d9436f2dfc8f8f35b8d3defd02736deaa5"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_observer_arm.py",
+      "bytes": 1662,
+      "sha256": "c2c92a1c178f386ee2e0e4bcd7f48de7046f30ddb313519940d6f90d892c6df3"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_observer_review.py",
+      "bytes": 1374,
+      "sha256": "b1ad0925417ff7a99f47f112fc6e9b03e122acce50ffd8866a19e0fcbe43c99e"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_package.py",
+      "bytes": 5127,
+      "sha256": "184873e319574dcb0672e9a9dfe6e0547e684c6596bb37bdc3792a97587702f1"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_page.hpp",
+      "bytes": 6225,
+      "sha256": "8cb543b4b088e9d5d07440dbbe38cb8e4d21cf3b0a0f71fbbb8e4425fe21b175"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_page.py",
+      "bytes": 2757,
+      "sha256": "facd90d54e050d4b7707a5c0a5e74bc1bdc6be2369563c09d1557c61ff58cb0d"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_portable_probe.cpp",
+      "bytes": 442,
+      "sha256": "9899b87801c014166d0bb6c632dd382b6fd047e7ee130eb5e823126b81f87a46"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_probe.cpp",
+      "bytes": 4811,
+      "sha256": "afdbed612fc90602b63f213ff4c13e6b9f3a282fb579e55a1c400b47631dc1f8"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_reproduce_cached_t.py",
+      "bytes": 2877,
+      "sha256": "eebffe1109824b48441ac4dc3adf2f096fd2af8e2b34db555d5d7d22e8dbf2ed"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_review.py",
+      "bytes": 5809,
+      "sha256": "6fd74bd5f752a541b4cdc92f45c4acfa128e97423f8aaf7aab1ff72073a32564"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_router_shim.cpp",
+      "bytes": 290,
+      "sha256": "4285f93ba1a83a63222617983e9ffadee66bd34a0b0aae5f6dd95d87f3dc3c4d"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_run.py",
+      "bytes": 2562,
+      "sha256": "2ab67effd51fbae8abe4e3c11421980d815baf48b97fb68192c75dde37fe5867"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_service_refactor.py",
+      "bytes": 3127,
+      "sha256": "c7c0a09771d3c1476149710bc5a3096cfd80e21b7ddd3200745a2f1f819737bc"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_suite.py",
+      "bytes": 1154,
+      "sha256": "a29b079b0f37f29be2bea0a45002f0d544329fa96ba85573a38a5d3be9fc9b22"
+    },
+    {
+      "path": "platform/qwen35/a12/plm_writer.cpp",
+      "bytes": 1781,
+      "sha256": "2f0dae0b063338aaf59728395ed05cd163df3a59633040902acd058474c0de3b"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plm_policy.py",
+      "bytes": 5951,
+      "sha256": "edac3bbb796a4daeb1ff32bc700b8377d5deb25397f68d172dbb1903565579ed"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_arm.py",
+      "bytes": 4408,
+      "sha256": "d6e49f6e7d0912e2697f056d433f32373a24486e325c5a8213f94ff913ac57db"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_audit.py",
+      "bytes": 10640,
+      "sha256": "2017f6f8a3c9035c3cafe8ad59a5e9c77ad0f446645947001b44bd9650e0300c"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_build.py",
+      "bytes": 5849,
+      "sha256": "741c2a41ed14426260111b1ebac1c537103307acd35c2ba02ec04cd4e84aa1ae"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_cli.py",
+      "bytes": 421,
+      "sha256": "08666349e6a31b2d01fda0eed417dee485bb0aa4100d616f330573022ff7e6c5"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_derive.py",
+      "bytes": 14984,
+      "sha256": "0acce6024fd436b91308e3df852e293723c54dcb09eec896d3566feec8c731f6"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_evidence.py",
+      "bytes": 1443,
+      "sha256": "dc41c84c639efb12e2268fb050f5831958a89765a03ae4c69dffd82391d10ca5"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_finalize.py",
+      "bytes": 16424,
+      "sha256": "4df7dc1e63a355373dd95976d451e32c932655751d575d9d38caebafc5e74ae9"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_manager.py",
+      "bytes": 18924,
+      "sha256": "91f4a9a3c777aa9e3be7116be4ebabaa1d425f849e5ac34ce9d209a73cbdedef"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_package.py",
+      "bytes": 5014,
+      "sha256": "659b410dc7592c013217b44c6e00b958034997118451638aa96503e835b0e11a"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_perf.py",
+      "bytes": 2514,
+      "sha256": "f3c794a3469575312a67351fe487d9513c4c5a2b86de6c1910f8ab2d822452cb"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_review.py",
+      "bytes": 5922,
+      "sha256": "b41b36c5ab9d7497c966982cf99e7c558a126f5a7bcaef886a12877ec6685ed7"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_run.py",
+      "bytes": 4607,
+      "sha256": "913bd6fc3f2471214c17dcb9d2b7a4a70e33d8f87ab6417570294ef8388e30ac"
+    },
+    {
+      "path": "platform/qwen35/a12/modelpl_suite.py",
+      "bytes": 1083,
+      "sha256": "d29e13f6b43ced35e05da1b3c76ba89c6785c3a7712f4a3012ab47d78cb6e18b"
+    },
+    {
+      "path": "platform/qwen35/a12/test_modelpl_owner.py",
+      "bytes": 1970,
+      "sha256": "9a5e30a44b69db97a230087fa98d72713d37371360ce8a6cda196558e70c48ab"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_arm.py",
+      "bytes": 3105,
+      "sha256": "336f40635fc4ee71b5e539ab961ff1639c9411aecac5e65f9630123c0a94af2b"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_audit.py",
+      "bytes": 3941,
+      "sha256": "ec8dbe16482d68d050a8bde6d872220b3068c4627525da4561bf8e7044b1f045"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_binding.py",
+      "bytes": 7767,
+      "sha256": "618ab323412458eeafc3f6c6bd9042a1131df1f06b98784541c518016379d103"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_build.py",
+      "bytes": 4001,
+      "sha256": "5b12d925796d5a76652f9833ba2a7af83633f320b75150e4b1111c3322a79f15"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_evidence.py",
+      "bytes": 995,
+      "sha256": "1909fb3fce5663253705a7402d79f42c90459e29725fe830ca63e980c6b22e75"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_finalize.py",
+      "bytes": 13646,
+      "sha256": "29a05f51c8d39b83610196b5111b58c87c3ced473ba7ea6ee584e3b35dccc88b"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_manager.py",
+      "bytes": 3959,
+      "sha256": "ed13a5d020bca3ca66d340fa4c3b8684f6485cda2693398a63e5f7e6c1d6b1a3"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_review.py",
+      "bytes": 6056,
+      "sha256": "1aa39ab084ae936fd0ba60fd28493a4984eaa94718500ed9d087a5b6aca8d81c"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_run.py",
+      "bytes": 3923,
+      "sha256": "d422899aabf3f5bcb9b463f51b945d5f4a40e148e467254c8d9e6654e85dcc41"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_slot.hpp",
+      "bytes": 6509,
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_suite.py",
+      "bytes": 1097,
+      "sha256": "91b5811bcdae5731f6a5b843920b25306fb4367eab2debf30ab61d39ec8258b1"
+    },
+    {
+      "path": "platform/qwen35/a12/generation_writer.cpp",
+      "bytes": 973,
+      "sha256": "f2c61b4b2ad7d6e5748c8552e1d64a39b0286f8aee93a6ce465f71f414a61584"
+    },
+    {
+      "path": "platform/qwen35/a12/test_generation_binding.py",
+      "bytes": 4448,
+      "sha256": "c34d7496c0d9e04f0c507dde8f4c02bc6ea30f633fafbd5c069febb914b8c6a4"
+    },
+    {
+      "path": "platform/qwen35/a12/test_generation_slot.cpp",
+      "bytes": 2404,
+      "sha256": "f6d8df47f9dd723ed41f19ef443229e32af1f5f05f38c04cc1120f8d33ab2011"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_audit.py",
+      "bytes": 4927,
+      "sha256": "792fe8975062830be087297e60412228417724d5e1b406f4474109a9eb5ea72a"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_binding.py",
+      "bytes": 4070,
+      "sha256": "3db0e336abf193880035ac418fea434f24b85b61a5971d88bccc8435ec551482"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_build.py",
+      "bytes": 6274,
+      "sha256": "035ace09ed6385981fb98c6220a22773ec393557446476fe65716f7553fa6d4b"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_checks.py",
+      "bytes": 1109,
+      "sha256": "1d0d0e8075de40dea8ac34ccebdd31a39af5bd18c2325ee3aaefb954c238d2fa"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_evidence.py",
+      "bytes": 1685,
+      "sha256": "a2fd67746adc659d5b3a4df030cc387e756a7f5eb9d98ab35fed3ec4cfffa914"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_finalize.py",
+      "bytes": 15400,
+      "sha256": "13abac1b021260fbb7e037b052a4e82301ed11f21e080fda47cc55971ee42113"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_fixtures.py",
+      "bytes": 5214,
+      "sha256": "ddfe5b408bbb7b6c125b1ddcd3755c74d53e6b1d8651dfc78d7feeb5f05caa0a"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_import.py",
+      "bytes": 4416,
+      "sha256": "be1b8afbf508d55addd887d8dccf0f14f09ed3ec1a940ae1caa755c92d021d2a"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_manager.py",
+      "bytes": 3630,
+      "sha256": "f29456ce0b55c5476fcacef06bc6c95a083d9bc794e173d7b2fb494cbddd646c"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_pin_counterexample.py",
+      "bytes": 5034,
+      "sha256": "884f7cbbe5300038aac2107dbe885f92ff2455d31f6a610761767e8421846274"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_platform.py",
+      "bytes": 12525,
+      "sha256": "89668a2a54c5e4c0c75877a8eb32880849832d63e4ccc271d7ead3126d875759"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_review.py",
+      "bytes": 7117,
+      "sha256": "a08be9c9d9b836fe1f20d6d325803443c9a4033fe7169ec27fa9d25f071c2723"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_run.py",
+      "bytes": 4103,
+      "sha256": "0df26cbe768f80e834a02d7d174421eb4c8dc8b818da2efb574496dfefbac9d6"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_source.py",
+      "bytes": 10458,
+      "sha256": "6fa46bf853f323b11391336674d921fb1e8388f86407707d869e27005bbd5c60"
+    },
+    {
+      "path": "platform/qwen35/a12/livegen_suite.py",
+      "bytes": 925,
+      "sha256": "66976a833b2da355c44bc3b1562363ef65926cb417c930526819c5d33df5efce"
+    },
+    {
+      "path": "platform/qwen35/a12/test_livegen_import.py",
+      "bytes": 3492,
+      "sha256": "a737667708850df39e79c9d6c1efd89ddf42eb45b551fc63981cbc59b53c721c"
+    },
+    {
+      "path": "platform/qwen35/a12/test_livegen_pin_race.py",
+      "bytes": 2744,
+      "sha256": "a6423db2065418308e66130b1ac68632472bc02ed4a4b7bd049b361f931542f7"
+    },
+    {
+      "path": "platform/qwen35/a12/test_livegen_source.py",
+      "bytes": 10954,
+      "sha256": "541ba2df7ceeb212a32e7b5d853b6e4a4ed5e6d7ec8c866b05588aa1783cb325"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_assets.py",
+      "bytes": 1589,
+      "sha256": "13406c2262a9e8d641beb4ed9c48d2cfb1062216ab88fe9a52e2a4fa676204bd"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_audit.py",
+      "bytes": 5288,
+      "sha256": "b2f012a8f421daa1a226f251ff3e68ee427fc941867dfa81f6c55dc2e3e2a123"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_build.py",
+      "bytes": 6405,
+      "sha256": "a7f411e7f724a6abb689b75a58cb5a29e8829f4bc8c94243d31f3d326cc69303"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_coordinator.py",
+      "bytes": 16935,
+      "sha256": "276bf27815088336ae1c186e18cc458094b57d850b163892b9016a7e125d25c0"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_evidence.py",
+      "bytes": 1167,
+      "sha256": "7339dcd54183fb2985edddabde4316dda03548c396578aeca7fc36f10e33c280"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_finalize.py",
+      "bytes": 15101,
+      "sha256": "50dab369b93ceb1e79b151ace94e5e02ff84f711f83a4c3e333662522370892a"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_history.py",
+      "bytes": 6538,
+      "sha256": "5044c070075b1dc0d401558b25ee885cbfe67112e4a83189702023f576207142"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_journal.py",
+      "bytes": 1245,
+      "sha256": "e48a9aeeebdd49f0e217e468d5297d53bfdfa07cc48ea77a5e6197911bf5b513"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_manager.py",
+      "bytes": 13319,
+      "sha256": "9a25b345b0ce184aceb5127ff560db7b500c938b3e4cbab03c6687d6cb66b888"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_observer.cpp",
+      "bytes": 1584,
+      "sha256": "121da4fa4c97cd0842707a4e585192b0be54198123f84c621414f19d3f2302e4"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_provider.py",
+      "bytes": 8948,
+      "sha256": "f1c6cdc2b4745c13ced96c2233967f09dfce242178a2a0dcf927b927ee04a366"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_restart_snapshot.py",
+      "bytes": 1476,
+      "sha256": "a1997697c5839c2e06e907777fe14c0ca41799c29b82d8e107245e4ad556901e"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_review.py",
+      "bytes": 8393,
+      "sha256": "036d34a0697285bea142f8f31a2a05ebd8cc40fc6d3cacfcbfc178b13d76517d"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_runtime.py",
+      "bytes": 6039,
+      "sha256": "fce96b1d8abc6e7b091b8145beb9f5596451827164921b67a7d04c66a867915c"
+    },
+    {
+      "path": "platform/qwen35/a12/plmode_trial.py",
+      "bytes": 4937,
+      "sha256": "dcc8f6515e4284dd72a6cb64f8c301c2d18845140a744fe989c9774e61dc5c11"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_assets.py",
+      "bytes": 2949,
+      "sha256": "c98cd862647f869f799641e0a82fae111dd572bf4496baf9483865d13c965767"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_cancel.py",
+      "bytes": 2190,
+      "sha256": "8d01278c750734ff3b486eb4c549a04f10c8cb177a93a27d60fbfd279cefd3ec"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_close_cancel.py",
+      "bytes": 1479,
+      "sha256": "0a68f90db6da9341d60b012d00b55f4cb529f82f8be195e3d2020e1f10c43885"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_init_cleanup.py",
+      "bytes": 2318,
+      "sha256": "801dc63124a19b3e1af464e9029cd02d3822bc7d823675f0f3096758a9ff4f81"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_observer.py",
+      "bytes": 1462,
+      "sha256": "32ca4f92dae5b849d94eac00b399e860f7e9f9c587635cfa615cd7cb7468f983"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_owner.py",
+      "bytes": 4565,
+      "sha256": "ae68c38a4adb00c6b3f6cc12801633dfb631a23c48bff51b53a9cfc2f0bf872e"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_policy.py",
+      "bytes": 4340,
+      "sha256": "e1c46ac5a04ebceb13b786ecd6c628d27e763a599d860cf46a8a4393f5c0a164"
+    },
+    {
+      "path": "platform/qwen35/a12/test_plmode_runtime.py",
+      "bytes": 2826,
+      "sha256": "6459aa8687fca5c1cc6bb89a4d3477f85bb763aef981c82bb3c793728969e74e"
+    }
+  ],
+  "baseline_files": 340,
+  "other_status_entries_exact": 224,
+  "original_parent_files": 168,
+  "contracts": 5,
+  "original_probe_sha256": "acd578ddd66140a3d0507d71ea9a1d30245c632c7537f0a940227935cc17a7fa",
+  "default_application_unchanged": true,
+  "old_prompt_failures_unchanged": true,
+  "board_contacted": false,
+  "pushed": false
+}

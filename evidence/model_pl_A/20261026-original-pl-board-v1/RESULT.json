@@ -1,0 +1,86 @@
+{
+  "status": "FAILED_PL_ACCEPTANCE_BEFORE_MODEL_REQUEST",
+  "task_started_utc": "2026-10-26T10:14:25Z",
+  "completed_within_25_minutes": true,
+  "kernel_mismatch_resolved": true,
+  "kernel": "6.8.12-a10irq2",
+  "boot_id": "8a0276fb-86d1-4ef8-b067-adcc903a999a",
+  "normal_reboots": 1,
+  "RAM_candidate_boots": 1,
+  "flash": false,
+  "default_boot_files_changed": false,
+  "cause": "Binding code incorrectly set spec.authorization_included=true; original workload policy requires that field false and separates compute authorization into the Owner review.",
+  "operator_binding_error": true,
+  "model_requests_sent": 0,
+  "model_acceptance": "NOT_PASSED",
+  "hardware_completion_count": null,
+  "manager_pid": 2907,
+  "worker_pid": 3039,
+  "resources_retained": true,
+  "safe_release": false,
+  "forced_signals": 0,
+  "current_scene": {
+    "kernel": "6.8.12-a10irq2",
+    "boot_id": "8a0276fb-86d1-4ef8-b067-adcc903a999a",
+    "manager_pid": 2907,
+    "manager_present": true,
+    "lease": {
+      "schema": "A12_MODEL_LEASE_V1",
+      "owner": "A",
+      "scope": "all",
+      "window": "a12-original-pl-20261026-v1",
+      "identity": "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec:8a0276fb-86d1-4ef8-b067-adcc903a999a",
+      "pid": 2907,
+      "owner_start_ticks": 95049,
+      "expires_monotonic_ns": 1562028608934,
+      "compute_authorized": true,
+      "max_runs": 5000,
+      "max_loads": 72,
+      "explicit_bo_budget_bytes": 140591104
+    },
+    "zocl_present": true,
+    "overlays": {
+      "a12-original-pl-20261026-v1_image_1": "applied"
+    },
+    "new_model_requests_sent": 0,
+    "acceptance": "FAILED_BEFORE_MODEL_REQUEST",
+    "forced_signals": 0,
+    "worker": {
+      "pid": 3039,
+      "argv": [
+        "/var/lib/kv260-a12/original-pl-20261026-v1/bundle/bin/qwen35-a12",
+        "/opt/patient-qwen/artifacts/qwen35-0.8b/qwen35-text-Q4_K_M.gguf",
+        "2",
+        "1024",
+        "all",
+        "TILED",
+        "2",
+        "8"
+      ],
+      "binary_sha256": "115d167265667f026594836760be12470876e2b001b9dc8b61773459da35efab",
+      "physical_domain": "BOARD"
+    },
+    "worker_present": true,
+    "isolation": {
+      "reason": "ProbeBlocked: probe package cannot carry compute authorization",
+      "lease_retained": true,
+      "no_kill": true,
+      "recovery": "EXPLICIT_ROOT_FINALIZE_ONLY_V2"
+    }
+  },
+  "attempt": {
+    "status": "FAILED_OR_OWNER_RETAINED",
+    "manager_pid": 2907,
+    "exit_code": null,
+    "stdout_tail": "-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"after_mutation\", \"action\": \"insmod\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"READBACK\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"driver_unbound\"}\n{\"event\": \"READBACK\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"identity_health_guard\"}\n{\"event\": \"COMMAND_BEGIN\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"COMMAND_END\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"READBACK\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"irq_topology\"}\n{\"event\": \"EXACT_IRQ_DT_VERIFIED\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"after_mutation\", \"action\": \"load_test\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"READBACK\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"test_loaded\"}\n{\"event\": \"PROCESS_RELEASE_OBSERVATION\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"a12_serialized_health\", \"action\": \"none\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"a12_serialized_health\", \"action\": \"none\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"a12_serialized_health\", \"action\": \"none\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n{\"event\": \"KERNEL_LOG_GATE\", \"window_id\": \"a12-original-pl-20261026-v1\", \"phase\": \"a12_serialized_health\", \"action\": \"none\", \"reason\": \"NO_UNREVIEWED_DIAGNOSTIC\"}\n{\"event\": \"LIVE_HEALTH\", \"window_id\": \"a12-original-pl-20261026-v1\"}\n",
+    "stderr_tail": "",
+    "run-v1/s2/ISOLATED.json": {
+      "reason": "ProbeBlocked: probe package cannot carry compute authorization",
+      "lease_retained": true,
+      "no_kill": true,
+      "recovery": "EXPLICIT_ROOT_FINALIZE_ONLY_V2"
+    },
+    "cases": {}
+  },
+  "scope": "Original ordinary R0/warm/hit baseline; new optimized candidate not executed"
+}

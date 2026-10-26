@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "resident_run.py",
+    "--tag",
+    "suite01fgeneration",
+    "--scenario",
+    "fault",
+    "--fault",
+    "generation"
+  ],
+  "exit_code": 1,
+  "stdout": "RuntimeError: {'type': 'error', 'code': 'session_failed', 'message': 'RuntimeError: generation node replaced/unloaded', 'tts_ready': False, 'fatal': True, 'software_test_only': True, 'audio_played': False, 'release_allowed': False, 'BOARD': 'NOT_TESTED'}\n",
+  "stderr": "",
+  "BOARD": "NOT_TESTED"
+}

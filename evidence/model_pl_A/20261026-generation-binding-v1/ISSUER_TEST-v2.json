@@ -1,0 +1,95 @@
+{
+  "status": "PASS_PC_LIVE_FD_ISSUER_TESTS",
+  "tests": [
+    {
+      "test": "normal_one_use_and_replay_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "JSON_copy_foreign_capability_and_wrong_context_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "stale_capability_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "expired_lease_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_boot_id_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_driver_generation_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_kernel_generation_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_device_generation_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_BO_generation_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_mutation_serial_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "changed_epoch_latches_revoke",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "lease_bytes_changed_with_restored_mtime_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "lost_second_actual_flock_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "canonical_lock_replaced_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "canonical_lock_symlink_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "canonical_lock_permissions_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "fixture_directory_permissions_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "manager_start_ticks_changed_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "actual_boot_binding_changed_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "before_mutation_revokes_without_executing_or_releasing",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "Board_factory_hard_disabled",
+      "status": "PASS_REFUSAL"
+    }
+  ],
+  "count": 21,
+  "real_board_identity": "NOT_TESTED",
+  "real_BO_inventory": "NOT_TESTED",
+  "Board_issuer": "DISABLED",
+  "model_settings": "unknown",
+  "DeepSeek_used": false
+}

@@ -1,0 +1,46 @@
+{
+  "status": "ISOLATED_PC_EXPERIMENT_NOT_DEFAULT",
+  "rationale": "Existing failures include question echo, relation paraphrase, omitted numerical scale and combined clauses. Keep original planner and deliver only its trusted approved fact surfaces to the model.",
+  "original_failures": [
+    "DEV-002",
+    "DEV-005",
+    "DEV-011",
+    "DEV-012",
+    "DEV-014",
+    "V02",
+    "V07",
+    "V08"
+  ],
+  "fixed_model_inputs": 25,
+  "fixed_policy_inputs": 7,
+  "output_limit": 24,
+  "checker_changed": false,
+  "model_decoding": "UNCHANGED_GREEDY_UNCONSTRAINED",
+  "template_fallback_counts_as_model_success": false,
+  "prefix_policy": "NEW_ACTUAL_TOKEN_BOUNDARY_AND_IDENTITY_REQUIRED_NO_OLD_SNAPSHOT_REUSE",
+  "heavy_diagnostic_files": 0,
+  "protected_default_sources": [
+    {
+      "path": "system_qwen35/app/checking.py",
+      "bytes": 5984,
+      "sha256": "942a8cdb2c0cf7cdeb6e9f2e25ada6e9d311826f4dcaf5c2a212f9c3d0da0ef9"
+    },
+    {
+      "path": "system_qwen35/app/planning.py",
+      "bytes": 3709,
+      "sha256": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7"
+    },
+    {
+      "path": "system_qwen35/app/session.py",
+      "bytes": 8178,
+      "sha256": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173"
+    },
+    {
+      "path": "system_qwen35/app/domain.py",
+      "bytes": 5541,
+      "sha256": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da"
+    }
+  ],
+  "production_enabled": false,
+  "BOARD": "NOT_TESTED"
+}

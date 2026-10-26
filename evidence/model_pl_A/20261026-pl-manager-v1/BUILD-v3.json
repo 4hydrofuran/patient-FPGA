@@ -1,0 +1,53 @@
+{
+  "domain": "PC_XRT_CONTROL_ONLY_A53_UNBOUND",
+  "workspace": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3",
+  "revision": 3,
+  "probe": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/plm-control-probe",
+  "backend_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_backend_pc_control.so",
+  "router_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_router_legacy_probe.so",
+  "writer_library": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_writer.so",
+  "writer_sha256": "88cd9bc0ed2f4210350dbe0b2d2a80cc33ada4ab73137f6bc5ae0fa25535f097",
+  "artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_backend_pc_control.so",
+      "sha256": "35aa1ffcf5ce05b533854e999fda413e4bbc8ac1c246e55d9ccaf985e23cbc44",
+      "bytes": 512320
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_router_legacy_probe.so",
+      "sha256": "832dbdb44f94a75afc988c9ab33fad2b05f5514457252317def009a14755a35b",
+      "bytes": 190536
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_writer.so",
+      "sha256": "88cd9bc0ed2f4210350dbe0b2d2a80cc33ada4ab73137f6bc5ae0fa25535f097",
+      "bytes": 112832
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/plm-control-probe",
+      "sha256": "21cccf620a4ab28089d243dcfa65fd9fbfbb44c77f5d5920754becc4da40085f",
+      "bytes": 279536
+    }
+  ],
+  "source_snapshot_sha256": "f903a8160551d9bd5d9e505ba179362fe6305172ca20443efddd30732a7d1681",
+  "ARM_artifacts": [
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_a53_unbound.so",
+      "sha256": "00c153a78bce00a88c51f2eaf743d18054fe7c74f030960551a0cdd95f7c52a4",
+      "bytes": 503504
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/libplm_writer_a53.so",
+      "sha256": "f7f2e85505040431f2270c98d615b6832dbfb7c44248119caee31185e7bf7cd1",
+      "bytes": 166016
+    },
+    {
+      "path": "/home/member-a/kv260-build/a12-pl-manager-20261026-v3/plm_full_protocol_a53.o",
+      "sha256": "80458f676c5d3534352e2b198fa9ec1111709714618cb99e43699b853c25affc",
+      "bytes": 448664
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "real_device_generation_approval": "UNBOUND"
+}

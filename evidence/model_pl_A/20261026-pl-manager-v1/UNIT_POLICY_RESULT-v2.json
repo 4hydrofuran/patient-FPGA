@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "tests": 11,
+  "output": "test_failed_page_geometry_closes_only_new_unbound_FD (__main__.AtomicPolicy) ... ok\ntest_health_publication_is_monotonic_and_not_future (__main__.AtomicPolicy) ... ok\ntest_missing_writer_API_opens_no_page_FD (__main__.AtomicPolicy) ... ok\ntest_request_and_range_caps (__main__.AtomicPolicy) ... ok\ntest_request_generation_bound_and_revoke_sticky (__main__.AtomicPolicy) ... ok\ntest_startup_cannot_grant (__main__.AtomicPolicy) ... ok\ntest_unbound_and_invalid_identity (__main__.AtomicPolicy) ... ok\ntest_boundary_reads_current_history_bytes (__main__.DurablePolicy) ... ok\ntest_full_end_bytes_are_not_fsync_or_close_proof (__main__.DurablePolicy) ... ok\ntest_receipt_fsync_failure_keeps_dirty (__main__.DurablePolicy) ... ok\ntest_zero_progress_latches_dirty (__main__.DurablePolicy) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.085s\n\nOK\n",
+  "verification_layer": "PRIVATE_ATOMIC_MANAGER_AND_PC_FILE_IO_ONLY",
+  "BOARD": "NOT_TESTED",
+  "actual_FPGA_calls": null
+}

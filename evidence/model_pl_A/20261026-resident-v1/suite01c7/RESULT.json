@@ -1,0 +1,100 @@
+{
+  "status": "PASS_ACTUAL_QWEN_PLM_CPU_WINDOW_NOT_BOARD",
+  "cap": 72,
+  "completed": [
+    "warm_prefix",
+    "model_1"
+  ],
+  "claims": 1368,
+  "model_requests": 2,
+  "validated_answers": 1,
+  "private_messages": 20,
+  "legacy_sequences": {
+    "router": 2,
+    "backend": 73
+  },
+  "page": {
+    "BOARD": "NOT_TESTED",
+    "active": false,
+    "claims": 1368,
+    "context_sha256": "f0a8ff12fae42bfae60cbc32fa84227afe09dc90d9929ce32452838200cdb88a",
+    "generation": 3,
+    "grant_limit": 1368,
+    "hardware_completions": null,
+    "phase": 2,
+    "release_allowed": false,
+    "request_end": 2232,
+    "request_serial": 2,
+    "request_sha256": "a7420c8a5a58cba5c7672fab597e41aaa6702adef3bc94421a593a4758f09e6d",
+    "revoked": true,
+    "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+    "start_intent": false,
+    "state": 9223372049739679064,
+    "unknown_io": false,
+    "worker_pid": 440,
+    "worker_start_ticks": 19716
+  },
+  "journal_records": 104,
+  "journal_bytes": 47182,
+  "all_threads_stopped": true,
+  "worker_exit_code": 0,
+  "private_close_packet": {
+    "domain": "PC",
+    "private_control": {
+      "checked_copy_bytes": 24379392,
+      "closed": true,
+      "copy_checks": 1008,
+      "enabled": true,
+      "failed": false,
+      "release_allowed": false,
+      "request_active": false,
+      "request_sha256": "a7420c8a5a58cba5c7672fab597e41aaa6702adef3bc94421a593a4758f09e6d",
+      "schema": "A12_MODEL_PLM_ROUTE_V1"
+    },
+    "status": "NATIVE_CONTEXT_CLOSED_NOT_PLATFORM_RELEASE",
+    "type": "private_closed"
+  },
+  "actual_FPGA_calls": null,
+  "BOARD": "NOT_TESTED",
+  "production_enabled": false,
+  "release_allowed": false,
+  "provider_domain": "PC_CPU_MODEL",
+  "error": null,
+  "owned_pidfd_terminal": true,
+  "independent_page": {
+    "BOARD": "NOT_TESTED",
+    "active": false,
+    "claims": 1368,
+    "context_sha256": "f0a8ff12fae42bfae60cbc32fa84227afe09dc90d9929ce32452838200cdb88a",
+    "generation": 3,
+    "grant_limit": 1368,
+    "hardware_completions": null,
+    "manager_epoch": "167c349b1fcbbbd018e2b48dd6547158",
+    "manager_pid": 439,
+    "manager_start_ticks": 19620,
+    "phase": 4,
+    "release_allowed": false,
+    "request_end": 2232,
+    "request_serial": 2,
+    "request_sha256": "a7420c8a5a58cba5c7672fab597e41aaa6702adef3bc94421a593a4758f09e6d",
+    "revoked": true,
+    "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+    "source_slot": {
+      "context_sha256": "f0a8ff12fae42bfae60cbc32fa84227afe09dc90d9929ce32452838200cdb88a",
+      "domain": 1,
+      "epoch_sha256": "0d154a13d4a1f5050623cfdc2975cf0255f351e38029373591e6ffaa76acf31a",
+      "identity_sha256": "4c7613964e6cf777f8fb250ed74e3b4b51dcedae6291fc7736f53f51ce9176c7",
+      "state": 9223372036854775810
+    },
+    "start_intent": false,
+    "state": 9223372049739679064,
+    "unknown_io": false,
+    "worker_pid": 440,
+    "worker_start_ticks": 19716
+  },
+  "application_generated": [
+    "model_1"
+  ],
+  "external_inputs": 1,
+  "rejections": 0
+}

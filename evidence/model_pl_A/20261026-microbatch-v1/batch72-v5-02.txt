@@ -1,0 +1,186 @@
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "request", "id": "app_R0", "cpu_calls": 1440, "PL_calls": 0}
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "request", "id": "warm_prefix", "cpu_calls": 2088, "PL_calls": 0}
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "request", "id": "app_hit", "cpu_calls": 2880, "PL_calls": 0}
+{
+  "status": "PASS_ACTUAL_PC_MODEL_WITH_REQUEST_JOURNAL",
+  "domain": "PC_NATIVE_MATH_NOT_FPGA",
+  "journal_mode": "request",
+  "workspace": "/home/member-a/kv260-build/a12-microbatch-20261026-v5/run-batch72-v5-02",
+  "worker_exit_code": 0,
+  "worker_closed": true,
+  "actual_cpu_permits": 2880,
+  "actual_cpu_weight_loads": 72,
+  "owner_checks": 778,
+  "health_checks": 659,
+  "journal_rows": 122,
+  "journal_bytes": 152505,
+  "journal_sha256": "e5b7101ee9317e04309d9f2326dcc71eb5e1429355db1fa6db875c1a4d6564aa",
+  "permission_metrics": {
+    "calls": 115,
+    "owner_check_ms": 20.767813000000007,
+    "health_check_ms": 63.55157599999999,
+    "durable_permission_record_ms": 770.891397
+  },
+  "timing_PC_ONLY": [
+    {
+      "TTFT_app_ms": 3429.047569,
+      "complete_app_ms": 4067.461385,
+      "cache": {
+        "hit": false,
+        "lookup_ms": 0.0,
+        "new_tokens": 107,
+        "policy": "R0",
+        "reason": "EXPLICIT_R0",
+        "restore_error": null,
+        "restore_ms": 0.0,
+        "reused_tokens": 0
+      },
+      "journal_mode": "request"
+    },
+    {
+      "TTFT_app_ms": 1285.532564,
+      "complete_app_ms": 1915.470271,
+      "cache": {
+        "hit": true,
+        "lookup_ms": 18.250741,
+        "new_tokens": 37,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 31.570997,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      },
+      "journal_mode": "request"
+    }
+  ],
+  "request_summaries": [
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "new_prefill_tokens": 107,
+      "decode_calls": 6,
+      "actual_cpu_calls": 1440,
+      "cumulative_cpu_calls": 1440,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    },
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": null,
+      "new_prefill_tokens": 70,
+      "decode_calls": 0,
+      "actual_cpu_calls": 648,
+      "cumulative_cpu_calls": 2088,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    },
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "new_prefill_tokens": 37,
+      "decode_calls": 6,
+      "actual_cpu_calls": 792,
+      "cumulative_cpu_calls": 2880,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    }
+  ],
+  "R0_hit_comparison": {
+    "equal": true,
+    "compared_fields": [
+      "status",
+      "output_tokens",
+      "text",
+      "eos",
+      "decode_calls",
+      "last_prompt_logits_fnv64",
+      "last_prompt_logits_sha256",
+      "state_position_before_clear",
+      "state_position_after_clear",
+      "state_cleared_before_response"
+    ],
+    "full_intermediate_state": "NOT_TESTED",
+    "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+  },
+  "original_CPU_comparison": {
+    "app_R0": {
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    },
+    "app_hit": {
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    }
+  },
+  "libraries": {
+    "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+    "liba12_native_cpu_control.so": "56b55e7331cfc360b63c94fa561408918be0750262af9492cc1c702f5252c229",
+    "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+    "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+    "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+    "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+  },
+  "native_identity": {
+    "adapter_sha256": "56b55e7331cfc360b63c94fa561408918be0750262af9492cc1c702f5252c229",
+    "cpu_library_sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+    "native_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+    "route_config_sha256": "9dc630058f8c0f0d1f19a3b9abcba3b554cfc72344cae48305421ba04ef88b13",
+    "prefix_config_sha256": "3f135944e2f297d51a88b129894976a91f09fefa22af1070b6766544fab1293d"
+  },
+  "raw_diagnostic_files": 0,
+  "PL_calls": 0,
+  "hardware_completions": null,
+  "BOARD": "NOT_TESTED",
+  "board_latency_saving_s": null,
+  "board_CMA": "NOT_TESTED",
+  "elapsed_PC_s": 30.465082854,
+  "fault_injection": null,
+  "validated_answers": [
+    "app_R0",
+    "app_hit"
+  ]
+}

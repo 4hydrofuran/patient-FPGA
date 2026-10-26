@@ -1,0 +1,8 @@
+{
+  "command": ["wsl", "-d", "KV260-A-2204", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/generation_run.py", "--revision", "2", "--tag", "normal-cap72", "--cap", "72"],
+  "exit_code": 1,
+  "stage": "IMPORT_BEFORE_WINDOW_CREATION",
+  "error": "IndentationError: unexpected indent in modelpl_manager.py#generation-bootstrap line 19, private_sequence assignment",
+  "cause": "AST-extracted method is dedented; inserted continuation used 12 spaces instead of 8",
+  "resolution": "Use the dedented method indentation; retain this failed invocation. No model window or Board action occurred."
+}

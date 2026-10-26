@@ -1,0 +1,165 @@
+{
+  "commands": [
+    {
+      "command": "python scripts/release/check_contracts.py",
+      "exit_code": 0,
+      "domain": "PC_STATIC",
+      "output": {
+        "static_checks": "PASS",
+        "verification_level": "PC_TEST",
+        "contract_version": "0.1.0-draft.2",
+        "content_sha256": "c398d47956043a1a3e4cd95ba96de2205eedc38d89db0d037ec0dfa5af0e3af0",
+        "review_status": "DRAFT",
+        "hardware_test": "NOT_TESTED",
+        "validator_scope": "Local references, schema subset and static event fixtures; not full OpenAPI conformance or live service tests"
+      }
+    },
+    {
+      "command": "python scripts/release/qwen35_config.py",
+      "exit_code": 0,
+      "domain": "PC_STATIC",
+      "output": {
+        "domain": "PC",
+        "configuration": "PASS",
+        "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+        "selected": {
+          "linear_backend": {
+            "owner": "A",
+            "manifest": "modules/linear_A/manifest.json",
+            "status": "PRESENT_UNVERIFIED"
+          },
+          "voice_backend": {
+            "owner": "A",
+            "manifest": "modules/voice_A/manifest.json",
+            "status": "PRESENT_UNVERIFIED"
+          }
+        },
+        "runtime": "NOT_TESTED",
+        "board": "NOT_TESTED"
+      }
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_cpu_build.py",
+      "exit_code": 0,
+      "receipt": "BUILD.json",
+      "domain": "PC_BUILD"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_cpu_build.py --revision 2",
+      "exit_code": 0,
+      "receipt": "BUILD-v2.json",
+      "domain": "PC_BUILD_FIXED_OUTPUT_FLAG"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --mode request --tag request-01",
+      "exit_code": 0,
+      "receipt": "run-request-01/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --mode strict --tag strict-01",
+      "exit_code": 0,
+      "receipt": "run-strict-01/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode strict --tag strict-v2-01",
+      "exit_code": 0,
+      "receipt": "run-strict-v2-01/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode request --tag request-v2-01",
+      "exit_code": 0,
+      "receipt": "run-request-v2-01/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode request --tag fail-begin-v2-01 --fault begin_fsync",
+      "exit_code": 1,
+      "receipt": "run-fail-begin-v2-01/FAILURE.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": true
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode request --tag fail-end-v2-01 --fault end_fsync",
+      "exit_code": 1,
+      "receipt": "run-fail-end-v2-01/FAILURE.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": true
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode request --tag fail-health-v2-01 --fault health_submit",
+      "exit_code": 1,
+      "receipt": "run-fail-health-v2-01/FAILURE.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": true
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode strict --tag strict-v2-02",
+      "exit_code": 0,
+      "receipt": "run-strict-v2-02/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_run.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --mode request --tag request-v2-02",
+      "exit_code": 0,
+      "receipt": "run-request-v2-02/RESULT.json",
+      "domain": "REAL_PC_NATIVE_MODEL_NOT_PL",
+      "expected_injected_refusal": false
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/test_native_cpu_adapter.py --evidence /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/abi-tests-01",
+      "exit_code": 1,
+      "receipt": "abi-tests-01/RESULT.json",
+      "domain": "REAL_CPU_ABI_ARRAY_TESTS"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/test_native_cpu_adapter.py --build /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/BUILD-v2.json --evidence /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/abi-tests-02",
+      "exit_code": 0,
+      "receipt": "abi-tests-02/RESULT.json",
+      "domain": "REAL_CPU_ABI_ARRAY_TESTS"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/test_native_request_integration.py --evidence /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/integration-tests-01",
+      "exit_code": 1,
+      "receipt": "integration-tests-01/HARNESS_FAILURE.json",
+      "domain": "RECORDED_REAL_NATIVE_REJECTIONS_AND_AUDIT"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/test_native_request_integration.py --evidence /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/integration-tests-02",
+      "exit_code": 0,
+      "receipt": "integration-tests-02/RESULT.json",
+      "domain": "RECORDED_REAL_NATIVE_REJECTIONS_AND_AUDIT"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_cpu_artifact_audit.py",
+      "exit_code": 0,
+      "receipt": "ARTIFACT_AUDIT.json",
+      "domain": "PC_EVIDENCE_REVIEW"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/platform/qwen35/a12/native_request_review.py",
+      "exit_code": 0,
+      "receipt": "FINAL_NATIVE_CHECKS.json",
+      "domain": "PC_EVIDENCE_REVIEW"
+    },
+    {
+      "command": "wsl -d KV260-A-2204 -- python3 -B /mnt/c/Patientqwen/evidence/model_pl_A/20261026-native-request-journal-v1/collect_build.py",
+      "exit_code": 0,
+      "receipt": "COLLECTED_BUILD.json",
+      "domain": "PC_SMALL_REVIEW_PRODUCTS"
+    }
+  ],
+  "scope": "Observed outer command exits; injected failures intentionally remain nonzero. CPU worker exit2 is recorded separately.",
+  "BOARD": "NOT_TESTED",
+  "PL_calls": 0,
+  "model_process_windows": 9,
+  "normal_model_windows": 6,
+  "injected_fault_windows": 3
+}

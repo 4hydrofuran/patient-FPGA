@@ -1,0 +1,14 @@
+{
+  "commands": [
+    {
+      "command": "python scripts/release/check_contracts.py",
+      "exit_code": 0,
+      "output": "{\r\n  \"static_checks\": \"PASS\",\r\n  \"verification_level\": \"PC_TEST\",\r\n  \"contract_version\": \"0.1.0-draft.2\",\r\n  \"content_sha256\": \"c398d47956043a1a3e4cd95ba96de2205eedc38d89db0d037ec0dfa5af0e3af0\",\r\n  \"review_status\": \"DRAFT\",\r\n  \"hardware_test\": \"NOT_TESTED\",\r\n  \"validator_scope\": \"Local references, schema subset and static event fixtures; not full OpenAPI conformance or live service tests\"\r\n}\r\n"
+    },
+    {
+      "command": "python scripts/release/qwen35_config.py",
+      "exit_code": 0,
+      "output": "{\r\n  \"domain\": \"PC\",\r\n  \"configuration\": \"PASS\",\r\n  \"contract_sha256\": \"83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6\",\r\n  \"selected\": {\r\n    \"linear_backend\": {\r\n      \"owner\": \"A\",\r\n      \"manifest\": \"modules/linear_A/manifest.json\",\r\n      \"status\": \"PRESENT_UNVERIFIED\"\r\n    },\r\n    \"voice_backend\": {\r\n      \"owner\": \"A\",\r\n      \"manifest\": \"modules/voice_A/manifest.json\",\r\n      \"status\": \"PRESENT_UNVERIFIED\"\r\n    }\r\n  },\r\n  \"runtime\": \"NOT_TESTED\",\r\n  \"board\": \"NOT_TESTED\"\r\n}\r\n"
+    }
+  ]
+}

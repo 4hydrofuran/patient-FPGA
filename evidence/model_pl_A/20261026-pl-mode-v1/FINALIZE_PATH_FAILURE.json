@@ -1,0 +1,15 @@
+{
+  "status": "PRESERVED_FINALIZER_PATH_FAILURE",
+  "command": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "/mnt/c/Patientqwen/platform/qwen35/a12/plmode_finalize.py"
+  ],
+  "exit_code": 1,
+  "reason": "Legacy BASELINE contains Windows C:/Patientqwen paths; WSL finalizer read them as relative paths. Add explicit workspace-prefix translation, no missing-file exemption.",
+  "governance_modified": false,
+  "BOARD": "NOT_TESTED"
+}

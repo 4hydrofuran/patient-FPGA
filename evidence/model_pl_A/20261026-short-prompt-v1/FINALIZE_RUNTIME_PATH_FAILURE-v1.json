@@ -1,0 +1,13 @@
+{
+  "status": "PRESERVED_FINALIZER_RUNTIME_PATH_FAILURE",
+  "command": [
+    "python3",
+    "-B",
+    "platform/qwen35/a12/promptcopy_finalize.py"
+  ],
+  "exit_code": 1,
+  "reason": "Finalizer searched only the LD_LIBRARY_PATH directory. Frozen mathematical DSOs are also loaded through original ELF RPATH. No actual runtime missing or model rerun.",
+  "fix": "Resolve each exact loaded DSO hash from the immediate parent reviewed artifact registry; verify current bytes. No missing-file exemption.",
+  "governance_modified": false,
+  "BOARD": "NOT_TESTED"
+}

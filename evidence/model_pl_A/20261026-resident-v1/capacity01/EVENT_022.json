@@ -1,0 +1,84 @@
+{
+  "op": "close",
+  "value": {
+    "type": "closed",
+    "result": {
+      "status": "PASS_ACTUAL_QWEN_PLM_CPU_WINDOW_NOT_BOARD",
+      "cap": 72,
+      "completed": [
+        "warm_prefix",
+        "model_1",
+        "model_2",
+        "model_3",
+        "model_4",
+        "model_5",
+        "model_6"
+      ],
+      "claims": 3384,
+      "model_requests": 7,
+      "validated_answers": 6,
+      "private_messages": 48,
+      "legacy_sequences": {
+        "router": 2,
+        "backend": 73
+      },
+      "page": {
+        "BOARD": "NOT_TESTED",
+        "active": false,
+        "claims": 3384,
+        "context_sha256": "b65ae3083d0b2079d9353d2f1b11a1903f7013e7f81c2bf4c90f3a124d1fbc93",
+        "generation": 8,
+        "grant_limit": 3384,
+        "hardware_completions": null,
+        "phase": 2,
+        "release_allowed": false,
+        "request_end": 4680,
+        "request_serial": 7,
+        "request_sha256": "18aa5f157542a0199e7bc52a20f79a631509b345ef853655f7dc4ebd2b5b789a",
+        "revoked": true,
+        "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+        "start_intent": false,
+        "state": 9223372071214517560,
+        "unknown_io": false,
+        "worker_pid": 410,
+        "worker_start_ticks": 656
+      },
+      "journal_records": 142,
+      "journal_bytes": 72520,
+      "all_threads_stopped": true,
+      "worker_exit_code": 0,
+      "private_close_packet": {
+        "domain": "PC",
+        "private_control": {
+          "checked_copy_bytes": 14942208,
+          "closed": true,
+          "copy_checks": 504,
+          "enabled": true,
+          "failed": false,
+          "release_allowed": false,
+          "request_active": false,
+          "request_sha256": "18aa5f157542a0199e7bc52a20f79a631509b345ef853655f7dc4ebd2b5b789a",
+          "schema": "A12_MODEL_PLM_ROUTE_V1"
+        },
+        "status": "NATIVE_CONTEXT_CLOSED_NOT_PLATFORM_RELEASE",
+        "type": "private_closed"
+      },
+      "actual_FPGA_calls": null,
+      "BOARD": "NOT_TESTED",
+      "production_enabled": false,
+      "release_allowed": false,
+      "provider_domain": "PC_CPU_MODEL"
+    },
+    "generated": [
+      "model_1",
+      "model_2",
+      "model_3",
+      "model_4",
+      "model_5",
+      "model_6"
+    ],
+    "software_test_only": true,
+    "actual_FPGA_calls": null,
+    "release_allowed": false
+  }
+}

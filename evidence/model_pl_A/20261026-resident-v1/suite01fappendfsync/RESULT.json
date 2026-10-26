@@ -1,0 +1,80 @@
+{
+  "status": "FAILED_PC_CONTROL_WINDOW_RETAINED",
+  "reason": "journal: injected complete-record fsync failure",
+  "page": {
+    "BOARD": "NOT_TESTED",
+    "active": false,
+    "claims": 936,
+    "context_sha256": "8ed9a785d3b364ad23fb9fdc7f563cfd7ce7a8527ef55464c763553b54c5402f",
+    "generation": 3,
+    "grant_limit": 936,
+    "hardware_completions": null,
+    "phase": 2,
+    "release_allowed": false,
+    "request_end": 2160,
+    "request_serial": 2,
+    "request_sha256": "c91f94802ae80588ba8339530ca93a290d4de86f8ff6ca661e586d5ea77a4aa0",
+    "revoked": true,
+    "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+    "start_intent": false,
+    "state": 9223372049739678632,
+    "unknown_io": false,
+    "worker_pid": 494,
+    "worker_start_ticks": 35773
+  },
+  "completed": [
+    "warm_prefix",
+    "model_1"
+  ],
+  "control_results": 2,
+  "worker_exit_code": 2,
+  "owned_pidfd_terminal": true,
+  "dirty_marker_retained": true,
+  "writer_FD_retained": true,
+  "all_threads_stopped": true,
+  "legacy_sequences": {
+    "router": 1,
+    "backend": 73
+  },
+  "private_messages": 14,
+  "BOARD": "NOT_TESTED",
+  "release_allowed": false,
+  "replay_allowed": false,
+  "error": null,
+  "independent_page": {
+    "BOARD": "NOT_TESTED",
+    "active": false,
+    "claims": 936,
+    "context_sha256": "8ed9a785d3b364ad23fb9fdc7f563cfd7ce7a8527ef55464c763553b54c5402f",
+    "generation": 3,
+    "grant_limit": 936,
+    "hardware_completions": null,
+    "manager_epoch": "6b72dc683b7f982257ac991dd7225e37",
+    "manager_pid": 493,
+    "manager_start_ticks": 35664,
+    "phase": 2,
+    "release_allowed": false,
+    "request_end": 2160,
+    "request_serial": 2,
+    "request_sha256": "c91f94802ae80588ba8339530ca93a290d4de86f8ff6ca661e586d5ea77a4aa0",
+    "revoked": true,
+    "schema": "PC_PLM_SHARED_AUTHORITY_V1",
+    "source_slot": {
+      "context_sha256": "8ed9a785d3b364ad23fb9fdc7f563cfd7ce7a8527ef55464c763553b54c5402f",
+      "domain": 1,
+      "epoch_sha256": "fdf8f9d34318ce25de7755ebdc15e17187d499236bbda960f5ef75388b781173",
+      "identity_sha256": "fb0a14a90948c1535907010fbee0d43b2e570a024a8ceb66da3955e5d5802090",
+      "state": 9223372036854775810
+    },
+    "start_intent": false,
+    "state": 9223372049739678632,
+    "unknown_io": false,
+    "worker_pid": 494,
+    "worker_start_ticks": 35773
+  },
+  "application_generated": [
+    "model_1"
+  ],
+  "external_inputs": 1,
+  "rejections": 0
+}

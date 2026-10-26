@@ -1,0 +1,8 @@
+{
+  "command": ["wsl", "-d", "KV260-A-2204", "--", "python3", "/mnt/c/Patientqwen/platform/qwen35/a12/livegen_audit.py", "--suite", "model02"],
+  "exit_code": 1,
+  "error": "KeyError: claims in modelpl_audit.py#live-source-audit line 88",
+  "cause": "New event branch shadowed original audit RESULT variable meta with LIVE_SOURCE metadata",
+  "resolution": "Use a separate source_meta name and rerun the full independent audit without changing runtime records or acceptance conditions",
+  "status": "RETAINED_AUDITOR_FAILURE_NOT_A_MODEL_ACCEPTANCE_RESULT"
+}

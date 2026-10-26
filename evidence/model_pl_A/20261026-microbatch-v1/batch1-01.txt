@@ -1,0 +1,186 @@
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "strict", "id": "app_R0", "cpu_calls": 1440, "PL_calls": 0}
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "strict", "id": "warm_prefix", "cpu_calls": 2088, "PL_calls": 0}
+{"event": "NATIVE_REQUEST_VERIFIED", "mode": "strict", "id": "app_hit", "cpu_calls": 2880, "PL_calls": 0}
+{
+  "status": "PASS_ACTUAL_PC_MODEL_WITH_REQUEST_JOURNAL",
+  "domain": "PC_NATIVE_MATH_NOT_FPGA",
+  "journal_mode": "strict",
+  "workspace": "/home/member-a/kv260-build/a12-microbatch-20261026-v2/run-batch1-01",
+  "worker_exit_code": 0,
+  "worker_closed": true,
+  "actual_cpu_permits": 2880,
+  "actual_cpu_weight_loads": 72,
+  "owner_checks": 6335,
+  "health_checks": 3376,
+  "journal_rows": 2962,
+  "journal_bytes": 4366174,
+  "journal_sha256": "675fcae59602250c8f2ed95263de576324e54279274e14f70924e69be710020f",
+  "permission_metrics": {
+    "calls": 2955,
+    "owner_check_ms": 461.92969800000003,
+    "health_check_ms": 1478.0127780000018,
+    "durable_permission_record_ms": 13234.652080999973
+  },
+  "timing_PC_ONLY": [
+    {
+      "TTFT_app_ms": 8456.631523,
+      "complete_app_ms": 11179.30292,
+      "cache": {
+        "hit": false,
+        "lookup_ms": 0.0,
+        "new_tokens": 107,
+        "policy": "R0",
+        "reason": "EXPLICIT_R0",
+        "restore_error": null,
+        "restore_ms": 0.0,
+        "reused_tokens": 0
+      },
+      "journal_mode": "strict"
+    },
+    {
+      "TTFT_app_ms": 3060.706018,
+      "complete_app_ms": 5748.696251,
+      "cache": {
+        "hit": true,
+        "lookup_ms": 18.267806,
+        "new_tokens": 37,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 31.512092,
+        "reused_tokens": 70,
+        "snapshot_bytes": 22058035
+      },
+      "journal_mode": "strict"
+    }
+  ],
+  "request_summaries": [
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "new_prefill_tokens": 107,
+      "decode_calls": 6,
+      "actual_cpu_calls": 1440,
+      "cumulative_cpu_calls": 1440,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    },
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": null,
+      "new_prefill_tokens": 70,
+      "decode_calls": 0,
+      "actual_cpu_calls": 648,
+      "cumulative_cpu_calls": 2088,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    },
+    {
+      "domain": "PC_NATIVE_MATH_NOT_FPGA",
+      "content": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "new_prefill_tokens": 37,
+      "decode_calls": 6,
+      "actual_cpu_calls": 792,
+      "cumulative_cpu_calls": 2880,
+      "hardware_completions": null,
+      "state_cleared": true,
+      "native_resident_sha256": "d19573a3284c892c2f907fec584e9511b965b875f21a85be5bb36c84418a8ee9"
+    }
+  ],
+  "R0_hit_comparison": {
+    "equal": true,
+    "compared_fields": [
+      "status",
+      "output_tokens",
+      "text",
+      "eos",
+      "decode_calls",
+      "last_prompt_logits_fnv64",
+      "last_prompt_logits_sha256",
+      "state_position_before_clear",
+      "state_position_after_clear",
+      "state_cleared_before_response"
+    ],
+    "full_intermediate_state": "NOT_TESTED",
+    "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+  },
+  "original_CPU_comparison": {
+    "app_R0": {
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    },
+    "app_hit": {
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    }
+  },
+  "libraries": {
+    "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+    "liba12_native_cpu_control.so": "6ad3b8367d57df3d6be01542abe848bc18c456bb56c3297be2e9a93834187488",
+    "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+    "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+    "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+    "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+  },
+  "native_identity": {
+    "adapter_sha256": "6ad3b8367d57df3d6be01542abe848bc18c456bb56c3297be2e9a93834187488",
+    "cpu_library_sha256": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15",
+    "native_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+    "route_config_sha256": "9b4abf08199e2701f1ffa5719272a8ecb5cbedc4580657560a17a62eef25ca0b",
+    "prefix_config_sha256": "84fc3759b1c314cca915af002c536f5a5e12fcdf6dcefb12edbd1b287fc9898d"
+  },
+  "raw_diagnostic_files": 0,
+  "PL_calls": 0,
+  "hardware_completions": null,
+  "BOARD": "NOT_TESTED",
+  "board_latency_saving_s": null,
+  "board_CMA": "NOT_TESTED",
+  "elapsed_PC_s": 45.724349929,
+  "fault_injection": null,
+  "validated_answers": [
+    "app_R0",
+    "app_hit"
+  ]
+}

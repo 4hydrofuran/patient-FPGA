@@ -1,0 +1,201 @@
+{
+  "pc_edits": {
+    "plm_page.hpp": [
+      [
+        "e->request_serial.load()<3",
+        "e->request_serial.load()<9"
+      ],
+      [
+        "gen<=4",
+        "gen<=10"
+      ]
+    ],
+    "plm_control.hpp": [
+      [
+        "generation<=4",
+        "generation<=10"
+      ],
+      [
+        "extra(p)->request_serial.load()==3",
+        "(extra(p)->request_serial.load()>=1&&extra(p)->request_serial.load()<=9)"
+      ],
+      [
+        "{{\"schema\",\"PC_PLM_BACKEND_CONTROL_V1\"},{\"batches\",batches}",
+        "{{\"schema\",\"PC_PLM_BACKEND_CONTROL_V1\"},{\"request_limit\",9},{\"batches\",batches}"
+      ]
+    ]
+  },
+  "arm_edits": {
+    "plm_page.hpp": [
+      [
+        "e->request_serial.load()<3",
+        "e->request_serial.load()<9"
+      ],
+      [
+        "gen<=4",
+        "gen<=10"
+      ]
+    ],
+    "plm_control.hpp": [
+      [
+        "generation<=4",
+        "generation<=10"
+      ],
+      [
+        "extra(p)->request_serial.load()==3",
+        "(extra(p)->request_serial.load()>=1&&extra(p)->request_serial.load()<=9)"
+      ],
+      [
+        "{{\"schema\",\"PC_PLM_BACKEND_CONTROL_V1\"},{\"batches\",batches}",
+        "{{\"schema\",\"PC_PLM_BACKEND_CONTROL_V1\"},{\"request_limit\",9},{\"batches\",batches}"
+      ]
+    ]
+  },
+  "PC": [
+    {
+      "name": "bridge.hpp",
+      "sha256": "0221bf77e94bd30c687e39580e7623a1e978df937295b3703b7420ed99d45569"
+    },
+    {
+      "name": "diagnostic_io.hpp",
+      "sha256": "2f0eb2d10d5afeed1d2a51e33f60490afd94b090dcb184193c18b35951f63f02"
+    },
+    {
+      "name": "generation.map",
+      "sha256": "5a9d698bbcf995254fb0acea2689c470042f398ea507b2b879780e911ae93850"
+    },
+    {
+      "name": "generation_cpu.cpp",
+      "sha256": "dbe627ee36368bd872100c283ec6174fc288b19941ca07ca3bd0d9c02dc5f8a5"
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa"
+    },
+    {
+      "name": "generation_writer.cpp",
+      "sha256": "f2c61b4b2ad7d6e5748c8552e1d64a39b0286f8aee93a6ce465f71f414a61584"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "f6054633b41b107753ce19bb4f9a684f65f49fe3193a542710c961e5156e45d9"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "6fd5fd218507aa3675a550a06ab7f90ad6b6a537a29a549fb0c9254ddb0d80e4"
+    },
+    {
+      "name": "plm_writer.cpp",
+      "sha256": "c11ad2cd9165267bf8da48d6dadf10b6fdca01ba3ed810d2771b0755585be086"
+    },
+    {
+      "name": "prefix_cache.hpp",
+      "sha256": "c7694e4777355275c85419fd6b806b74d32dc98d44f77c8488574134db3544d5"
+    },
+    {
+      "name": "request_profile.hpp",
+      "sha256": "dcf5dfa36ae08ca8d678f2805538831cce8350bcd3672bf2456f866dacad7720"
+    },
+    {
+      "name": "route.hpp",
+      "sha256": "3ce6871c4a0f916c723ea4d6f4d6879f49e153c34c6cd14bd6ee7bb3949b5eda"
+    },
+    {
+      "name": "sp-hook.h",
+      "sha256": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "91299f3457b4a34e99ed14bd0aa622f35b895e25572f1ea60d6b4a6a04e9e102"
+    },
+    {
+      "name": "test_generation_slot.cpp",
+      "sha256": "f6d8df47f9dd723ed41f19ef443229e32af1f5f05f38c04cc1120f8d33ab2011"
+    }
+  ],
+  "ARM": [
+    {
+      "name": "backend.cpp",
+      "sha256": "267775e65d463525f99f7c5c8957a365ec17411a89fa073896d6cf940d00f196"
+    },
+    {
+      "name": "generation_slot.hpp",
+      "sha256": "205a454ee0329e78a846d07c548bf781d97ea5c7d9c99ab0256ec6d8811c73aa"
+    },
+    {
+      "name": "host_contract.cpp",
+      "sha256": "a82d6dfe0b91912e8c98156b1d3e7b5537c7c0ce139e3dc4d802f477425f8749"
+    },
+    {
+      "name": "host_contract.hpp",
+      "sha256": "1713950f7ccf11a98953e98b07195881f294fdbee38376165f1d9b5069edb7cf"
+    },
+    {
+      "name": "json.hpp",
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "name": "managed_lock.hpp",
+      "sha256": "86df443a0e4ddbd687c0d5edcfae44cde50b858cb60bf0befcbf07cc5f68efb6"
+    },
+    {
+      "name": "observer.map",
+      "sha256": "0b4d68a8bfd2f11bfac975449c97db14dad54d38fdb6649e4485fec5bd6c90d4"
+    },
+    {
+      "name": "pl_auth_gate.hpp",
+      "sha256": "fd5bc64a64131d4adeac9348f561d1aa18d4cfb2436816a5dd200586d5ea2a5e"
+    },
+    {
+      "name": "plm_control.hpp",
+      "sha256": "f6054633b41b107753ce19bb4f9a684f65f49fe3193a542710c961e5156e45d9"
+    },
+    {
+      "name": "plm_page.hpp",
+      "sha256": "6fd5fd218507aa3675a550a06ab7f90ad6b6a537a29a549fb0c9254ddb0d80e4"
+    },
+    {
+      "name": "plm_writer.cpp",
+      "sha256": "c11ad2cd9165267bf8da48d6dadf10b6fdca01ba3ed810d2771b0755585be086"
+    },
+    {
+      "name": "plmode_observer.cpp",
+      "sha256": "121da4fa4c97cd0842707a4e585192b0be54198123f84c621414f19d3f2302e4"
+    },
+    {
+      "name": "private.map",
+      "sha256": "f7b62ccc184462b366578cd87dc21b24adde477e16c2d44b82657d97b2c11177"
+    },
+    {
+      "name": "release_gate.hpp",
+      "sha256": "9ade95d427b7b8e464678e6b46ce943f1f853e9a61504cf8202ab8dfa31050a9"
+    },
+    {
+      "name": "sp_linear_v1.h",
+      "sha256": "d97e544444b8566a32d0bd25e67e2e548f71678ac6e63ac63e96aa415b1a76f9"
+    },
+    {
+      "name": "supervisor_gate.hpp",
+      "sha256": "13140052ce691dda246619a0594b85c4464bfbd6cd6d34aac13293a00c8de1bf"
+    }
+  ],
+  "private_request_limit": 9,
+  "total_runs_unchanged": 5000,
+  "health_age_ns_unchanged": 250000000,
+  "source_slot_domains_unchanged": true,
+  "public_ABI_unchanged": true,
+  "math_changed": false,
+  "ARM_execution": "NOT_EXECUTED"
+}

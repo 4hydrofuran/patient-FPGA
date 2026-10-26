@@ -1,0 +1,53 @@
+{
+  "status": "PASS_RAW_PRIVATE_PROMPT_WINDOWS",
+  "windows": [
+    {
+      "folder": "pilot01/DEV-001-cap72",
+      "status": "PASS_NORMAL_PRIVATE_CPU_WINDOW",
+      "cohort_id": "DEV-001",
+      "cap": 72,
+      "actual_CPU_claims": 1872,
+      "grant_records": 26,
+      "answers": [
+        {
+          "id": "app_R0",
+          "content": {
+            "status": "pass",
+            "covered_fact_ids": [
+              "location"
+            ],
+            "failure_bucket": null,
+            "reason": "whole_relation_grammar"
+          },
+          "send_to_verified_answer_s": 2.067921267,
+          "internal_first_token_s": 1.471823442,
+          "new_tokens": 49,
+          "actual_CPU_calls": 936
+        },
+        {
+          "id": "app_hit",
+          "content": {
+            "status": "pass",
+            "covered_fact_ids": [
+              "location"
+            ],
+            "failure_bucket": null,
+            "reason": "whole_relation_grammar"
+          },
+          "send_to_verified_answer_s": 1.051031412,
+          "internal_first_token_s": 0.486287466,
+          "new_tokens": 15,
+          "actual_CPU_calls": 576
+        }
+      ],
+      "source_slot_domain": 1,
+      "stdout_packets": 17,
+      "full_state_scope": "RUNTIME_SHA_DIGESTS_NO_RAW_INTERMEDIATE_FILES",
+      "BOARD": "NOT_TESTED",
+      "actual_PL_results_consumed": false,
+      "release_allowed": false
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "actual_PL_results_consumed": false
+}

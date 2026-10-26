@@ -1,0 +1,9 @@
+{
+  "stage": "start",
+  "utc": "2026-10-26T10:29:05.8635812Z",
+  "source_sha256": "49fc8343b10cfd7b8edced7cdf86584036aff96928395c3b0ae02c24c9b74e4f",
+  "output": "sudo -p __A12_PL_AUTH__: /usr/bin/python3 -B -I -c \"import urllib.request,hashlib; b=urllib.request.urlopen('http://192.168.2.1:8765/start.py',timeout=15).read(65536); assert hashlib.sha256(b).hexdigest()=='49fc8343b10cfd7b8edced7cdf86584036aff96928395c3b0ae02c24c9b74e4f'; exec(compile(b,'reviewed_original_pl_start','exec'))\"\r\n\u001b[?2004l\r{\"event\": \"PL_MANAGER_STARTED\", \"pid\": 2605}\r\n{\"event\": \"PL_PROGRESS\", \"completed\": []}\r\n__PL_BEGIN__\r\n{\"status\": \"FAILED_OR_OWNER_RETAINED\", \"manager_pid\": 2605, \"exit_code\": 1, \"stdout_tail\": \"\", \"stderr_tail\": \"Traceback (most recent call last):\\n  File \\\"/var/lib/kv260-a12/original-pl-20261026-v1/run_bound_original.py\\\", line 13, in <module>\\n    module.run_bound_original()\\n  File \\\"/var/lib/kv260-a12/original-pl-20261026-v1/bundle/control/resource_probe_manager.py#fresh-reviewed-binding\\\", line 225, in run_bound_original\\nAssertionError\\n\", \"cases\": {}}\r\n__PL_END__\r\n",
+  "error": null,
+  "credentials_logged": false,
+  "completed_utc": "2026-10-26T10:29:46.9418656Z"
+}

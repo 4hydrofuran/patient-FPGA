@@ -1,0 +1,142 @@
+{
+  "status": "PASS_PC_LIVE_SOURCE_AND_ORIGINAL_BO_POLICY",
+  "tests": [
+    {
+      "test": "full_bind_resident_terminal_and_fresh_release_order",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "same_text_same_UUID_recreated_node_refuses_old_generation",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_kernel_allowed_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_memory_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_cma_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_temp_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_closing_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "health_skipped_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "expired_original_lease_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "context_xclbin_uuid_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "context_worker_start_ticks_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "context_device_name_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "context_groups_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "context_io_addresses_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "capability_JSON_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "capability_copy_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "capability_wrong_context_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "capability_replay_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_BO_count_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_BO_sum_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_BO_overlap_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_BO_low2G_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_BO_io_generation_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "active_native_mutation_revokes_before_release_and_is_refused",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "fresh_release_failure_cannot_be_replaced_by_old_receipt",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "terminal_pidfd_does_not_clear_unknown_IO_policy",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "same_owned_pidfd_exit_revokes",
+      "status": "PASS_PC_ONLY"
+    },
+    {
+      "test": "original_PL_command_and_GDM_paths_both_interlocked",
+      "status": "PASS_PC_WRAPPER"
+    },
+    {
+      "test": "restore_reuses_original_loaded_or_absent_module_release_gate",
+      "status": "PASS_PC_WRAPPER"
+    },
+    {
+      "test": "native_both_actual_flocks_inherited",
+      "status": "PASS_PC_OS_HANDLES"
+    },
+    {
+      "test": "native_missing_inherited_locks_refused",
+      "status": "PASS_PC_OS_HANDLES"
+    },
+    {
+      "test": "anchored_original_lease_full_SHA_once_no_cached_verdict",
+      "status": "PASS_PC_POLICY_ONLY"
+    },
+    {
+      "test": "Board_factory_cannot_be_overridden_on_PC",
+      "status": "PASS_REFUSAL"
+    }
+  ],
+  "count": 33,
+  "verification_layer": "PC_OS_HANDLES_PLUS_EXPLICIT_SYNTHETIC_BOARD_POLICY_FIXTURES",
+  "actual_Board_health": false,
+  "actual_Board_BO_allocations": null,
+  "BOARD": "NOT_TESTED"
+}
