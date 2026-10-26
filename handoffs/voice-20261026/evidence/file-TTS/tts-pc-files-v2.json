@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--exec",
+    "/usr/bin/unshare",
+    "-Urn",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-B",
+    "-m",
+    "modules.voice_A.file_tts",
+    "--root",
+    "/mnt/c/Patientqwen",
+    "--output-dir",
+    "/mnt/c/Patientqwen/evidence/a13_A/20261024-audio-nowire-tts-v1/tts-pc-files-v2",
+    "--pc-validation"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T15:39:51.706212+00:00",
+  "elapsed_s": 6.729135900037363,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"SYNTHESIZED_FILES_ONLY_NOT_PLAYED\", \"domain\": \"PC_x86_64\", \"load_ms\": 3494.072724000006, \"synthesis_ms\": 194.00918599998818, \"source_duration_s\": 2.9605442176870747, \"max_rss_KiB_linux\": 303776, \"playback\": false}\n",
+  "stderr": "/project/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2\n/project/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2\n/project/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2\n/project/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2\n"
+}

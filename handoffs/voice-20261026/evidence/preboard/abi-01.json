@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl.exe",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py",
+    "abi"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-26T10:38:55.729636+00:00",
+  "elapsed_s": 6.391220799996518,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py\", line 163, in <module>\n    {'abi': abi, 'dt': dt, 'seal': seal}[a.mode]()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py\", line 76, in abi\n    assert info['license'] == 'GPL'\nAssertionError\n"
+}

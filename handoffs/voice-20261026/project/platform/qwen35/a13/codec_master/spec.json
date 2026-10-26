@@ -1,0 +1,455 @@
+{
+  "modules": [
+    {
+      "name": "audio_input_sampler",
+      "feature": "codec_master",
+      "rtl_path": "rtl/audio_input_sampler.v",
+      "interfaces": {
+        "ports": [
+          {
+            "name": "i_clk",
+            "direction": "input",
+            "width": 1,
+            "description": "PS输出的唯一过采样时钟",
+            "role": "PS输出的唯一过采样时钟",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_rstn",
+            "direction": "input",
+            "width": 1,
+            "description": "专用复位器输出",
+            "role": "专用复位器输出",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_bclk",
+            "direction": "input",
+            "width": 1,
+            "description": "H12上的异步位时钟电平，仅作为数据",
+            "role": "H12上的异步位时钟电平，仅作为数据",
+            "clock_domain": "external_async"
+          },
+          {
+            "name": "i_lrclk",
+            "direction": "input",
+            "width": 1,
+            "description": "E10上的异步左右标记",
+            "role": "E10上的异步左右标记",
+            "clock_domain": "external_async"
+          },
+          {
+            "name": "i_adcdat",
+            "direction": "input",
+            "width": 1,
+            "description": "C11上的异步录音位",
+            "role": "C11上的异步录音位",
+            "clock_domain": "external_async"
+          },
+          {
+            "name": "o_rise",
+            "direction": "output",
+            "width": 1,
+            "description": "延迟上升事件",
+            "role": "延迟上升事件",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_fall",
+            "direction": "output",
+            "width": 1,
+            "description": "延迟下降事件",
+            "role": "延迟下降事件",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_channel",
+            "direction": "output",
+            "width": 1,
+            "description": "已稳定的声道电平",
+            "role": "已稳定的声道电平",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_sample",
+            "direction": "output",
+            "width": 1,
+            "description": "已稳定的ADC位",
+            "role": "已稳定的ADC位",
+            "clock_domain": "i_clk"
+          }
+        ]
+      },
+      "clock": {
+        "name": "i_clk",
+        "edge": "posedge",
+        "nominal_hz": 99999001
+      },
+      "reset": {
+        "name": "i_rstn",
+        "active_level": 0,
+        "type": "asynchronous_assert_synchronous_release_by_proc_sys_reset"
+      },
+      "behavior": [
+        "三个独立三级ASYNC_REG链，BCLK额外延迟四拍后产生注册边沿。",
+        "LR和ADC先稳定，再由串行引擎在延迟事件消费；不使用BCLK驱动PL时钟网络。"
+      ],
+      "constraints": [
+        "Verilog-2001；单系统时钟，固定16位槽、48kHz双声道。",
+        "时钟/数据入口与片外建立保持采用独立预算；亚稳态不能由RTL仿真证明消失。"
+      ],
+      "corner_cases": [
+        "上电或重新使能处于半帧时，必须等真实左起点。",
+        "失钟/欠载/阻塞/错误槽宽或包尾需要STOP和显式确认后恢复。"
+      ],
+      "verification_cases": [
+        "独立帧模型；异步相位、40%-60%占空、左右LSB跨界。",
+        "xsim正常520帧与五类故障；周期和输入偏斜扫查，综合/实现/CDC/STA单独列证据。"
+      ],
+      "timing_diagrams": [
+        {
+          "id": "boundary",
+          "title": "已确认接口的示意时序（不是实测波形）",
+          "scenario": "i2s_boundary",
+          "description": "波形是合同示意；实际仿真必须另读xsim日志。",
+          "wavejson": {
+            "signal": [
+              {
+                "name": "i_clk",
+                "wave": "p.........."
+              },
+              {
+                "name": "i_bclk",
+                "wave": "01........."
+              },
+              {
+                "name": "sync_final",
+                "wave": "0..1......."
+              },
+              {
+                "name": "o_rise",
+                "wave": "0.......10."
+              }
+            ],
+            "config": {
+              "hscale": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "audio_serial_slave",
+      "feature": "codec_master",
+      "rtl_path": "rtl/audio_serial_slave.v",
+      "interfaces": {
+        "ports": [
+          {
+            "name": "i_clk",
+            "direction": "input",
+            "width": 1,
+            "description": "与AXI相同的系统时钟",
+            "role": "与AXI相同的系统时钟",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_rstn",
+            "direction": "input",
+            "width": 1,
+            "description": "专用低有效复位",
+            "role": "专用低有效复位",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_rise",
+            "direction": "input",
+            "width": 1,
+            "description": "已同步的上升事件",
+            "role": "已同步的上升事件",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_fall",
+            "direction": "input",
+            "width": 1,
+            "description": "已同步的下降事件",
+            "role": "已同步的下降事件",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_channel",
+            "direction": "input",
+            "width": 1,
+            "description": "稳定LR",
+            "role": "稳定LR",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_sample",
+            "direction": "input",
+            "width": 1,
+            "description": "稳定ADC位",
+            "role": "稳定ADC位",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_control",
+            "direction": "input",
+            "width": 32,
+            "description": "位0播放、位1采集、位2仅停机时确认错误",
+            "role": "位0播放、位1采集、位2仅停机时确认错误",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_s_axis_tdata",
+            "direction": "input",
+            "width": 32,
+            "description": "播放L低16/R高16",
+            "role": "播放L低16/R高16",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_s_axis_tlast",
+            "direction": "input",
+            "width": 1,
+            "description": "发送第256帧包尾",
+            "role": "发送第256帧包尾",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_s_axis_tvalid",
+            "direction": "input",
+            "width": 1,
+            "description": "播放负载所有权",
+            "role": "播放负载所有权",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_s_axis_tready",
+            "direction": "output",
+            "width": 1,
+            "description": "注册预取许可",
+            "role": "注册预取许可",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_m_axis_tdata",
+            "direction": "output",
+            "width": 32,
+            "description": "录音L低16/R高16",
+            "role": "录音L低16/R高16",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_m_axis_tlast",
+            "direction": "output",
+            "width": 1,
+            "description": "保持型录音包尾",
+            "role": "保持型录音包尾",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_m_axis_tvalid",
+            "direction": "output",
+            "width": 1,
+            "description": "保持型录音所有权",
+            "role": "保持型录音所有权",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "i_m_axis_tready",
+            "direction": "input",
+            "width": 1,
+            "description": "内存接收许可",
+            "role": "内存接收许可",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_dacdat",
+            "direction": "output",
+            "width": 1,
+            "description": "D10唯一数字输出",
+            "role": "D10唯一数字输出",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_status",
+            "direction": "output",
+            "width": 32,
+            "description": "0xa13c签名与锁存诊断",
+            "role": "0xa13c签名与锁存诊断",
+            "clock_domain": "i_clk"
+          },
+          {
+            "name": "o_irq",
+            "direction": "output",
+            "width": 1,
+            "description": "错误保持型中断",
+            "role": "错误保持型中断",
+            "clock_domain": "i_clk"
+          }
+        ]
+      },
+      "clock": {
+        "name": "i_clk",
+        "edge": "posedge",
+        "nominal_hz": 99999001
+      },
+      "reset": {
+        "name": "i_rstn",
+        "active_level": 0,
+        "type": "asynchronous_assert_synchronous_release_by_proc_sys_reset"
+      },
+      "behavior": [
+        "固定I2S一位延迟，边界上升采旧字LSB；下降事件寄存译码后装下一字。",
+        "所有控制、状态、弹性缓冲和DMA流均属于i_clk，无独立48k采样发生器。",
+        "TX缓存仅一帧；RX在空间不足时锁存错误，不覆盖旧负载。",
+        "注册指令增加系统拍延迟，器件端采样率仍由WM8960决定。",
+        "错误位0失钟、1槽宽、2欠载、3溢出、4包尾；位6播放对齐、7帧锁定。"
+      ],
+      "constraints": [
+        "Verilog-2001；单系统时钟，固定16位槽、48kHz双声道。",
+        "时钟/数据入口与片外建立保持采用独立预算；亚稳态不能由RTL仿真证明消失。"
+      ],
+      "corner_cases": [
+        "上电或重新使能处于半帧时，必须等真实左起点。",
+        "失钟/欠载/阻塞/错误槽宽或包尾需要STOP和显式确认后恢复。"
+      ],
+      "verification_cases": [
+        "独立帧模型；异步相位、40%-60%占空、左右LSB跨界。",
+        "xsim正常520帧与五类故障；周期和输入偏斜扫查，综合/实现/CDC/STA单独列证据。"
+      ],
+      "timing_diagrams": [
+        {
+          "id": "boundary",
+          "title": "已确认接口的示意时序（不是实测波形）",
+          "scenario": "i2s_boundary",
+          "description": "波形是合同示意；实际仿真必须另读xsim日志。",
+          "wavejson": {
+            "signal": [
+              {
+                "name": "BCLK",
+                "wave": "p......."
+              },
+              {
+                "name": "LR",
+                "wave": "10......"
+              },
+              {
+                "name": "serial_bit",
+                "wave": "=.=.=.=.",
+                "data": [
+                  "old LSB",
+                  "new MSB",
+                  "bit14",
+                  "bit13"
+                ]
+              },
+              {
+                "name": "left_consume",
+                "wave": "010....."
+              }
+            ],
+            "config": {
+              "hscale": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tb_audio_serial_slave",
+      "feature": "codec_master",
+      "rtl_path": "tb/tb_audio_serial_slave.v",
+      "interfaces": {
+        "ports": [
+          {
+            "name": "o_pass",
+            "direction": "output",
+            "width": 1,
+            "description": "所有自检完成后才拉高",
+            "role": "所有自检完成后才拉高",
+            "clock_domain": "i_clk"
+          }
+        ]
+      },
+      "clock": {
+        "name": "i_clk",
+        "edge": "posedge",
+        "nominal_hz": 100000000
+      },
+      "reset": {
+        "name": "i_rstn",
+        "active_level": 0,
+        "type": "testbench_internal_async_assert"
+      },
+      "behavior": [
+        "内部10ns系统时钟，独立codec位流与DMA源汇，不读DUT移位寄存器求golden。",
+        "1024帧向量由独立Python模型生成；520帧双向比较及两次256帧TLAST。",
+        "五类故障另测：失钟、错误槽宽、欠载、溢出和错误包尾。",
+        "额外覆盖运行中拒绝清错、非零负载回压保持、半帧启动、单向槽宽监视、复位隔离。",
+        "648..652ns周期和10..30ns LR偏斜为数字压力，不代表振荡器实测或亚稳态模拟。"
+      ],
+      "constraints": [
+        "仅验证，含延时和task，不用于综合或板端部署。",
+        "仿真不能模拟模拟亚稳态或证明MTBF。"
+      ],
+      "corner_cases": [
+        "上电或重新使能处于半帧时，必须等真实左起点。",
+        "失钟/欠载/阻塞/错误槽宽或包尾需要STOP和显式确认后恢复。"
+      ],
+      "verification_cases": [
+        "独立帧模型；异步相位、40%-60%占空、左右LSB跨界。",
+        "xsim正常520帧与五类故障；周期和输入偏斜扫查，综合/实现/CDC/STA单独列证据。"
+      ],
+      "timing_diagrams": [
+        {
+          "id": "boundary",
+          "title": "已确认接口的示意时序（不是实测波形）",
+          "scenario": "i2s_boundary",
+          "description": "波形是合同示意；实际仿真必须另读xsim日志。",
+          "wavejson": {
+            "signal": [
+              {
+                "name": "i_clk_internal",
+                "wave": "p........."
+              },
+              {
+                "name": "test_windows",
+                "wave": "=..=..=..=",
+                "data": [
+                  "duplex",
+                  "faults",
+                  "reset",
+                  "complete"
+                ]
+              },
+              {
+                "name": "o_pass",
+                "wave": "0........1"
+              }
+            ],
+            "config": {
+              "hscale": 2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rtl_style_profile": "erie_strict",
+  "handshake_channels": [
+    {
+      "id": "playback",
+      "valid": "i_s_axis_tvalid",
+      "ready": "o_s_axis_tready",
+      "payload": "i_s_axis_tdata"
+    },
+    {
+      "id": "capture",
+      "valid": "o_m_axis_tvalid",
+      "ready": "i_m_axis_tready",
+      "payload": "o_m_axis_tdata"
+    }
+  ]
+}

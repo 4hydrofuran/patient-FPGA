@@ -1,0 +1,36 @@
+{
+  "status": "PC_BUILD_PREPARED_NOT_INSTALLED",
+  "attempt": 1,
+  "build_dir": "/home/member-a/a13-muted-headers1036-20261025-v1/build-01",
+  "kernel": "6.8.0-1036-xilinx",
+  "package_version": "6.8.0-1036.37",
+  "header_tree": {
+    "schema": "A13_MATCHED_1036_HEADER_TREE_V1",
+    "roots": [
+      "linux-headers-6.8.0-1036-xilinx",
+      "linux-xilinx-headers-6.8.0-1036"
+    ],
+    "files": 26606,
+    "file_bytes": 95309159,
+    "tree_sha256": "f7bdb597e9309edc6780429caa6432d6a977acca7d81fb349f8b26e948b95801"
+  },
+  "header_tree_matches_live_board": true,
+  "driver_source_sha256": {
+    "a13_muted_dma.c": "a2e26c2d823990e1f7f1d433bd691a176b95ad718b8df29b9ef147c2b7082c24",
+    "a13_muted_serial.c": "fe6f74c096caeaa044451bc6f2773056c6b0ce90317c1e4e0fe93c80af52acd8",
+    "a13_muted_codec.c": "13590918c11dc1af4e6a879fa296d0ddeaf7a6810747ead8b4bc405f54823b78",
+    "a13_muted_card.c": "e09536e06ee97c4a520700e4cd51689bbb19d94e8a23cfaac7dfa9fb3dab772f",
+    "internal_dmaengine.h": "09d1c31b6a025adc25a6529854642689ab4302ae19007923f9cfa68f7733ec28",
+    "muted_policy.h": "028a1b02bb46e089c7d645a965e614b77e150a013be9cc0fa0c031be5ae87d21",
+    "Makefile": "36ab89bc2438c34d6690fda9a20af142d6216e792c80034281ba7a47a34bdf80"
+  },
+  "audible_output": false,
+  "board_headers_sha256": {
+    "/usr/src/linux-headers-6.8.0-1036-xilinx/.config": "d0937ab5ab55818252854b3b91d291148c89011e4e5d9f4e2cc134e4c3d9610f",
+    "/usr/src/linux-headers-6.8.0-1036-xilinx/Module.symvers": "860c5609e229079a4836ec694447b89c9aa8ac42c26c0f1f5672d859f8cd1de1",
+    "/usr/src/linux-headers-6.8.0-1036-xilinx/include/generated/autoconf.h": "4c52e3e634f2737efd26b76b5694041417ccddbdd78d09040a483efacee5c3f9",
+    "/usr/src/linux-headers-6.8.0-1036-xilinx/include/generated/utsrelease.h": "fce481a8b52514b5441fb7a79db305e0c76a1fcd319c14cd60fe35754be86853",
+    "/usr/src/linux-headers-6.8.0-1036-xilinx/include/generated/compile.h": "1a183cc71165990f232a2f9c2c111642080358a653364370f26c7c5a4475a23b"
+  },
+  "BOARD": "NOT_TESTED"
+}

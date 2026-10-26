@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl.exe",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py",
+    "dt"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-26T10:38:55.730763+00:00",
+  "elapsed_s": 9.656707299989648,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py\", line 163, in <module>\n    {'abi': abi, 'dt': dt, 'seal': seal}[a.mode]()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a13/fast_preboard/offline.py\", line 128, in dt\n    assert get(merged, fpga, 'firmware-name') == 'xilinx/a13-fast-20261026-v1/codec_master.bit.bin'\nAssertionError\n"
+}

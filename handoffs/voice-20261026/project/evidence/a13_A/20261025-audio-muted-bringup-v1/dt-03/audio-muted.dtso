@@ -1,0 +1,107 @@
+/dts-v1/;
+/plugin/;
+
+/* Exclusive maintenance only: physically muted codec; no capture; not audible release. */
+/ {
+    fragment@0 {
+        target = <&fpga_full>;
+        __overlay__ {
+            firmware-name = "xilinx/a13-muted-20261025-v2/codec_master.bit.bin";
+        };
+    };
+    fragment@10 {
+        target-path = "/";
+        __overlay__ {
+            a13muted_mclk: a13muted-module-oscillator {
+                compatible = "fixed-clock";
+                #clock-cells = <0>;
+                clock-frequency = <24000000>;
+                status = "okay";
+            };
+            a13muted_sound: a13muted-sound {
+                compatible = "patientqwen,a13-muted-card";
+                audio-cpu = <&a13muted_serial>;
+                audio-codec = <&a13muted_codec>;
+                status = "okay";
+            };
+            a13muted_afi: a13muted-afi {
+                compatible = "xlnx,afi-fpga";
+                resets = <&zynqmp_reset 116>, <&zynqmp_reset 117>, <&zynqmp_reset 118>, <&zynqmp_reset 119>;
+                config-afi = <0 0>, <1 0>, <2 0>, <3 0>, <4 0>, <5 0>, <6 0>, <7 0>, <8 0>, <9 0>, <10 0>, <11 0>, <12 0>, <13 0>, <14 0xa00>, <15 0x000>;
+                status = "okay";
+            };
+        };
+    };
+    fragment@1 {
+        target-path = "/";
+        __overlay__ {
+            #address-cells = <2>;
+            #size-cells = <2>;
+            a13muted_bus: a13-muted-audio@a1000000 {
+                compatible = "simple-pm-bus";
+                reg = <0 0xa1000000 0 0x40000>;
+                #address-cells = <2>;
+                #size-cells = <2>;
+                ranges = <0 0xa1000000 0 0xa1000000 0 0x40000>;
+                status = "okay";
+            a13muted_serial: audio-serial@a1000000 {
+                compatible = "patientqwen,a13-muted-serial";
+                reg = <0 0xa1000000 0 0x10000>;
+                #sound-dai-cells = <0>;
+                clocks = <&zynqmp_clk 71>;
+                clock-names = "s_axi_aclk";
+                interrupt-parent = <&gic>;
+                interrupts = <0 107 4>;
+                dmas = <&a13muted_dma 0>, <&a13muted_dma 1>;
+                dma-names = "tx", "rx";
+                status = "okay";
+            };
+            a13muted_dma: dma@a1020000 {
+                compatible = "patientqwen,a13-muted-period-dma";
+                reg = <0 0xa1020000 0 0x10000>;
+                #dma-cells = <1>;
+                xlnx,addrwidth = <32>;
+                xlnx,sg-length-width = <23>;
+                clocks = <&zynqmp_clk 71>, <&zynqmp_clk 71>, <&zynqmp_clk 71>, <&zynqmp_clk 71>;
+                clock-names = "s_axi_lite_aclk", "m_axi_mm2s_aclk", "m_axi_s2mm_aclk", "m_axi_sg_aclk";
+                status = "okay";
+                dma-channel-mm2s {
+                    compatible = "xlnx,axi-dma-mm2s-channel";
+                    interrupt-parent = <&gic>;
+                    interrupts = <0 104 4>;
+                    xlnx,datawidth = <32>;
+                    status = "okay";
+                };
+                dma-channel-s2mm {
+                    compatible = "xlnx,axi-dma-s2mm-channel";
+                    interrupt-parent = <&gic>;
+                    interrupts = <0 105 4>;
+                    xlnx,datawidth = <32>;
+                    status = "okay";
+                };
+            };
+            a13muted_iic: i2c@a1030000 {
+                compatible = "xlnx,axi-iic-2.1", "xlnx,xps-iic-2.00.a";
+                reg = <0 0xa1030000 0 0x10000>;
+                #address-cells = <1>;
+                #size-cells = <0>;
+                clocks = <&zynqmp_clk 71>;
+                clock-frequency = <100000>;
+                interrupt-parent = <&gic>;
+                interrupts = <0 106 4>;
+                status = "okay";
+                a13muted_codec: codec@1a {
+                    compatible = "patientqwen,wm8960-muted-diagnostic";
+                    reg = <0x1a>;
+                    #sound-dai-cells = <0>;
+                    clocks = <&a13muted_mclk>;
+                    clock-names = "mclk";
+                    wlf,shared-lrclk;
+                    wlf,gpio-cfg = <1 0>;
+                    status = "okay";
+                };
+            };
+            };
+        };
+    };
+};

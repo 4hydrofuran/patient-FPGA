@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--exec",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a13/nowire_tts/test_offline.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T15:39:49.424612+00:00",
+  "elapsed_s": 2.1185404000570998,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_32bit_is_separate_not_silent_default (__main__.ClockTests) ... ok\ntest_codec_16bit_profile (__main__.ClockTests) ... ok\ntest_new_input_only_direction_model (__main__.ClockTests) ... ok\ntest_no_playback_api_in_runtime (__main__.ClockTests) ... ok\ntest_old_a06_clock_output_would_contend (__main__.ClockTests) ... ok\ntest_oversampling_arithmetic_sweep (__main__.ClockTests) ... ok\ntest_reject_independent_formatter_cadence (__main__.ClockTests) ... ok\ntest_slow_oversampling_negative_case (__main__.ClockTests) ... ok\ntest_bad_rate_and_gain (__main__.ConverterTests) ... ok\ntest_bad_signal (__main__.ConverterTests) ... ok\ntest_exact_ratio_and_duration (__main__.ConverterTests) ... ok\ntest_explicit_file_gain (__main__.ConverterTests) ... ok\ntest_full_scale_has_no_wrap (__main__.ConverterTests) ... ok\ntest_impulse_preserves_center (__main__.ConverterTests) ... ok\ntest_silence_is_not_random_noise (__main__.ConverterTests) ... ok\ntest_stereo_channels_identical (__main__.ConverterTests) ... ok\ntest_stereo_wav_format (__main__.ConverterTests) ... ok\ntest_symlink_input_rejected (__main__.ConverterTests) ... ok\ntest_tone_frequency_and_image_rejection (__main__.ConverterTests) ... ok\ntest_truncated_wav_rejected (__main__.ConverterTests) ... ok\ntest_wav_roundtrip_and_overwrite_refusal (__main__.ConverterTests) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.130s\n\nOK\n"
+}
