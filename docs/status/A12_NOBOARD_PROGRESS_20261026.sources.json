@@ -1,0 +1,182 @@
+{
+  "report_date_beijing": "2026-10-26",
+  "publication_scope": "REPORT_AND_SOURCE_SUMMARY_ONLY_NOT_NEW_ENGINEERING_RELEASE",
+  "report": {
+    "path": "docs/A12_NOBOARD_PROGRESS_AND_BOARD_READINESS_20261026.md",
+    "sha256": "6aa125c9b9ee81eda2bebb9ac285f7cc4688949d7136fa58a9d16b02bfbb7d86",
+    "bytes": 9001
+  },
+  "sealed_private_chain": {
+    "current_pins_verified": 1455,
+    "cap72_cohorts": 25,
+    "cap1_representatives": 6,
+    "normal_windows": 31,
+    "model_answers": 62,
+    "targeted_fault_windows": 8,
+    "timing": {
+      "scope": "SEND_TO_VERIFIED_RESULT_INCLUDING_CONTENT_END_RECEIPT_FINAL_FENCE",
+      "units": "seconds",
+      "timing": {
+        "cap72_all_25": {
+          "app_R0": {
+            "min": 1.932234503,
+            "median": 2.160720389,
+            "max": 3.403471871
+          },
+          "app_hit": {
+            "min": 0.937805341,
+            "median": 1.132354499,
+            "max": 2.473522597
+          }
+        },
+        "cap1_six_representatives": {
+          "app_R0": {
+            "min": 5.866960008,
+            "median": 8.4080925465,
+            "max": 10.734763607
+          },
+          "app_hit": {
+            "min": 3.49352448,
+            "median": 6.108849442,
+            "max": 8.117738033
+          }
+        }
+      },
+      "repeated_same_input_distribution": false,
+      "cohort_pair_order": "ALL_CAP72_THEN_SIX_CAP1_NOT_RANDOMIZED",
+      "actual_input_routing_and_service_admission_included": false,
+      "load_and_warm_outside_request_clock": true,
+      "p95": null,
+      "BOARD": "NOT_TESTED",
+      "Board_CMA": null,
+      "Board_latency_saving_s": null,
+      "production_SLA": false
+    },
+    "actual_Board_results": false
+  },
+  "resident_work_in_progress": {
+    "native_PC_A53_compiled": true,
+    "nine_request_PC_A53_control_compiled": true,
+    "A53_executed": false,
+    "pilot": "pilot04",
+    "actual_CPU_calls": 360,
+    "validated_answers": 0,
+    "normal_exit_code": 0,
+    "one_warm_only": true,
+    "vocab_compute_claims_before": 0,
+    "vocab_compute_claims_after": 0,
+    "continuous_application_acceptance": false,
+    "production_enabled": false
+  },
+  "last_recorded_board_scene": {
+    "evidence_date": "2026-10-25",
+    "current_live_state_rechecked_in_this_task": false,
+    "kernel": "6.8.0-1036-xilinx",
+    "required_A12_kernel": "6.8.12-a10irq2",
+    "default_platform_observed": true,
+    "latest_completed_scan_processes": 186,
+    "PL_holders_or_mappings": 0,
+    "old_boot_lease_still_present": true,
+    "safe_release": false,
+    "root_cause_resolved": false,
+    "compute_authorization_included": false
+  },
+  "sources": [
+    {
+      "path": "docs/A10_TO_CURRENT_ENGINEERING_SUMMARY_FOR_B_20261025.md",
+      "sha256": "262ae490dd9b150439dc79ee85d64e54a4f07d5baaa10ce7a2afecf68a1c8fc6",
+      "bytes": 20172
+    },
+    {
+      "path": "docs/handoffs/A_A11_COMPLETE_20261023.md",
+      "sha256": "1d291a867da41c77920e05d1ad4e820a4bd334cceb9f5f3bf0f7a03fe2634b1a",
+      "bytes": 1393
+    },
+    {
+      "path": "docs/handoffs/A_A12_RESOURCE_PROBE_PREBOARD_20261025.md",
+      "sha256": "a3d91633ef0898cefa7e2cd30af598c649f23ef45333a26f086b5f9d06ad29a1",
+      "bytes": 5429
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-short-prompt-v1/INDEPENDENT_AUDIT.json",
+      "sha256": "c23cae6016f44e5497d8b1e7c965686290909b5db2df713186fc86391df5fcb6",
+      "bytes": 12779
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/FINAL_REVIEW.json",
+      "sha256": "1cdfd31dfbdcf0c3ef623d4769efd5359ebeead0171027fb645ecaadeee7fdda",
+      "bytes": 326012
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/TERMINAL_VERIFICATION.json",
+      "sha256": "3219d20c66626141248a49dab1605589052a6fdc2f487396c1883429fe7cd523",
+      "bytes": 250
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/cohort02-AUDIT.json",
+      "sha256": "a36179318515cb1372dec5a9e5c7e9042f27f46ecc6ed40f3b26d9ee8daf4b01",
+      "bytes": 33717
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/strict01-AUDIT.json",
+      "sha256": "8d33059e666eb82429f62776c8a1c36bb9dcd206a133e44d84161fe09e1919f2",
+      "bytes": 8298
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/faults01-AUDIT.json",
+      "sha256": "6b548edc5eb60591ce532702046659cfd35a62766aff4c1164b409a32d16f708",
+      "bytes": 3951
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-prompt-private-v1/TIMING_PC_ONLY.json",
+      "sha256": "b4f0537e9c52aad90266bc26ce1c4ec103c4d27e30809f47994753d44951cd82",
+      "bytes": 989
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-resident-v1/NATIVE_REVIEW-v1.json",
+      "sha256": "0c043c749cee1f33d14db5760cc2ca29c2a5e1c9173a64450fce516042bc3d49",
+      "bytes": 584
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-resident-v1/CONTROL_BUILD-v1.json",
+      "sha256": "b1e5265b15b8d8fd52fb6de40c948be453fb4b9d2abe6eb7ebf76dc72f434f02",
+      "bytes": 1399
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-resident-v1/pilot04/RESULT.json",
+      "sha256": "2eb88822b01853d24618ff9ff726340bb622a5f0ecd4d1739ebe0f36fa80305c",
+      "bytes": 2963
+    },
+    {
+      "path": "evidence/model_pl_A/20261026-resident-v1/pilot04/vocab_0-TOKENS.json",
+      "sha256": "9934e135e07afaf336c9b50d1283fb1079f5688e025d51025407f6152b79b8bb",
+      "bytes": 2397
+    },
+    {
+      "path": "evidence/a13_A/20261025-independent-release-readonly-v1/REPORT.md",
+      "sha256": "e5ffa20ba4772757e1c1262427ced4c426526c3eccb4a5ed1817648e43edea11",
+      "bytes": 2422
+    },
+    {
+      "path": "evidence/a13_A/20261025-independent-release-readonly-v1/REVIEW.json",
+      "sha256": "a131d42bcd4cf1addb2747fa1520946d5c5897f2edc1b93a57315f0fa24c6d3f",
+      "bytes": 2502
+    },
+    {
+      "path": "docs/PROJECT_STATUS.json",
+      "sha256": "47fa7ffa071858b58362981319e35ad8a7609ad1328b85038d5e6f90835eaee7",
+      "bytes": 256760
+    }
+  ],
+  "board_contacted": false,
+  "checks": [
+    {
+      "script": "scripts/release/check_contracts.py",
+      "exit_code": 0
+    },
+    {
+      "script": "scripts/release/qwen35_config.py",
+      "exit_code": 0
+    }
+  ]
+}
