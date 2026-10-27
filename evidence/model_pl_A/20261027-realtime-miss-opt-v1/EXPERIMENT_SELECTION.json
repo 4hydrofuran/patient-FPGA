@@ -1,0 +1,214 @@
+{
+  "selected": "v3 / 3 threads / allowed-compact-01 / 34 prefix / 32 output",
+  "selected_policy_sha256": "4a85c658b6b91ac4b9573b8c0d746df0f9bbf07ba385a9395a8d836629f9aa92",
+  "summaries": {
+    "smoke01": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 6,
+      "real_model_requests": 15,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 3,
+      "fallback": 3,
+      "serial_ms": {
+        "min": 738.875268,
+        "median": 930.3740905,
+        "max": 1531.611589,
+        "samples": 6
+      },
+      "draft_ms": {
+        "min": 599.164438,
+        "median": 1147.696392,
+        "max": 2473.744817,
+        "samples": 6
+      },
+      "reduction_ms": {
+        "min": -942.1332279999997,
+        "median": -248.18188750000002,
+        "max": 201.43000199999994,
+        "samples": 6
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "98ccee6c7f5cf71fdfba01098cf941130e8dab5c28000f8727706169031bc18e",
+      "elapsed_s": 40.827651579999994,
+      "BOARD": "NOT_TESTED"
+    },
+    "smoke02": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 11,
+      "real_model_requests": 25,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 11,
+      "fallback": 0,
+      "serial_ms": {
+        "min": 650.113948,
+        "median": 822.740639,
+        "max": 1517.294888,
+        "samples": 11
+      },
+      "draft_ms": {
+        "min": 552.920455,
+        "median": 660.926056,
+        "max": 1088.916749,
+        "samples": 11
+      },
+      "reduction_ms": {
+        "min": 97.1934930000001,
+        "median": 161.81458299999997,
+        "max": 428.3781389999999,
+        "samples": 11
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "98ccee6c7f5cf71fdfba01098cf941130e8dab5c28000f8727706169031bc18e",
+      "elapsed_s": 44.44738431600001,
+      "BOARD": "NOT_TESTED"
+    },
+    "threads3-smoke": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 11,
+      "real_model_requests": 25,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 11,
+      "fallback": 0,
+      "serial_ms": {
+        "min": 611.57234,
+        "median": 763.316895,
+        "max": 1415.308698,
+        "samples": 11
+      },
+      "draft_ms": {
+        "min": 524.475851,
+        "median": 607.228394,
+        "max": 994.531891,
+        "samples": 11
+      },
+      "reduction_ms": {
+        "min": 87.09648900000002,
+        "median": 156.08850100000006,
+        "max": 420.7768070000001,
+        "samples": 11
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "64b6ebe583dc6d4f25cb21991548fed6f9816de02140b539ec924268f1efc925",
+      "elapsed_s": 43.886946794,
+      "BOARD": "NOT_TESTED",
+      "threads": 3,
+      "output_limit": 32
+    },
+    "compact2-smoke": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 11,
+      "real_model_requests": 25,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 11,
+      "fallback": 0,
+      "serial_ms": {
+        "min": 648.83913,
+        "median": 733.50515,
+        "max": 1518.660513,
+        "samples": 11
+      },
+      "draft_ms": {
+        "min": 549.860983,
+        "median": 590.512071,
+        "max": 1090.869368,
+        "samples": 11
+      },
+      "reduction_ms": {
+        "min": 95.68923399999994,
+        "median": 141.76965400000006,
+        "max": 427.79114500000014,
+        "samples": 11
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "64b6ebe583dc6d4f25cb21991548fed6f9816de02140b539ec924268f1efc925",
+      "elapsed_s": 43.676392873,
+      "BOARD": "NOT_TESTED",
+      "threads": 2,
+      "output_limit": 32,
+      "live_miss_prompt_policy": "allowed-compact-01"
+    },
+    "compact3-smoke": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 11,
+      "real_model_requests": 25,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 11,
+      "fallback": 0,
+      "serial_ms": {
+        "min": 606.126691,
+        "median": 684.739817,
+        "max": 1417.955414,
+        "samples": 11
+      },
+      "draft_ms": {
+        "min": 510.826339,
+        "median": 547.17666,
+        "max": 993.297652,
+        "samples": 11
+      },
+      "reduction_ms": {
+        "min": 93.73855700000001,
+        "median": 137.344468,
+        "max": 424.65776200000005,
+        "samples": 11
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "64b6ebe583dc6d4f25cb21991548fed6f9816de02140b539ec924268f1efc925",
+      "elapsed_s": 41.291395937999994,
+      "BOARD": "NOT_TESTED",
+      "threads": 3,
+      "output_limit": 32,
+      "live_miss_prompt_policy": "allowed-compact-01"
+    },
+    "nospace-smoke": {
+      "status": "PASS_ACTUAL_TARGET_GREEDY_PAIRS",
+      "total": 11,
+      "real_model_requests": 25,
+      "proposed_from": "THIS_REQUEST_CANONICAL_INPUT_FACTS_NOT_ANSWER_CATALOG",
+      "answer_cache_reads": 0,
+      "accepted": 10,
+      "fallback": 1,
+      "serial_ms": {
+        "min": 608.006077,
+        "median": 688.098466,
+        "max": 1424.319536,
+        "samples": 11
+      },
+      "draft_ms": {
+        "min": 511.526714,
+        "median": 551.177361,
+        "max": 2282.339109,
+        "samples": 11
+      },
+      "reduction_ms": {
+        "min": -858.019573,
+        "median": 134.87824899999998,
+        "max": 163.888868,
+        "samples": 11
+      },
+      "wrong_draft_replays": 2,
+      "worker_exit": 0,
+      "binary_sha256": "64b6ebe583dc6d4f25cb21991548fed6f9816de02140b539ec924268f1efc925",
+      "elapsed_s": 43.993777826000006,
+      "BOARD": "NOT_TESTED",
+      "threads": 3,
+      "output_limit": 32,
+      "live_miss_prompt_policy": "allowed-compact-no-space-01",
+      "prefix_tokens": 38,
+      "cache_id": "nospace38-t3",
+      "extended_reject_and_cancel_checks": false
+    }
+  },
+  "no_space_prompt_selected": false,
+  "no_space_rejection_reason": "numeric spacing still differs: fallback raised worst native time to 2282ms"
+}

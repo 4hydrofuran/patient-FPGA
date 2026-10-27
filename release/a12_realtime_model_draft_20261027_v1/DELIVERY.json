@@ -1,0 +1,41 @@
+{
+  "status": "PASS_ALL_ARCHIVES_CRC_SHA_READBACK",
+  "recommended": {
+    "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_NoBoard_20261027_v1.zip",
+    "role": "RecommendedCombinedDelivery",
+    "bytes": 39079424,
+    "sha256": "e88d037702cb32a9b81d011814d4990f0ff623bd8a690c146b58a46fa111c527",
+    "verified_payload_files": 6,
+    "CRC_SHA_readback": "PASS"
+  },
+  "subpackages_inside_combined": [
+    {
+      "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_Deployment_NoBoard_20261027_v1.zip",
+      "role": "Deployment",
+      "bytes": 27342103,
+      "sha256": "33bb8156ade6d5de7d32f7ba1909846a005416bee46f8b2f1977707c6bf2377d",
+      "verified_payload_files": 704,
+      "CRC_SHA_readback": "PASS"
+    },
+    {
+      "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_EngineeringIncrement_NoBoard_20261027_v1.zip",
+      "role": "EngineeringIncrement",
+      "bytes": 11725933,
+      "sha256": "a50ec02bcbb63c93327107acc4599aa9c6f5a1323ffc54be78c5724156f0cb93",
+      "verified_payload_files": 1603,
+      "CRC_SHA_readback": "PASS"
+    }
+  ],
+  "summary": "docs/A12_REALTIME_MODEL_MISS_NOBOARD_SUMMARY_20261027.md",
+  "real_browser_pairs": 25,
+  "before_median_ms": 879.0,
+  "after_median_ms": 618.3,
+  "package_repeat_median_ms": 622.8,
+  "under_1s": "23/25",
+  "answer_cache_hits": 0,
+  "actual_model_requests_per_group": 25,
+  "BOARD": "NOT_TESTED",
+  "repository": "https://github.com/4hydrofuran/patient-FPGA",
+  "branch": "codex/a12-realtime-model-opt-20261027",
+  "base_commit": "d9ed467ea57700ad96edd86790ae1fb65cc112c9"
+}

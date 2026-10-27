@@ -1,0 +1,93 @@
+{
+  "id": "DEV-009",
+  "case_id": "SYN_CP_03",
+  "question": "有没有气短？",
+  "answer": "气短情况我不清楚。",
+  "timing": {
+    "session_id": "aa1ca303ce064ba6a7e43ba76de54397",
+    "request_id": "6caab789-cfa8-4fdf-bca9-3167a3600db7",
+    "submitted_ms": 9012.5,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 9870.700000047684,
+    "paint_scheduled": true,
+    "painted_ms": 9872.200000047684,
+    "submit_to_paint_ms": 859.7000000476837,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "6caab789-cfa8-4fdf-bca9-3167a3600db7",
+    "operation_id": "b22074e221d940e0b8bdc4cec6c2089a",
+    "question": "有没有气短？",
+    "status": "COMPLETED",
+    "answer": "气短情况我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "aa1ca303ce064ba6a7e43ba76de54397",
+      "request_id": "6caab789-cfa8-4fdf-bca9-3167a3600db7",
+      "operation_id": "b22074e221d940e0b8bdc4cec6c2089a",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "67428129183",
+      "published_monotonic_ns": "67428757816",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 815.396254,
+      "accepted_to_published_ms": 816.130637,
+      "validation_to_publication_ms": 0.734383,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.222462,
+        "adapter_entered_monotonic_ns": "66613177217",
+        "worker_send_monotonic_ns": "66613404548",
+        "first_token_monotonic_ns": "67050589428",
+        "worker_wall_ms": 814.454182,
+        "first_token_from_adapter_ms": 437.412211,
+        "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+        "session_id": "aa1ca303ce064ba6a7e43ba76de54397",
+        "request_id": "6caab789-cfa8-4fdf-bca9-3167a3600db7",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.070333,
+        "prompt_builder_ms": 0.0265,
+        "generation_ms": 814.897603,
+        "candidate_check_ms": 0.113496,
+        "received_to_validated_ms": 815.123511,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 389.46358,
+        "ttft_ms": 392.334417,
+        "decode_ms": 373.40633099999997,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 437.856499
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

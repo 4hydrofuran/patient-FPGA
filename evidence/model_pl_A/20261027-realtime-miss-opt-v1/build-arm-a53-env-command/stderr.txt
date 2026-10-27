@@ -1,0 +1,64 @@
+In file included from /mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/bridge.cpp:1:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp: In function ‘void tt10::write_diagnostic(const std::filesystem::__cxx11::path&, const void*, size_t)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp:22:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   22 |             if(n<=0)throw std::runtime_error("diagnostic write failed");done+=size_t(n);
+      |             ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp:22:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   22 |             if(n<=0)throw std::runtime_error("diagnostic write failed");done+=size_t(n);
+      |                                                                         ^~~~
+In file included from /mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:1:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp: In function ‘void tt10::write_diagnostic(const std::filesystem::__cxx11::path&, const void*, size_t)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp:22:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   22 |             if(n<=0)throw std::runtime_error("diagnostic write failed");done+=size_t(n);
+      |             ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/diagnostic_io.hpp:22:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   22 |             if(n<=0)throw std::runtime_error("diagnostic write failed");done+=size_t(n);
+      |                                                                         ^~~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/bridge.cpp: In static member function ‘static void s1::Bridge::compute(ggml_tensor*, int, int, void*)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/bridge.cpp:74:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   74 |     if(ith)return;auto&e=*static_cast<Entry*>(u);auto&b=*e.owner;
+      |     ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/bridge.cpp:74:19: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   74 |     if(ith)return;auto&e=*static_cast<Entry*>(u);auto&b=*e.owner;
+      |                   ^~~~
+In file included from /mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:4:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/prefix_cache.hpp: In static member function ‘static tt10::json tt10::PrefixStore::owner_of(const tt10::json&)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/prefix_cache.hpp:97:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |         ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/prefix_cache.hpp:97:92: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   97 |         if(owner.dump().size()>1024)throw std::runtime_error("checkpoint owner too large");return owner;
+      |                                                                                            ^~~~~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp: In function ‘int main(int, char**)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:130:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  130 |         if(lm!="final"&&lm!="all")throw std::runtime_error("logits mode");if(lm=="all"&&tokens.size()>256)throw std::runtime_error("diagnostic all logits bound");
+      |         ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:130:75: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  130 |         if(lm!="final"&&lm!="all")throw std::runtime_error("logits mode");if(lm=="all"&&tokens.size()>256)throw std::runtime_error("diagnostic all logits bound");
+      |                                                                           ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:132:9: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  132 |         for(auto t:tokens)if(t<0||t>=nv)throw std::runtime_error("token ID");for(auto t:forced)if(t<0||t>=nv)throw std::runtime_error("teacher token ID");
+      |         ^~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:132:78: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  132 |         for(auto t:tokens)if(t<0||t>=nv)throw std::runtime_error("token ID");for(auto t:forced)if(t<0||t>=nv)throw std::runtime_error("teacher token ID");
+      |                                                                              ^~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:150:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  150 |             if(n<0)throw std::runtime_error("draft tokenization");draft_tokens.resize(n);
+      |             ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp:150:67: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  150 |             if(n<0)throw std::runtime_error("draft tokenization");draft_tokens.resize(n);
+      |                                                                   ^~~~~~~~~~~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp: In member function ‘void a12::Route::close_checked()’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp:98:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   98 |     if(!enabled||closed)return;park_if_unsafe();
+      |     ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp:98:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   98 |     if(!enabled||closed)return;park_if_unsafe();
+      |                                ^~~~~~~~~~~~~~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp: In member function ‘void a12::Route::returned(ggml_tensor*, int, int, int, uint64_t, const float*, int, const std::string&, uint64_t, uint64_t)’:
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp:106:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  106 |     if(!diagnostic)return;need(ledger.size()<trace_limit,"A12 trace capacity exceeded");
+      |     ^~
+/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp:106:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  106 |     if(!diagnostic)return;need(ledger.size()<trace_limit,"A12 trace capacity exceeded");
+      |                           ^~~~

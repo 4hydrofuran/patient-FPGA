@@ -1,0 +1,93 @@
+{
+  "id": "V04",
+  "case_id": "SYN_CP_01",
+  "question": "疼痛有几分？",
+  "answer": "疼痛程度是 6 分，满分 10 分。",
+  "timing": {
+    "session_id": "02fc7fd3274049fb983fb809ae9eeb67",
+    "request_id": "3305ad76-b4cc-43b5-be27-6061449d0c91",
+    "submitted_ms": 22076.200000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 23601.800000071526,
+    "paint_scheduled": true,
+    "painted_ms": 23605.200000047684,
+    "submit_to_paint_ms": 1529,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "3305ad76-b4cc-43b5-be27-6061449d0c91",
+    "operation_id": "6c7173affef54b528d3e2df9fc875121",
+    "question": "疼痛有几分？",
+    "status": "COMPLETED",
+    "answer": "疼痛程度是 6 分，满分 10 分。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "02fc7fd3274049fb983fb809ae9eeb67",
+      "request_id": "3305ad76-b4cc-43b5-be27-6061449d0c91",
+      "operation_id": "6c7173affef54b528d3e2df9fc875121",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "1b6fd48d520ffaf925876207e476b0152258c07b8a27f36f89643018f964bbb7",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "81182045167",
+      "published_monotonic_ns": "81182785551",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1508.288278,
+      "accepted_to_published_ms": 1509.133541,
+      "validation_to_publication_ms": 0.845263,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.219717,
+        "adapter_entered_monotonic_ns": "79674219771",
+        "worker_send_monotonic_ns": "79674444337",
+        "first_token_monotonic_ns": "80242852424",
+        "worker_wall_ms": 1507.390661,
+        "first_token_from_adapter_ms": 568.632653,
+        "prompt_sha256": "b237c61e19af6426305d355d0545717f471e28a704a892c35dc5d15f73da9478",
+        "session_id": "02fc7fd3274049fb983fb809ae9eeb67",
+        "request_id": "3305ad76-b4cc-43b5-be27-6061449d0c91",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.069893,
+        "prompt_builder_ms": 0.023705,
+        "generation_ms": 1507.827359,
+        "candidate_check_ms": 0.057609,
+        "received_to_validated_ms": 1507.991571,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 520.516176,
+        "ttft_ms": 523.387012,
+        "decode_ms": 929.8493629999999,
+        "decode_calls": 15,
+        "prompt_tokens": 54
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 569.095535
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

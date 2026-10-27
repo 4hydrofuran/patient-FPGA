@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+    "-B",
+    "platform/qwen35/web/answer_cache_serve_pc.py",
+    "--mode",
+    "realtime",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/realtime-serve01",
+    "--port",
+    "18761",
+    "--binary",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v3/qwen35-a12",
+    "--pc-prefix-config",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/pairs198-final/prefix-config.json",
+    "--compact"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 103.378547591,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

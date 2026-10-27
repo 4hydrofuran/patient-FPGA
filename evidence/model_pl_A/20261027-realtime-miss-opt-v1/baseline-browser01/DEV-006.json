@@ -1,0 +1,93 @@
+{
+  "id": "DEV-006",
+  "case_id": "SYN_CP_03",
+  "question": "疼痛会牵扯到别的地方吗？",
+  "answer": "疼痛牵扯部位我不清楚。",
+  "timing": {
+    "session_id": "2ef7d3ae66db413d81c0d7d938470f5a",
+    "request_id": "22110521-b249-4403-9bed-8f7fe01a1330",
+    "submitted_ms": 6183.200000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 7034.900000095367,
+    "paint_scheduled": true,
+    "painted_ms": 7039.800000071526,
+    "submit_to_paint_ms": 856.6000000238419,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "22110521-b249-4403-9bed-8f7fe01a1330",
+    "operation_id": "6ee79414d9794eeea4a9c3ecbdd3fd1c",
+    "question": "疼痛会牵扯到别的地方吗？",
+    "status": "COMPLETED",
+    "answer": "疼痛牵扯部位我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "2ef7d3ae66db413d81c0d7d938470f5a",
+      "request_id": "22110521-b249-4403-9bed-8f7fe01a1330",
+      "operation_id": "6ee79414d9794eeea4a9c3ecbdd3fd1c",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "5a376812aaa580717de54b093d8dab23661b9bc1e81698650faf0ccc60c06fe7",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "64600216555",
+      "published_monotonic_ns": "64600852291",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 816.286298,
+      "accepted_to_published_ms": 817.030319,
+      "validation_to_publication_ms": 0.744021,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.24269,
+        "adapter_entered_monotonic_ns": "63784567962",
+        "worker_send_monotonic_ns": "63784815832",
+        "first_token_monotonic_ns": "64223534430",
+        "worker_wall_ms": 815.03032,
+        "first_token_from_adapter_ms": 438.966468,
+        "prompt_sha256": "56ea7b8b42f0643a857669f77a21e15b019c66ca5c7ec2eadd6abe370d44c7c1",
+        "session_id": "2ef7d3ae66db413d81c0d7d938470f5a",
+        "request_id": "22110521-b249-4403-9bed-8f7fe01a1330",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.084711,
+        "prompt_builder_ms": 0.026009,
+        "generation_ms": 815.486365,
+        "candidate_check_ms": 0.207574,
+        "received_to_validated_ms": 815.835388,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 390.342967,
+        "ttft_ms": 393.265852,
+        "decode_ms": 372.609131,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 439.604173
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

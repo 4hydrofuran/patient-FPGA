@@ -29,7 +29,7 @@ def serve(a):
     out=a.output.resolve();out.mkdir(parents=True,exist_ok=False)
     parent=a.parent.resolve();window=parent/'continuous';deps=read(parent/'PC_DEPENDENCIES.json')
     sys.path.insert(0,str(window/'bundle/platform/qwen35/a12'))
-    vendor=vendor_source() if a.mode=='cache' else window/'web_gateway/src'
+    vendor=vendor_source() if a.mode!='live' else window/'web_gateway/src'
     sys.path.insert(0,str(vendor))
     # Cache mode consumes current sources; live mode consumes frozen v2 sources.
     if a.mode=='live':sys.path.insert(0,str(window))
@@ -48,6 +48,8 @@ def serve(a):
         spec=importlib.util.spec_from_file_location('cache_pc_web_managed',source)
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);create_app=module.create_app
     from short_prompt_adapter import prompt_messages
+    if a.compact or (a.mode!='live' and read(window/'profile.json').get('live_miss_prompt_policy')):
+        from compact_fact_prompt import prompt_messages
     cache=None
     if a.mode=='cache':
         from verified_answer_cache import VerifiedAnswerCache,model_identity,file_sha
@@ -55,25 +57,37 @@ def serve(a):
         identity=model_identity(profile['prefix_identity'],vendor/'patient_web/reference')
         cache=VerifiedAnswerCache(a.catalog,identity=identity,expected_sha256=file_sha(a.catalog))
     profile=load_profile(window/'profile.json')
-    pc_config=a.pc_prefix_config or project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json'
+    pc_config=a.pc_prefix_config or (parent/'PC_PREFIX_CONFIG.json' if (parent/'PC_PREFIX_CONFIG.json').is_file()
+        else project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json')
     cfg=read(pc_config)
+    threads=cfg['identity']['threads']
+    if threads not in (2,3) or cfg['identity']['kernel_threads']!=threads:raise RuntimeError('PC thread identity differs')
     # Validate actual CPU executable/libs in native PrefixStore at launch.
     env={k:v for k,v in os.environ.items() if not k.startswith(('SP_A12','SP_TT10','LD_','GGML_','OMP_'))}
-    env.update(LD_LIBRARY_PATH=deps['library_dir'],SP_TT10_CONFIG=str(pc_config.resolve()),OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1')
+    env.update(LD_LIBRARY_PATH=deps['library_dir'],SP_TT10_CONFIG=str(pc_config.resolve()),OMP_NUM_THREADS=str(threads),OPENBLAS_NUM_THREADS='1')
     worker=None;server=None;thread=None;native=None;ready_start=time.monotonic()
     try:
-        worker=OwnedWorker([deps['binary'],deps['model'],'2','1024','all','TILED','2','8'],
+        worker=OwnedWorker([str(a.binary or deps['binary']),deps['model'],str(threads),'1024','all','TILED',str(threads),'8'],
             directory=out/'worker',env=env,health=lambda:None,max_runs=1,max_loads=1,
             expires=time.monotonic()+7200,real=False)
         ready=worker.get(120)
         if ready.get('type')!='ready' or ready.get('execution_kind')!='CPU_REFERENCE':raise RuntimeError('wrong CPU ready')
         save(out/'ready.json',ready)
-        p=copy.deepcopy(profile);p['prefix_identity']=cfg['identity']
+        p=copy.deepcopy(profile);p['prefix_identity']=cfg['identity'];p['threads']=p['kernel_threads']=threads
+        p['cache_id']='short34-t'+str(threads)
+        output_tokens=a.output_tokens or (32 if a.mode=='realtime' or a.realtime_draft else p['output_tokens'])
+        p['output_tokens']=output_tokens
         api=type('PC',(),{'receive':staticmethod(lambda w,*args,**kw:w.get(kw.get('timeout',180)))})()
         transport=CachedTransport(worker,None,out,api,profile=p,maximum_questions=None)
-        transport.warm(ready,read(window/'bundle/control/requests.json')[1])
-        native=load_native(window,Path(deps['project_root']))(transport,ready,max_output_tokens=24,domain='PC_REFERENCE',
-            template_path=window/'bundle/control/chat_template.jinja')
+        warm=copy.deepcopy(read(window/'bundle/control/requests.json')[1]);warm['cache_id']=p['cache_id']
+        transport.warm(ready,warm)
+        native_options=dict(max_output_tokens=output_tokens,domain='PC_REFERENCE',template_path=window/'bundle/control/chat_template.jinja')
+        native_source=window
+        if a.mode=='realtime' or a.realtime_draft:
+            from realtime_draft import STRATEGY
+            native_options['generation_strategy']=STRATEGY
+            native_source=HERE if (HERE/'native_pl.py').is_file() else project_root(parent)/'system_qwen35/app'
+        native=load_native(native_source,Path(deps['project_root']))(transport,ready,**native_options)
         options=dict(is_ready=lambda:not worker.closed and not native.broken,
             remaining_seconds=lambda:worker.expires-time.monotonic(),prompt_builder=prompt_messages,domain='PC')
         if cache is not None:options['answer_cache']=cache
@@ -87,7 +101,7 @@ def serve(a):
         else:raise RuntimeError('real HTTP server not ready')
         save(out/'HTTP_READY.json',dict(status='READY',mode=a.mode,url=f'http://127.0.0.1:{a.port}/',
             startup_ready_s=time.monotonic()-ready_start,native_count=native.count,
-            cache=cache.report() if cache else None,BOARD='NOT_TESTED'))
+            cache=cache.report() if cache else None,generation_strategy=getattr(native,'generation_strategy',None),threads=threads,BOARD='NOT_TESTED'))
         while not (out/'stop-request.json').exists() and time.monotonic()<worker.expires-180:
             save(out/'metrics.json',dict(mode=a.mode,native_count=native.count,worker_closed=worker.closed,
                 cache=cache.report() if cache else None,coordinator_busy=coordinator.work is not None),noncritical=True)
@@ -108,10 +122,14 @@ def serve(a):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--mode',choices=('live','cache'),required=True);p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--mode',choices=('live','cache','realtime'),required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--port',type=int,default=8765);p.add_argument('--catalog',type=Path)
     p.add_argument('--parent',type=Path,default=default_parent())
     p.add_argument('--pc-prefix-config',type=Path)
+    p.add_argument('--binary',type=Path)
+    p.add_argument('--realtime-draft',action='store_true',help='also verify live misses when mode=cache')
+    p.add_argument('--output-tokens',type=int,choices=(24,32))
+    p.add_argument('--compact',action='store_true',help='select shorter original checker forms for live input')
     a=p.parse_args()
     if a.mode=='cache' and not a.catalog:p.error('cache mode requires --catalog')
     serve(a)

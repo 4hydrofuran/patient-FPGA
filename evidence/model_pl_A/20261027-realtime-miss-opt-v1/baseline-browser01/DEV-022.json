@@ -1,0 +1,93 @@
+{
+  "id": "DEV-022",
+  "case_id": "SYN_CP_01",
+  "question": "痛的性质怎样？",
+  "answer": "疼痛是压迫感。",
+  "timing": {
+    "session_id": "9daf2ba17b0d49208e2977f4085add45",
+    "request_id": "3963f46f-cb86-4898-9e93-de4b74f0a145",
+    "submitted_ms": 15555.100000023842,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 16311.100000023842,
+    "paint_scheduled": true,
+    "painted_ms": 16322.700000047684,
+    "submit_to_paint_ms": 767.6000000238419,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "3963f46f-cb86-4898-9e93-de4b74f0a145",
+    "operation_id": "d978d705e38a4a6386dd5c0d578f6896",
+    "question": "痛的性质怎样？",
+    "status": "COMPLETED",
+    "answer": "疼痛是压迫感。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "9daf2ba17b0d49208e2977f4085add45",
+      "request_id": "3963f46f-cb86-4898-9e93-de4b74f0a145",
+      "operation_id": "d978d705e38a4a6386dd5c0d578f6896",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "73882562566",
+      "published_monotonic_ns": "73883160702",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 729.972333,
+      "accepted_to_published_ms": 730.672372,
+      "validation_to_publication_ms": 0.700039,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.221882,
+        "adapter_entered_monotonic_ns": "73153030451",
+        "worker_send_monotonic_ns": "73153257032",
+        "first_token_monotonic_ns": "73570161364",
+        "worker_wall_ms": 729.112418,
+        "first_token_from_adapter_ms": 417.130913,
+        "prompt_sha256": "d11c564faf19e92ce967ec5e15da5ddc2897935c01b401557d0308e144ab6481",
+        "session_id": "9daf2ba17b0d49208e2977f4085add45",
+        "request_id": "3963f46f-cb86-4898-9e93-de4b74f0a145",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.069522,
+        "prompt_builder_ms": 0.023535,
+        "generation_ms": 729.542614,
+        "candidate_check_ms": 0.050737,
+        "received_to_validated_ms": 729.697769,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 368.402425,
+        "ttft_ms": 371.243828,
+        "decode_ms": 309.240831,
+        "decode_calls": 5,
+        "prompt_tokens": 48
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 417.571131
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

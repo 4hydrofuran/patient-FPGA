@@ -13,7 +13,7 @@ from jinja2.sandbox import ImmutableSandboxedEnvironment
 
 
 class NativePL:
-    def __init__(self, worker, ready, *, max_output_tokens, domain='BOARD', template_path=None):
+    def __init__(self, worker, ready, *, max_output_tokens, domain='BOARD', template_path=None, generation_strategy=None):
         expected={'BOARD':'FPGA_REAL','PC':'PC_MATH_DOUBLE','PC_REFERENCE':'CPU_REFERENCE'}.get(domain)
         if expected is None:raise ValueError('explicit execution domain required')
         route=ready.get('bridge',{}).get('a12_route',{})
@@ -29,6 +29,11 @@ class NativePL:
             ready.get('non_mlp_projection_schedule')!='STABLE_PER_TOKEN_SIMD_GEMV'):
             raise RuntimeError('A12 full-range worker identity differs; no fallback')
         if not 1<=max_output_tokens<=64:raise ValueError('explicit bounded output required')
+        if generation_strategy is not None:
+            from realtime_draft import STRATEGY
+            if generation_strategy != STRATEGY or ready.get('realtime_draft') != STRATEGY:
+                raise RuntimeError('selected real-time draft worker capability differs')
+        self.generation_strategy=generation_strategy
         self.worker=worker;self.ready=ready;self.expected=expected;self.max_output_tokens=max_output_tokens
         self.template=Path(template_path or ROOT/'artifacts/qwen35-0.8b/source/chat_template.jinja').read_text(encoding='utf-8')
         self.env=ImmutableSandboxedEnvironment();self.lock=threading.Lock();self.broken=False
@@ -49,6 +54,9 @@ class NativePL:
             if not prompt.endswith('<think>\n\n</think>\n\n'):raise RuntimeError('non-thinking template differs')
             self.count+=1;rid='a12-'+str(self.count)
             req=dict(id=rid,prompt=prompt,max_tokens=self.max_output_tokens,logits_mode='final',cache_policy='R0')
+            if self.generation_strategy:
+                from realtime_draft import fact_copy_draft
+                req.update(draft_strategy=self.generation_strategy,draft_text=fact_copy_draft(messages))
             if self.trace_context:
                 req.update(session_id=self.trace_context['session_id'],session_epoch=self.trace_context['epoch'])
             start=time.monotonic();sent=time.monotonic_ns();first=None;self.worker.send(req)
@@ -62,6 +70,20 @@ class NativePL:
                         raise RuntimeError('A12 result refused')
                     if not r.get('state_cleared_before_response') or r.get('state_position_after_clear')!=-1:
                         raise RuntimeError('A12 recurrent/conv/KV clear not confirmed')
+                    if self.generation_strategy:
+                        spec=r.get('speculative_decoding',{})
+                        if (spec.get('strategy') != self.generation_strategy or spec.get('requested') is not True
+                                or spec.get('answer_cache_used') is not False or spec.get('forced_output') is not False
+                                or r.get('teacher_forced') is not False or r.get('eos') is not True):
+                            raise RuntimeError('real-time target verification receipt differs')
+                        if spec.get('accepted'):
+                            output=r.get('output_tokens')
+                            if (not isinstance(output,list) or spec.get('argmax_checks') != len(output)+1
+                                    or spec.get('target_greedy_tokens',[])[:-1] != output
+                                    or spec.get('proposed_tokens') != output or spec.get('target_eos_verified') is not True):
+                                raise RuntimeError('draft tokens were not selected by the target model')
+                        elif spec.get('used') and spec.get('fallback_full_prompt_replayed') is not True:
+                            raise RuntimeError('rejected draft did not replay the full original prompt')
                     route=r.get('bridge',{}).get('a12_route',{})
                     kind=route.get('execution_kind') if self.expected in ('FPGA_REAL','CPU_REFERENCE') else route.get('a12_domain')
                     if kind!=self.expected:raise RuntimeError('A12 backend changed during request')

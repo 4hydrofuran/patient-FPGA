@@ -1,0 +1,93 @@
+{
+  "id": "V08",
+  "case_id": "SYN_CP_02",
+  "question": "胸痛在什么位置，是什么感觉？",
+  "answer": "疼痛在左侧胸部。疼痛是针扎感。",
+  "timing": {
+    "session_id": "a7f622e65e7642ebb1f490ce46b7cd0c",
+    "request_id": "25ea3851-b1ab-4a7b-a5b3-4c1956966b87",
+    "submitted_ms": 26553.700000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 27821.5,
+    "paint_scheduled": true,
+    "painted_ms": 27838.200000047684,
+    "submit_to_paint_ms": 1284.5,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "25ea3851-b1ab-4a7b-a5b3-4c1956966b87",
+    "operation_id": "1826195a34ad4c92b5dabda38c37579c",
+    "question": "胸痛在什么位置，是什么感觉？",
+    "status": "COMPLETED",
+    "answer": "疼痛在左侧胸部。疼痛是针扎感。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "a7f622e65e7642ebb1f490ce46b7cd0c",
+      "request_id": "25ea3851-b1ab-4a7b-a5b3-4c1956966b87",
+      "operation_id": "1826195a34ad4c92b5dabda38c37579c",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "f018ae88715eb4c4030f0a7b6d477a19161a2d2884c2a8835c83b445787ec336",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "85413405708",
+      "published_monotonic_ns": "85413994385",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1258.910939,
+      "accepted_to_published_ms": 1259.603062,
+      "validation_to_publication_ms": 0.692123,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.222462,
+        "adapter_entered_monotonic_ns": "84154948596",
+        "worker_send_monotonic_ns": "84155175556",
+        "first_token_monotonic_ns": "84724992796",
+        "worker_wall_ms": 1258.011157,
+        "first_token_from_adapter_ms": 570.0442,
+        "prompt_sha256": "8c994a74628274c968b490ae3d21e6b5f5b8405be90f1e43392b0fea051d4a3a",
+        "session_id": "a7f622e65e7642ebb1f490ce46b7cd0c",
+        "request_id": "25ea3851-b1ab-4a7b-a5b3-4c1956966b87",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.079931,
+        "prompt_builder_ms": 0.024206,
+        "generation_ms": 1258.46089,
+        "candidate_check_ms": 0.060174,
+        "received_to_validated_ms": 1258.64056,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 521.996341,
+        "ttft_ms": 524.875164,
+        "decode_ms": 681.5123779999999,
+        "decode_calls": 11,
+        "prompt_tokens": 54
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 570.498027
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

@@ -16,6 +16,10 @@ def preflight(window):
     for name in required:
         if not (window/name).is_file():raise ImportError('missing packaged dependency before Owner/PL: '+name)
     config=read(window/'web-config.json')
+    if raw_profile.get('realtime_draft_strategy') is not None:
+        if not (window/'realtime_draft.py').is_file():raise ImportError('missing real-time draft host module')
+        if config.get('realtime_draft_strategy')!=raw_profile['realtime_draft_strategy']:
+            raise RuntimeError('realtime draft selection differs')
     for p in config.get('dependency_paths',[]):
         if Path(p).is_dir():sys.path.insert(0,p)
     for p in (window/'web_gateway/src',window):sys.path.insert(0,str(p))

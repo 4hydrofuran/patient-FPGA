@@ -66,5 +66,11 @@ def may_end(*,continuous,closed,idle,model_requests,maximum_questions,broken,sto
     return closed and (broken or model_requests>=maximum_questions)
 
 
-def question_reserve(context_tokens=1024,prefix_tokens=70,output_tokens=24):
-    return 72*((context_tokens-prefix_tokens+7)//8+output_tokens-1)
+def question_reserve(context_tokens=1024,prefix_tokens=70,output_tokens=24,*,draft_strategy=None):
+    base=72*((context_tokens-prefix_tokens+7)//8+output_tokens-1)
+    if draft_strategy is None:return base
+    from realtime_draft import STRATEGY
+    if draft_strategy!=STRATEGY:raise ValueError('unknown draft budget strategy')
+    # One bounded verification pass plus a possible full serial replay.
+    # Each fits the original context/output bound; doubling is conservative.
+    return 2*base

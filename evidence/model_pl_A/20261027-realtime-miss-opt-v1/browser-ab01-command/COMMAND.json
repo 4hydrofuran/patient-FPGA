@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "platform/qwen35/web/realtime_browser_compare.py",
+    "--baseline",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/baseline-browser01",
+    "--candidate",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/realtime-browser01",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/BROWSER_AB.json",
+    "--equivalent-forms"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 0.22364729992114007,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "d12bc884a40360fbb0118110ad762450f759593010aa9d3b26831d4e8f6bdb42"
+  }
+}

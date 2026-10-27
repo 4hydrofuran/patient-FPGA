@@ -1,0 +1,150 @@
+--- sealed/source-04/main.cpp
++++ realtime-draft/main.cpp
+@@ -103,7 +103,7 @@
+     cp.abort_callback=abort_graph;cp.abort_callback_data=&bridge;start=Clock::now();auto*ctx=llama_init_from_model(model,cp);if(!ctx)throw std::runtime_error("context init");
+     auto *vocab=llama_model_get_vocab(model);int nv=llama_vocab_n_tokens(vocab);
+     auto cache=tt10::PrefixStore::load(argv[1],argv[0],bridge.route.real?"FPGA_REAL":bridge.route.enabled?"PC_MATH_DOUBLE":"CPU_REFERENCE",threads,kernel_threads,context,physical);
+-    emit({{"prefix_cache",cache.report()},{"type","ready"},{"domain",bridge.route.real?"BOARD":"PC"},{"execution_kind",bridge.route.enabled?(bridge.route.real?"FPGA_REAL":"PC_MATH_DOUBLE"):"CPU_REFERENCE"},{"quantization",quantization},{"model_file",argv[1]},
++    emit({{"realtime_draft","FACT_COPY_GREEDY_VERIFY_V1"},{"prefix_cache",cache.report()},{"type","ready"},{"domain",bridge.route.real?"BOARD":"PC"},{"execution_kind",bridge.route.enabled?(bridge.route.real?"FPGA_REAL":"PC_MATH_DOUBLE"):"CPU_REFERENCE"},{"quantization",quantization},{"model_file",argv[1]},
+       {"model_load_ms",load_ms},{"sidecar_load_ms",sidecar_ms},{"context_init_ms",ms(start)},{"worker_ready_ms",ms(ready_start)},{"threads",threads},{"kernel_threads",kernel_threads},{"context",context},{"peak_rss_kib",rss()},
+       {"n_seq_max",1},{"n_rs_seq",0},{"physical_ubatch",cp.n_ubatch},{"non_mlp_projection_schedule",bridge.scope=="none"?"UPSTREAM":"STABLE_PER_TOKEN_SIMD_GEMV"},{"attention_schedule",bridge.scope=="none"?"UPSTREAM":"SIMD_QUERY_ORDER_NO_SPLIT_KV_OR_QUERY_TILING"},{"cache_policy","R0_CLEAR_ALL_REPLAY"},{"R1","DISABLED_NOT_VERIFIED"},{"bridge",bridge.report()},{"memory",memory()}});
+     std::vector<float> reference;std::string line;
+@@ -132,6 +132,31 @@
+         for(auto t:tokens)if(t<0||t>=nv)throw std::runtime_error("token ID");for(auto t:forced)if(t<0||t>=nv)throw std::runtime_error("teacher token ID");
+         if(!forced.empty()&&int(forced.size())!=limit)throw std::runtime_error("teacher sequence length");
+         std::string diag=req.value("diagnostic_dir",std::string());if(!diag.empty()&&(tokens.size()>256||limit>8))throw std::runtime_error("diagnostic bound");
++
++        const size_t original_prompt_tokens=tokens.size();
++        const bool draft_requested=req.value("draft_strategy",std::string())=="FACT_COPY_GREEDY_VERIFY_V1";
++        if(req.contains("draft_strategy")&&!draft_requested)throw std::runtime_error("unknown draft strategy");
++        std::vector<llama_token> draft_tokens,draft_predictions;
++        std::vector<float> draft_prompt_logits;
++        bool draft_used=false,draft_accepted=false,draft_replayed=false;
++        double draft_sample_ms=0,draft_verify_ms=0,draft_replay_ms=0;
++        int draft_checks=0;std::string draft_skip;
++        if(draft_requested){
++            if(create||!forced.empty()||!diag.empty())throw std::runtime_error("draft cannot combine with checkpoint creation, forced tokens or diagnostics");
++            const auto proposal=req.at("draft_text").get<std::string>();
++            if(proposal.size()>1024)throw std::runtime_error("draft text bound");
++            int n=llama_tokenize(vocab,proposal.data(),proposal.size(),nullptr,0,false,false);
++            if(n<0){draft_tokens.resize(-n);n=llama_tokenize(vocab,proposal.data(),proposal.size(),draft_tokens.data(),draft_tokens.size(),false,false);}
++            if(n<0)throw std::runtime_error("draft tokenization");draft_tokens.resize(n);
++            if(draft_tokens.empty())draft_skip="EMPTY";
++            else if(draft_tokens.size()>=size_t(limit)||limit>64)draft_skip="OUTPUT_BOUND";
++            else {
++                for(auto t:draft_tokens)if(t<0||t>=nv||llama_vocab_is_eog(vocab,t))throw std::runtime_error("draft token invalid");
++                draft_used=true;draft_predictions.assign(draft_tokens.size()+1,-1);
++                tokens.insert(tokens.end(),draft_tokens.begin(),draft_tokens.end());
++            }
++        }
++
+         const bool report_diagnostic=req.value("diagnostic_report",false)||!diag.empty();
+         if(create){if(limit!=1||!forced.empty())throw std::runtime_error("checkpoint creation cannot generate an answer");cache.reserve_create(req,tokens);}
+         auto cpu_before=bridge.report(false);
+@@ -156,19 +181,38 @@
+         if(checkpoint&&prefix==tokens.size()&&!diag.empty()){
+             auto name="logits-prefill-"+std::to_string(prefix-1)+".f32";write_binary(std::filesystem::path(diag)/name,checkpoint->logits.data(),nv*4);logits_records.push_back({{"position",prefix-1},{"file",name}});++requested;
+         }
+-        for(size_t pos=prefix;pos<tokens.size();pos+=chunk){int count=std::min<size_t>(chunk,tokens.size()-pos);auto batch=llama_batch_get_one(tokens.data()+pos,count);
++
++        auto run_prefill=[&](bool verifying){
++          for(size_t pos=prefix;pos<tokens.size();pos+=chunk){
++            int count=std::min<size_t>(chunk,tokens.size()-pos);auto batch=llama_batch_get_one(tokens.data()+pos,count);
+             trace.active=req.value("a12_consumer_trace",false)||(pos==0&&!diag.empty()&&req.value("diagnostic_nodes",false));
+-            std::vector<int8_t>flags(count,lm=="all"?1:0);if(pos+count==tokens.size())flags.back()=1;batch.logits=flags.data();bridge.begin_execution();
++            std::vector<int8_t>flags(count,lm=="all"?1:0);
++            if(verifying){for(int i=0;i<count;++i)if(pos+i+1>=original_prompt_tokens)flags[i]=1;}
++            if(pos+count==tokens.size())flags.back()=1;
++            batch.logits=flags.data();bridge.begin_execution();
+             {bridge.route.set_phase(0);s1::DecodeScope measured(bridge.request_stats,0);rc=llama_decode(ctx,batch);measured.rc=rc;}
+             if(!trace.error.empty())throw std::runtime_error("Node diagnostic: "+trace.error);
+             bridge.route.finish_execution();
+             if(rc||cancelled||!bridge.error.empty()){failed=true;break;}
+-            for(int i=0;i<count;++i)if(flags[i]){++requested;if(!diag.empty()){auto name="logits-prefill-"+std::to_string(pos+i)+".f32";write_binary(std::filesystem::path(diag)/name,llama_get_logits_ith(ctx,i),nv*4);logits_records.push_back({{"position",pos+i},{"file",name}});}}
+-        }
++            for(int i=0;i<count;++i)if(flags[i]){
++                ++requested;
++                if(verifying&&pos+i+1>=original_prompt_tokens){
++                    size_t at=pos+i+1-original_prompt_tokens;
++                    const float* l=llama_get_logits_ith(ctx,i);if(!l)throw std::runtime_error("draft verification logits absent");
++                    if(at==0)draft_prompt_logits.assign(l,l+nv);
++                    auto begin=Clock::now();auto* s=llama_sampler_init_greedy();
++                    draft_predictions.at(at)=llama_sampler_sample(s,ctx,i);llama_sampler_free(s);
++                    draft_sample_ms+=ms(begin);++draft_checks;
++                }
++                if(!diag.empty()){auto name="logits-prefill-"+std::to_string(pos+i)+".f32";write_binary(std::filesystem::path(diag)/name,llama_get_logits_ith(ctx,i),nv*4);logits_records.push_back({{"position",pos+i},{"file",name}});}
++            }
++          }
++        };
++        run_prefill(draft_used);
+         trace.active=req.value("a12_consumer_trace",false);
+         if(!trace.records.empty()){std::ofstream f(std::filesystem::path(diag)/"nodes.json");f<<trace.records.dump(2);}
+-        double prefill_ms=ms(start),ttft_ms=0,decode_ms=0,sample_ms=0;int calls=0;uint64_t loghash=0;std::string logits_sha;json comparison=nullptr;
+-        if(!failed){const float*l=checkpoint&&prefix==tokens.size()?checkpoint->logits.data():llama_get_logits_ith(ctx,-1);loghash=fnv(l,nv*4);logits_sha=tt10::digest(l,nv*4);
++        double prefill_ms=ms(start),ttft_ms=0,decode_ms=0,sample_ms=draft_sample_ms;int calls=0;uint64_t loghash=0;std::string logits_sha;json comparison=nullptr;
++        if(!failed){const float*l=draft_used?draft_prompt_logits.data():(checkpoint&&prefix==tokens.size()?checkpoint->logits.data():llama_get_logits_ith(ctx,-1));loghash=fnv(l,nv*4);logits_sha=tt10::digest(l,nv*4);
+             if(req.value("compare_logits",false)){double max=0,sq=0;int bad=0;for(int i=0;i<nv;++i){double d=double(l[i])-reference[i];max=std::max(max,std::abs(d));sq+=d*d;if(!std::isfinite(l[i])||std::abs(d)>0.002+0.0002*std::abs(reference[i]))++bad;}comparison={{"max_abs",max},{"rmse",std::sqrt(sq/nv)},{"failures",bad},{"atol",0.002},{"rtol",0.0002}};}
+             if(req.value("save_logits_reference",false))reference.assign(l,l+nv);
+             if(!diag.empty()&&req.value("dump_state",false)){size_t bytes=llama_state_seq_get_size(ctx,0);std::vector<uint8_t>s(bytes);if(llama_state_seq_get_data(ctx,s.data(),bytes,0)!=bytes)throw std::runtime_error("hybrid state dump");write_binary(std::filesystem::path(diag)/"hybrid-state.bin",s.data(),s.size());}
+@@ -184,8 +228,41 @@
+             bridge.request_stats.active=false;
+             emit({{"type","cache_created"},{"id",id},{"status","OK"},{"prefill_ms",prefill_ms},{"capture_ms",capture_ms},{"prefix_tokens",tokens.size()},{"peak_rss_kib",rss()},{"bridge",route},{"prefix_cache",cache.report()},{"state_cleared_before_response",true},{"state_position_after_clear",llama_memory_seq_pos_max(llama_get_memory(ctx),0)}});continue;
+         }
++
++        if(draft_used&&!failed&&!cancelled){
++            draft_verify_ms=prefill_ms;
++            draft_accepted=draft_checks==int(draft_tokens.size()+1)&&llama_vocab_is_eog(vocab,draft_predictions.back());
++            for(size_t i=0;i<draft_tokens.size();++i)draft_accepted=draft_accepted&&draft_predictions[i]==draft_tokens[i];
++            if(!draft_accepted){
++                // DeltaNet/conv/KV are never partially truncated. Discard all draft
++                // state, restore only the independently verified neutral prefix,
++                // then replay the original prompt and sample normally.
++                auto begin=Clock::now();draft_replayed=true;
++                bridge.route.finish_execution();llama_synchronize(ctx);
++                llama_memory_clear(llama_get_memory(ctx),true);bridge.cache.valid=false;
++                if(llama_memory_seq_pos_max(llama_get_memory(ctx),0)!=-1)throw std::runtime_error("draft rejection clear failed");
++                if(checkpoint)restore_prefix(ctx,*checkpoint);
++                tokens.resize(original_prompt_tokens);run_prefill(false);
++                draft_replay_ms=ms(begin);
++                if(!failed&&!cancelled){const float* l=llama_get_logits_ith(ctx,-1);loghash=fnv(l,nv*4);logits_sha=tt10::digest(l,nv*4);}
++            }
++        }
++
+         auto*sampler=llama_sampler_init_greedy();std::vector<llama_token>out;std::string text;bool eos=false;
+-        for(int i=0;!failed&&!cancelled&&i<limit;++i){auto sample_start=Clock::now();auto tok=forced.empty()?(i==0&&checkpoint&&prefix==tokens.size()?saved_logits_sample(sampler,checkpoint->logits):llama_sampler_sample(sampler,ctx,-1)):forced[i];sample_ms+=ms(sample_start);if(i==0)ttft_ms=ms(start);
++
++        if(draft_accepted&&!failed&&!cancelled){
++            // Emit only tokens individually selected by the real target model.
++            // The fact draft is never returned merely because the checker likes it.
++            for(size_t i=0;i<draft_tokens.size();++i){
++                auto tok=draft_predictions[i];char buffer[256];int n=llama_token_to_piece(vocab,tok,buffer,sizeof(buffer),0,true);
++                if(n<0){failed=true;rc=-99;break;}
++                out.push_back(tok);text.append(buffer,n);
++                emit({{"type","token"},{"id",id},{"index",i},{"token",tok}});
++            }
++            eos=!failed;ttft_ms=ms(start);
++        }
++
++        for(int i=0;!draft_accepted&&!failed&&!cancelled&&i<limit;++i){auto sample_start=Clock::now();auto tok=forced.empty()?(i==0&&checkpoint&&prefix==tokens.size()?saved_logits_sample(sampler,checkpoint->logits):llama_sampler_sample(sampler,ctx,-1)):forced[i];sample_ms+=ms(sample_start);if(i==0)ttft_ms=ms(start);
+             if(forced.empty()&&llama_vocab_is_eog(vocab,tok)){eos=true;break;}out.push_back(tok);char buffer[256];int n=llama_token_to_piece(vocab,tok,buffer,sizeof(buffer),0,true);if(n<0){failed=true;rc=-99;break;}text.append(buffer,n);emit({{"type","token"},{"id",id},{"index",i},{"token",tok}});
+             if(i+1<limit&&!cancelled){auto begin=Clock::now();auto batch=llama_batch_get_one(&tok,1);bridge.begin_execution();
+                 {bridge.route.set_phase(1);s1::DecodeScope measured(bridge.request_stats,1);rc=llama_decode(ctx,batch);measured.rc=rc;}
+@@ -214,7 +291,17 @@
+             {"run_count_delta",uint64_t(bridge_report["cpu_run_count"])-uint64_t(cpu_before["cpu_run_count"])},
+             {"compute_ms_delta",double(bridge_report["cpu_compute_ms_process_total"])-double(cpu_before["cpu_compute_ms_process_total"])},
+             {"service_ms_delta",double(bridge_report["cpu_service_ms_process_total"])-double(cpu_before["cpu_service_ms_process_total"])}};
+-        emit({{"prefix_cache_request",cache_result},{"prefix_cache",cache.report()},{"type","result"},{"id",id},{"status",status},{"decode_rc",rc},{"prompt_tokens",tokens.size()},{"output_tokens",out},{"text",text},{"eos",eos},
++
++        json speculative={{"strategy",draft_requested?"FACT_COPY_GREEDY_VERIFY_V1":"SERIAL_GREEDY"},
++            {"requested",draft_requested},{"used",draft_used},{"accepted",draft_accepted},
++            {"proposed_tokens",draft_tokens},{"target_greedy_tokens",draft_predictions},{"argmax_checks",draft_checks},
++            {"target_eos_verified",draft_accepted},{"fallback_full_prompt_replayed",draft_replayed},
++            {"skip_reason",draft_skip},{"verify_ms",draft_verify_ms},{"replay_ms",draft_replay_ms},
++            {"draft_sampler_ms",draft_sample_ms},{"answer_cache_used",false},{"forced_output",false},
++            {"original_prompt_tokens",original_prompt_tokens},{"first_pass_tokens",original_prompt_tokens+(draft_used?draft_tokens.size():0)}};
++        cache_result["new_tokens"]=original_prompt_tokens-prefix;
++        cache_result["speculative_extra_tokens"]=draft_used?draft_tokens.size():0;
++        emit({{"speculative_decoding",speculative},{"prefix_cache_request",cache_result},{"prefix_cache",cache.report()},{"type","result"},{"id",id},{"status",status},{"decode_rc",rc},{"prompt_tokens",original_prompt_tokens},{"output_tokens",out},{"text",text},{"eos",eos},
+           {"prefill_ms",prefill_ms},{"ttft_ms",ttft_ms},{"decode_ms",decode_ms},{"decode_calls",calls},{"reset_ms",reset_ms},{"last_prompt_logits_fnv64",loghash},{"last_prompt_logits_sha256",logits_sha},
+           {"peak_rss_kib",rss()},{"threads",threads},{"kernel_threads",kernel_threads},{"logits_mode",lm},{"prefill_requested_logits",requested},{"logits_comparison",comparison},
+           {"teacher_forced",!forced.empty()},{"prefill_chunk",chunk},{"bridge",bridge_report},{"memory",report_diagnostic?memory():json(nullptr)},{"state_position_before_clear",pos},

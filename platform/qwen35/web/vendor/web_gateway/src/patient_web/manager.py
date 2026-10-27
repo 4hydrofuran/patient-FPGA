@@ -276,6 +276,7 @@ class Coordinator:
                         session=response.get('stage_timing'),
                         native_prefill_decode={k:(response.get('model_result') or {}).get(k)
                             for k in ('prefill_ms','ttft_ms','decode_ms','decode_calls','prompt_tokens')},
+                        native_speculative_decoding=(response.get('model_result') or {}).get('speculative_decoding'),
                         nested_stages=True)
                     first=(turn['timing']['model'] or {}).get('first_token_monotonic_ns')
                     turn['timing']['accepted_to_first_token_observed_ms']=(int(first)-work.accepted_ns)/1e6 if first else None

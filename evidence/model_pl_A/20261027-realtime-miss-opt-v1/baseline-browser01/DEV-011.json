@@ -1,0 +1,93 @@
+{
+  "id": "DEV-011",
+  "case_id": "SYN_CP_02",
+  "question": "最近服药了吗？",
+  "answer": "用药情况我不清楚。",
+  "timing": {
+    "session_id": "d4ec9dad4263465bb8bb76f38bbb3570",
+    "request_id": "5d826c22-8839-4034-be36-3aeb1a6fcdc1",
+    "submitted_ms": 10868.200000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 11622.5,
+    "paint_scheduled": true,
+    "painted_ms": 11640.5,
+    "submit_to_paint_ms": 772.2999999523163,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "5d826c22-8839-4034-be36-3aeb1a6fcdc1",
+    "operation_id": "7439d3d88a734fd782f280926c489287",
+    "question": "最近服药了吗？",
+    "status": "COMPLETED",
+    "answer": "用药情况我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "d4ec9dad4263465bb8bb76f38bbb3570",
+      "request_id": "5d826c22-8839-4034-be36-3aeb1a6fcdc1",
+      "operation_id": "7439d3d88a734fd782f280926c489287",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "4d4760d39f99f0ab07c0554fb1965f416075fc6ccac484e82db5654433816728",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "69204572583",
+      "published_monotonic_ns": "69205287159",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 736.355223,
+      "accepted_to_published_ms": 737.174427,
+      "validation_to_publication_ms": 0.819204,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.229665,
+        "adapter_entered_monotonic_ns": "68468691877",
+        "worker_send_monotonic_ns": "68468926402",
+        "first_token_monotonic_ns": "68887470998",
+        "worker_wall_ms": 735.426915,
+        "first_token_from_adapter_ms": 418.779121,
+        "prompt_sha256": "545476987be54db87dffb62eea6229c572b61b2837ce95b4872ba00c13807ca0",
+        "session_id": "d4ec9dad4263465bb8bb76f38bbb3570",
+        "request_id": "5d826c22-8839-4034-be36-3aeb1a6fcdc1",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.071676,
+        "prompt_builder_ms": 0.024847,
+        "generation_ms": 735.88302,
+        "candidate_check_ms": 0.055706,
+        "received_to_validated_ms": 736.048925,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 371.017478,
+        "ttft_ms": 373.958697,
+        "decode_ms": 313.018714,
+        "decode_calls": 5,
+        "prompt_tokens": 48
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 419.253638
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

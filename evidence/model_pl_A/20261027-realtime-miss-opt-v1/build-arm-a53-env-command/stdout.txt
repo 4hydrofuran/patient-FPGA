@@ -1,0 +1,33 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/member-a/kv260-build/a12-realtime-draft-20261027-v1/arm-v3-a53
+[ 16%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/main.cpp.o
+[ 33%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/bridge.cpp.o
+[ 50%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/route.cpp.o
+[ 66%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3/request_profile.cpp.o
+[ 83%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o
+[100%] Linking CXX executable qwen35-a12
+[100%] Built target qwen35-a12
+{
+  "domain": "ARM",
+  "binary": "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/arm-v3-a53/qwen35-a12",
+  "sha256": "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+  "base_binary": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/arm04/qwen35-a12",
+  "configured": [
+    "cmake",
+    "-S",
+    "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/cmake",
+    "-B",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/arm-v3-a53",
+    "-DBASE_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/model",
+    "-DLLAMA_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/arm-llama",
+    "-DLLAMA_SOURCE=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/llama-source",
+    "-DROOT=/mnt/c/Patientqwen",
+    "-DASSET_ROOT=/opt/patient-qwen",
+    "-DCMAKE_TOOLCHAIN_FILE=/home/member-a/kv260-sdk-2026.1-common/sysroots/x86_64-petalinux-linux/usr/share/cmake/OEToolchainConfig.cmake",
+    "-DA12_SOURCE=/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v3",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_CXX_FLAGS=--sysroot=/home/member-a/kv260-sdk-2026.1-common/sysroots/cortexa72-cortexa53-amd-linux -mcpu=cortex-a53 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2"
+  ],
+  "BOARD": "NOT_TESTED"
+}

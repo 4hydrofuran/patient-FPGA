@@ -25,7 +25,8 @@ def validate_profile(p):
     if p.get('prompt_policy') not in ('legacy','facts-only-02'):raise ValueError('unknown prompt policy')
     if p.get('prefix_tokens') != (34 if p['prompt_policy']=='facts-only-02' else 70):
         raise ValueError('profile prefix differs')
-    for k,v in (('context_tokens',1024),('output_tokens',24)):
+    output=32 if p.get('realtime_draft_strategy') else 24
+    for k,v in (('context_tokens',1024),('output_tokens',output)):
         if type(p.get(k)) is not int or p[k]!=v:raise ValueError('profile bound differs: '+k)
     if p.get('threads') not in (2,3) or p.get('kernel_threads')!=p['threads']:raise ValueError('threads differ')
     tokens=p.get('prefix_token_ids')
@@ -35,6 +36,15 @@ def validate_profile(p):
     if p.get('authorization_included') is not False:raise ValueError('profile cannot carry authority')
     if p.get('cache_id') != ('short34-t'+str(p['threads']) if p['prompt_policy']=='facts-only-02' else 'neutral'):
         raise ValueError('profile cache namespace differs')
+    if p.get('realtime_draft_strategy') is not None:
+        from realtime_draft import STRATEGY
+        if p['realtime_draft_strategy']!=STRATEGY or p['prompt_policy']!='facts-only-02':
+            raise ValueError('realtime draft profile differs')
+    if p.get('live_miss_prompt_policy') is not None:
+        from compact_fact_prompt import POLICY,policy_sha256
+        if (p['live_miss_prompt_policy']!=POLICY or not p.get('realtime_draft_strategy')
+                or p['prefix_identity'].get('live_miss_prompt_policy_sha256')!=policy_sha256()):
+            raise ValueError('live miss input selection differs')
     return p
 
 
@@ -47,6 +57,9 @@ def check_ready(profile, ready):
 
 
 def builder(profile):
+    if profile.get('live_miss_prompt_policy'):
+        from compact_fact_prompt import prompt_messages
+        return prompt_messages
     if profile['prompt_policy']=='legacy':return None
     from short_prompt_adapter import prompt_messages
     return prompt_messages

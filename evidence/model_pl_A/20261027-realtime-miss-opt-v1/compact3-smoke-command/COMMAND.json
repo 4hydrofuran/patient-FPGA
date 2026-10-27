@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+    "-B",
+    "platform/qwen35/web/realtime_draft_check_pc.py",
+    "--binary",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v3/qwen35-a12",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/compact3-smoke",
+    "--threads",
+    "3",
+    "--limit",
+    "11",
+    "--rejects",
+    "2",
+    "--compact"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 42.516204844000015,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "e29ec6555dc447dce9de716acb920e879d1f31f4a30921cf1e53071c8e4b86df"
+  }
+}

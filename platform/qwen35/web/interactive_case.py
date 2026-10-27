@@ -58,7 +58,8 @@ class CachedTransport(WorkerTransport):
         if self.strict_profile and self.warm_result is None:raise RuntimeError('prefix warm has not completed')
         if self.strict_profile and getattr(self.worker,'real',False):
             from continuous_sessions import question_reserve
-            reserve=question_reserve(self.profile['context_tokens'],self.profile['prefix_tokens'],self.profile['output_tokens'])
+            reserve=question_reserve(self.profile['context_tokens'],self.profile['prefix_tokens'],self.profile['output_tokens'],
+                draft_strategy=self.profile.get('realtime_draft_strategy'))
             if self.worker.max_runs-self.worker.runs<reserve:raise RuntimeError('insufficient complete-question budget')
         if self.maximum_questions is not None and self.questions_sent>=self.maximum_questions:
             raise RuntimeError('This window has consumed its model question allowance')
@@ -129,10 +130,10 @@ def run_case(worker, owner, path, *, real, api, overlay):
     transport.warm(ready,warm)
     api.save(path/'warm-result.json',transport.warm_result)
     native=load_native(overlay,'/opt/patient-qwen')(transport,ready,max_output_tokens=profile['output_tokens'],
-                template_path=api.BUNDLE/'control/chat_template.jinja')
+                template_path=api.BUNDLE/'control/chat_template.jinja',generation_strategy=profile.get('realtime_draft_strategy'))
     from continuous_sessions import question_reserve
     budget_available=lambda: not continuous or worker.max_runs-worker.runs>=question_reserve(
-                profile['context_tokens'],profile['prefix_tokens'],profile['output_tokens'])
+                profile['context_tokens'],profile['prefix_tokens'],profile['output_tokens'],draft_strategy=profile.get('realtime_draft_strategy'))
     accepting=threading.Event();accepting.set()
     alive=lambda: (accepting.is_set() and budget_available() and not owner.finished and not worker.closed and not worker.quarantined
                    and not worker.delivery_cancelled and worker.process.poll() is None)

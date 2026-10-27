@@ -31,6 +31,8 @@ def verify(a):
     src=HERE/'web_managed.py' if (HERE/'web_managed.py').is_file() else project_root(parent)/'system_qwen35/app/web_managed.py'
     s=importlib.util.spec_from_file_location('cache_checks_web',src);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
     deps=read(parent/'PC_DEPENDENCIES.json');profile=read(window/'profile.json')
+    if a.compact or profile.get('live_miss_prompt_policy'):
+        from compact_fact_prompt import prompt_messages
     identity=model_identity(profile['prefix_identity'],vendor_source()/'patient_web/reference')
     data=read(a.catalog);case=load_case('SYN_CP_01')
     p=plan(case,Transcript.parse(dict(request_id='miss',text='疼痛在哪里？',source='typed',final=True)),())
@@ -38,19 +40,30 @@ def verify(a):
     if len(data['entries'])!=197:raise RuntimeError('test catalog must remove exactly one real entry')
     save(out/'partial-catalog.json',data)
     cache=VerifiedAnswerCache(out/'partial-catalog.json',identity=identity,expected_sha256=file_sha(out/'partial-catalog.json'))
-    cfg_path=project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json'
+    cfg_path=a.pc_prefix_config or (parent/'PC_PREFIX_CONFIG.json' if (parent/'PC_PREFIX_CONFIG.json').is_file()
+        else project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json')
     cfg=read(cfg_path);p=copy.deepcopy(profile);p['prefix_identity']=cfg['identity']
+    threads=cfg['identity']['threads'];p['threads']=p['kernel_threads']=threads;p['cache_id']='short34-t'+str(threads)
+    strategy=profile.get('realtime_draft_strategy')
+    if a.realtime_draft:
+        from realtime_draft import STRATEGY
+        strategy=STRATEGY;p['output_tokens']=32;p['realtime_draft_strategy']=strategy
     env={k:v for k,v in os.environ.items() if not k.startswith(('SP_A12','SP_TT10','LD_','GGML_','OMP_'))}
-    env.update(LD_LIBRARY_PATH=deps['library_dir'],SP_TT10_CONFIG=str(cfg_path),OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1')
-    worker=OwnedWorker([deps['binary'],deps['model'],'2','1024','all','TILED','2','8'],directory=out/'worker',env=env,
+    env.update(LD_LIBRARY_PATH=deps['library_dir'],SP_TT10_CONFIG=str(cfg_path),OMP_NUM_THREADS=str(threads),OPENBLAS_NUM_THREADS='1')
+    worker=OwnedWorker([str(a.binary or deps['binary']),deps['model'],str(threads),'1024','all','TILED',str(threads),'8'],directory=out/'worker',env=env,
         health=lambda:None,max_runs=1,max_loads=1,expires=time.monotonic()+1800,real=False)
     try:
         ready=worker.get(120)
         api=type('PC',(),{'receive':staticmethod(lambda w,*args,**kw:w.get(kw.get('timeout',180)))})()
         transport=CachedTransport(worker,None,out,api,profile=p,maximum_questions=None)
-        transport.warm(ready,read(window/'bundle/control/requests.json')[1])
-        native=load_native(window,project_root(parent))(transport,ready,max_output_tokens=24,domain='PC_REFERENCE',
-            template_path=window/'bundle/control/chat_template.jinja')
+        warm=copy.deepcopy(read(window/'bundle/control/requests.json')[1]);warm['cache_id']=p['cache_id']
+        transport.warm(ready,warm)
+        options=dict(max_output_tokens=p['output_tokens'],domain='PC_REFERENCE',template_path=window/'bundle/control/chat_template.jinja')
+        native_source=window
+        if strategy:
+            options['generation_strategy']=strategy
+            native_source=HERE if (HERE/'native_pl.py').is_file() else project_root(parent)/'system_qwen35/app'
+        native=load_native(native_source,project_root(parent))(transport,ready,**options)
         app=m.create_app(native,is_ready=lambda:not native.broken,remaining_seconds=lambda:999,
             prompt_builder=prompt_messages,answer_cache=cache,domain='PC')
         c=app.state.coordinator;install(c,out/'consultations')
@@ -69,6 +82,10 @@ def verify(a):
                 if response['final_check']['status']!='pass':raise RuntimeError('check failed')
                 if expected=='MODEL' and (not response['model_result']['eos'] or response['model_result']['actual_backend']!='CPU_REFERENCE'):
                     raise RuntimeError('miss was not actual checked CPU generation')
+                if expected=='MODEL' and strategy:
+                    spec=response['model_result'].get('speculative_decoding',{})
+                    if spec.get('strategy')!=strategy or spec.get('answer_cache_used') is not False or not spec.get('target_eos_verified'):
+                        raise RuntimeError('actual cache miss did not perform strict target-model verification')
                 dup=client.post(url+'/turns',json=dict(request_id=rid,text=text)).json()
                 if not dup.get('replayed'):raise RuntimeError('duplicate not idempotent')
                 responses.append(dict(turn=turn,response=response))
@@ -99,7 +116,8 @@ def verify(a):
         if not worker.close(15):raise RuntimeError('actual CPU worker not closed normally')
         result=dict(status='PASS_ACTUAL_CPU_MISS_CACHE_POLICY_LIFECYCLE',actual_model_calls=1,
             policy_items=policies,same_session_score=20,archived_cache_sessions=10,retained_in_memory=8,
-            worker_exit=worker.process.returncode,cache=cache.report(),original_Owner_hardware_restore='NOT_TESTED',BOARD='NOT_TESTED')
+            worker_exit=worker.process.returncode,cache=cache.report(),generation_strategy=strategy,
+            original_Owner_hardware_restore='NOT_TESTED',BOARD='NOT_TESTED')
         save(out/'RESULT.json',result);return result
     finally:
         if not worker.closed:worker.close(15)
@@ -108,4 +126,7 @@ def verify(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--catalog',type=Path,required=True)
     p.add_argument('--parent',type=Path,default=default_parent());p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--pc-prefix-config',type=Path);p.add_argument('--binary',type=Path)
+    p.add_argument('--realtime-draft',action='store_true')
+    p.add_argument('--compact',action='store_true')
     print(json.dumps(verify(p.parse_args()),indent=2))

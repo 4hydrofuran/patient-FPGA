@@ -84,6 +84,13 @@ def measure(a):
                     if timing['visibility_state']!='visible':raise RuntimeError('browser was not visible to its compositor')
                     if a.mode=='cache' and (turn['actual_backend'] is not None or turn['delivery_receipt']['model_called'] is not False):
                         raise RuntimeError('cached answer mislabels current inference')
+                    if a.mode!='cache' and (turn['actual_backend']!='CPU_REFERENCE' or turn['delivery_receipt']['model_called'] is not True):
+                        raise RuntimeError('real-time answer did not execute the actual model')
+                    if a.mode=='realtime':
+                        spec=turn.get('timing',{}).get('native_speculative_decoding') or {}
+                        if (spec.get('strategy')!='FACT_COPY_GREEDY_VERIFY_V1' or spec.get('answer_cache_used') is not False
+                                or not (spec.get('target_eos_verified') or spec.get('fallback_full_prompt_replayed'))):
+                            raise RuntimeError('real-time target verification receipt missing')
                     result=dict(id=row['id'],case_id=cid,question=item['question'],answer=turn['answer'],
                         timing=timing,turn=turn,measured_with='REAL_EDGE_REAL_HTTP_SSE',BOARD='NOT_TESTED')
                     results.append(result)
@@ -107,7 +114,7 @@ def measure(a):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--mode',choices=('live','cache'),required=True)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--mode',choices=('live','cache','realtime'),required=True)
     p.add_argument('--url',required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--limit',type=int)
     p.add_argument('--cohort',type=Path,default=default_parent()/'COHORT.json')
     p.add_argument('--edge',type=Path,default=Path('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'))

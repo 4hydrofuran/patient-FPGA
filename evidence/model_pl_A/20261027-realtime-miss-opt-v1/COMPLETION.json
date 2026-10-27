@@ -1,0 +1,47 @@
+{
+  "status": "PASS_ALL_REQUIRED_NO_BOARD_REALTIME_OPTIMIZATION",
+  "runtime_review_sha256": "61dd8ffc606f430a6d1c542c088bb5f35c1d9532b2c9d9d9122254644a6fc848",
+  "archives": {
+    "status": "PASS_ALL_ARCHIVES_CRC_SHA_READBACK",
+    "artifacts": [
+      {
+        "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_NoBoard_20261027_v1.zip",
+        "role": "RecommendedCombinedDelivery",
+        "bytes": 39079424,
+        "sha256": "e88d037702cb32a9b81d011814d4990f0ff623bd8a690c146b58a46fa111c527",
+        "verified_payload_files": 6,
+        "CRC_SHA_readback": "PASS"
+      },
+      {
+        "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_Deployment_NoBoard_20261027_v1.zip",
+        "role": "Deployment",
+        "bytes": 27342103,
+        "sha256": "33bb8156ade6d5de7d32f7ba1909846a005416bee46f8b2f1977707c6bf2377d",
+        "verified_payload_files": 704,
+        "CRC_SHA_readback": "PASS"
+      },
+      {
+        "name": "KV260_Qwen35_A12_RealtimeModel_VerifiedDraft_EngineeringIncrement_NoBoard_20261027_v1.zip",
+        "role": "EngineeringIncrement",
+        "bytes": 11725933,
+        "sha256": "a50ec02bcbb63c93327107acc4599aa9c6f5a1323ffc54be78c5724156f0cb93",
+        "verified_payload_files": 1603,
+        "CRC_SHA_readback": "PASS"
+      }
+    ],
+    "model_weights_included": false,
+    "authorization_included": false,
+    "BOARD": "NOT_TESTED"
+  },
+  "remaining_required_no_board_items": [],
+  "remaining_board_items": [
+    "visible latency",
+    "real PL miss",
+    "original Owner restore/independent release"
+  ],
+  "BOARD": "NOT_TESTED",
+  "board_actions": 0,
+  "board_latency_s": null,
+  "board_real_PL_miss": null,
+  "board_restore_release": null
+}

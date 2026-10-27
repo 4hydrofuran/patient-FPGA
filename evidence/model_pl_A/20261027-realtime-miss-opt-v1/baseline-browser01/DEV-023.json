@@ -1,0 +1,93 @@
+{
+  "id": "DEV-023",
+  "case_id": "SYN_CP_02",
+  "question": "何时出现的胸痛？",
+  "answer": "胸痛从 24 小时前开始。",
+  "timing": {
+    "session_id": "5a196008fa704a5ba1964f1e100c6ffe",
+    "request_id": "ea924364-362e-40b7-9097-7104cf2acb1c",
+    "submitted_ms": 16426.200000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 17491.800000071526,
+    "paint_scheduled": true,
+    "painted_ms": 17505.5,
+    "submit_to_paint_ms": 1079.2999999523163,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "ea924364-362e-40b7-9097-7104cf2acb1c",
+    "operation_id": "b8fb49f0bd684fb98e2b3b9ae00fa152",
+    "question": "何时出现的胸痛？",
+    "status": "COMPLETED",
+    "answer": "胸痛从 24 小时前开始。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "5a196008fa704a5ba1964f1e100c6ffe",
+      "request_id": "ea924364-362e-40b7-9097-7104cf2acb1c",
+      "operation_id": "b8fb49f0bd684fb98e2b3b9ae00fa152",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "ac5b4dc966f97eea8ef713e1ba8a1269830b7dd57bbff97fa4d6c38445aea228",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "75050280935",
+      "published_monotonic_ns": "75050840578",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1026.168619,
+      "accepted_to_published_ms": 1026.831528,
+      "validation_to_publication_ms": 0.662909,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.224035,
+        "adapter_entered_monotonic_ns": "74024564184",
+        "worker_send_monotonic_ns": "74024792588",
+        "first_token_monotonic_ns": "74486497567",
+        "worker_wall_ms": 1025.243753,
+        "first_token_from_adapter_ms": 461.933383,
+        "prompt_sha256": "2473115a7b211d7ded3edf8dabe6079b211ea5ef4aacc83166d8ad864b6f40cb",
+        "session_id": "5a196008fa704a5ba1964f1e100c6ffe",
+        "request_id": "ea924364-362e-40b7-9097-7104cf2acb1c",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.075162,
+        "prompt_builder_ms": 0.02608,
+        "generation_ms": 1025.718545,
+        "candidate_check_ms": 0.05809,
+        "received_to_validated_ms": 1025.892334,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 413.595001,
+        "ttft_ms": 416.529,
+        "decode_ms": 558.0105550000001,
+        "decode_calls": 9,
+        "prompt_tokens": 50
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 462.385251
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

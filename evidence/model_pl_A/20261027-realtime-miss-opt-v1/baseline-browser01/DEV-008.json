@@ -1,0 +1,93 @@
+{
+  "id": "DEV-008",
+  "case_id": "SYN_CP_02",
+  "question": "怎样才能缓解疼痛？",
+  "answer": "缓解方式我不清楚。",
+  "timing": {
+    "session_id": "7ebeac44676844f9a63c79431fd727e1",
+    "request_id": "e2986b57-9c47-47de-b460-aefe92164ccb",
+    "submitted_ms": 8138.200000047684,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 8890.900000095367,
+    "paint_scheduled": true,
+    "painted_ms": 8906.5,
+    "submit_to_paint_ms": 768.2999999523163,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "e2986b57-9c47-47de-b460-aefe92164ccb",
+    "operation_id": "a03ea4dcd5244b1f8c5f99d002e2e680",
+    "question": "怎样才能缓解疼痛？",
+    "status": "COMPLETED",
+    "answer": "缓解方式我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "7ebeac44676844f9a63c79431fd727e1",
+      "request_id": "e2986b57-9c47-47de-b460-aefe92164ccb",
+      "operation_id": "a03ea4dcd5244b1f8c5f99d002e2e680",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "adc36e0b96f56edf2665e59dc11a274e71966bbe2bc2982b76d8188a48d242b5",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "66469643716",
+      "published_monotonic_ns": "66470267269",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 733.790366,
+      "accepted_to_published_ms": 734.517225,
+      "validation_to_publication_ms": 0.726859,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.241458,
+        "adapter_entered_monotonic_ns": "65736369124",
+        "worker_send_monotonic_ns": "65736615431",
+        "first_token_monotonic_ns": "66153080324",
+        "worker_wall_ms": 732.824658,
+        "first_token_from_adapter_ms": 416.7112,
+        "prompt_sha256": "fd5a08fed4be056d9390d977422c3aac8f3d6646bd32d4732dee705be69d3052",
+        "session_id": "7ebeac44676844f9a63c79431fd727e1",
+        "request_id": "e2986b57-9c47-47de-b460-aefe92164ccb",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.078339,
+        "prompt_builder_ms": 0.033092,
+        "generation_ms": 733.276797,
+        "candidate_check_ms": 0.055084,
+        "received_to_validated_ms": 733.458311,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 368.599972,
+        "ttft_ms": 371.434138,
+        "decode_ms": 312.296476,
+        "decode_calls": 5,
+        "prompt_tokens": 48
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 417.226974
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

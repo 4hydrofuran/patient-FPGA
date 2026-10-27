@@ -1,0 +1,37 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v2
+[ 16%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v2/main.cpp.o
+[ 33%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v2/bridge.cpp.o
+[ 50%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v2/route.cpp.o
+[ 66%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v2/request_profile.cpp.o
+[ 83%] Building CXX object CMakeFiles/qwen35-a12.dir/mnt/c/Patientqwen/quant/reference/w4a8.cpp.o
+[100%] Linking CXX executable qwen35-a12
+[100%] Built target qwen35-a12
+{
+  "domain": "PC",
+  "binary": "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v2/qwen35-a12",
+  "sha256": "1c9c8efbcffddc1fc66eaca5b963a6db54f3ea938b96c6c4804c999b2b0f64d4",
+  "base_binary": "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/pc04/qwen35-a12",
+  "configured": [
+    "cmake",
+    "-S",
+    "/home/member-a/kv260-build/a12-tt10-01-20261024-v1/cmake",
+    "-B",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v2",
+    "-DBASE_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821553111981494-A-a12-step10-perf-v2-5a5d5d7b/pc",
+    "-DLLAMA_BUILD=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/pc-llama",
+    "-DLLAMA_SOURCE=/home/member-a/kv260-build/ra02-coordinator/work/01792821173302706014-A-a12-step10-perf-v1-7c5e26c6/llama-source",
+    "-DROOT=/mnt/c/Patientqwen",
+    "-DASSET_ROOT=/mnt/c/Patientqwen",
+    "-DA12_SOURCE=/mnt/c/Patientqwen/evidence/model_pl_A/20261027-realtime-miss-opt-v1/source-v2",
+    "-DCMAKE_BUILD_TYPE=Release"
+  ],
+  "BOARD": "NOT_TESTED"
+}

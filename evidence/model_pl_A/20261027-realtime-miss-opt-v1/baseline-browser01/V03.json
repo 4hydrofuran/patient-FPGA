@@ -1,0 +1,93 @@
+{
+  "id": "V03",
+  "case_id": "SYN_CP_03",
+  "question": "胸痛每次持续多久？",
+  "answer": "每次疼痛持续 20 分钟。",
+  "timing": {
+    "session_id": "fb6fe9e739c24d5aa06a219caec4bdb1",
+    "request_id": "02a04061-2cde-4ad5-88f5-0d5ea76daf91",
+    "submitted_ms": 20903.400000095367,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 21967,
+    "paint_scheduled": true,
+    "painted_ms": 21972,
+    "submit_to_paint_ms": 1068.5999999046326,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "02a04061-2cde-4ad5-88f5-0d5ea76daf91",
+    "operation_id": "d0ec0075c7e546668facca15485cd01e",
+    "question": "胸痛每次持续多久？",
+    "status": "COMPLETED",
+    "answer": "每次疼痛持续 20 分钟。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "fb6fe9e739c24d5aa06a219caec4bdb1",
+      "request_id": "02a04061-2cde-4ad5-88f5-0d5ea76daf91",
+      "operation_id": "d0ec0075c7e546668facca15485cd01e",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "79533814190",
+      "published_monotonic_ns": "79534531070",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1030.138825,
+      "accepted_to_published_ms": 1030.959963,
+      "validation_to_publication_ms": 0.821138,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.261005,
+        "adapter_entered_monotonic_ns": "78504162855",
+        "worker_send_monotonic_ns": "78504428819",
+        "first_token_monotonic_ns": "78965428239",
+        "worker_wall_ms": 1029.148461,
+        "first_token_from_adapter_ms": 461.265384,
+        "prompt_sha256": "1b594197316d7f222d1d4cccaaba95800b19207377d93c5a8cbb4fba25af11c5",
+        "session_id": "fb6fe9e739c24d5aa06a219caec4bdb1",
+        "request_id": "02a04061-2cde-4ad5-88f5-0d5ea76daf91",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.097355,
+        "prompt_builder_ms": 0.02667,
+        "generation_ms": 1029.64823,
+        "candidate_check_ms": 0.061146,
+        "received_to_validated_ms": 1029.84874,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 413.216469,
+        "ttft_ms": 416.046127,
+        "decode_ms": 562.581211,
+        "decode_calls": 9,
+        "prompt_tokens": 50
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 461.752874
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

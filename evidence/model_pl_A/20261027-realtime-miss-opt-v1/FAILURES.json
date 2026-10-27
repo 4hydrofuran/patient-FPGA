@@ -1,0 +1,30 @@
+{
+  "preserved": true,
+  "required_unresolved_no_board_items": [],
+  "rows": [
+    {
+      "attempt": "naive literal draft",
+      "evidence": "smoke01",
+      "cause": "model adds spaces around ASCII numbers",
+      "resolution": "single deterministic spacing rule over current input, all tokens still target-verified"
+    },
+    {
+      "attempt": "pairs198-v2",
+      "evidence": "pairs198-v2/proof/pair-039-serial.json",
+      "cause": "old24 output bound cannot sample EOS after24 answer tokens",
+      "resolution": "new continuous32 bound, 22320 budget; original failure retained"
+    },
+    {
+      "attempt": "no-space prompt",
+      "evidence": "nospace-smoke/RESULT.json",
+      "cause": "one of11 drafts rejected; worst2282ms",
+      "resolution": "not selected; deployed SYSTEM and34 prefix remain unchanged"
+    },
+    {
+      "attempt": "initial ARM SDK flags",
+      "evidence": "verify-report-command/stderr.txt",
+      "cause": "SDK OEToolchainConfig FORCE-overrode CMAKE_CXX_FLAGS from environment",
+      "resolution": "pass accepted A53 flags in subprocess CXXFLAGS/CFLAGS; actual flags.make checked, separate rebuild and package rebind; PC runtime unchanged"
+    }
+  ]
+}

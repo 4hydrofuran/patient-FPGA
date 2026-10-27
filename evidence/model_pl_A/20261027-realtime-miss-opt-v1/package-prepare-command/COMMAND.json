@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "platform/qwen35/web/realtime_draft_prepare.py",
+    "--output",
+    "release/a12_realtime_model_draft_20261027_v1/realtime34-threads3-out32",
+    "--arm-binary",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/arm-v3/qwen35-a12",
+    "--pc-binary",
+    "/home/member-a/kv260-build/a12-realtime-draft-20261027-v1/pc-v3/qwen35-a12",
+    "--pc-config",
+    "evidence/model_pl_A/20261027-realtime-miss-opt-v1/pairs198-final/prefix-config.json",
+    "--threads",
+    "3",
+    "--compact"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 99.04557667,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "11742e85bac0518fa88558ecee967bb8b63228ad4b806ea9f007b7d54ee733c5"
+  }
+}

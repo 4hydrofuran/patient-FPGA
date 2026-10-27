@@ -1,0 +1,93 @@
+{
+  "id": "DEV-010",
+  "case_id": "SYN_CP_01",
+  "question": "您有药物过敏吗？",
+  "answer": "过敏情况我不清楚。",
+  "timing": {
+    "session_id": "94ea0c1cc22740db8d65f7666d475493",
+    "request_id": "65be81b6-65f3-451a-8515-f415ec808d78",
+    "submitted_ms": 9992.800000071526,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 10750.700000047684,
+    "paint_scheduled": true,
+    "painted_ms": 10755.700000047684,
+    "submit_to_paint_ms": 762.8999999761581,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "65be81b6-65f3-451a-8515-f415ec808d78",
+    "operation_id": "d75eea74a3c948b0a8917d979b7839be",
+    "question": "您有药物过敏吗？",
+    "status": "COMPLETED",
+    "answer": "过敏情况我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "94ea0c1cc22740db8d65f7666d475493",
+      "request_id": "65be81b6-65f3-451a-8515-f415ec808d78",
+      "operation_id": "d75eea74a3c948b0a8917d979b7839be",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "68326580814",
+      "published_monotonic_ns": "68327138242",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 732.543605,
+      "accepted_to_published_ms": 733.207294,
+      "validation_to_publication_ms": 0.663689,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.269591,
+        "adapter_entered_monotonic_ns": "67594557887",
+        "worker_send_monotonic_ns": "67594833059",
+        "first_token_monotonic_ns": "68012589209",
+        "worker_wall_ms": 731.493393,
+        "first_token_from_adapter_ms": 418.031322,
+        "prompt_sha256": "54a94c2fbd2ef6afc9eaa002b7f112a8ca5249d9f9986cba0fff85a1ca90770b",
+        "session_id": "94ea0c1cc22740db8d65f7666d475493",
+        "request_id": "65be81b6-65f3-451a-8515-f415ec808d78",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.085493,
+        "prompt_builder_ms": 0.029556,
+        "generation_ms": 732.004803,
+        "candidate_check_ms": 0.081324,
+        "received_to_validated_ms": 732.229139,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 369.64261,
+        "ttft_ms": 372.538263,
+        "decode_ms": 310.047376,
+        "decode_calls": 5,
+        "prompt_tokens": 48
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 418.552
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

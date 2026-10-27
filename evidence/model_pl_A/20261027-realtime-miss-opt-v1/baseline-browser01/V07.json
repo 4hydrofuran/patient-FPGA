@@ -1,0 +1,93 @@
+{
+  "id": "V07",
+  "case_id": "SYN_CP_01",
+  "question": "什么情况下胸痛会加重？",
+  "answer": "疼痛在快走时出现。",
+  "timing": {
+    "session_id": "490886cb4b014a0a8f599da487cbada6",
+    "request_id": "b358a774-76c0-4137-af26-606b4316ade6",
+    "submitted_ms": 25573.600000023842,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 26438.100000023842,
+    "paint_scheduled": true,
+    "painted_ms": 26455.900000095367,
+    "submit_to_paint_ms": 882.3000000715256,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "b358a774-76c0-4137-af26-606b4316ade6",
+    "operation_id": "6b15fdc6f2374be190db24904eedde03",
+    "question": "什么情况下胸痛会加重？",
+    "status": "COMPLETED",
+    "answer": "疼痛在快走时出现。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "490886cb4b014a0a8f599da487cbada6",
+      "request_id": "b358a774-76c0-4137-af26-606b4316ade6",
+      "operation_id": "6b15fdc6f2374be190db24904eedde03",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "9feef95e26b8bf70d601172d87d515bb876a76d2fca4e908f9ea3c2448cb69aa",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "83990263206",
+      "published_monotonic_ns": "83990940100",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 818.664966,
+      "accepted_to_published_ms": 819.448152,
+      "validation_to_publication_ms": 0.783186,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.235427,
+        "adapter_entered_monotonic_ns": "83172192577",
+        "worker_send_monotonic_ns": "83172432713",
+        "first_token_monotonic_ns": "83609987965",
+        "worker_wall_ms": 817.624532,
+        "first_token_from_adapter_ms": 437.795388,
+        "prompt_sha256": "955acb5940f365d01f89a7d343dcf76c6f49e1c2f24eca5f8b27872148fea1a3",
+        "session_id": "490886cb4b014a0a8f599da487cbada6",
+        "request_id": "b358a774-76c0-4137-af26-606b4316ade6",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.103256,
+        "prompt_builder_ms": 0.112984,
+        "generation_ms": 818.093402,
+        "candidate_check_ms": 0.053682,
+        "received_to_validated_ms": 818.374776,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 389.700324,
+        "ttft_ms": 392.577643,
+        "decode_ms": 375.723974,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 438.389725
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

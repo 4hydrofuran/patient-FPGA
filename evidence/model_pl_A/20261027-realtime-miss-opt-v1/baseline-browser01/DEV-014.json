@@ -1,0 +1,93 @@
+{
+  "id": "DEV-014",
+  "case_id": "SYN_CP_02",
+  "question": "不是三天，是三周才开始的吗？",
+  "answer": "胸痛从 24 小时前开始。",
+  "timing": {
+    "session_id": "1694e750628d44c099b056b7d2175058",
+    "request_id": "0463b0d6-bceb-4c2a-8227-6cff018f12aa",
+    "submitted_ms": 13387.400000095367,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 14452.900000095367,
+    "paint_scheduled": true,
+    "painted_ms": 14455.5,
+    "submit_to_paint_ms": 1068.0999999046326,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "0463b0d6-bceb-4c2a-8227-6cff018f12aa",
+    "operation_id": "ffd2de1afba94c69b4f293049929cc22",
+    "question": "不是三天，是三周才开始的吗？",
+    "status": "COMPLETED",
+    "answer": "胸痛从 24 小时前开始。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5bfb117afcd54a1e915b90b5cbbd9ea8",
+      "session_id": "1694e750628d44c099b056b7d2175058",
+      "request_id": "0463b0d6-bceb-4c2a-8227-6cff018f12aa",
+      "operation_id": "ffd2de1afba94c69b4f293049929cc22",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "ac5b4dc966f97eea8ef713e1ba8a1269830b7dd57bbff97fa4d6c38445aea228",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "72013451835",
+      "published_monotonic_ns": "72014154939",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1024.652982,
+      "accepted_to_published_ms": 1025.459232,
+      "validation_to_publication_ms": 0.80625,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.22679,
+        "adapter_entered_monotonic_ns": "70989277446",
+        "worker_send_monotonic_ns": "70989508505",
+        "first_token_monotonic_ns": "71450109878",
+        "worker_wall_ms": 1023.719476,
+        "first_token_from_adapter_ms": 460.832432,
+        "prompt_sha256": "2473115a7b211d7ded3edf8dabe6079b211ea5ef4aacc83166d8ad864b6f40cb",
+        "session_id": "1694e750628d44c099b056b7d2175058",
+        "request_id": "0463b0d6-bceb-4c2a-8227-6cff018f12aa",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.076475,
+        "prompt_builder_ms": 0.030468,
+        "generation_ms": 1024.186231,
+        "candidate_check_ms": 0.056708,
+        "received_to_validated_ms": 1024.363858,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 413.432169,
+        "ttft_ms": 416.338883,
+        "decode_ms": 556.916483,
+        "decode_calls": 9,
+        "prompt_tokens": 50
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 461.311025
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}
