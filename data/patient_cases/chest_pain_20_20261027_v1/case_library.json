@@ -1,0 +1,2349 @@
+{
+  "schema": "PATIENT_FPGA_CASE_CONTENT_V1",
+  "date": "2026-10-27",
+  "case_count": 20,
+  "retained_cases": 3,
+  "added_cases": 17,
+  "cases": [
+    {
+      "case_id": "SYN_CP_01",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "A-authored artificial dialogue fixture; no patient record or diagnosis",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "压迫感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 2,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 10,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 6,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左肩",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "快走",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "A-authored artificial dialogue fixture; no patient record or diagnosis",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "左侧胸部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "针扎感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 24,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 3,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "转身",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "A-authored artificial dialogue fixture; no patient record or diagnosis",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "烧灼感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 6,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 20,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 5,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "进食后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "紧缩感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 4,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 5,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 6,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左上臂",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "上楼",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "坐下休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "known",
+          "value": "青霉素",
+          "unit": null,
+          "time_scope": "既往药物过敏史",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "左前胸",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "牵拉痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 8,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 15,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "搬重物",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "停止用力",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "右侧胸部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "针刺感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 12,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 2,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 5,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "右肩",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "深呼吸",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "停止活动",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "烧灼感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 3,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 20,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "饱餐后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "坐直",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "针刺感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 10,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 10,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 5,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左肩",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "平躺",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "坐起",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "发紧感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 1,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 8,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "紧张",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "安静休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "右前胸",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "刺痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 24,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 3,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "咳嗽",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "停止咳嗽",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "known",
+          "value": "头孢氨苄",
+          "unit": null,
+          "time_scope": "既往药物过敏史",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "known",
+          "value": "止咳药",
+          "unit": null,
+          "time_scope": "今天已用药",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "右侧胸部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "酸痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 36,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 20,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 3,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "抬右臂",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "放下右臂",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "烧灼感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 8,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 15,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 3,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "弯腰",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "坐直",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "known",
+          "value": "铝碳酸镁",
+          "unit": null,
+          "time_scope": "今天已用药",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "左前胸",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "压迫感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 2,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 10,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 7,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左肩",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "快走",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "known",
+          "value": "青霉素",
+          "unit": null,
+          "time_scope": "既往药物过敏史",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "闷痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 6,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 12,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 6,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "背部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "爬坡",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "停止活动",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "known",
+          "value": "氨氯地平",
+          "unit": null,
+          "time_scope": "平时用药",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "左侧胸部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "隐痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 48,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 5,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 2,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "转身",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "停止转身",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "闷痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "紧缩感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 5,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 8,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 6,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "快走",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": false,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "negative",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "known",
+          "value": "美托洛尔",
+          "unit": null,
+          "time_scope": "平时用药",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "左前胸",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "压迫感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 3,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 15,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 5,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左肩",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "走路",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "坐下",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "右下胸部",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "牵扯痛",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 18,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 4,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 4,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "咳嗽",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "known",
+          "value": "安静休息",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "known",
+          "value": "止咳药",
+          "unit": null,
+          "time_scope": "今天已用药",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ]
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "version": "1.0-draft",
+      "synthetic": true,
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "provenance": "Original synthetic Chinese history-taking fixture authored for this project; structural inspiration: Synthea and AgentClinic; no copied patient record or diagnostic label.",
+      "rubric_version": "coverage-v1-draft",
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "forbidden": [
+        "diagnosis",
+        "treatment",
+        "self_scoring",
+        "other_case_disclosure",
+        "invented_negative"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸前正中",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "quality",
+          "status": "known",
+          "value": "压迫感",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "onset",
+          "status": "known",
+          "value": 1,
+          "unit": "小时前",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 20,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "severity",
+          "status": "known",
+          "value": 8,
+          "unit": "分/10分",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "radiation",
+          "status": "known",
+          "value": "左上臂",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "trigger",
+          "status": "known",
+          "value": "安静坐着",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "relief",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "dyspnea",
+          "status": "known",
+          "value": true,
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "allergy",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        },
+        {
+          "slot": "medications",
+          "status": "unknown",
+          "value": null,
+          "unit": null,
+          "time_scope": "病史未给定",
+          "polarity": "unknown",
+          "disclose": "on_slot"
+        }
+      ]
+    }
+  ]
+}
