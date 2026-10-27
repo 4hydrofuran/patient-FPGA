@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BROWSER_FIXTURES",
+  "checks": [
+    "session initialized",
+    "IME candidate Enter does not submit",
+    "explicit submit generates exactly one request",
+    "adjacent events share one snapshot GET",
+    "checked SSE answer reaches DOM",
+    "browser answer.ready timing uses request ID",
+    "browser observes checked DOM after animation frames",
+    "snapshot event does not issue duplicate GET",
+    "unchanged turn DOM is retained",
+    "old epoch result is ignored",
+    "healthy SSE avoids periodic full snapshot refresh",
+    "disconnected SSE retains polling fallback",
+    "finish renders frozen evaluation",
+    "new session clears current transcript",
+    "old connection/session result is ignored"
+  ],
+  "timing": {
+    "session_id": "session1",
+    "request_id": "edf408ef-579e-4ed1-8d85-fac974e7f9f4",
+    "submitted_ms": 563.7000000476837,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 750.9000000953674,
+    "paint_scheduled": true,
+    "painted_ms": 763.9000000953674,
+    "submit_to_paint_ms": 200.20000004768372,
+    "answer_source": "MODEL",
+    "actual_backend": "FPGA_REAL",
+    "visibility_state": "visible"
+  },
+  "posts": 1,
+  "BOARD": "NOT_TESTED",
+  "model_executed": false,
+  "browser_exit": 0,
+  "elapsed_s": 2.0245862998999655
+}

@@ -1,0 +1,21 @@
+usage: fast_response_verify.py [-h] --domain {PC,BOARD} --bundle BUNDLE
+                               [--suite {package,model,ordinary,web}]
+                               [--output OUTPUT] [--pc-binary PC_BINARY]
+                               [--pc-library-dir PC_LIBRARY_DIR]
+                               [--model MODEL] [--execute-board]
+                               [--window-id WINDOW_ID]
+
+Verify offline PC candidates, or explicitly enter a fresh original-Owner BOARD
+window.
+
+options:
+  -h, --help            show this help message and exit
+  --domain {PC,BOARD}
+  --bundle BUNDLE       prepared profile root containing ordinary/continuous
+  --suite {package,model,ordinary,web}
+  --output OUTPUT       new evidence directory for a PC attempt
+  --pc-binary PC_BINARY
+  --pc-library-dir PC_LIBRARY_DIR
+  --model MODEL
+  --execute-board
+  --window-id WINDOW_ID

@@ -1,0 +1,125 @@
+{
+  "status": "PASS_ACTUAL_CPU_SAME_SESSION_TWO_TURNS",
+  "first": {
+    "id": "DEV-004-multi-first",
+    "session_id": "8a7251a076404b9cbf159ef52703aea6",
+    "answer_source": "MODEL",
+    "eos": true,
+    "final_check": "pass",
+    "full_tokens": 50,
+    "output_tokens": 9,
+    "prefix_cache": {
+      "hit": true,
+      "lookup_ms": 20.379194,
+      "new_tokens": 16,
+      "policy": "TT10_REQUIRE_HIT",
+      "reason": "EXACT_FULL_STATE_HIT",
+      "restore_error": null,
+      "restore_ms": 29.291084,
+      "reused_tokens": 34,
+      "snapshot_bytes": 21614659
+    },
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1398.645455,
+      "accepted_to_published_ms": 1399.353789,
+      "validation_to_publication_ms": 0.708334,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.259613,
+        "adapter_entered_monotonic_ns": "347386411629",
+        "worker_send_monotonic_ns": "347386676932",
+        "first_token_monotonic_ns": "348031849345",
+        "worker_wall_ms": 1397.644928,
+        "first_token_from_adapter_ms": 645.437716,
+        "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+        "session_id": "8a7251a076404b9cbf159ef52703aea6",
+        "request_id": "DEV-004-multi-first",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.086444,
+        "prompt_builder_ms": 0.030618,
+        "generation_ms": 1398.156258,
+        "candidate_check_ms": 0.066706,
+        "received_to_validated_ms": 1398.354884,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 587.177021,
+        "ttft_ms": 591.677,
+        "decode_ms": 744.6471590000001,
+        "decode_calls": 9,
+        "prompt_tokens": 50
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 645.938716
+    },
+    "raw_model_text": "每次疼痛持续 10 分钟。"
+  },
+  "followup": {
+    "id": "DEV-001-multi-followup",
+    "session_id": "8a7251a076404b9cbf159ef52703aea6",
+    "answer_source": "MODEL",
+    "eos": true,
+    "final_check": "pass",
+    "full_tokens": 49,
+    "output_tokens": 6,
+    "prefix_cache": {
+      "hit": true,
+      "lookup_ms": 21.083486,
+      "new_tokens": 15,
+      "policy": "TT10_REQUIRE_HIT",
+      "reason": "EXACT_FULL_STATE_HIT",
+      "restore_error": null,
+      "restore_ms": 26.356559,
+      "reused_tokens": 34,
+      "snapshot_bytes": 21614659
+    },
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1071.083545,
+      "accepted_to_published_ms": 1071.841713,
+      "validation_to_publication_ms": 0.758168,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.338542,
+        "adapter_entered_monotonic_ns": "348803998313",
+        "worker_send_monotonic_ns": "348804343117",
+        "first_token_monotonic_ns": "349383820295",
+        "worker_wall_ms": 1069.90845,
+        "first_token_from_adapter_ms": 579.821982,
+        "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+        "session_id": "8a7251a076404b9cbf159ef52703aea6",
+        "request_id": "DEV-001-multi-followup",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.088728,
+        "prompt_builder_ms": 0.025358,
+        "generation_ms": 1070.568543,
+        "candidate_check_ms": 0.057769,
+        "received_to_validated_ms": 1070.752191,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 525.722677,
+        "ttft_ms": 528.806939,
+        "decode_ms": 482.823723,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 580.401126
+    },
+    "raw_model_text": "疼痛在胸骨后。"
+  },
+  "score": 20,
+  "worker_pid": 443,
+  "prefix_warmed_once": true,
+  "BOARD": "NOT_TESTED"
+}

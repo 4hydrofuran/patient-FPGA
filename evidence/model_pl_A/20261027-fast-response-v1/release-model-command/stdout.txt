@@ -1,0 +1,1665 @@
+PC_WEB_MODEL DEV-001 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-002 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-003 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-004 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-005 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-006 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-007 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-008 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-009 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-010 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-011 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-012 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-014 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-021 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-022 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-023 MODEL EOS CHECK_PASS
+PC_WEB_MODEL DEV-024 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V01 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V02 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V03 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V04 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V05 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V06 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V07 MODEL EOS CHECK_PASS
+PC_WEB_MODEL V08 MODEL EOS CHECK_PASS
+{
+  "status": "PASS_ACTUAL_CPU_WEB_MODEL",
+  "model_items": 25,
+  "policy_items": 7,
+  "representative_pairs": [
+    {
+      "id": "DEV-012",
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    },
+    {
+      "id": "DEV-011",
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    },
+    {
+      "id": "V08",
+      "equal": true,
+      "compared_fields": [
+        "status",
+        "output_tokens",
+        "text",
+        "eos",
+        "decode_calls",
+        "last_prompt_logits_fnv64",
+        "last_prompt_logits_sha256",
+        "state_position_before_clear",
+        "state_position_after_clear",
+        "state_cleared_before_response"
+      ],
+      "full_intermediate_state": "NOT_TESTED",
+      "scope": "ORDINARY_OUTPUT_AND_LAST_PREFILL_LOGITS_ONLY"
+    }
+  ],
+  "model_calls": 33,
+  "model_results": [
+    {
+      "id": "DEV-001-hit",
+      "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 24.146424,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 52.226191,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1771.420785,
+        "accepted_to_published_ms": 1772.798679,
+        "validation_to_publication_ms": 1.377894,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.394017,
+          "adapter_entered_monotonic_ns": "293079421772",
+          "worker_send_monotonic_ns": "293079823985",
+          "first_token_monotonic_ns": "294132424244",
+          "worker_wall_ms": 1767.967273,
+          "first_token_from_adapter_ms": 1053.002472,
+          "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+          "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+          "request_id": "DEV-001-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.109527,
+          "prompt_builder_ms": 1.093786,
+          "generation_ms": 1768.652352,
+          "candidate_check_ms": 1.205728,
+          "received_to_validated_ms": 1771.082122,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 948.165851,
+          "ttft_ms": 951.475631,
+          "decode_ms": 698.673748,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 1054.655699
+      },
+      "raw_model_text": "疼痛在胸骨后。"
+    },
+    {
+      "id": "DEV-002-hit",
+      "session_id": "681971f3de25404896e14c6ef9946b6e",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 21.916285,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 30.955726,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1376.374373,
+        "accepted_to_published_ms": 1377.134335,
+        "validation_to_publication_ms": 0.759962,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.45876,
+          "adapter_entered_monotonic_ns": "294933675149",
+          "worker_send_monotonic_ns": "294934143247",
+          "first_token_monotonic_ns": "295662536002",
+          "worker_wall_ms": 1375.053777,
+          "first_token_from_adapter_ms": 728.860853,
+          "prompt_sha256": "ec21716b6176d1c4e7b1b90e650c5c4ea58c02b16cdb7527dcabee5c37f56936",
+          "session_id": "681971f3de25404896e14c6ef9946b6e",
+          "request_id": "DEV-002-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.12655,
+          "prompt_builder_ms": 0.041789,
+          "generation_ms": 1375.796096,
+          "candidate_check_ms": 0.059173,
+          "received_to_validated_ms": 1376.03518,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 660.342616,
+          "ttft_ms": 664.375809,
+          "decode_ms": 640.3014860000001,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 729.471371
+      },
+      "raw_model_text": "疼痛是针扎感。"
+    },
+    {
+      "id": "DEV-003-hit",
+      "session_id": "56afc5b8b50747e196fcb84f26436151",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 8,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 25.970219,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 28.886097,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1537.035909,
+        "accepted_to_published_ms": 1537.884078,
+        "validation_to_publication_ms": 0.848169,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.289619,
+          "adapter_entered_monotonic_ns": "296386095307",
+          "worker_send_monotonic_ns": "296386390577",
+          "first_token_monotonic_ns": "297079565001",
+          "worker_wall_ms": 1535.90333,
+          "first_token_from_adapter_ms": 693.469694,
+          "prompt_sha256": "8750034cc2de30330f2ca6a4d47c07fcdda7fa88ca5a2ea46defab0b2c2b3668",
+          "session_id": "56afc5b8b50747e196fcb84f26436151",
+          "request_id": "DEV-003-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.077326,
+          "prompt_builder_ms": 0.0264,
+          "generation_ms": 1536.468463,
+          "candidate_check_ms": 0.106828,
+          "received_to_validated_ms": 1536.732509,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 628.488612,
+          "ttft_ms": 631.806882,
+          "decode_ms": 831.931302,
+          "decode_calls": 8,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 693.993933
+      },
+      "raw_model_text": "胸痛从 6 小时前开始。"
+    },
+    {
+      "id": "DEV-004-hit",
+      "session_id": "9977258278984aeb970fb7bae70d53d6",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 50,
+      "output_tokens": 9,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.473532,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 32.985155,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1659.485793,
+        "accepted_to_published_ms": 1660.279309,
+        "validation_to_publication_ms": 0.793516,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.343952,
+          "adapter_entered_monotonic_ns": "298002508532",
+          "worker_send_monotonic_ns": "298002858155",
+          "first_token_monotonic_ns": "298750644800",
+          "worker_wall_ms": 1658.403445,
+          "first_token_from_adapter_ms": 748.136268,
+          "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+          "session_id": "9977258278984aeb970fb7bae70d53d6",
+          "request_id": "DEV-004-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.087546,
+          "prompt_builder_ms": 0.036129,
+          "generation_ms": 1658.988164,
+          "candidate_check_ms": 0.076105,
+          "received_to_validated_ms": 1659.206228,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 679.777602,
+          "ttft_ms": 682.945988,
+          "decode_ms": 901.117061,
+          "decode_calls": 9,
+          "prompt_tokens": 50
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 748.634929
+      },
+      "raw_model_text": "每次疼痛持续 10 分钟。"
+    },
+    {
+      "id": "DEV-005-hit",
+      "session_id": "375320f25a4d479cb45b0ce94a2bafc7",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 54,
+      "output_tokens": 15,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.288106,
+        "new_tokens": 20,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 30.030265,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 2230.224869,
+        "accepted_to_published_ms": 2231.697843,
+        "validation_to_publication_ms": 1.472974,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.295821,
+          "adapter_entered_monotonic_ns": "299741694115",
+          "worker_send_monotonic_ns": "299741995717",
+          "first_token_monotonic_ns": "300613017085",
+          "worker_wall_ms": 2229.179535,
+          "first_token_from_adapter_ms": 871.32297,
+          "prompt_sha256": "a07f4c88f9f0b4caba14eeaa0c8c44e5fd585dae5635e6c3cedaf5c99211496a",
+          "session_id": "375320f25a4d479cb45b0ce94a2bafc7",
+          "request_id": "DEV-005-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.094479,
+          "prompt_builder_ms": 0.028274,
+          "generation_ms": 2229.724449,
+          "candidate_check_ms": 0.077718,
+          "received_to_validated_ms": 2229.94087,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 807.742188,
+          "ttft_ms": 810.931409,
+          "decode_ms": 1338.053105,
+          "decode_calls": 15,
+          "prompt_tokens": 54
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 871.810666
+      },
+      "raw_model_text": "疼痛程度是 4 分，满分 10 分。"
+    },
+    {
+      "id": "DEV-006-hit",
+      "session_id": "07cd987fbbfb4cfbb37576ad1fbbec34",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 24.544821,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 31.986927,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1261.661556,
+        "accepted_to_published_ms": 1263.021246,
+        "validation_to_publication_ms": 1.35969,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.284009,
+          "adapter_entered_monotonic_ns": "302039094121",
+          "worker_send_monotonic_ns": "302039383901",
+          "first_token_monotonic_ns": "302711989274",
+          "worker_wall_ms": 1260.38819,
+          "first_token_from_adapter_ms": 672.895153,
+          "prompt_sha256": "56ea7b8b42f0643a857669f77a21e15b019c66ca5c7ec2eadd6abe370d44c7c1",
+          "session_id": "07cd987fbbfb4cfbb37576ad1fbbec34",
+          "request_id": "DEV-006-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.09499,
+          "prompt_builder_ms": 0.031711,
+          "generation_ms": 1261.034887,
+          "candidate_check_ms": 0.169301,
+          "received_to_validated_ms": 1261.360375,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 605.720347,
+          "ttft_ms": 611.073534,
+          "decode_ms": 582.8802,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 673.470324
+      },
+      "raw_model_text": "疼痛牵扯部位我不清楚。"
+    },
+    {
+      "id": "DEV-007-hit",
+      "session_id": "dbb83de9e9274c08b8c591d4c6ae4e9a",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 20.907196,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 29.704762,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1215.586205,
+        "accepted_to_published_ms": 1216.664391,
+        "validation_to_publication_ms": 1.078186,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.305159,
+          "adapter_entered_monotonic_ns": "303378444055",
+          "worker_send_monotonic_ns": "303378755356",
+          "first_token_monotonic_ns": "304041107083",
+          "worker_wall_ms": 1214.476273,
+          "first_token_from_adapter_ms": 662.663028,
+          "prompt_sha256": "955acb5940f365d01f89a7d343dcf76c6f49e1c2f24eca5f8b27872148fea1a3",
+          "session_id": "dbb83de9e9274c08b8c591d4c6ae4e9a",
+          "request_id": "DEV-007-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.111492,
+          "prompt_builder_ms": 0.037902,
+          "generation_ms": 1215.020065,
+          "candidate_check_ms": 0.051548,
+          "received_to_validated_ms": 1215.267475,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 604.46558,
+          "ttft_ms": 607.633049,
+          "decode_ms": 546.637525,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 663.232965
+      },
+      "raw_model_text": "疼痛在快走时出现。"
+    },
+    {
+      "id": "DEV-008-hit",
+      "session_id": "6da2e163f71e4ec383080230d10cbade",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 48,
+      "output_tokens": 5,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 20.257678,
+        "new_tokens": 14,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 29.344348,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1089.577007,
+        "accepted_to_published_ms": 1090.378778,
+        "validation_to_publication_ms": 0.801771,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.353611,
+          "adapter_entered_monotonic_ns": "304653798117",
+          "worker_send_monotonic_ns": "304654157359",
+          "first_token_monotonic_ns": "305255050517",
+          "worker_wall_ms": 1088.546002,
+          "first_token_from_adapter_ms": 601.2524,
+          "prompt_sha256": "fd5a08fed4be056d9390d977422c3aac8f3d6646bd32d4732dee705be69d3052",
+          "session_id": "6da2e163f71e4ec383080230d10cbade",
+          "request_id": "DEV-008-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.072076,
+          "prompt_builder_ms": 0.024657,
+          "generation_ms": 1089.145099,
+          "candidate_check_ms": 0.05801,
+          "received_to_validated_ms": 1089.313298,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 541.266762,
+          "ttft_ms": 544.372288,
+          "decode_ms": 482.132986,
+          "decode_calls": 5,
+          "prompt_tokens": 48
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 601.685981
+      },
+      "raw_model_text": "缓解方式我不清楚。"
+    },
+    {
+      "id": "DEV-009-hit",
+      "session_id": "5a9ed6edc4d24f2d9069f91e722351c5",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.644998,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 26.18423,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1239.741996,
+        "accepted_to_published_ms": 1240.474135,
+        "validation_to_publication_ms": 0.732139,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.289469,
+          "adapter_entered_monotonic_ns": "305823429408",
+          "worker_send_monotonic_ns": "305823725219",
+          "first_token_monotonic_ns": "306482067823",
+          "worker_wall_ms": 1238.659563,
+          "first_token_from_adapter_ms": 658.638415,
+          "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+          "session_id": "5a9ed6edc4d24f2d9069f91e722351c5",
+          "request_id": "DEV-009-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.099399,
+          "prompt_builder_ms": 0.034064,
+          "generation_ms": 1239.228673,
+          "candidate_check_ms": 0.066436,
+          "received_to_validated_ms": 1239.44338,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 601.766915,
+          "ttft_ms": 605.138978,
+          "decode_ms": 570.800267,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 659.176536
+      },
+      "raw_model_text": "气短情况我不清楚。"
+    },
+    {
+      "id": "DEV-010-hit",
+      "session_id": "e5bcc031aeb647b69320c9cceb49628c",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 48,
+      "output_tokens": 5,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 24.585831,
+        "new_tokens": 14,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 28.711851,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1098.296416,
+        "accepted_to_published_ms": 1099.110842,
+        "validation_to_publication_ms": 0.814426,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.281865,
+          "adapter_entered_monotonic_ns": "307147337429",
+          "worker_send_monotonic_ns": "307147624514",
+          "first_token_monotonic_ns": "307772206955",
+          "worker_wall_ms": 1097.298974,
+          "first_token_from_adapter_ms": 624.869526,
+          "prompt_sha256": "54a94c2fbd2ef6afc9eaa002b7f112a8ca5249d9f9986cba0fff85a1ca90770b",
+          "session_id": "e5bcc031aeb647b69320c9cceb49628c",
+          "request_id": "DEV-010-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.07921,
+          "prompt_builder_ms": 0.029596,
+          "generation_ms": 1097.814923,
+          "candidate_check_ms": 0.061938,
+          "received_to_validated_ms": 1098.001777,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 562.518302,
+          "ttft_ms": 566.031944,
+          "decode_ms": 467.23660699999994,
+          "decode_calls": 5,
+          "prompt_tokens": 48
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 625.369284
+      },
+      "raw_model_text": "过敏情况我不清楚。"
+    },
+    {
+      "id": "DEV-011-hit",
+      "session_id": "c0b4fed757454e23a97194dd2bea90bb",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 48,
+      "output_tokens": 5,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 20.467297,
+        "new_tokens": 14,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 28.155796,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1067.535868,
+        "accepted_to_published_ms": 1068.484769,
+        "validation_to_publication_ms": 0.948901,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.345916,
+          "adapter_entered_monotonic_ns": "308315305949",
+          "worker_send_monotonic_ns": "308315659219",
+          "first_token_monotonic_ns": "308913356885",
+          "worker_wall_ms": 1066.225047,
+          "first_token_from_adapter_ms": 598.050936,
+          "prompt_sha256": "545476987be54db87dffb62eea6229c572b61b2837ce95b4872ba00c13807ca0",
+          "session_id": "c0b4fed757454e23a97194dd2bea90bb",
+          "request_id": "DEV-011-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.103937,
+          "prompt_builder_ms": 0.036559,
+          "generation_ms": 1066.812031,
+          "candidate_check_ms": 0.056718,
+          "received_to_validated_ms": 1067.02228,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 540.410167,
+          "ttft_ms": 545.353306,
+          "decode_ms": 459.700872,
+          "decode_calls": 5,
+          "prompt_tokens": 48
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 598.81002
+      },
+      "raw_model_text": "用药情况我不清楚。"
+    },
+    {
+      "id": "DEV-012-hit",
+      "session_id": "36ddc7e9caf849a8a82135f2784a70bf",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 55,
+      "output_tokens": 14,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 23.262171,
+        "new_tokens": 21,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 29.06961,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 2249.161896,
+        "accepted_to_published_ms": 2249.932011,
+        "validation_to_publication_ms": 0.770115,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.233854,
+          "adapter_entered_monotonic_ns": "309457484730",
+          "worker_send_monotonic_ns": "309457724094",
+          "first_token_monotonic_ns": "310326916790",
+          "worker_wall_ms": 2248.252856,
+          "first_token_from_adapter_ms": 869.43206,
+          "prompt_sha256": "16b28a12c94dac8c904cc3e810049339c0911bc47bbb422102631dd382c627ef",
+          "session_id": "36ddc7e9caf849a8a82135f2784a70bf",
+          "request_id": "DEV-012-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.078399,
+          "prompt_builder_ms": 0.029836,
+          "generation_ms": 2248.70292,
+          "candidate_check_ms": 0.065014,
+          "received_to_validated_ms": 2248.894464,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 809.315303,
+          "ttft_ms": 812.553777,
+          "decode_ms": 1365.2078880000001,
+          "decode_calls": 14,
+          "prompt_tokens": 55
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 869.886056
+      },
+      "raw_model_text": "疼痛在胸前正中。每次疼痛持续 20 分钟。"
+    },
+    {
+      "id": "DEV-014-hit",
+      "session_id": "197c82c48cac4e38a975e15f86d5b945",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 50,
+      "output_tokens": 9,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 21.955731,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 34.631866,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1566.11253,
+        "accepted_to_published_ms": 1567.125322,
+        "validation_to_publication_ms": 1.012792,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.247419,
+          "adapter_entered_monotonic_ns": "311784320588",
+          "worker_send_monotonic_ns": "311784572346",
+          "first_token_monotonic_ns": "312522389244",
+          "worker_wall_ms": 1564.88727,
+          "first_token_from_adapter_ms": 738.068656,
+          "prompt_sha256": "2473115a7b211d7ded3edf8dabe6079b211ea5ef4aacc83166d8ad864b6f40cb",
+          "session_id": "197c82c48cac4e38a975e15f86d5b945",
+          "request_id": "DEV-014-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.175433,
+          "prompt_builder_ms": 0.041619,
+          "generation_ms": 1565.448455,
+          "candidate_check_ms": 0.073961,
+          "received_to_validated_ms": 1565.75656,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 672.110307,
+          "ttft_ms": 677.738171,
+          "decode_ms": 816.050621,
+          "decode_calls": 9,
+          "prompt_tokens": 50
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 738.752819
+      },
+      "raw_model_text": "胸痛从 24 小时前开始。"
+    },
+    {
+      "id": "DEV-021-hit",
+      "session_id": "cf400495e7da441f9a6dc58a5173344b",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.136049,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 34.406941,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1267.138283,
+        "accepted_to_published_ms": 1268.250604,
+        "validation_to_publication_ms": 1.112321,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.225849,
+          "adapter_entered_monotonic_ns": "313425112282",
+          "worker_send_monotonic_ns": "313425342609",
+          "first_token_monotonic_ns": "314121571692",
+          "worker_wall_ms": 1266.13465,
+          "first_token_from_adapter_ms": 696.45941,
+          "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+          "session_id": "cf400495e7da441f9a6dc58a5173344b",
+          "request_id": "DEV-021-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.095371,
+          "prompt_builder_ms": 0.030137,
+          "generation_ms": 1266.597939,
+          "candidate_check_ms": 0.058672,
+          "received_to_validated_ms": 1266.795724,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 631.15416,
+          "ttft_ms": 636.657786,
+          "decode_ms": 563.9946259999999,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 697.020113
+      },
+      "raw_model_text": "气短情况我不清楚。"
+    },
+    {
+      "id": "DEV-022-hit",
+      "session_id": "638dab18600843bea30c0c84f2bcdede",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 48,
+      "output_tokens": 5,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.88062,
+        "new_tokens": 14,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 28.656442,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1115.288659,
+        "accepted_to_published_ms": 1116.308484,
+        "validation_to_publication_ms": 1.019825,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.25277,
+          "adapter_entered_monotonic_ns": "314777029063",
+          "worker_send_monotonic_ns": "314777287463",
+          "first_token_monotonic_ns": "315415337692",
+          "worker_wall_ms": 1114.375261,
+          "first_token_from_adapter_ms": 638.308629,
+          "prompt_sha256": "d11c564faf19e92ce967ec5e15da5ddc2897935c01b401557d0308e144ab6481",
+          "session_id": "638dab18600843bea30c0c84f2bcdede",
+          "request_id": "DEV-022-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.071556,
+          "prompt_builder_ms": 0.024216,
+          "generation_ms": 1114.858768,
+          "candidate_check_ms": 0.061897,
+          "received_to_validated_ms": 1115.027929,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 579.539971,
+          "ttft_ms": 582.700026,
+          "decode_ms": 469.86393000000004,
+          "decode_calls": 5,
+          "prompt_tokens": 48
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 638.73835
+      },
+      "raw_model_text": "疼痛是压迫感。"
+    },
+    {
+      "id": "DEV-023-hit",
+      "session_id": "a4658d55899e4f8da5c575f9a17b0c06",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 50,
+      "output_tokens": 9,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 20.142607,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 30.140201,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1605.146485,
+        "accepted_to_published_ms": 1605.845361,
+        "validation_to_publication_ms": 0.698876,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.404488,
+          "adapter_entered_monotonic_ns": "315971902534",
+          "worker_send_monotonic_ns": "315972314386",
+          "first_token_monotonic_ns": "316678384653",
+          "worker_wall_ms": 1603.89744,
+          "first_token_from_adapter_ms": 706.482119,
+          "prompt_sha256": "2473115a7b211d7ded3edf8dabe6079b211ea5ef4aacc83166d8ad864b6f40cb",
+          "session_id": "a4658d55899e4f8da5c575f9a17b0c06",
+          "request_id": "DEV-023-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.130487,
+          "prompt_builder_ms": 0.038513,
+          "generation_ms": 1604.538537,
+          "candidate_check_ms": 0.059954,
+          "received_to_validated_ms": 1604.781237,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 648.164952,
+          "ttft_ms": 651.781599,
+          "decode_ms": 884.80476,
+          "decode_calls": 9,
+          "prompt_tokens": 50
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 707.115265
+      },
+      "raw_model_text": "胸痛从 24 小时前开始。"
+    },
+    {
+      "id": "DEV-024-hit",
+      "session_id": "6be0a41469044127b6105ea786b7d086",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 50,
+      "output_tokens": 9,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 23.728747,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 28.15291,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1614.530922,
+        "accepted_to_published_ms": 1615.481405,
+        "validation_to_publication_ms": 0.950483,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.366856,
+          "adapter_entered_monotonic_ns": "317666035831",
+          "worker_send_monotonic_ns": "317666410462",
+          "first_token_monotonic_ns": "318402693462",
+          "worker_wall_ms": 1612.948624,
+          "first_token_from_adapter_ms": 736.657631,
+          "prompt_sha256": "1b594197316d7f222d1d4cccaaba95800b19207377d93c5a8cbb4fba25af11c5",
+          "session_id": "6be0a41469044127b6105ea786b7d086",
+          "request_id": "DEV-024-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.128293,
+          "prompt_builder_ms": 0.044555,
+          "generation_ms": 1613.633213,
+          "candidate_check_ms": 0.069372,
+          "received_to_validated_ms": 1613.895251,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 677.274612,
+          "ttft_ms": 680.523575,
+          "decode_ms": 868.3416769999999,
+          "decode_calls": 9,
+          "prompt_tokens": 50
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 737.606476
+      },
+      "raw_model_text": "每次疼痛持续 20 分钟。"
+    },
+    {
+      "id": "V01-hit",
+      "session_id": "c36f42b790be43cb9793a95fed4f4e7a",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.714677,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 34.651751,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1325.075841,
+        "accepted_to_published_ms": 1328.246788,
+        "validation_to_publication_ms": 3.170947,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.285912,
+          "adapter_entered_monotonic_ns": "319370622774",
+          "worker_send_monotonic_ns": "319370915569",
+          "first_token_monotonic_ns": "320095338781",
+          "worker_wall_ms": 1323.978644,
+          "first_token_from_adapter_ms": 724.716007,
+          "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+          "session_id": "c36f42b790be43cb9793a95fed4f4e7a",
+          "request_id": "V01-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.088848,
+          "prompt_builder_ms": 0.027543,
+          "generation_ms": 1324.548515,
+          "candidate_check_ms": 0.099839,
+          "received_to_validated_ms": 1324.77796,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 658.308772,
+          "ttft_ms": 662.978522,
+          "decode_ms": 594.730403,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 725.232974
+      },
+      "raw_model_text": "疼痛在胸骨后。"
+    },
+    {
+      "id": "V02-hit",
+      "session_id": "ba82699167854590b107715859c59b85",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 21.040616,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 29.270165,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1272.946149,
+        "accepted_to_published_ms": 1273.714367,
+        "validation_to_publication_ms": 0.768218,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.268268,
+          "adapter_entered_monotonic_ns": "320776352361",
+          "worker_send_monotonic_ns": "320776625298",
+          "first_token_monotonic_ns": "321455155522",
+          "worker_wall_ms": 1271.805681,
+          "first_token_from_adapter_ms": 678.803161,
+          "prompt_sha256": "ec21716b6176d1c4e7b1b90e650c5c4ea58c02b16cdb7527dcabee5c37f56936",
+          "session_id": "ba82699167854590b107715859c59b85",
+          "request_id": "V02-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.095391,
+          "prompt_builder_ms": 0.028464,
+          "generation_ms": 1272.31681,
+          "candidate_check_ms": 0.053191,
+          "received_to_validated_ms": 1272.504967,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 617.016111,
+          "ttft_ms": 621.834488,
+          "decode_ms": 588.44163,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 679.467236
+      },
+      "raw_model_text": "疼痛是针扎感。"
+    },
+    {
+      "id": "V03-hit",
+      "session_id": "d0311a8ab58c42e9ac661e7683795055",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 50,
+      "output_tokens": 9,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 24.168203,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 30.991146,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1648.079879,
+        "accepted_to_published_ms": 1649.106717,
+        "validation_to_publication_ms": 1.026838,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.485732,
+          "adapter_entered_monotonic_ns": "322123441653",
+          "worker_send_monotonic_ns": "322123935009",
+          "first_token_monotonic_ns": "322872998988",
+          "worker_wall_ms": 1643.635623,
+          "first_token_from_adapter_ms": 749.557335,
+          "prompt_sha256": "1b594197316d7f222d1d4cccaaba95800b19207377d93c5a8cbb4fba25af11c5",
+          "session_id": "d0311a8ab58c42e9ac661e7683795055",
+          "request_id": "V03-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.113906,
+          "prompt_builder_ms": 0.031871,
+          "generation_ms": 1644.366389,
+          "candidate_check_ms": 0.06873,
+          "received_to_validated_ms": 1644.598951,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 684.435692,
+          "ttft_ms": 687.600228,
+          "decode_ms": 881.0736270000001,
+          "decode_calls": 9,
+          "prompt_tokens": 50
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 753.28948
+      },
+      "raw_model_text": "每次疼痛持续 20 分钟。"
+    },
+    {
+      "id": "V04-hit",
+      "session_id": "972b524b20424819bd296650bcd1e6e6",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 54,
+      "output_tokens": 15,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 21.307438,
+        "new_tokens": 20,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 30.456165,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 2364.558638,
+        "accepted_to_published_ms": 2365.360619,
+        "validation_to_publication_ms": 0.801981,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.28435,
+          "adapter_entered_monotonic_ns": "323846685976",
+          "worker_send_monotonic_ns": "323846975726",
+          "first_token_monotonic_ns": "324741418776",
+          "worker_wall_ms": 2363.516546,
+          "first_token_from_adapter_ms": 894.7328,
+          "prompt_sha256": "b237c61e19af6426305d355d0545717f471e28a704a892c35dc5d15f73da9478",
+          "session_id": "972b524b20424819bd296650bcd1e6e6",
+          "request_id": "V04-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.093818,
+          "prompt_builder_ms": 0.030969,
+          "generation_ms": 2364.044598,
+          "candidate_check_ms": 0.061907,
+          "received_to_validated_ms": 2364.246802,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 834.612666,
+          "ttft_ms": 839.012873,
+          "decode_ms": 1454.328758,
+          "decode_calls": 15,
+          "prompt_tokens": 54
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 895.270294
+      },
+      "raw_model_text": "疼痛程度是 6 分，满分 10 分。"
+    },
+    {
+      "id": "V05-hit",
+      "session_id": "842c0c25df174d50a61ae69553082b6c",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 20.738834,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 31.037628,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1297.320753,
+        "accepted_to_published_ms": 1298.066497,
+        "validation_to_publication_ms": 0.745744,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.360494,
+          "adapter_entered_monotonic_ns": "326292132081",
+          "worker_send_monotonic_ns": "326292500029",
+          "first_token_monotonic_ns": "326978672862",
+          "worker_wall_ms": 1296.199311,
+          "first_token_from_adapter_ms": 686.540781,
+          "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+          "session_id": "842c0c25df174d50a61ae69553082b6c",
+          "request_id": "V05-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.087947,
+          "prompt_builder_ms": 0.049293,
+          "generation_ms": 1296.818726,
+          "candidate_check_ms": 0.058091,
+          "received_to_validated_ms": 1297.027873,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 622.211517,
+          "ttft_ms": 628.135142,
+          "decode_ms": 603.248485,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 687.079287
+      },
+      "raw_model_text": "气短情况我不清楚。"
+    },
+    {
+      "id": "V06-hit",
+      "session_id": "5ac39419396c4843b9d61d768db6e55e",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 48,
+      "output_tokens": 5,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 22.849394,
+        "new_tokens": 14,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 26.664696,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1176.276164,
+        "accepted_to_published_ms": 1177.042779,
+        "validation_to_publication_ms": 0.766615,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.261797,
+          "adapter_entered_monotonic_ns": "327671723505",
+          "worker_send_monotonic_ns": "327671989991",
+          "first_token_monotonic_ns": "328339711459",
+          "worker_wall_ms": 1171.844565,
+          "first_token_from_adapter_ms": 667.987954,
+          "prompt_sha256": "54a94c2fbd2ef6afc9eaa002b7f112a8ca5249d9f9986cba0fff85a1ca90770b",
+          "session_id": "5ac39419396c4843b9d61d768db6e55e",
+          "request_id": "V06-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.104188,
+          "prompt_builder_ms": 0.037221,
+          "generation_ms": 1172.540025,
+          "candidate_check_ms": 0.064312,
+          "received_to_validated_ms": 1172.760193,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 611.302451,
+          "ttft_ms": 614.707717,
+          "decode_ms": 493.840459,
+          "decode_calls": 5,
+          "prompt_tokens": 48
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 671.805187
+      },
+      "raw_model_text": "过敏情况我不清楚。"
+    },
+    {
+      "id": "V07-hit",
+      "session_id": "97763be94385420c9411c36d70e639e9",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 49,
+      "output_tokens": 6,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 19.234795,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 32.323741,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 1290.25761,
+        "accepted_to_published_ms": 1291.171824,
+        "validation_to_publication_ms": 0.914214,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.25814,
+          "adapter_entered_monotonic_ns": "328926658506",
+          "worker_send_monotonic_ns": "328926922377",
+          "first_token_monotonic_ns": "329612919749",
+          "worker_wall_ms": 1286.123356,
+          "first_token_from_adapter_ms": 686.261243,
+          "prompt_sha256": "955acb5940f365d01f89a7d343dcf76c6f49e1c2f24eca5f8b27872148fea1a3",
+          "session_id": "97763be94385420c9411c36d70e639e9",
+          "request_id": "V07-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.099489,
+          "prompt_builder_ms": 0.029676,
+          "generation_ms": 1289.742624,
+          "candidate_check_ms": 0.071987,
+          "received_to_validated_ms": 1289.957993,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 622.559203,
+          "ttft_ms": 625.742603,
+          "decode_ms": 597.14633,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 686.77153
+      },
+      "raw_model_text": "疼痛在快走时出现。"
+    },
+    {
+      "id": "V08-hit",
+      "session_id": "7c85e8dc21d341a6b89a182622730b0b",
+      "answer_source": "MODEL",
+      "eos": true,
+      "final_check": "pass",
+      "full_tokens": 54,
+      "output_tokens": 11,
+      "prefix_cache": {
+        "hit": true,
+        "lookup_ms": 18.976881,
+        "new_tokens": 20,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 32.947869,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 2029.887017,
+        "accepted_to_published_ms": 2033.652778,
+        "validation_to_publication_ms": 3.765761,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.244825,
+          "adapter_entered_monotonic_ns": "330298149669",
+          "worker_send_monotonic_ns": "330298399493",
+          "first_token_monotonic_ns": "331213860057",
+          "worker_wall_ms": 2028.833393,
+          "first_token_from_adapter_ms": 915.710388,
+          "prompt_sha256": "8c994a74628274c968b490ae3d21e6b5f5b8405be90f1e43392b0fea051d4a3a",
+          "session_id": "7c85e8dc21d341a6b89a182622730b0b",
+          "request_id": "V08-hit",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.103737,
+          "prompt_builder_ms": 0.027913,
+          "generation_ms": 2029.329844,
+          "candidate_check_ms": 0.0683,
+          "received_to_validated_ms": 2029.544602,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 854.719937,
+          "ttft_ms": 857.932833,
+          "decode_ms": 1098.3281120000001,
+          "decode_calls": 11,
+          "prompt_tokens": 54
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 916.271848
+      },
+      "raw_model_text": "疼痛在左侧胸部。疼痛是针扎感。"
+    }
+  ],
+  "policy_results": [
+    {
+      "id": "DEV-013",
+      "route": "clarify",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-015",
+      "route": "refuse",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-016",
+      "route": "refuse",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-017",
+      "route": "refuse",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-018",
+      "route": "refuse",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-019",
+      "route": "clarify",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    },
+    {
+      "id": "DEV-020",
+      "route": "clarify",
+      "model_calls": 0,
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [],
+        "failure_bucket": null,
+        "reason": "policy_literal"
+      }
+    }
+  ],
+  "same_session_model_questions": 2,
+  "same_session_frozen_score": 20,
+  "prefix_warm_count": 1,
+  "token_boundaries": "25_ACTUAL_TOKENIZATIONS_PLUS_NEUTRAL",
+  "old70_rejected": true,
+  "old_binding_rejected": true,
+  "worker_exit_codes": [
+    0,
+    0
+  ],
+  "elapsed_s": 131.825295555,
+  "native_binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+  "libraries": {
+    "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+    "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+    "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+    "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+    "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+  },
+  "BOARD": "NOT_TESTED",
+  "board_latency_s": null,
+  "scope": "real CPU outputs; original web planner/checker/EOS/publication/scoring; no PL/BOARD claim"
+}

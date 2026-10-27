@@ -1,0 +1,268 @@
+{
+  "status": "PASS_N0_N6_NO_BOARD_WORK_COMPLETE",
+  "release": "release/a12_fast_response_20261027_v2",
+  "model_items": 25,
+  "policy_items_zero_model": 7,
+  "actual_CPU_model_generations": 33,
+  "representative_pairs": 3,
+  "same_session_questions": 2,
+  "same_session_frozen_score": 20,
+  "web_tests": 34,
+  "binding_tests": 6,
+  "browser_fixture_checks": 15,
+  "commands": {
+    "release-web-tests": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bench/qwen35/web",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 5.716116169000031,
+      "logs": {
+        "stderr.txt": "6133559d4dad8fd687d68e6e4b6591140a8d1d073603256a3ae2e80849a48a65",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "binding-tests": {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/a12/test_resource_probe_binding.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 5.466124579999999,
+      "logs": {
+        "stderr.txt": "f2214f13fb090941e6390d638af1130ca1cfd94ba5de53f8e45cd571d9b76a1c",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "final-config": {
+      "command": [
+        "python3",
+        "scripts/release/qwen35_config.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.742794253999989,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "ab977de52288d1a2dcdbd103fb154292e5590455d633fdae7a803e598ff143e5"
+      }
+    },
+    "release-model-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_fast_response_20261027_v2/short34-threads2/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "release/a12_fast_response_20261027_v2/short34-threads2",
+        "--suite",
+        "model",
+        "--output",
+        "evidence/model_pl_A/20261027-fast-response-v1/release-model"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 141.03761808,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "3d4a7158a7475b328fb66afb340a741fcd7c0622d153f5d8d9d4e4df2955b6e1"
+      }
+    },
+    "release-t2-package": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_fast_response_20261027_v2/short34-threads2/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "release/a12_fast_response_20261027_v2/short34-threads2",
+        "--suite",
+        "package"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 17.827227652999994,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "908a48ed1f2bc87ac7b0d0e2745e4e4d970d37b2fd74a0ce5f5c24fc32cfae44"
+      }
+    },
+    "release-legacy-package": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_fast_response_20261027_v2/legacy70-threads2/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "release/a12_fast_response_20261027_v2/legacy70-threads2",
+        "--suite",
+        "package"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 31.815317160000006,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "08e90caa61c190ef8c78ada011f03a0b371a3829475c2a80346c7cce7eca1971"
+      }
+    },
+    "release-t3-package": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_fast_response_20261027_v2/short34-threads3/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "release/a12_fast_response_20261027_v2/short34-threads3",
+        "--suite",
+        "package"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 31.44741863600001,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "3fc3d90df66f69ffbec86c324c9cf19e1c19571105dc26c5e8d854368926d7b4"
+      }
+    },
+    "help-prepare": {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/web/fast_response_prepare.py",
+        "--help"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.48033294199996135,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "acddb2798ec836e7c45c1171af2ad313f792e83c77d25380909edd6674679e81"
+      }
+    },
+    "help-verify": {
+      "command": [
+        "python3",
+        "-B",
+        "release/a12_fast_response_20261027_v2/short34-threads2/continuous/fast_response_verify.py",
+        "--help"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.2928488219999963,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "33d51a45821262e5913d4bec47ad0d58bafab5f07fc1d8886ed4f31a4ce59549"
+      }
+    },
+    "archive-command": {
+      "command": [
+        "python3",
+        "-B",
+        "evidence/model_pl_A/20261027-fast-response-v1/archive_release.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 69.29458905899997,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "6ba27c077bce911730e5f8f712321736d20d6215e81a1ce231471d34e4a57a5d"
+      }
+    }
+  },
+  "baseline_checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/release/check_contracts.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/release/qwen35_config.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "archives": [
+    {
+      "profile_id": "legacy70-threads2",
+      "path": "release/a12_fast_response_20261027_v2/legacy70-threads2.zip",
+      "bytes": 26645917,
+      "sha256": "5d0af99b4a06600addd0ea29e29458a3f8f436e25e24bbfc271cae0e5b96e669",
+      "payload_files_verified": 473,
+      "CRC_and_SHA_readback": "PASS",
+      "authorization_included": false,
+      "BOARD": "NOT_TESTED"
+    },
+    {
+      "profile_id": "short34-threads2",
+      "path": "release/a12_fast_response_20261027_v2/short34-threads2.zip",
+      "bytes": 26644325,
+      "sha256": "2efea0e3694a9bbe759281096ce8180a2000957ec7d924a9b71993c628206297",
+      "payload_files_verified": 473,
+      "CRC_and_SHA_readback": "PASS",
+      "authorization_included": false,
+      "BOARD": "NOT_TESTED"
+    },
+    {
+      "profile_id": "short34-threads3",
+      "path": "release/a12_fast_response_20261027_v2/short34-threads3.zip",
+      "bytes": 26644322,
+      "sha256": "60d4d01a5aaf6ce840653d9b5d8eb67d1cc82028ad1cd71f5f0623ea75771dda",
+      "payload_files_verified": 473,
+      "CRC_and_SHA_readback": "PASS",
+      "authorization_included": false,
+      "BOARD": "NOT_TESTED"
+    }
+  ],
+  "PC_timing_ms": {
+    "accepted_to_first_token_observed_ms": {
+      "min": 598.81002,
+      "median": 697.020113,
+      "max": 1054.655699,
+      "samples": 25
+    },
+    "accepted_to_published_ms": {
+      "min": 1068.484769,
+      "median": 1328.246788,
+      "max": 2365.360619,
+      "samples": 25
+    }
+  },
+  "BOARD": "NOT_TESTED",
+  "board_actions": 0,
+  "board_TTFT_s": null,
+  "board_visible_checked_answer_s": null,
+  "board_memory": null,
+  "hardware_global_count": null,
+  "within_10s_BOARD": null,
+  "threads3_new_model_validation": "NOT_TESTED",
+  "actual_model": "unknown",
+  "actual_reasoning_effort": "unknown",
+  "recommended_model": "gpt-6.1-sol",
+  "recommended_reasoning_effort": "high",
+  "DeepSeek": "ONE_MECHANICAL_TABLE_ONLY_NOT_EVIDENCE_ACCEPTANCE",
+  "pushed": false,
+  "remaining": [
+    "B0-B4 fresh Board identity/window, real PL pair, visible browser timings, original Owner restore/independent release"
+  ]
+}

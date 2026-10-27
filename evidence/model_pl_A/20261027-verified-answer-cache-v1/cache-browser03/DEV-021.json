@@ -1,0 +1,139 @@
+{
+  "id": "DEV-021",
+  "case_id": "SYN_CP_03",
+  "question": "现在是否呼吸费力？",
+  "answer": "气短情况我不清楚。",
+  "timing": {
+    "session_id": "1229951d4b2f4f66a06529039813e7ab",
+    "request_id": "7fe23e7e-c87e-4c7b-8ab8-e8a9e9c60fa1",
+    "submitted_ms": 2284.7999999523163,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "paint_scheduled": true,
+    "painted_ms": 2323.5,
+    "submit_to_paint_ms": 38.700000047683716,
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "visibility_state": "visible",
+    "answer_ready_ms": 2326.1999999284744
+  },
+  "turn": {
+    "request_id": "7fe23e7e-c87e-4c7b-8ab8-e8a9e9c60fa1",
+    "operation_id": "e30f0556f4024dc3aa3e5520dc5e84f2",
+    "question": "现在是否呼吸费力？",
+    "status": "COMPLETED",
+    "answer": "气短情况我不清楚。",
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v2",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "637460f6923b40858c36116485b5c25b",
+      "session_id": "1229951d4b2f4f66a06529039813e7ab",
+      "request_id": "7fe23e7e-c87e-4c7b-8ab8-e8a9e9c60fa1",
+      "operation_id": "e30f0556f4024dc3aa3e5520dc5e84f2",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+      "answer_source": "MODEL_CACHE",
+      "actual_backend": null,
+      "model_called": false,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "588904567978",
+      "published_monotonic_ns": "588904847628",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false,
+      "cache_provenance": {
+        "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+        "key": "3124d89833ba0cb285d6d5ef42255790f7b3860eeb7767ba91ecdd789db05619",
+        "text_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-141",
+          "result_path": "proof/catalog-141.json",
+          "result_sha256": "8003eae585f069ecb2a147533b3d372651708fdffbbabfb9e3756d4287c9bccd",
+          "text_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+          "output_tokens": 6,
+          "generation_wall_s": 1.6880517170000076
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      }
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 0.608223,
+      "accepted_to_published_ms": 1.036545,
+      "validation_to_publication_ms": 0.428322,
+      "model": null,
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.075042,
+        "prompt_builder_ms": 0.138703,
+        "generation_ms": 0,
+        "candidate_check_ms": 0.012153,
+        "received_to_validated_ms": 0.234034,
+        "cache_lookup_ms": 0.12632,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": null,
+        "ttft_ms": null,
+        "decode_ms": null,
+        "decode_calls": null,
+        "prompt_tokens": null
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": null
+    },
+    "cache_provenance": {
+      "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+      "key": "3124d89833ba0cb285d6d5ef42255790f7b3860eeb7767ba91ecdd789db05619",
+      "text_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+      "origin": {
+        "status": "OK",
+        "eos": true,
+        "teacher_forced": false,
+        "execution_kind": "CPU_REFERENCE",
+        "native_request_id": "catalog-141",
+        "result_path": "proof/catalog-141.json",
+        "result_sha256": "8003eae585f069ecb2a147533b3d372651708fdffbbabfb9e3756d4287c9bccd",
+        "text_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+        "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+        "libraries": {
+          "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+          "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+          "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+          "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+          "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+        },
+        "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+        "output_tokens": 6,
+        "generation_wall_s": 1.6880517170000076
+      },
+      "current_model_called": false,
+      "current_PL_submissions": 0,
+      "validated_against_current_plan": true
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

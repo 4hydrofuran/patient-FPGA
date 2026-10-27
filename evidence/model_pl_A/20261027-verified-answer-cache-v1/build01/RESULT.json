@@ -1,0 +1,35 @@
+{
+  "status": "PASS_198_REAL_MODEL_CATALOG",
+  "expected": 198,
+  "accepted": 198,
+  "failures": [],
+  "model_calls": 198,
+  "worker_exit": 0,
+  "elapsed_s": 456.551626122,
+  "catalog_bytes": 702482,
+  "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+  "identity": {
+    "assets": {
+      "model_sha256": "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+      "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+      "runtime_base_commit": "81e39ad34368329b5db77620721510fd91107e80",
+      "sidecar_sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+      "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+      "template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+      "sampler": "fresh_greedy_v1",
+      "quantization": "A12_W4A8_MLP"
+    },
+    "policy": "facts-only-02-verified-answers-v1",
+    "checker_sha256": "afac4ee61c9ce3d14ec2bd2e56db5a127f44c1b5dce005126eba5a96120dceb7",
+    "planner_sha256": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7",
+    "generation": {
+      "sampling": "greedy",
+      "enable_thinking": false,
+      "teacher_forced": false,
+      "max_tokens": 64
+    }
+  },
+  "BOARD": "NOT_TESTED",
+  "board_actions": 0
+}

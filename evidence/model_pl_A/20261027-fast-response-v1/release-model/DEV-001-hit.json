@@ -1,0 +1,617 @@
+{
+  "turn": {
+    "request_id": "DEV-001-hit",
+    "operation_id": "640edbd62a0b439b9d63fcdf04433a13",
+    "question": "疼痛在什么位置？",
+    "status": "COMPLETED",
+    "answer": "疼痛在胸骨后。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "b8b920c56221463ebfd931e6888835e4",
+      "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+      "request_id": "DEV-001-hit",
+      "operation_id": "640edbd62a0b439b9d63fcdf04433a13",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "8fdd1270a10220dc263f0720eb828b7850b9ddf6fc80b75f42dbac5119821878",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "294849189330",
+      "published_monotonic_ns": "294850099767",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1771.420785,
+      "accepted_to_published_ms": 1772.798679,
+      "validation_to_publication_ms": 1.377894,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.394017,
+        "adapter_entered_monotonic_ns": "293079421772",
+        "worker_send_monotonic_ns": "293079823985",
+        "first_token_monotonic_ns": "294132424244",
+        "worker_wall_ms": 1767.967273,
+        "first_token_from_adapter_ms": 1053.002472,
+        "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+        "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+        "request_id": "DEV-001-hit",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.109527,
+        "prompt_builder_ms": 1.093786,
+        "generation_ms": 1768.652352,
+        "candidate_check_ms": 1.205728,
+        "received_to_validated_ms": 1771.082122,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 948.165851,
+        "ttft_ms": 951.475631,
+        "decode_ms": 698.673748,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 1054.655699
+    }
+  },
+  "response": {
+    "type": "validated_answer",
+    "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-001-hit",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "疼痛在胸骨后。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "疼痛在胸骨后。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "location"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "location"
+      ],
+      "allowed_fact_ids": [
+        "location"
+      ],
+      "required_fact_ids": [
+        "location"
+      ],
+      "facts": [
+        {
+          "slot": "location",
+          "status": "known",
+          "value": "胸骨后",
+          "unit": null,
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "location",
+          "span": [
+            5,
+            7
+          ],
+          "quote": "位置"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "bridge": {
+        "a12_route": {
+          "execution_kind": "CPU_REFERENCE",
+          "scope": "none",
+          "trace": []
+        },
+        "algorithm_weight_bytes": 1949696,
+        "api_version": 1,
+        "backend_id": "A_CPU_W4A8_V1",
+        "board": "NOT_TESTED",
+        "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+        "cpu_algorithm": "TILED",
+        "cpu_compute_ms": 0.854832,
+        "cpu_compute_ms_process_total": 2201.0023860000006,
+        "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+        "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+        "cpu_quiescent": true,
+        "cpu_run_count": 936,
+        "cpu_service_ms_process_total": 2216.114448000002,
+        "cpu_threads": 2,
+        "cycles": null,
+        "device_id": null,
+        "epoch": 2,
+        "error": "",
+        "execution_kind": "CPU_REFERENCE",
+        "executions": 7,
+        "gate_up_cache_hits": 192,
+        "gguf_target_ranges": null,
+        "hardware_done_count": null,
+        "input_sync_ms": null,
+        "job_id": 936,
+        "kernel_build_id": null,
+        "kernel_ms": null,
+        "last_status_code": 0,
+        "legacy_timing_scope": {
+          "cpu_compute_ms": "LAST_COMPLETED_RUN",
+          "cpu_run_count": "PROCESS_LIFETIME",
+          "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+        },
+        "measured_bus_bytes": null,
+        "no_weight_quantization_at_runtime": true,
+        "output_sync_ms": null,
+        "owned_weight_bytes": 140378112,
+        "partial_sums_capacity_bytes": 0,
+        "partial_sums_capture_enabled": false,
+        "partial_sums_storage_mode": "OMITTED",
+        "physical_cpu_calls_by_T": {
+          "1": 432,
+          "7": 72,
+          "8": 72
+        },
+        "protected_gguf_rss_kib": null,
+        "protected_gguf_vma_bytes": null,
+        "quant_ms": null,
+        "quantization_blocks": 384,
+        "residency_measurement": "NOT_SAMPLED_PERFORMANCE_MODE",
+        "runtime_buffer_capacity_bytes": 378944,
+        "runtime_output_copy_ms": 1.041886,
+        "runtime_quant_and_gather_ms": 15.51213500000003,
+        "scope": "all",
+        "service_ms": 0.85889,
+        "status": "READY",
+        "weight_count": 72,
+        "weight_load_count": 72,
+        "weight_resident": true,
+        "weights": null,
+        "workspace_capacity_bytes": 114688,
+        "xclbin_sha256": null
+      },
+      "decode_calls": 6,
+      "decode_ms": 698.673748,
+      "decode_rc": 0,
+      "domain": "PC",
+      "eos": true,
+      "gpu_layers": 0,
+      "id": "6eb25322b4cd43b8a4efd9bdc4c9e03b:DEV-001-hit",
+      "kernel_threads": 2,
+      "last_prompt_logits_fnv64": 2517788821092622308,
+      "last_prompt_logits_sha256": "067f978ed4a0703a82faf897311bc4c27c40f0e4c6a9b966552bbc654a1e1235",
+      "logits_comparison": null,
+      "logits_mode": "final",
+      "memory": null,
+      "output_tokens": [
+        108683,
+        95772,
+        97973,
+        97029,
+        95946,
+        1710
+      ],
+      "partial_output_usable": true,
+      "peak_rss_kib": 863572,
+      "physical_ubatch": 8,
+      "prefill_chunk": 256,
+      "prefill_ms": 948.165851,
+      "prefill_requested_logits": 1,
+      "prefix_cache": {
+        "binding_sha256": "d346ab74912c5fdc08f2f60cb1193edbc0658657f65a22464a6008a33a51e7f1",
+        "enabled": true,
+        "entries": [
+          {
+            "charged_bytes": 21614659,
+            "id": "short34-t2",
+            "logits_bytes": 993280,
+            "logits_sha256": "bb683442c82d99d1dbadd6f6181fb86ee53903358debb30ba0202908caf878a6",
+            "owner": {
+              "kind": "public_neutral"
+            },
+            "position": 33,
+            "sequence_sha256": "7084ea2d5793a2037957c361fb14259a609635d0e8a934b8a1e5abbd3e93d426",
+            "state_bytes": 20620706,
+            "state_sha256": "1d10354e5618471a4f3a7ec3fc77099784e885f14a492f4d63405b203d6ffc5d",
+            "tokens": 34
+          }
+        ],
+        "identity": {
+          "context": 1024,
+          "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+          "executable_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "execution_kind": "CPU_REFERENCE",
+          "input_workload_sha256": "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+          "kernel_threads": 2,
+          "layout": "pinned_memory_state_plus_last_logits_v1",
+          "libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+          "model_sha256": "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+          "n_rs_seq": 0,
+          "n_seq_max": 1,
+          "neutral_prefix_choices_sha256": "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+          "physical_ubatch": 8,
+          "prompt_policy_sha256": "006aa7c53e927c89804a3829574abb5a7157bfb88f0d6fba178e9ecdb32b880b",
+          "quantization": "A12_W4A8_MLP",
+          "runtime_base_commit": "81e39ad34368329b5db77620721510fd91107e80",
+          "sampler": "fresh_greedy_v1",
+          "sidecar_sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+          "template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+          "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+          "threads": 2,
+          "verified_loaded_libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          }
+        },
+        "max_slot_bytes": 67108864,
+        "max_slots": 2,
+        "retained_bytes": 21614659,
+        "sampling": "fresh stateless greedy; logits stored separately from pinned memory-only state API",
+        "schema": "TT10_FULL_PREFIX_V1",
+        "scratch_limit_bytes": 67108864
+      },
+      "prefix_cache_request": {
+        "hit": true,
+        "lookup_ms": 24.146424,
+        "new_tokens": 15,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 52.226191,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "prompt_tokens": 49,
+      "quantization": "A12_W4A8_MLP",
+      "request_profile": {
+        "BOARD": "NOT_TESTED",
+        "cpu_counters": {
+          "compute_ms_delta": 896.2718970000001,
+          "run_count_begin": 360,
+          "run_count_delta": 576,
+          "run_count_end": 936,
+          "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+          "service_ms_delta": 901.9507150000004
+        },
+        "detail": false,
+        "enabled": false,
+        "native_request_wall_ms": 1763.248905,
+        "node_profile": {
+          "BOARD": "NOT_TESTED",
+          "attribution": "exclusive category by head op; roles/shapes are alternate views, never additive",
+          "custom_identity_limit": "MLP custom uses pinned name+structure; no custom weight source exposed",
+          "detail": false,
+          "enabled": false,
+          "graph_generations": 0,
+          "invalid_phase_callbacks": 0,
+          "invalid_phase_wall_us": 0,
+          "linear_attention_state_split": "FUSED_GATED_DELTA_NET_STATE_UPDATE_NOT_SEPARATELY_TIMED",
+          "metadata_lifetime": "one synchronous CPU execution; pointers cleared before graph ownership ends",
+          "nesting": "MLP node wall and nested OperationScope are alternate scopes; never add them",
+          "overlapping_graphs": 0,
+          "phases": null,
+          "schema": "A12_CPU_NODE_PROFILE_V2",
+          "scope": "thread0 elapsed including existing barrier; one interval per actual fused group; not CPU time"
+        },
+        "phases": null,
+        "pl_profile": {
+          "compact_completion": false,
+          "enabled": false,
+          "phases": {
+            "decode": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            },
+            "prefill": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            }
+          },
+          "timing_scope": "HOST_WALL_NOT_DEVICE_CYCLES; backend call includes permission; report is a sibling; backend fields are nested"
+        },
+        "request_id": "a12-1",
+        "sample_ms": 9.986654,
+        "schema": "N02_REQUEST_PROFILE_V1",
+        "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+        "session_epoch": 0,
+        "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b"
+      },
+      "reset_ms": 10.280065,
+      "state_cleared_before_response": true,
+      "state_fingerprint": null,
+      "state_position_after_clear": -1,
+      "state_position_before_clear": 54,
+      "status": "OK",
+      "teacher_forced": false,
+      "text": "疼痛在胸骨后。",
+      "threads": 2,
+      "ttft_ms": 951.475631,
+      "type": "result",
+      "actual_backend": "CPU_REFERENCE",
+      "round_wall_ms": 1767.959406999978,
+      "application_timing": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.394017,
+        "adapter_entered_monotonic_ns": "293079421772",
+        "worker_send_monotonic_ns": "293079823985",
+        "first_token_monotonic_ns": "294132424244",
+        "worker_wall_ms": 1767.967273,
+        "first_token_from_adapter_ms": 1053.002472,
+        "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+        "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+        "request_id": "DEV-001-hit",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "native_request_id": "a12-1"
+    },
+    "received_ns": 293078107208,
+    "validated_ns": 294849189330,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "stage_timing": {
+      "clock": "Python monotonic_ns",
+      "route_ms": 0.109527,
+      "prompt_builder_ms": 1.093786,
+      "generation_ms": 1768.652352,
+      "candidate_check_ms": 1.205728,
+      "received_to_validated_ms": 1771.082122,
+      "nested_stages": true
+    }
+  },
+  "evaluation": {
+    "schema_version": "chief-evaluation.v1",
+    "evaluation_id": "7dd8e950adad87801aca9c27725b6c6f4867c8bdf3a710e301af0c9091f905c2",
+    "instance_id": "b8b920c56221463ebfd931e6888835e4",
+    "session_id": "6eb25322b4cd43b8a4efd9bdc4c9e03b",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "frozen_at": "2026-10-26T17:17:47.645843+00:00",
+    "frozen_turn_count": 1,
+    "scoring_event_count": 1,
+    "rule_score": {
+      "rubric_version": "coverage-v1-draft",
+      "rubric_sha256": "2cad745a0f64f8ddf03ba64176a3bc0762f4a4f21cf990fb1c0d61b2dcf7702c",
+      "score": 10,
+      "max_score": 100,
+      "items": {
+        "location": {
+          "points": 10,
+          "max_points": 10,
+          "evidence_turns": [
+            1
+          ]
+        },
+        "quality": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "onset": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "duration": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "severity": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "radiation": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "trigger": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "relief": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "dyspnea": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        },
+        "allergy": {
+          "points": 0,
+          "max_points": 10,
+          "evidence_turns": []
+        }
+      },
+      "review_turns": [],
+      "meaning": "draft_question_topic_coverage_only",
+      "review_status": "PENDING_TEACHER_REVIEW",
+      "clinical_validity": null,
+      "personality_or_real_emotion_inference": false
+    },
+    "summary_status": "READY",
+    "summary_source": "RULE_TEMPLATE",
+    "summary_version": "chief-summary-v1",
+    "summary_text": "本次问诊话题覆盖得分为 10/100。\n已覆盖：疼痛位置。\n尚未覆盖：疼痛性质、起病时间、持续时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。\n建议在下一次练习中补充上述未覆盖话题。",
+    "topics": [
+      {
+        "topic_id": "location",
+        "label": "疼痛位置",
+        "points": 10,
+        "max_points": 10,
+        "covered": true,
+        "evidence": [
+          {
+            "turn_id": 1,
+            "question_number": 1,
+            "request_id": "DEV-001-hit",
+            "question": "疼痛在什么位置？",
+            "turn_status": "COMPLETED",
+            "answer_published": true
+          }
+        ]
+      },
+      {
+        "topic_id": "quality",
+        "label": "疼痛性质",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "onset",
+        "label": "起病时间",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "duration",
+        "label": "持续时间",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "severity",
+        "label": "疼痛程度",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "radiation",
+        "label": "放射部位",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "trigger",
+        "label": "诱发或加重因素",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "relief",
+        "label": "缓解因素",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "dyspnea",
+        "label": "呼吸困难",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      },
+      {
+        "topic_id": "allergy",
+        "label": "过敏史",
+        "points": 0,
+        "max_points": 10,
+        "covered": false,
+        "evidence": []
+      }
+    ],
+    "covered_topics": [
+      "location"
+    ],
+    "missing_topics": [
+      "quality",
+      "onset",
+      "duration",
+      "severity",
+      "radiation",
+      "trigger",
+      "relief",
+      "dyspnea",
+      "allergy"
+    ],
+    "review_items": [],
+    "recommendations": [
+      "下一次练习请补充询问：疼痛性质、起病时间、持续时间、疼痛程度、放射部位、诱发或加重因素、缓解因素、呼吸困难、过敏史。"
+    ],
+    "review_status": "PENDING_TEACHER_REVIEW",
+    "meaning": "draft_question_topic_coverage_only",
+    "disclaimer": "当前为待教师审核的问诊话题覆盖评分草案，不代表临床能力或诊断正确性。",
+    "scoring_note": "按已接收的医生提问计分；回答取消或失败，不会自动撤销已记录的提问分数。"
+  },
+  "post_to_checked_turn_ms": 1784.165447,
+  "BOARD": "NOT_TESTED"
+}

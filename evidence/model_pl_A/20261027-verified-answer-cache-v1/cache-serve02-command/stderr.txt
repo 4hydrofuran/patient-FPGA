@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/c/Patientqwen/platform/qwen35/web/answer_cache_serve_pc.py", line 106, in <module>
+    p.add_argument('--pc-prefix-config',type=Path)
+  File "/mnt/c/Patientqwen/platform/qwen35/web/answer_cache_serve_pc.py", line 81, in serve
+    startup_ready_s=time.monotonic()-ready_start,native_count=native.count,
+  File "/mnt/c/Patientqwen/platform/qwen35/web/answer_cache_serve_pc.py", line 16, in save
+    def save(p,x):
+  File "/usr/lib/python3.10/pathlib.py", line 1247, in replace
+    self._accessor.replace(self, target)
+PermissionError: [Errno 13] Permission denied: '/mnt/c/Patientqwen/evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-serve02/metrics.tmp' -> '/mnt/c/Patientqwen/evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-serve02/metrics.json'

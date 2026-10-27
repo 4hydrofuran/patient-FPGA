@@ -1,0 +1,93 @@
+{
+  "id": "DEV-007",
+  "case_id": "SYN_CP_01",
+  "question": "什么情况下会痛？",
+  "answer": "疼痛在快走时出现。",
+  "timing": {
+    "session_id": "e3b0082dad5141fb8efa2f5c80a108ce",
+    "request_id": "d25509c8-10ac-4e65-b110-dd03f9978ec1",
+    "submitted_ms": 7439.699999928474,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 8293.099999904633,
+    "paint_scheduled": true,
+    "painted_ms": 8306.099999904633,
+    "submit_to_paint_ms": 866.3999999761581,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "d25509c8-10ac-4e65-b110-dd03f9978ec1",
+    "operation_id": "b791169340924f6784cc2f809a92055c",
+    "question": "什么情况下会痛？",
+    "status": "COMPLETED",
+    "answer": "疼痛在快走时出现。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "1d90e241abec4188bc6a4b0716b926ff",
+      "session_id": "e3b0082dad5141fb8efa2f5c80a108ce",
+      "request_id": "d25509c8-10ac-4e65-b110-dd03f9978ec1",
+      "operation_id": "b791169340924f6784cc2f809a92055c",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "9feef95e26b8bf70d601172d87d515bb876a76d2fca4e908f9ea3c2448cb69aa",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "109030707388",
+      "published_monotonic_ns": "109031324930",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 820.508423,
+      "accepted_to_published_ms": 821.236966,
+      "validation_to_publication_ms": 0.728543,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.230057,
+        "adapter_entered_monotonic_ns": "108210667574",
+        "worker_send_monotonic_ns": "108210903482",
+        "first_token_monotonic_ns": "108653417121",
+        "worker_wall_ms": 819.608506,
+        "first_token_from_adapter_ms": 442.749547,
+        "prompt_sha256": "955acb5940f365d01f89a7d343dcf76c6f49e1c2f24eca5f8b27872148fea1a3",
+        "session_id": "e3b0082dad5141fb8efa2f5c80a108ce",
+        "request_id": "d25509c8-10ac-4e65-b110-dd03f9978ec1",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.080843,
+        "prompt_builder_ms": 0.024386,
+        "generation_ms": 820.050384,
+        "candidate_check_ms": 0.05244,
+        "received_to_validated_ms": 820.220015,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 394.441876,
+        "ttft_ms": 397.40595,
+        "decode_ms": 372.82536300000004,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 443.218156
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

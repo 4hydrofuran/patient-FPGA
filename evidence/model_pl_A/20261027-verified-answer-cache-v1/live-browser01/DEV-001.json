@@ -1,0 +1,93 @@
+{
+  "id": "DEV-001",
+  "case_id": "SYN_CP_01",
+  "question": "疼痛在什么位置？",
+  "answer": "疼痛在胸骨后。",
+  "timing": {
+    "session_id": "40d9d293909b43d689ae9320afd7e7cb",
+    "request_id": "6570f1b5-0bc3-49af-82b0-99cca293e6d0",
+    "submitted_ms": 429,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 1335.3999999761581,
+    "paint_scheduled": true,
+    "painted_ms": 1339.7999999523163,
+    "submit_to_paint_ms": 910.7999999523163,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "6570f1b5-0bc3-49af-82b0-99cca293e6d0",
+    "operation_id": "f11637f12bc548b18b3f09380370ebbf",
+    "question": "疼痛在什么位置？",
+    "status": "COMPLETED",
+    "answer": "疼痛在胸骨后。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "1d90e241abec4188bc6a4b0716b926ff",
+      "session_id": "40d9d293909b43d689ae9320afd7e7cb",
+      "request_id": "6570f1b5-0bc3-49af-82b0-99cca293e6d0",
+      "operation_id": "f11637f12bc548b18b3f09380370ebbf",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "8fdd1270a10220dc263f0720eb828b7850b9ddf6fc80b75f42dbac5119821878",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "102051653368",
+      "published_monotonic_ns": "102052294534",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 851.407157,
+      "accepted_to_published_ms": 852.24177,
+      "validation_to_publication_ms": 0.834613,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.413705,
+        "adapter_entered_monotonic_ns": "101203840302",
+        "worker_send_monotonic_ns": "101204259938",
+        "first_token_monotonic_ns": "101671443961",
+        "worker_wall_ms": 846.233018,
+        "first_token_from_adapter_ms": 467.603659,
+        "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+        "session_id": "40d9d293909b43d689ae9320afd7e7cb",
+        "request_id": "6570f1b5-0bc3-49af-82b0-99cca293e6d0",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 2.7459,
+        "prompt_builder_ms": 0.461065,
+        "generation_ms": 846.885215,
+        "candidate_check_ms": 0.997743,
+        "received_to_validated_ms": 851.107477,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 393.746719,
+        "ttft_ms": 396.691847,
+        "decode_ms": 373.409859,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 471.19775
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

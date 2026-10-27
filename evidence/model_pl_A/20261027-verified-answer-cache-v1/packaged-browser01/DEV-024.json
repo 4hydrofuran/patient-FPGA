@@ -1,0 +1,139 @@
+{
+  "id": "DEV-024",
+  "case_id": "SYN_CP_03",
+  "question": "一次胸痛多长时间？",
+  "answer": "每次疼痛持续 20 分钟。",
+  "timing": {
+    "session_id": "774b8bdabe8144b0bc88a31d72467f8d",
+    "request_id": "9588765d-3148-40f4-a3be-11d8b3211efe",
+    "submitted_ms": 2607.899999976158,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "paint_scheduled": true,
+    "answer_ready_ms": 2648.8000000715256,
+    "painted_ms": 2649.100000023842,
+    "submit_to_paint_ms": 41.200000047683716,
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "9588765d-3148-40f4-a3be-11d8b3211efe",
+    "operation_id": "cec32de68c2c49eb86e20422b5ecc04d",
+    "question": "一次胸痛多长时间？",
+    "status": "COMPLETED",
+    "answer": "每次疼痛持续 20 分钟。",
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v2",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "56664fc146a84542b5f4699fbdd76471",
+      "session_id": "774b8bdabe8144b0bc88a31d72467f8d",
+      "request_id": "9588765d-3148-40f4-a3be-11d8b3211efe",
+      "operation_id": "cec32de68c2c49eb86e20422b5ecc04d",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+      "answer_source": "MODEL_CACHE",
+      "actual_backend": null,
+      "model_called": false,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "221351598360",
+      "published_monotonic_ns": "221351881106",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false,
+      "cache_provenance": {
+        "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+        "key": "0d38c1537bb9334642fa7d0251dd151ea0048abf802673b3979cca89aa1cdd84",
+        "text_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-136",
+          "result_path": "proof/catalog-136.json",
+          "result_sha256": "920adfeb743284dc8f8ff4e0e1160447624ec0baa6c05b1ecc50735ff36405e6",
+          "text_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "1b594197316d7f222d1d4cccaaba95800b19207377d93c5a8cbb4fba25af11c5",
+          "output_tokens": 9,
+          "generation_wall_s": 1.8875680130000205
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      }
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 0.506781,
+      "accepted_to_published_ms": 0.990509,
+      "validation_to_publication_ms": 0.483728,
+      "model": null,
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.076746,
+        "prompt_builder_ms": 0.143633,
+        "generation_ms": 0,
+        "candidate_check_ms": 0.014577,
+        "received_to_validated_ms": 0.244224,
+        "cache_lookup_ms": 0.130818,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": null,
+        "ttft_ms": null,
+        "decode_ms": null,
+        "decode_calls": null,
+        "prompt_tokens": null
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": null
+    },
+    "cache_provenance": {
+      "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+      "key": "0d38c1537bb9334642fa7d0251dd151ea0048abf802673b3979cca89aa1cdd84",
+      "text_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+      "origin": {
+        "status": "OK",
+        "eos": true,
+        "teacher_forced": false,
+        "execution_kind": "CPU_REFERENCE",
+        "native_request_id": "catalog-136",
+        "result_path": "proof/catalog-136.json",
+        "result_sha256": "920adfeb743284dc8f8ff4e0e1160447624ec0baa6c05b1ecc50735ff36405e6",
+        "text_sha256": "f625a3b0ac1f11519f1d39fff22d5f09ce4589a0166d757e64871ee9d4ff8f14",
+        "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+        "libraries": {
+          "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+          "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+          "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+          "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+          "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+        },
+        "prompt_sha256": "1b594197316d7f222d1d4cccaaba95800b19207377d93c5a8cbb4fba25af11c5",
+        "output_tokens": 9,
+        "generation_wall_s": 1.8875680130000205
+      },
+      "current_model_called": false,
+      "current_PL_submissions": 0,
+      "validated_against_current_plan": true
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

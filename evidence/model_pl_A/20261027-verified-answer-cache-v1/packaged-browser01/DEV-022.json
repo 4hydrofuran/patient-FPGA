@@ -1,0 +1,138 @@
+{
+  "id": "DEV-022",
+  "case_id": "SYN_CP_01",
+  "question": "痛的性质怎样？",
+  "answer": "疼痛是压迫感。",
+  "timing": {
+    "session_id": "73d580ba01164247b0c6dd11982cb3e3",
+    "request_id": "71e40c39-a449-4131-84cc-2e98d31f0cfd",
+    "submitted_ms": 2370.399999976158,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "paint_scheduled": true,
+    "painted_ms": 2398.399999976158,
+    "submit_to_paint_ms": 28,
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "71e40c39-a449-4131-84cc-2e98d31f0cfd",
+    "operation_id": "c500dda64d8644688160e7c2acab0ca1",
+    "question": "痛的性质怎样？",
+    "status": "COMPLETED",
+    "answer": "疼痛是压迫感。",
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v2",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "56664fc146a84542b5f4699fbdd76471",
+      "session_id": "73d580ba01164247b0c6dd11982cb3e3",
+      "request_id": "71e40c39-a449-4131-84cc-2e98d31f0cfd",
+      "operation_id": "c500dda64d8644688160e7c2acab0ca1",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+      "answer_source": "MODEL_CACHE",
+      "actual_backend": null,
+      "model_called": false,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "221112435013",
+      "published_monotonic_ns": "221112732397",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false,
+      "cache_provenance": {
+        "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+        "key": "9b08d27c616ada06e0ef803009fd5c953c3b8fd95aa31f935a31ea1fc512548a",
+        "text_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-002",
+          "result_path": "proof/catalog-002.json",
+          "result_sha256": "ab53374cb82f70dc3a48d548b4c15f63fde4f508bb438b824a68a3994a4a96a4",
+          "text_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "d11c564faf19e92ce967ec5e15da5ddc2897935c01b401557d0308e144ab6481",
+          "output_tokens": 5,
+          "generation_wall_s": 1.576138790999991
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      }
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 0.63097,
+      "accepted_to_published_ms": 1.085492,
+      "validation_to_publication_ms": 0.454522,
+      "model": null,
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.077407,
+        "prompt_builder_ms": 0.144053,
+        "generation_ms": 0,
+        "candidate_check_ms": 0.011392,
+        "received_to_validated_ms": 0.240346,
+        "cache_lookup_ms": 0.13152,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": null,
+        "ttft_ms": null,
+        "decode_ms": null,
+        "decode_calls": null,
+        "prompt_tokens": null
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": null
+    },
+    "cache_provenance": {
+      "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+      "key": "9b08d27c616ada06e0ef803009fd5c953c3b8fd95aa31f935a31ea1fc512548a",
+      "text_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+      "origin": {
+        "status": "OK",
+        "eos": true,
+        "teacher_forced": false,
+        "execution_kind": "CPU_REFERENCE",
+        "native_request_id": "catalog-002",
+        "result_path": "proof/catalog-002.json",
+        "result_sha256": "ab53374cb82f70dc3a48d548b4c15f63fde4f508bb438b824a68a3994a4a96a4",
+        "text_sha256": "4fbde61af4c25ad95c5f0ec0a90995fa78ec45f1c9393efbe98c026dec44865e",
+        "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+        "libraries": {
+          "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+          "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+          "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+          "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+          "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+        },
+        "prompt_sha256": "d11c564faf19e92ce967ec5e15da5ddc2897935c01b401557d0308e144ab6481",
+        "output_tokens": 5,
+        "generation_wall_s": 1.576138790999991
+      },
+      "current_model_called": false,
+      "current_PL_submissions": 0,
+      "validated_against_current_plan": true
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

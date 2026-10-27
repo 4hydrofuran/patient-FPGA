@@ -1,0 +1,41 @@
+{
+  "previous_attempts_preserved": true,
+  "rows": [
+    {
+      "attempt": "initial shell receipts",
+      "issue": "PowerShell expanded shell variables; per-component exit values absent",
+      "resolution": "baseline checks rerun sequentially and recorded as exit0; ambiguous first output not used for PASS"
+    },
+    {
+      "attempt": "dependency install first shell call",
+      "issue": "WSL shell interpreted an unpreserved < version constraint as redirection",
+      "resolution": "explicit pinned arguments installed only in the task venv; PC_ENVIRONMENT.json records actual versions"
+    },
+    {
+      "attempt": "attempt02-web-tests",
+      "issue": "test read raw_text instead of the existing transcript field",
+      "resolution": "correct existing schema; final 34 tests pass"
+    },
+    {
+      "attempt": "attempt02-model",
+      "issue": "verifier expected HTTP 200 for the original correct create-session 201 response",
+      "resolution": "verifier fixed; model quality gate unchanged"
+    },
+    {
+      "attempt": "attempt03-model",
+      "issue": "verifier compared a dataclass tuple directly to a frozen JSON array",
+      "resolution": "compare equivalent lists; original plans/required facts unchanged"
+    },
+    {
+      "attempt": "attempt03-browser and attempt04-browser",
+      "issue": "virtual-time timers did not establish real compositor-frame observations",
+      "resolution": "run the existing headless Edge on real time via local CDP; no browser sandbox changes"
+    },
+    {
+      "attempt": "attempt05-browser",
+      "issue": "cursor/epoch comparison needed the same-session condition on refresh",
+      "resolution": "session-scoped comparison and realistic global cursor fixture; all 15 final browser checks pass"
+    }
+  ],
+  "unresolved_no_board_failures": []
+}

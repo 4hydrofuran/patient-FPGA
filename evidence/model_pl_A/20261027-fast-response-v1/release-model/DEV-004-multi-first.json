@@ -1,0 +1,426 @@
+{
+  "turn": {
+    "request_id": "DEV-004-multi-first",
+    "operation_id": "0272324803454aafb23ff7cc88013048",
+    "question": "每次疼痛持续多久？",
+    "status": "COMPLETED",
+    "answer": "每次疼痛持续 10 分钟。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "b8b920c56221463ebfd931e6888835e4",
+      "session_id": "8a7251a076404b9cbf159ef52703aea6",
+      "request_id": "DEV-004-multi-first",
+      "operation_id": "0272324803454aafb23ff7cc88013048",
+      "epoch": 0,
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "answer_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "348784556084",
+      "published_monotonic_ns": "348785152616",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 1398.645455,
+      "accepted_to_published_ms": 1399.353789,
+      "validation_to_publication_ms": 0.708334,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.259613,
+        "adapter_entered_monotonic_ns": "347386411629",
+        "worker_send_monotonic_ns": "347386676932",
+        "first_token_monotonic_ns": "348031849345",
+        "worker_wall_ms": 1397.644928,
+        "first_token_from_adapter_ms": 645.437716,
+        "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+        "session_id": "8a7251a076404b9cbf159ef52703aea6",
+        "request_id": "DEV-004-multi-first",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.086444,
+        "prompt_builder_ms": 0.030618,
+        "generation_ms": 1398.156258,
+        "candidate_check_ms": 0.066706,
+        "received_to_validated_ms": 1398.354884,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 587.177021,
+        "ttft_ms": 591.677,
+        "decode_ms": 744.6471590000001,
+        "decode_calls": 9,
+        "prompt_tokens": 50
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 645.938716
+    }
+  },
+  "response": {
+    "type": "validated_answer",
+    "session_id": "8a7251a076404b9cbf159ef52703aea6",
+    "epoch": 0,
+    "turn_id": 1,
+    "request_id": "DEV-004-multi-first",
+    "case_id": "SYN_CP_01",
+    "case_version": "1.0-draft",
+    "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+    "text": "每次疼痛持续 10 分钟。",
+    "answer_source": "MODEL",
+    "fallback_reason": null,
+    "failure_bucket": null,
+    "candidate": "每次疼痛持续 10 分钟。",
+    "candidate_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "final_check": {
+      "status": "pass",
+      "covered_fact_ids": [
+        "duration"
+      ],
+      "failure_bucket": null,
+      "reason": "whole_relation_grammar"
+    },
+    "answer_plan": {
+      "intent_ids": [
+        "duration"
+      ],
+      "allowed_fact_ids": [
+        "duration"
+      ],
+      "required_fact_ids": [
+        "duration"
+      ],
+      "facts": [
+        {
+          "slot": "duration",
+          "status": "known",
+          "value": 10,
+          "unit": "分钟",
+          "time_scope": "本次模拟所述胸痛",
+          "polarity": "positive",
+          "disclose": "on_slot"
+        }
+      ],
+      "already_disclosed": [],
+      "played_history": [],
+      "unknown_policy": "explicit_unknown-v1-draft",
+      "answer_style": "first_person_short",
+      "max_sentences": 2,
+      "route": "answer",
+      "reason": "explicit_rule",
+      "evidence": [
+        {
+          "slot": "duration",
+          "span": [
+            0,
+            8
+          ],
+          "quote": "每次疼痛持续多久"
+        }
+      ],
+      "rule_version": "route-v2-draft"
+    },
+    "llm_calls": 1,
+    "model_result": {
+      "bridge": {
+        "a12_route": {
+          "execution_kind": "CPU_REFERENCE",
+          "scope": "none",
+          "trace": []
+        },
+        "algorithm_weight_bytes": 1949696,
+        "api_version": 1,
+        "backend_id": "A_CPU_W4A8_V1",
+        "board": "NOT_TESTED",
+        "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+        "cpu_algorithm": "TILED",
+        "cpu_compute_ms": 0.575151,
+        "cpu_compute_ms_process_total": 31160.672707999915,
+        "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+        "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+        "cpu_quiescent": true,
+        "cpu_run_count": 25272,
+        "cpu_service_ms_process_total": 31333.07347499996,
+        "cpu_threads": 2,
+        "cycles": null,
+        "device_id": null,
+        "epoch": 33,
+        "error": "",
+        "execution_kind": "CPU_REFERENCE",
+        "executions": 10,
+        "gate_up_cache_hits": 264,
+        "gguf_target_ranges": null,
+        "hardware_done_count": null,
+        "input_sync_ms": null,
+        "job_id": 25272,
+        "kernel_build_id": null,
+        "kernel_ms": null,
+        "last_status_code": 0,
+        "legacy_timing_scope": {
+          "cpu_compute_ms": "LAST_COMPLETED_RUN",
+          "cpu_run_count": "PROCESS_LIFETIME",
+          "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+        },
+        "measured_bus_bytes": null,
+        "no_weight_quantization_at_runtime": true,
+        "output_sync_ms": null,
+        "owned_weight_bytes": 140378112,
+        "partial_sums_capacity_bytes": 0,
+        "partial_sums_capture_enabled": false,
+        "partial_sums_storage_mode": "OMITTED",
+        "physical_cpu_calls_by_T": {
+          "1": 648,
+          "8": 144
+        },
+        "protected_gguf_rss_kib": null,
+        "protected_gguf_vma_bytes": null,
+        "quant_ms": null,
+        "quantization_blocks": 528,
+        "residency_measurement": "NOT_SAMPLED_PERFORMANCE_MODE",
+        "runtime_buffer_capacity_bytes": 378944,
+        "runtime_output_copy_ms": 1.605689000000001,
+        "runtime_quant_and_gather_ms": 17.36548000000001,
+        "scope": "all",
+        "service_ms": 0.578317,
+        "status": "READY",
+        "weight_count": 72,
+        "weight_load_count": 72,
+        "weight_resident": true,
+        "weights": null,
+        "workspace_capacity_bytes": 114688,
+        "xclbin_sha256": null
+      },
+      "decode_calls": 9,
+      "decode_ms": 744.6471590000001,
+      "decode_rc": 0,
+      "domain": "PC",
+      "eos": true,
+      "gpu_layers": 0,
+      "id": "8a7251a076404b9cbf159ef52703aea6:DEV-004-multi-first",
+      "kernel_threads": 2,
+      "last_prompt_logits_fnv64": 823952993250686657,
+      "last_prompt_logits_sha256": "1ff983afefb658fc1cf30ea6b7ee5a1a51a441e82a8e409fb8a39819dd48f89b",
+      "logits_comparison": null,
+      "logits_mode": "final",
+      "memory": null,
+      "output_tokens": [
+        103740,
+        108683,
+        97709,
+        220,
+        16,
+        15,
+        220,
+        98004,
+        1710
+      ],
+      "partial_output_usable": true,
+      "peak_rss_kib": 863572,
+      "physical_ubatch": 8,
+      "prefill_chunk": 256,
+      "prefill_ms": 587.177021,
+      "prefill_requested_logits": 1,
+      "prefix_cache": {
+        "binding_sha256": "d346ab74912c5fdc08f2f60cb1193edbc0658657f65a22464a6008a33a51e7f1",
+        "enabled": true,
+        "entries": [
+          {
+            "charged_bytes": 21614659,
+            "id": "short34-t2",
+            "logits_bytes": 993280,
+            "logits_sha256": "bb683442c82d99d1dbadd6f6181fb86ee53903358debb30ba0202908caf878a6",
+            "owner": {
+              "kind": "public_neutral"
+            },
+            "position": 33,
+            "sequence_sha256": "7084ea2d5793a2037957c361fb14259a609635d0e8a934b8a1e5abbd3e93d426",
+            "state_bytes": 20620706,
+            "state_sha256": "1d10354e5618471a4f3a7ec3fc77099784e885f14a492f4d63405b203d6ffc5d",
+            "tokens": 34
+          }
+        ],
+        "identity": {
+          "context": 1024,
+          "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+          "executable_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "execution_kind": "CPU_REFERENCE",
+          "input_workload_sha256": "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+          "kernel_threads": 2,
+          "layout": "pinned_memory_state_plus_last_logits_v1",
+          "libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+          "model_sha256": "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+          "n_rs_seq": 0,
+          "n_seq_max": 1,
+          "neutral_prefix_choices_sha256": "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+          "physical_ubatch": 8,
+          "prompt_policy_sha256": "006aa7c53e927c89804a3829574abb5a7157bfb88f0d6fba178e9ecdb32b880b",
+          "quantization": "A12_W4A8_MLP",
+          "runtime_base_commit": "81e39ad34368329b5db77620721510fd91107e80",
+          "sampler": "fresh_greedy_v1",
+          "sidecar_sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+          "template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+          "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+          "threads": 2,
+          "verified_loaded_libraries": {
+            "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          }
+        },
+        "max_slot_bytes": 67108864,
+        "max_slots": 2,
+        "retained_bytes": 21614659,
+        "sampling": "fresh stateless greedy; logits stored separately from pinned memory-only state API",
+        "schema": "TT10_FULL_PREFIX_V1",
+        "scratch_limit_bytes": 67108864
+      },
+      "prefix_cache_request": {
+        "hit": true,
+        "lookup_ms": 20.379194,
+        "new_tokens": 16,
+        "policy": "TT10_REQUIRE_HIT",
+        "reason": "EXACT_FULL_STATE_HIT",
+        "restore_error": null,
+        "restore_ms": 29.291084,
+        "reused_tokens": 34,
+        "snapshot_bytes": 21614659
+      },
+      "prompt_tokens": 50,
+      "quantization": "A12_W4A8_MLP",
+      "request_profile": {
+        "BOARD": "NOT_TESTED",
+        "cpu_counters": {
+          "compute_ms_delta": 796.5607500000406,
+          "run_count_begin": 24480,
+          "run_count_delta": 792,
+          "run_count_end": 25272,
+          "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+          "service_ms_delta": 800.3216240000183
+        },
+        "detail": false,
+        "enabled": false,
+        "native_request_wall_ms": 1395.004872,
+        "node_profile": {
+          "BOARD": "NOT_TESTED",
+          "attribution": "exclusive category by head op; roles/shapes are alternate views, never additive",
+          "custom_identity_limit": "MLP custom uses pinned name+structure; no custom weight source exposed",
+          "detail": false,
+          "enabled": false,
+          "graph_generations": 0,
+          "invalid_phase_callbacks": 0,
+          "invalid_phase_wall_us": 0,
+          "linear_attention_state_split": "FUSED_GATED_DELTA_NET_STATE_UPDATE_NOT_SEPARATELY_TIMED",
+          "metadata_lifetime": "one synchronous CPU execution; pointers cleared before graph ownership ends",
+          "nesting": "MLP node wall and nested OperationScope are alternate scopes; never add them",
+          "overlapping_graphs": 0,
+          "phases": null,
+          "schema": "A12_CPU_NODE_PROFILE_V2",
+          "scope": "thread0 elapsed including existing barrier; one interval per actual fused group; not CPU time"
+        },
+        "phases": null,
+        "pl_profile": {
+          "compact_completion": false,
+          "enabled": false,
+          "phases": {
+            "decode": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            },
+            "prefill": {
+              "backend": {},
+              "backend_call_wall_ms": 0.0,
+              "calls": 0,
+              "completion_report_wall_ms": 0.0
+            }
+          },
+          "timing_scope": "HOST_WALL_NOT_DEVICE_CYCLES; backend call includes permission; report is a sibling; backend fields are nested"
+        },
+        "request_id": "a12-32",
+        "sample_ms": 6.427352000000001,
+        "schema": "N02_REQUEST_PROFILE_V1",
+        "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+        "session_epoch": 0,
+        "session_id": "8a7251a076404b9cbf159ef52703aea6"
+      },
+      "reset_ms": 0.694768,
+      "state_cleared_before_response": true,
+      "state_fingerprint": null,
+      "state_position_after_clear": -1,
+      "state_position_before_clear": 58,
+      "status": "OK",
+      "teacher_forced": false,
+      "text": "每次疼痛持续 10 分钟。",
+      "threads": 2,
+      "ttft_ms": 591.677,
+      "type": "result",
+      "actual_backend": "CPU_REFERENCE",
+      "round_wall_ms": 1397.6354800000195,
+      "application_timing": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.259613,
+        "adapter_entered_monotonic_ns": "347386411629",
+        "worker_send_monotonic_ns": "347386676932",
+        "first_token_monotonic_ns": "348031849345",
+        "worker_wall_ms": 1397.644928,
+        "first_token_from_adapter_ms": 645.437716,
+        "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+        "session_id": "8a7251a076404b9cbf159ef52703aea6",
+        "request_id": "DEV-004-multi-first",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "native_request_id": "a12-32"
+    },
+    "received_ns": 347386201200,
+    "validated_ns": 348784556084,
+    "tts_ready": true,
+    "tts_executed": false,
+    "audio_played": false,
+    "software_test_only": true,
+    "medical_review": "PENDING_TEACHER_REVIEW",
+    "asr_confirmation": null,
+    "stage_timing": {
+      "clock": "Python monotonic_ns",
+      "route_ms": 0.086444,
+      "prompt_builder_ms": 0.030618,
+      "generation_ms": 1398.156258,
+      "candidate_check_ms": 0.066706,
+      "received_to_validated_ms": 1398.354884,
+      "nested_stages": true
+    }
+  },
+  "evaluation": null,
+  "post_to_checked_turn_ms": 1410.591371,
+  "BOARD": "NOT_TESTED"
+}

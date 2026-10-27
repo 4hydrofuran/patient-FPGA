@@ -1,0 +1,93 @@
+{
+  "id": "DEV-021",
+  "case_id": "SYN_CP_03",
+  "question": "现在是否呼吸费力？",
+  "answer": "气短情况我不清楚。",
+  "timing": {
+    "session_id": "bf7866920f2b47938f7d701ca9907a4c",
+    "request_id": "9f5b9b2c-1399-4bcb-8b7e-31020dedcb03",
+    "submitted_ms": 14837.599999904633,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "answer_ready_ms": 15693.399999976158,
+    "paint_scheduled": true,
+    "painted_ms": 15706.299999952316,
+    "submit_to_paint_ms": 868.7000000476837,
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "9f5b9b2c-1399-4bcb-8b7e-31020dedcb03",
+    "operation_id": "ef223d94835d469a9c2311bcacd6c262",
+    "question": "现在是否呼吸费力？",
+    "status": "COMPLETED",
+    "answer": "气短情况我不清楚。",
+    "answer_source": "MODEL",
+    "actual_backend": "CPU_REFERENCE",
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v1",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "1d90e241abec4188bc6a4b0716b926ff",
+      "session_id": "bf7866920f2b47938f7d701ca9907a4c",
+      "request_id": "9f5b9b2c-1399-4bcb-8b7e-31020dedcb03",
+      "operation_id": "ef223d94835d469a9c2311bcacd6c262",
+      "epoch": 0,
+      "case_id": "SYN_CP_03",
+      "case_version": "1.0-draft",
+      "case_sha256": "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+      "answer_sha256": "f86ccca92239410ae426c53db545c2fc331bb276820f1749a111137ad7430813",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "model_called": true,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "116424521713",
+      "published_monotonic_ns": "116425089771",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 817.264293,
+      "accepted_to_published_ms": 818.037041,
+      "validation_to_publication_ms": 0.772748,
+      "model": {
+        "clock": "Python monotonic_ns",
+        "template_ms": 0.221521,
+        "adapter_entered_monotonic_ns": "115607693940",
+        "worker_send_monotonic_ns": "115607920380",
+        "first_token_monotonic_ns": "116046936953",
+        "worker_wall_ms": 816.36811,
+        "first_token_from_adapter_ms": 439.243013,
+        "prompt_sha256": "8e6c5088d3896f2b4e3c41b8ffff472c41ed6835f2a7beac4ff6e379b8741b35",
+        "session_id": "bf7866920f2b47938f7d701ca9907a4c",
+        "request_id": "9f5b9b2c-1399-4bcb-8b7e-31020dedcb03",
+        "stages_nested": true,
+        "health_and_owner_checks_in_worker_wall": true
+      },
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.075844,
+        "prompt_builder_ms": 0.024457,
+        "generation_ms": 816.829345,
+        "candidate_check_ms": 0.055565,
+        "received_to_validated_ms": 816.998497,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": 390.773798,
+        "ttft_ms": 393.646379,
+        "decode_ms": 373.37359000000004,
+        "decode_calls": 6,
+        "prompt_tokens": 49
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": 439.679533
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

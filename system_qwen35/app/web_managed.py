@@ -10,9 +10,10 @@ import math
 class OwnerBoundModel:
     """Keep the gateway's NativePL interface and use the owner's live budget."""
 
-    def __init__(self, native_pl, *, is_ready, remaining_seconds, minimum_answer_seconds=180):
-        if (getattr(native_pl, 'expected', None) != 'FPGA_REAL'
-                or native_pl.ready.get('execution_kind') != 'FPGA_REAL'):
+    def __init__(self, native_pl, *, is_ready, remaining_seconds, minimum_answer_seconds=180, domain='BOARD'):
+        expected = {'BOARD':'FPGA_REAL', 'PC':'CPU_REFERENCE'}.get(domain)
+        if (expected is None or getattr(native_pl, 'expected', None) != expected
+                or native_pl.ready.get('execution_kind') != expected):
             raise ValueError('An existing BOARD NativePL is required')
         if not callable(is_ready) or not callable(remaining_seconds):
             raise TypeError('Existing owner readiness and remaining-budget callbacks are required')
@@ -70,7 +71,7 @@ class OwnerBoundModel:
         return self.inner.generate(messages, timeout_s=timeout_s)
 
 
-def create_app(native_pl, *, is_ready, remaining_seconds, generation_timeout_s=180):
+def create_app(native_pl, *, is_ready, remaining_seconds, generation_timeout_s=180, prompt_builder=None, answer_cache=None, domain='BOARD'):
     """Call inside the PS owner scope, after its approved NativePL is ready.
 
     Use the gateway's existing frozen prompt, checker, delivery and score path.
@@ -81,17 +82,20 @@ def create_app(native_pl, *, is_ready, remaining_seconds, generation_timeout_s=1
             or not 1 <= generation_timeout_s <= 600):
         raise ValueError('Answer timeout must be within 1..600 seconds')
     model = OwnerBoundModel(native_pl, is_ready=is_ready, remaining_seconds=remaining_seconds,
-                            minimum_answer_seconds=generation_timeout_s)
+                            minimum_answer_seconds=generation_timeout_s, domain=domain)
     managed = importlib.import_module('patient_web.managed')
-    return managed.create_managed_app(model, is_ready=model.available,
-                                      generation_timeout_s=generation_timeout_s)
+    options = dict(is_ready=model.available, generation_timeout_s=generation_timeout_s)
+    if prompt_builder is not None:options['prompt_builder']=prompt_builder
+    if answer_cache is not None:options['answer_cache']=answer_cache
+    if domain != 'BOARD':options['domain']=domain
+    return managed.create_managed_app(model, **options)
 
 
-def serve(native_pl, *, is_ready, remaining_seconds, generation_timeout_s=180, port=8000):
+def serve(native_pl, *, is_ready, remaining_seconds, generation_timeout_s=180, port=8000, prompt_builder=None, answer_cache=None):
     """Blocking web entry; return control to PS for its existing cleanup."""
     if type(port) is not int or not 1 <= port <= 65535:
         raise ValueError('Port must be within 1..65535')
     app = create_app(native_pl, is_ready=is_ready, remaining_seconds=remaining_seconds,
-                     generation_timeout_s=generation_timeout_s)
+                     generation_timeout_s=generation_timeout_s, prompt_builder=prompt_builder, answer_cache=answer_cache)
     import uvicorn
     uvicorn.run(app, host='127.0.0.1', port=port, workers=1)

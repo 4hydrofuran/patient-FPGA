@@ -1,0 +1,45 @@
+{
+  "status": "PASS_NAMED_ARCHIVES_CRC_SHA_READBACK",
+  "date": "2026-10-27",
+  "version": "v1",
+  "repository": "https://github.com/4hydrofuran/patient-FPGA",
+  "branch": "codex/a12-fast-response-cache-delivery-20261027",
+  "base_commit": "ec5542e7a86f670410550661a4c46f2b206317f4",
+  "artifacts": [
+    {
+      "name": "KV260_Qwen35_A12_FastResponse_VerifiedCache_NoBoard_20261027_v1.zip",
+      "role": "recommended_delivery",
+      "bytes": 39975000,
+      "sha256": "5192a063cefc869cdd4ea1e61cf3cb13fb6832cc9ab3bbdf928ed3e275fbd5d7",
+      "payloads": 9,
+      "CRC_SHA_readback": "PASS"
+    },
+    {
+      "name": "KV260_Qwen35_A12_LiveModel_Short34T2_NoBoard_20261027_v1.zip",
+      "role": "independent_live_model_rollback",
+      "bytes": 26644325,
+      "sha256": "2efea0e3694a9bbe759281096ce8180a2000957ec7d924a9b71993c628206297",
+      "source": "release/a12_fast_response_20261027_v2/short34-threads2.zip",
+      "CRC_SHA_readback": "PASS"
+    },
+    {
+      "name": "KV260_Qwen35_A12_LiveModel_Legacy70T2_NoBoard_20261027_v1.zip",
+      "role": "independent_live_model_rollback",
+      "bytes": 26645917,
+      "sha256": "5d0af99b4a06600addd0ea29e29458a3f8f436e25e24bbfc271cae0e5b96e669",
+      "source": "release/a12_fast_response_20261027_v2/legacy70-threads2.zip",
+      "CRC_SHA_readback": "PASS"
+    }
+  ],
+  "actual_browser_pairs": 25,
+  "live_median_ms": 875.0,
+  "cache_median_ms": 42.3,
+  "cached_answers_under_1s": 25,
+  "catalog_real_model_answers": 198,
+  "BOARD": "NOT_TESTED",
+  "source_stage01_sha256": "69f6cc078597dcb8c68b2bd43023a82f3dd98c1a2b63bc06a1276e9ea61b0d26",
+  "source_stage02_sha256": "f6cef5afd7460ab4e8a0c53065fef59081aabaf2f6e32fbb1f968fdb671e3ab4",
+  "deployment_sha256": "282a97e7d0f69908c911941fbc60fd13506034b1eadce62871fbac1c3d8c26a4",
+  "model_weights_included": false,
+  "authorization_included": false
+}

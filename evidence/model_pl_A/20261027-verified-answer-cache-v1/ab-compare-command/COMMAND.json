@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "platform/qwen35/web/answer_cache_verify.py",
+    "--suite",
+    "compare",
+    "--live",
+    "evidence/model_pl_A/20261027-verified-answer-cache-v1/live-browser01",
+    "--cache",
+    "evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-browser02",
+    "--output",
+    "evidence/model_pl_A/20261027-verified-answer-cache-v1/AB_RESULT.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 0.45371150004211813,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "43bc1d98a4ca365e89b8557970baa4a749c60b81f2fefc3668e6c47a5651e95b"
+  }
+}

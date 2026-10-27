@@ -1,0 +1,669 @@
+[
+  {
+    "turn": {
+      "request_id": "miss",
+      "operation_id": "948918a9060a4ac7b33ead8ac892b21d",
+      "question": "疼痛在哪里？",
+      "status": "COMPLETED",
+      "answer": "疼痛在胸骨后。",
+      "answer_source": "MODEL",
+      "actual_backend": "CPU_REFERENCE",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "delivery_receipt": {
+        "schema_version": "text-delivery.v1",
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "instance_id": "23aa80d76c144629ad861622f23dc688",
+        "session_id": "9bd6aead965343baad193723db2bf42f",
+        "request_id": "miss",
+        "operation_id": "948918a9060a4ac7b33ead8ac892b21d",
+        "epoch": 0,
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+        "answer_sha256": "8fdd1270a10220dc263f0720eb828b7850b9ddf6fc80b75f42dbac5119821878",
+        "answer_source": "MODEL",
+        "actual_backend": "CPU_REFERENCE",
+        "model_called": true,
+        "validation_status": "pass",
+        "validated_monotonic_ns": "33067621809",
+        "published_monotonic_ns": "33068388063",
+        "audio_played": false,
+        "browser_render_verified": false,
+        "user_read_verified": false,
+        "cache_provenance": null
+      },
+      "error": null,
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 846.111546,
+        "accepted_to_published_ms": 847.127664,
+        "validation_to_publication_ms": 1.016118,
+        "model": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.392535,
+          "adapter_entered_monotonic_ns": "32222859743",
+          "worker_send_monotonic_ns": "32223257608",
+          "first_token_monotonic_ns": "32683944778",
+          "worker_wall_ms": 843.532924,
+          "first_token_from_adapter_ms": 461.085035,
+          "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+          "session_id": "9bd6aead965343baad193723db2bf42f",
+          "request_id": "miss",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.063871,
+          "prompt_builder_ms": 0.940661,
+          "generation_ms": 844.161197,
+          "candidate_check_ms": 0.663178,
+          "received_to_validated_ms": 845.843354,
+          "cache_lookup_ms": 0.113395,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": 401.905387,
+          "ttft_ms": 404.869861,
+          "decode_ms": 378.43263099999996,
+          "decode_calls": 6,
+          "prompt_tokens": 49
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": 462.434515
+      },
+      "cache_provenance": null
+    },
+    "response": {
+      "type": "validated_answer",
+      "session_id": "9bd6aead965343baad193723db2bf42f",
+      "epoch": 0,
+      "turn_id": 1,
+      "request_id": "miss",
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "text": "疼痛在胸骨后。",
+      "answer_source": "MODEL",
+      "fallback_reason": null,
+      "failure_bucket": null,
+      "candidate": "疼痛在胸骨后。",
+      "candidate_check": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "answer_plan": {
+        "intent_ids": [
+          "location"
+        ],
+        "allowed_fact_ids": [
+          "location"
+        ],
+        "required_fact_ids": [
+          "location"
+        ],
+        "facts": [
+          {
+            "slot": "location",
+            "status": "known",
+            "value": "胸骨后",
+            "unit": null,
+            "time_scope": "本次模拟所述胸痛",
+            "polarity": "positive",
+            "disclose": "on_slot"
+          }
+        ],
+        "already_disclosed": [],
+        "played_history": [],
+        "unknown_policy": "explicit_unknown-v1-draft",
+        "answer_style": "first_person_short",
+        "max_sentences": 2,
+        "route": "answer",
+        "reason": "explicit_rule",
+        "evidence": [
+          {
+            "slot": "location",
+            "span": [
+              3,
+              5
+            ],
+            "quote": "哪里"
+          }
+        ],
+        "rule_version": "route-v2-draft"
+      },
+      "llm_calls": 1,
+      "model_result": {
+        "bridge": {
+          "a12_route": {
+            "execution_kind": "CPU_REFERENCE",
+            "scope": "none",
+            "trace": []
+          },
+          "algorithm_weight_bytes": 1949696,
+          "api_version": 1,
+          "backend_id": "A_CPU_W4A8_V1",
+          "board": "NOT_TESTED",
+          "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+          "cpu_algorithm": "TILED",
+          "cpu_compute_ms": 0.585651,
+          "cpu_compute_ms_process_total": 1120.0474919999997,
+          "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+          "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+          "cpu_quiescent": true,
+          "cpu_run_count": 936,
+          "cpu_service_ms_process_total": 1127.2158760000002,
+          "cpu_threads": 2,
+          "cycles": null,
+          "device_id": null,
+          "epoch": 2,
+          "error": "",
+          "execution_kind": "CPU_REFERENCE",
+          "executions": 7,
+          "gate_up_cache_hits": 192,
+          "gguf_target_ranges": null,
+          "hardware_done_count": null,
+          "input_sync_ms": null,
+          "job_id": 936,
+          "kernel_build_id": null,
+          "kernel_ms": null,
+          "last_status_code": 0,
+          "legacy_timing_scope": {
+            "cpu_compute_ms": "LAST_COMPLETED_RUN",
+            "cpu_run_count": "PROCESS_LIFETIME",
+            "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+          },
+          "measured_bus_bytes": null,
+          "no_weight_quantization_at_runtime": true,
+          "output_sync_ms": null,
+          "owned_weight_bytes": 140378112,
+          "partial_sums_capacity_bytes": 0,
+          "partial_sums_capture_enabled": false,
+          "partial_sums_storage_mode": "OMITTED",
+          "physical_cpu_calls_by_T": {
+            "1": 432,
+            "7": 72,
+            "8": 72
+          },
+          "protected_gguf_rss_kib": null,
+          "protected_gguf_vma_bytes": null,
+          "quant_ms": null,
+          "quantization_blocks": 384,
+          "residency_measurement": "NOT_SAMPLED_PERFORMANCE_MODE",
+          "runtime_buffer_capacity_bytes": 378944,
+          "runtime_output_copy_ms": 0.4900889999999995,
+          "runtime_quant_and_gather_ms": 11.652713000000055,
+          "scope": "all",
+          "service_ms": 0.588777,
+          "status": "READY",
+          "weight_count": 72,
+          "weight_load_count": 72,
+          "weight_resident": true,
+          "weights": null,
+          "workspace_capacity_bytes": 114688,
+          "xclbin_sha256": null
+        },
+        "decode_calls": 6,
+        "decode_ms": 378.43263099999996,
+        "decode_rc": 0,
+        "domain": "PC",
+        "eos": true,
+        "gpu_layers": 0,
+        "id": "9bd6aead965343baad193723db2bf42f:miss",
+        "kernel_threads": 2,
+        "last_prompt_logits_fnv64": 2517788821092622308,
+        "last_prompt_logits_sha256": "067f978ed4a0703a82faf897311bc4c27c40f0e4c6a9b966552bbc654a1e1235",
+        "logits_comparison": null,
+        "logits_mode": "final",
+        "memory": null,
+        "output_tokens": [
+          108683,
+          95772,
+          97973,
+          97029,
+          95946,
+          1710
+        ],
+        "partial_output_usable": true,
+        "peak_rss_kib": 864372,
+        "physical_ubatch": 8,
+        "prefill_chunk": 256,
+        "prefill_ms": 401.905387,
+        "prefill_requested_logits": 1,
+        "prefix_cache": {
+          "binding_sha256": "d346ab74912c5fdc08f2f60cb1193edbc0658657f65a22464a6008a33a51e7f1",
+          "enabled": true,
+          "entries": [
+            {
+              "charged_bytes": 21614659,
+              "id": "short34-t2",
+              "logits_bytes": 993280,
+              "logits_sha256": "bb683442c82d99d1dbadd6f6181fb86ee53903358debb30ba0202908caf878a6",
+              "owner": {
+                "kind": "public_neutral"
+              },
+              "position": 33,
+              "sequence_sha256": "7084ea2d5793a2037957c361fb14259a609635d0e8a934b8a1e5abbd3e93d426",
+              "state_bytes": 20620706,
+              "state_sha256": "1d10354e5618471a4f3a7ec3fc77099784e885f14a492f4d63405b203d6ffc5d",
+              "tokens": 34
+            }
+          ],
+          "identity": {
+            "context": 1024,
+            "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+            "executable_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+            "execution_kind": "CPU_REFERENCE",
+            "input_workload_sha256": "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+            "kernel_threads": 2,
+            "layout": "pinned_memory_state_plus_last_logits_v1",
+            "libraries": {
+              "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+              "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+              "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+              "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+              "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+            },
+            "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+            "model_sha256": "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+            "n_rs_seq": 0,
+            "n_seq_max": 1,
+            "neutral_prefix_choices_sha256": "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+            "physical_ubatch": 8,
+            "prompt_policy_sha256": "006aa7c53e927c89804a3829574abb5a7157bfb88f0d6fba178e9ecdb32b880b",
+            "quantization": "A12_W4A8_MLP",
+            "runtime_base_commit": "81e39ad34368329b5db77620721510fd91107e80",
+            "sampler": "fresh_greedy_v1",
+            "sidecar_sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+            "template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+            "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+            "threads": 2,
+            "verified_loaded_libraries": {
+              "libggml-base.so": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+              "libggml-cpu.so": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+              "libggml.so": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+              "libllama.so": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+              "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+            }
+          },
+          "max_slot_bytes": 67108864,
+          "max_slots": 2,
+          "retained_bytes": 21614659,
+          "sampling": "fresh stateless greedy; logits stored separately from pinned memory-only state API",
+          "schema": "TT10_FULL_PREFIX_V1",
+          "scratch_limit_bytes": 67108864
+        },
+        "prefix_cache_request": {
+          "hit": true,
+          "lookup_ms": 18.073775,
+          "new_tokens": 15,
+          "policy": "TT10_REQUIRE_HIT",
+          "reason": "EXACT_FULL_STATE_HIT",
+          "restore_error": null,
+          "restore_ms": 34.286294,
+          "reused_tokens": 34,
+          "snapshot_bytes": 21614659
+        },
+        "prompt_tokens": 49,
+        "quantization": "A12_W4A8_MLP",
+        "request_profile": {
+          "BOARD": "NOT_TESTED",
+          "cpu_counters": {
+            "compute_ms_delta": 517.9319059999998,
+            "run_count_begin": 360,
+            "run_count_delta": 576,
+            "run_count_end": 936,
+            "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+            "service_ms_delta": 520.7430479999998
+          },
+          "detail": false,
+          "enabled": false,
+          "native_request_wall_ms": 841.931213,
+          "node_profile": {
+            "BOARD": "NOT_TESTED",
+            "attribution": "exclusive category by head op; roles/shapes are alternate views, never additive",
+            "custom_identity_limit": "MLP custom uses pinned name+structure; no custom weight source exposed",
+            "detail": false,
+            "enabled": false,
+            "graph_generations": 0,
+            "invalid_phase_callbacks": 0,
+            "invalid_phase_wall_us": 0,
+            "linear_attention_state_split": "FUSED_GATED_DELTA_NET_STATE_UPDATE_NOT_SEPARATELY_TIMED",
+            "metadata_lifetime": "one synchronous CPU execution; pointers cleared before graph ownership ends",
+            "nesting": "MLP node wall and nested OperationScope are alternate scopes; never add them",
+            "overlapping_graphs": 0,
+            "phases": null,
+            "schema": "A12_CPU_NODE_PROFILE_V2",
+            "scope": "thread0 elapsed including existing barrier; one interval per actual fused group; not CPU time"
+          },
+          "phases": null,
+          "pl_profile": {
+            "compact_completion": false,
+            "enabled": false,
+            "phases": {
+              "decode": {
+                "backend": {},
+                "backend_call_wall_ms": 0.0,
+                "calls": 0,
+                "completion_report_wall_ms": 0.0
+              },
+              "prefill": {
+                "backend": {},
+                "backend_call_wall_ms": 0.0,
+                "calls": 0,
+                "completion_report_wall_ms": 0.0
+              }
+            },
+            "timing_scope": "HOST_WALL_NOT_DEVICE_CYCLES; backend call includes permission; report is a sibling; backend fields are nested"
+          },
+          "request_id": "a12-1",
+          "sample_ms": 3.2255190000000002,
+          "schema": "N02_REQUEST_PROFILE_V1",
+          "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+          "session_epoch": 0,
+          "session_id": "9bd6aead965343baad193723db2bf42f"
+        },
+        "reset_ms": 0.876032,
+        "state_cleared_before_response": true,
+        "state_fingerprint": null,
+        "state_position_after_clear": -1,
+        "state_position_before_clear": 54,
+        "status": "OK",
+        "teacher_forced": false,
+        "text": "疼痛在胸骨后。",
+        "threads": 2,
+        "ttft_ms": 404.869861,
+        "type": "result",
+        "actual_backend": "CPU_REFERENCE",
+        "round_wall_ms": 843.5258000000019,
+        "application_timing": {
+          "clock": "Python monotonic_ns",
+          "template_ms": 0.392535,
+          "adapter_entered_monotonic_ns": "32222859743",
+          "worker_send_monotonic_ns": "32223257608",
+          "first_token_monotonic_ns": "32683944778",
+          "worker_wall_ms": 843.532924,
+          "first_token_from_adapter_ms": 461.085035,
+          "prompt_sha256": "a54a3fb61c9e2290825b9335ea982b9023e5017e55f239756e4efc9900381cdd",
+          "session_id": "9bd6aead965343baad193723db2bf42f",
+          "request_id": "miss",
+          "stages_nested": true,
+          "health_and_owner_checks_in_worker_wall": true
+        },
+        "native_request_id": "a12-1"
+      },
+      "received_ns": 32221778455,
+      "validated_ns": 33067621809,
+      "tts_ready": true,
+      "tts_executed": false,
+      "audio_played": false,
+      "software_test_only": true,
+      "medical_review": "PENDING_TEACHER_REVIEW",
+      "asr_confirmation": null,
+      "cache_provenance": null,
+      "stage_timing": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.063871,
+        "prompt_builder_ms": 0.940661,
+        "generation_ms": 844.161197,
+        "candidate_check_ms": 0.663178,
+        "received_to_validated_ms": 845.843354,
+        "cache_lookup_ms": 0.113395,
+        "nested_stages": true
+      }
+    }
+  },
+  {
+    "turn": {
+      "request_id": "hit",
+      "operation_id": "efa9cdec1b054661a0763a7f5efc1d88",
+      "question": "每次疼痛持续多久？",
+      "status": "COMPLETED",
+      "answer": "每次疼痛持续 10 分钟。",
+      "answer_source": "MODEL_CACHE",
+      "actual_backend": null,
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "delivery_receipt": {
+        "schema_version": "text-delivery.v2",
+        "delivery_kind": "WEB_TEXT_PUBLISHED",
+        "instance_id": "23aa80d76c144629ad861622f23dc688",
+        "session_id": "9bd6aead965343baad193723db2bf42f",
+        "request_id": "hit",
+        "operation_id": "efa9cdec1b054661a0763a7f5efc1d88",
+        "epoch": 0,
+        "case_id": "SYN_CP_01",
+        "case_version": "1.0-draft",
+        "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+        "answer_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+        "answer_source": "MODEL_CACHE",
+        "actual_backend": null,
+        "model_called": false,
+        "validation_status": "pass",
+        "validated_monotonic_ns": "33078537122",
+        "published_monotonic_ns": "33078869793",
+        "audio_played": false,
+        "browser_render_verified": false,
+        "user_read_verified": false,
+        "cache_provenance": {
+          "catalog_sha256": "cc24cd252465b3788d4556d0cee7c91d413b7a563329e51b33223cc962b5dc44",
+          "key": "040cb3aa695127302631c8f819ff48add93c11da73a3bccbe1f20160df4b5ab6",
+          "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+          "origin": {
+            "status": "OK",
+            "eos": true,
+            "teacher_forced": false,
+            "execution_kind": "CPU_REFERENCE",
+            "native_request_id": "catalog-004",
+            "result_path": "proof/catalog-004.json",
+            "result_sha256": "2a8f527909e58df72496b70b431fa6543aeb5b4a869f1225d6f03608479186ac",
+            "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+            "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+            "libraries": {
+              "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+              "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+              "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+              "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+              "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+            },
+            "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+            "output_tokens": 9,
+            "generation_wall_s": 1.8885252769999994
+          },
+          "current_model_called": false,
+          "current_PL_submissions": 0,
+          "validated_against_current_plan": true
+        }
+      },
+      "error": null,
+      "timing": {
+        "clock": "Python monotonic_ns",
+        "accepted_to_validated_ms": 0.468353,
+        "accepted_to_published_ms": 0.971367,
+        "validation_to_publication_ms": 0.503014,
+        "model": null,
+        "session": {
+          "clock": "Python monotonic_ns",
+          "route_ms": 0.066587,
+          "prompt_builder_ms": 0.140376,
+          "generation_ms": 0.0,
+          "candidate_check_ms": 0.014087,
+          "received_to_validated_ms": 0.231109,
+          "cache_lookup_ms": 0.128574,
+          "nested_stages": true
+        },
+        "native_prefill_decode": {
+          "prefill_ms": null,
+          "ttft_ms": null,
+          "decode_ms": null,
+          "decode_calls": null,
+          "prompt_tokens": null
+        },
+        "nested_stages": true,
+        "accepted_to_first_token_observed_ms": null
+      },
+      "cache_provenance": {
+        "catalog_sha256": "cc24cd252465b3788d4556d0cee7c91d413b7a563329e51b33223cc962b5dc44",
+        "key": "040cb3aa695127302631c8f819ff48add93c11da73a3bccbe1f20160df4b5ab6",
+        "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-004",
+          "result_path": "proof/catalog-004.json",
+          "result_sha256": "2a8f527909e58df72496b70b431fa6543aeb5b4a869f1225d6f03608479186ac",
+          "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+          "output_tokens": 9,
+          "generation_wall_s": 1.8885252769999994
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      }
+    },
+    "response": {
+      "type": "validated_answer",
+      "session_id": "9bd6aead965343baad193723db2bf42f",
+      "epoch": 0,
+      "turn_id": 2,
+      "request_id": "hit",
+      "case_id": "SYN_CP_01",
+      "case_version": "1.0-draft",
+      "case_sha256": "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+      "text": "每次疼痛持续 10 分钟。",
+      "answer_source": "MODEL_CACHE",
+      "fallback_reason": null,
+      "failure_bucket": null,
+      "candidate": "每次疼痛持续 10 分钟。",
+      "candidate_check": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "duration"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "final_check": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "duration"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "answer_plan": {
+        "intent_ids": [
+          "duration"
+        ],
+        "allowed_fact_ids": [
+          "duration"
+        ],
+        "required_fact_ids": [
+          "duration"
+        ],
+        "facts": [
+          {
+            "slot": "duration",
+            "status": "known",
+            "value": 10,
+            "unit": "分钟",
+            "time_scope": "本次模拟所述胸痛",
+            "polarity": "positive",
+            "disclose": "on_slot"
+          }
+        ],
+        "already_disclosed": [
+          "location"
+        ],
+        "played_history": [],
+        "unknown_policy": "explicit_unknown-v1-draft",
+        "answer_style": "first_person_short",
+        "max_sentences": 2,
+        "route": "answer",
+        "reason": "explicit_rule",
+        "evidence": [
+          {
+            "slot": "duration",
+            "span": [
+              0,
+              8
+            ],
+            "quote": "每次疼痛持续多久"
+          }
+        ],
+        "rule_version": "route-v2-draft"
+      },
+      "llm_calls": 0,
+      "model_result": null,
+      "received_ns": 33078306013,
+      "validated_ns": 33078537122,
+      "tts_ready": true,
+      "tts_executed": false,
+      "audio_played": false,
+      "software_test_only": true,
+      "medical_review": "PENDING_TEACHER_REVIEW",
+      "asr_confirmation": null,
+      "cache_provenance": {
+        "catalog_sha256": "cc24cd252465b3788d4556d0cee7c91d413b7a563329e51b33223cc962b5dc44",
+        "key": "040cb3aa695127302631c8f819ff48add93c11da73a3bccbe1f20160df4b5ab6",
+        "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-004",
+          "result_path": "proof/catalog-004.json",
+          "result_sha256": "2a8f527909e58df72496b70b431fa6543aeb5b4a869f1225d6f03608479186ac",
+          "text_sha256": "a43ee8fd6481b059b19b57a121688336bc05358bd31abf519251dc8d22f4693d",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "dfceca082183886e54abbdc39f4c60177d56d17ffb3947cd92cf74793b047418",
+          "output_tokens": 9,
+          "generation_wall_s": 1.8885252769999994
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      },
+      "stage_timing": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.066587,
+        "prompt_builder_ms": 0.140376,
+        "generation_ms": 0.0,
+        "candidate_check_ms": 0.014087,
+        "received_to_validated_ms": 0.231109,
+        "cache_lookup_ms": 0.128574,
+        "nested_stages": true
+      }
+    }
+  }
+]

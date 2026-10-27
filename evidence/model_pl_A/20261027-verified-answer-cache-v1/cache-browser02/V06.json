@@ -1,0 +1,139 @@
+{
+  "id": "V06",
+  "case_id": "SYN_CP_02",
+  "question": "有没有药物过敏？",
+  "answer": "过敏情况我不清楚。",
+  "timing": {
+    "session_id": "1d21d467553940ac89e7c37e2c6da496",
+    "request_id": "b7678725-445a-491e-aff7-26211e375375",
+    "submitted_ms": 3506.3000000715256,
+    "clock": "browser performance.now",
+    "measurement": "two rAF after checked answer DOM update",
+    "paint_scheduled": true,
+    "answer_ready_ms": 3552,
+    "painted_ms": 3556.7000000476837,
+    "submit_to_paint_ms": 50.39999997615814,
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "visibility_state": "visible"
+  },
+  "turn": {
+    "request_id": "b7678725-445a-491e-aff7-26211e375375",
+    "operation_id": "8e89d3567c7f49afaf853e88ffb9b723",
+    "question": "有没有药物过敏？",
+    "status": "COMPLETED",
+    "answer": "过敏情况我不清楚。",
+    "answer_source": "MODEL_CACHE",
+    "actual_backend": null,
+    "delivery_kind": "WEB_TEXT_PUBLISHED",
+    "delivery_receipt": {
+      "schema_version": "text-delivery.v2",
+      "delivery_kind": "WEB_TEXT_PUBLISHED",
+      "instance_id": "5d0efb6892af46f790c065d480fc5890",
+      "session_id": "1d21d467553940ac89e7c37e2c6da496",
+      "request_id": "b7678725-445a-491e-aff7-26211e375375",
+      "operation_id": "8e89d3567c7f49afaf853e88ffb9b723",
+      "epoch": 0,
+      "case_id": "SYN_CP_02",
+      "case_version": "1.0-draft",
+      "case_sha256": "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+      "answer_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+      "answer_source": "MODEL_CACHE",
+      "actual_backend": null,
+      "model_called": false,
+      "validation_status": "pass",
+      "validated_monotonic_ns": "381049103599",
+      "published_monotonic_ns": "381049480725",
+      "audio_played": false,
+      "browser_render_verified": false,
+      "user_read_verified": false,
+      "cache_provenance": {
+        "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+        "key": "0d4f2f1aca9d4ecbb786899d51525d8d98ce29b0be2e4fc48ce8de398cbc1510",
+        "text_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+        "origin": {
+          "status": "OK",
+          "eos": true,
+          "teacher_forced": false,
+          "execution_kind": "CPU_REFERENCE",
+          "native_request_id": "catalog-076",
+          "result_path": "proof/catalog-076.json",
+          "result_sha256": "ffa9f9dd9409976f13030681f1a939d60818630b8c4b6c3571ed1c24d3cc2ddb",
+          "text_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+          "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+          "libraries": {
+            "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+            "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+            "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+            "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+            "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+          },
+          "prompt_sha256": "54a94c2fbd2ef6afc9eaa002b7f112a8ca5249d9f9986cba0fff85a1ca90770b",
+          "output_tokens": 5,
+          "generation_wall_s": 1.567564836999992
+        },
+        "current_model_called": false,
+        "current_PL_submissions": 0,
+        "validated_against_current_plan": true
+      }
+    },
+    "error": null,
+    "timing": {
+      "clock": "Python monotonic_ns",
+      "accepted_to_validated_ms": 0.622977,
+      "accepted_to_published_ms": 1.161288,
+      "validation_to_publication_ms": 0.538311,
+      "model": null,
+      "session": {
+        "clock": "Python monotonic_ns",
+        "route_ms": 0.088257,
+        "prompt_builder_ms": 0.205901,
+        "generation_ms": 0,
+        "candidate_check_ms": 0.013776,
+        "received_to_validated_ms": 0.316761,
+        "cache_lookup_ms": 0.189179,
+        "nested_stages": true
+      },
+      "native_prefill_decode": {
+        "prefill_ms": null,
+        "ttft_ms": null,
+        "decode_ms": null,
+        "decode_calls": null,
+        "prompt_tokens": null
+      },
+      "nested_stages": true,
+      "accepted_to_first_token_observed_ms": null
+    },
+    "cache_provenance": {
+      "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+      "key": "0d4f2f1aca9d4ecbb786899d51525d8d98ce29b0be2e4fc48ce8de398cbc1510",
+      "text_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+      "origin": {
+        "status": "OK",
+        "eos": true,
+        "teacher_forced": false,
+        "execution_kind": "CPU_REFERENCE",
+        "native_request_id": "catalog-076",
+        "result_path": "proof/catalog-076.json",
+        "result_sha256": "ffa9f9dd9409976f13030681f1a939d60818630b8c4b6c3571ed1c24d3cc2ddb",
+        "text_sha256": "5421a5068d7cefe01709fa1b225fddd04104412ef7cd0a7e9288769da69d19d0",
+        "binary_sha256": "e4836476012f64aa0164079b8c7529c5e587517c5914ca8a6886a7f1c29d38f3",
+        "libraries": {
+          "libggml-cpu.so.0.25.3": "d3e85812e931e182ddd0c55329fbb17853cb91856de0ac76fce5cb2bd9b79c44",
+          "libllama.so.0.5.0": "68df820ab388d67fa2086386c31e29db8aa8367fccbd30919003f334b5d53491",
+          "libggml-base.so.0.25.3": "8ec5b90a905cc364f83e180dcaba000a9db0efae6497b9e1662477a627ad3166",
+          "libggml.so.0.25.3": "6d7630c4d4304b7b9c7fdab481df4630af6b0361288f3579397dd9bb1283a63d",
+          "libsp_linear_cpu.so": "0209be20bdd89bc6f6f6626be0dd9f22e4a29da45520f52918eecf6d791f7c15"
+        },
+        "prompt_sha256": "54a94c2fbd2ef6afc9eaa002b7f112a8ca5249d9f9986cba0fff85a1ca90770b",
+        "output_tokens": 5,
+        "generation_wall_s": 1.567564836999992
+      },
+      "current_model_called": false,
+      "current_PL_submissions": 0,
+      "validated_against_current_plan": true
+    }
+  },
+  "measured_with": "REAL_EDGE_REAL_HTTP_SSE",
+  "BOARD": "NOT_TESTED"
+}

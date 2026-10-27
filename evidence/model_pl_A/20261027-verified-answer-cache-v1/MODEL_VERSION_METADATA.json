@@ -1,0 +1,22 @@
+{
+  "status": "MATCH_PINNED_MODEL_QUANTIZATION_METADATA",
+  "rows": [
+    {
+      "path": "quant/qwen35_tensor_map.json",
+      "expected": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+      "actual": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736"
+    },
+    {
+      "path": "models/sidecar_A/qwen35-v1/manifest.json",
+      "expected": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+      "actual": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688"
+    },
+    {
+      "path": "modules/linear_A/cpu_threads2_config.json",
+      "expected": "a55fa3d4d1c3757c670b4c80c5d64c3c6d319c44825d563962033d42eb085352",
+      "actual": "a55fa3d4d1c3757c670b4c80c5d64c3c6d319c44825d563962033d42eb085352"
+    }
+  ],
+  "gguf_already_verified_in": "CATALOG_VERIFIED.json",
+  "scope": "selected current model metadata; no historical full asset rescan"
+}

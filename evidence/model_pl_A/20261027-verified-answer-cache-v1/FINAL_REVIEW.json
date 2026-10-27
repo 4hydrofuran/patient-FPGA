@@ -1,0 +1,500 @@
+{
+  "status": "PASS_ALL_REQUIRED_NO_BOARD_CACHE_WORK",
+  "requirements": [
+    {
+      "id": "C0",
+      "requirement": "plan with per-stage reasoning; protected baseline/config checks",
+      "evidence": [
+        "docs/A12_VERIFIED_ANSWER_CACHE_10H_PLAN_20261027.md",
+        "BASE_CHECKS.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "C1",
+      "requirement": "198 actual model/EOS/checker answers and provenance/coverage",
+      "evidence": [
+        "build01/RESULT.json",
+        "CATALOG_VERIFIED.json",
+        "PLANNER_COVERAGE.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "C2",
+      "requirement": "fresh routing/check/scoring, exact cache keys, truthful source, actual miss",
+      "evidence": [
+        "actual-miss-checks01/RESULT.json",
+        "actual-miss-checks01/HIT_MISS.json",
+        "cache-tests01/COMMAND.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "C3",
+      "requirement": "real browser delivery/source badge, IME/session/reconnect, lifecycle",
+      "evidence": [
+        "cache-browser03/RESULT.json",
+        "browser-regression02/RESULT.json",
+        "tests-final-command/COMMAND.json",
+        "cache-serve03/RESULT.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "C4",
+      "requirement": "same-question/output real HTTP/browser A/B, zero new model on hits",
+      "evidence": [
+        "AB_FINAL.json",
+        "live-browser01/RESULT.json",
+        "cache-browser03/RESULT.json",
+        "live-serve01/RESULT.json",
+        "cache-serve03/RESULT.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "C5",
+      "requirement": "tested deployment closure, actual commands/help/rollback and archive SHA",
+      "evidence": [
+        "packaged-browser01/RESULT.json",
+        "packaged-serve01/RESULT.json",
+        "package-verify-final-command/COMMAND.json",
+        "ARCHIVE.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "reasoning",
+      "requirement": "automatic recommended configuration and resolved blocker",
+      "evidence": [
+        "SETTINGS.json"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    },
+    {
+      "id": "no-board",
+      "requirement": "no Board actions; do not claim Board speed/release",
+      "evidence": [
+        "all CPU-domain CLI/receipts",
+        "REPORT.md"
+      ],
+      "status": "PROVEN_WITH_STATED_PC_SCOPE"
+    }
+  ],
+  "commands": {
+    "build01-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "platform/qwen35/web/answer_cache_build.py",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/build01"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 457.644791502,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "d8062ab3594ff078c3108343cd43aa09bdbb1c65939c2f700121157d66a13a25"
+      }
+    },
+    "catalog-verify01-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "platform/qwen35/web/answer_cache_verify.py",
+        "--suite",
+        "catalog",
+        "--catalog-build",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/build01",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/CATALOG_VERIFIED.json"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 8.639272934000001,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "1bb92583bef24b8101082112ceb338e9c6fc71fd1353157ffff295ce37ec6483"
+      }
+    },
+    "live-serve01-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "platform/qwen35/web/answer_cache_serve_pc.py",
+        "--mode",
+        "live",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/live-serve01",
+        "--port",
+        "8765"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 219.14915513300002,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "live-browser01-command": {
+      "command": [
+        "python",
+        "platform/qwen35/web/answer_cache_browser.py",
+        "--mode",
+        "live",
+        "--url",
+        "http://127.0.0.1:8765/",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/live-browser01"
+      ],
+      "cwd": "C:\\Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 29.361198500031605,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "6e4f931043baf359abf6317af8261cbfc7938a4b51dd4790f29abd70dac382f6"
+      }
+    },
+    "cache-serve03-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "platform/qwen35/web/answer_cache_serve_pc.py",
+        "--mode",
+        "cache",
+        "--catalog",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/build01/catalog.json",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-serve03",
+        "--port",
+        "8766"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 143.28557560899998,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "cache-browser03-command": {
+      "command": [
+        "python",
+        "platform/qwen35/web/answer_cache_browser.py",
+        "--mode",
+        "cache",
+        "--url",
+        "http://127.0.0.1:8766/",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-browser03"
+      ],
+      "cwd": "C:\\Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 4.715884099947289,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "1a6bc04c76218ab86d39cdf256ad5e8d8be1290180af2ce0809d948004189641"
+      }
+    },
+    "ab-final-command": {
+      "command": [
+        "python",
+        "platform/qwen35/web/answer_cache_verify.py",
+        "--suite",
+        "compare",
+        "--live",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/live-browser01",
+        "--cache",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/cache-browser03",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/AB_FINAL.json"
+      ],
+      "cwd": "C:\\Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.4247877000598237,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "ceee82329cad3cb88e4aa5368ad34fc884e49e61790513305ccb22b8b0ce05b6"
+      }
+    },
+    "actual-miss-checks01-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "platform/qwen35/web/answer_cache_checks_pc.py",
+        "--catalog",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/build01/catalog.json",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/actual-miss-checks01"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 28.503925782000003,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "d17b6f1b74c8c4c91227da96f581188a062bbce4597bedef1f381572f0dbafb0"
+      }
+    },
+    "tests-final-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bench/qwen35/web",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 6.406937775,
+      "logs": {
+        "stderr.txt": "a2c5165646dc73b42aea5116536d72a7d924719aa4dc25f9d6ff03f02093d2ed",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "browser-regression02-command": {
+      "command": [
+        "python",
+        "bench/qwen35/web/console_browser_check.py",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/browser-regression02"
+      ],
+      "cwd": "C:\\Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 2.237375499913469,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "8f1a07875eb00be8f3f3434adc0e5cf2994b9fbdf043f939074387329e2ffa94"
+      }
+    },
+    "planner-coverage-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/audit_planner_coverage.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.8363544330000003,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "d7223f2114de5a9bb71495027b20d92d2f73a768dd87a23af8391f1f95f3cf1f"
+      }
+    },
+    "package-verify-final-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2",
+        "--suite",
+        "package"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 24.973449257,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "3b20825dad9c7878e78fa20dc19968817076faa554b105abe75afd9b5b69f60f"
+      }
+    },
+    "packaged-serve01-command": {
+      "command": [
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2/continuous/answer_cache_serve_pc.py",
+        "--mode",
+        "cache",
+        "--catalog",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2/continuous/answer-cache/catalog.json",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/packaged-serve01",
+        "--port",
+        "8767"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 233.47698354599999,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "packaged-browser01-command": {
+      "command": [
+        "python",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2/continuous/answer_cache_browser.py",
+        "--mode",
+        "cache",
+        "--url",
+        "http://127.0.0.1:8767/",
+        "--output",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/packaged-browser01"
+      ],
+      "cwd": "C:\\Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 4.696635299944319,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "477d311b1b46f9d444a6d0752f65bfe49874196a30aed7ce418489c366b14bba"
+      }
+    },
+    "help-prepare-command": {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/web/answer_cache_prepare.py",
+        "--help"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.18946006700000062,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "59b1d8754944f18e4885c541dc5751fc4b92641c56794ea779c29b7af26b86d1"
+      }
+    },
+    "help-build-command": {
+      "command": [
+        "python3",
+        "-B",
+        "platform/qwen35/web/answer_cache_build.py",
+        "--help"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.29866332200000034,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "90a11d605bcb29a71790e1cf359594fad32f08c373875dfeef3020d176154fdf"
+      }
+    },
+    "help-verify-command": {
+      "command": [
+        "python3",
+        "-B",
+        "release/a12_verified_answer_cache_20261027/hybrid34-threads2/continuous/answer_cache_verify.py",
+        "--help"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.5711176419999999,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "14929aa46de950bb45807c722378430ea08f27375f076c0c20d25817210dcf04"
+      }
+    },
+    "config-final-command": {
+      "command": [
+        "python3",
+        "scripts/release/qwen35_config.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 0.370676918,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "ab977de52288d1a2dcdbd103fb154292e5590455d633fdae7a803e598ff143e5"
+      }
+    },
+    "archive-product-command": {
+      "command": [
+        "python3",
+        "-B",
+        "evidence/model_pl_A/20261027-verified-answer-cache-v1/archive_product.py"
+      ],
+      "cwd": "/mnt/c/Patientqwen",
+      "exit_code": 0,
+      "elapsed_s": 18.08150963,
+      "logs": {
+        "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.txt": "29916c4e2506bcde8f912cbaef661f51c5c591654a19eee08d181562b04e7173"
+      }
+    }
+  },
+  "catalog_entries": 198,
+  "actual_CPU_catalog_generations": 198,
+  "total_actual_CPU_generations": 224,
+  "web_tests": 39,
+  "browser_fixture_tests": 15,
+  "real_browser_pairs": 25,
+  "live_ms": {
+    "min": 755,
+    "median": 875,
+    "max": 1630.1000000238419,
+    "samples": 25
+  },
+  "cache_ms": {
+    "min": 29.5,
+    "median": 42.299999952316284,
+    "max": 69.79999995231628,
+    "samples": 25
+  },
+  "paired_reduction_ms": {
+    "min": 711.1000000238419,
+    "median": 835.7999999523163,
+    "max": 1600.0,
+    "samples": 25
+  },
+  "cache_under_1s": "25/25",
+  "cache_origin": "CPU_REFERENCE",
+  "cache_current_model_calls": 0,
+  "model_assets_metadata": {
+    "status": "MATCH_PINNED_MODEL_QUANTIZATION_METADATA",
+    "rows": [
+      {
+        "path": "quant/qwen35_tensor_map.json",
+        "expected": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+        "actual": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736"
+      },
+      {
+        "path": "models/sidecar_A/qwen35-v1/manifest.json",
+        "expected": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+        "actual": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688"
+      },
+      {
+        "path": "modules/linear_A/cpu_threads2_config.json",
+        "expected": "a55fa3d4d1c3757c670b4c80c5d64c3c6d319c44825d563962033d42eb085352",
+        "actual": "a55fa3d4d1c3757c670b4c80c5d64c3c6d319c44825d563962033d42eb085352"
+      }
+    ],
+    "gguf_already_verified_in": "CATALOG_VERIFIED.json",
+    "scope": "selected current model metadata; no historical full asset rescan"
+  },
+  "source_and_package_match": true,
+  "archive": {
+    "status": "PASS_PRODUCT_ZIP_CRC_SHA_READBACK",
+    "path": "release/a12_verified_answer_cache_20261027/a12-verified-answer-cache-hybrid34-t2.zip",
+    "bytes": 27283581,
+    "sha256": "282a97e7d0f69908c911941fbc60fd13506034b1eadce62871fbac1c3d8c26a4",
+    "verified_payload_files": 691,
+    "authorization_included": false,
+    "model_weights_included": false,
+    "BOARD": "NOT_TESTED"
+  },
+  "configured_model": "gpt-6.1-sol",
+  "configured_effort": "high",
+  "configuration_UI_verified": true,
+  "actual_per_call_effort": "unknown",
+  "BOARD": "NOT_TESTED",
+  "board_actions": 0,
+  "board_visible_answer_s": null,
+  "board_memory": null,
+  "hardware_global_count": null,
+  "board_real_PL_miss": null,
+  "board_owner_restore_release": null,
+  "pushed": false,
+  "remaining": [
+    "Only separately authorized BOARD cache-visible latency, real PL miss, original Owner restore/independent release"
+  ]
+}
