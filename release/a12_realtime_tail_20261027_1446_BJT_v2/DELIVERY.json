@@ -1,0 +1,56 @@
+{
+  "status": "PASS_ALL_ARCHIVES_CRC_SHA_READBACK",
+  "recommended": {
+    "name": "KV260_Qwen35_A12_RealtimeTail_DualPrefix_NoBoard_20261027_1446_BJT_v2.zip",
+    "bytes": 45719806,
+    "sha256": "805c27066a9f84c2dc2038e769bbdc0d823cc5281c82939748ac88e3a535af2e",
+    "verified_payload_files": 6,
+    "CRC_SHA_readback": "PASS"
+  },
+  "subpackages_inside_combined": [
+    {
+      "name": "KV260_Qwen35_A12_RealtimeTail_DualPrefix_Deployment_NoBoard_20261027_1446_BJT_v2.zip",
+      "bytes": 27657452,
+      "sha256": "9466684488fc939299c0c1ea9e053ba74d985a8d97a78c9dba39c8ad756dc582",
+      "verified_payload_files": 719,
+      "CRC_SHA_readback": "PASS"
+    },
+    {
+      "name": "KV260_Qwen35_A12_RealtimeTail_DualPrefix_EngineeringIncrement_NoBoard_20261027_1446_BJT_v2.zip",
+      "bytes": 20490238,
+      "sha256": "ca9ecab6bdae0f255defe561b3116c88950a0914ea82687693f675167ab623bb",
+      "verified_payload_files": 3650,
+      "CRC_SHA_readback": "PASS"
+    }
+  ],
+  "summary": "docs/A12_REALTIME_TAIL_NOBOARD_SUMMARY_20261027_1446_BJT_v2.md",
+  "version": {
+    "schema": "A12_REALTIME_TAIL_DELIVERY_V2",
+    "tag": "20261027_1446_BJT_v2",
+    "frozen_at": "2026-10-27T14:46:17.748279+08:00",
+    "timezone": "Asia/Shanghai UTC+08:00",
+    "candidate": "dual-neutral34-43-t4-out32",
+    "source_candidate": "release/a12_realtime_tail_scale_staging_20261027_v2/dual-neutral34-43-t4-out32",
+    "source_manifest_sha256": "87772782bc20c26c9b2450a667483b7a4d4333f290b51382699eef907476640e",
+    "candidate_manifest_sha256": "87772782bc20c26c9b2450a667483b7a4d4333f290b51382699eef907476640e",
+    "evidence": "evidence/model_pl_A/20261027-realtime-tail-opt-v2",
+    "BOARD": "NOT_TESTED"
+  },
+  "final_repeat": [
+    {
+      "window": "candidate01",
+      "start": "2026-10-27T14:47:35.219417+08:00",
+      "end": "2026-10-27T14:48:28.923286+08:00",
+      "questions": 25,
+      "under_1000": 25,
+      "min_ms": 550.5,
+      "median_ms": 659.7999999523163,
+      "max_ms": 923.7000000476837,
+      "actual_model_calls": 25
+    }
+  ],
+  "repository": "https://github.com/4hydrofuran/patient-FPGA",
+  "base_commit": "e7a76cb0d60ae087f796c98fcb10def74733042b",
+  "branch": "codex/a12-realtime-tail-20261027-1446",
+  "BOARD": "NOT_TESTED"
+}

@@ -1,0 +1,88 @@
+{
+  "command": [
+    "D:\\Python\\Python314\\python.exe",
+    "C:\\Patientqwen\\release\\a12_realtime_model_draft_20261027_v1\\realtime34-threads3-out32\\continuous\\answer_cache_browser.py",
+    "--mode",
+    "realtime",
+    "--cohort",
+    "C:\\Patientqwen\\release\\a12_realtime_model_draft_20261027_v1\\realtime34-threads3-out32\\COHORT.json",
+    "--url",
+    "http://127.0.0.1:18860/",
+    "--output",
+    "C:\\Patientqwen\\evidence\\model_pl_A\\20261027-realtime-tail-opt-v2\\browser-windows\\baseline-browser"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 21.655200900044292,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "5d95cdc1229405ccb6509d38b4107df4c6a59e90ff78651b48fb98d8fe8840cb"
+  }
+}
+{"window": "baseline", "start": "2026-10-27T14:23:33.218890+08:00", "end": "2026-10-27T14:24:22.178456+08:00", "questions": 25, "under_1000": 23, "min_ms": 552.1000000238419, "median_ms": 655, "max_ms": 1074.6000000238419, "actual_model_calls": 25}
+{
+  "command": [
+    "D:\\Python\\Python314\\python.exe",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\continuous\\answer_cache_browser.py",
+    "--mode",
+    "realtime",
+    "--cohort",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\COHORT.json",
+    "--url",
+    "http://127.0.0.1:18861/",
+    "--output",
+    "C:\\Patientqwen\\evidence\\model_pl_A\\20261027-realtime-tail-opt-v2\\browser-windows\\candidate01-browser"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 21.85312200000044,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "99bb7368b432546a513c5b0ffc379e4153b25fe002e33bf1eb585e3cc934fb07"
+  }
+}
+{"window": "candidate01", "start": "2026-10-27T14:24:22.181458+08:00", "end": "2026-10-27T14:25:12.503491+08:00", "questions": 25, "under_1000": 24, "min_ms": 561, "median_ms": 623.5999999046326, "max_ms": 1016.6000000238419, "actual_model_calls": 25}
+{
+  "command": [
+    "D:\\Python\\Python314\\python.exe",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\continuous\\answer_cache_browser.py",
+    "--mode",
+    "realtime",
+    "--cohort",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\COHORT.json",
+    "--url",
+    "http://127.0.0.1:18862/",
+    "--output",
+    "C:\\Patientqwen\\evidence\\model_pl_A\\20261027-realtime-tail-opt-v2\\browser-windows\\candidate02-browser"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 21.393218699959107,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "f826f0cea72a890fa71b794cd903f04c985382ca7ed99e4af6398226815e4569"
+  }
+}
+{"window": "candidate02", "start": "2026-10-27T14:25:12.505709+08:00", "end": "2026-10-27T14:26:02.890779+08:00", "questions": 25, "under_1000": 25, "min_ms": 549.1000000238419, "median_ms": 615.8999999761581, "max_ms": 968.8999999761581, "actual_model_calls": 25}
+{
+  "command": [
+    "D:\\Python\\Python314\\python.exe",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\continuous\\answer_cache_browser.py",
+    "--mode",
+    "realtime",
+    "--cohort",
+    "C:\\Patientqwen\\release\\a12_realtime_tail_staging_20261027_v2\\dual-neutral34-37-t3-out32\\COHORT.json",
+    "--url",
+    "http://127.0.0.1:18863/",
+    "--output",
+    "C:\\Patientqwen\\evidence\\model_pl_A\\20261027-realtime-tail-opt-v2\\browser-windows\\candidate03-browser"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 21.675942600006238,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "e313e6c0086bf130646c1e35ad899ad93af626841985e953a2b6a438a455877f"
+  }
+}
+{"window": "candidate03", "start": "2026-10-27T14:26:02.892904+08:00", "end": "2026-10-27T14:26:53.985695+08:00", "questions": 25, "under_1000": 24, "min_ms": 561.9000000953674, "median_ms": 617.1000000238419, "max_ms": 1022.3000000715256, "actual_model_calls": 25}

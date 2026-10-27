@@ -9,6 +9,7 @@ import time
 from board_case import WorkerTransport, load_native
 from graphical_runtime import settle_terminal
 from fast_response_profile import LEGACY, load_profile, check_ready, builder
+from neutral_prefixes import prefix_choices,select_prefix,warm_requests
 
 SERVER = THREAD = APP = None
 
@@ -19,18 +20,22 @@ class CachedTransport(WorkerTransport):
         self.binding = None
         self.answer_requested = False
         self.warm_result = None
+        self.warm_results = {}
         self.maximum_questions=maximum_questions
         self.questions_sent=0
         self.pending_id=None
         self.receive_failed=False
         self.profile=dict(LEGACY if profile is None else profile)
         self.strict_profile=profile is not None
+        self.pending_prefix=prefix_choices(self.profile)[0]
 
     def warm(self, ready, request):
+        choice=next((p for p in prefix_choices(self.profile) if p['cache_id']==request.get('cache_id')),None)
         if self.strict_profile:
             check_ready(self.profile,ready)
-            if request.get('tokens')!=self.profile['prefix_token_ids'] or request.get('cache_id')!=self.profile['cache_id']:
+            if choice is None or request.get('tokens')!=choice['prefix_token_ids']:
                 raise RuntimeError('warm request differs from active profile')
+        if choice is None:choice=prefix_choices(self.profile)[0]
         self.binding = ready['prefix_cache']['binding_sha256']
         request = copy.deepcopy(request)
         request['cache_binding_sha256'] = self.binding
@@ -41,13 +46,14 @@ class CachedTransport(WorkerTransport):
             result = self.api.receive(self.worker, self.owner, self.path, timeout=180)
             if result.get('type')=='cache_created':
                 self.inflight = False
-                self.warm_result = result
+                self.warm_results[choice['cache_id']]=result
+                if choice['cache_id']==self.profile['cache_id']:self.warm_result = result
                 assert result['id']==request['id'] and result['status']=='OK'
                 assert result['state_cleared_before_response'] and result['state_position_after_clear']==-1
                 assert result['prefix_cache']['binding_sha256']==self.binding
-                assert any(e['tokens']==self.profile['prefix_tokens'] for e in result['prefix_cache']['entries'])
-                if self.strict_profile and not any(e.get('id')==self.profile['cache_id'] and
-                    e.get('tokens')==self.profile['prefix_tokens'] for e in result['prefix_cache']['entries']):
+                assert any(e['tokens']==choice['prefix_tokens'] for e in result['prefix_cache']['entries'])
+                if self.strict_profile and not any(e.get('id')==choice['cache_id'] and
+                    e.get('tokens')==choice['prefix_tokens'] for e in result['prefix_cache']['entries']):
                     raise RuntimeError('warm cache namespace differs')
                 return result
             if result.get('type')=='error':
@@ -56,6 +62,8 @@ class CachedTransport(WorkerTransport):
 
     def send(self, request):
         if self.strict_profile and self.warm_result is None:raise RuntimeError('prefix warm has not completed')
+        if self.strict_profile and self.profile.get('additional_neutral_prefixes') and any(p['cache_id'] not in self.warm_results for p in prefix_choices(self.profile)):
+            raise RuntimeError('all selected neutral prefixes must be warm before questions')
         if self.strict_profile and getattr(self.worker,'real',False):
             from continuous_sessions import question_reserve
             reserve=question_reserve(self.profile['context_tokens'],self.profile['prefix_tokens'],self.profile['output_tokens'],
@@ -63,8 +71,9 @@ class CachedTransport(WorkerTransport):
             if self.worker.max_runs-self.worker.runs<reserve:raise RuntimeError('insufficient complete-question budget')
         if self.maximum_questions is not None and self.questions_sent>=self.maximum_questions:
             raise RuntimeError('This window has consumed its model question allowance')
-        request = dict(request, cache_policy='TT10_REQUIRE_HIT', cache_id=self.profile['cache_id'],
-                       cache_binding_sha256=self.binding, prefill_chunk=256,
+        self.pending_prefix=select_prefix(self.profile,request)
+        request = dict(request, cache_policy='TT10_REQUIRE_HIT', cache_id=self.pending_prefix['cache_id'],
+                       cache_binding_sha256=self.binding, prefill_chunk=self.profile.get('prefill_chunk',256),
                        profile=False, diagnostic_report=False)
         self.answer_requested = True
         self.pending_id=request['id']
@@ -79,13 +88,15 @@ class CachedTransport(WorkerTransport):
             raise
         if result.get('type')=='result':
             cache = result['prefix_cache_request']
-            assert cache['hit'] is True and cache['reused_tokens']==self.profile['prefix_tokens']
+            assert cache['hit'] is True and cache['reused_tokens']==self.pending_prefix['prefix_tokens']
             if self.strict_profile:
                 if result.get('prefix_cache',{}).get('binding_sha256')!=self.binding:
                     raise RuntimeError('active cache binding changed')
                 entries=result.get('prefix_cache',{}).get('entries',[])
-                if not any(e.get('id')==self.profile['cache_id'] and e.get('tokens')==self.profile['prefix_tokens'] for e in entries):
+                if not any(e.get('id')==self.pending_prefix['cache_id'] and e.get('tokens')==self.pending_prefix['prefix_tokens'] for e in entries):
                     raise RuntimeError('active cache namespace changed')
+                if ('prefill_chunk' in self.profile or self.profile.get('additional_neutral_prefixes')) and result.get('prefill_chunk')!=self.profile.get('prefill_chunk',256):
+                    raise RuntimeError('live prefill chunk changed')
         return result
 
 
@@ -127,8 +138,9 @@ def run_case(worker, owner, path, *, real, api, overlay):
              charged_bytes=140591104,bo_count=148,weight_count=72,low_2GiB=True))
     requests=json.loads((api.BUNDLE/'control/requests.json').read_text())
     warm=next(r for r in requests if r['id']=='warm_prefix')
-    transport.warm(ready,warm)
+    for request in warm_requests(profile,warm):transport.warm(ready,request)
     api.save(path/'warm-result.json',transport.warm_result)
+    api.save(path/'warm-results.json',transport.warm_results)
     native=load_native(overlay,'/opt/patient-qwen')(transport,ready,max_output_tokens=profile['output_tokens'],
                 template_path=api.BUNDLE/'control/chat_template.jinja',generation_strategy=profile.get('realtime_draft_strategy'))
     from continuous_sessions import question_reserve

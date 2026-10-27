@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模拟问诊 · 主任评价</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;max-width:900px;margin:32px auto;padding:0 20px;color:#24313a;background:#f5f6f7}
+section{background:white;border:1px solid #d8dfe3;padding:20px;margin:16px 0;border-radius:8px}
+h1{font-size:25px;margin-bottom:8px}h2{font-size:19px}button,select,textarea{font:inherit;padding:9px;border:1px solid #a6b3bb;border-radius:4px}
+button{cursor:pointer;background:#fff;margin:4px}button:disabled{cursor:default;opacity:.45}textarea{display:block;width:calc(100% - 22px);margin:12px 0;min-height:80px}
+.notice{background:#fff2cd;padding:12px}.muted{color:#586872}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;background:#f0f3f5;padding:12px;font-size:13px}
+#turns p{border-bottom:1px solid #e6eaed;padding-bottom:12px}#error{color:#a12020;min-height:26px}
+</style>
+<link rel="stylesheet" href="/display/evaluation.css">
+<header class="page-header"><div class="app-heading"><h1>模拟问诊</h1><span id="stage-label">文字问诊</span></div><p id="backend" class="notice" role="status">正在连接本地服务…</p></header>
+<p id="error" role="alert"></p>
+<div class="session-actions">
+  <label id="case-label" for="cases">病例</label> <select id="cases" disabled></select>
+  <button id="start" disabled>开始问诊</button>
+  <p id="state" role="status">等待系统就绪</p>
+</div>
+<section id="consultation-section" aria-label="问诊记录与提问">
+  <div id="turns" aria-live="polite"></div>
+  <form id="question-form">
+    <label for="question">文字提问</label>
+    <textarea id="question" maxlength="1000" placeholder="例如：每次疼痛持续多久？" disabled></textarea>
+    <button id="send" class="primary" type="submit" disabled>发送问题</button>
+    <button id="cancel" type="button" disabled>取消本轮</button>
+    <button id="finish" type="button" disabled>结束问诊</button>
+  </form>
+</section>
+<section id="score-section" class="evaluation" aria-labelledby="evaluation-title" hidden>
+  <div class="chief-scene">
+    <div class="scene-caption"><span>主任医师</span><span id="chief-state">等待评价</span></div>
+    <img id="chief-portrait" src="/display/chief-physician.png" alt="模拟主任医师立绘" width="1024" height="1536">
+  </div>
+  <div class="evaluation-content">
+    <div class="paper-heading"><h2 id="evaluation-title" tabindex="-1">问诊评阅记录</h2></div>
+    <div class="paper-meta-row"><p id="evaluation-case" class="paper-meta muted"></p><p class="review-notice">评分草案 · 待教师审核</p></div>
+    <p id="evaluation-loading" role="status">正在读取本场评价…</p>
+    <div id="evaluation-result" hidden>
+      <div class="score-heading">
+        <div class="score-line"><span>话题覆盖得分</span><p><strong id="total-score">—</strong><span id="max-score"> / 100</span></p></div><p id="coverage-count"></p>
+      </div>
+      <div class="review-tabs" role="tablist" aria-label="评阅内容">
+        <button id="tab-summary" type="button" role="tab" aria-selected="true" aria-controls="chief-summary" data-view="summary">评阅意见</button>
+        <button id="tab-topics" type="button" role="tab" aria-selected="false" aria-controls="topic-details" tabindex="-1" data-view="topics">评分依据</button>
+        <button id="tab-review" type="button" role="tab" aria-selected="false" aria-controls="review-details" tabindex="-1" data-view="review">待复核<span id="review-count"></span></button>
+        <button id="tab-transcript" type="button" role="tab" aria-selected="false" aria-controls="transcript-panel" tabindex="-1" data-view="transcript">问诊记录</button>
+      </div>
+      <div id="evaluation-scroll" class="evaluation-scroll" tabindex="0" role="region" aria-label="评价内容，可上下滚动">
+      <div id="evaluation-overview">
+        <section id="chief-summary" class="paper-panel" role="tabpanel" aria-labelledby="tab-summary"><h3 class="visually-hidden">主任评阅意见</h3><p id="summary-text"></p></section>
+        <section id="topic-details" class="paper-panel" role="tabpanel" aria-labelledby="tab-topics" hidden><p class="panel-intro">按话题计分，展开可核对原始提问。</p><div id="topics"></div><p id="scoring-note" class="muted"></p><p id="evaluation-disclaimer" class="muted"></p></section>
+        <section id="review-details" class="paper-panel" role="tabpanel" aria-labelledby="tab-review" hidden><h3 id="review-title">待复核提问</h3><div id="review-items"></div></section>
+      </div>
+      <section id="transcript-panel" class="paper-panel" role="tabpanel" aria-labelledby="tab-transcript" hidden><h3 class="visually-hidden">本场问诊记录</h3><div id="evaluation-transcript"></div></section>
+      </div>
+      <div class="evaluation-actions"><p class="paper-footnote">仅评估问诊话题覆盖</p><button id="new-session" class="primary" type="button" disabled>开始新问诊</button></div>
+    </div>
+  </div>
+</section>
+<details class="debug-events"><summary>查看状态事件</summary><p class="muted">记录实际处理进度。</p><pre id="events"></pre></details>
+<footer><p>合成病例 · 软件演示。刷新可恢复本次服务中的记录；重启服务会清除内存记录。</p></footer>
+<script>
+window.fixture={gets:0,posts:0,next:1,session:null,events:[],accepted:[],epoch:0};
+const fixture=window.fixture;
+const clone=value=>JSON.parse(JSON.stringify(value));
+function snapshot(){ return {session_id:fixture.session,instance_id:"instance",cursor:fixture.seq||0,
+  case_id:"SYN_CP_01",epoch:fixture.epoch,phase:fixture.closed?"FINISHED":fixture.busy?"GENERATING":"READY",
+  closed:!!fixture.closed,active_request_id:fixture.busy||null,turns:clone(fixture.turns||[])}; }
+window.fetch=async (path,options={})=>{
+  const body=options.body?JSON.parse(options.body):null; let data;
+  if(path==="/ui/v1/status") data={ready:true,instance_id:"instance",current_session_id:fixture.session,
+    phase:"READY",backend:{configured:"managed-pl",execution_kind:"FPGA_REAL"},capabilities:{cancel_turn:false}};
+  else if(path==="/ui/v1/cases")data={cases:[{case_id:"SYN_CP_01",title:"合成病例"}]};
+  else if(path==="/ui/v1/sessions"){
+    fixture.session="session"+fixture.next++;fixture.turns=[];fixture.busy=null;fixture.closed=false;fixture.seq=(fixture.seq||0)+1;fixture.epoch=0;
+    data={session_id:fixture.session};
+  } else if(path.endsWith("/turns")){
+    fixture.posts++;fixture.accepted.push(clone(body));fixture.busy=body.request_id;fixture.seq++;
+    fixture.turns.push({request_id:body.request_id,question:body.text,status:"RUNNING",answer:null});data={status:"accepted"};
+  } else if(path.endsWith("/finish")) { fixture.closed=true;fixture.seq++;data={status:"finished"}; }
+  else if(path.endsWith("/evaluation"))data={evaluation_id:"eval-"+fixture.session,session_id:fixture.session,
+    rule_score:{score:10,max_score:100},covered_topics:[],missing_topics:[],case_id:"SYN_CP_01",frozen_turn_count:1,
+    summary_text:"评价",disclaimer:"合成病例",scoring_note:"话题覆盖",topics:[],review_items:[]};
+  else { fixture.gets++;data=snapshot(); }
+  return {ok:true,json:async()=>clone(data)};
+};
+window.EventSource=class {
+  constructor(){this.listeners={};fixture.events.push(this);setTimeout(()=>this.onopen?.(),0);}
+  addEventListener(name,fn){this.listeners[name]=fn;}
+  close(){this.closed=true;}
+  emit(name,extra={}){
+    this.listeners[name]?.({data:JSON.stringify({event:name,seq:++fixture.seq,session_id:fixture.session,
+      instance_id:"instance",request_id:fixture.busy,epoch:fixture.epoch,data:{},...extra})});
+  }
+};
+</script><script>"use strict";
+const el = (id) => document.getElementById(id);
+let sid = null, stream = null, current = null, service = null, submitting = false;
+let pending = null, cancelCommand = null;
+let eventLog = [];
+let evaluationCache = null, evaluationView = "summary";
+let composing = false, compositionEnded = -Infinity, refreshTimer = null, refreshFlight = null;
+let streamHealthy = false;
+const turnNodes = new Map(), timings = new Map();
+window.patientResponseTimings = () => Array.from(timings.values(), value => ({...value}));
+function timingKey(session, request){ return `${session}:${request}`; }
+function timingStart(session, request){
+  const key = timingKey(session, request);
+  if (!timings.has(key)) timings.set(key, {session_id:session, request_id:request,
+    submitted_ms:performance.now(), clock:"browser performance.now", measurement:"two rAF after checked answer DOM update"});
+  while (timings.size > 100) timings.delete(timings.keys().next().value);
+}
+function observePaint(snapshot){
+  for (const turn of snapshot.turns) {
+    const t = timings.get(timingKey(snapshot.session_id, turn.request_id));
+    if (!turn.answer || !t || t.paint_scheduled || t.painted_ms !== undefined) continue;
+    t.paint_scheduled = true;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (sid !== snapshot.session_id || current?.epoch !== snapshot.epoch ||
+          !el("turns").querySelector(`[data-request-id="${CSS.escape(turn.request_id)}"]`)) {
+        t.paint_scheduled = false; return;
+      }
+      t.painted_ms = performance.now(); t.submit_to_paint_ms = t.painted_ms - t.submitted_ms;
+      t.answer_source = turn.answer_source; t.actual_backend = turn.actual_backend;
+      t.visibility_state = document.visibilityState;
+    }));
+  }
+}
+function scheduleRefresh(){
+  if (refreshTimer !== null) return;
+  refreshTimer = setTimeout(() => { refreshTimer = null; refresh().catch(showError); }, 25);
+}
+const reviewViews = ["summary", "topics", "review", "transcript"];
+const reviewPanels = {summary:"chief-summary", topics:"topic-details", review:"review-details", transcript:"transcript-panel"};
+const labels = {STARTING:"模型加载中", READY:"等待提问", PROCESSING:"正在处理",
+  GENERATING:"患者正在思考", VALIDATING:"正在检查回答", CANCELLING:"正在取消并收尾",
+  FINISHED:"问诊已结束", FAILED:"后端不可用", STOPPING:"服务正在停止"};
+function id(){ return crypto.randomUUID(); }
+function showError(error){ el("error").textContent = error?.message || ""; }
+async function api(path, body){
+  const response = await fetch(path, body === undefined ? {} : {
+    method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body)
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    const error = new Error(data.error?.message || "请求失败");
+    error.code = data.error?.code; error.httpStatus = response.status; throw error;
+  }
+  return data;
+}
+function controls(){
+  const ready = !!service?.ready;
+  const open = !!current && !current.closed;
+  const busy = !!current?.active_request_id;
+  el("start").disabled = !ready || open || submitting;
+  el("cases").disabled = !ready || open || submitting;
+  el("question").disabled = !ready || !open || busy || submitting;
+  el("send").disabled = !ready || !open || busy || submitting;
+  el("cancel").hidden = service?.capabilities?.cancel_turn === false;
+  el("cancel").disabled = service?.capabilities?.cancel_turn === false || !busy || current.phase === "CANCELLING";
+  el("finish").disabled = !open || busy || submitting;
+  el("new-session").disabled = !ready || open || busy || submitting;
+}
+function clearEvaluation(){
+  evaluationCache = null;
+  el("score-section").hidden = true; el("evaluation-result").hidden = true;
+  el("evaluation-loading").hidden = false;
+  el("evaluation-loading").textContent = "正在读取本场评价…";
+  setEvaluationView("summary");
+}
+function chiefPose(evaluating){
+  el("chief-portrait").src = evaluating ? "/display/chief-physician-speaking.png" : "/display/chief-physician.png";
+  el("chief-state").textContent = evaluating ? "评阅中" : "查阅记录";
+}
+function setEvaluationView(view, focusTab=false){
+  if (!reviewViews.includes(view)) return;
+  evaluationView = view;
+  for (const name of reviewViews) {
+    const selected = name === view;
+    el(`tab-${name}`).setAttribute("aria-selected", String(selected));
+    el(`tab-${name}`).tabIndex = selected ? 0 : -1;
+    el(reviewPanels[name]).hidden = !selected;
+  }
+  el("evaluation-overview").hidden = view === "transcript";
+  el("evaluation-scroll").scrollTop = 0;
+  if (evaluationCache) chiefPose(view === "summary");
+  if (focusTab) el(`tab-${view}`).focus({preventScroll:true});
+}
+function evidenceList(entries){
+  const list = document.createElement("ol"); list.className = "evidence-list";
+  const status = {COMPLETED:"本轮已完成", CANCELLED:"本轮已取消", FAILED:"本轮回答失败"};
+  for (const item of entries) {
+    const row = document.createElement("li");
+    const quote = document.createElement("p"); quote.className = "evidence-quote";
+    quote.textContent = `第 ${item.question_number} 问　${item.question}`;
+    const note = document.createElement("p"); note.className = "muted";
+    note.textContent = item.reason_label || status[item.turn_status] || item.turn_status;
+    if (!item.answer_published) note.textContent += "；本轮没有患者回答。";
+    row.append(quote, note); list.append(row);
+  }
+  return list;
+}
+function renderEvaluation(result){
+  if (evaluationCache?.evaluation_id === result.evaluation_id) return;
+  evaluationCache = result;
+  el("evaluation-loading").hidden = true; el("evaluation-result").hidden = false;
+  el("total-score").textContent = result.rule_score.score;
+  el("max-score").textContent = ` / ${result.rule_score.max_score}`;
+  el("coverage-count").textContent = `已覆盖 ${result.covered_topics.length} 项，尚缺 ${result.missing_topics.length} 项`;
+  const caseOption = Array.from(el("cases").options).find(option => option.value === result.case_id);
+  const caseTitle = caseOption?.textContent.replace("（待审核）", "") || result.case_id;
+  el("evaluation-case").textContent = `${caseTitle}　·　本场 ${result.frozen_turn_count} 次提问`;
+  // The exact frozen score is already above the reading pane; avoid repeating that sentence.
+  el("summary-text").textContent = result.summary_text.split("\n").filter((line, index) =>
+    index !== 0 || !line.startsWith("本次问诊话题覆盖得分为 ")).join("\n");
+  el("evaluation-disclaimer").textContent = result.disclaimer;
+  el("scoring-note").textContent = result.scoring_note;
+  el("topics").replaceChildren();
+  for (const topic of result.topics) {
+    const row = document.createElement("div"); row.className = `topic-row${topic.covered ? " covered" : ""}`;
+    const name = document.createElement("h3"); name.textContent = topic.label;
+    const points = document.createElement("span"); points.className = "topic-points";
+    points.textContent = `${topic.points} / ${topic.max_points}`;
+    const state = document.createElement("p"); state.className = "topic-status";
+    state.textContent = topic.covered ? "已覆盖" : "未覆盖";
+    row.append(name, points, state);
+    if (topic.evidence.length) {
+      const details = document.createElement("details"); details.className = "topic-evidence";
+      const summary = document.createElement("summary");
+      summary.textContent = `提问依据 · ${topic.evidence.length} 条`;
+      details.append(summary, evidenceList(topic.evidence));
+      details.addEventListener("toggle", () => { if (details.open) chiefPose(false); });
+      row.append(details);
+    }
+    el("topics").append(row);
+  }
+  el("review-title").textContent = `需复核的提问 · ${result.review_items.length} 条`;
+  el("review-count").textContent = result.review_items.length ? ` ${result.review_items.length}` : "";
+  el("review-items").replaceChildren();
+  if (result.review_items.length) el("review-items").append(evidenceList(result.review_items));
+  else { const p = document.createElement("p"); p.textContent = "本场没有被标记为待复核的提问。"; el("review-items").append(p); }
+  el("evaluation-transcript").replaceChildren(...Array.from(el("turns").children, node => node.cloneNode(true)));
+  if (!result.frozen_turn_count) { const p = document.createElement("p"); p.textContent = "本场尚无提问记录。"; el("evaluation-transcript").append(p); }
+  setEvaluationView("summary");
+}
+function render(snapshot){
+  const transcript = el("turns");
+  const previousScroll = transcript.scrollTop;
+  const followLatest = transcript.scrollHeight - previousScroll - transcript.clientHeight < 48;
+  const newQuestion = current?.session_id !== snapshot.session_id || snapshot.turns.length > current.turns.length;
+  if (current?.session_id !== snapshot.session_id) { turnNodes.clear(); transcript.replaceChildren(); }
+  current = snapshot;
+  if (el("cases").options.length) el("cases").value = snapshot.case_id;
+  el("state").textContent = labels[snapshot.phase] || snapshot.phase;
+  el("case-label").textContent = snapshot.closed ? "下次练习" : "病例";
+  el("stage-label").textContent = snapshot.closed ? "主任评价" : "文字问诊";
+  el("consultation-section").hidden = snapshot.closed;
+  document.body.classList.toggle("evaluation-mode", snapshot.closed);
+  document.body.classList.toggle("consultation-active", !snapshot.closed);
+  el("score-section").hidden = !snapshot.closed;
+  for (const turn of snapshot.turns) {
+    const signature = JSON.stringify([turn.question, turn.answer, turn.answer_source, turn.status, turn.error]);
+    const old = turnNodes.get(turn.request_id);
+    if (old?.signature === signature) continue;
+    const p = document.createElement("p");
+    p.dataset.requestId = turn.request_id;
+    const question = document.createElement("strong"); question.textContent = `医生：${turn.question}`;
+    p.append(question, document.createElement("br"));
+    const answer = document.createElement("span");
+    answer.textContent = turn.answer ? `患者：${turn.answer}`
+      : turn.status === "CANCELLED" ? "本轮已取消，未发布患者回答。"
+      : turn.status === "FAILED" ? turn.error?.message || "本轮失败。" : "正在等待回答…";
+    p.append(answer);
+    if (turn.answer_source === "MODEL_CACHE") {
+      const badge = document.createElement("small"); badge.className = "answer-cache-source";
+      badge.textContent = "　已核验模型答案 · 缓存";
+      badge.title = "本轮未重新运行模型；原模型生成已通过EOS和内容核验，本轮已重新核验病例事实。";
+      p.append(badge);
+    }
+    if (old) old.node.replaceWith(p); else transcript.append(p);
+    turnNodes.set(turn.request_id, {node:p, signature});
+  }
+  transcript.scrollTop = followLatest || newQuestion ? transcript.scrollHeight : previousScroll;
+  controls();
+  observePaint(snapshot);
+}
+async function refreshOnce(){
+  if (!sid) return;
+  const target = sid;
+  const snapshot = await api(`/ui/v1/sessions/${target}`);
+  if (target !== sid) return;
+  if (current?.instance_id === snapshot.instance_id && current.session_id === snapshot.session_id && snapshot.cursor < current.cursor) return;
+  if (current?.instance_id === snapshot.instance_id && current.session_id === snapshot.session_id && snapshot.epoch < current.epoch) return;
+  render(snapshot);
+  if (current.closed) {
+    if (evaluationCache?.session_id === target) return;
+    try {
+      const evaluation = await api(`/ui/v1/sessions/${target}/evaluation`);
+      if (target !== sid) return;
+      renderEvaluation(evaluation);
+    } catch (error) {
+      if (target === sid) el("evaluation-loading").textContent = "评价暂未读取成功，正在重试…";
+      throw error;
+    }
+  }
+}
+async function refresh(){
+  if (refreshFlight?.target === sid) return refreshFlight.promise;
+  const flight = {target:sid};
+  flight.promise = refreshOnce().finally(() => { if (refreshFlight === flight) refreshFlight = null; });
+  refreshFlight = flight;
+  return flight.promise;
+}
+function connect(){
+  if (stream) stream.close();
+  streamHealthy = false;
+  const target = sid, connection = new EventSource(`/ui/v1/events?session_id=${encodeURIComponent(sid)}`);
+  stream = connection;
+  connection.onopen = () => { if (stream === connection) streamHealthy = true; };
+  const names = ["session.snapshot","session.created","turn.accepted","response.preparing",
+    "generation.started","validation.started","answer.ready","turn.completed","cancel.pending",
+    "turn.cancelled","turn.failed","session.finished","evaluation.ready","service.ready","service.failed"];
+  for (const name of names) stream.addEventListener(name, (message) => {
+    const data = JSON.parse(message.data);
+    if (stream !== connection || sid !== target || (current && data.instance_id !== current.instance_id)) return;
+    if (data.session_id && data.session_id !== sid) return;
+    if (current && data.epoch < current.epoch) return;
+    eventLog.push(`${data.seq}  ${data.event}`); eventLog = eventLog.slice(-100);
+    el("events").textContent = eventLog.join("\n");
+    streamHealthy = true;
+    if (data.event === "session.snapshot") {
+      if (!current || data.data.cursor >= current.cursor) render(data.data);
+      if (data.data.closed && !evaluationCache) scheduleRefresh();
+      return;
+    }
+    if (data.event === "answer.ready") {
+      const t = timings.get(timingKey(sid, data.request_id));
+      if (t && t.answer_ready_ms === undefined) t.answer_ready_ms = performance.now();
+      if (current?.turns.some(turn => turn.request_id === data.request_id)) {
+        render({...current, cursor:Math.max(current.cursor, data.seq), turns:current.turns.map(turn =>
+          turn.request_id === data.request_id ? {...turn, answer:data.data.text,
+            answer_source:data.data.answer_source, actual_backend:data.data.actual_backend,
+            delivery_kind:data.data.delivery_kind, delivery_receipt:data.data.delivery_receipt,
+            cache_provenance:data.data.cache_provenance} : turn)});
+      }
+    }
+    scheduleRefresh();
+  });
+  connection.onerror = () => { if (stream !== connection) return; streamHealthy = false;
+    el("state").textContent = "事件连接中断，正在恢复…"; scheduleRefresh(); };
+}
+async function poll(){
+  try {
+    service = await api("/ui/v1/status");
+    if (current && current.instance_id !== service.instance_id) {
+      if (stream) stream.close();
+      sid = null; current = null; pending = null; cancelCommand = null;
+      sessionStorage.removeItem("patient-web-session");
+      el("turns").replaceChildren(); clearEvaluation();
+      el("consultation-section").hidden = false; el("stage-label").textContent = "文字问诊";
+      el("case-label").textContent = "病例";
+      document.body.classList.remove("evaluation-mode");
+      document.body.classList.remove("consultation-active");
+      showError(new Error("服务已重新启动，上一实例的内存会话已结束。"));
+    }
+    el("backend").textContent = service.backend.configured === "demo"
+      ? service.demo_lab ? "规则演示 · 联调场景已启用 · 未接入模型" : "规则演示 · 未接入模型"
+      : service.ready ? service.answer_cache ? "模型服务已就绪 · 支持已核验答案复用"
+        : service.backend.execution_kind === "FPGA_REAL" ? "板端模型已连接 · PL 参与计算" : "CPU 模型已连接"
+      : service.failure?.message || "真实模型正在加载…";
+    if (service.ready && !el("cases").options.length) {
+      for (const item of (await api("/ui/v1/cases")).cases) {
+        const option = document.createElement("option"); option.value = item.case_id;
+        option.textContent = `${item.title}（待审核）`; el("cases").append(option);
+      }
+    }
+    const stored = sessionStorage.getItem("patient-web-session");
+    if (!sid && stored && service.current_session_id === stored) { sid = stored; await refresh(); connect(); }
+    if (!sid && service.current_session_id) { sid = service.current_session_id; await refresh(); connect(); }
+    if (sid && (!streamHealthy || (current?.closed && !evaluationCache))) await refresh();
+    if (!sid) el("state").textContent = labels[service.phase] || service.phase;
+    controls();
+  } catch (error) { showError(error); }
+}
+el("start").onclick = async () => {
+  submitting = true; controls(); showError(null);
+  try {
+    const result = await api("/ui/v1/sessions", {request_id:id(), case_id:el("cases").value});
+    sid = result.session_id; pending = null; cancelCommand = null; eventLog = []; clearEvaluation();
+    sessionStorage.setItem("patient-web-session", sid); await refresh(); connect();
+  } catch (error) { showError(error); } finally { submitting = false; controls(); }
+};
+el("question").addEventListener("compositionstart", () => { composing = true; });
+el("question").addEventListener("compositionend", () => { composing = false; compositionEnded = performance.now(); });
+el("question").addEventListener("keydown", event => {
+  if (event.key === "Enter" && (composing || event.isComposing || event.keyCode === 229)) event.preventDefault();
+});
+el("question-form").onsubmit = async (event) => {
+  event.preventDefault(); if (!sid || submitting || current?.active_request_id || composing || event.isComposing || performance.now()-compositionEnded < 40) return;
+  const text = el("question").value; if (!text.trim()) return;
+  // A transport failure reuses the same ID; no automatic duplicate generation.
+  if (!pending || pending.text !== text) pending = {request_id:id(), text};
+  timingStart(sid, pending.request_id);
+  submitting = true; controls(); showError(null);
+  el("state").textContent = "已接收，正在处理…";
+  try {
+    await api(`/ui/v1/sessions/${sid}/turns`, pending);
+    pending = null; el("question").value = ""; scheduleRefresh();
+  } catch (error) { showError(error); } finally { submitting = false; controls(); }
+};
+el("cancel").onclick = async () => {
+  if (!current?.active_request_id) return;
+  if (!cancelCommand || cancelCommand.target_request_id !== current.active_request_id)
+    cancelCommand = {request_id:id(), target_request_id:current.active_request_id};
+  try { await api(`/ui/v1/sessions/${sid}/cancel`, cancelCommand); await refresh(); }
+  catch (error) { showError(error); }
+};
+el("finish").onclick = async () => {
+  submitting = true; controls(); showError(null);
+  try {
+    await api(`/ui/v1/sessions/${sid}/finish`, {request_id:id()}); await refresh();
+    el("evaluation-title").focus({preventScroll:true});
+  }
+  catch (error) { showError(error); } finally { submitting = false; controls(); }
+};
+el("new-session").onclick = () => { if (!el("start").disabled) el("start").click(); };
+for (const view of reviewViews) {
+  el(`tab-${view}`).onclick = () => setEvaluationView(view);
+  el(`tab-${view}`).onkeydown = (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    let next = reviewViews.indexOf(view);
+    if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = reviewViews.length-1;
+    else next = (next + (event.key === "ArrowRight" ? 1 : -1) + reviewViews.length) % reviewViews.length;
+    setEvaluationView(reviewViews[next], true);
+  };
+}
+poll(); setInterval(poll, 2000);
+
+</script><script>
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const checks=[];
+function check(value,name){if(!value)throw new Error(name);checks.push(name);}
+async function exercise(){
+  await delay(100);document.getElementById("start").click();await delay(100);
+  check(!!fixture.session,"session initialized");
+  const input=document.getElementById("question"),form=document.getElementById("question-form");
+  input.value="每次疼痛持续多久？";
+  input.dispatchEvent(new CompositionEvent("compositionstart"));
+  const key=new KeyboardEvent("keydown",{key:"Enter",isComposing:true,bubbles:true,cancelable:true});
+  input.dispatchEvent(key);form.dispatchEvent(new SubmitEvent("submit",{cancelable:true}));await delay(20);
+  check(key.defaultPrevented && fixture.posts===0,"IME candidate Enter does not submit");
+  input.dispatchEvent(new CompositionEvent("compositionend"));await delay(60);
+  form.dispatchEvent(new SubmitEvent("submit",{cancelable:true}));
+  form.dispatchEvent(new SubmitEvent("submit",{cancelable:true}));await delay(100);
+  check(fixture.posts===1,"explicit submit generates exactly one request");
+  const stream=fixture.events.at(-1),rid=fixture.busy;
+  let before=fixture.gets;
+  stream.emit("generation.started");stream.emit("validation.started");await delay(80);
+  check(fixture.gets-before<=1,"adjacent events share one snapshot GET");
+  const answer="每次疼痛持续10分钟。";
+  fixture.turns[0]={...fixture.turns[0],answer,answer_source:"MODEL",actual_backend:"FPGA_REAL",status:"COMPLETED"};
+  stream.emit("answer.ready",{request_id:rid,data:{text:answer,answer_source:"MODEL",actual_backend:"FPGA_REAL"}});
+  fixture.busy=null;stream.emit("turn.completed",{request_id:rid});await delay(150);
+  check(document.getElementById("turns").textContent.includes(answer),"checked SSE answer reaches DOM");
+  const timing=window.patientResponseTimings()[0];
+  check(timing.request_id===rid && timing.answer_ready_ms>=timing.submitted_ms,"browser answer.ready timing uses request ID");
+  // Virtual-time timers can run ahead of compositor frames; await the actual frames.
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  const painted=window.patientResponseTimings()[0];
+  check(painted.painted_ms>=painted.answer_ready_ms && painted.answer_source==="MODEL","browser observes checked DOM after animation frames");
+  const oldNode=document.getElementById("turns").firstElementChild;
+  before=fixture.gets;stream.emit("session.snapshot",{data:snapshot()});await delay(80);
+  check(fixture.gets===before,"snapshot event does not issue duplicate GET");
+  check(document.getElementById("turns").firstElementChild===oldNode,"unchanged turn DOM is retained");
+  fixture.epoch=1;stream.emit("session.snapshot",{data:snapshot()});await delay(30);
+  stream.emit("answer.ready",{request_id:rid,epoch:0,data:{text:"stale"}});await delay(50);
+  check(!document.getElementById("turns").textContent.includes("stale"),"old epoch result is ignored");
+  before=fixture.gets;await poll();check(fixture.gets===before,"healthy SSE avoids periodic full snapshot refresh");
+  stream.onerror();before=fixture.gets;await poll();check(fixture.gets>before,"disconnected SSE retains polling fallback");
+  document.getElementById("finish").click();await delay(100);
+  check(!document.getElementById("evaluation-result").hidden,"finish renders frozen evaluation");
+  document.getElementById("new-session").click();await delay(100);
+  check(fixture.session==="session2" && !document.getElementById("turns").textContent,"new session clears current transcript");
+  stream.emit("answer.ready",{session_id:"session1",request_id:rid,data:{text:"foreign"}});await delay(50);
+  check(!document.getElementById("turns").textContent.includes("foreign"),"old connection/session result is ignored");
+  return {status:"PASS_BROWSER_FIXTURES",checks,timing:painted,posts:fixture.posts,BOARD:"NOT_TESTED",model_executed:false};
+}
+exercise().then(result=>{
+  const p=document.createElement("pre");p.id="test-result";p.textContent=JSON.stringify(result);document.body.append(p);
+}).catch(error=>{
+  const p=document.createElement("pre");p.id="test-result";p.textContent=JSON.stringify({status:"FAILED_BROWSER_FIXTURES",error:String(error),checks});document.body.append(p);
+});
+</script>
+</html>
+

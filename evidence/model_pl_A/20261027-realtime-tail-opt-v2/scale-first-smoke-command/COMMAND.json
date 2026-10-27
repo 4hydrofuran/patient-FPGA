@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+    "-B",
+    "platform/qwen35/web/tail_prefix_probe.py",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-tail-opt-v2/scale-first-smoke",
+    "--threads",
+    "4",
+    "--severity-first",
+    "--limit",
+    "11",
+    "--severity-repeats",
+    "3"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 72.39771093500008,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "a6bf3aaa67eb276772691b7a4b73f0f2161fd079f21312083500f1b1a535a054"
+  }
+}

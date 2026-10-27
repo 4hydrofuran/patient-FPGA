@@ -1,0 +1,17 @@
+{
+  "continuous": true,
+  "profile": "profile.json",
+  "browser_profile": "/home/ubuntu/snap/firefox/common/a12-tail-v2-t4",
+  "dependency_paths": [
+    "/home/ubuntu/patient-web-demo-20261026/.venv/lib/python3.12/site-packages"
+  ],
+  "answer_cache": {
+    "enabled": true,
+    "path": "answer-cache/catalog.json",
+    "sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+    "policy": "VERIFIED_MODEL_REPLAY_WITH_EXPLICIT_ORIGIN",
+    "live_miss": "FPGA_REQUIRED_GREEDY_DRAFT_VERIFY_OR_FULL_SERIAL_REPLAY"
+  },
+  "realtime_draft_strategy": "FACT_COPY_GREEDY_VERIFY_V1",
+  "neutral_prefix_policy": "LONGEST_REVIEWED_PUBLIC_PREFIX_V2"
+}

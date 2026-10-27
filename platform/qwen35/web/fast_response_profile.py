@@ -28,7 +28,7 @@ def validate_profile(p):
     output=32 if p.get('realtime_draft_strategy') else 24
     for k,v in (('context_tokens',1024),('output_tokens',output)):
         if type(p.get(k)) is not int or p[k]!=v:raise ValueError('profile bound differs: '+k)
-    if p.get('threads') not in (2,3) or p.get('kernel_threads')!=p['threads']:raise ValueError('threads differ')
+    if p.get('threads') not in (2,3,4) or p.get('kernel_threads')!=p['threads']:raise ValueError('threads differ')
     tokens=p.get('prefix_token_ids')
     if not isinstance(tokens,list) or len(tokens)!=p['prefix_tokens'] or digest(tokens)!=p.get('prefix_sha256'):
         raise ValueError('prefix token digest differs')
@@ -42,9 +42,14 @@ def validate_profile(p):
             raise ValueError('realtime draft profile differs')
     if p.get('live_miss_prompt_policy') is not None:
         from compact_fact_prompt import POLICY,policy_sha256
+        if p['live_miss_prompt_policy']=='allowed-severity-scale-first-02':
+            from severity_scale_prompt import POLICY,policy_sha256
         if (p['live_miss_prompt_policy']!=POLICY or not p.get('realtime_draft_strategy')
                 or p['prefix_identity'].get('live_miss_prompt_policy_sha256')!=policy_sha256()):
             raise ValueError('live miss input selection differs')
+    from neutral_prefixes import validate_additional_prefixes
+    validate_additional_prefixes(p)
+    if p.get('prefill_chunk',256) not in (8,256):raise ValueError('unreviewed live prefill chunk')
     return p
 
 
@@ -57,6 +62,9 @@ def check_ready(profile, ready):
 
 
 def builder(profile):
+    if profile.get('live_miss_prompt_policy')=='allowed-severity-scale-first-02':
+        from severity_scale_prompt import prompt_messages
+        return prompt_messages
     if profile.get('live_miss_prompt_policy'):
         from compact_fact_prompt import prompt_messages
         return prompt_messages

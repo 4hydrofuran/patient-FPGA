@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "platform/qwen35/web/tail_browser_windows.py",
+    "--parent",
+    "release/a12_realtime_tail_scale_staging_20261027_v2/dual-neutral34-43-t4-out32",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-tail-opt-v2/scale-browser-windows",
+    "--windows",
+    "3",
+    "--baseline",
+    "--port",
+    "18870",
+    "--wait-proof",
+    "evidence/model_pl_A/20261027-realtime-tail-opt-v2/scale-first-198/RESULT.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 220.2843986999942,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "b1397e64c367dda0e69d6bb9beb9ae981939871a32ac56fa8d9185d6616c596a"
+  }
+}

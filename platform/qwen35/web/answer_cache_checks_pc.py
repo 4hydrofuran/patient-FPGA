@@ -33,9 +33,12 @@ def verify(a):
     deps=read(parent/'PC_DEPENDENCIES.json');profile=read(window/'profile.json')
     if a.compact or profile.get('live_miss_prompt_policy'):
         from compact_fact_prompt import prompt_messages
+    if profile.get('live_miss_prompt_policy')=='allowed-severity-scale-first-02':
+        from severity_scale_prompt import prompt_messages
     identity=model_identity(profile['prefix_identity'],vendor_source()/'patient_web/reference')
     data=read(a.catalog);case=load_case('SYN_CP_01')
-    p=plan(case,Transcript.parse(dict(request_id='miss',text='疼痛在哪里？',source='typed',final=True)),())
+    miss_question='疼痛有几分？' if a.miss_slot=='severity' else '疼痛在哪里？'
+    p=plan(case,Transcript.parse(dict(request_id='miss',text=miss_question,source='typed',final=True)),())
     missing=digest(key_data(case,p,identity));data['entries']=[r for r in data['entries'] if r['key']!=missing]
     if len(data['entries'])!=197:raise RuntimeError('test catalog must remove exactly one real entry')
     save(out/'partial-catalog.json',data)
@@ -57,7 +60,9 @@ def verify(a):
         api=type('PC',(),{'receive':staticmethod(lambda w,*args,**kw:w.get(kw.get('timeout',180)))})()
         transport=CachedTransport(worker,None,out,api,profile=p,maximum_questions=None)
         warm=copy.deepcopy(read(window/'bundle/control/requests.json')[1]);warm['cache_id']=p['cache_id']
-        transport.warm(ready,warm)
+        from neutral_prefixes import warm_requests
+        for request in warm_requests(p,warm):transport.warm(ready,request)
+        save(out/'warm-results.json',transport.warm_results)
         options=dict(max_output_tokens=p['output_tokens'],domain='PC_REFERENCE',template_path=window/'bundle/control/chat_template.jinja')
         native_source=window
         if strategy:
@@ -75,7 +80,7 @@ def verify(a):
             if not c.initialized.wait(5):raise RuntimeError('web start failed')
             sid=c.create_session('start',case.case_id)['session_id'];url='/ui/v1/sessions/'+sid
             responses=[]
-            for rid,text,expected in [('miss','疼痛在哪里？','MODEL'),('hit','每次疼痛持续多久？','MODEL_CACHE')]:
+            for rid,text,expected in [('miss',miss_question,'MODEL'),('hit','每次疼痛持续多久？','MODEL_CACHE')]:
                 if client.post(url+'/turns',json=dict(request_id=rid,text=text)).status_code!=202:raise RuntimeError('submit failed')
                 wait();turn=client.get(url+'/turns/'+rid).json();response=c.conversations[sid].business._received[rid]['response']
                 if turn.get('status')!='COMPLETED' or turn.get('answer_source')!=expected:raise RuntimeError('wrong hit/miss source')
@@ -129,4 +134,5 @@ if __name__=='__main__':
     p.add_argument('--pc-prefix-config',type=Path);p.add_argument('--binary',type=Path)
     p.add_argument('--realtime-draft',action='store_true')
     p.add_argument('--compact',action='store_true')
+    p.add_argument('--miss-slot',choices=('location','severity'),default='location')
     print(json.dumps(verify(p.parse_args()),indent=2))

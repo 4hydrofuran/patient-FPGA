@@ -50,6 +50,8 @@ def serve(a):
     from short_prompt_adapter import prompt_messages
     if a.compact or (a.mode!='live' and read(window/'profile.json').get('live_miss_prompt_policy')):
         from compact_fact_prompt import prompt_messages
+    if read(window/'profile.json').get('live_miss_prompt_policy')=='allowed-severity-scale-first-02':
+        from severity_scale_prompt import prompt_messages
     cache=None
     if a.mode=='cache':
         from verified_answer_cache import VerifiedAnswerCache,model_identity,file_sha
@@ -61,7 +63,7 @@ def serve(a):
         else project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json')
     cfg=read(pc_config)
     threads=cfg['identity']['threads']
-    if threads not in (2,3) or cfg['identity']['kernel_threads']!=threads:raise RuntimeError('PC thread identity differs')
+    if threads not in (2,3,4) or cfg['identity']['kernel_threads']!=threads:raise RuntimeError('PC thread identity differs')
     # Validate actual CPU executable/libs in native PrefixStore at launch.
     env={k:v for k,v in os.environ.items() if not k.startswith(('SP_A12','SP_TT10','LD_','GGML_','OMP_'))}
     env.update(LD_LIBRARY_PATH=deps['library_dir'],SP_TT10_CONFIG=str(pc_config.resolve()),OMP_NUM_THREADS=str(threads),OPENBLAS_NUM_THREADS='1')
@@ -77,10 +79,14 @@ def serve(a):
         p['cache_id']='short34-t'+str(threads)
         output_tokens=a.output_tokens or (32 if a.mode=='realtime' or a.realtime_draft else p['output_tokens'])
         p['output_tokens']=output_tokens
+        if a.extra_prefix:
+            p['additional_neutral_prefixes']=[read(a.extra_prefix)]
         api=type('PC',(),{'receive':staticmethod(lambda w,*args,**kw:w.get(kw.get('timeout',180)))})()
         transport=CachedTransport(worker,None,out,api,profile=p,maximum_questions=None)
         warm=copy.deepcopy(read(window/'bundle/control/requests.json')[1]);warm['cache_id']=p['cache_id']
-        transport.warm(ready,warm)
+        from neutral_prefixes import warm_requests
+        for request in warm_requests(p,warm):transport.warm(ready,request)
+        save(out/'warm-results.json',transport.warm_results)
         native_options=dict(max_output_tokens=output_tokens,domain='PC_REFERENCE',template_path=window/'bundle/control/chat_template.jinja')
         native_source=window
         if a.mode=='realtime' or a.realtime_draft:
@@ -130,6 +136,7 @@ if __name__=='__main__':
     p.add_argument('--realtime-draft',action='store_true',help='also verify live misses when mode=cache')
     p.add_argument('--output-tokens',type=int,choices=(24,32))
     p.add_argument('--compact',action='store_true',help='select shorter original checker forms for live input')
+    p.add_argument('--extra-prefix',type=Path,help='reviewed generic severity prefix definition')
     a=p.parse_args()
     if a.mode=='cache' and not a.catalog:p.error('cache mode requires --catalog')
     serve(a)

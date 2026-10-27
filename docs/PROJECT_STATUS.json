@@ -1,4 +1,46 @@
 {
+  "a12_realtime_tail_no_board_20261027_1446_BJT_v2": {
+    "status": "PASS_PC_75_PLUS_25_REAL_MODEL_UNDER_1S",
+    "summary": "docs/A12_REALTIME_TAIL_NOBOARD_SUMMARY_20261027_1446_BJT_v2.md",
+    "entry": "release/a12_realtime_tail_20261027_1446_BJT_v2/START_HERE.md",
+    "evidence": "evidence/model_pl_A/20261027-realtime-tail-opt-v2",
+    "frozen_at": "2026-10-27T14:46:17.748279+08:00",
+    "prefix_tokens": [
+      34,
+      43
+    ],
+    "continuous_threads": 4,
+    "ordinary_threads": 3,
+    "three_windows": {
+      "min_ms": 547.6999999284744,
+      "median_ms": 610.7999999523163,
+      "max_ms": 920.2000000476837,
+      "samples": 75
+    },
+    "under_1s": "75/75",
+    "frozen_repeat": {
+      "window": "candidate01",
+      "start": "2026-10-27T14:47:35.219417+08:00",
+      "end": "2026-10-27T14:48:28.923286+08:00",
+      "questions": 25,
+      "under_1000": 25,
+      "min_ms": 550.5,
+      "median_ms": 659.7999999523163,
+      "max_ms": 923.7000000476837,
+      "actual_model_calls": 25
+    },
+    "answer_cache_hits": 0,
+    "native_cases": 198,
+    "all_same_input_serial_tokens_EOS_checker_pass": true,
+    "question_reserve": 22320,
+    "prefix_retained_bytes": 43340162,
+    "web_tests": 48,
+    "browser_regressions": 15,
+    "BOARD": "NOT_TESTED",
+    "board_actions": 0,
+    "board_visible_ms": null,
+    "board_PL_miss": null
+  },
   "a12_realtime_model_miss_no_board_20261027": {
     "status": "PASS_REQUIRED_NO_BOARD_RUNTIME_AND_DEPLOYMENT_VALIDATION",
     "summary": "docs/A12_REALTIME_MODEL_MISS_NOBOARD_SUMMARY_20261027.md",

@@ -13,6 +13,7 @@ def preflight(window):
     required=['web_managed.py','native_pl.py','fast_response_profile.py',
               'web_gateway/src/patient_web/managed.py','web_gateway/src/patient_web/reference/session.py']
     if raw_profile['prompt_policy']=='facts-only-02':required.append('short_prompt_adapter.py')
+    if raw_profile.get('additional_neutral_prefixes'):required.append('neutral_prefixes.py')
     for name in required:
         if not (window/name).is_file():raise ImportError('missing packaged dependency before Owner/PL: '+name)
     config=read(window/'web-config.json')
@@ -31,7 +32,8 @@ def preflight(window):
     from answer_cache_profile import prepare_answer_cache
     cache=prepare_answer_cache(window,config)
     cfg=read(bundle/'control/prefix-config.json')
-    if cfg['identity']!=profile['prefix_identity'] or cfg['allowed_prefixes']!=[profile['prefix_token_ids']]:
+    from neutral_prefixes import prefix_choices
+    if cfg['identity']!=profile['prefix_identity'] or cfg['allowed_prefixes']!=[p['prefix_token_ids'] for p in prefix_choices(profile)]:
         raise RuntimeError('profile/prefix config differs')
     spec=read(bundle/'control/window-spec.json');requests=read(bundle/'control/requests.json')
     if spec['authorization_included'] is not False:raise RuntimeError('workload authorization differs')

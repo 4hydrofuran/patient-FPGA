@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+    "-B",
+    "platform/qwen35/web/answer_cache_serve_pc.py",
+    "--mode",
+    "realtime",
+    "--parent",
+    "release/a12_realtime_model_draft_20261027_v1/realtime34-threads3-out32",
+    "--output",
+    "evidence/model_pl_A/20261027-realtime-tail-opt-v2/scale-browser-windows/baseline-serve",
+    "--port",
+    "18870",
+    "--compact"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 49.237746960000095,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
