@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/5VUXWvbMBR9z68QeZE9HH81dbsWP4SxssLGStu3EIwsXSdaFMmT5Gxl7L/vyklKOtjDDJZ9P3Tu9TnXmk6nj8DEzGj1QoBZXLnZ9cxKZzQx3Wgp8CCIgD3pmbTulmhDONMclGJeGp1hSHIgjAcrnU6nE7nrjfVkw9xGyfZkfkPQ07txk86aHUL6kEKO7gc0J8w5GFPSNZYepIjius4J0+KEmLoNKy+rKKRHNAPPsx3jG6lhJgWNU4sf1bQvHlwUx+kGfgq5BucDDgU2B3ZVzMs8h8u8uC74/OLqsr24vmwLuOBzlneVKN6/57ytMFyKquyuq5Z386u2mgOnE2uMr4+l98xm2FC23ZdVPmNFmTkPfX49W4MGO/IzK/OyKvJyPtsXNL615oerl6vJFl5cHVEz+H7wjTdb0I4m1MNPjw8wwXCeeWg6qddgeyt1iCjmfNMjd71vlFlL75pO76s5ho7eI1Y86YwlPZGaOOQWRBSFzjNqB42tZK5EptbKtBF9l1lwg/JpkIjG8c2E4NXWwUyVYcJF/YHU0B5yesvOY3/hFjTrUxwi0D7VbAcYOUd/AzQW2jHPN+DqX9sbttyu6rrFlYTut6H7wNTvMTFwl7K+By0iIbmPpKjflEpOUMdn8lSMlWq2PDC7Sp7Kg6d99Xz8+hSsQPkqGeuEC8d5YKo5/gGoowtJrZViDXS1pKh1Y1G90dgYFGUPVnYSxPkeRBTAjYCGM6VGiHP7vGBvoZNKNRa+DzisiHOQN+z5Vwz3vxmgWoGOMP/tVK1iJHqcn2hUTQy73h0IDBM2uJo+LB6f7xefmy+L5w+fKJEdwfaicNslPZJJV+meqWH8qUZ1bFAnaBITUA4IvVvcf25OUA+L+0eavOpWhyV5PVDGTse9iTbN4QhpDkdI/WwHiBPsfLDoc1zK+o5hgTjp1OA2h/jpmPivPid/ADsiidbyBAAA')); assert hashlib.sha256(b).hexdigest()=='5682e148d2d3b939919ba4b8afaaea5851961ad06d6ee5ba54d35ee55249e243'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "5682e148d2d3b939919ba4b8afaaea5851961ad06d6ee5ba54d35ee55249e243",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

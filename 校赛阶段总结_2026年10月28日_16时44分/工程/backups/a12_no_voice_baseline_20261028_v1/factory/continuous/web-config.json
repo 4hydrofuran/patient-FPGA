@@ -1,0 +1,27 @@
+{
+  "continuous": true,
+  "profile": "profile.json",
+  "browser_profile": "/home/ubuntu/snap/firefox/common/a12-case20-debug-20261027",
+  "dependency_paths": [
+    "/home/ubuntu/patient-web-demo-20261026/.venv/lib/python3.12/site-packages"
+  ],
+  "realtime_draft_strategy": "FACT_COPY_GREEDY_VERIFY_V1",
+  "neutral_prefix_policy": "LONGEST_REVIEWED_PUBLIC_PREFIX_V2",
+  "backend_modes": {
+    "cpu": true,
+    "initial": "managed-pl",
+    "automatic_fallback": false
+  },
+  "verify_first": true,
+  "answer_cache": {
+    "enabled": true,
+    "path": "answer-cache/catalog.json",
+    "sha256": "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+    "policy": "VERIFIED_MODEL_REPLAY_WITH_EXPLICIT_ORIGIN",
+    "live_miss": "ORIGINAL_FPGA_REQUIRED"
+  },
+  "profile_model_requests": false,
+  "verify_continuous": false,
+  "natural_patient_policy": "patient-natural-short-v1",
+  "case_selection": "SERVER_RANDOM"
+}

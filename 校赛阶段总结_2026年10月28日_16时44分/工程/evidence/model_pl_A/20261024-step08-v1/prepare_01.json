@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "-B",
+    "platform/qwen35/a12/step08_prepare.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T01:48:05.620401+00:00",
+  "elapsed_s": 7.490777699975297,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a12/step08_prepare.py\", line 26, in <module>\n    t=Transcript.parse(dict(request_id=row['id'],text=row['question'],source='text'))\n  File \"/mnt/c/Patientqwen/system_qwen35/app/domain.py\", line 88, in parse\n    if set(x)-allowed or x.get('final') is not True:raise ValueError('Only final transcripts; no configuration fields')\nValueError: Only final transcripts; no configuration fields\n"
+}

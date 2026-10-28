@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/patch_residency.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:42:15.564660+00:00",
+  "elapsed_s": 3.21039749996271,
+  "exit_code": 0,
+  "stdout": "{\"patched\": [\"src/llama-graph.cpp\", \"src/CMakeLists.txt\", \"src/llama-model-loader.cpp\"], \"scope\": \"Only registered externally computed tensor avoids CPU_REPACK\"}\n",
+  "stderr": ""
+}

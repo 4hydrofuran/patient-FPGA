@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "platform/local/a1/venv/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "platform/qwen35/a00",
+    "-p",
+    "test_config.py",
+    "-v"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-01T17:16:01.660928+00:00",
+  "elapsed_s": 0.339135299960617,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_default_without_candidates (test_config.Configuration.test_default_without_candidates) ... ok\ntest_invalid_lock (test_config.Configuration.test_invalid_lock) ... ok\ntest_no_download_or_fallback (test_config.Configuration.test_no_download_or_fallback) ... ok\ntest_readiness_never_inferred (test_config.Configuration.test_readiness_never_inferred) ... ok\ntest_selected_candidate_missing_no_fallback (test_config.Configuration.test_selected_candidate_missing_no_fallback) ... ok\ntest_selected_unsafe_path (test_config.Configuration.test_selected_unsafe_path) ... ok\ntest_tampered_contract (test_config.Configuration.test_tampered_contract) ... ok\ntest_unselected_candidate_not_read (test_config.Configuration.test_unselected_candidate_not_read) ... ok\ntest_wrong_model (test_config.Configuration.test_wrong_model) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.163s\n\nOK\n"
+}

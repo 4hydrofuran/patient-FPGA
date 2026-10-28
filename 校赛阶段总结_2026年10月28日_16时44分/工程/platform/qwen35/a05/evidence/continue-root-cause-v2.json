@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/batch_root_cause.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:23:22.241598+00:00",
+  "elapsed_s": 11.054107300005853,
+  "exit_code": 0,
+  "stdout": "{\"first_projection_nodes\": {\"2\": [], \"4\": [\"alpha-0\", \"a_softplus-0\", \"gate-0\"], \"8\": [\"linear_attn_qkv_mixed-0\", \"qkv_mixed_transposed-0\", \"conv_input-0\"]}, \"layer0\": {\"1\": {\"l00_gate\": {\"input_max_abs\": 0.004670426249504089, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_up\": {\"input_max_abs\": 0.004670426249504089, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_down\": {\"input_max_abs\": 0.0038632452487945557, \"a8_code_differences\": 128, \"scale_max_abs\": 5.431473255157471e-06, \"elements\": 82432}}, \"2\": {\"l00_gate\": {\"input_max_abs\": 0.004670426249504089, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_up\": {\"input_max_abs\": 0.004670426249504089, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_down\": {\"input_max_abs\": 0.0038632452487945557, \"a8_code_differences\": 128, \"scale_max_abs\": 5.431473255157471e-06, \"elements\": 82432}}, \"4\": {\"l00_gate\": {\"input_max_abs\": 0.004671245813369751, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_up\": {\"input_max_abs\": 0.004671245813369751, \"a8_code_differences\": 11, \"scale_max_abs\": 7.934868335723877e-06, \"elements\": 23552}, \"l00_down\": {\"input_max_abs\": 0.0038632452487945557, \"a8_code_differences\": 128, \"scale_max_abs\": 5.431473255157471e-06, \"elements\": 82432}}, \"8\": {\"l00_gate\": {\"input_max_abs\": 4.649162292480469e-06, \"a8_code_differences\": 0, \"scale_max_abs\": 1.4901161193847656e-08, \"elements\": 23552}, \"l00_up\": {\"input_max_abs\": 4.649162292480469e-06, \"a8_code_differences\": 0, \"scale_max_abs\": 1.4901161193847656e-08, \"elements\": 23552}, \"l00_down\": {\"input_max_abs\": 2.384185791015625e-07, \"a8_code_differences\": 0, \"scale_max_abs\": 4.656612873077393e-10, \"elements\": 82432}}}}\n",
+  "stderr": ""
+}

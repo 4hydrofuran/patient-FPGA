@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('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')); assert hashlib.sha256(b).hexdigest()=='b9a3fb601fdfedeb8ce4751ba2ea6224a5a990df3f6764e462733a43da1756aa'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "b9a3fb601fdfedeb8ce4751ba2ea6224a5a990df3f6764e462733a43da1756aa",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

@@ -1,0 +1,19 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T15:48:16.4624170Z",
+    "source_sha256":  "f7c72062ec41f0d281007e8c147f26d7e9e1fb40c0361cbcab771e0e3d63e7f1",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "FAILED_PRESERVE_PARTIAL_STATE",
+                      "staged":  {
+                                     "status":  "FAILED_PRESERVE_PARTIAL_STATE",
+                                     "compute_runs":  0,
+                                     "pl_loads":  0,
+                                     "variants":  [
+
+                                                  ],
+                                     "error":  "AssertionError: baseline-miss-probe root manifest differs",
+                                     "traceback":  "Traceback (most recent call last):\n  File \"/var/lib/kv260-a12/permission-scheduler-20261027-v1/stage_receiver.py\", line 27, in \u003cmodule\u003e\n    assert sha(root/\u0027MANIFEST.json\u0027)==v[\u0027manifest_sha256\u0027],v[\u0027name\u0027]+\u0027 root manifest differs\u0027\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: baseline-miss-probe root manifest differs\n"
+                                 }
+                  }
+}

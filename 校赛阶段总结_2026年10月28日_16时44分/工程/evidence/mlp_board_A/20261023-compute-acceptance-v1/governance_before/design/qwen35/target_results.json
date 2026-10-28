@@ -1,0 +1,113 @@
+{
+  "kind": "TARGET_AND_MEASUREMENT_REGISTER",
+  "revision": "A-DESIGN-1.0",
+  "runtime_consumes_design_keys": false,
+  "results": {
+    "fact_consistency_min": {
+      "target": 0.95,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "fact_consistency_stretch": {
+      "target": 0.98,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "question_slot_f1_min": {
+      "target": 0.9,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "score_mae_max_100": {
+      "target": 10,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "voice_acoustic_p95_ms_max": {
+      "target": 8000,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "voice_acoustic_p95_ms_stretch": {
+      "target": 4000,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "cold_256_ttft_p95_ms_max": {
+      "target": 10000,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "incremental_32_ttft_p95_ms_max": {
+      "target": 3000,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "decode_median_tps_min": {
+      "target": 3,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "decode_median_tps_stretch": {
+      "target": 8,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "prefill_tps_min": {
+      "target": 32,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "asr_rtf_max": {
+      "target": 1.0,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "asr_cer_max": {
+      "target": 0.15,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "e2e_attempts_min": {
+      "target": 200,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "quality_items_min": {
+      "target": 300,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "completion_min": {
+      "target": 0.99,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    },
+    "soak_hours_min": {
+      "target": 2,
+      "actual": null,
+      "status": "NOT_TESTED",
+      "domain": "BOARD_OR_PRODUCT_QUALITY"
+    }
+  },
+  "pc_evidence": "eval/qwen35/a01/A01_REPORT.json",
+  "pc_note": "Existing small CPU samples are not formal 30-run board or product acceptance.",
+  "linux_memory_bytes": null,
+  "pl_bo_budget_bytes": null
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:/Patientqwen/platform/local/a1/venv/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "quant/tests",
+    "-v"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-09-28T10:00:02.138666+00:00",
+  "elapsed_s": 0.35768929999903776,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_duplicate_keys_rejected (test_preparation.HeaderTests.test_duplicate_keys_rejected) ... ok\ntest_non_square_shape_retained (test_preparation.HeaderTests.test_non_square_shape_retained) ... ok\ntest_overlapping_or_gapped_tensors_rejected (test_preparation.HeaderTests.test_overlapping_or_gapped_tensors_rejected) ... ok\ntest_wrong_byte_size_rejected (test_preparation.HeaderTests.test_wrong_byte_size_rejected) ... ok\ntest_changed_context_rejected (test_preparation.LogitsTests.test_changed_context_rejected) ... ok\ntest_diagnostic_pair_does_not_allow_different_stage (test_preparation.LogitsTests.test_diagnostic_pair_does_not_allow_different_stage) ... ok\ntest_hardware_does_not_accept_original_baseline (test_preparation.LogitsTests.test_hardware_does_not_accept_original_baseline) ... ok\ntest_hardware_requires_same_sidecar (test_preparation.LogitsTests.test_hardware_requires_same_sidecar) ... ok\ntest_identical_metrics_not_acceptance (test_preparation.LogitsTests.test_identical_metrics_not_acceptance) ... ok\ntest_large_logits_stable (test_preparation.LogitsTests.test_large_logits_stable) ... ok\ntest_nonfinite_rejected (test_preparation.LogitsTests.test_nonfinite_rejected) ... ok\ntest_quantization_pair_valid (test_preparation.LogitsTests.test_quantization_pair_valid) ... ok\ntest_ggml_dimension_order_not_payload_transpose (test_preparation.MappingTests.test_ggml_dimension_order_not_payload_transpose) ... ok\ntest_transposed_source_rejected (test_preparation.MappingTests.test_transposed_source_rejected) ... ok\ntest_unexpected_mlp_bias_rejected (test_preparation.MappingTests.test_unexpected_mlp_bias_rejected) ... ok\ntest_unreviewed_explicit_lm_head_rejected (test_preparation.MappingTests.test_unreviewed_explicit_lm_head_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.064s\n\nOK\n"
+}

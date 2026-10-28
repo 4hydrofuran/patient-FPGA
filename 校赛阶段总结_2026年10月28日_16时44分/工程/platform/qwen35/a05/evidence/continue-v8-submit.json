@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "submit",
+    "--owner",
+    "A",
+    "--label",
+    "a05-v8-attention",
+    "--",
+    "/bin/bash",
+    "/mnt/c/Patientqwen/platform/qwen35/a05/build_native_v8.sh"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:22:28.409088+00:00",
+  "elapsed_s": 0.2559383999905549,
+  "exit_code": 0,
+  "stdout": "01790940148643803789-A-a05-v8-attention-2f3c44c4\n",
+  "stderr": ""
+}

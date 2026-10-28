@@ -1,0 +1,82 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T16:08:31.0334560Z",
+    "source_sha256":  "f63aa8c87fa748ef6212e4c8aa610b74dbd8f206dab8312f26fb43782e27d8b7",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "switch":  {
+                                     "backend":  "native",
+                                     "status":  "switching",
+                                     "replayed":  false
+                                 },
+                      "status":  "ORIGINAL_SERVICE_AND_USER_MODE_READY",
+                      "http":  {
+                                   "schema_version":  "ui.v1",
+                                   "instance_id":  "6fc38bd22b5847eda1afdd74de6bb202",
+                                   "phase":  "READY",
+                                   "ready":  true,
+                                   "busy":  false,
+                                   "current_session_id":  "532646e9c6254affba4d91cf4f294226",
+                                   "backend":  {
+                                                   "configured":  "native",
+                                                   "execution_kind":  "CPU_REFERENCE",
+                                                   "ready":  true,
+                                                   "hardware_enabled":  false
+                                               },
+                                   "backend_options":  [
+                                                           {
+                                                               "id":  "managed-pl",
+                                                               "label":  "FPGA"
+                                                           },
+                                                           {
+                                                               "id":  "native",
+                                                               "label":  "CPU"
+                                                           }
+                                                       ],
+                                   "capabilities":  {
+                                                        "text":  true,
+                                                        "audio":  false,
+                                                        "rule_score":  true,
+                                                        "case_selection":  "random",
+                                                        "case_count":  20,
+                                                        "chief_narration":  true,
+                                                        "chief_summary_kind":  "RULE_TEMPLATE",
+                                                        "cancel_turn":  false,
+                                                        "generation_timeout_s":  180,
+                                                        "max_active_turns":  1,
+                                                        "pending_turn_queue":  0,
+                                                        "max_turns":  200,
+                                                        "max_sessions":  8,
+                                                        "archived_sessions_readable":  true
+                                                    },
+                                   "failure":  null,
+                                   "answer_cache":  {
+                                                        "entries":  1320,
+                                                        "bytes":  1732636,
+                                                        "hits":  0,
+                                                        "misses":  0,
+                                                        "catalog_sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                        "origin_kinds":  [
+                                                                             "CPU_REFERENCE"
+                                                                         ]
+                                                    },
+                                   "verification":  {
+                                                        "software_test_only":  true,
+                                                        "board":  "NOT_TESTED",
+                                                        "medical_review":  "PENDING_TEACHER_REVIEW"
+                                                    },
+                                   "service_mode":  "continuous",
+                                   "remaining_seconds":  14188.04397203,
+                                   "demo_lab":  false
+                               },
+                      "session":  {
+                                      "session_id":  "532646e9c6254affba4d91cf4f294226",
+                                      "case_id":  "SYN_CP_20",
+                                      "closed":  false,
+                                      "active_request_id":  null
+                                  },
+                      "user_turn_count":  0,
+                      "nice10_applied":  false,
+                      "original_source_sha256":  "b92739af07cde88831cef5435ba0ab1693bdb7a61e3cfafdf829e610b939b1f2"
+                  }
+}

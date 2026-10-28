@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/31VXY+jNhR951egvBi6CQQmk/lY8bDqTtWRVm21s28oQg6+JO6C7dpmPlT1v/cawyTMbMtDApfj43PvPb4sFouvQNlKivYlrGWnaG1DpeVBgzFho2UXwrOLGQtqfR0+ccHkk1nijT3KfsDWoampMKnhB0FbkywWi4B3Smob/mmkmO6lCQY+Re2x5ftwDP+BjxPkSI17NT1a3kEQUGNgWJ4cwELPWRQXxTqkgk34xBxpfrmNHFVEUrB12tH6yAWsOCNxojHDav9iwURxnBzhmfEDGOt4CNAN0Ktsk6/XcLnOrrN6c3F1ub+4vtxncFFv6LrZsuzmpq73W3yds23eXG/3dbO52m83UJMAK9W3tmC8ttFeSltxVoxKXHFS82LS76AFtKlG0bJLR9SkzMIzakmM1VxF8dJjC8y3F7SDyKFaoAaWY/GLv/+Jg0bq8JFqToUNuQgjwjg9CGksr8mSHECAppZLQeLbIMRL456TLFyXYtnS74/5dr2iWU7iNCK+wyvyYaT9QFb5Ot9m63yzesxIPNDwJhTSDmwJNxXjOopvayksFz0MiIa34CT6B1TpkvASOyroAfRKcZY4Z6DQKQTP3L6JYUEYaJ3YZ4tB3QtUkfpiT8gxaPL0/uH3L5++3X32b8ac3aUKpzV1Il5jmIRy6p1UlD8oLh1iV6jzlpSr6+wmv90NC1vegOeatnWR+qVuYdi0JR8N9qm2wIpyNxXLYRJMzlj03kmVq0uL/nR1GSAzI6iWW/d2tsQ38alweyWtpMxEDhPPALgjYkoCjyAs2aG/f/70cFf9cv/b/cOvd5/J7SQxoUqBYBGiTwy+EOQ1r6qlxrHMtvwfseUq23m2J6nRxjMbGM5GG5gMW2dyMqtHi72elZekbsXHIRNTeEBKPHHqo691twxH0VuMj46YU+9FI/1ZddOuhaFdKlFUI2MyeNWpVU6qJ0wOrdxH5KeZ9+JdPGvmyeQoGk+DfZk8enL2m2aqSfDMmz/wp5M82vOsEzOnxufeHovz3nWjhUxRnnc09m506seV/9Xf3YzJ9PuOY2tKPRBoR+DYBxO6WR0RDX/1OGjJEieWjygc2UDc4PXLyZzTpZr0ilELkQLdcWNwhlXTVi2IaLyPl86c1WgPt2+5wqMaB+/Ke+aHaZzMJ8FroYZCE4+rLOUteTcQ8DOxvj1pHn1eOqvuCrfeD9vBKSUZBzbZleNM3Xnr+Rk5/C4bLrg5AqtqrIwppgO6nI7Q+B8HE+kRh3zVSRzDUvC6EkhfuC9lch6L4kBpLmw0dJr1nTKRJ4iXTdubY/FN9xAH/wJVxKEKAAgAAA==')); assert hashlib.sha256(b).hexdigest()=='8619dfb04df9b10e77f758b848aa6b990c440eb31e0552f53e5b69530c6a7cee'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "8619dfb04df9b10e77f758b848aa6b990c440eb31e0552f53e5b69530c6a7cee",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

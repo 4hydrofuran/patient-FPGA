@@ -1,0 +1,70 @@
+{
+  "status": "PAIRED_FRESH_MODEL_COMPARISON",
+  "actual_backend": "FPGA_REAL",
+  "samples_per_variant": 4,
+  "BOARD": "MEASURED",
+  "board_latency_ms": {
+    "baseline_median_ms": 13493.295124,
+    "candidate_median_ms": 14671.462112500001,
+    "reduction_ms": -1178.166988500001,
+    "reduction_percent": -8.731499442300356
+  },
+  "metrics": {
+    "native": {
+      "baseline_median_ms": 13493.295124,
+      "candidate_median_ms": 14671.462112500001,
+      "reduction_ms": -1178.166988500001,
+      "reduction_percent": -8.731499442300356
+    },
+    "permission_wait": {
+      "baseline_median_ms": 4158.721404500001,
+      "candidate_median_ms": 5053.391207500001,
+      "reduction_ms": -894.6698029999998,
+      "reduction_percent": -21.51309780049008
+    }
+  },
+  "pairs": [
+    {
+      "question": "每次疼痛持续多久？",
+      "repeat": 0,
+      "baseline_native_ms": 12653.215712,
+      "candidate_native_ms": 11857.539444,
+      "baseline_permission_ms": 4519.319291999999,
+      "candidate_permission_ms": 3598.7482510000004,
+      "baseline_record_ms": 2463.151213999995,
+      "candidate_record_ms": 1791.243752999996
+    },
+    {
+      "question": "疼痛有多严重？",
+      "repeat": 0,
+      "baseline_native_ms": 13330.859159,
+      "candidate_native_ms": 14668.898612,
+      "baseline_permission_ms": 3691.4459170000005,
+      "candidate_permission_ms": 5047.300537000002,
+      "baseline_record_ms": 1883.9236540000102,
+      "candidate_record_ms": 3110.5965520000027
+    },
+    {
+      "question": "每次疼痛持续多久？",
+      "repeat": 1,
+      "baseline_native_ms": 14292.596189,
+      "candidate_native_ms": 15095.017844,
+      "baseline_permission_ms": 6265.728552999996,
+      "candidate_permission_ms": 5287.990993,
+      "baseline_record_ms": 4228.160056999994,
+      "candidate_record_ms": 3227.9313719999973
+    },
+    {
+      "question": "疼痛有多严重？",
+      "repeat": 1,
+      "baseline_native_ms": 13655.731089,
+      "candidate_native_ms": 14674.025613,
+      "baseline_permission_ms": 3798.1235170000023,
+      "candidate_permission_ms": 5059.481878,
+      "baseline_record_ms": 1982.3330909999986,
+      "candidate_record_ms": 3082.670914000004
+    }
+  ],
+  "cache_used": false,
+  "scope": "MATCHED_HOST_MEASUREMENTS; NO_DEVICE_CYCLES; NO_P95_CLAIM"
+}

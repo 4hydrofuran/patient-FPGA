@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/analyze_nodes.py",
+    "eval/qwen35/a05/node-probe-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:01:08.156503+00:00",
+  "elapsed_s": 2.1720598999527283,
+  "exit_code": 0,
+  "stdout": "{\"T\": \"2\", \"first_nonidentical\": [{\"name\": \"conv_state_last-0\", \"op\": \"VIEW\", \"shapes\": [[3, 6144, 1, 1], [3, 6144, 1, 1]], \"passed\": false, \"bit_equal\": false, \"elements\": 18432, \"failures\": 12225, \"max_abs\": 18.92612075805664, \"rmse\": 0.8178479956811462, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"new_state-0\", \"op\": \"VIEW\", \"shapes\": [[128, 128, 16, 1], [128, 128, 16, 1]], \"passed\": false, \"bit_equal\": false, \"elements\": 262144, \"failures\": 27574, \"max_abs\": 0.6436045942828059, \"rmse\": 0.005371419443761446, \"atol\": 0.002, \"rtol\": 0.0002}]}\n{\"T\": \"4\", \"first_nonidentical\": [{\"name\": \"conv_state_last-0\", \"op\": \"VIEW\", \"shapes\": [[3, 6144, 1, 1], [3, 6144, 1, 1]], \"passed\": false, \"bit_equal\": false, \"elements\": 18432, \"failures\": 18342, \"max_abs\": 32.197906494140625, \"rmse\": 1.3947992563170517, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"alpha-0\", \"op\": \"RESHAPE\", \"shapes\": [[16, 1, 1, 1], [16, 4, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 16, \"failures\": 0, \"max_abs\": 4.76837158203125e-07, \"rmse\": 1.666000468656264e-07, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"a_softplus-0\", \"op\": \"UNARY\", \"shapes\": [[16, 1, 1, 1], [16, 4, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 16, \"failures\": 0, \"max_abs\": 2.384185791015625e-07, \"rmse\": 6.664001874625056e-08, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"gate-0\", \"op\": \"MUL\", \"shapes\": [[16, 1, 1, 1], [16, 4, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 16, \"failures\": 0, \"max_abs\": 1.7881393432617188e-07, \"rmse\": 4.505137586015397e-08, \"atol\": 0.002, \"rtol\": 0.0002}]}\n{\"T\": \"8\", \"first_nonidentical\": [{\"name\": \"linear_attn_qkv_mixed-0\", \"op\": \"RESHAPE\", \"shapes\": [[6144, 1, 1, 1], [6144, 8, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 6144, \"failures\": 0, \"max_abs\": 1.9073486328125e-06, \"rmse\": 1.2700179480208166e-07, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"qkv_mixed_transposed-0\", \"op\": \"TRANSPOSE\", \"shapes\": [[1, 6144, 1, 1], [8, 6144, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 6144, \"failures\": 0, \"max_abs\": 1.9073486328125e-06, \"rmse\": 1.2700179480208166e-07, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"conv_input-0\", \"op\": \"CONCAT\", \"shapes\": [[4, 6144, 1, 1], [11, 6144, 1, 1]], \"passed\": true, \"bit_equal\": false, \"elements\": 24576, \"failures\": 0, \"max_abs\": 1.9073486328125e-06, \"rmse\": 6.350089740104083e-08, \"atol\": 0.002, \"rtol\": 0.0002}, {\"name\": \"conv_state_last-0\", \"op\": \"VIEW\", \"shapes\": [[3, 6144, 1, 1], [3, 6144, 1, 1]], \"passed\": false, \"bit_equal\": false, \"elements\": 18432, \"failures\": 18338, \"max_abs\": 28.21800661087036, \"rmse\": 1.3377512671291534, \"atol\": 0.002, \"rtol\": 0.0002}]}\n",
+  "stderr": ""
+}

@@ -1,0 +1,46 @@
+--- a/src/llama-graph.cpp
++++ b/src/llama-graph.cpp
+@@ -1,4 +1,5 @@
+ #include "llama-graph.h"
++#include "sp-hook.h"
+ 
+ #include "llama-impl.h"
+ #include "llama-model.h"
+@@ -1521,6 +1522,10 @@
+           ggml_tensor * w,
+           ggml_tensor * cur,
+           ggml_tensor * w_s) const {
++    if (auto * custom = sp_llama_try_hook(ctx0, w, cur)) {
++        GGML_ASSERT(!w_s && loras->empty()); // Exact selected bias-free MLP only.
++        return custom;
++    }
+     ggml_tensor * res = ggml_mul_mat(ctx0, w, cur);
+ 
+     if (prec_policy) {
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -75,3 +75,6 @@
+     target_compile_definitions(llama PRIVATE LLAMA_BUILD)
+     target_compile_definitions(llama PUBLIC  LLAMA_SHARED)
+ endif()
++
++target_sources(llama PRIVATE /mnt/c/Patientqwen/runtime/qwen35_w4a8/sp-hook.cpp)
++target_include_directories(llama PRIVATE /mnt/c/Patientqwen/runtime/qwen35_w4a8)
+--- a/src/llama-model-loader.cpp
++++ b/src/llama-model-loader.cpp
+@@ -1,3 +1,4 @@
++#include "sp-hook.h"
+ #include "llama-model-loader.h"
+ 
+ #include "ggml-alloc.h"
+@@ -1239,7 +1240,9 @@
+                 if (std::regex_search(tensor_name, pattern)) {
+                     if (overrides->buft == ggml_backend_cpu_buffer_type()) {
+                         // when overriding to a CPU buffer, consider the extra buffer types
+-                        buft = select_weight_buft(hparams, t_meta, op, buft_list_cpu);
++                        buft = sp_llama_external_weight(t_meta->name)
++                            ? overrides->buft
++                            : select_weight_buft(hparams, t_meta, op, buft_list_cpu);
+                         if (use_mmap) {
+                             static std::once_flag once;
+                             std::call_once(once, [] {

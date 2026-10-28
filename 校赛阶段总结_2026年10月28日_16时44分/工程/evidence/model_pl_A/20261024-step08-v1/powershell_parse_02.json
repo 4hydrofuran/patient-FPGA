@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a12/step08_parse.ps1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:56:13.409243+00:00",
+  "elapsed_s": 0.5075867999112234,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "ForEach-Object : The term 'Get-FileHash' is not recognized as the name of a cmdlet, function, script file, or operable \nprogram. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.\nAt C:\\Patientqwen\\platform\\qwen35\\a12\\step08_parse.ps1:3 char:66\n+ ... m -LiteralPath $PSScriptRoot -Filter 'step08*.ps1' | ForEach-Object {\n+                                                          ~~~~~~~~~~~~~~~~\n    + CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [ForEach-Object], CommandNotFoundException\n    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.ForEachObjectCommand\n \n"
+}

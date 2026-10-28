@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/ra02/build_queue.py",
+    "submit",
+    "--owner",
+    "A",
+    "--label",
+    "a05-v4-diagnostic",
+    "--",
+    "/bin/bash",
+    "/mnt/c/Patientqwen/platform/qwen35/a05/build_native_v4.sh"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:56:39.006715+00:00",
+  "elapsed_s": 6.237822399998549,
+  "exit_code": 0,
+  "stdout": "01790938605221032027-A-a05-v4-diagnostic-bb6ade1c\n",
+  "stderr": ""
+}

@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/scp.exe",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2:/home/ubuntu/a12-step08-diagnostic-readback-20261024-v1.tar.gz",
+    "C:/Patientqwen/evidence/model_pl_A/20261024-step08-v1/diagnostic/readback-v1.tar.gz"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:17:30.075655+00:00",
+  "elapsed_s": 13.815867000026628,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

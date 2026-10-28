@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PC_PACKAGE_BOARD_STAGED_NOT_BOOT_ACCEPTED",
+  "release": "6.8.12-a10irq2",
+  "wsl_distribution": "KV260-A-2204",
+  "artifact_directory": "/home/member-a/a10-kernel-irq2-20261021-v1/boot-candidate-v2",
+  "fit": {
+    "bytes": 65555004,
+    "sha256": "e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b"
+  },
+  "modules": {
+    "bytes": 108755861,
+    "sha256": "da96f92d8be1c0dfb498efec34dc8b7f041e4698e53ea90041760f1aca0d817d"
+  },
+  "audit": "evidence/board_platform/A10_20261018_intake/irq2_pc_package_20261021_v1/boot-readback-irq2.json",
+  "board_uploaded": true,
+  "board_staged": true,
+  "board_stage_audit": "evidence/board_platform/A10_20261018_intake/irq2_stage_audit_20261021_01.json",
+  "board_candidate_fit": "/boot/firmware/a10-candidate-irq2-20261021.fit",
+  "board_candidate_modules": "/usr/lib/modules/6.8.12-a10irq2",
+  "board_boot_tested": false,
+  "board_lifecycle_tested": false,
+  "board_compute_tested": false,
+  "deployment_authorized_by_this_file": false,
+  "rejected_previous_candidate": "KERNEL_REJECTED_20261021.json",
+  "next_window_plan": "IRQ2_NEXT_WINDOW.md"
+}

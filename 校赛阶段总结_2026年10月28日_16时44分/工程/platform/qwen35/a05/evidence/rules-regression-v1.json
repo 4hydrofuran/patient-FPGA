@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "-m",
+    "unittest",
+    "system_qwen35.app.test_a02",
+    "-v"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:15:12.068592+00:00",
+  "elapsed_s": 0.9145041000447236,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_case_immutable (system_qwen35.app.test_a02.Cases) ... ok\ntest_case_mutations_rejected (system_qwen35.app.test_a02.Cases) ... ok\ntest_invalid_transcripts (system_qwen35.app.test_a02.Cases) ... ok\ntest_path_not_requestable (system_qwen35.app.test_a02.Cases) ... ok\ntest_request_cannot_change_configuration (system_qwen35.app.test_a02.Cases) ... ok\ntest_review_gate (system_qwen35.app.test_a02.Cases) ... ok\ntest_three_drafts (system_qwen35.app.test_a02.Cases) ... ok\ntest_unknown_not_negative (system_qwen35.app.test_a02.Cases) ... ok\ntest_heldout_is_plan_not_results (system_qwen35.app.test_a02.FrozenInputs) ... ok\ntest_lock (system_qwen35.app.test_a02.FrozenInputs) ... ok\ntest_all_case_fallbacks (system_qwen35.app.test_a02.Rules) ... ok\ntest_allergy_not_medication_history (system_qwen35.app.test_a02.Rules) ... ok\ntest_double_negation (system_qwen35.app.test_a02.Rules) ... ok\ntest_duration_relation_ellipsis (system_qwen35.app.test_a02.Rules) ... ok\ntest_followup_only_confirmed_history (system_qwen35.app.test_a02.Rules) ... ok\ntest_injection (system_qwen35.app.test_a02.Rules) ... ok\ntest_low_asr_review (system_qwen35.app.test_a02.Rules) ... ok\ntest_numeric_spaces_not_new_facts (system_qwen35.app.test_a02.Rules) ... ok\ntest_omission (system_qwen35.app.test_a02.Rules) ... ok\ntest_prompt_least_facts (system_qwen35.app.test_a02.Rules) ... ok\ntest_raw_transcript_not_rewritten (system_qwen35.app.test_a02.Rules) ... ok\ntest_required_and_allowed (system_qwen35.app.test_a02.Rules) ... ok\ntest_scoring_repeatable (system_qwen35.app.test_a02.Rules) ... ok\ntest_unknown_ellipsis_requires_unique_unknown (system_qwen35.app.test_a02.Rules) ... ok\ntest_unknown_surfaces (system_qwen35.app.test_a02.Rules) ... ok\ntest_unsafe_relational_negatives (system_qwen35.app.test_a02.Rules) ... ok\ntest_ack_not_audio (system_qwen35.app.test_a02.State) ... ok\ntest_cancel_invalidates_pending_and_replay (system_qwen35.app.test_a02.State) ... ok\ntest_deadline_validation (system_qwen35.app.test_a02.State) ... ok\ntest_exam_feedback_gate (system_qwen35.app.test_a02.State) ... ok\ntest_operation_lock (system_qwen35.app.test_a02.State) ... ok\ntest_pending_and_idempotence (system_qwen35.app.test_a02.State) ... ok\ntest_session_isolation (system_qwen35.app.test_a02.State) ... ok\ntest_snapshot_cannot_mutate (system_qwen35.app.test_a02.State) ... ok\ntest_student_response_has_no_case_or_rubric (system_qwen35.app.test_a02.State) ... ok\ntest_template_no_backend (system_qwen35.app.test_a02.State) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.545s\n\nOK\n"
+}

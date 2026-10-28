@@ -1,0 +1,11 @@
+﻿{
+    "schema":  "A12_STEP08_UART_IDENTITY_ONLY",
+    "utc":  "2026-10-24T02:09:24.0925640Z",
+    "port":  "COM5",
+    "usb":  "FTDIBUS\\VID_0403+PID_6011+XFL1CYYPZ52YB\\0000",
+    "status":  "READONLY_IDENTITY_COLLECTED",
+    "raw":  "\r\r\nkria login: ubuntu\r\r\nPassword: \r\nWelcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.12-a10irq2 aarch64)\r\n\r\n * Documentation:  https://help.ubuntu.com\r\n * Management:     https://landscape.canonical.com\r\n * Support:        https://ubuntu.com/pro\r\n\r\n System information as of Fri Oct 23 05:00:16 UTC 2026\r\n\r\n  System load:  2.06               Swap usage:  0%       Users logged in: 0\r\n  Usage of /:   35.7% of 27.62GB   Temperature: 29.2 C\r\n  Memory usage: 14%                Processes:   210\r\n\r\n\r\nExpanded Security Maintenance for Applications is not enabled.\r\n\r\n92 updates can be applied immediately.\r\nTo see these additional updates run: apt list --upgradable\r\n\r\nEnable ESM Apps to receive additional future security updates.\r\nSee https://ubuntu.com/esm or run: sudo pro status\r\n\r\nNew release \u002726.04.1 LTS\u0027 available.\r\nRun \u0027do-release-upgrade\u0027 to upgrade to it.\r\n\r\n\r\n\u001b[?2004hubuntu@kria:~$ printf \u0027\\nA12_ID_db8d0087475f4f5397a5de582cd46bbe_BEGIN\\n\u0027; id; uname -r; sha256sum /etc/machine-id; cat /proc/sys/kernel/random/boot_id; ip -br addr show eth0; ip -4 route; cat /sys/class/net/eth0/carrier; systemctl is-active ssh.socket ssh.service; printf \u0027\\nA12_ID_db8d0087475f4f5397a5de582cd46bbe_END\\n\u0027\r\n\u001b[?2004l\r\r\nA12_ID_db8d0087475f4f5397a5de582cd46bbe_BEGIN\r\nuid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),101(lxd)\r\n6.8.12-a10irq2\r\nea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec  /etc/machine-id\r\n86e4938b-0f65-4166-9237-c547b67e1451\r\neth0             UP             fe80::20a:35ff:fe0f:2d70/64 \r\n1\r\nactive\r\ninactive\r\n\r\nA12_ID_db8d0087475f4f5397a5de582cd46bbe_END\r\n\u001b[?2004hubuntu@kria:~$ ",
+    "reboot":  false,
+    "configuration_changed":  false,
+    "closed":  true
+}

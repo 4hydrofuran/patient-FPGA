@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模拟问诊 · 主任评价</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;max-width:900px;margin:32px auto;padding:0 20px;color:#24313a;background:#f5f6f7}
+section{background:white;border:1px solid #d8dfe3;padding:20px;margin:16px 0;border-radius:8px}
+h1{font-size:25px;margin-bottom:8px}h2{font-size:19px}button,select,textarea{font:inherit;padding:9px;border:1px solid #a6b3bb;border-radius:4px}
+button{cursor:pointer;background:#fff;margin:4px}button:disabled{cursor:default;opacity:.45}textarea{display:block;width:calc(100% - 22px);margin:12px 0;min-height:80px}
+.notice{background:#fff2cd;padding:12px}.muted{color:#586872}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;background:#f0f3f5;padding:12px;font-size:13px}
+#turns p{border-bottom:1px solid #e6eaed;padding-bottom:12px}#error{color:#a12020;min-height:26px}
+</style>
+<link rel="stylesheet" href="/display/evaluation.css">
+<header class="page-header"><div class="app-heading"><h1>模拟问诊</h1><span id="stage-label">文字问诊</span></div><p id="backend" class="notice" role="status">正在连接本地服务…</p></header>
+<p id="error" role="alert"></p>
+<div class="session-actions">
+  <span id="case-label">病例随机抽取</span><span id="case-pool" class="muted"></span>
+  <button id="start" disabled>随机抽取并开始</button>
+  <span id="backend-control" hidden><label for="backend-choice">推理</label> <select id="backend-choice" disabled></select></span>
+  <p id="state" role="status">等待系统就绪</p>
+</div>
+<details id="cache-debug-settings" class="debug-settings">
+  <summary>调试设置</summary>
+  <label for="next-cache-mode">下次问诊</label>
+  <select id="next-cache-mode">
+    <option value="auto">正常（优先缓存）</option>
+    <option value="hit">缓存命中</option>
+    <option value="miss">缓存未命中（实时推理）</option>
+  </select>
+  <small id="current-cache-mode">仅下一场生效，当前场次不变。</small>
+</details>
+<section id="consultation-section" aria-label="问诊记录与提问">
+  <div id="turns" aria-live="polite"></div>
+  <form id="question-form">
+    <label for="question">文字提问</label>
+    <textarea id="question" maxlength="1000" placeholder="例如：每次疼痛持续多久？" disabled></textarea>
+    <button id="send" class="primary" type="submit" disabled>发送问题</button>
+    <button id="cancel" type="button" disabled>取消本轮</button>
+    <button id="finish" type="button" disabled>结束问诊</button>
+  </form>
+</section>
+<section id="score-section" class="evaluation" aria-labelledby="evaluation-title" hidden>
+  <div class="chief-scene">
+    <div class="scene-caption"><span>主任医师</span><span id="chief-state">等待评价</span></div>
+    <img id="chief-portrait" src="/display/chief-physician.png" alt="模拟主任医师立绘" width="1024" height="1536">
+  </div>
+  <div class="evaluation-content">
+    <div class="paper-heading"><h2 id="evaluation-title" tabindex="-1">问诊评阅记录</h2></div>
+    <div class="paper-meta-row"><p id="evaluation-case" class="paper-meta muted"></p><p class="review-notice">评分草案 · 待教师审核</p></div>
+    <p id="evaluation-loading" role="status">正在读取本场评价…</p>
+    <div id="evaluation-result" hidden>
+      <div class="score-heading">
+        <div class="score-line"><span>话题覆盖得分</span><p><strong id="total-score">—</strong><span id="max-score"> / 100</span></p></div><p id="coverage-count"></p>
+      </div>
+      <div class="review-tabs" role="tablist" aria-label="评阅内容">
+        <button id="tab-summary" type="button" role="tab" aria-selected="true" aria-controls="chief-summary" data-view="summary">评阅意见</button>
+        <button id="tab-topics" type="button" role="tab" aria-selected="false" aria-controls="topic-details" tabindex="-1" data-view="topics">评分依据</button>
+        <button id="tab-review" type="button" role="tab" aria-selected="false" aria-controls="review-details" tabindex="-1" data-view="review">待复核<span id="review-count"></span></button>
+        <button id="tab-transcript" type="button" role="tab" aria-selected="false" aria-controls="transcript-panel" tabindex="-1" data-view="transcript">问诊记录</button>
+      </div>
+      <div id="evaluation-scroll" class="evaluation-scroll" tabindex="0" role="region" aria-label="评价内容，可上下滚动">
+      <div id="evaluation-overview">
+        <section id="chief-summary" class="paper-panel" role="tabpanel" aria-labelledby="tab-summary"><h3 class="visually-hidden">主任评阅意见</h3><p id="summary-text"></p></section>
+        <section id="topic-details" class="paper-panel" role="tabpanel" aria-labelledby="tab-topics" hidden><p class="panel-intro">按话题计分，展开可核对原始提问。</p><div id="topics"></div><p id="scoring-note" class="muted"></p><p id="evaluation-disclaimer" class="muted"></p></section>
+        <section id="review-details" class="paper-panel" role="tabpanel" aria-labelledby="tab-review" hidden><h3 id="review-title">待复核提问</h3><div id="review-items"></div></section>
+      </div>
+      <section id="transcript-panel" class="paper-panel" role="tabpanel" aria-labelledby="tab-transcript" hidden><h3 class="visually-hidden">本场问诊记录</h3><div id="evaluation-transcript"></div></section>
+      </div>
+      <div class="evaluation-actions"><p class="paper-footnote">仅评估问诊话题覆盖</p><button id="new-session" class="primary" type="button" disabled>抽取新病例</button></div>
+    </div>
+  </div>
+</section>
+<details class="debug-events"><summary>查看状态事件</summary><p class="muted">记录实际处理进度。</p><pre id="events"></pre></details>
+<footer><p>合成病例 · 软件演示。刷新可恢复本次服务中的记录；重启服务会清除内存记录。</p></footer>
+<script src="/console.js" defer></script>
+</html>
+

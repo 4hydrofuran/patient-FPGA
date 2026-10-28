@@ -1,0 +1,25 @@
+{
+  "status": "RECOVERED_IRQ2_AND_VOLATILE_NETWORK_DEFAULT_BOOT_UNCHANGED",
+  "current_boot": "86e4938b-0f65-4166-9237-c547b67e1451",
+  "kernel": "6.8.12-a10irq2",
+  "normal_reboots": 1,
+  "user_reported_cold_cycles": 1,
+  "candidate_boot_commands": 1,
+  "default_boot_pins": {
+    "/boot/firmware/image.fit": "23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e",
+    "/boot/firmware/boot.scr.uimg": "f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685",
+    "/boot/firmware/a10-candidate-irq2-20261021.fit": "e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b"
+  },
+  "network_unsaved": true,
+  "initial_boot_diagnostic_lines": 189,
+  "prior_accepted_boot_diagnostic_lines": 260,
+  "changed_diagnostic_lines": [
+    "WARNING: CPU: 3 PID: 1 at crypto/asymmetric_keys/x509_loader.c:44 x509_load_certificate_list+0xf0/0x1a8",
+    "CPU: 3 PID: 1 Comm: swapper/0 Not tainted 6.8.12-a10irq2 #1",
+    "x23: ffff80008206fce0 x22: ffff000801025d01 x21: ffff800082c93a46"
+  ],
+  "diagnostic_disposition": "Only CPU/register variation in the existing X.509 startup warning; all raw diagnostics retained. Not a clean-kernel claim.",
+  "warm_reboot_stall": "UNRESOLVED_CAUSE_FSBL_ONLY_OBSERVED_PRESERVED",
+  "prior_passes_unchanged": true,
+  "restore_readback_sha256": "9512a63a6c4d45049cfa4ed2519d0004f2b1cf7e86c940ebb1511cca0c61b7b6"
+}

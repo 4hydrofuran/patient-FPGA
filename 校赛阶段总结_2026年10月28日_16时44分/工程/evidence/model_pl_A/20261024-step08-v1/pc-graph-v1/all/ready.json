@@ -1,0 +1,1075 @@
+{
+  "R1": "DISABLED_NOT_VERIFIED",
+  "attention_schedule": "SIMD_QUERY_ORDER_NO_SPLIT_KV_OR_QUERY_TILING",
+  "bridge": {
+    "a12_route": {
+      "a12_domain": "PC_MATH_DOUBLE",
+      "a12_hardware_global_count": null,
+      "a12_route_scope": "all",
+      "a12_trace": [],
+      "algorithm_weight_bytes": null,
+      "api_version": 1,
+      "backend_id": "A_CPU_W4A8_V1",
+      "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+      "cpu_algorithm": "TILED",
+      "cpu_compute_ms_process_total": 0.0,
+      "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+      "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+      "cpu_quiescent": true,
+      "cpu_run_count": 0,
+      "cpu_service_ms_process_total": 0.0,
+      "cpu_threads": 4,
+      "cycles": null,
+      "device_id": null,
+      "execution_kind": "CPU_REFERENCE",
+      "hardware_done_count": null,
+      "input_sync_ms": null,
+      "job_id": 0,
+      "kernel_build_id": null,
+      "kernel_ms": null,
+      "legacy_timing_scope": {
+        "cpu_compute_ms": "LAST_COMPLETED_RUN",
+        "cpu_run_count": "PROCESS_LIFETIME",
+        "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+      },
+      "measured_bus_bytes": null,
+      "output_sync_ms": null,
+      "owned_weight_bytes": 140378112,
+      "partial_sums_capacity_bytes": 0,
+      "partial_sums_capture_enabled": false,
+      "partial_sums_storage_mode": "OMITTED",
+      "quant_ms": null,
+      "service_ms": null,
+      "status": "READY",
+      "weight_count": 72,
+      "weight_load_count": 72,
+      "weight_resident": true,
+      "workspace_capacity_bytes": 114688,
+      "xclbin_sha256": null
+    },
+    "algorithm_weight_bytes": null,
+    "api_version": 1,
+    "backend_id": "A_CPU_W4A8_V1",
+    "board": "NOT_TESTED",
+    "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+    "cpu_algorithm": "TILED",
+    "cpu_compute_ms_process_total": 0.0,
+    "cpu_integer_isa": "AVX2_RUNTIME_DISPATCH",
+    "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+    "cpu_quiescent": true,
+    "cpu_run_count": 0,
+    "cpu_service_ms_process_total": 0.0,
+    "cpu_threads": 4,
+    "cycles": null,
+    "device_id": null,
+    "epoch": 0,
+    "error": "",
+    "execution_kind": "CPU_REFERENCE",
+    "executions": 0,
+    "gate_up_cache_hits": 0,
+    "gguf_target_ranges": {
+      "blk.0.ffn_down.weight": {
+        "address_begin": 131232713166848,
+        "address_end": 131232716173312,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.0.ffn_gate.weight": {
+        "address_begin": 131232716177408,
+        "address_end": 131232718237696,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.0.ffn_up.weight": {
+        "address_begin": 131232718241792,
+        "address_end": 131232720302080,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.1.ffn_down.weight": {
+        "address_begin": 131232727949312,
+        "address_end": 131232730955776,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.1.ffn_gate.weight": {
+        "address_begin": 131232730959872,
+        "address_end": 131232733020160,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.1.ffn_up.weight": {
+        "address_begin": 131232733024256,
+        "address_end": 131232735084544,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.10.ffn_down.weight": {
+        "address_begin": 131232842784768,
+        "address_end": 131232844845056,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.10.ffn_gate.weight": {
+        "address_begin": 131232844849152,
+        "address_end": 131232846909440,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.10.ffn_up.weight": {
+        "address_begin": 131232846913536,
+        "address_end": 131232848973824,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.11.ffn_down.weight": {
+        "address_begin": 131232854548480,
+        "address_end": 131232857554944,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.11.ffn_gate.weight": {
+        "address_begin": 131232857559040,
+        "address_end": 131232859619328,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.11.ffn_up.weight": {
+        "address_begin": 131232859623424,
+        "address_end": 131232861683712,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.12.ffn_down.weight": {
+        "address_begin": 131232866414592,
+        "address_end": 131232868474880,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.12.ffn_gate.weight": {
+        "address_begin": 131232868478976,
+        "address_end": 131232870539264,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.12.ffn_up.weight": {
+        "address_begin": 131232870543360,
+        "address_end": 131232872603648,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.13.ffn_down.weight": {
+        "address_begin": 131232878632960,
+        "address_end": 131232880693248,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.13.ffn_gate.weight": {
+        "address_begin": 131232880697344,
+        "address_end": 131232882757632,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.13.ffn_up.weight": {
+        "address_begin": 131232882761728,
+        "address_end": 131232884822016,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.14.ffn_down.weight": {
+        "address_begin": 131232892469248,
+        "address_end": 131232895475712,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.14.ffn_gate.weight": {
+        "address_begin": 131232895479808,
+        "address_end": 131232897540096,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.14.ffn_up.weight": {
+        "address_begin": 131232897544192,
+        "address_end": 131232899604480,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.15.ffn_down.weight": {
+        "address_begin": 131232905048064,
+        "address_end": 131232907108352,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.15.ffn_gate.weight": {
+        "address_begin": 131232907112448,
+        "address_end": 131232909172736,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.15.ffn_up.weight": {
+        "address_begin": 131232909176832,
+        "address_end": 131232911237120,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.16.ffn_down.weight": {
+        "address_begin": 131232915968000,
+        "address_end": 131232918028288,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.16.ffn_gate.weight": {
+        "address_begin": 131232918032384,
+        "address_end": 131232920092672,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.16.ffn_up.weight": {
+        "address_begin": 131232920096768,
+        "address_end": 131232922157056,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.17.ffn_down.weight": {
+        "address_begin": 131232929804288,
+        "address_end": 131232932810752,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.17.ffn_gate.weight": {
+        "address_begin": 131232932814848,
+        "address_end": 131232934875136,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.17.ffn_up.weight": {
+        "address_begin": 131232934879232,
+        "address_end": 131232936939520,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.18.ffn_down.weight": {
+        "address_begin": 131232942968832,
+        "address_end": 131232945029120,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.18.ffn_gate.weight": {
+        "address_begin": 131232945033216,
+        "address_end": 131232947093504,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.18.ffn_up.weight": {
+        "address_begin": 131232947097600,
+        "address_end": 131232949157888,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.19.ffn_down.weight": {
+        "address_begin": 131232954597376,
+        "address_end": 131232956657664,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.19.ffn_gate.weight": {
+        "address_begin": 131232956661760,
+        "address_end": 131232958722048,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.19.ffn_up.weight": {
+        "address_begin": 131232958726144,
+        "address_end": 131232960786432,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.2.ffn_down.weight": {
+        "address_begin": 131232742735872,
+        "address_end": 131232745742336,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.2.ffn_gate.weight": {
+        "address_begin": 131232745746432,
+        "address_end": 131232747806720,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.2.ffn_up.weight": {
+        "address_begin": 131232747810816,
+        "address_end": 131232749871104,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.20.ffn_down.weight": {
+        "address_begin": 131232967139328,
+        "address_end": 131232970145792,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.20.ffn_gate.weight": {
+        "address_begin": 131232970149888,
+        "address_end": 131232972210176,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.20.ffn_up.weight": {
+        "address_begin": 131232972214272,
+        "address_end": 131232974274560,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.21.ffn_down.weight": {
+        "address_begin": 131232981925888,
+        "address_end": 131232984932352,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.21.ffn_gate.weight": {
+        "address_begin": 131232984936448,
+        "address_end": 131232986996736,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.21.ffn_up.weight": {
+        "address_begin": 131232987000832,
+        "address_end": 131232989061120,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.22.ffn_down.weight": {
+        "address_begin": 131232996708352,
+        "address_end": 131232999714816,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.22.ffn_gate.weight": {
+        "address_begin": 131232999718912,
+        "address_end": 131233001779200,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.22.ffn_up.weight": {
+        "address_begin": 131233001783296,
+        "address_end": 131233003843584,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.23.ffn_down.weight": {
+        "address_begin": 131233009418240,
+        "address_end": 131233012424704,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.23.ffn_gate.weight": {
+        "address_begin": 131233012428800,
+        "address_end": 131233014489088,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.23.ffn_up.weight": {
+        "address_begin": 131233014493184,
+        "address_end": 131233016553472,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.3.ffn_down.weight": {
+        "address_begin": 131232755310592,
+        "address_end": 131232757370880,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.3.ffn_gate.weight": {
+        "address_begin": 131232757374976,
+        "address_end": 131232759435264,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.3.ffn_up.weight": {
+        "address_begin": 131232759439360,
+        "address_end": 131232761499648,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.4.ffn_down.weight": {
+        "address_begin": 131232766230528,
+        "address_end": 131232768290816,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.4.ffn_gate.weight": {
+        "address_begin": 131232768294912,
+        "address_end": 131232770355200,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.4.ffn_up.weight": {
+        "address_begin": 131232770359296,
+        "address_end": 131232772419584,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.5.ffn_down.weight": {
+        "address_begin": 131232780070912,
+        "address_end": 131232783077376,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.5.ffn_gate.weight": {
+        "address_begin": 131232783081472,
+        "address_end": 131232785141760,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.5.ffn_up.weight": {
+        "address_begin": 131232785145856,
+        "address_end": 131232787206144,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.6.ffn_down.weight": {
+        "address_begin": 131232793231360,
+        "address_end": 131232795291648,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.6.ffn_gate.weight": {
+        "address_begin": 131232795295744,
+        "address_end": 131232797356032,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.6.ffn_up.weight": {
+        "address_begin": 131232797360128,
+        "address_end": 131232799420416,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.7.ffn_down.weight": {
+        "address_begin": 131232804864000,
+        "address_end": 131232806924288,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.7.ffn_gate.weight": {
+        "address_begin": 131232806928384,
+        "address_end": 131232808988672,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.7.ffn_up.weight": {
+        "address_begin": 131232808992768,
+        "address_end": 131232811053056,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.8.ffn_down.weight": {
+        "address_begin": 131232817405952,
+        "address_end": 131232820412416,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 3010560,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 3006464
+      },
+      "blk.8.ffn_gate.weight": {
+        "address_begin": 131232820416512,
+        "address_end": 131232822476800,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.8.ffn_up.weight": {
+        "address_begin": 131232822480896,
+        "address_end": 131232824541184,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.9.ffn_down.weight": {
+        "address_begin": 131232830566400,
+        "address_end": 131232832626688,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.9.ffn_gate.weight": {
+        "address_begin": 131232832630784,
+        "address_end": 131232834691072,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      },
+      "blk.9.ffn_up.weight": {
+        "address_begin": 131232834695168,
+        "address_end": 131232836755456,
+        "boundary_bytes_not_discarded": 4096,
+        "gguf_tensor_bytes": 2064384,
+        "policy": "MADV_DONTNEED then PROT_NONE on interior full pages; original file unchanged",
+        "protected_discarded_bytes": 2060288
+      }
+    },
+    "hardware_done_count": null,
+    "input_sync_ms": null,
+    "job_id": 0,
+    "kernel_build_id": null,
+    "kernel_ms": null,
+    "legacy_timing_scope": {
+      "cpu_compute_ms": "LAST_COMPLETED_RUN",
+      "cpu_run_count": "PROCESS_LIFETIME",
+      "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+    },
+    "measured_bus_bytes": null,
+    "no_weight_quantization_at_runtime": true,
+    "output_sync_ms": null,
+    "owned_weight_bytes": 0,
+    "partial_sums_capacity_bytes": 0,
+    "partial_sums_capture_enabled": false,
+    "partial_sums_storage_mode": "OMITTED",
+    "physical_cpu_calls_by_T": {},
+    "protected_gguf_rss_kib": 0,
+    "protected_gguf_vma_bytes": 159694848,
+    "quant_ms": null,
+    "quantization_blocks": 0,
+    "residency_measurement": "SMAPS_DIAGNOSTIC",
+    "runtime_buffer_capacity_bytes": 350240,
+    "runtime_output_copy_ms": 0.0,
+    "runtime_quant_and_gather_ms": 0.0,
+    "scope": "all",
+    "service_ms": null,
+    "status": "READY",
+    "weight_count": 0,
+    "weight_load_count": 0,
+    "weight_resident": false,
+    "weights": {
+      "l00_down": {
+        "calls": 0,
+        "handle": 3,
+        "tokens": 0
+      },
+      "l00_gate": {
+        "calls": 0,
+        "handle": 1,
+        "tokens": 0
+      },
+      "l00_up": {
+        "calls": 0,
+        "handle": 2,
+        "tokens": 0
+      },
+      "l01_down": {
+        "calls": 0,
+        "handle": 6,
+        "tokens": 0
+      },
+      "l01_gate": {
+        "calls": 0,
+        "handle": 4,
+        "tokens": 0
+      },
+      "l01_up": {
+        "calls": 0,
+        "handle": 5,
+        "tokens": 0
+      },
+      "l02_down": {
+        "calls": 0,
+        "handle": 9,
+        "tokens": 0
+      },
+      "l02_gate": {
+        "calls": 0,
+        "handle": 7,
+        "tokens": 0
+      },
+      "l02_up": {
+        "calls": 0,
+        "handle": 8,
+        "tokens": 0
+      },
+      "l03_down": {
+        "calls": 0,
+        "handle": 12,
+        "tokens": 0
+      },
+      "l03_gate": {
+        "calls": 0,
+        "handle": 10,
+        "tokens": 0
+      },
+      "l03_up": {
+        "calls": 0,
+        "handle": 11,
+        "tokens": 0
+      },
+      "l04_down": {
+        "calls": 0,
+        "handle": 15,
+        "tokens": 0
+      },
+      "l04_gate": {
+        "calls": 0,
+        "handle": 13,
+        "tokens": 0
+      },
+      "l04_up": {
+        "calls": 0,
+        "handle": 14,
+        "tokens": 0
+      },
+      "l05_down": {
+        "calls": 0,
+        "handle": 18,
+        "tokens": 0
+      },
+      "l05_gate": {
+        "calls": 0,
+        "handle": 16,
+        "tokens": 0
+      },
+      "l05_up": {
+        "calls": 0,
+        "handle": 17,
+        "tokens": 0
+      },
+      "l06_down": {
+        "calls": 0,
+        "handle": 21,
+        "tokens": 0
+      },
+      "l06_gate": {
+        "calls": 0,
+        "handle": 19,
+        "tokens": 0
+      },
+      "l06_up": {
+        "calls": 0,
+        "handle": 20,
+        "tokens": 0
+      },
+      "l07_down": {
+        "calls": 0,
+        "handle": 24,
+        "tokens": 0
+      },
+      "l07_gate": {
+        "calls": 0,
+        "handle": 22,
+        "tokens": 0
+      },
+      "l07_up": {
+        "calls": 0,
+        "handle": 23,
+        "tokens": 0
+      },
+      "l08_down": {
+        "calls": 0,
+        "handle": 27,
+        "tokens": 0
+      },
+      "l08_gate": {
+        "calls": 0,
+        "handle": 25,
+        "tokens": 0
+      },
+      "l08_up": {
+        "calls": 0,
+        "handle": 26,
+        "tokens": 0
+      },
+      "l09_down": {
+        "calls": 0,
+        "handle": 30,
+        "tokens": 0
+      },
+      "l09_gate": {
+        "calls": 0,
+        "handle": 28,
+        "tokens": 0
+      },
+      "l09_up": {
+        "calls": 0,
+        "handle": 29,
+        "tokens": 0
+      },
+      "l10_down": {
+        "calls": 0,
+        "handle": 33,
+        "tokens": 0
+      },
+      "l10_gate": {
+        "calls": 0,
+        "handle": 31,
+        "tokens": 0
+      },
+      "l10_up": {
+        "calls": 0,
+        "handle": 32,
+        "tokens": 0
+      },
+      "l11_down": {
+        "calls": 0,
+        "handle": 36,
+        "tokens": 0
+      },
+      "l11_gate": {
+        "calls": 0,
+        "handle": 34,
+        "tokens": 0
+      },
+      "l11_up": {
+        "calls": 0,
+        "handle": 35,
+        "tokens": 0
+      },
+      "l12_down": {
+        "calls": 0,
+        "handle": 39,
+        "tokens": 0
+      },
+      "l12_gate": {
+        "calls": 0,
+        "handle": 37,
+        "tokens": 0
+      },
+      "l12_up": {
+        "calls": 0,
+        "handle": 38,
+        "tokens": 0
+      },
+      "l13_down": {
+        "calls": 0,
+        "handle": 42,
+        "tokens": 0
+      },
+      "l13_gate": {
+        "calls": 0,
+        "handle": 40,
+        "tokens": 0
+      },
+      "l13_up": {
+        "calls": 0,
+        "handle": 41,
+        "tokens": 0
+      },
+      "l14_down": {
+        "calls": 0,
+        "handle": 45,
+        "tokens": 0
+      },
+      "l14_gate": {
+        "calls": 0,
+        "handle": 43,
+        "tokens": 0
+      },
+      "l14_up": {
+        "calls": 0,
+        "handle": 44,
+        "tokens": 0
+      },
+      "l15_down": {
+        "calls": 0,
+        "handle": 48,
+        "tokens": 0
+      },
+      "l15_gate": {
+        "calls": 0,
+        "handle": 46,
+        "tokens": 0
+      },
+      "l15_up": {
+        "calls": 0,
+        "handle": 47,
+        "tokens": 0
+      },
+      "l16_down": {
+        "calls": 0,
+        "handle": 51,
+        "tokens": 0
+      },
+      "l16_gate": {
+        "calls": 0,
+        "handle": 49,
+        "tokens": 0
+      },
+      "l16_up": {
+        "calls": 0,
+        "handle": 50,
+        "tokens": 0
+      },
+      "l17_down": {
+        "calls": 0,
+        "handle": 54,
+        "tokens": 0
+      },
+      "l17_gate": {
+        "calls": 0,
+        "handle": 52,
+        "tokens": 0
+      },
+      "l17_up": {
+        "calls": 0,
+        "handle": 53,
+        "tokens": 0
+      },
+      "l18_down": {
+        "calls": 0,
+        "handle": 57,
+        "tokens": 0
+      },
+      "l18_gate": {
+        "calls": 0,
+        "handle": 55,
+        "tokens": 0
+      },
+      "l18_up": {
+        "calls": 0,
+        "handle": 56,
+        "tokens": 0
+      },
+      "l19_down": {
+        "calls": 0,
+        "handle": 60,
+        "tokens": 0
+      },
+      "l19_gate": {
+        "calls": 0,
+        "handle": 58,
+        "tokens": 0
+      },
+      "l19_up": {
+        "calls": 0,
+        "handle": 59,
+        "tokens": 0
+      },
+      "l20_down": {
+        "calls": 0,
+        "handle": 63,
+        "tokens": 0
+      },
+      "l20_gate": {
+        "calls": 0,
+        "handle": 61,
+        "tokens": 0
+      },
+      "l20_up": {
+        "calls": 0,
+        "handle": 62,
+        "tokens": 0
+      },
+      "l21_down": {
+        "calls": 0,
+        "handle": 66,
+        "tokens": 0
+      },
+      "l21_gate": {
+        "calls": 0,
+        "handle": 64,
+        "tokens": 0
+      },
+      "l21_up": {
+        "calls": 0,
+        "handle": 65,
+        "tokens": 0
+      },
+      "l22_down": {
+        "calls": 0,
+        "handle": 69,
+        "tokens": 0
+      },
+      "l22_gate": {
+        "calls": 0,
+        "handle": 67,
+        "tokens": 0
+      },
+      "l22_up": {
+        "calls": 0,
+        "handle": 68,
+        "tokens": 0
+      },
+      "l23_down": {
+        "calls": 0,
+        "handle": 72,
+        "tokens": 0
+      },
+      "l23_gate": {
+        "calls": 0,
+        "handle": 70,
+        "tokens": 0
+      },
+      "l23_up": {
+        "calls": 0,
+        "handle": 71,
+        "tokens": 0
+      }
+    },
+    "workspace_capacity_bytes": 0,
+    "xclbin_sha256": null
+  },
+  "cache_policy": "R0_CLEAR_ALL_REPLAY",
+  "context": 256,
+  "context_init_ms": 318.649918,
+  "domain": "PC",
+  "execution_kind": "PC_MATH_DOUBLE",
+  "kernel_threads": 4,
+  "memory": {
+    "smaps_rollup": [
+      "Rss:              697772 kB",
+      "Pss:              693309 kB"
+    ],
+    "status": [
+      "VmHWM:\t  851252 kB",
+      "VmRSS:\t  697772 kB",
+      "RssAnon:\t  336308 kB",
+      "RssFile:\t  361464 kB"
+    ]
+  },
+  "model_file": "/mnt/c/Patientqwen/artifacts/qwen35-0.8b/qwen35-text-Q4_K_M.gguf",
+  "model_load_ms": 7499.063572,
+  "n_rs_seq": 0,
+  "n_seq_max": 1,
+  "non_mlp_projection_schedule": "STABLE_PER_TOKEN_SIMD_GEMV",
+  "peak_rss_kib": 851252,
+  "physical_ubatch": 8,
+  "quantization": "A12_W4A8_MLP",
+  "sidecar_load_ms": 6989.970544,
+  "threads": 4,
+  "type": "ready",
+  "worker_ready_ms": 14807.699925
+}

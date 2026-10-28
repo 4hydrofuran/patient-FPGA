@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "D:/Python/Python314/python.exe",
+    "-B",
+    "platform/qwen35/a11/audit_compute.py",
+    "--bundle",
+    "evidence/mlp_board_A/20261023-compute-acceptance-v1/bundle-v2",
+    "--capture",
+    "evidence/mlp_board_A/20261023-compute-acceptance-v1/readback-v3",
+    "--out",
+    "evidence/mlp_board_A/20261023-compute-acceptance-v1/AUDIT.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-23T13:38:59.160441+00:00",
+  "elapsed_s": 0.8358639000216499,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_A11_REAL_MLP_NUMERIC_SERVICE_AND_NORMAL_RELEASE_WITH_LIMITATIONS\", \"A11\": \"PASS_WITH_LIMITATIONS\", \"A12\": \"NOT_STARTED\", \"boot_id\": \"8422f92f-d01f-4849-ad19-6e66b640a9ad\", \"kernel\": \"6.8.12-a10irq2\", \"window_id\": \"a11-mlp-20261023-v3\", \"manifest_sha256\": \"64f9cc327b006f2ca12d213c159d33d404e7668679144c15e95c6290fcf0bcde\", \"contract_sha256\": \"83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6\", \"real_submissions\": 23, \"real_shape_submissions\": 21, \"weights_loaded\": 5, \"invalid_T_rejected\": 1, \"all_fp32_numeric_pass\": true, \"all_bit_exact\": true, \"max_abs_error\": 0.0, \"max_rel_error\": 0.0, \"tolerance\": {\"atol\": 0.0001, \"rtol\": 1e-05}, \"service_scope\": \"activation quantization + native input copy/sync + submit/poll + metadata/output sync/validation + caller output copies; excludes golden/diagnostics/permits\", \"explicit_bo_peak_charged_bytes\": 2162688, \"explicit_bo_allocations_host_counter\": 14, \"physical_bo_peak_bytes\": null, \"repeated_weight_uploads\": 0, \"warm_IO_workspace_reused\": true, \"hardware_cycles\": null, \"measured_AXI_bytes\": null, \"pure_kernel_ms\": null, \"hardware_integer_debug\": \"NOT_TESTED_INTERFACE_ABSENT\", \"effective_PL_DDR_bandwidth\": null, \"speedup\": null, \"performance_p95\": null, \"limitations\": [\"No hardware integer-debug interface; FPGA FP32 Y compared independently, integer internal sums not observable.\", \"2-3 warm repeats per shape; descriptive timing only, no p95 or long-run claim.\", \"Submit-to-completion includes host polling; no hardware cycles or measured AXI bytes.\", \"Timeout isolation validated on PC; deliberately hung DMA/reset not injected on board.\", \"Current irq2 boot accepted for this window; no cold reboot/recovery or full model PL execution in this test.\"], \"default_restored\": true, \"gdm_active\": true, \"zocl_absent\": true, \"device_FD_VMA\": [0, 0], \"locks_held\": 0, \"active_lease_absent\": true, \"worker_exit_code\": 0, \"manager_exit_code\": 0, \"post_window_new_diagnostics\": 0, \"readback_delay_seconds\": 74.898833736, \"peak_temperature_mC\": 31661}\n",
+  "stderr": ""
+}

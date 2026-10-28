@@ -1,0 +1,998 @@
+{
+  "bridge": {
+    "a12_route": {
+      "a11_argument_groups": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "a11_bo_counter_scope": "host allocations for these six explicit buffers; excludes implicit XRT BOs",
+      "a11_explicit_bo_allocations_host_counter": 148,
+      "a11_full_service_scope": "MUST_USE_EXTERNAL_CALL_TIMER_INCLUDING_QUANT_AND_RETURN_COPY",
+      "a11_input_bo_sync_ms": 0.02974,
+      "a11_input_copy_and_meta_seed_ms": 0.00929,
+      "a11_io_bo_addresses": [
+        1146814464,
+        1146855424,
+        1146880000,
+        1146863616
+      ],
+      "a11_io_bo_charged_sizes": [
+        40960,
+        8192,
+        155648,
+        8192
+      ],
+      "a11_live_weights": [
+        {
+          "addresses": [
+            1157627904,
+            1148452864
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 1
+        },
+        {
+          "addresses": [
+            1159725056,
+            1148583936
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 2
+        },
+        {
+          "addresses": [
+            1161822208,
+            1148715008
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 3
+        },
+        {
+          "addresses": [
+            1163919360,
+            1148846080
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 4
+        },
+        {
+          "addresses": [
+            1166016512,
+            1148977152
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 5
+        },
+        {
+          "addresses": [
+            1168113664,
+            1149108224
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 6
+        },
+        {
+          "addresses": [
+            1170210816,
+            1157103616
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 7
+        },
+        {
+          "addresses": [
+            1172307968,
+            1157234688
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 8
+        },
+        {
+          "addresses": [
+            1174405120,
+            1157365760
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 9
+        },
+        {
+          "addresses": [
+            1176502272,
+            1157496832
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 10
+        },
+        {
+          "addresses": [
+            1178599424,
+            1159462912
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 11
+        },
+        {
+          "addresses": [
+            1180696576,
+            1159593984
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 12
+        },
+        {
+          "addresses": [
+            1182793728,
+            1161560064
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 13
+        },
+        {
+          "addresses": [
+            1184890880,
+            1161691136
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 14
+        },
+        {
+          "addresses": [
+            1186988032,
+            1163657216
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 15
+        },
+        {
+          "addresses": [
+            1189085184,
+            1163788288
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 16
+        },
+        {
+          "addresses": [
+            1191182336,
+            1165754368
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 17
+        },
+        {
+          "addresses": [
+            1193279488,
+            1165885440
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 18
+        },
+        {
+          "addresses": [
+            1195376640,
+            1167851520
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 19
+        },
+        {
+          "addresses": [
+            1197473792,
+            1167982592
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 20
+        },
+        {
+          "addresses": [
+            1199570944,
+            1169948672
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 21
+        },
+        {
+          "addresses": [
+            1201668096,
+            1170079744
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 22
+        },
+        {
+          "addresses": [
+            1203765248,
+            1172045824
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 23
+        },
+        {
+          "addresses": [
+            1205862400,
+            1172176896
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 24
+        },
+        {
+          "addresses": [
+            1207959552,
+            1174142976
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 25
+        },
+        {
+          "addresses": [
+            1210056704,
+            1174274048
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 26
+        },
+        {
+          "addresses": [
+            1212153856,
+            1176240128
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 27
+        },
+        {
+          "addresses": [
+            1214251008,
+            1176371200
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 28
+        },
+        {
+          "addresses": [
+            1216348160,
+            1178337280
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 29
+        },
+        {
+          "addresses": [
+            1218445312,
+            1178468352
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 30
+        },
+        {
+          "addresses": [
+            1220542464,
+            1180434432
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 31
+        },
+        {
+          "addresses": [
+            1222639616,
+            1180565504
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 32
+        },
+        {
+          "addresses": [
+            1224736768,
+            1182531584
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 33
+        },
+        {
+          "addresses": [
+            1226833920,
+            1182662656
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 34
+        },
+        {
+          "addresses": [
+            1228931072,
+            1184628736
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 35
+        },
+        {
+          "addresses": [
+            1231028224,
+            1184759808
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 36
+        },
+        {
+          "addresses": [
+            1233125376,
+            1186725888
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 37
+        },
+        {
+          "addresses": [
+            1235222528,
+            1186856960
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 38
+        },
+        {
+          "addresses": [
+            1237319680,
+            1188823040
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 39
+        },
+        {
+          "addresses": [
+            1239416832,
+            1188954112
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 40
+        },
+        {
+          "addresses": [
+            1241513984,
+            1190920192
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 41
+        },
+        {
+          "addresses": [
+            1243611136,
+            1191051264
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 42
+        },
+        {
+          "addresses": [
+            1245708288,
+            1193017344
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 43
+        },
+        {
+          "addresses": [
+            1247805440,
+            1193148416
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 44
+        },
+        {
+          "addresses": [
+            1249902592,
+            1195114496
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 45
+        },
+        {
+          "addresses": [
+            1251999744,
+            1195245568
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 46
+        },
+        {
+          "addresses": [
+            1254096896,
+            1197211648
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 47
+        },
+        {
+          "addresses": [
+            1256194048,
+            1197342720
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 48
+        },
+        {
+          "addresses": [
+            1258291200,
+            1199308800
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 49
+        },
+        {
+          "addresses": [
+            1260388352,
+            1199439872
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 50
+        },
+        {
+          "addresses": [
+            1262485504,
+            1201405952
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 51
+        },
+        {
+          "addresses": [
+            1264582656,
+            1201537024
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 52
+        },
+        {
+          "addresses": [
+            1266679808,
+            1203503104
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 53
+        },
+        {
+          "addresses": [
+            1268776960,
+            1203634176
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 54
+        },
+        {
+          "addresses": [
+            1270874112,
+            1205600256
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 55
+        },
+        {
+          "addresses": [
+            1272971264,
+            1205731328
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 56
+        },
+        {
+          "addresses": [
+            1275068416,
+            1207697408
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 57
+        },
+        {
+          "addresses": [
+            1277165568,
+            1207828480
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 58
+        },
+        {
+          "addresses": [
+            1279262720,
+            1209794560
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 59
+        },
+        {
+          "addresses": [
+            1281359872,
+            1209925632
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 60
+        },
+        {
+          "addresses": [
+            1283457024,
+            1211891712
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 61
+        },
+        {
+          "addresses": [
+            1285554176,
+            1212022784
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 62
+        },
+        {
+          "addresses": [
+            1287651328,
+            1213988864
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 63
+        },
+        {
+          "addresses": [
+            1289748480,
+            1214119936
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 64
+        },
+        {
+          "addresses": [
+            1291845632,
+            1216086016
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 65
+        },
+        {
+          "addresses": [
+            1293942784,
+            1216217088
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 66
+        },
+        {
+          "addresses": [
+            1296039936,
+            1218183168
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 67
+        },
+        {
+          "addresses": [
+            1298137088,
+            1218314240
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 68
+        },
+        {
+          "addresses": [
+            1300234240,
+            1220280320
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 69
+        },
+        {
+          "addresses": [
+            1302331392,
+            1220411392
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 70
+        },
+        {
+          "addresses": [
+            1304428544,
+            1222377472
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 71
+        },
+        {
+          "addresses": [
+            1306525696,
+            1222508544
+          ],
+          "charged_sizes": [
+            1835008,
+            114688
+          ],
+          "handle": 72
+        }
+      ],
+      "a11_meta_sync_ms": 0.00599,
+      "a11_meta_validate_ms": 0.00626,
+      "a11_output_bo_sync_and_map_ms": 0.062391,
+      "a11_output_validate_ms": 0.119951,
+      "a11_set_args_ms": 0.057851,
+      "a11_submit_to_confirmed_completion_ms": 4.341793,
+      "a11_weight_copy_ms": 1.858369,
+      "a11_weight_upload_sync_ms": 0.02928,
+      "a12_domain": "BOARD",
+      "a12_hardware_global_completion_counter": null,
+      "a12_hardware_global_count": null,
+      "a12_max_loads": 72,
+      "a12_max_runs": 47736,
+      "a12_observed_ert_state": 4,
+      "a12_raw_meta_hex": "38413457020003b3385e0000000000000000000001000000010000000000000000001c0000000000000000000000000000000000000000000000000000000000",
+      "a12_route_scope": "all",
+      "a12_trace": [],
+      "algorithm_weight_bytes": 1835008,
+      "api_version": 1,
+      "backend_id": "A_XRT_B_KERNEL_V1",
+      "candidate_scope": "A12_BOUNDED_MODEL_TRIAL_NOT_DEFAULT",
+      "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+      "cycles": null,
+      "device_id": "edge",
+      "execution_kind": "FPGA_REAL",
+      "hardware_done_count": null,
+      "host_verified_completions": 24120,
+      "input_sync_ms": 0.03903,
+      "job_id": 24120,
+      "kernel_build_id": 3003318274,
+      "kernel_ms": 4.399644,
+      "kernel_ms_scope": "host_set_args_submit_and_poll_not_device_cycles",
+      "last_status_code": 0,
+      "logical_weight_and_scale_bytes": 1949696,
+      "measured_bus_bytes": null,
+      "no_silent_fallback": true,
+      "output_consumable": true,
+      "output_sync_ms": 0.194592,
+      "owned_bo_charged_bytes": 140591104,
+      "private_counter_scope": "per_call_seed_zero_not_global_counter",
+      "private_meta_host_seeded_count": 1,
+      "quant_ms": null,
+      "retains_resources_on_poison": true,
+      "service_ms": 4.633266,
+      "status": "READY",
+      "weight_load_count": 72,
+      "weight_resident": true,
+      "xclbin_sha256": "bdcb66ca69279e0109928d7b32c3ea0325f617a267e1869636944ba3c193b5fa"
+    },
+    "algorithm_weight_bytes": null,
+    "api_version": 1,
+    "backend_id": "A_CPU_W4A8_V1",
+    "board": "NOT_TESTED",
+    "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+    "cpu_algorithm": "TILED",
+    "cpu_compute_ms_process_total": 0.0,
+    "cpu_integer_isa": "PORTABLE",
+    "cpu_parallel_mode": "OPENMP_STATIC_TILE_LOOP",
+    "cpu_quiescent": true,
+    "cpu_run_count": 0,
+    "cpu_service_ms_process_total": 0.0,
+    "cpu_threads": 2,
+    "cycles": null,
+    "device_id": null,
+    "epoch": 16,
+    "error": "",
+    "execution_kind": "CPU_REFERENCE",
+    "executions": 10,
+    "gate_up_cache_hits": 552,
+    "gguf_target_ranges": null,
+    "hardware_done_count": null,
+    "input_sync_ms": null,
+    "job_id": 0,
+    "kernel_build_id": null,
+    "kernel_ms": null,
+    "legacy_timing_scope": {
+      "cpu_compute_ms": "LAST_COMPLETED_RUN",
+      "cpu_run_count": "PROCESS_LIFETIME",
+      "service_ms": "LAST_COMPLETED_RUN_BEFORE_OUTPUT_COPY"
+    },
+    "measured_bus_bytes": null,
+    "no_weight_quantization_at_runtime": true,
+    "output_sync_ms": null,
+    "owned_weight_bytes": 0,
+    "partial_sums_capacity_bytes": 0,
+    "partial_sums_capture_enabled": false,
+    "partial_sums_storage_mode": "OMITTED",
+    "physical_cpu_calls_by_T": {
+      "1": 648,
+      "3": 72,
+      "8": 936
+    },
+    "protected_gguf_rss_kib": null,
+    "protected_gguf_vma_bytes": null,
+    "quant_ms": null,
+    "quantization_blocks": 1104,
+    "residency_measurement": "NOT_SAMPLED_PERFORMANCE_MODE",
+    "runtime_buffer_capacity_bytes": 378944,
+    "runtime_output_copy_ms": 43.94663699999991,
+    "runtime_quant_and_gather_ms": 803.4661130000057,
+    "scope": "all",
+    "service_ms": null,
+    "status": "READY",
+    "weight_count": 0,
+    "weight_load_count": 0,
+    "weight_resident": false,
+    "weights": null,
+    "workspace_capacity_bytes": 0,
+    "xclbin_sha256": null
+  },
+  "decode_calls": 9,
+  "decode_ms": 53261.40406599999,
+  "decode_rc": 0,
+  "domain": "BOARD",
+  "eos": true,
+  "gpu_layers": 0,
+  "id": "DEV-023",
+  "kernel_threads": 2,
+  "last_prompt_logits_fnv64": 11647371296174224055,
+  "logits_comparison": null,
+  "logits_mode": "final",
+  "memory": null,
+  "output_tokens": [
+    144684,
+    96200,
+    220,
+    17,
+    19,
+    220,
+    116041,
+    96932,
+    1710
+  ],
+  "partial_output_usable": true,
+  "peak_rss_kib": 650856,
+  "physical_ubatch": 8,
+  "prefill_chunk": 256,
+  "prefill_ms": 104998.899163,
+  "prefill_requested_logits": 1,
+  "prompt_tokens": 107,
+  "quantization": "A12_W4A8_MLP",
+  "request_profile": {
+    "BOARD": "NOT_TESTED",
+    "cpu_counters": {
+      "compute_ms_delta": 0.0,
+      "run_count_begin": 0,
+      "run_count_delta": 0,
+      "run_count_end": 0,
+      "scope": "DELTA_BETWEEN_REQUEST_BOUNDARIES_NOT_LAST_OP",
+      "service_ms_delta": 0.0
+    },
+    "detail": false,
+    "enabled": false,
+    "native_request_wall_ms": 158451.28714,
+    "phases": null,
+    "request_id": "DEV-023",
+    "schema": "N02_REQUEST_PROFILE_V1",
+    "scope": "CURRENT_REQUEST_NOT_LAST_OPERATION_OR_LIFETIME",
+    "session_epoch": 0,
+    "session_id": ""
+  },
+  "reset_ms": 4.237532,
+  "state_cleared_before_response": true,
+  "state_fingerprint": {
+    "bytes": 21630284,
+    "fnv64": 11105851600314593633
+  },
+  "state_position_after_clear": -1,
+  "state_position_before_clear": 115,
+  "status": "OK",
+  "teacher_forced": false,
+  "text": "胸痛从 24 小时前开始。",
+  "threads": 2,
+  "ttft_ms": 105008.056034,
+  "type": "result"
+}

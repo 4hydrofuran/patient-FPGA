@@ -1,0 +1,60 @@
+{
+  "status": "OPEN_DIAGNOSTIC_AND_RELEASE_REQUIRES_INDEPENDENT_AUDIT",
+  "boot_id": "8422f92f-d01f-4849-ad19-6e66b640a9ad",
+  "kernel": "6.8.12-a10irq2",
+  "worker_result": {
+    "status": "OPEN_DIAGNOSTIC_RETURNED_NO_COMPUTE",
+    "open_status_code": 0,
+    "close_status_code": 0,
+    "real_submissions": 0,
+    "explicit_bo_allocations": null,
+    "physical_bo_peak_bytes": null,
+    "open_ms": 254.991751,
+    "close_ms": 3.319103,
+    "normal_handles_closed": true,
+    "release_proven": false,
+    "A11": "NOT_PASSED",
+    "boot_id": "8422f92f-d01f-4849-ad19-6e66b640a9ad",
+    "window_id": "a11-open-20261023-v5",
+    "lease_sha256": "7ca8c4fd133a3cc6a1317ca2dc9b4cb8cf1d62dff775fd568af433712f9615fa",
+    "request_sha256": "712ef418345a3a95380fc51107fa8fa92a791c5884ced1102b7a9d4de1b245da",
+    "protocol": "a11-open-only-worker-v1",
+    "manager_pid": 15670,
+    "plan_sha256": "63d13c5bb7888eb93fbf35ca5d7d6ff70d09d370f88143640bc6e457504b1604",
+    "worker_baseline_sha256": "191c9bb7b4151c4040345e3fe5b2a3547cab7b46b54e0e0eb91f14f089737c3e",
+    "inherited_device_lock_fd": 5,
+    "manager_start_ticks": 1120981,
+    "worker_pid": 15773
+  },
+  "final": {
+    "phase": "default_restored",
+    "boot_id": "8422f92f-d01f-4849-ad19-6e66b640a9ad",
+    "temperatures_mC": [
+      28692,
+      31396,
+      29935
+    ],
+    "memory_kib": {
+      "MemTotal": 3997488,
+      "MemAvailable": 3490876,
+      "CmaTotal": 819200,
+      "CmaFree": 814444
+    },
+    "overlays": {
+      "k26-starter-kits_image_1": "applied"
+    },
+    "zocl_bound": [],
+    "render_nodes": [],
+    "device_holders": [],
+    "accelerator_card_nodes": [],
+    "zocl_binding_details": [],
+    "module_refcount": null,
+    "fpga_state": "operating",
+    "vart_sha256": null
+  },
+  "lease_archive": "/var/lock/kv260-a1/history/a11-open-20261023-v5",
+  "compute_runs": 0,
+  "explicit_requested_peak_bytes": null,
+  "A11": "NOT_PASSED_UNTIL_INDEPENDENT_FINAL_READBACK_AND_REQUIREMENT_AUDIT",
+  "normal_kernel_restore": "NOT_TESTED_IN_THIS_ENTRY"
+}

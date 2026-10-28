@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Patientqwen/platform/local/a1/venv/Scripts/python.exe",
+    "quant/compare_logits.py",
+    "platform/local/a2-float-capture-20260928",
+    "platform/local/a2-float-capture-20260928",
+    "--kind",
+    "diagnostic",
+    "--out",
+    "quant/evidence/logits-selfcheck-20260928.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-09-28T10:00:14.947004+00:00",
+  "elapsed_s": 0.36100879999867175,
+  "exit_code": 0,
+  "stdout": "{\"kind\": \"diagnostic\", \"metrics\": {\"max_abs_error\": 0.0, \"rmse\": 0.0, \"mean_cosine\": 1.0, \"mean_kl_reference_to_candidate\": 0.0, \"top1_agreement\": 1.0, \"threshold\": null, \"accepted\": null}, \"reference_manifest_sha256\": \"e77edb9e688c06879c4b4907d979ed692e97df9b6db1a30e6c11dc4fd676d2c8\", \"candidate_manifest_sha256\": \"e77edb9e688c06879c4b4907d979ed692e97df9b6db1a30e6c11dc4fd676d2c8\", \"note\": \"Same teacher-forced context/positions required; not medical quality or G1/A2 acceptance\"}\n",
+  "stderr": ""
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-c",
+    "import sys,json;from pathlib import Path;sys.path.insert(0,'platform/qwen35/a05');from analyze_state import compare;p=Path('eval/qwen35/a05/state-v2');r=compare(p/'chunk-256',p/'chunk-1');print(json.dumps({'passed':r['passed'],'max_logit':max(x['max_abs'] for x in r['logits'].values()),'bad_state_arrays':sum(not x['passed'] for x in r['state_arrays'].values())}))"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:06:05.394306+00:00",
+  "elapsed_s": 19.458886000036728,
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"max_logit\": 0.0, \"bad_state_arrays\": 0}\n",
+  "stderr": ""
+}

@@ -1,0 +1,11 @@
+﻿{
+    "schema":  "A12_STEP08_UART_IDENTITY_ONLY",
+    "utc":  "2026-10-24T02:11:04.2565380Z",
+    "port":  "COM5",
+    "usb":  "FTDIBUS\\VID_0403+PID_6011+XFL1CYYPZ52YB\\0000",
+    "status":  "READONLY_IDENTITY_COLLECTED",
+    "raw":  "\r\n\u001b[?2004l\r\u001b[?2004hubuntu@kria:~$ printf \u0027\\nA12_ID_b5cbb0a93ae444a490fab171e37f57b1_BEGIN\\n\u0027; id; uname -r; sha256sum /etc/machine-id; cat /proc/sys/kernel/random/boot_id; ip -br addr show eth0; ip -4 route; cat /sys/class/net/eth0/carrier; systemctl is-active ssh.socket ssh.service; printf \u0027\\nA12_ID_b5cbb0a93ae444a490fab171e37f57b1_END\\n\u0027\r\n\u001b[?2004l\r\r\nA12_ID_b5cbb0a93ae444a490fab171e37f57b1_BEGIN\r\nuid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),101(lxd)\r\n6.8.12-a10irq2\r\nea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec  /etc/machine-id\r\n86e4938b-0f65-4166-9237-c547b67e1451\r\neth0             UP             fe80::20a:35ff:fe0f:2d70/64 \r\n1\r\nactive\r\nactive\r\n\r\nA12_ID_b5cbb0a93ae444a490fab171e37f57b1_END\r\n\u001b[?2004hubuntu@kria:~$ ",
+    "reboot":  false,
+    "configuration_changed":  false,
+    "closed":  true
+}

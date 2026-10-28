@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "platform/local/a1/venv/Scripts/python.exe",
+    "platform/qwen35/a05/seal_batch.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:40:17.540383+00:00",
+  "elapsed_s": 47.134802900021896,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Patientqwen\\platform\\qwen35\\a05\\seal_batch.py\", line 17, in <module>\n    status=json.loads((ROOT/'docs/PROJECT_STATUS.json').read_text());report=json.loads((OUT/'REPORT.json').read_text())\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Python\\Python314\\Lib\\pathlib\\__init__.py\", line 788, in read_text\n    return f.read()\n           ~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 693: illegal multibyte sequence\n"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "A12_CACHE_DEPLOYMENT_V1",
+  "mode": "VERIFIED_MODEL_REPLAY",
+  "parent_profile": "short34-threads2",
+  "parent_manifest_sha256": "f21513018b1950bfa39d05f89884dbbce59a873faecd6bdb0dd3dd7ebaabb8b4",
+  "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+  "cache": {
+    "entries": 198,
+    "bytes": 702482,
+    "hits": 0,
+    "misses": 0,
+    "catalog_sha256": "62cc916342da8d91bb0711db5d6b8095444270332066bc2420c134571a709a13",
+    "origin_kinds": [
+      "CPU_REFERENCE"
+    ]
+  },
+  "current_live_binary_sha256": "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+  "current_cached_inference": false,
+  "cached_answer_source": "MODEL_CACHE",
+  "cached_origin": "CPU_REFERENCE",
+  "live_miss_backend_required": "FPGA_REAL_WITH_STRICT_GREEDY_DRAFT_VERIFICATION",
+  "authorization_included": false,
+  "BOARD": "NOT_TESTED",
+  "live_miss_requires_current_model": true,
+  "live_miss_output_limit": 32,
+  "live_miss_admission_runs": 22320,
+  "runtime_files_index": "MANIFEST.json",
+  "cache_origin_prompt_policy": "facts-only-02-verified-answers-v1",
+  "live_miss_prompt_policy": "allowed-compact-01",
+  "neutral_prefixes": [
+    34,
+    43
+  ],
+  "prefix_policy": "LONGEST_REVIEWED_PUBLIC_PREFIX_V2"
+}

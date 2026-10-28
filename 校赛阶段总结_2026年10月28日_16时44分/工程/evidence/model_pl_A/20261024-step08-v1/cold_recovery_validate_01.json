@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a10/cold_boot_irq2_once.ps1",
+    "-ValidateOnly"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:00:08.769805+00:00",
+  "elapsed_s": 0.45865829999092966,
+  "exit_code": 0,
+  "stdout": "{\n    \"board_contact\":  false,\n    \"reboot_commands\":  0,\n    \"load\":  \"fatload mmc 1:1 0x10000000 a10-candidate-irq2-20261021.fit\",\n    \"bytes\":  65555004,\n    \"hashes\":  [\n                   \"0a132d4ac3905ec9815c8b4874bc34e825beff2f3fd2aa9bb96e82c364598e44\",\n                   \"ac4dd7766229ba57edb884909b5a32dfce1faa7f31d520d0908d9c317612f3c5\",\n                   \"32dc08a08a87aba2ab0ca68bc5292c735943c20ecd0dc7472690bd152fb7c7a3\"\n               ],\n    \"temporary_bootargs\":  \"root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=800M\",\n    \"boot\":  \"bootm 0x10000000#conf-smk-k26-revA-sck-kv-g-revB\",\n    \"default_boot_changed\":  false\n}\n",
+  "stderr": ""
+}

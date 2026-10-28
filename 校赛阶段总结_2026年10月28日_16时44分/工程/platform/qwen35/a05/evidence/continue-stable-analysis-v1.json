@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/analyze_physical.py",
+    "eval/qwen35/a05/stable-probe-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:04:09.228415+00:00",
+  "elapsed_s": 128.17424020002363,
+  "exit_code": 0,
+  "stdout": "{\"summary\": {\"2\": {\"passed\": true, \"max_logits\": 0.0, \"state_failed\": 0}, \"4\": {\"passed\": true, \"max_logits\": 0.0, \"state_failed\": 0}, \"8\": {\"passed\": true, \"max_logits\": 0.0, \"state_failed\": 0}, \"256\": {\"passed\": true, \"max_logits\": 0.0, \"state_failed\": 0}}, \"actual_MLP_T_histogram\": {\"1\": {\"1\": 1656}, \"2\": {\"2\": 792, \"1\": 72}, \"4\": {\"4\": 360, \"2\": 72, \"1\": 72}, \"8\": {\"8\": 144, \"6\": 72, \"1\": 72}, \"256\": {\"8\": 144, \"6\": 72, \"1\": 72}}}\n",
+  "stderr": ""
+}

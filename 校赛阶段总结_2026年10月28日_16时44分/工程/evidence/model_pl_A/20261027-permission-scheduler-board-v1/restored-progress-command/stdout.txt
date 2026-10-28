@@ -1,0 +1,174 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T16:07:00.9204573Z",
+    "source_sha256":  "d463efb3da2ad08d5a3e6f1c50af19d4a16d17e3e28ca833508c53ed6a171597",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "RESTORED_SERVICE_PROGRESS",
+                      "files":  {
+                                    "STARTED.json":  {
+                                                         "status":  "STARTED_PENDING_READY_AND_BOARD_ACCEPTANCE",
+                                                         "source":  "/home/ubuntu/kv260-staging/a12-case20-debug-20261027-v1/case20-debug-t4",
+                                                         "runtime_root":  "/var/lib/kv260-a12/case20-debug-permission-restore-20261028-v1",
+                                                         "command":  [
+                                                                         "/usr/bin/python3",
+                                                                         "-B",
+                                                                         "/var/lib/kv260-a12/case20-debug-permission-restore-20261028-v1/continuous/fast_response_verify.py",
+                                                                         "--domain",
+                                                                         "BOARD",
+                                                                         "--bundle",
+                                                                         "/var/lib/kv260-a12/case20-debug-permission-restore-20261028-v1",
+                                                                         "--suite",
+                                                                         "web",
+                                                                         "--execute-board",
+                                                                         "--window-id",
+                                                                         "a12-case20-debug-permission-restore-20261028-v1"
+                                                                     ],
+                                                         "requires_kernel":  "6.8.12-a10irq2",
+                                                         "temporary_lock":  "/run/lock/patient-qwen-linear.lock",
+                                                         "temporary_rule":  "/run/udev/rules.d/71-patient-zocl-display.rules",
+                                                         "first_actual_PL_web_answer":  true,
+                                                         "answer_cache":  true,
+                                                         "BOARD":  "NOT_TESTED",
+                                                         "pid":  18808,
+                                                         "boot_id":  "98886b24-96d3-409e-a783-ce9c54873da9"
+                                                     },
+                                    "continuous/bundle/run-v1/s2/WEB_REAL_VERIFICATION.json":  {
+                                                                                                   "status":  "PASS_REAL_GRAPHICAL_MODEL_FPGA_QUESTION",
+                                                                                                   "case_selection":  "SERVER_RANDOM",
+                                                                                                   "browser_version":  "158.0",
+                                                                                                   "case_id":  "SYN_CP_08",
+                                                                                                   "question_to_answer_seconds":  14.070332985998903,
+                                                                                                   "answer":  "疼的是胸前正中。",
+                                                                                                   "backend":  "FPGA_REAL",
+                                                                                                   "answer_source":  "MODEL",
+                                                                                                   "prefix_cache_request":  {
+                                                                                                                                "hit":  true,
+                                                                                                                                "lookup_ms":  249.176602,
+                                                                                                                                "new_tokens":  14,
+                                                                                                                                "policy":  "TT10_REQUIRE_HIT",
+                                                                                                                                "reason":  "EXACT_FULL_STATE_HIT",
+                                                                                                                                "restore_error":  null,
+                                                                                                                                "restore_ms":  290.372974,
+                                                                                                                                "reused_tokens":  34,
+                                                                                                                                "snapshot_bytes":  21614659,
+                                                                                                                                "speculative_extra_tokens":  5
+                                                                                                                            },
+                                                                                                   "native_request_wall_ms":  13714.679838,
+                                                                                                   "test_session_id":  "1d8da32b308041c396c972ca0a0d300a",
+                                                                                                   "user_session_id":  "532646e9c6254affba4d91cf4f294226",
+                                                                                                   "user_questions_sent":  0,
+                                                                                                   "permission_runs":  576,
+                                                                                                   "weight_loads":  72
+                                                                                               },
+                                    "continuous/bundle/run-v1/s2/ANSWER_CACHE_ENABLED.json":  {
+                                                                                                  "status":  "VERIFIED_MODEL_CACHE_ENABLED_AFTER_REAL_PL_PROBE",
+                                                                                                  "cache":  {
+                                                                                                                "entries":  1320,
+                                                                                                                "bytes":  1732636,
+                                                                                                                "hits":  0,
+                                                                                                                "misses":  0,
+                                                                                                                "catalog_sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                                                                                "origin_kinds":  [
+                                                                                                                                     "CPU_REFERENCE"
+                                                                                                                                 ]
+                                                                                                            },
+                                                                                                  "current_model_called_for_hits":  false
+                                                                                              },
+                                    "continuous/bundle/run-v1/s2/USER_INPUT_READY.json":  {
+                                                                                              "status":  "READY_FOR_USER_INPUT",
+                                                                                              "session_id":  "532646e9c6254affba4d91cf4f294226",
+                                                                                              "model_questions_remaining":  null,
+                                                                                              "expires_monotonic_ns":  27211780865464
+                                                                                          }
+                                },
+                      "monotonic_ns":  12933189113815,
+                      "stderr_tail":  "INFO:     Started server process [18808]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\n",
+                      "last_permission":  {
+                                              "job":  576,
+                                              "phase":  "submit",
+                                              "pid":  18895,
+                                              "sequence":  649
+                                          },
+                      "http":  {
+                                   "schema_version":  "ui.v1",
+                                   "instance_id":  "6fc38bd22b5847eda1afdd74de6bb202",
+                                   "phase":  "READY",
+                                   "ready":  true,
+                                   "busy":  false,
+                                   "current_session_id":  "532646e9c6254affba4d91cf4f294226",
+                                   "backend":  {
+                                                   "configured":  "managed-pl",
+                                                   "execution_kind":  "FPGA_REAL",
+                                                   "ready":  true,
+                                                   "hardware_enabled":  true
+                                               },
+                                   "backend_options":  [
+                                                           {
+                                                               "id":  "managed-pl",
+                                                               "label":  "FPGA"
+                                                           },
+                                                           {
+                                                               "id":  "native",
+                                                               "label":  "CPU"
+                                                           }
+                                                       ],
+                                   "capabilities":  {
+                                                        "text":  true,
+                                                        "audio":  false,
+                                                        "rule_score":  true,
+                                                        "case_selection":  "random",
+                                                        "case_count":  20,
+                                                        "chief_narration":  true,
+                                                        "chief_summary_kind":  "RULE_TEMPLATE",
+                                                        "cancel_turn":  false,
+                                                        "generation_timeout_s":  180,
+                                                        "max_active_turns":  1,
+                                                        "pending_turn_queue":  0,
+                                                        "max_turns":  200,
+                                                        "max_sessions":  8,
+                                                        "archived_sessions_readable":  true
+                                                    },
+                                   "failure":  null,
+                                   "answer_cache":  {
+                                                        "entries":  1320,
+                                                        "bytes":  1732636,
+                                                        "hits":  0,
+                                                        "misses":  0,
+                                                        "catalog_sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                        "origin_kinds":  [
+                                                                             "CPU_REFERENCE"
+                                                                         ]
+                                                    },
+                                   "verification":  {
+                                                        "software_test_only":  true,
+                                                        "board":  "NOT_TESTED",
+                                                        "medical_review":  "PENDING_TEACHER_REVIEW"
+                                                    },
+                                   "service_mode":  "continuous",
+                                   "remaining_seconds":  14278.397126112,
+                                   "demo_lab":  false
+                               },
+                      "session":  {
+                                      "session_id":  "532646e9c6254affba4d91cf4f294226",
+                                      "case_id":  "SYN_CP_20",
+                                      "closed":  false,
+                                      "active_request_id":  null,
+                                      "turn_count":  0
+                                  },
+                      "lease":  {
+                                    "schema":  "A12_MODEL_LEASE_V1",
+                                    "owner":  "A",
+                                    "scope":  "all",
+                                    "window":  "a12-case20-debug-permission-restore-20261028-v1",
+                                    "identity":  "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec:98886b24-96d3-409e-a783-ce9c54873da9",
+                                    "pid":  18808,
+                                    "owner_start_ticks":  1279186,
+                                    "expires_monotonic_ns":  27211780865464,
+                                    "compute_authorized":  true,
+                                    "max_runs":  60000,
+                                    "max_loads":  72,
+                                    "explicit_bo_budget_bytes":  140591104
+                                }
+                  }
+}

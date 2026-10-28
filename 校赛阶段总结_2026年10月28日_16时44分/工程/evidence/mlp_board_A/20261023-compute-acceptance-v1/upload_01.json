@@ -1,0 +1,54 @@
+{
+  "scope": "STAGE_PATCH_NO_EXECUTION",
+  "commands": [
+    {
+      "argv": [
+        "C:/Windows/System32/OpenSSH/ssh.exe",
+        "-T",
+        "-o",
+        "BindAddress=192.168.2.1",
+        "-o",
+        "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+        "-o",
+        "StrictHostKeyChecking=yes",
+        "-o",
+        "ConnectTimeout=5",
+        "-o",
+        "ServerAliveInterval=5",
+        "-o",
+        "ServerAliveCountMax=2",
+        "-o",
+        "NumberOfPasswordPrompts=1",
+        "-o",
+        "PubkeyAuthentication=no",
+        "ubuntu@192.168.2.2",
+        "test \"$(cat /proc/sys/kernel/random/boot_id)\" = 8422f92f-d01f-4849-ad19-6e66b640a9ad && test \"$(uname -r)\" = 6.8.12-a10irq2 && test ! -d /sys/module/zocl && test ! -e /var/lock/kv260-a1/active && umask 077 && mkdir /home/ubuntu/a11-compute-patch-20261023-v1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "C:/Windows/System32/OpenSSH/scp.exe",
+        "-o",
+        "BindAddress=192.168.2.1",
+        "-o",
+        "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+        "-o",
+        "StrictHostKeyChecking=yes",
+        "-o",
+        "ConnectTimeout=5",
+        "-o",
+        "ServerAliveInterval=5",
+        "-o",
+        "ServerAliveCountMax=2",
+        "-o",
+        "NumberOfPasswordPrompts=1",
+        "-o",
+        "PubkeyAuthentication=no",
+        "evidence\\mlp_board_A\\20261023-compute-acceptance-v1\\patch.json.gz",
+        "ubuntu@192.168.2.2:/home/ubuntu/a11-compute-patch-20261023-v1/patch.json.gz"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

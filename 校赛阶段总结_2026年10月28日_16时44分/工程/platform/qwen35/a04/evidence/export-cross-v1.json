@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a04/verify_export.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:49:40.196822+00:00",
+  "elapsed_s": 20.32563909998862,
+  "exit_code": 0,
+  "stdout": "{\"domain\": \"PC\", \"manifests_identical\": true, \"passed\": true, \"elapsed_s\": 19.622937383, \"parent_peak_rss_kib\": 35728, \"note\": \"Every raw BF16 matrix independently quantized in C++; producer not called to form expected bytes. Loader maps only one matrix at a time.\", \"payload_bytes\": 140378112, \"manifest_bytes\": 88101, \"BOARD\": \"NOT_TESTED\"}\n",
+  "stderr": ""
+}

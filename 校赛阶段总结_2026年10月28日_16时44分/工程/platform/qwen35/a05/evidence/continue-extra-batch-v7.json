@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/additional_batch_tests.py",
+    "eval/qwen35/a05/extra-batch-v7",
+    "/home/member-a/qwen35-a05/build-v7/qwen35-s1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:15:45.972870+00:00",
+  "elapsed_s": 173.01036940002814,
+  "exit_code": 1,
+  "stdout": "{\"id\": \"long-257-1\", \"prefill_ms\": 13877.964323, \"comparison\": null}\n{\"id\": \"long-257-8\", \"prefill_ms\": 6823.632375, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"id\": \"long-257-256\", \"prefill_ms\": 6699.83336, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"id\": \"long-1025-1\", \"prefill_ms\": 55420.540022, \"comparison\": null}\n{\"id\": \"long-1025-8\", \"prefill_ms\": 26036.890447, \"comparison\": {\"atol\": 0.002, \"failures\": 246700, \"max_abs\": 1.7157249450683594, \"rmse\": 0.31758509049910966, \"rtol\": 0.0002}}\n{\"id\": \"long-1025-256\", \"prefill_ms\": 26055.206733, \"comparison\": {\"atol\": 0.002, \"failures\": 246700, \"max_abs\": 1.7157249450683594, \"rmse\": 0.31758509049910966, \"rtol\": 0.0002}}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/additional_batch_tests.py\", line 43, in <module>\n    assert all(c['passed'] for c in checks),[c for c in checks if not c['passed']]\nAssertionError: [{'name': 'long-1025/8/all-vocab', 'passed': False}, {'name': 'long-1025/256/all-vocab', 'passed': False}]\n"
+}

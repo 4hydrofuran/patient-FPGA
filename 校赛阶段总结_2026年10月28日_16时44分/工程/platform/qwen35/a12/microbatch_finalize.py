@@ -1,0 +1,190 @@
+"""Seal P1-3 PC evidence and append governance without claiming Board readiness."""
+from datetime import datetime,timezone
+import json
+from pathlib import Path
+import shutil
+from microbatch_evidence import ROOT,OUT,PRIOR,read,save,sha,pin
+
+KEY='a12_microbatch_local_budget_pc_20261026'
+HANDOFF='docs/handoffs/A_A12_MICROBATCH_LOCAL_BUDGET_PC_20261026.md'
+DOCS=('PROJECT_STATUS.json','DESIGN_GAP.md','DECISIONS.md','TEST_MATRIX.md','AI_ASSISTANCE.md')
+
+
+def main():
+    baseline=read(OUT/'BASELINE.json');old=read(OUT/'PROJECT_STATUS.json.before')
+    assert (ROOT/'docs/PROJECT_STATUS.json').read_bytes()==(OUT/'PROJECT_STATUS.json.before').read_bytes()
+    protected=[]
+    for row in baseline['files']:
+        if row['path'] in {'docs/'+n for n in DOCS}:continue
+        p=ROOT/row['path'];assert sha(p)==row['sha256'] and p.stat().st_size==row['bytes'],str(p)
+        protected.append(row)
+    original=read(ROOT/'evidence/model_pl_A/20261025-resource-probe-v1/BASELINE.json')
+    for r in original['parent_files']:
+        p=Path(original['parent_bundle'])/r['path'];assert sha(p)==r['sha256'] and p.stat().st_size==r['bytes']
+    for r in original['contract_files']:assert sha(r['path'])==r['sha256']
+    source_pins=[]
+    for folder,field in [('20261025-resource-probe-v1','code'),('20261025-offline-followup-v1','source'),
+            ('20261025-request-journal-v2','source'),('20261026-native-request-journal-v1','source'),
+            ('20261026-health-fence-v1','source')]:
+        for r in read(ROOT/'evidence/model_pl_A'/folder/'FINAL_REVIEW.json')[field]:
+            p=Path(r['path']);p=p if p.is_absolute() else ROOT/p
+            assert sha(p)==r['sha256'];source_pins.append(pin(p))
+    probe=ROOT/'evidence/model_pl_A/20261025-resource-probe-v1'
+    assert sha(probe/'bundle-v2.zip')=='acd578ddd66140a3d0507d71ea9a1d30245c632c7537f0a940227935cc17a7fa'
+    assert sha(probe/'bundle-v2/manifest.json')=='4fcb6af2d9e7d5b89f876697de6bd8f11e36174666169544a9016009551f070f'
+    files=read(probe/'bundle-v2/manifest.json')['files']
+    for r in files:assert sha(probe/'bundle-v2'/r['path'])==r['sha256']
+    review=read(OUT/'NATIVE_REVIEW.json');assert review['status']=='PASS'
+    final=[r for r in review['runs'] if r['final_source']];assert len(final)==4
+    for name,n in [('abi-tests-07',16),('audit-tests-02',3),('owner-close-tests-01',4)]:
+        r=read(OUT/name/'RESULT.json');assert r['status']=='PASS' and r['tests']==n
+    assert read(OUT/'ARTIFACT_AUDIT.json')['status']=='PASS_PC_ELF_INVERSE_PATCH_AND_PINNED_INPUTS'
+    assert read(OUT/'UNKNOWN_END_V4_V5_REPRODUCTION.json')['status']=='REPRODUCED_V4_GAP_V5_REJECTS'
+    times=[]
+    one=read(OUT/'run-batch1-v5-03/RESULT.json');many=read(OUT/'run-batch72-v5-03/RESULT.json')
+    for i,name in enumerate(('app_R0','app_hit')):
+        a=one['timing_PC_ONLY'][i];b=many['timing_PC_ONLY'][i]
+        times.append(dict(id=name,one_projection_first_token_s=a['TTFT_app_ms']/1000,
+            microbatch_first_token_s=b['TTFT_app_ms']/1000,
+            one_projection_validated_answer_s=a['complete_app_ms']/1000,
+            microbatch_validated_answer_s=b['complete_app_ms']/1000,
+            observed_validated_answer_delta_s=(a['complete_app_ms']-b['complete_app_ms'])/1000,
+            BOARD='NOT_TESTED',board_expected_saving_s=None))
+    save(OUT/'TIMING_COMPARISON_PC_ONLY.json',dict(status='CURRENT_SOURCE_SEQUENTIAL_SINGLE_SAMPLE_PAIR',pairs=times,
+        source_tags=['batch1-v5-03','batch72-v5-03'],actual_cpu_calls_each=2880,
+        permits=dict(one_projection=2880,microbatch=40),journal_rows=dict(one_projection=2962,microbatch=122),
+        no_randomization_or_p95=True,startup_and_warm_outside_answer_time=True,
+        previous_v5_samples_retained=['batch1-v5-01','batch72-v5-01','batch72-v5-02']))
+    save(OUT/'ACTIVATION.json',dict(BOARD='NOT_TESTED',production_default=False,real_PL_binding=False,
+        board_contacted=False,platform_released=False,ARM_build='NOT_PERFORMED',ordinary_probe_replaced=False,
+        shared_page_bytes=4096,trusted_controlled_worker_required=True,malicious_shared_page_writer_is_out_of_scope=True,
+        manager_independent_per_projection_decision=False,PC_interval_ns=50000000,PC_max_age_ns=250000000,
+        board_safety_parameters_approved=False,board_latency_saving_s=None,board_CMA='NOT_TESTED'))
+    completion=read(PRIOR/'COMPLETION_AUDIT.json')
+    for r in completion['requirements']:
+        if r['id']=='P1-3':r.update(offline='ACTUAL_CPU_BACKEND_LOCAL_BUDGET_AND_MODEL_VERIFIED',
+            real_PL_binding='NOT_IMPLEMENTED',board_device_generation_binding='NOT_IMPLEMENTED',
+            trusted_controlled_worker_only=True,evidence=HANDOFF)
+    completion.update(previous_turn_classification='progress',current_turn_classification='progress',
+        whole_goal_achieved=False,goal_status='active',
+        next_safe_action='Implement P1-4 offline mode/idle transition/strict fallback, then prepare independently reviewed unbound real-PL binding',
+        board_work_still_excluded=True)
+    save(OUT/'COMPLETION_AUDIT.json',completion)
+    text='''# A12 P1-3 后端本地微批许可：无板真实 CPU 验证（2026-10-26）
+
+完成私有 CPU 后端入口的预算/撤销候选，并接入原真实模型。总目标仍 active；本轮没有上板、SSH、恢复、部署或推送。原普通 R0/warm/hit 资源包、原安全门槛、B/HLS/公共数学与 ABI、历史失败均保留。候选不写入默认服务或原板测包。
+
+## 实际执行路径和语义
+
+原生程序与 CPU 数学库不重编译，继续使用已锁定文件。只把冻结 `native_cpu_control.cpp` 派生为独立 PC 适配库：实际调用 `api.run` 前执行本地许可检查，原 CPU 结果、状态、job 和有限值核验后才完成本地提交。反向补丁检查能恢复原父源码的全部标准化文本；ELF 为 x86-64、没有 XRT 链接依赖，六个公共 ABI 符号和公共头文件保持。
+
+每批最多 72 个实际投影 job。管理器绑定窗口/worker nonce、PID/启动时间、模型/配置摘要、请求 SHA、代次、T、连续 job 范围、预算和 monotonic deadline。预算由真实工作图推导：prefill 每个 8-token 微批及尾块各 72 次，decode 每实际后续调用 72 次；不机械多算首 token。实际 R0/warm/hit 分别 1440/648/792 次，最大请求预算 1512/648/864；EOS 后未发出的 72/0/72 次额度销毁。中断不能退款或自动重放。
+
+一个 4096-byte、几何封存的 memfd 保存原子授权状态。实际后端每次执行授权都检查管理器 peer、绑定 PID/启动时间、代次、取消/撤销、期限、健康年龄、顺序和剩余预算。多个映射共用同一个原子计数，不各领一份额度。授权和撤销通过同一原子字决定先后；已授权在途不能假称被远程瞬时取消。`INFLIGHT` 在授权时置位，只有实际 CPU 成功、返回身份和 Y 验证后才能原子清除；失败/未知保持锁存，拒绝另一映射继续执行或结束请求。
+
+该共享页对受控 worker 可写，**不是对恶意代码的内存隔离**。本轮验证只适用于已核对制品的可信单 worker；不可信 worker 继续使用独立逐次裁决。Python/C++ 共享原子行为在当前 x86 Linux 实测，不能据此宣称 ARM/XRT 可用。CPU 上没有真实设备代次；真实 PL 的设备/BO/内核代次绑定与重配置失效接线仍未实现。
+
+独立线程每 50ms 取得新的 PC 所有权/内存观测，投影入口只读有界健康状态，最大年龄 250ms；每次发新批许可仍要求本次请求后的 fresh fence。线程不写日志。旧 MemAvailable 门槛保持；CMA/温度/kmsg 的冻结判据已有前轮 fixture 验证，本次实际 CPU 域明确没有 Board CMA 值。**这改变了管理器逐投影独立裁决和观测频率**，不是声称原隔离语义完全一样。50/250ms 只作 PC 参数，没有采用附件 1s/3s 建议，也没有通过 Board 安全响应验收。内核失调度、真实 DMA 和可卸载性仍未证明。
+
+请求 BEGIN 落盘后才启用页面额度；END 前先使剩余额度失效，结果完整核验、END 和回执持久化、最终健康关口都完成后才交付。每批范围也持久登记，严格逐次为 2962 条日志，72 次一批为 122 条（含 40 个范围），不是“只有两个 fsync”。范围记录代表已预留额度，不冒充逐投影 IPC 或硬件完成。观测线程和子进程均停止后才关闭其仍会访问的所有权 FD；未停止则保留。
+
+## 验证和修复原件
+
+- 当前 16 项真实 CPU 数组/后端测试、3 项原生原件审计测试、4 项关闭顺序测试通过，共 23 项。T1/T8 逐字节匹配原 CPU 库；两份不同 DSO 映射不重复消费；剩余额度撤销、错 T/范围/旧回复/代次/上下文/期限、预算溢出、心跳停摆、原生进程重启、实际管理器退出均在后端拒绝。管理器退出测试没有先合作撤销，子进程仍拒绝缓存额度并合作退出。
+- 12 次实际授权/撤销竞争按撤销原子返回值对账；撤销先赢时不再转发，授权先赢时保留已授权/在途语义。未把模拟竞争计为 PL 或 kernel 测试。
+- 审计负例包含 7 种重算完整日志链及回执后的语义损坏，以及 4 种 stdout/回执/目录/截断损坏；仍全部拒绝，未用“哈希坏了”替代范围语义检查。完整文件不证明历史 fsync，更不给释放或重放。
+- 初版一次数组测试使用了旧请求限额，实际后端正确拒绝，已保留失败源码、日志和原生复现，修正 fixture 后通过。审查发现的 v4 局部门禁缺口也有真实 CPU API 失败反例：旧 `end` 可错误收口，v5 在途位使其拒绝；原管理器本就拒绝这个失败结果，未追认旧版可投入使用。
+- 收紧了窗口与批许可 deadline 一致性、worker PID/启动时间、共享页不得重初始化、构造失败 FD 清理及 owner/observer/child 关闭顺序。早期构建继承的父源码 SHA 字段另写 reviewed 回执纠正，原构建回执和库不改写。既有 prefix 头文件的编译 warning 原样保留。
+
+当前入口的两个正常窗口，各实际 2880 次 CPU 计算/72 次权重加载，输出 token、文本、EOS、末位置 logits 指纹及清理与原 CPU、R0/hit 一致。只证明普通输出和这些字段，不代替完整中间状态、混合状态/PL 消费或最终数值门禁。全部开发窗口也保留，不挑最快样本。
+
+| 当前真实模型故障注入 | 已预留额度 | 实际处理 |
+| --- | ---: | --- |
+| 首批缓存额度使用中撤销 | 72 | 第 5 次授权附近停止，实际 CPU 计数见原件；未执行余下额度，0 完整答案交付 |
+| END append 期间撤销 | 1440 | 原生 OK/已清理且可能已有 COMMIT，但最终关口拒绝，0 完整答案交付 |
+
+故障进程 EOF 合作 exit2，非正常窗口关闭，不强杀，不声称释放板端平台。冻结 runner 的旧 fault 字段不认识新注入，实际注入以 `MICROBATCH.json/injections`、原生 stdout 和本轮独立审计为准。失败原因和旧时钟助手的异常链均保留。
+
+## 输入后得到完整答案
+
+最终以完全相同当前源码/库、同一冻结问题、顺序各一次的两个 PC 窗口对照：
+
+| 普通路径 | 逐次许可完整核验答案 | 72 次一批完整核验答案 | 批许可内部首 token |
+| --- | ---: | ---: | ---: |
+| R0 | 11.103s | 4.023s | 3.401s |
+| 70-token 公共前缀 hit | 5.728s | 1.953s | 1.269s |
+
+实际 CPU/未来对应的 PL 投影工作量没有减少。prefill 许可可由 1008/360 次变为 14/5 次，warm 与 decode 另计；本轮三个请求共 2880 次实际 CPU 调用，批许可 2880→40，总控制消息 2955→115。收益同时包含许可 IPC、管理器检查和日志频率的改变，不能只归因给某一项。
+
+完整答案计时含内容检查及 END/回执，内部首 token 尚不是可交付答案。模型/权重加载、Session 构造与提前 warm 不在这些请求计时中；继续用原 107/70/37-token 普通输入，无新增长前缀、全位置 logits 或原始状态转储，也未重读旧 519.70MiB 诊断原件。既有前缀状态约 22MiB 驻留没有被说成“零内存成本”。
+
+这是 PC 单样本对照，不是 Board 预测、p95、语音端到端或生产 SLA。早先 v5 样本和所有开发时间同样留存；本次没有只选最快数据，也未证明长期无泄漏/CMA 恢复。新候选不默认启用，原普通资源包仍为恢复并确认安全释放后的第一板测基线。
+
+## 接续工作
+
+P1-4 的无板模式选择、安全空闲切换和严格回退，以及真实 PL 控制端/设备代次的独立未绑定接线仍待完成。短提示词三组仍 NOT_ACCEPTED。Board 普通资源、适用数值、同工作量 A/B、长期稳定、TT10/A12 第11步和最终审核仍未完成，不能说只剩等上板。
+
+证据在 `evidence/model_pl_A/20261026-microbatch-v1/`：`NATIVE_REVIEW.json`、`TIMING_COMPARISON_PC_ONLY.json`、`UNKNOWN_END_V4_V5_REPRODUCTION.json`、最终 `abi-tests-07/`、`audit-tests-02/`、`owner-close-tests-01/`、`build-source-final/` 和 `native-transcripts/`。命令/退出码/源码及产物 SHA 见 `FINAL_REVIEW.json`，完整剩余清单见 `COMPLETION_AUDIT.json`。
+
+复杂设计、C++/ABI、调试和证据验收未委派 DeepSeek/子代理；实际模型设置 unknown。原状态其他条目逐值保持，原普通 ZIP、37 条历史源码 pin、父包168文件与5契约重新核对。没有更改其他任务的板端释放结论。
+'''
+    with (ROOT/HANDOFF).open('x',encoding='utf-8') as f:f.write(text)
+    additions={
+        'DESIGN_GAP':'P1-3 可信单 worker 的后端本地微批预算已通过真实 CPU 模型/数组/撤销/重启/未知在途验证。真实 PL 设备代次/BO 接线、P1-4 模式安全切换与最终验收仍未完成；候选不默认启用。',
+        'DECISIONS':'预算与撤销/在途状态在实际后端共用原子字；请求结束销毁余量，未知不退款。管理器每批裁决，本地每次授权检查；共享页可写，限可信受控 worker，非恶意代码隔离。50/250ms 仅PC实验，真实PL与默认普通包保持。',
+        'TEST_MATRIX':'当前16项真实数组/后端、3项独立原件审计、4项关闭测试通过。最终正常/故障各2窗口；实际投影2880不变、批许可2880→40。缓存批撤销及END失败均0答案交付；v4未知在途局部END反例及v5拒绝保留。BOARD/CMA/真实DMA仍NOT_TESTED。',
+        'AI_ASSISTANCE':'主代理完成P1-3私有CPU适配/管理器与验收，未委派DeepSeek/核心子代理，模型设置unknown。PC最终完整答案逐次→微批R0 11.103→4.023s、hit 5.728→1.953s，单样本不换算Board。修复worker绑定/未知在途/owner关闭，并保留早期失败。目标active，继续P1-4及PL未绑定接线，未上板/部署/推送。'}
+    for name,value in additions.items():
+        p=ROOT/('docs/'+name+'.md');assert p.read_bytes()==(OUT/(name+'.md.before')).read_bytes()
+        with p.open('a',encoding='utf-8') as f:f.write('\n\n## 2026-10-26 A12 P1-3 本地微批许可 PC 候选\n\n'+value+'\n\n交接 `'+HANDOFF+'`。\n')
+    entry=dict(status='REAL_PC_BACKEND_MICROBATCH_VALIDATED_NOT_ENABLED',report=HANDOFF,
+        final_review='evidence/model_pl_A/20261026-microbatch-v1/FINAL_REVIEW.json',new_tests=23,
+        actual_CPU_calls_per_normal_window=2880,grant_counts=dict(one_projection=2880,microbatch=40),
+        journal_rows=dict(one_projection=2962,microbatch=122),PC_single_sample_timings=times,
+        production_default=False,real_PL_binding='NOT_IMPLEMENTED',ARM_build='NOT_PERFORMED',BOARD='NOT_TESTED',
+        board_CMA='NOT_TESTED',board_expected_saving_s=None,goal_status='active')
+    (ROOT/'docs/PROJECT_STATUS.json').write_text(json.dumps({KEY:entry,**old},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    assert {k:v for k,v in read(ROOT/'docs/PROJECT_STATUS.json').items() if k!=KEY}==old
+    save(OUT/'PRESERVATION.json',dict(status='PASS',baseline_files=protected,old_source_pins=source_pins,
+        source_pin_count=len(source_pins),parent_files=len(original['parent_files']),contracts=len(original['contract_files']),
+        resource_bundle_files=len(files),original_resource_ZIP_sha256=sha(probe/'bundle-v2.zip'),
+        other_status_entries_exact=True,old_governance_text_preserved_as_prefix=True))
+    sources=sorted(p for p in (ROOT/'platform/qwen35/a12').iterdir() if p.is_file() and
+        (p.name.startswith(('microbatch_','test_microbatch_','reproduce_microbatch_'))) and p.suffix in ('.py','.hpp'))
+    target=OUT/'source-final';target.mkdir(exist_ok=False)
+    for p in sources:shutil.copyfile(p,target/p.name)
+    commands=[]
+    def cmd(command,code,log,scope):commands.append(dict(command=command,exit_code=code,log=log,scope=scope))
+    for i in range(1,6):cmd('wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/microbatch_build.py --revision '+str(i),0,
+        'build-'+str(i)+'.stderr','PC adapter compile only; no model/CPU math rebuild')
+    for i in (2,3,4,5):cmd('wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/microbatch_config.py evidence/model_pl_A/20261026-microbatch-v1/BUILD-v'+str(i)+'.json',0,
+        'BUILD-v'+str(i)+'.json','Pinned PC configuration generation')
+    cmd('wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/microbatch_build.py --review-existing 5',0,
+        'BUILD-v5-reviewed.json','Metadata correction only; original receipt and binary untouched')
+    revisions=[2,2,3,4,4,5,5]
+    for i,v in enumerate(revisions,1):cmd('wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/test_microbatch_abi.py --build evidence/model_pl_A/20261026-microbatch-v1/BUILD-v'+str(v)+'.json --tag abi-tests-0'+str(i),
+        1 if i==1 else 0,'abi-tests-0'+str(i)+'.txt','Real CPU arrays/backend; first fixture failure retained')
+    for r in review['runs']:
+        meta=read(OUT/('run-'+r['tag'])/'MICROBATCH.json');command='wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/microbatch_run.py --tag '+r['tag']+' --grant-size '+str(r['grant_size'])
+        # Early v2/v3 runs used then-current defaults; receipt records the exact binary/config.
+        if meta['fault']:command+=' --fault '+meta['fault']
+        cmd(command,1 if meta['fault'] else 0,r['tag']+'.txt','Actual PC model; injection expected to refuse' if meta['fault'] else 'Actual PC model')
+    for name,log in [('test_microbatch_audit.py','audit-tests-01.txt'),('test_microbatch_audit.py','audit-tests-02.txt'),
+            ('test_microbatch_owner_close.py','owner-close-tests-01/unittest.txt'),('microbatch_artifact_audit.py','ARTIFACT_AUDIT.json'),
+            ('reproduce_microbatch_fixture.py','FIXTURE_OVERGRANT_REPRODUCTION.json'),('reproduce_microbatch_fixture.py','FIXTURE_OVERGRANT_REPRODUCTION-v5.json'),
+            ('reproduce_microbatch_unknown_end.py','UNKNOWN_END_V4_V5_REPRODUCTION.json'),('microbatch_review.py','NATIVE_REVIEW.json')]:
+        cmd('wsl -d KV260-A-2204 -- python3 platform/qwen35/a12/'+name,0,log,'PC replay/independent audit; versions retained in evidence')
+    save(OUT/'STATUS.json',dict(status='PC_LOCAL_MICROBATCH_VALIDATED_NOT_ENABLED',goal_status='active',BOARD='NOT_TESTED'))
+    evidence=[pin(p) for p in sorted(OUT.rglob('*')) if p.is_file() and '__pycache__' not in p.parts]
+    save(OUT/'FINAL_REVIEW.json',dict(status='PC_LOCAL_MICROBATCH_VALIDATED_GOAL_ACTIVE',recorded_at=datetime.now(timezone.utc).isoformat(),
+        source=[pin(p) for p in sources],evidence=evidence+[pin(ROOT/HANDOFF)]+[pin(ROOT/'docs'/n) for n in DOCS],
+        commands=commands,governance='GOVERNANCE_CHECKS.json',new_tests=23,
+        real_PC_native_windows=len(review['runs']),final_current_source_windows=4,BOARD='NOT_TESTED',PL_calls=0,
+        hardware_completions=None,board_CMA='NOT_TESTED',board_expected_saving_s=None,production_default=False,
+        whole_goal_achieved=False,goal_status='active',DeepSeek_used=False,core_or_evidence_delegated=False,
+        actual_model_settings='unknown',remote_pushed=False))
+    print(json.dumps(dict(status='PC_LOCAL_MICROBATCH_VALIDATED_GOAL_ACTIVE',source_files=len(sources),evidence_files=len(evidence)+6,
+        new_tests=23,native_windows=len(review['runs']),final_current_source_windows=4,goal_status='active'),indent=2))
+
+
+if __name__=='__main__':main()

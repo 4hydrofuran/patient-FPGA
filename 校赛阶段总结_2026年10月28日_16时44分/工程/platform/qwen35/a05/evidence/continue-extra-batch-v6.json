@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/additional_batch_tests.py",
+    "eval/qwen35/a05/extra-batch-v6"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:09:50.045587+00:00",
+  "elapsed_s": 19.666876300005242,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/additional_batch_tests.py\", line 24, in <module>\n    check(f'{name}/{t}/clear',r['state_position_after_clear']==-1)\nKeyError: 'state_position_after_clear'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/additional_batch_tests.py\", line 41, in <module>\n    w.close()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 29, in close\n    self.send({'op':'shutdown'})\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 20, in send\n    self.wire.write(json.dumps({'request':v},ensure_ascii=False)+'\\n');self.wire.flush();self.p.stdin.write(json.dumps(v,ensure_ascii=False)+'\\n');self.p.stdin.flush()\nBrokenPipeError: [Errno 32] Broken pipe\n"
+}

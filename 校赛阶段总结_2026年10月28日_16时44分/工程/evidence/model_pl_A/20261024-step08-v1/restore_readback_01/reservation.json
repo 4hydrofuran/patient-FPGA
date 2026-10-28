@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/5VV227bOBB991cIfpEEWPeblUIPaeMugu4mhZN0H4LA4GVos7EkL0klDRb77zu0rc0mRYNWD6I4HHLmnDkcTafTJRDuKDBEdsCdrlct2QYKaN8bNLNece2QjjtsUAo648i2HQyhW3CsS9SBeezVvbNTfS/C6XQ6ke2uV8ahREOZj7MN0ZutpOP0q+678bvXE6H61tkRY12co/kzTkcXPVA8n4HWkwnRGva7wjUYGCT3/KaJ9ymibehIC54fKtgCJtA0bhnOwyQNSBJL9VfqjvuPCYV6Q9Ki9Gw0z43AsKglbINcBJK79hzCV/TJgPZ8P9zANy7XoI2N6QLJgVRJnsYxFHEyT1ieVQXN5gVNIGM5iUXJk7pmjJa4nPIyFfOSMpFXtMyBuRPkzDTH0A9ERZhQdP+QljGmm0bawC6eYy206RUEaZyWSZzmwUPi+u+OpWn+/mcieuVY2I7sHM/doeuhfKFl2Z25h1nA+rZFlg5W/2Ti4EMbT+2riNtfgh0D3Nqlu4ZLZrz9UrOFzqP+7EBc84pH+oKk2UEEzWEILeqO9RysG4f9l+9PdrJDHG6015OQqn0kCiLZkjWEQhr3xE0zEhNeFUnJS1FWIs3noi7SssiyNGfJnNSs4gmnWSK4SCsSx5mI04RwETNSJuDO9mhfh9iTpJkKB9muMYxIgNYwzxNI4piUuShqAF5VlDFeZVldpnXFoM4oxYoyyOukJBXFrKo6Y+W8+EEYlF7AkHnJiUFZoQrHWiZHfFDGvBJ5HWcZiDkIylOMJoigUOcko3h4TvJqzgtRQIbxyjJFaVFWiJJASt1nEcyQTSsES2ooDbRYy5M3NP995V/JHA+aDHjNGrcSZV7FeRFkCY2DXCQiIJDQIGdYiTivEOfcndhr3Dxf2JBtgN2v+sHsBuPdunTQzGxRlUFgZAtobzKcMbK1xl6tQ6GQdND3pt+FF4fu8gfpUAwKHSL0iP7nEb30iK7AGNmt9ViKtw8Mn93d38B86LsOmJF99/7pBiGjFVcs+LuZgW+muVYDzMa0cz/URsmd5489xUJHG1FGP0p7qXtn+rMJR64/GTpNHoD/OnvYCQPcscMknn6CRZvnbXYSJHe/xlL4TBBGuTlk677NzbsjNyO2xqWOQVcUipKd8Ww3CvnQ7rS37zFInxl04y4XV9eXy8VqufhwuTy7Wp0tPp7e/H69en95eb36fH5xtTq9OFvdXFydflmcrS4W139eLj+tviyW5x/PF2fubOyPx3G2bzL2dYBsb+gKRX1svpbuSD/p6B5UB9tI4XXt2+joNf4HLE7vP2Szg2/z/V9nNoI9joeQYDZxs4e77QnX3o+rLHe2wl/xRTi3qteb/hEHDg/4tue4dz52YLnuyFY38Yz1nZDrQRFbmhXbkA5vbxOjj9gOerOvjT/5F49vZvTtBwAA')); assert hashlib.sha256(b).hexdigest()=='d424450c29472d1259de3bb1e22b2911b76087bf4e767dd0168f30a681a6a1fd'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "d424450c29472d1259de3bb1e22b2911b76087bf4e767dd0168f30a681a6a1fd",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

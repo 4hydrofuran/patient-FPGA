@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Get-NetAdapter | Select-Object Name,Status,LinkSpeed,InterfaceDescription | ConvertTo-Json; Get-NetRoute -DestinationPrefix 192.168.2.0/24 | Select-Object InterfaceAlias,NextHop,RouteMetric,State | ConvertTo-Json; ping -n 2 -w 1000 -S 192.168.2.1 192.168.2.2"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T01:48:50.605366+00:00",
+  "elapsed_s": 7.387138199992478,
+  "exit_code": 1,
+  "stdout": "[\n    {\n        \"Name\":  \"WLAN 2\",\n        \"Status\":  \"Up\",\n        \"LinkSpeed\":  \"195 Mbps\",\n        \"InterfaceDescription\":  \"Intel(R) Wi-Fi 6E AX210 160MHz\"\n    },\n    {\n        \"Name\":  \"vEthernet (WSL (Hyper-V firewall))\",\n        \"Status\":  \"Up\",\n        \"LinkSpeed\":  \"10 Gbps\",\n        \"InterfaceDescription\":  \"Hyper-V Virtual Ethernet Adapter\"\n    },\n    {\n        \"Name\":  \"以太网\",\n        \"Status\":  \"Up\",\n        \"LinkSpeed\":  \"1 Gbps\",\n        \"InterfaceDescription\":  \"Realtek PCIe GbE Family Controller\"\n    },\n    {\n        \"Name\":  \"iKuuuVPN\",\n        \"Status\":  \"Up\",\n        \"LinkSpeed\":  \"100 Gbps\",\n        \"InterfaceDescription\":  \"Meta Tunnel\"\n    },\n    {\n        \"Name\":  \"本地连接\",\n        \"Status\":  \"Not Present\",\n        \"LinkSpeed\":  \"0 bps\",\n        \"InterfaceDescription\":  \"Sangfor aTrust VNIC\"\n    }\n]\n{\n    \"InterfaceAlias\":  \"以太网\",\n    \"NextHop\":  \"0.0.0.0\",\n    \"RouteMetric\":  256,\n    \"State\":  0\n}\n\nPinging 192.168.2.2 from 192.168.2.1 with 32 bytes of data:\nRequest timed out.\nRequest timed out.\n\nPing statistics for 192.168.2.2:\n    Packets: Sent = 2, Received = 0, Lost = 2 (100% loss),\n",
+  "stderr": ""
+}

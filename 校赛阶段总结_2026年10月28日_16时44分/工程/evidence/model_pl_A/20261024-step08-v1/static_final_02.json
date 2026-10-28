@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "D:/Python/Python314/python.exe",
+    "-B",
+    "platform/qwen35/a12/step08_static.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:55:46.068113+00:00",
+  "elapsed_s": 0.39938770001754165,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Patientqwen\\platform\\qwen35\\a12\\step08_static.py\", line 24, in <module>\n    save(OUT/'STATIC_REVIEW.json',dict(status='PASS_FINAL_PRIVATE_PROFILE_AND_SOURCE_REVIEW',\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        source_sha256={p.relative_to(ROOT).as_posix():sha(p) for p in paths},specs=specs,board_contact=False))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Patientqwen\\platform\\qwen35\\a12\\common.py\", line 24, in save\n    with path.open('x', encoding='utf-8', newline='\\n') as stream:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Python\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: 'C:\\\\Patientqwen\\\\evidence\\\\model_pl_A\\\\20261024-step08-v1\\\\STATIC_REVIEW.json'\n"
+}

@@ -1,0 +1,13 @@
+{
+  "strategy": "FACT_COPY_GREEDY_VERIFY_V1",
+  "proposal": "CURRENT_INPUT_FACTS_WITH_NUMERIC_SPACING",
+  "acceptance": "TARGET_GREEDY_ARGMAX_EVERY_TOKEN_PLUS_EOS",
+  "rejection": "CLEAR_ALL_STATE_RESTORE_NEUTRAL_PREFIX_REPLAY_FULL_PROMPT",
+  "native_arm_sha256": "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+  "native_pc_sha256": "64b6ebe583dc6d4f25cb21991548fed6f9816de02140b539ec924268f1efc925",
+  "current_request_requires_target_model": true,
+  "answer_cache_for_miss": false,
+  "live_miss_prompt_policy": "allowed-compact-01",
+  "BOARD": "NOT_TESTED",
+  "arm_build": "explicit cortex-a53 / 2026.1 SDK"
+}

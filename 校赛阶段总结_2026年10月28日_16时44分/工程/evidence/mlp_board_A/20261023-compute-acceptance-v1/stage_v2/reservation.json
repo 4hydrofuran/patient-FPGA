@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/62VW4+rNhDH3/kUvAFSAHMzsCseqp5V39pK3UqVVqvIl3HiBjDFJnv59Mcml27Trk4r9SEStscz//nNeCKHSc3G/12rcbMnet9LuqFEAy43SntiVoM/EeO2fXky/dkuPdXzzn2EQXokc2qP08MxxygmWZbaXzz0U5yjHGcoL+JjFkT3I7z8lyt5EHlEa7ARlU52YGCRPIy6Dvlk5G5vGckAYZTM0INV3HUBTpoky61DJOc/8uBy/xx1mhVL9ZtODzCP0Kez9aOGlCpltpIHzhHhWwOvxjrVZpaTCxc0ZZ6LNhcxR5mIy6ZsY8KzNsaAMcUlIi3h11BnhInek7zC4TkyGJYOhO3lCPGfkeibAR1GUbKHVy53oM0aD0gJpM7KHCGoUNZkrCzqihZNRTMoWEmQwDZ+yxjF9jjnOBcNpkyUtZUD7KplVCs6V76kh1epjb6wV+xwhZ8SZuQRgmjl6i6dVTtUg+JLD+m7Yr2VfXYS3YD9wJSpUchdyuEoGcRmBkjVEeaeOJMcx9qQ2cAcH6TRWzmQHWyz1G6aRX9aADJNvYRPGYe2F9NgIKMUFmHiOvkbhAtqMeIaIVvWCldN0RLKSYtzQDVUVW2p0kbwjEILdVNinBVClBiYaFqRZZbw+Sns3uXkWb5sf+nsvRogXegymmXtaaaGaTEQr0YfH0S67qxqk937jeBPMl2v3CYjbLdkdVsVeQ1l0/KC4Yq2qGnBim4aRuyiYE0tUNXgVoiMlgxYTWnWlDQvysAm8NYrwrtVi/vSoUss4eDUz6D1OXLkXSh3pxGR2IZzVhzCs5Onm0I8R/f/nMvF7DadimWkAKhzhBEuqozywpaiEi2q6pZVgjRlQZqK45IWuCk4IRWrUJ7bxq8aW6vAGz4mcg1zbxM5SrXoj6f/onU8N2gGog8hUqiu1zGWDAcu59C+DeiQsn0UeULNvhtHG/Dl6A9PgZA96OA5kQYG6+fO86VYLdz5GdYdJ4Z8jtJZP0eeD70Ge98/g7wkco1xMuw6sDarxzUtt3nTVRcPPYyhM7S84SlYT4Pn9fXfFGk1+muB7IXTYfDs+fYx28HcWSRruPvT2k6cGUbzN0qb077uHufFgnKzZKsO68pqe5Fmf3aYqMkqDF6pm0naF3cieZktyJOeK2tHMryp3iboyTKy/db+mWzVyCCZ3gJHf3UfXpRGn4b4RjUib5rlaMK1ifgyTDrkkpnwNMK64JfH7354+LL98afH7cNvD9//+vjwJdhcJG5P5P6HJo+iyPsKZrMAPLoHAAA=')); assert hashlib.sha256(b).hexdigest()=='95d92895e56a681df2aeefd6671d0bf7874e722e0cb18beba3d294207ee41e6d'; exec(compile(b,'reviewed_open_task','exec'))\""
+  ],
+  "script_sha256": "95d92895e56a681df2aeefd6671d0bf7874e722e0cb18beba3d294207ee41e6d",
+  "scope": "A11_MLP_23_COMPUTE_ACCEPTANCE"
+}

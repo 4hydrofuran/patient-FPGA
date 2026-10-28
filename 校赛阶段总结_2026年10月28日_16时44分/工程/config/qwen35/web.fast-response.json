@@ -1,0 +1,15 @@
+{
+  "schema": "A12_FAST_RESPONSE_PREPARATION_V1",
+  "default_profile": "short34-threads2",
+  "profiles": {
+    "short34-threads2": {"prompt_policy": "facts-only-02", "threads": 2, "prefix_tokens": 34},
+    "short34-threads3": {"prompt_policy": "facts-only-02", "threads": 3, "prefix_tokens": 34},
+    "legacy70-threads2": {"prompt_policy": "legacy", "threads": 2, "prefix_tokens": 70}
+  },
+  "context_tokens": 1024,
+  "output_tokens": 24,
+  "ordinary": {"max_runs": 5000, "max_session_seconds": 1800, "weight_load_limit": 72},
+  "continuous": {"max_runs": 60000, "max_session_seconds": 14400, "weight_load_limit": 72},
+  "authorization_included": false,
+  "BOARD": "NOT_TESTED"
+}

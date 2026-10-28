@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python3",
+    "quant/model_audit.py",
+    "--out",
+    "quant/evidence/source-graph-audit-20260928.json"
+  ],
+  "cwd": "/mnt/c/Patientqwen",
+  "started_utc": "2026-09-28T09:56:31.733007+00:00",
+  "elapsed_s": 28.679434270999998,
+  "exit_code": 0,
+  "stdout": "{\"tensors\": 72, \"memory\": {\"status\": \"SHAPE_BASED_PLANNING_NOT_ALLOCATED_OR_FROZEN\", \"original_tensor_payload_bytes\": 988065536, \"original_mlp_bf16_bytes\": 627572736, \"original_gguf_file_bytes\": 994156736, \"proposed_w4_payload_bytes\": 156893184, \"proposed_f32_scales_bytes\": 9805824, \"proposed_sidecar_payload_bytes\": 166699008, \"sidecar_metadata_and_page_alignment_bytes\": null, \"resident_weight_bo_bytes\": null, \"original_gguf_resident_pages_bytes\": null, \"sidecar_resident_pages_bytes\": null, \"repack_copy_resident_bytes\": null, \"runtime_workspace_bytes\": null, \"linux_budget_bytes\": null, \"pl_budget_bytes\": null, \"example_kv_f16_512_tokens_bytes\": 6291456, \"policy\": \"Never add file-backed RSS twice; BO copy and file-backed pages MAY coexist. No full second model; no per-token weight quantization. A3 must avoid original MLP loading, account tied-head buffers and measure actual residency.\"}, \"a2\": \"NOT_PASSED\"}\n",
+  "stderr": ""
+}

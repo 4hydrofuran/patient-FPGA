@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a04/test_vectors.py",
+    "--output",
+    "eval/qwen35/a04/vectors-sanitize-v1",
+    "--binary",
+    "/home/member-a/qwen35-a04/build-v1/w4ref-sanitize"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:49:02.314578+00:00",
+  "elapsed_s": 13.228456199984066,
+  "exit_code": 0,
+  "stdout": "{\"checks\": 210, \"failed\": []}\n",
+  "stderr": ""
+}

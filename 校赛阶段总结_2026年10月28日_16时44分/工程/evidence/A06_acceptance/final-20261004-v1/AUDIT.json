@@ -1,0 +1,576 @@
+{
+  "status": "PASS_A06_OFFLINE_KERNEL_ACCEPTANCE",
+  "acceptance_owner": "A",
+  "provider": "B",
+  "source_commit": "e227297ee1bb0bdf542fc81761642b23639e15c0",
+  "selected_variant": "double",
+  "build_id": "0xB3030002",
+  "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+  "header_sha256": "6e1d86fb735f91b30a86f867889d75afa9933349d195c75b9f41a4509d6b069b",
+  "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "embedded_metadata_sha256": "dadfa622dc114a373af9195778f64e34f4d715ea190426fa745dfd39f818d1de",
+  "matrix": [
+    {
+      "requirement": "A06.1 receipt/source/XO/reports/vectors",
+      "status": "PASS",
+      "evidence": "supplement-v1/inventory.json + static.json; 1925 archive files / 14 exact input receipts"
+    },
+    {
+      "requirement": "A06.2 header/XO binary ABI and A07 mapping",
+      "status": "PASS",
+      "evidence": "supplement-v1/interface-map.json; 17 arguments + meta40 + hw/linear_A/A07_KERNEL_INTEGRATION.md"
+    },
+    {
+      "requirement": "A06.3 A independent PC arithmetic",
+      "status": "PASS",
+      "evidence": "supplement-v1/tests/pc.json; 61 cases / 2800022 checks"
+    },
+    {
+      "requirement": "A06.3 A local Vitis Csim of current source",
+      "status": "PASS",
+      "evidence": "final-20261004-v1/csim/csim.json: actual exit0, 61 cases / 2800022 checks"
+    },
+    {
+      "requirement": "A06.4 actual shapes/required Csim and Cosim coverage",
+      "status": "PASS_REUSED_EXACT_VERSION",
+      "evidence": "supplement-v1/final-checks-v2/REPORT.json; B full50; gate/down T1/T8 native Cosim; A04 RTL66 replay"
+    },
+    {
+      "requirement": "A06.5 part/tool/150MHz/resource/II/reuse review",
+      "status": "PASS_REVIEW_NOT_TIMING_CLOSURE",
+      "evidence": "supplement-v1/static.json and XO-embedded reports; HLS slack -0.40ns"
+    },
+    {
+      "requirement": "A06.6 final accepted/frozen kernel",
+      "status": "READY_TO_FREEZE",
+      "evidence": "All numerical/ABI/source and required reused RTL receipts verified; A07 offline only"
+    },
+    {
+      "requirement": "Delivery clean portable vector byte reproduction",
+      "status": "PASS_A_REPAIR",
+      "evidence": "portable-receipt.json + portable-logs/*; all382 SHA identical; B originals unchanged"
+    }
+  ],
+  "Csim": {
+    "status": "PASS",
+    "cases": 61,
+    "checks": 2800022,
+    "build_id": 3003318274,
+    "board": "NOT_TESTED"
+  },
+  "case_results": [
+    {
+      "case": "hand",
+      "N": 2,
+      "K": 2,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 32,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "repeat_call",
+      "N": 2,
+      "K": 2,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 32,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 128,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 2,
+      "status": "PASS",
+      "int32_compared": 256,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 3,
+      "status": "PASS",
+      "int32_compared": 384,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 4,
+      "status": "PASS",
+      "int32_compared": 512,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 5,
+      "status": "PASS",
+      "int32_compared": 640,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 6,
+      "status": "PASS",
+      "int32_compared": 768,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 7,
+      "status": "PASS",
+      "int32_compared": 896,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "tail_cross_scale",
+      "N": 33,
+      "K": 129,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 1024,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 28672,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 28672,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 2,
+      "status": "PASS",
+      "int32_compared": 57344,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 2,
+      "status": "PASS",
+      "int32_compared": 57344,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 3,
+      "status": "PASS",
+      "int32_compared": 86016,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 3,
+      "status": "PASS",
+      "int32_compared": 86016,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 4,
+      "status": "PASS",
+      "int32_compared": 114688,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 4,
+      "status": "PASS",
+      "int32_compared": 114688,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 5,
+      "status": "PASS",
+      "int32_compared": 143360,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 5,
+      "status": "PASS",
+      "int32_compared": 143360,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 6,
+      "status": "PASS",
+      "int32_compared": 172032,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 6,
+      "status": "PASS",
+      "int32_compared": 172032,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 7,
+      "status": "PASS",
+      "int32_compared": 200704,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 7,
+      "status": "PASS",
+      "int32_compared": 200704,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "gate_synthetic",
+      "N": 3584,
+      "K": 1024,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 229376,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "down_synthetic",
+      "N": 1024,
+      "K": 3584,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 229376,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "zero_group",
+      "N": 33,
+      "K": 129,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 1024,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "int32_bound_113792",
+      "N": 32,
+      "K": 128,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 32,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "fp32_group_order",
+      "N": 1,
+      "K": 384,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 96,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "real_weight_gate_synthetic_activation",
+      "N": 3584,
+      "K": 1024,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 28672,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "real_weight_gate_synthetic_activation",
+      "N": 3584,
+      "K": 1024,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 229376,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "real_weight_down_synthetic_activation",
+      "N": 1024,
+      "K": 3584,
+      "T": 1,
+      "status": "PASS",
+      "int32_compared": 28672,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "real_weight_down_synthetic_activation",
+      "N": 1024,
+      "K": 3584,
+      "T": 8,
+      "status": "PASS",
+      "int32_compared": 229376,
+      "max_abs_error": 0,
+      "fp32_bit_differences": 0
+    },
+    {
+      "case": "kernel_error_0",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_1",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_2",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_3",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_4",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_5",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_6",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_7",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_8",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_9",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_10",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_11",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_12",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_13",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_14",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_15",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_16",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "kernel_error_17",
+      "status": "PASS",
+      "y_consumed": false
+    },
+    {
+      "case": "host_reject_0",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_1",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_2",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_3",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_4",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_5",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_6",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_7",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_8",
+      "status": "PASS",
+      "kernel_launched": false
+    },
+    {
+      "case": "host_reject_9",
+      "status": "PASS",
+      "kernel_launched": false
+    }
+  ],
+  "csim_log_sha256": "3e8944937cb580285339518aaba5216a2fe2148b8aea7ea79ea0324a49c21cb2",
+  "current_source_config_unchanged": true,
+  "Csim_max_abs_error": 0,
+  "prior_sealed_files_checked": 2020,
+  "governance_changes_since_prior": [
+    {
+      "path": "docs/PROJECT_STATUS.json",
+      "prior_sha256": "786e110bc71f8ff1e2a498e3b4fb3710223ef008d6caea300fd5e3ca85650e21",
+      "current_sha256": "7d0e58b37b330c5c79514412032b130b5136092aa0beac084e1d72eadc973b24"
+    }
+  ],
+  "A04_reference_and_sidecar_files_verified": 151,
+  "B_payload_files_verified": 1923,
+  "strict_vectors_exact": 382,
+  "archived_RTL": {
+    "transactions": 66,
+    "max_abs_error": 0,
+    "reference_partial_comparisons": 641472,
+    "rtl_internal_partials_observed": false,
+    "native_pass_transactions": 65,
+    "native_failed_postcheck_recovered_transactions": 1
+  },
+  "new_RTL_run": "NOT_TESTED_REUSED_EXACT_SAME_SOURCE_REQUIRED_COSIM",
+  "synthesis": "REUSED_EXACT_XO_HLS_REPORTS",
+  "HLS_slack_ns": -0.4,
+  "implementation": "NOT_TESTED",
+  "ARM_execution": "NOT_TESTED",
+  "BOARD": "NOT_TESTED",
+  "board_error": null,
+  "power": null,
+  "CMA": null,
+  "BO_budget": null,
+  "license": {
+    "sha256": "c334722c1bcf29b3a925427b4e19c40067a9d5a734556abade35b7bf7c27ee83",
+    "host_id": "00155dbc29e7",
+    "validation": "PASS_ACTUAL_CURRENT_SOURCE_VITIS_CSIM",
+    "persistent_MAC_guarantee": false
+  },
+  "failures_preserved": true,
+  "new_commit": null,
+  "push": false,
+  "A07_implementation_or_B04_not_accepted_by_this_report": true,
+  "next": "A07 offline platform link and implementation review; no board authorization"
+}

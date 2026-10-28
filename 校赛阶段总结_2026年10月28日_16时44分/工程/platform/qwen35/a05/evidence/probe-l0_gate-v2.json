@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/probe.py",
+    "--scope",
+    "l0_gate",
+    "--output",
+    "eval/qwen35/a05/probe-l0_gate-v2"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:49:38.196197+00:00",
+  "elapsed_s": 12.15280929999426,
+  "exit_code": 0,
+  "stdout": "{\"scope\": \"l0_gate\", \"passed\": true, \"text\": \"5\", \"status\": \"OK\"}\n",
+  "stderr": ""
+}

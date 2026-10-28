@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/state_regression.py",
+    "--output",
+    "eval/qwen35/a05/state-v6",
+    "--binary",
+    "/home/member-a/qwen35-a05/build-v6/qwen35-s1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:06:45.901463+00:00",
+  "elapsed_s": 39.56231279997155,
+  "exit_code": 1,
+  "stdout": "{\"step\": \"chunk-256\", \"status\": \"OK\", \"prefill_ms\": 3677.802003}\n{\"step\": \"chunk-1\", \"status\": \"OK\", \"prefill_ms\": 4639.771968}\n{\"step\": \"chunk-2\", \"status\": \"OK\", \"prefill_ms\": 2633.247927}\n{\"step\": \"chunk-4\", \"status\": \"OK\", \"prefill_ms\": 1858.85349}\n{\"step\": \"chunk-8\", \"status\": \"OK\", \"prefill_ms\": 1403.577601}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/state_regression.py\", line 30, in main\n    r=w.call({'id':'followup','prompt':render([{'role':'user','content':'哪里痛？'},{'role':'assistant','content':'胸骨后。'},{'role':'user','content':'持续多久？'}]),'max_tokens':8});records['followup']=r\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 22, in call\n    self.send(req);end=time.monotonic()+seconds;sent=False\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 20, in send\n    self.wire.write(json.dumps({'request':v},ensure_ascii=False)+'\\n');self.wire.flush();self.p.stdin.write(json.dumps(v,ensure_ascii=False)+'\\n');self.p.stdin.flush()\nBrokenPipeError: [Errno 32] Broken pipe\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/state_regression.py\", line 54, in <module>\n    if __name__=='__main__':raise SystemExit(main())\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/state_regression.py\", line 47, in main\n    finally:w.close();save(out/'records.json',records);save(out/'checks.json',checks)\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 29, in close\n    self.send({'op':'shutdown'})\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/native_client.py\", line 20, in send\n    self.wire.write(json.dumps({'request':v},ensure_ascii=False)+'\\n');self.wire.flush();self.p.stdin.write(json.dumps(v,ensure_ascii=False)+'\\n');self.p.stdin.flush()\nBrokenPipeError: [Errno 32] Broken pipe\n"
+}

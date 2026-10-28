@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a04/load_profile.py",
+    "--output",
+    "eval/qwen35/a04/load-profile-v2.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:01:53.333508+00:00",
+  "elapsed_s": 12.072562899964396,
+  "exit_code": 0,
+  "stdout": "{\"domain\": \"PC\", \"scenario\": \"all 72 sidecars mmap read-only, checksum touches every byte; no raw/GGUF/BO loaded\", \"payload_bytes\": 140378112, \"mappings\": 144, \"elapsed_s\": 4.817092267, \"peak_rss_kib\": 173516, \"rusage_peak_rss_kib\": 171136, \"before\": {\"/proc/self/status:VmHWM\": \"33996 kB\", \"/proc/self/status:VmRSS\": \"33996 kB\", \"/proc/self/status:RssAnon\": \"16524 kB\", \"/proc/self/status:RssFile\": \"17472 kB\", \"/proc/self/status:RssShmem\": \"0 kB\", \"/proc/self/smaps_rollup:Rss\": \"33996 kB\", \"/proc/self/smaps_rollup:Pss\": \"27717 kB\", \"/proc/self/smaps_rollup:Shared_Clean\": \"8196 kB\", \"/proc/self/smaps_rollup:Shared_Dirty\": \"0 kB\", \"/proc/self/smaps_rollup:Private_Clean\": \"9276 kB\", \"/proc/self/smaps_rollup:Private_Dirty\": \"16524 kB\", \"/proc/self/smaps_rollup:Anonymous\": \"16524 kB\"}, \"after\": {\"/proc/self/status:VmHWM\": \"173512 kB\", \"/proc/self/status:VmRSS\": \"173512 kB\", \"/proc/self/status:RssAnon\": \"18668 kB\", \"/proc/self/status:RssFile\": \"154844 kB\", \"/proc/self/status:RssShmem\": \"0 kB\", \"/proc/self/smaps_rollup:Rss\": \"173516 kB\", \"/proc/self/smaps_rollup:Pss\": \"167278 kB\", \"/proc/self/smaps_rollup:Shared_Clean\": \"8196 kB\", \"/proc/self/smaps_rollup:Shared_Dirty\": \"0 kB\", \"/proc/self/smaps_rollup:Private_Clean\": \"146648 kB\", \"/proc/self/smaps_rollup:Private_Dirty\": \"18672 kB\", \"/proc/self/smaps_rollup:Anonymous\": \"18672 kB\"}, \"checksum\": 14858214399.671041, \"sampling_note\": \"Maximum of rusage and post-touch VmHWM/VmRSS/smaps RSS; sequential observations, includes measurement overhead. v1 sampled rusage before proc and is retained, not the final peak.\", \"peak_includes\": \"Python/NumPy runtime + transient hash bytes + file-backed sidecar pages; not KV260 budget\", \"repack_copy_bytes\": 0, \"raw_GGUF_pages_in_this_process\": 0, \"raw_weight_pages_in_this_process\": 0, \"resident_BO_bytes\": null, \"threads\": 1, \"BOARD\": \"NOT_TESTED\"}\n",
+  "stderr": ""
+}

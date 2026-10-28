@@ -1,0 +1,18 @@
+--- source-v2/ggml/src/ggml-cpu/ops.cpp
++++ source-v3/ggml/src/ggml-cpu/ops.cpp
+@@ -9484,7 +9484,14 @@
+     const int nth = params->nth;
+ 
+     // When use_ref is set, force the vec-only reference implementation (no tiling, no KV-chunking)
+-    const bool use_ref = params->use_ref;
++    // A05 private CPU profile. Retain upstream SIMD per-query math and thread
++    // distribution, but avoid changing the FP reduction tree at N=1/KV>=512
++    // or a query tile threshold. The host sets this once before context init.
++    static const bool sp_stable_attn = []() {
++        const char * value = getenv("SP_QWEN35_STABLE_ATTN");
++        return value && strcmp(value, "1") == 0;
++    }();
++    const bool use_ref = params->use_ref || sp_stable_attn;
+ 
+     const bool kv_is_f32_or_f16 = (k->type == GGML_TYPE_F32 || k->type == GGML_TYPE_F16);
+     const bool use_split_kv_path = !use_ref && (neq1 == 1 && neq3 == 1) && kv_is_f32_or_f16 && (k->type == v->type) && q->type == GGML_TYPE_F32 && nek1 >= 512;

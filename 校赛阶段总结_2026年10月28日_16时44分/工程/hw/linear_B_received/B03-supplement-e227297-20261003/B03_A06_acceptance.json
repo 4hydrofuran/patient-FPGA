@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "finished_at_local": "2026-10-03T09:13:07.668103+08:00",
+  "package_sha256": "506f079daabf37f6dc539d35c49add0b4c0e7629a0a97c461c470b0f75c59513",
+  "all_payload_hashes_and_crc": "PASS",
+  "candidate_xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "archived_rtl_replay_transactions": 66,
+  "pc_full50": "PASS",
+  "real_weight4": "PASS",
+  "regenerated_vectors_exact_sha_match": {
+    "vectors/b03_double": 342,
+    "vectors/b03_double_real": 40
+  },
+  "steps": {
+    "rtl_replay": {
+      "exit_code": 0,
+      "log_sha256": "3d56c1e5de815b27485d2e650675b60c85e72a354503a77e559550cc414ff459",
+      "arguments": [
+        "C:\\Users\\陈沐阳\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/replay_prefill_delivery.py",
+        "--cxx",
+        "D:\\mingw64\\bin\\g++.exe",
+        "--work",
+        "C:\\Users\\陈沐阳\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_supplement_clean_1\\work\\supplement_check\\rtl",
+        "--receipt",
+        "C:\\Users\\陈沐阳\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_supplement_clean_1\\work\\supplement_check\\rtl.receipt.json",
+        "--expected-dir",
+        "evidence/b03/supplement/rtl_expected",
+        "--check-expected"
+      ]
+    },
+    "pc_compile": {
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "arguments": [
+        "D:\\mingw64\\bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wno-unknown-pragmas",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "src/w4a8_prefill_v1.cpp",
+        "tb/tb_prefill_v1.cpp",
+        "-o",
+        "work/supplement_check/numerical.exe"
+      ]
+    },
+    "pc_full50": {
+      "exit_code": 0,
+      "log_sha256": "e82433927adbfc5d1d139673ed8c50fce99d5287f91dbdd8180767224885bd1c",
+      "arguments": [
+        "C:\\Users\\陈沐阳\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_supplement_clean_1\\work\\supplement_check\\numerical.exe",
+        "--suite",
+        "full",
+        "--dump",
+        "vectors/pc_regenerated"
+      ]
+    },
+    "real_compile": {
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "arguments": [
+        "D:\\mingw64\\bin\\g++.exe",
+        "-BD:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\16.2.0\\",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wno-unknown-pragmas",
+        "-DB02_CACHE_X",
+        "-DB02_AXI_X128",
+        "-DB03_TEST",
+        "-DB03_REUSE",
+        "-DB03_DOUBLE_BUFFER",
+        "src/w4a8_prefill_v1.cpp",
+        "tests/numerical/prefill_tensor_replay.cpp",
+        "-o",
+        "work/supplement_check/real.exe"
+      ]
+    },
+    "real_weight4": {
+      "exit_code": 0,
+      "log_sha256": "05ef3bb019f1bb99fa46e63c77bdb9836c278e01b01edf71b55fa21be9237f13",
+      "arguments": [
+        "C:\\Users\\陈沐阳\\Documents\\Codex\\2026-10-02\\kv260-ip-b-c-users-documents-2\\work\\b03_supplement_clean_1\\work\\supplement_check\\real.exe",
+        "vectors/real_regenerated"
+      ]
+    }
+  },
+  "scope": "Clean extraction, fresh C++ compilation and replay of original RTL outputs. Not a new RTL run, implementation/BOARD test or A acceptance."
+}

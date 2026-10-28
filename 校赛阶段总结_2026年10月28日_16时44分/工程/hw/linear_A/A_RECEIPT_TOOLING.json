@@ -1,0 +1,31 @@
+{
+  "release_tag": "b03-a06-supplement-20261003",
+  "source_commit": "e227297ee1bb0bdf542fc81761642b23639e15c0",
+  "provider": "B",
+  "selected_variant": "double",
+  "xo_sha256": "96ca2a5825c4e044e0159b7a1553a30d8546cc59ab5cfc9201d6d44d4b7ddd23",
+  "embedded_metadata_sha256": "dadfa622dc114a373af9195778f64e34f4d715ea190426fa745dfd39f818d1de",
+  "source_sha256": "7e1eb3450c0839254148c5fecebf4be1b2d76ca7c18f39e8df8e63769d5874d2",
+  "owner": "A",
+  "kernel_modified": false,
+  "overlays": {
+    "tb/tb_prefill_v1.cpp": {
+      "derived_path": "tb/a06_portable_tb_prefill_v1.cpp",
+      "original_sha256": "69952372c1c5cc980c13ce68e931af2243866b48f725a650fd84ccf1f1a61178",
+      "derived_sha256": "9b0c7a4d532fed9717e7faa0734f86f0bc89d821e898d15ba6ffcb9894f52f5c",
+      "owner": "A",
+      "change": "JSON output binary mode + explicit CRLF only"
+    },
+    "tests/numerical/prefill_tensor_replay.cpp": {
+      "derived_path": "tests/numerical/a06_portable_prefill_tensor_replay.cpp",
+      "original_sha256": "4a32cf3895d6b9ec85d0073ac7688a47527a3241bb2005b5c3acb7bde4653b05",
+      "derived_sha256": "22d1fb7a518e38fb0f0e55e8f8ccbda3c87be36e963498fc93d81b2106397728",
+      "owner": "A",
+      "change": "JSON output binary mode + explicit CRLF only"
+    }
+  },
+  "original_provider_tool_failure": "PRESERVED",
+  "A_corrected_tool_status": "PASS",
+  "full_kernel_acceptance": false,
+  "evidence": "evidence/A06_acceptance/a-owned-closeout-v1/REPORT.json"
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS_BASELINE_FROZEN_PC",
+  "domain": "PC",
+  "A11_sealed_files_verified": 456,
+  "A11_seal_sha256": "4e817a8add532e941c8628c2aef180f1099d4b2090f29cf7925d1723641e9a80",
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "before": {
+    "AGENTS.md": "41b28a065a86c649017f5a2f8be8e0d9cc1fc21b3f130339ad55903ea37fcce1",
+    "docs/A12_STEP_PLAN_20261023.md": "120c6cf8729d65a091374a1fd29410e3feb3c5f1e9243b6cf6226e9ac934a7ae",
+    "docs/PROJECT_STATUS.json": "2ef5a18cc824191760630362b3d16903b964eafa9b356f4964fb9a6d6d18fee3",
+    "docs/DESIGN_GAP.md": "197cb35a70b1f992406b0843395d5a1cb06ae09789d76c6628396d6b3102569a",
+    "docs/DECISIONS.md": "dacfdfddb9964f94217a13a9f00aceca9b8a9ac873af4e8f6f481e4e4f6cdbc4",
+    "docs/TEST_MATRIX.md": "b0412d1ad5499a7e2051bb33d2010c4080dde415e4737cda47a3423fb2beb5ce",
+    "docs/AI_ASSISTANCE.md": "123b50bbee90580df3c4fc83e26006086dbeea18cc43ab516c357c9bb060046b",
+    "docs/status/A.md": "8f7efb0e0a48b94bfbdf3c3e56bfe40293f745835aeff8c8109008fba448f659",
+    "modules/linear_A/manifest.json": "d3c825ee057ff0ec1d6ddbc12ebf0235a97cde2ce9cba688d4cddfbed6bd89da",
+    "config/qwen35/selection.json": "82fe3f615db91b862eecde6095bded424625c6cf7da15fe1b3ed07c4775b781e",
+    "contracts/qwen35/contracts.lock": "247b84c4304f6719539b668b9ea3843087f8ebda2609697ba55220f0c293de3d",
+    "runtime/qwen35_w4a8/bridge.cpp": "dd10661d71108c27b6944bb5f8b538246825631a3b0891dda3ff69c1b643ca15",
+    "runtime/qwen35_w4a8/bridge.hpp": "eaf34f91d6b766f9fcef88469cb1243144faafca5273a8d90b32fc0fa2de401e",
+    "runtime/qwen35_w4a8/CMakeLists.txt": "d3d1cb075997b98749f97ce250f916f48b97cecb8a886558f5c02a27ab5c13d2",
+    "runtime/qwen35_w4a8/cpu_backend.cpp": "0e8870ec525782de3bad127e9d0a6e2deed8f07a3da6d3d9a7e77763f0af4a70",
+    "runtime/qwen35_w4a8/main.cpp": "9dc3b21e9f581783ac273a41f57fddaaf65bfa3502f5ecdbbdb2427b2d2d9cad",
+    "runtime/qwen35_w4a8/README.md": "2125440924b49f1597b799c8cd2874f94c11bee3ff13c117bc67dd18de39aec9",
+    "runtime/qwen35_w4a8/request_profile.cpp": "e09d500c5f3453249c87e9be45374e2600bf081b75e86d6ca74ba60948a509ce",
+    "runtime/qwen35_w4a8/request_profile.hpp": "8cabf1af2d7f4885e0570a2a5ebd5e04d1cd9a244e264b007eb1a33674ebb15a",
+    "runtime/qwen35_w4a8/REQUEST_PROFILE.md": "f3124684dc0a877599259ee3a058748482a42b1a7ec8c48c06b42a98a9b8a1a9",
+    "runtime/qwen35_w4a8/sp-hook.cpp": "890e23f7ed8f5035596b3413ba709d7ba538a36ab60d672c43ce019b8baff91e",
+    "runtime/qwen35_w4a8/sp-hook.h": "4e5818b20e82166144cc979b190ca5bf5cd0bfa5a09d2eae11f3a0207c39ce0e",
+    "runtime/qwen35_w4a8/tiled_simd.hpp": "aa5d95a10198d27aecd6701635902ec443d1376c72f46e2858761a051462a268",
+    "system_qwen35/app/audio_adapter.py": "fa790847d512b2507ed06c4260e71d045cb6d368d49dab7d719ae6eab0f5adfb",
+    "system_qwen35/app/checking.py": "afac4ee61c9ce3d14ec2bd2e56db5a127f44c1b5dce005126eba5a96120dceb7",
+    "system_qwen35/app/cli.py": "5028be8e481231af46a69620e1914f9beee14487d52e4b6cd1525f1825db681a",
+    "system_qwen35/app/domain.py": "748315adb4a21f81e443338ca1021c4e4647f14dfe4655981d697b21c92326da",
+    "system_qwen35/app/native.py": "0f1ce1d2f78cdf4d48a009d010c2f9480eafd509e2c02f8e04580ed9a49c226a",
+    "system_qwen35/app/native_w4a8.py": "7c227aed8a5308315ab92a879fcb724604c911a7ffd54574e7def2b98a637345",
+    "system_qwen35/app/pc_audio.py": "24cb15c0cec9ef170cc04d7bd5c887e12744da2516826ec876a24ee6f1a6030c",
+    "system_qwen35/app/planning.py": "5cb128c811e9e33f550a3c05aa1cdd8ae173bcde3e8a308a836c23794dc046a7",
+    "system_qwen35/app/scoring.py": "d65f1f6e8552d85e3f75d925592c63834ddd8b0fb788624891cb3c55cd4acfdb",
+    "system_qwen35/app/session.py": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173",
+    "system_qwen35/app/test_a02.py": "a2091a54440bba0c49c4f27300f849a86120167c4fd172a75ef69b90777ebbda",
+    "system_qwen35/app/test_capture.py": "965939549d0280470b1f26eaa634c3470f9338eb05a637d476c0023dee6188f0",
+    "system_qwen35/app/voice_cli.py": "034c964f085d00a930d0f84d4d666c42568856a882a3dbe7745907fbbcf0e051",
+    "system_qwen35/app/voice_loop.py": "64111fac624fd3731e293450b6e2c11fe299a297094d9509d1c573c7221d5c1a",
+    "system_qwen35/app/__init__.py": "1a11295a3fd02301fe42554257f80cc1cbb7e1a9456626a8dfabd9a211c856fc"
+  },
+  "preserved_arm_artifacts": {
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/s1/qwen35-s1": "52b70f375bab3626d836a87216eb06849daa02b112b43ba338e6c1a42cc8aafd",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/s1/libsp_linear_cpu.so": "1d1f2dc83d56b1390f2429f14d41154d73fe27a3310b1057d261dceed8bbd3c8",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/llama/bin/libllama.so": "e54a1a487df307152f9cfc0ccea5f9eefa5aed7a2d2701b62b714997990ffd8f",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/llama/bin/libggml.so": "f16e2f0f813670fae3bf265de9960c4ef486b43442aa09ab05f11ed96c614c26",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/llama/bin/libggml-base.so": "e3d938959c0461fb34b4ab55735ebad94ff218776dca16a3f45b174a57571447",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791005999565534417-A-a07-a53-origin-v2-d20534d2/llama/bin/libggml-cpu.so": "b6929ef47bf14a96a6c8d6d5d4dc3018d797a2dba20b487780dd6582693f8460"
+  },
+  "source_checks": {
+    "src/llama-graph.cpp": {
+      "current_sha256": "bad921199ad7c128e280816e2730ddf28e7e9ad7937c8db5cbc705a213ec35f7",
+      "archived_matches": []
+    },
+    "ggml/src/ggml-cpu/ops.cpp": {
+      "current_sha256": "d56ed45893e3548d74d5ce67fad4fee6443c15a912722292a0a574a4683b31ed",
+      "archived_matches": []
+    },
+    "include/llama.h": {
+      "current_sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc",
+      "archived_matches": []
+    }
+  },
+  "source_is_git_checkout": false,
+  "board": "NOT_TESTED",
+  "settings": "unknown",
+  "inspection_failures": [
+    "Nonexistent guessed backend paths were read-only discovery errors; corrected via file inventory.",
+    "source-v3 has no .git; use fixed upstream commit and source hashes instead of git rev-parse.",
+    "Old full ELF JSON was too large for console; use parsed dependency summaries."
+  ]
+}

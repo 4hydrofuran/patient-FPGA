@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/6VVzXLjNgy+6yl0k5Tqx1Fcz8YZvkK7M91bJqOhSchmTJEqSflnM3n3gqTsddL01IMtEQCBD8AHSAyjNi7Vtny1WpX2bMsNtbBalj+l2JQ7anf+aafNaDQDa0snBkh6o4d0pM4rUxF9fMdjMhL/yLPmQE2DymZ/aFeLit7fN/irBjlW7aJd3S/ah+rwkBVPGLH2jmqhLBiXL0rrTD4WRYxBGQMJhjptOoNviK3bUgfdob3EZVpKYC6h1jvAVOotOJgEzwtCFhfxDMtn0WDMZg9GgWwMVVwPzUZr1wmeFbUByjsHJ5cXNSIRo/eSfVu2bf/Y9hVf3PfV8tvysaL8/rFawWq1WS0X9JHyLOHQY1HYPt8UawNuMirlgrl8c3ZgiQSFitLuaPv7isyVreMRFfUOTlxswWLkUPwuNoLER41hQDHNIffKmulhNNgPvFnUHIICi6bogKHyTNJJsR2YahS89q3NymynravgJNxFcNQGy1Chm0l+EmLuHIyp3cnNNz9KflnpKV6VKJWiB3ZmEq4S33ADDMR4DWDgIOB4OWGJqaywLb2Yr6FQUScOUFHnYBg/w/X1kEJdja9nQ4+f8N5i++vHn9/jFaQWxrLkTa1Dt/KxUXPjQ6ewjmmvTapSodJQ0FT0abQStvOX8+I98SYYYJyct7NIReDeVxaFFsm0lXqTZ696U93V/UObFcU6SWdCKu3m696pPQ+Ywz4vkjSAe84ocxNWJvttNvJAXkgAPEs+IE725NeQ1mZS+XPGEfoWU68qLE32UjI6Iimhi/fJDzNB8TTD2deRsZ5IODYpzkWAuJ/7nkjN9pbcjlGQfB6ZUQrnu4GYngbqkIOcvMVihXpeVgPeve6GhsMo9XkA5WqvQMgNZhCNcDkIVFR/H0FV3jM10cjXcgak/KxSjP+0hzPpszdcAgN91Sa3qOg4HIr1oj29r4NCqC8U4Yya9+wC+1m9kGcZmCA98pCuZwLGCOeYbF68JIaEOY+0Cv9l3C+d1NvYs/3Mx6LExiK5u7DLyB9aQTlvH/I/dtQcj2B+k2dK7q1CiNIyqsi8JHMqpT52o+24QPT0HElQ6gMYPOFMnHAbG98I72V9+ipWKMnJl2AGfIOVadWLLTb0IBhUzgA0F9/XebhrfLMmFLyX/bil5MYNk8jHxku7gSq6BRMOi3AF/iP3LR/+TX70htuDOT/7wlax6viOxl+PQum9xnpcdsclwE/N5C3KQfNJQuPFCAlXqnXI9w+d7aLUNyR83uRs9RX9Z2xFGWds5l/pl5//9CFOS56FcvmHdnzdh1jA3XHwi24ueDjdNd7fHXIcE86KlzK4QoV2WgnWKUv8p72+lfi9Mhof2S/Omk/DaHNTFMk/TQsSZTcIAAA=')); assert hashlib.sha256(b).hexdigest()=='bcb92a1fa26bbface69800b6a85c28fe04df23ce4d898fd5d6d7cf2942c9a020'; exec(compile(b,'read_open_evidence','exec'))\""
+  ],
+  "helper_sha256": "bcb92a1fa26bbface69800b6a85c28fe04df23ce4d898fd5d6d7cf2942c9a020",
+  "exit_code": 0,
+  "stderr": "__A10_READONLY_EVIDENCE_AUTH__:",
+  "scope": "readonly"
+}

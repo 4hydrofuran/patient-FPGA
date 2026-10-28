@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl.exe",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "/mnt/c/Patientqwen/platform/qwen35/a07/control/review_implementation.py",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791050594539710323-A-a07-link-20261004-v1-4b4cd2c8",
+    "/home/member-a/kv260-build/ra02-coordinator/work/01791052430687741878-A-a07-audit-20261004-v3-c8ddfa46/audit"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-03T18:38:24.914321+00:00",
+  "elapsed_s": 0.7856402000179514,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_OFFLINE_IMPLEMENTATION_REVIEW\", \"timing\": {\"WNS_ns\": 0.809, \"TNS_ns\": 0.0, \"setup_failing_endpoints\": 0.0, \"setup_total_endpoints\": 167611.0, \"WHS_ns\": 0.01, \"THS_ns\": 0.0, \"hold_failing_endpoints\": 0.0, \"hold_total_endpoints\": 167611.0, \"WPWS_ns\": 1.833, \"TPWS_ns\": 0.0, \"pulse_failing_endpoints\": 0.0, \"pulse_total_endpoints\": 50457.0}, \"BOARD\": \"NOT_TESTED\"}\n",
+  "stderr": ""
+}

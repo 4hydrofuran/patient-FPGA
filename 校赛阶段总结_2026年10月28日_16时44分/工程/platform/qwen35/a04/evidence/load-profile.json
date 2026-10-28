@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a04/load_profile.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:55:57.287398+00:00",
+  "elapsed_s": 11.56535749998875,
+  "exit_code": 0,
+  "stdout": "{\"domain\": \"PC\", \"scenario\": \"all 72 sidecars mmap read-only, checksum touches every byte; no raw/GGUF/BO loaded\", \"payload_bytes\": 140378112, \"mappings\": 144, \"elapsed_s\": 4.670584284, \"peak_rss_kib\": 170800, \"before\": {\"/proc/self/status:VmHWM\": \"32804 kB\", \"/proc/self/status:VmRSS\": \"32804 kB\", \"/proc/self/status:RssAnon\": \"15804 kB\", \"/proc/self/status:RssFile\": \"17000 kB\", \"/proc/self/status:RssShmem\": \"0 kB\", \"/proc/self/smaps_rollup:Rss\": \"32804 kB\", \"/proc/self/smaps_rollup:Pss\": \"26759 kB\", \"/proc/self/smaps_rollup:Shared_Clean\": \"7900 kB\", \"/proc/self/smaps_rollup:Shared_Dirty\": \"0 kB\", \"/proc/self/smaps_rollup:Private_Clean\": \"9100 kB\", \"/proc/self/smaps_rollup:Private_Dirty\": \"15804 kB\", \"/proc/self/smaps_rollup:Anonymous\": \"15804 kB\"}, \"after\": {\"/proc/self/status:VmHWM\": \"172292 kB\", \"/proc/self/status:VmRSS\": \"172292 kB\", \"/proc/self/status:RssAnon\": \"17920 kB\", \"/proc/self/status:RssFile\": \"154372 kB\", \"/proc/self/status:RssShmem\": \"0 kB\", \"/proc/self/smaps_rollup:Rss\": \"172296 kB\", \"/proc/self/smaps_rollup:Pss\": \"166296 kB\", \"/proc/self/smaps_rollup:Shared_Clean\": \"7900 kB\", \"/proc/self/smaps_rollup:Shared_Dirty\": \"0 kB\", \"/proc/self/smaps_rollup:Private_Clean\": \"146472 kB\", \"/proc/self/smaps_rollup:Private_Dirty\": \"17924 kB\", \"/proc/self/smaps_rollup:Anonymous\": \"17924 kB\"}, \"checksum\": 14858214399.671041, \"peak_includes\": \"Python/NumPy runtime + transient hash bytes + file-backed sidecar pages; not KV260 budget\", \"repack_copy_bytes\": 0, \"raw_GGUF_pages_in_this_process\": 0, \"raw_weight_pages_in_this_process\": 0, \"resident_BO_bytes\": null, \"threads\": 1, \"BOARD\": \"NOT_TESTED\"}\n",
+  "stderr": ""
+}

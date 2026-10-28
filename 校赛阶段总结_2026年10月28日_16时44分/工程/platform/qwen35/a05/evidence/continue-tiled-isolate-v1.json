@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/batch_isolate.py",
+    "eval/qwen35/a05/batch-isolate-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:53:58.926782+00:00",
+  "elapsed_s": 70.79674480005633,
+  "exit_code": 0,
+  "stdout": "{\"model\": \"f16\", \"T\": 1, \"status\": \"OK\", \"comparison\": null}\n{\"model\": \"f16\", \"T\": 2, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 246098, \"max_abs\": 1.0856842994689941, \"rmse\": 0.21612404266221344, \"rtol\": 0.0002}}\n{\"model\": \"f16\", \"T\": 4, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 246098, \"max_abs\": 1.0856842994689941, \"rmse\": 0.21612404266221344, \"rtol\": 0.0002}}\n{\"model\": \"f16\", \"T\": 8, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 246098, \"max_abs\": 1.0856842994689941, \"rmse\": 0.21612404266221344, \"rtol\": 0.0002}}\n{\"model\": \"Q4_K_M\", \"T\": 1, \"status\": \"OK\", \"comparison\": null}\n{\"model\": \"Q4_K_M\", \"T\": 2, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"model\": \"Q4_K_M\", \"T\": 4, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 246116, \"max_abs\": 1.2969436645507812, \"rmse\": 0.2332443351198545, \"rtol\": 0.0002}}\n{\"model\": \"Q4_K_M\", \"T\": 8, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 246116, \"max_abs\": 1.2969436645507812, \"rmse\": 0.2332443351198545, \"rtol\": 0.0002}}\n",
+  "stderr": ""
+}

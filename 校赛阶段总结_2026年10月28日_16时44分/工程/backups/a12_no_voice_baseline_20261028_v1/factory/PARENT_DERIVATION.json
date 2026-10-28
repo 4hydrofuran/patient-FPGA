@@ -1,0 +1,51 @@
+{
+  "provider": "A",
+  "frontend_original_commit": "40498c2388b6293d68f38907c71ffd8933a5803e",
+  "gateway_changed_files": [
+    {
+      "path": "web_gateway/src/patient_web/delivery.py",
+      "original_sha256": "3da6e0ea40c1578b92cdfcbebe7c01399f881f097d0882324ba7b79c164b9556",
+      "derived_sha256": "e939450d10e6e2dff1cb5ee620acd5f452957774ee9ab0d62dacbb4c83eb49a8"
+    },
+    {
+      "path": "web_gateway/src/patient_web/engine.py",
+      "original_sha256": "d4df0f9605db3fe7dd39fb3136fb542dbeaf3179f80c1f5a93b5c3434a2ce863",
+      "derived_sha256": "c70ec7b03e11002ac23064bc25631f5f65eccbd8fae645f401e4eaa21592fe42"
+    },
+    {
+      "path": "web_gateway/src/patient_web/managed.py",
+      "original_sha256": "2279c0f81c21d35f086a5eaaefd32770905c994a55e704bf4150f25ce4a5a463",
+      "derived_sha256": "a74ebece4cd431f6d3fb627ee77e3215d48eac5dc12880aeaa1d7dc760279393"
+    },
+    {
+      "path": "web_gateway/src/patient_web/manager.py",
+      "original_sha256": "37aab11ab2509deb812fb01287c3c5a6529390d2788676b6a7c18a0b24affa86",
+      "derived_sha256": "862bdfb008594414c84ffddf4db0f24018829498b606aff653bbb9dad186c8a2"
+    },
+    {
+      "path": "web_gateway/src/patient_web/reference/session.py",
+      "original_sha256": "01c1fb8aa5d3ea75fe97e00b7fbecda3051820f68bc2af8a950496e6484c3173",
+      "derived_sha256": "10d8b58c456a97ec0f1bfae8653e409b6788eb66d86e7f44d25f1da961cd4587"
+    },
+    {
+      "path": "web_gateway/src/patient_web/static/console.js",
+      "original_sha256": "63328f90b30463692ba1e4bc4e6183b1f7994f4be4861d71cac992d0adc93d3d",
+      "derived_sha256": "4c54d91b004f70e7fd5d854e96ba8a1220146db378936581291925ab0e33efa7"
+    }
+  ],
+  "added_runtime_files": [
+    "short_prompt_adapter.py",
+    "fast_response_profile.py",
+    "fast_response_entry.py",
+    "fast_response_preflight.py",
+    "fast_response_prepare_support.py",
+    "fast_response_verify.py",
+    "fast_response_pc.py"
+  ],
+  "host_config": "profile.json and web-config.json",
+  "external_model_weights": true,
+  "public_math_changed": false,
+  "public_ABI_changed": false,
+  "binary_changed": false,
+  "board_tested": false
+}

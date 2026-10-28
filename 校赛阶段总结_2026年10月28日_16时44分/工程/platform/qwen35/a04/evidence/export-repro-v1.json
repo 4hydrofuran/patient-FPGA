@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-m",
+    "quant.export_w4a8",
+    "--output",
+    "models/sidecar_A/qwen35-repro-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:49:15.695498+00:00",
+  "elapsed_s": 24.344661300012376,
+  "exit_code": 0,
+  "stdout": "{\"matrices\": 72, \"payload_bytes\": 140378112, \"manifest_bytes\": 88101, \"manifest_sha256\": \"cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688\", \"elapsed_s\": 23.939169454, \"peak_rss_kib\": 105204, \"threads\": 1, \"scope\": \"PC export not inference or board\"}\n",
+  "stderr": ""
+}

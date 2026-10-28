@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/analyze_state.py",
+    "--input",
+    "eval/qwen35/a05/state-v1",
+    "--output",
+    "eval/qwen35/a05/state-v1/numerics.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:59:02.443062+00:00",
+  "elapsed_s": 25.964238799992017,
+  "exit_code": 1,
+  "stdout": "{\"chunk-1\": {\"passed\": false, \"max_logit_difference\": 3.179189682006836, \"state_fail_arrays\": 44}, \"chunk-2\": {\"passed\": false, \"max_logit_difference\": 3.179189682006836, \"state_fail_arrays\": 44}, \"chunk-4\": {\"passed\": false, \"max_logit_difference\": 3.4988412857055664, \"state_fail_arrays\": 44}, \"chunk-8\": {\"passed\": false, \"max_logit_difference\": 2.6147382259368896, \"state_fail_arrays\": 44}, \"scalar\": {\"passed\": true, \"max_logit_difference\": 0.0, \"state_fail_arrays\": 0}}\n",
+  "stderr": ""
+}

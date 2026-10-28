@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/state_regression.py",
+    "--output",
+    "eval/qwen35/a05/state-v8",
+    "--binary",
+    "/home/member-a/qwen35-a05/build-v8/qwen35-s1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:24:31.370348+00:00",
+  "elapsed_s": 94.09394069999689,
+  "exit_code": 0,
+  "stdout": "{\"step\": \"chunk-256\", \"status\": \"OK\", \"prefill_ms\": 3772.414202}\n{\"step\": \"chunk-1\", \"status\": \"OK\", \"prefill_ms\": 4681.781604}\n{\"step\": \"chunk-2\", \"status\": \"OK\", \"prefill_ms\": 2675.655884}\n{\"step\": \"chunk-4\", \"status\": \"OK\", \"prefill_ms\": 1934.577701}\n{\"step\": \"chunk-8\", \"status\": \"OK\", \"prefill_ms\": 1454.244336}\n{\"step\": \"long-256\", \"prefill_ms\": 6445.472984, \"status\": \"OK\"}\n{\"step\": \"long-1024\", \"prefill_ms\": 25914.022751, \"status\": \"OK\"}\n{\"functional_checks\": 17, \"passed\": true, \"numerics\": \"PENDING_ANALYSIS\"}\n",
+  "stderr": ""
+}

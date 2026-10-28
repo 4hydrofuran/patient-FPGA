@@ -1,0 +1,884 @@
+<6>[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+<5>[    0.000000] Linux version 6.8.12-a10irq2 (a10-pc@isolated-candidate) (aarch64-amd-linux-gcc (GCC) 13.4.0, GNU ld (GNU Binutils) 2.42.0.20240723) #1 SMP PREEMPT_DYNAMIC Mon Oct 19 00:00:00 UTC 2026 (A10 irq2 independent candidate; ownership fix; NOT_BOARD_ACCEPTED)
+<4>[    0.000000] KASLR disabled due to lack of seed
+<6>[    0.000000] Machine model: ZynqMP KV260 revB
+<6>[    0.000000] efi: UEFI not found.
+<6>[    0.000000] OF: reserved mem: 0x000000007ff00000..0x000000007fffffff (1024 KiB) nomap non-reusable pmu@7ff00000
+<6>[    0.000000] earlycon: cdns0 at MMIO 0x00000000ff010000 (options '115200n8')
+<6>[    0.000000] printk: legacy bootconsole [cdns0] enabled
+<6>[    0.000000] NUMA: No NUMA configuration found
+<6>[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x000000087fffffff]
+<6>[    0.000000] NUMA: NODE_DATA [mem 0x87f7c2ac0-0x87f7c7fff]
+<6>[    0.000000] Zone ranges:
+<6>[    0.000000]   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+<6>[    0.000000]   DMA32    empty
+<6>[    0.000000]   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+<6>[    0.000000]   Device   empty
+<6>[    0.000000] Movable zone start for each node
+<6>[    0.000000] Early memory node ranges
+<6>[    0.000000]   node   0: [mem 0x0000000000000000-0x000000007fefffff]
+<6>[    0.000000]   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+<6>[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000087fffffff]
+<6>[    0.000000] On node 0, zone Normal: 256 pages in unavailable ranges
+<6>[    0.000000] cma: Reserved 800 MiB at 0x0000000044400000 on node -1
+<6>[    0.000000] psci: probing for conduit method from DT.
+<6>[    0.000000] psci: PSCIv1.1 detected in firmware.
+<6>[    0.000000] psci: Using standard PSCI v0.2 function IDs
+<6>[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+<6>[    0.000000] psci: SMC Calling Convention v1.1
+<6>[    0.000000] percpu: Embedded 54 pages/cpu s95080 r8192 d117912 u221184
+<7>[    0.000000] pcpu-alloc: s95080 r8192 d117912 u221184 alloc=54*4096
+<7>[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+<6>[    0.000000] Detected VIPT I-cache on CPU0
+<6>[    0.000000] CPU features: detected: ARM erratum 845719
+<6>[    0.000000] alternatives: applying boot alternatives
+<5>[    0.000000] Kernel command line: root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=800M
+<6>[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+<6>[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+<6>[    0.000000] Fallback order for Node 0: 0 
+<6>[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1031940
+<6>[    0.000000] Policy zone: Normal
+<6>[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+<6>[    0.000000] software IO TLB: area num 4.
+<6>[    0.000000] software IO TLB: mapped [mem 0x000000007bf00000-0x000000007ff00000] (64MB)
+<6>[    0.000000] Memory: 3125232K/4193280K available (26880K kernel code, 3658K rwdata, 16692K rodata, 8640K init, 1000K bss, 248848K reserved, 819200K cma-reserved)
+<6>[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+<6>[    0.000000] ftrace: allocating 73047 entries in 286 pages
+<6>[    0.000000] ftrace: allocated 286 pages with 5 groups
+<6>[    0.000000] trace event string verifier disabled
+<6>[    0.000000] Dynamic Preempt: voluntary
+<6>[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+<6>[    0.000000] rcu: 	RCU event tracing is enabled.
+<6>[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+<6>[    0.000000] 	Rude variant of Tasks RCU enabled.
+<6>[    0.000000] 	Tracing variant of Tasks RCU enabled.
+<6>[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+<6>[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+<4>[    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000
+<6>[    0.000000] Root IRQ handler: gic_handle_irq
+<6>[    0.000000] GIC: Using split EOI/Deactivate mode
+<6>[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+<6>[    0.000000] arch_timer: cp15 timer(s) running at 99.99MHz (phys).
+<6>[    0.000000] clocksource: arch_sys_counter: mask: 0x1ffffffffffffff max_cycles: 0x171015c90f, max_idle_ns: 440795203080 ns
+<6>[    0.000001] sched_clock: 57 bits at 100MHz, resolution 10ns, wraps every 4398046511101ns
+<6>[    0.008620] Console: colour dummy device 80x25
+<6>[    0.012466] printk: legacy console [tty1] enabled
+<6>[    0.017131] printk: legacy bootconsole [cdns0] disabled
+<6>[    0.023749] Calibrating delay loop (skipped), value calculated using timer frequency.. 199.99 BogoMIPS (lpj=99999)
+<6>[    0.023774] pid_max: default: 32768 minimum: 301
+<6>[    0.026461] LSM: initializing lsm=lockdown,capability,landlock,yama,apparmor,integrity
+<6>[    0.026551] landlock: Up and running.
+<6>[    0.026562] Yama: becoming mindful.
+<6>[    0.026839] AppArmor: AppArmor initialized
+<6>[    0.027868] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+<6>[    0.027897] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+<6>[    0.032319] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+<6>[    0.032446] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+<6>[    0.032547] RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+<6>[    0.032845] rcu: Hierarchical SRCU implementation.
+<6>[    0.032858] rcu: 	Max phase no-delay instances is 400.
+<6>[    0.034294] EFI services will not be available.
+<6>[    0.034777] smp: Bringing up secondary CPUs ...
+<6>[    0.035539] Detected VIPT I-cache on CPU1
+<6>[    0.035627] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+<6>[    0.036395] Detected VIPT I-cache on CPU2
+<6>[    0.036448] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+<6>[    0.037130] Detected VIPT I-cache on CPU3
+<6>[    0.037178] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+<6>[    0.037255] smp: Brought up 1 node, 4 CPUs
+<6>[    0.037317] SMP: Total of 4 processors activated.
+<6>[    0.037329] CPU: All CPU(s) started at EL2
+<6>[    0.037357] CPU features: detected: 32-bit EL0 Support
+<6>[    0.037369] CPU features: detected: 32-bit EL1 Support
+<6>[    0.037383] CPU features: detected: CRC32 instructions
+<6>[    0.037443] alternatives: applying system-wide alternatives
+<6>[    0.038263] CPU features: emulated: Privileged Access Never (PAN) using TTBR0_EL1 switching
+<6>[    0.039780] devtmpfs: initialized
+<6>[    0.050513] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+<6>[    0.050566] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+<6>[    0.073477] pinctrl core: initialized pinctrl subsystem
+<6>[    0.074144] DMI not present or invalid.
+<6>[    0.075504] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+<6>[    0.077100] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+<6>[    0.077284] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+<6>[    0.077582] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+<6>[    0.077635] audit: initializing netlink subsys (disabled)
+<5>[    0.077818] audit: type=2000 audit(0.059:1): state=initialized audit_enabled=0 res=1
+<6>[    0.078544] thermal_sys: Registered thermal governor 'fair_share'
+<6>[    0.078551] thermal_sys: Registered thermal governor 'bang_bang'
+<6>[    0.078565] thermal_sys: Registered thermal governor 'step_wise'
+<6>[    0.078578] thermal_sys: Registered thermal governor 'user_space'
+<6>[    0.078591] thermal_sys: Registered thermal governor 'power_allocator'
+<6>[    0.078653] cpuidle: using governor ladder
+<6>[    0.078701] cpuidle: using governor menu
+<6>[    0.079090] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+<6>[    0.079201] ASID allocator initialised with 65536 entries
+<6>[    0.080021] Serial: AMBA PL011 UART driver
+<6>[    0.093071] Modules: 18496 pages in range for non-PLT usage
+<6>[    0.093084] Modules: 510016 pages in range for PLT usage
+<6>[    0.094172] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+<6>[    0.094203] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+<6>[    0.094219] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+<6>[    0.094232] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+<6>[    0.094246] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+<6>[    0.094259] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+<6>[    0.094273] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+<6>[    0.094286] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+<6>[    0.112911] raid6: neonx8   gen()  2469 MB/s
+<6>[    0.129988] raid6: neonx4   gen()  2427 MB/s
+<6>[    0.147069] raid6: neonx2   gen()  2323 MB/s
+<6>[    0.164153] raid6: neonx1   gen()  1992 MB/s
+<6>[    0.181225] raid6: int64x8  gen()  1510 MB/s
+<6>[    0.198316] raid6: int64x4  gen()  1743 MB/s
+<6>[    0.215388] raid6: int64x2  gen()  1546 MB/s
+<6>[    0.232469] raid6: int64x1  gen()  1142 MB/s
+<6>[    0.232483] raid6: using algorithm neonx8 gen() 2469 MB/s
+<6>[    0.249538] raid6: .... xor() 1827 MB/s, rmw enabled
+<6>[    0.249552] raid6: using neon recovery algorithm
+<6>[    0.250372] fbcon: Taking over console
+<6>[    0.250400] ACPI: Interpreter disabled.
+<6>[    0.251290] iommu: Default domain type: Translated
+<6>[    0.251305] iommu: DMA domain TLB invalidation policy: strict mode
+<5>[    0.258151] SCSI subsystem initialized
+<7>[    0.258296] libata version 3.00 loaded.
+<6>[    0.258511] usbcore: registered new interface driver usbfs
+<6>[    0.258552] usbcore: registered new interface driver hub
+<6>[    0.258611] usbcore: registered new device driver usb
+<6>[    0.258809] mc: Linux media interface: v0.10
+<6>[    0.258857] videodev: Linux video capture interface: v2.00
+<6>[    0.258940] pps_core: LinuxPPS API ver. 1 registered
+<6>[    0.258954] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+<6>[    0.258980] PTP clock support registered
+<6>[    0.259263] EDAC MC: Ver: 3.0.0
+<6>[    0.259762] scmi_core: SCMI protocol bus registered
+<6>[    0.260157] zynqmp-ipi-mbox mailbox@ff9905c0: Registered ZynqMP IPI mbox with TX/RX channels.
+<6>[    0.261097] FPGA manager framework
+<6>[    0.261408] Advanced Linux Sound Architecture Driver Initialized.
+<6>[    0.262318] NetLabel: Initializing
+<6>[    0.262331] NetLabel:  domain hash size = 128
+<6>[    0.262343] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+<6>[    0.262448] NetLabel:  unlabeled traffic allowed by default
+<6>[    0.262752] mctp: management component transport protocol core
+<6>[    0.262768] NET: Registered PF_MCTP protocol family
+<6>[    0.262933] vgaarb: loaded
+<6>[    0.268286] clocksource: Switched to clocksource arch_sys_counter
+<5>[    0.924405] VFS: Disk quotas dquot_6.6.0
+<6>[    0.924567] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+<6>[    0.925542] AppArmor: AppArmor Filesystem Enabled
+<6>[    0.925634] pnp: PnP ACPI: disabled
+<6>[    0.935145] NET: Registered PF_INET protocol family
+<6>[    0.935367] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+<6>[    1.019257] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+<6>[    1.019379] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+<6>[    1.019500] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+<6>[    1.019835] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+<6>[    1.020562] TCP: Hash tables configured (established 32768 bind 32768)
+<6>[    1.021044] MPTCP token hash table entries: 4096 (order: 4, 98304 bytes, linear)
+<6>[    1.021255] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+<6>[    1.021367] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+<6>[    1.021726] NET: Registered PF_UNIX/PF_LOCAL protocol family
+<6>[    1.022487] RPC: Registered named UNIX socket transport module.
+<6>[    1.022503] RPC: Registered udp transport module.
+<6>[    1.022515] RPC: Registered tcp transport module.
+<6>[    1.022526] RPC: Registered tcp-with-tls transport module.
+<6>[    1.022537] RPC: Registered tcp NFSv4.1 backchannel transport module.
+<6>[    1.022555] NET: Registered PF_XDP protocol family
+<6>[    1.022578] PCI: CLS 0 bytes, default 64
+<6>[    1.022827] Trying to unpack rootfs image as initramfs...
+<6>[    1.025504] kvm [1]: IPA Size Limit: 40 bits
+<6>[    1.028800] kvm [1]: vgic interrupt IRQ9
+<6>[    1.028860] kvm [1]: Hyp mode initialized successfully
+<5>[    1.030779] Initialise system trusted keyrings
+<5>[    1.030864] Key type blacklist registered
+<6>[    1.031200] workingset: timestamp_bits=40 max_order=20 bucket_order=0
+<6>[    1.031287] zbud: loaded
+<6>[    1.037189] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+<5>[    1.040723] NFS: Registering the id_resolver key type
+<5>[    1.040782] Key type id_resolver registered
+<5>[    1.040795] Key type id_legacy registered
+<6>[    1.040912] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+<6>[    1.040937] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+<6>[    1.042052] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+<6>[    1.042327] fuse: init (API version 7.39)
+<5>[    1.043232] integrity: Platform Keyring initialized
+<5>[    1.043299] integrity: Machine keyring initialized
+<6>[    1.095949] NET: Registered PF_ALG protocol family
+<6>[    1.096019] xor: measuring software checksum speed
+<6>[    1.099576]    8regs           :  2778 MB/sec
+<6>[    1.103127]    32regs          :  2785 MB/sec
+<6>[    1.106995]    arm64_neon      :  2559 MB/sec
+<6>[    1.107014] xor: using function: 32regs (2785 MB/sec)
+<5>[    1.107039] Key type asymmetric registered
+<5>[    1.107054] Asymmetric key parser 'x509' registered
+<6>[    1.107167] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 239)
+<6>[    1.107463] io scheduler mq-deadline registered
+<6>[    1.107479] io scheduler kyber registered
+<6>[    1.110818] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+<6>[    1.167505] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+<6>[    1.169919] Serial: AMBA driver
+<6>[    1.180833] brd: module loaded
+<6>[    1.187230] loop: module loaded
+<3>[    1.191891] mtdoops: mtd device (mtddev=name/number) must be supplied
+<6>[    1.195000] tun: Universal TUN/TAP device driver, 1.6
+<6>[    1.196046] PPP generic driver version 2.4.2
+<6>[    1.196307] usbcore: registered new interface driver asix
+<6>[    1.196345] usbcore: registered new interface driver ax88179_178a
+<6>[    1.196381] usbcore: registered new interface driver cdc_ether
+<6>[    1.196427] usbcore: registered new interface driver net1080
+<6>[    1.196464] usbcore: registered new interface driver cdc_subset
+<6>[    1.196499] usbcore: registered new interface driver zaurus
+<6>[    1.196542] usbcore: registered new interface driver cdc_ncm
+<6>[    1.197956] usbcore: registered new interface driver uas
+<6>[    1.198009] usbcore: registered new interface driver usb-storage
+<6>[    1.198044] usbcore: registered new device driver onboard-usb-dev
+<6>[    1.198741] mousedev: PS/2 mouse device common for all mice
+<6>[    1.199061] i2c_dev: i2c /dev entries driver
+<6>[    1.200921] usbcore: registered new interface driver uvcvideo
+<4>[    1.202254] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+<6>[    1.202407] device-mapper: uevent: version 1.0.3
+<6>[    1.202745] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+<6>[    1.202898] EDAC MC: ECC not enabled
+<6>[    1.204123] sdhci: Secure Digital Host Controller Interface driver
+<6>[    1.204141] sdhci: Copyright(c) Pierre Ossman
+<6>[    1.204153] sdhci-pltfm: SDHCI platform and OF driver helper
+<6>[    1.204760] ledtrig-cpu: registered to indicate activity on CPUs
+<6>[    1.205186] zynqmp_firmware_probe Platform Management API v1.1
+<6>[    1.205221] zynqmp_firmware_probe Trustzone version v1.0
+<6>[    1.238561] securefw securefw: securefw probed
+<6>[    1.238950] zynqmp-aes zynqmp-aes.0: will run requests pump with realtime priority
+<6>[    1.239365] zynqmp-sha3-384 zynqmp-sha3-384.0: will run requests pump with realtime priority
+<6>[    1.239724] xilinx_rsa xilinx_rsa.0: will run requests pump with realtime priority
+<6>[    1.239943] hid: raw HID events driver (C) Jiri Kosina
+<6>[    1.243779] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+<6>[    1.244238] watchdog: NMI not fully supported
+<6>[    1.244252] watchdog: Hard watchdog permanently disabled
+<6>[    1.245595] fpga_manager fpga0: Xilinx ZynqMP FPGA Manager registered
+<6>[    1.246457] usbcore: registered new interface driver snd-usb-audio
+<6>[    1.247647] pktgen: Packet Generator for packet performance testing. Version: 2.75
+<6>[    1.248804] drop_monitor: Initializing network drop monitor service
+<6>[    1.249009] Initializing XFRM netlink socket
+<6>[    1.249909] NET: Registered PF_INET6 protocol family
+<6>[    2.857075] Freeing initrd memory: 44416K
+<6>[    2.889765] Segment Routing with IPv6
+<6>[    2.889864] In-situ OAM (IOAM) with IPv6
+<6>[    2.889965] NET: Registered PF_PACKET protocol family
+<6>[    2.890154] 8021q: 802.1Q VLAN Support v1.8
+<5>[    2.890514] Key type dns_resolver registered
+<6>[    2.906555] registered taskstats version 1
+<5>[    2.907320] Loading compiled-in X.509 certificates
+<3>[    3.538693] Problem loading in-kernel X.509 certificate (-22)
+<4>[    3.538759] ------------[ cut here ]------------
+<4>[    3.538771] WARNING: CPU: 2 PID: 1 at crypto/asymmetric_keys/x509_loader.c:44 x509_load_certificate_list+0xf0/0x1a8
+<4>[    3.538807] Modules linked in:
+<4>[    3.538823] CPU: 2 PID: 1 Comm: swapper/0 Not tainted 6.8.12-a10irq2 #1
+<4>[    3.538842] Hardware name: ZynqMP KV260 revB (DT)
+<4>[    3.538854] pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+<4>[    3.538871] pc : x509_load_certificate_list+0xf0/0x1a8
+<4>[    3.538890] lr : x509_load_certificate_list+0xf0/0x1a8
+<4>[    3.538908] sp : ffff8000837fbd40
+<4>[    3.538918] x29: ffff8000837fbd40 x28: ffff800082ab0180 x27: ffff800082233600
+<4>[    3.538943] x26: ffff8000823172c0 x25: ffffffffffffffea x24: ffff80008206fd38
+<4>[    3.538966] x23: ffff80008206fce0 x22: ffff000800fe3501 x21: ffff800082c93a46
+<4>[    3.538989] x20: ffff800082c92a00 x19: 000000000000052c x18: ffff8000837c5028
+<4>[    3.539012] x17: 0000000000000000 x16: 0000000000000000 x15: 0761076307690766
+<4>[    3.539035] x14: 0769077407720765 x13: 0761076307690766 x12: 0000000000000000
+<4>[    3.539058] x11: 0000000000000000 x10: 0000000000000000 x9 : 0000000000000000
+<4>[    3.539080] x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+<4>[    3.539103] x5 : 0000000000000000 x4 : 0000000000000000 x3 : 0000000000000000
+<4>[    3.539125] x2 : 0000000000000000 x1 : 0000000000000000 x0 : 0000000000000031
+<4>[    3.539148] Call trace:
+<4>[    3.539158]  x509_load_certificate_list+0xf0/0x1a8
+<4>[    3.539178]  load_system_certificate_list+0x40/0x68
+<4>[    3.539198]  do_one_initcall+0x64/0x380
+<4>[    3.539215]  kernel_init_freeable+0x214/0x480
+<4>[    3.539230]  kernel_init+0x30/0x230
+<4>[    3.539248]  ret_from_fork+0x10/0x20
+<4>[    3.539264] ---[ end trace 0000000000000000 ]---
+<3>[    4.170647] Problem loading in-kernel X.509 certificate (-22)
+<3>[    4.801920] Problem loading in-kernel X.509 certificate (-22)
+<5>[    4.801972] blacklist: Loading compiled-in revocation X.509 certificates
+<5>[    4.802093] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+<5>[    4.802186] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+<5>[    4.802287] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+<5>[    4.802369] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+<5>[    4.802470] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+<5>[    4.802556] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+<5>[    4.802668] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+<5>[    4.802768] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+<5>[    4.826897] Key type .fscrypt registered
+<5>[    4.826935] Key type fscrypt-provisioning registered
+<6>[    4.830987] Btrfs loaded, zoned=yes, fsverity=yes
+<5>[    4.838375] aes_ce_cipher: module verification failed: signature and/or required key missing - tainting kernel
+<5>[    4.850967] Key type encrypted registered
+<6>[    4.851023] AppArmor: AppArmor sha256 policy hashing enabled
+<6>[    4.851071] ima: No TPM chip found, activating TPM-bypass!
+<5>[    4.851131] Loading compiled-in module X.509 certificates
+<4>[    5.482522] sched: RT throttling activated
+<3>[    5.482591] Problem loading in-kernel X.509 certificate (-22)
+<6>[    5.482666] ima: Allocated hash algorithm: sha256
+<6>[    5.482729] ima: No architecture policies found
+<6>[    5.482791] evm: Initialising EVM extended attributes:
+<6>[    5.482804] evm: security.selinux
+<6>[    5.482815] evm: security.SMACK64
+<6>[    5.482825] evm: security.SMACK64EXEC
+<6>[    5.482835] evm: security.SMACK64TRANSMUTE
+<6>[    5.482846] evm: security.SMACK64MMAP
+<6>[    5.482856] evm: security.apparmor
+<6>[    5.482866] evm: security.ima
+<6>[    5.482876] evm: security.capability
+<6>[    5.482886] evm: HMAC attrs: 0x1
+<4>[    5.501514] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    5.501569] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 36 param 18 value 1
+<4>[    5.501590] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    5.501615] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 37 param 2 value 0
+<4>[    5.501670] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 36
+<4>[    5.501742] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 37
+<6>[    5.502737] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 20, base_baud = 6249999) is a xuartps
+<6>[    5.502787] printk: legacy console [ttyPS1] enabled
+<6>[    7.435068] of-fpga-region fpga-region: FPGA Region probed
+<4>[    7.440960] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    7.456364] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 38 param 18 value 1
+<4>[    7.465471] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 38
+<6>[    7.481642] xilinx-zynqmp-dpdma fd4c0000.dma-controller: Xilinx DPDMA engine is probed
+<6>[    7.964750] zynqmp-display fd4a0000.display: vtc bridge property not present
+<6>[    8.434931] xilinx-dp-snd-codec fd4a0000.display:zynqmp-dp-snd-codec0: Xilinx DisplayPort Sound Codec probed
+<6>[    8.445372] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm0: Xilinx DisplayPort Sound PCM probed
+<6>[    8.453653] xilinx-dp-snd-pcm zynqmp_dp_snd_pcm1: Xilinx DisplayPort Sound PCM probed
+<6>[    8.463741] xilinx-dp-snd-card fd4a0000.display:zynqmp-dp-snd-card: Xilinx DisplayPort Sound Card probed
+<6>[    8.474359] xlnx-drm xlnx-drm.0: bound fd4a0000.display (ops zynqmp_dpsub_component_ops)
+<6>[    8.668527] Console: switching to colour frame buffer device 80x30
+<4>[    8.668549] fb0: Framebuffer is not in virtual address space.
+<6>[    8.692556] zynqmp-display fd4a0000.display: [drm] fb0: xlnxdrmfb frame buffer device
+<6>[    8.706744] [drm] Initialized xlnx 1.0.0 20130509 for fd4a0000.display on minor 0
+<4>[    8.707871] fb0: Framebuffer is not in virtual address space.
+<6>[    8.715396] zynqmp-display fd4a0000.display: ZynqMP DisplayPort Subsystem driver probed
+<4>[    8.734779] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<6>[    8.737403] tpm_tis_spi spi2.0: 2.0 TPM (device-id 0x1B, rev-id 22)
+<4>[    8.739236] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 76 param 18 value 1
+<3>[    8.743303] tpm tpm0: A TPM error (256) occurred attempting the self test
+<4>[    8.757991] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 76
+<6>[    8.759112] tpm tpm0: starting up the TPM manually
+<4>[    8.761356] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.818216] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 77 param 18 value 1
+<4>[    8.829469] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 77
+<4>[    8.840909] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.860688] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 64 param 18 value 1
+<4>[    8.871984] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.891834] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 65 param 18 value 1
+<4>[    8.903153] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.923040] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 66 param 18 value 1
+<4>[    8.934401] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.954366] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 67 param 18 value 1
+<4>[    8.965754] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    8.985764] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 68 param 18 value 1
+<4>[    8.997159] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.017166] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 69 param 18 value 1
+<4>[    9.028563] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.048571] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 71 param 18 value 1
+<4>[    9.059959] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.079968] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 73 param 18 value 1
+<4>[    9.091364] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.111380] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 75 param 18 value 1
+<4>[    9.122754] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.142759] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 70 param 2 value 0
+<4>[    9.154044] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.174048] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 72 param 2 value 0
+<4>[    9.185335] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.205335] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 74 param 2 value 0
+<4>[    9.216636] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 64
+<4>[    9.228206] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 65
+<4>[    9.239776] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 66
+<4>[    9.251351] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 67
+<4>[    9.262918] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 68
+<4>[    9.274479] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 69
+<4>[    9.286032] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 70
+<4>[    9.297586] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 71
+<4>[    9.309130] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 72
+<4>[    9.320675] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 73
+<4>[    9.332221] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 74
+<4>[    9.343756] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 75
+<5>[    9.349599] random: crng init done
+<6>[    9.355811] macb ff0e0000.ethernet: invalid hw address, using random
+<6>[    9.376782] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x50070106 at 0xff0e0000 irq 41 (9a:21:c9:a0:a5:32)
+<6>[    9.389844] xilinx-axipmon ffa00000.perf-monitor: Probed Xilinx APM
+<6>[    9.397814] xilinx-axipmon fd0b0000.perf-monitor: Probed Xilinx APM
+<6>[    9.405686] xilinx-axipmon fd490000.perf-monitor: Probed Xilinx APM
+<6>[    9.413437] xilinx-axipmon ffa10000.perf-monitor: Probed Xilinx APM
+<4>[    9.421808] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.441157] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 54 param 18 value 1
+<4>[    9.452274] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.471662] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 56 param 18 value 1
+<4>[    9.482801] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.502181] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 57 param 18 value 1
+<4>[    9.513338] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.532769] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 58 param 18 value 1
+<4>[    9.543979] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.563669] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 59 param 18 value 1
+<4>[    9.575122] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.595144] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 60 param 18 value 1
+<4>[    9.606598] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.626617] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 61 param 18 value 1
+<4>[    9.638071] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.658091] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 62 param 18 value 1
+<4>[    9.669545] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.689566] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 63 param 18 value 1
+<4>[    9.701000] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.721022] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 52 param 2 value 0
+<4>[    9.732362] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.752371] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 53 param 2 value 0
+<4>[    9.763715] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[    9.783725] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 55 param 2 value 0
+<4>[    9.795111] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 53
+<4>[    9.806707] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 54
+<4>[    9.818286] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 55
+<4>[    9.829859] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 56
+<4>[    9.841420] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 57
+<4>[    9.852982] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 58
+<4>[    9.864544] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 59
+<4>[    9.876097] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 60
+<4>[    9.887650] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 61
+<4>[    9.899195] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 62
+<4>[    9.910756] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 63
+<6>[    9.951015] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+<6>[    9.957719] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+<6>[    9.967810] xhci-hcd xhci-hcd.0.auto: hcc params 0x0238f625 hci version 0x100 quirks 0x0000008002000810
+<6>[    9.979491] xhci-hcd xhci-hcd.0.auto: irq 44, io mem 0xfe200000
+<6>[    9.986717] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+<6>[    9.993309] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+<6>[   10.003108] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+<6>[   10.010925] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+<6>[   10.021348] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+<6>[   10.021356] usb usb1: Product: xHCI Host Controller
+<6>[   10.036653] usb usb1: Manufacturer: Linux 6.8.12-a10irq2 xhci-hcd
+<6>[   10.043803] usb usb1: SerialNumber: xhci-hcd.0.auto
+<6>[   10.050244] hub 1-0:1.0: USB hub found
+<6>[   10.055094] hub 1-0:1.0: 1 port detected
+<4>[   10.060870] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<4>[   10.071310] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<6>[   10.102994] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+<6>[   10.113248] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+<6>[   10.122432] usb usb2: Product: xHCI Host Controller
+<6>[   10.128287] usb usb2: Manufacturer: Linux 6.8.12-a10irq2 xhci-hcd
+<6>[   10.135345] usb usb2: SerialNumber: xhci-hcd.0.auto
+<6>[   10.141689] hub 2-0:1.0: USB hub found
+<6>[   10.146429] hub 2-0:1.0: 1 port detected
+<6>[   10.154675] cdns-wdt fd4d0000.watchdog: Xilinx Watchdog Timer with timeout 60s
+<6>[   10.164309] cdns-wdt ff150000.watchdog: Xilinx Watchdog Timer with timeout 10s
+<4>[   10.175636] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.194896] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 45 param 2 value 0
+<4>[   10.205836] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 45
+<4>[   10.217052] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.236508] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 39 param 18 value 1
+<4>[   10.247699] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 39
+<4>[   10.259078] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.278678] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 40 param 18 value 1
+<4>[   10.289910] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 40
+<4>[   10.301398] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.321367] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 41 param 18 value 1
+<4>[   10.332749] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 41
+<4>[   10.344320] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.364290] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 42 param 18 value 1
+<4>[   10.375670] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 42
+<4>[   10.387240] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.407222] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 46 param 18 value 1
+<4>[   10.418601] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 46
+<4>[   10.430175] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.450159] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 47 param 18 value 1
+<4>[   10.450185] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 47
+<4>[   10.473085] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.493059] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 48 param 18 value 1
+<4>[   10.504439] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 48
+<4>[   10.516000] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.535973] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 49 param 18 value 1
+<4>[   10.547353] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 49
+<4>[   10.558920] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.578896] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 50 param 18 value 1
+<4>[   10.590285] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 50
+<4>[   10.601874] The requested pinctrl feature is not supported in the current firmware.
+                  Expected firmware version is 2023.1 and above for this feature to work.
+<4>[   10.621856] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: failed to set: pin 51 param 18 value 1
+<4>[   10.633252] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 51
+<4>[   10.645259] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<3>[   10.645935] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 187499999
+<4>[   10.647703] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<3>[   10.650264] clk: couldn't set sdio1_ref clk rate to 187498123 (-16), current rate: 187499999
+<4>[   10.679632] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<4>[   10.699019] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<6>[   10.711105] mmc1: SDHCI controller on ff170000.mmc [ff170000.mmc] using ADMA 64-bit
+<4>[   10.737618] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<4>[   10.748440] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<6>[   10.756469] mmc1: new high speed SDHC card at address 0001
+<6>[   10.766529] mmcblk1: mmc1:0001 SD32G 29.1 GiB
+<6>[   10.774453]  mmcblk1: p1 p2
+<4>[   10.787658] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<4>[   10.798353] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<6>[   10.830320] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+<4>[   10.845935] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<4>[   10.856811] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<6>[   10.868868] of_cfs_init
+<6>[   10.872454] of_cfs_init: OK
+<4>[   10.876617] clk: Not disabling unused clocks
+<6>[   10.882323] ALSA device list:
+<6>[   10.886295]   #0: DP mon
+<6>[   10.895989] Freeing unused kernel memory: 8640K
+<6>[   10.961808] Checked W+X mappings: passed, no W+X pages found
+<6>[   10.968526] Run /init as init process
+<7>[   10.973128]   with arguments:
+<7>[   10.973136]     /init
+<7>[   10.973142]   with environment:
+<7>[   10.973148]     HOME=/
+<7>[   10.973153]     TERM=linux
+<4>[   11.928132] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 24
+<4>[   11.939365] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 25
+<6>[   11.952495] i2c i2c-1: using pinctrl states for GPIO recovery
+<4>[   11.959342] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 24
+<4>[   11.970449] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 25
+<6>[   11.981699] i2c i2c-1: using generic GPIOs for recovery
+<5>[   11.988331] 17 fixed-partitions partitions found on MTD device spi0.0
+<4>[   11.991549] onboard-usb-dev fe200000.usb:hub@1: supply vdd not found, using dummy regulator
+<5>[   11.996113] Creating 17 MTD partitions on "spi0.0":
+<6>[   11.997859] rtc_zynqmp ffa60000.rtc: registered as rtc0
+<5>[   11.998723] 0x000000000000-0x000000080000 : "Image Selector"
+<4>[   11.999724] onboard-usb-dev fe200000.usb:hub@1: supply vdd2 not found, using dummy regulator
+<4>[   12.001002] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 24
+<6>[   12.008113] rtc_zynqmp ffa60000.rtc: setting system clock to 1970-01-01T00:00:13 UTC (13)
+<4>[   12.012482] zynqmp-pinctrl firmware:zynqmp-firmware:pinctrl: Invalid IO Standard requested for pin 25
+<5>[   12.015769] 0x000000080000-0x000000100000 : "Image Selector Golden"
+<4>[   12.017320] at24 1-0050: supply vcc not found, using dummy regulator
+<6>[   12.026810] at24 1-0050: 8192 byte 24c64 EEPROM, writable, 1 bytes/write
+<5>[   12.030355] 0x000000100000-0x000000120000 : "Persistent Register"
+<4>[   12.052184] at24 1-0051: supply vcc not found, using dummy regulator
+<5>[   12.056408] 0x000000120000-0x000000140000 : "Persistent Register Backup"
+<6>[   12.128754] at24 1-0051: 8192 byte 24c64 EEPROM, writable, 1 bytes/write
+<5>[   12.146004] 0x000000140000-0x000000200000 : "Open_1"
+<5>[   12.167413] 0x000000200000-0x000000f00000 : "Image A (FSBL, PMU, ATF, U-Boot)"
+<5>[   12.181590] 0x000000f00000-0x000000f80000 : "ImgSel Image A Catch"
+<6>[   12.188514] cdns-i2c ff030000.i2c: 400 kHz mmio ff030000 irq 49
+<5>[   12.196049] 0x000000f80000-0x000001c80000 : "Image B (FSBL, PMU, ATF, U-Boot)"
+<5>[   12.207716] 0x000001c80000-0x000001d00000 : "ImgSel Image B Catch"
+<5>[   12.217986] 0x000001d00000-0x000001e00000 : "Open_2"
+<5>[   12.232733] 0x000001e00000-0x000002000000 : "Recovery Image"
+<5>[   12.242632] 0x000002000000-0x000002200000 : "Recovery Image Backup"
+<5>[   12.252817] 0x000002200000-0x000002220000 : "U-Boot storage variables"
+<5>[   12.262412] 0x000002220000-0x000002240000 : "U-Boot storage variables backup"
+<5>[   12.272794] 0x000002240000-0x000002280000 : "SHA256"
+<5>[   12.281178] 0x000002280000-0x0000022a0000 : "Secure OS Storage"
+<5>[   12.290506] 0x0000022a0000-0x000004000000 : "User"
+<6>[   12.296337] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+<6>[   12.412496] da9121 1-0033: Device detected (device-ID: 0x05, var-ID: 0x21, DA9131)
+<6>[   12.422191] da9121 1-0032: Device detected (device-ID: 0x05, var-ID: 0x20, DA9130)
+<6>[   12.434175] usb 1-1: New USB device found, idVendor=0424, idProduct=2744, bcdDevice= 2.21
+<6>[   12.444198] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+<6>[   12.452258] usb 1-1: Product: USB2744
+<6>[   12.456808] usb 1-1: Manufacturer: Microchip Tech
+<6>[   12.507198] hub 1-1:1.0: USB hub found
+<6>[   12.511934] hub 1-1:1.0: 5 ports detected
+<6>[   12.570810] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+<6>[   12.589902] usb 2-1: New USB device found, idVendor=0424, idProduct=5744, bcdDevice= 2.21
+<6>[   12.599815] usb 2-1: New USB device strings: Mfr=2, Product=3, SerialNumber=0
+<6>[   12.607865] usb 2-1: Product: USB5744
+<6>[   12.612394] usb 2-1: Manufacturer: Microchip Tech
+<6>[   12.683137] hub 2-1:1.0: USB hub found
+<6>[   12.687944] hub 2-1:1.0: 4 ports detected
+<6>[   12.872304] usb 1-1.5: new high-speed USB device number 3 using xhci-hcd
+<6>[   12.970497] usb 1-1.5: New USB device found, idVendor=0424, idProduct=2740, bcdDevice= 2.00
+<6>[   12.980514] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+<6>[   12.989539] usb 1-1.5: Product: Hub Controller
+<6>[   12.994877] usb 1-1.5: Manufacturer: Microchip Tech
+<6>[   13.396346] async_tx: api initialized (async)
+<6>[   14.354582] EXT4-fs (mmcblk1p2): mounted filesystem 461d1b5d-3b45-4362-a84f-c5bdff2605fb ro with ordered data mode. Quota mode: none.
+<7>[   15.381865] systemd[1]: System time before build time, advancing clock.
+<7>[   15.497545] systemd[1]: Inserted module 'autofs4'
+<7>[   15.635771] systemd[1]: systemd 255.4-1ubuntu8.18 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+<7>[   15.673076] systemd[1]: Detected architecture arm64.
+<7>[   15.689082] systemd[1]: Hostname set to <kria>.
+<7>[   18.044005] systemd[1]: Queued start job for default target graphical.target.
+<7>[   18.091186] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+<7>[   18.104361] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+<7>[   18.118133] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+<7>[   18.131153] systemd[1]: Created slice user.slice - User and Session Slice.
+<7>[   18.140540] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+<7>[   18.154970] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+<7>[   18.170881] systemd[1]: Expecting device dev-disk-by\x2dlabel-system\x2dboot.device - /dev/disk/by-label/system-boot...
+<7>[   18.185018] systemd[1]: Expecting device dev-ttyPS1.device - /dev/ttyPS1...
+<7>[   18.194391] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+<7>[   18.206758] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+<7>[   18.218811] systemd[1]: Reached target slices.target - Slice Units.
+<7>[   18.227608] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+<7>[   18.238652] systemd[1]: Reached target swap.target - Swaps.
+<7>[   18.246756] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+<7>[   18.259076] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+<7>[   18.271303] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+<7>[   18.283115] systemd[1]: Listening on multipathd.socket - multipathd control socket.
+<7>[   18.322848] systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+<7>[   18.335432] systemd[1]: Listening on syslog.socket - Syslog Socket.
+<7>[   18.344692] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+<7>[   18.357189] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+<7>[   18.369888] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+<7>[   18.382905] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+<7>[   18.393848] systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+<7>[   18.412387] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+<7>[   18.424570] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+<7>[   18.450642] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+<7>[   18.476651] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+<7>[   18.492242] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+<7>[   18.507640] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+<7>[   18.527339] systemd[1]: Starting systemd-journald.service - Journal Service...
+<7>[   18.538912] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS was skipped because of an unmet condition check (ConditionPathExists=/etc/krb5.keytab).
+<7>[   18.562547] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+<7>[   18.579853] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+<7>[   18.598425] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+<7>[   18.621504] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+<7>[   18.639320] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+<7>[   18.656594] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+<7>[   18.658452] systemd-journald[397]: Collecting audit messages is disabled.
+<7>[   18.680588] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+<7>[   18.698453] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+<7>[   18.715984] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+<7>[   18.744064] systemd[1]: Starting systemd-fsck-root.service - File System Check on Root Device...
+<7>[   18.774602] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+<7>[   18.794600] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+<7>[   18.813460] systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+<7>[   18.850877] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+<7>[   18.870554] systemd[1]: Started systemd-journald.service - Journal Service.
+<6>[   19.196123] EXT4-fs (mmcblk1p2): re-mounted 461d1b5d-3b45-4362-a84f-c5bdff2605fb r/w. Quota mode: none.
+<7>[   19.290267] systemd-journald[397]: Received client request to flush runtime journal.
+<7>[   19.510916] systemd-journald[397]: /var/log/journal/8baf400154f04e5a8bccad9f64df4438/system.journal: Realtime clock jumped backwards relative to last journal entry, rotating.
+<7>[   19.510953] systemd-journald[397]: Rotating system journal.
+<6>[   19.795639] loop0: detected capacity change from 0 to 8
+<6>[   19.799026] loop1: detected capacity change from 0 to 121944
+<6>[   19.833474] loop2: detected capacity change from 0 to 141032
+<6>[   19.875413] loop3: detected capacity change from 0 to 126640
+<6>[   19.911061] loop4: detected capacity change from 0 to 539464
+<6>[   19.936961] loop5: detected capacity change from 0 to 1149192
+<6>[   19.971431] loop6: detected capacity change from 0 to 187776
+<6>[   20.015547] loop7: detected capacity change from 0 to 108656
+<6>[   20.030664] loop8: detected capacity change from 0 to 95432
+<6>[   20.059947] loop9: detected capacity change from 0 to 385528
+<6>[   20.084353] loop10: detected capacity change from 0 to 79224
+<6>[   22.902598] EDAC DEVICE0: Giving out device to module zynqmp-ocm-edac controller zynqmp_ocm: DEV ff960000.memory-controller (INTERRUPT)
+<5>[   25.126318] audit: type=1400 audit(1791790585.743:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=781 comm="apparmor_parser"
+<5>[   25.127019] audit: type=1400 audit(1791790585.744:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=780 comm="apparmor_parser"
+<5>[   25.127035] audit: type=1400 audit(1791790585.744:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=782 comm="apparmor_parser"
+<5>[   25.127191] audit: type=1400 audit(1791790585.744:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=783 comm="apparmor_parser"
+<5>[   25.136057] audit: type=1400 audit(1791790585.753:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=784 comm="apparmor_parser"
+<5>[   25.137165] audit: type=1400 audit(1791790585.754:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=785 comm="apparmor_parser"
+<5>[   25.138724] audit: type=1400 audit(1791790585.756:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=786 comm="apparmor_parser"
+<5>[   25.139219] audit: type=1400 audit(1791790585.756:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="busybox" pid=787 comm="apparmor_parser"
+<5>[   25.146194] audit: type=1400 audit(1791790585.763:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=789 comm="apparmor_parser"
+<5>[   25.146410] audit: type=1400 audit(1791790585.764:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=788 comm="apparmor_parser"
+<4>[   36.335635] kauditd_printk_skb: 130 callbacks suppressed
+<5>[   36.335652] audit: type=1400 audit(1792704635.142:142): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=1013 comm="apparmor_parser"
+<3>[   37.272487] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[   37.284601] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/resets
+<6>[   39.811668] NET: Registered PF_QIPCRTR protocol family
+<6>[   40.805570] loop11: detected capacity change from 0 to 8
+<5>[   42.168596] audit: type=1400 audit(1792704640.975:143): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1375 comm="apparmor_parser"
+<6>[   44.471253] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:01] driver [TI DP83867] (irq=POLL)
+<6>[   44.471297] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+<6>[   44.471701] pps pps0: new PPS source ptp0
+<6>[   44.471899] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+<5>[   44.870815] audit: type=1400 audit(1792704643.677:144): apparmor="DENIED" operation="capable" class="cap" profile="/usr/sbin/cupsd" pid=1436 comm="cupsd" capability=12  capname="net_admin"
+<6>[   49.590185] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control tx
+<7>[  124.646520] rfkill: input handler disabled
+<7>[  379.332698] systemd-journald[397]: /var/log/journal/8baf400154f04e5a8bccad9f64df4438/user-1000.journal: Journal file uses a different sequence number ID, rotating.
+<7>[  906.158990] rfkill: input handler enabled
+<4>[  910.864766] zocl: loading out-of-tree module taints kernel.
+<3>[  911.362971] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[  911.373692] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/misc_clk_0
+<3>[  911.383831] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/clocking0
+<3>[  911.393840] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/afi0
+<3>[  911.403412] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_intc_0
+<3>[  911.413502] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_vip_pltf
+<3>[  911.423764] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/w4a8_linear_v1_1
+<6>[  911.485915] irq-xilinx: /axi/interrupt-controller@80020000: num_irq=32, edge=0xfffffffd
+<6>[  911.501251] [drm] Probing for xlnx,zocl
+<3>[  911.502894] zocl-drm axi:zyxclmm_drm: error -ENXIO: IRQ index 32 not found
+<6>[  911.512657] [drm] FPGA programming device pcap founded.
+<6>[  911.512729] [drm] PR[0] Isolation addr 0x0
+<6>[  911.513684] [drm] Initialized zocl 2.18.0 20261022 for axi:zyxclmm_drm on minor 1
+<6>[  913.843877] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(3308), ret: 0
+<6>[  913.843976] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(3308)
+<6>[  913.844351] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(3308), ret: 0
+<6>[  913.899007] [drm] Found free Slot-0 is selected for xclbin 
+<6>[  913.899042] [drm]  Allocated slot 0 to load xclbin in device
+                  .
+<6>[  913.899058] [drm] skip kind 29(AIE_RESOURCES) return code: -22
+<6>[  913.899069] [drm] disable partial bitstream download, axlf flags is 0
+<6>[  913.899076] [drm] found kind 8(IP_LAYOUT)
+<6>[  913.899090] [drm] skip kind 9(DEBUG_IP_LAYOUT) return code: -22
+<6>[  913.899098] [drm] skip kind 25(AIE_METADATA) return code: -22
+<6>[  913.899104] [drm] found kind 7(CONNECTIVITY)
+<6>[  913.899118] [drm] found kind 6(MEM_TOPOLOGY)
+<6>[  913.899324] [drm] Memory 0 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899397] [drm] Memory 1 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899456] [drm] Memory 2 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899515] [drm] Memory 3 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899571] [drm] Memory 4 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899629] [drm] Memory 5 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.899687] [drm] Memory 6 is not reserved in device tree. Will allocate memory from CMA
+<6>[  913.900571] zocl_irq_intc ZOCL_CU_INTC.2.auto: zocl_irq_intc_add: managing IRQ 57
+<6>[  913.900668] cu_drv CU.3.auto: cu_probe: CU[0] created
+<6>[  913.901207] cu_drv CU.3.auto:  ffff000802b94010 xrt_cu_intr_thread: CU[0] start
+<6>[  913.901247] [drm] zocl_xclbin_read_axlf ec6bb114-e3e0-7c8a-9194-4d75b3275325 ret: 0
+<6>[  913.935966] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[  913.936043] zocl-drm axi:zyxclmm_drm:  ffff0008011c5c10 kds_add_context: Client pid(3308) add context Domain(65535) CU(0xffff) shared(true)
+<6>[  913.936107] zocl-drm axi:zyxclmm_drm:  ffff0008011c5c10 kds_del_context: Client pid(3308) del context Domain(65535) CU(0xffff)
+<6>[  913.936133] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[  914.000890] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[  914.000965] zocl-drm axi:zyxclmm_drm:  ffff0008011c5c10 kds_add_context: Client pid(3308) add context Domain(0) CU(0x0) shared(false)
+<6>[  914.002791] zocl-drm axi:zyxclmm_drm:  ffff0008011c5c10 kds_del_context: Client pid(3308) del context Domain(0) CU(0x0)
+<6>[  914.002837] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[ 3039.055421] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(3308)
+<6>[ 6447.521758] cu_drv CU.3.auto:  ffff000802b94010 xrt_cu_intr_thread: CU[0] thread end, bad state 0
+<6>[ 6447.521863] cu_drv CU.3.auto: cu_remove: CU[0] removed
+<6>[ 6447.522173] zocl_irq_intc ZOCL_CU_INTC.2.auto: zintc_remove: Removing zocl_irq_intc
+<3>[ 6454.702051] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[ 6454.712541] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/resets
+<7>[ 6465.801694] rfkill: input handler disabled
+<5>[ 9010.167719] audit: type=1400 audit(1792713608.973:145): apparmor="DENIED" operation="capable" class="cap" profile="/usr/sbin/cupsd" pid=11920 comm="cupsd" capability=12  capname="net_admin"
+<7>[10031.884076] rfkill: input handler enabled
+<3>[10038.478845] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[10038.489567] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/misc_clk_0
+<3>[10038.499706] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/clocking0
+<3>[10038.509716] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/afi0
+<3>[10038.519287] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_intc_0
+<3>[10038.529375] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_vip_pltf
+<3>[10038.539661] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/w4a8_linear_v1_1
+<6>[10038.609162] irq-xilinx: /axi/interrupt-controller@80020000: num_irq=32, edge=0xfffffffd
+<6>[10038.623960] [drm] Probing for xlnx,zocl
+<3>[10038.628302] zocl-drm axi:zyxclmm_drm: error -ENXIO: IRQ index 32 not found
+<6>[10038.636066] [drm] FPGA programming device pcap founded.
+<6>[10038.636121] [drm] PR[0] Isolation addr 0x0
+<6>[10038.636784] [drm] Initialized zocl 2.18.0 20261022 for axi:zyxclmm_drm on minor 1
+<6>[10040.582704] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(13058), ret: 0
+<6>[10040.582810] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(13058)
+<6>[10040.583167] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(13058), ret: 0
+<6>[10040.639533] [drm] Found free Slot-0 is selected for xclbin 
+<6>[10040.639572] [drm]  Allocated slot 0 to load xclbin in device
+                  .
+<6>[10040.639589] [drm] skip kind 29(AIE_RESOURCES) return code: -22
+<6>[10040.639600] [drm] disable partial bitstream download, axlf flags is 0
+<6>[10040.639606] [drm] found kind 8(IP_LAYOUT)
+<6>[10040.639620] [drm] skip kind 9(DEBUG_IP_LAYOUT) return code: -22
+<6>[10040.639627] [drm] skip kind 25(AIE_METADATA) return code: -22
+<6>[10040.639634] [drm] found kind 7(CONNECTIVITY)
+<6>[10040.639648] [drm] found kind 6(MEM_TOPOLOGY)
+<6>[10040.639823] [drm] Memory 0 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.639887] [drm] Memory 1 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.639943] [drm] Memory 2 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.639999] [drm] Memory 3 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.640057] [drm] Memory 4 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.640115] [drm] Memory 5 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.640171] [drm] Memory 6 is not reserved in device tree. Will allocate memory from CMA
+<6>[10040.641726] zocl_irq_intc ZOCL_CU_INTC.2.auto: zocl_irq_intc_add: managing IRQ 57
+<6>[10040.641836] cu_drv CU.3.auto: cu_probe: CU[0] created
+<6>[10040.644684] cu_drv CU.3.auto:  ffff00080b276410 xrt_cu_intr_thread: CU[0] start
+<6>[10040.644744] [drm] zocl_xclbin_read_axlf ec6bb114-e3e0-7c8a-9194-4d75b3275325 ret: 0
+<6>[10040.674142] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[10040.674316] zocl-drm axi:zyxclmm_drm:  ffff0008011c6410 kds_add_context: Client pid(13058) add context Domain(65535) CU(0xffff) shared(true)
+<6>[10040.674446] zocl-drm axi:zyxclmm_drm:  ffff0008011c6410 kds_del_context: Client pid(13058) del context Domain(65535) CU(0xffff)
+<6>[10040.674478] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[10040.741622] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[10040.741708] zocl-drm axi:zyxclmm_drm:  ffff0008011c6410 kds_add_context: Client pid(13058) add context Domain(0) CU(0x0) shared(false)
+<6>[10040.744763] zocl-drm axi:zyxclmm_drm:  ffff0008011c6410 kds_del_context: Client pid(13058) del context Domain(0) CU(0x0)
+<6>[10040.744818] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[10040.872032] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(13058)
+<6>[10042.112482] cu_drv CU.3.auto:  ffff00080b276410 xrt_cu_intr_thread: CU[0] thread end, bad state 0
+<6>[10042.112587] cu_drv CU.3.auto: cu_remove: CU[0] removed
+<6>[10042.112908] zocl_irq_intc ZOCL_CU_INTC.2.auto: zintc_remove: Removing zocl_irq_intc
+<3>[10043.883072] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[10043.893528] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/resets
+<7>[10052.461461] rfkill: input handler disabled
+<7>[10713.074866] rfkill: input handler enabled
+<3>[10718.302650] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[10718.313381] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/misc_clk_0
+<3>[10718.323501] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/clocking0
+<3>[10718.333510] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/afi0
+<3>[10718.343075] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_intc_0
+<3>[10718.353168] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_vip_pltf
+<3>[10718.363432] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/w4a8_linear_v1_1
+<6>[10718.427270] irq-xilinx: /axi/interrupt-controller@80020000: num_irq=32, edge=0xfffffffd
+<6>[10718.433647] [drm] Probing for xlnx,zocl
+<3>[10718.443024] zocl-drm axi:zyxclmm_drm: error -ENXIO: IRQ index 32 not found
+<6>[10718.450752] [drm] FPGA programming device pcap founded.
+<6>[10718.450810] [drm] PR[0] Isolation addr 0x0
+<6>[10718.452527] [drm] Initialized zocl 2.18.0 20261022 for axi:zyxclmm_drm on minor 1
+<6>[10720.445551] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(14588), ret: 0
+<6>[10720.445650] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(14588)
+<6>[10720.445972] zocl-drm axi:zyxclmm_drm: zocl_create_client: created KDS client for pid(14588), ret: 0
+<6>[10720.500728] [drm] Found free Slot-0 is selected for xclbin 
+<6>[10720.500761] [drm]  Allocated slot 0 to load xclbin in device
+                  .
+<6>[10720.500777] [drm] skip kind 29(AIE_RESOURCES) return code: -22
+<6>[10720.500787] [drm] disable partial bitstream download, axlf flags is 0
+<6>[10720.500794] [drm] found kind 8(IP_LAYOUT)
+<6>[10720.500807] [drm] skip kind 9(DEBUG_IP_LAYOUT) return code: -22
+<6>[10720.500815] [drm] skip kind 25(AIE_METADATA) return code: -22
+<6>[10720.500821] [drm] found kind 7(CONNECTIVITY)
+<6>[10720.500833] [drm] found kind 6(MEM_TOPOLOGY)
+<6>[10720.501004] [drm] Memory 0 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501069] [drm] Memory 1 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501127] [drm] Memory 2 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501183] [drm] Memory 3 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501239] [drm] Memory 4 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501298] [drm] Memory 5 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.501354] [drm] Memory 6 is not reserved in device tree. Will allocate memory from CMA
+<6>[10720.502229] zocl_irq_intc ZOCL_CU_INTC.2.auto: zocl_irq_intc_add: managing IRQ 57
+<6>[10720.502321] cu_drv CU.3.auto: cu_probe: CU[0] created
+<6>[10720.503266] [drm] zocl_xclbin_read_axlf ec6bb114-e3e0-7c8a-9194-4d75b3275325 ret: 0
+<6>[10720.504740] cu_drv CU.3.auto:  ffff00080b276c10 xrt_cu_intr_thread: CU[0] start
+<6>[10720.531907] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[10720.531980] zocl-drm axi:zyxclmm_drm:  ffff000802b96410 kds_add_context: Client pid(14588) add context Domain(65535) CU(0xffff) shared(true)
+<6>[10720.532044] zocl-drm axi:zyxclmm_drm:  ffff000802b96410 kds_del_context: Client pid(14588) del context Domain(65535) CU(0xffff)
+<6>[10720.532072] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[10720.596902] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 locked, ref=1
+<6>[10720.596982] zocl-drm axi:zyxclmm_drm:  ffff000802b96410 kds_add_context: Client pid(14588) add context Domain(0) CU(0x0) shared(false)
+<6>[10720.600208] zocl-drm axi:zyxclmm_drm:  ffff000802b96410 kds_del_context: Client pid(14588) del context Domain(0) CU(0x0)
+<6>[10720.600255] [drm] bitstream ec6bb114-e3e0-7c8a-9194-4d75b3275325 unlocked, ref=0
+<6>[10720.718693] zocl-drm axi:zyxclmm_drm: zocl_destroy_client: client exits pid(14588)
+<6>[10722.006885] cu_drv CU.3.auto:  ffff00080b276c10 xrt_cu_intr_thread: CU[0] thread end, bad state 0
+<6>[10722.006989] cu_drv CU.3.auto: cu_remove: CU[0] removed
+<6>[10722.007305] zocl_irq_intc ZOCL_CU_INTC.2.auto: zintc_remove: Removing zocl_irq_intc
+<3>[10723.322891] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name
+<3>[10723.333274] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/resets
+<7>[10731.996693] rfkill: input handler disabled

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "python3",
+    "/mnt/c/Patientqwen/platform/ra02/build_queue.py",
+    "run-next"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:35:51.791883+00:00",
+  "elapsed_s": 0.41568749997531995,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 124, in <module>\n    raise SystemExit(main())\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 113, in main\n    result = run_next(CENTRAL)\n  File \"/mnt/c/Patientqwen/platform/ra02/build_queue.py\", line 67, in run_next\n    raise RuntimeError('active marker retained; A must reconcile processes before recovery')\nRuntimeError: active marker retained; A must reconcile processes before recovery\n"
+}

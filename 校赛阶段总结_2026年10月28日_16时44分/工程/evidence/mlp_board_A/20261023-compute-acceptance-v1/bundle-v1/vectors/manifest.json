@@ -1,0 +1,1142 @@
+{
+  "schema": "A11_FROZEN_MINIMAL_V1",
+  "domain": "PC",
+  "BOARD": "NOT_TESTED",
+  "board_authorization_included": false,
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "source_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "cases": {
+    "l00_gate_T1": {
+      "weight": "l00_gate",
+      "N": 3584,
+      "K": 1024,
+      "T": 1,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 4096,
+          "sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 1024,
+          "sha256": "ec03d1269e2c9e5354f5f0a67422a46361ce337692d070d128ef702f1ee1a8f7"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 4,
+          "sha256": "ce6983b815db4793588fc2be726f63b16ac087875498aeb9d709c424baece0da"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 14336,
+          "sha256": "81cd847edb79e1dfaa787a223907e4253b9410231bf842941d28653f0d1c8cf5"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 114688,
+          "sha256": "ffbef1f7441f649cd39d7ea01d5281e367f18ab09540279e5140717048f5c2a4"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "decode_l00_gate",
+      "source_input_sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6",
+      "source_rows": [
+        0,
+        1
+      ],
+      "original_token_positions": [
+        256
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_gate_T8": {
+      "weight": "l00_gate",
+      "N": 3584,
+      "K": 1024,
+      "T": 8,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 32768,
+          "sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 8192,
+          "sha256": "20f657cf0eb94a7aa8e4a1322e9e82e3dda2fd5ac1482b9d8ee31abd6c959e14"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 32,
+          "sha256": "1e5d2e4fdd2df0480297e84bdadf0ad1419e03ab54eea96bc5198d6db936b829"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 114688,
+          "sha256": "561d2ef4150ba8c83ee26971e1afb68500c9a844cb37f4bec8d872977cb25567"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 917504,
+          "sha256": "2104840c08afd33218c9cc77a6cf0a3aafd3a57b39e6601ecd15fbc2f9adfc8d"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_gate",
+      "source_input_sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "source_rows": [
+        0,
+        8
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_gate_T3": {
+      "weight": "l00_gate",
+      "N": 3584,
+      "K": 1024,
+      "T": 3,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 12288,
+          "sha256": "5fa300437d775b61b42878c83a059a409925c2855d5b2d8f360c292534c13d71"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 3072,
+          "sha256": "bdc9cab2c57212c1f11b431649dc2189144ba105ea90f037cf1e505950ceb13e"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 12,
+          "sha256": "3ff600a2e2655548a33b54bc968e23ce102d3c1d05f9d99473e300db9974a297"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 43008,
+          "sha256": "4fed8decfa972787dff8e72d7be88b06385d4c5a3839ab988d60ac76aa275baf"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 344064,
+          "sha256": "e123be77088479595f8740ac675852370e73ca328517c82090ff1d3bd23ab121"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_gate",
+      "source_input_sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "source_rows": [
+        0,
+        3
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_up_T1": {
+      "weight": "l00_up",
+      "N": 3584,
+      "K": 1024,
+      "T": 1,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 4096,
+          "sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 1024,
+          "sha256": "ec03d1269e2c9e5354f5f0a67422a46361ce337692d070d128ef702f1ee1a8f7"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 4,
+          "sha256": "ce6983b815db4793588fc2be726f63b16ac087875498aeb9d709c424baece0da"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 14336,
+          "sha256": "dd216cc087480a266e58551f205c8675636ae8d2c545110a4600b47eaf9caa0a"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 114688,
+          "sha256": "f73e15683c4a17b3373216d731d1be3790b53aab318f3fed19926527fb91b451"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "decode_l00_up",
+      "source_input_sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6",
+      "source_rows": [
+        0,
+        1
+      ],
+      "original_token_positions": [
+        256
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_up_T8": {
+      "weight": "l00_up",
+      "N": 3584,
+      "K": 1024,
+      "T": 8,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 32768,
+          "sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 8192,
+          "sha256": "20f657cf0eb94a7aa8e4a1322e9e82e3dda2fd5ac1482b9d8ee31abd6c959e14"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 32,
+          "sha256": "1e5d2e4fdd2df0480297e84bdadf0ad1419e03ab54eea96bc5198d6db936b829"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 114688,
+          "sha256": "82e8b681d4f3878bbfb4325ced1d1c29e648d509d446fe72a46ba4a7cec07303"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 917504,
+          "sha256": "d1634b240b0955a24ea96277f5da262eddf8d2408ad5264794d057e605a4661a"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_up",
+      "source_input_sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "source_rows": [
+        0,
+        8
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_up_T3": {
+      "weight": "l00_up",
+      "N": 3584,
+      "K": 1024,
+      "T": 3,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 12288,
+          "sha256": "5fa300437d775b61b42878c83a059a409925c2855d5b2d8f360c292534c13d71"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 3072,
+          "sha256": "bdc9cab2c57212c1f11b431649dc2189144ba105ea90f037cf1e505950ceb13e"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 12,
+          "sha256": "3ff600a2e2655548a33b54bc968e23ce102d3c1d05f9d99473e300db9974a297"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 43008,
+          "sha256": "55fca8884f785d8c0107b60ca3381c287cddeceb9d904a82a20157350cf4e48c"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 344064,
+          "sha256": "e479b82ea3406b11775da89070987fdf2de34e55882fdf1c66c126ce7b1fcefb"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_up",
+      "source_input_sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "source_rows": [
+        0,
+        3
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_down_T1": {
+      "weight": "l00_down",
+      "N": 1024,
+      "K": 3584,
+      "T": 1,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 14336,
+          "sha256": "1b8e8be0bf946c0d15fe45ea43c07efbe6eb8478398e3fd0b26aaa37fbf82f12"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 3584,
+          "sha256": "9d660f959f2cd1d2705a47128c5407c095ce31c54ee73954ecb9ca371bd45c7e"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 4,
+          "sha256": "b5f4ba227f8092ac05ebd8bc25a4cc0147551646ce619188ce6d5a779fe5e322"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 4096,
+          "sha256": "c27fc526735afebb0b512b9b87e7a3aadc64c349dd436117561505bc0c3398e5"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 114688,
+          "sha256": "d3db0eace7ac24163069c077b1197bde5a89ba2f90c4fa63f4948c7ef0acd740"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "decode_l00_down",
+      "source_input_sha256": "1b8e8be0bf946c0d15fe45ea43c07efbe6eb8478398e3fd0b26aaa37fbf82f12",
+      "source_rows": [
+        0,
+        1
+      ],
+      "original_token_positions": [
+        256
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_down_T8": {
+      "weight": "l00_down",
+      "N": 1024,
+      "K": 3584,
+      "T": 8,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 114688,
+          "sha256": "9a865b92a28c8155192e0be7d61148eb2b0b7683bd4ef408c3659f518759aadb"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 28672,
+          "sha256": "1a180b404b0a7d3bd4112575f7ed7fc502517582e4317b752574482ec6533e7b"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 32,
+          "sha256": "ab3ff29bea5cca20ef7faa6c8489b9d1aec0b5424bb3d371a94f58baf0d02327"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 32768,
+          "sha256": "4617ead56f677c1c3bbd5724a85338d8f3550baf164cd3bd9dd842b791e4ca30"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 917504,
+          "sha256": "983b6bea017ab6c832d4aa4d7f8d4558327a1cb3730a0f5cb9d256767566f576"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_down",
+      "source_input_sha256": "9a865b92a28c8155192e0be7d61148eb2b0b7683bd4ef408c3659f518759aadb",
+      "source_rows": [
+        0,
+        8
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "l00_down_T3": {
+      "weight": "l00_down",
+      "N": 1024,
+      "K": 3584,
+      "T": 3,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 43008,
+          "sha256": "1ec59d1b8d6cabc6a7f2e18ea4da2a6c7ebc0959b07b53ef882379c60f3a1532"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 10752,
+          "sha256": "9775155f128f81300855938f971991e200088707dd66c4ba3bf43f3a6db6c22c"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 12,
+          "sha256": "370a90cd1c099273e6f5ddf94312a6d86a0217f0fc5002f462236f00251e14be"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 12288,
+          "sha256": "0d8432efd16dc64e7d080c61f914dc32ceb536192eaf0f445c59f185276aba95"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 344064,
+          "sha256": "fef9df4c3348cf205ea3a99510de42780466e2f60700447d1e2db79e3ee0f3f0"
+        }
+      },
+      "activation_origin": "real captured S0_Q4 activation; NOT a complete W4A8 or FPGA graph run",
+      "source_record": "prefill_l00_down",
+      "source_input_sha256": "9a865b92a28c8155192e0be7d61148eb2b0b7683bd4ef408c3659f518759aadb",
+      "source_rows": [
+        0,
+        3
+      ],
+      "original_token_positions": [
+        248,
+        249,
+        250
+      ],
+      "reference": "A04 independent Python scalar and C++ bit-exact results; T3 is first 3 token rows"
+    },
+    "hand_T1": {
+      "weight": "hand",
+      "N": 2,
+      "K": 2,
+      "T": 1,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 8,
+          "sha256": "a4d4b0799bfc1752088d50b341c93a57379d5811d26eca066d4cbc837e22f065"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 128,
+          "sha256": "4f6a3cf8333612c1d55717c37f773c32ef47d452ffe91d4cddded1c17fafffdb"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 4,
+          "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 128,
+          "sha256": "19217bb095d98f3df69d6f535549db5c5e7005b63b374b7149f076829118ecd0"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 128,
+          "sha256": "4fe48229f3670187b9c26ffa269099094be22ea28909e57c95b87b0dc67d9acf"
+        }
+      },
+      "activation_origin": "synthetic",
+      "reference": "independent Python scalar; C++ crosscheck"
+    },
+    "tails_double_scale_T3": {
+      "weight": "tails_double_scale",
+      "N": 33,
+      "K": 129,
+      "T": 3,
+      "files": {
+        "x.f32": {
+          "file": "x.f32",
+          "bytes": 1548,
+          "sha256": "bdede8481f69f3c6cb4826fe8761edfeac90e28be3e8d4ac73cd3a6fcead0613"
+        },
+        "xq.bin": {
+          "file": "xq.bin",
+          "bytes": 768,
+          "sha256": "a08c8f488bf7a0988afc2f4eff1ac9a75ef1eab2952ff2c1842636cb389802c8"
+        },
+        "sx.bin": {
+          "file": "sx.bin",
+          "bytes": 12,
+          "sha256": "021d431533a423788f409a232a664f0b522c9bce6a9d4c6007809dcca830771d"
+        }
+      },
+      "golden": {
+        "y.bin": {
+          "file": "y.bin",
+          "bytes": 768,
+          "sha256": "2f36b168024d07eedc360d0e3b4a3f5d266aab007520af563fbc20e40950d570"
+        },
+        "sums.bin": {
+          "file": "sums.bin",
+          "bytes": 1536,
+          "sha256": "74d8cfcbfdac4d8f6facb9f1cccfd9c410dd9586ee6f72cb3f3abe48ed8e5c93"
+        }
+      },
+      "activation_origin": "synthetic",
+      "reference": "independent Python scalar; C++ crosscheck"
+    }
+  },
+  "weights": {
+    "l00_gate": {
+      "N": 3584,
+      "K": 1024,
+      "provenance": {
+        "id": "l00_gate",
+        "layer": 0,
+        "op": "gate",
+        "N": 3584,
+        "K": 1024,
+        "Np": 3584,
+        "Kp": 1024,
+        "G": 8,
+        "source_tensor": "model.language_model.layers.0.mlp.gate_proj.weight",
+        "source_tensor_sha256": "ac1e1d4df4f3adca7e0bc15ee7310ce093f9108baa712cfb86f57b03e6d6e140",
+        "source_file": "model.safetensors-00001-of-00001.safetensors",
+        "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+        "source_dtype": "BF16",
+        "source_shape_NK": [
+          3584,
+          1024
+        ],
+        "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+        "bias": null,
+        "padding_weight_code": 0,
+        "padding_scale": 1,
+        "files": {
+          "w.bin": {
+            "file": "l00_gate.w.bin",
+            "bytes": 1835008,
+            "sha256": "49203413e2e5049cd7eeeee76b893a2b3dd4de817d5a203a3e4ad946fa8f1605",
+            "dtype": "uint8_packed_signed4"
+          },
+          "sw.bin": {
+            "file": "l00_gate.sw.bin",
+            "bytes": 114688,
+            "sha256": "63653cbe74aa17430f280889645cc41d7ac41227e6f365f101eeb4c54871dcdc",
+            "dtype": "float32_le"
+          }
+        }
+      },
+      "files": {
+        "w.bin": {
+          "file": "w.bin",
+          "bytes": 1835008,
+          "sha256": "49203413e2e5049cd7eeeee76b893a2b3dd4de817d5a203a3e4ad946fa8f1605"
+        },
+        "sw.bin": {
+          "file": "sw.bin",
+          "bytes": 114688,
+          "sha256": "63653cbe74aa17430f280889645cc41d7ac41227e6f365f101eeb4c54871dcdc"
+        }
+      }
+    },
+    "l00_up": {
+      "N": 3584,
+      "K": 1024,
+      "provenance": {
+        "id": "l00_up",
+        "layer": 0,
+        "op": "up",
+        "N": 3584,
+        "K": 1024,
+        "Np": 3584,
+        "Kp": 1024,
+        "G": 8,
+        "source_tensor": "model.language_model.layers.0.mlp.up_proj.weight",
+        "source_tensor_sha256": "0317b5f7a4e522c75c5013a70f14c510262b79596ac298ef52b5e04740d76367",
+        "source_file": "model.safetensors-00001-of-00001.safetensors",
+        "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+        "source_dtype": "BF16",
+        "source_shape_NK": [
+          3584,
+          1024
+        ],
+        "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+        "bias": null,
+        "padding_weight_code": 0,
+        "padding_scale": 1,
+        "files": {
+          "w.bin": {
+            "file": "l00_up.w.bin",
+            "bytes": 1835008,
+            "sha256": "d89f3f02193748bd62da9faf1771a09df4b647313ad1f70654e33727ffe39beb",
+            "dtype": "uint8_packed_signed4"
+          },
+          "sw.bin": {
+            "file": "l00_up.sw.bin",
+            "bytes": 114688,
+            "sha256": "b0434b2605b82288eee7c7b818ea1e82b533ba3670fd875439b528e8d81c5bc4",
+            "dtype": "float32_le"
+          }
+        }
+      },
+      "files": {
+        "w.bin": {
+          "file": "w.bin",
+          "bytes": 1835008,
+          "sha256": "d89f3f02193748bd62da9faf1771a09df4b647313ad1f70654e33727ffe39beb"
+        },
+        "sw.bin": {
+          "file": "sw.bin",
+          "bytes": 114688,
+          "sha256": "b0434b2605b82288eee7c7b818ea1e82b533ba3670fd875439b528e8d81c5bc4"
+        }
+      }
+    },
+    "l00_down": {
+      "N": 1024,
+      "K": 3584,
+      "provenance": {
+        "id": "l00_down",
+        "layer": 0,
+        "op": "down",
+        "N": 1024,
+        "K": 3584,
+        "Np": 1024,
+        "Kp": 3584,
+        "G": 28,
+        "source_tensor": "model.language_model.layers.0.mlp.down_proj.weight",
+        "source_tensor_sha256": "57c93b2a4452740b0b82386debc7c66df7774f98425a0253dd9d3e7006e989ac",
+        "source_file": "model.safetensors-00001-of-00001.safetensors",
+        "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+        "source_dtype": "BF16",
+        "source_shape_NK": [
+          1024,
+          3584
+        ],
+        "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+        "bias": null,
+        "padding_weight_code": 0,
+        "padding_scale": 1,
+        "files": {
+          "w.bin": {
+            "file": "l00_down.w.bin",
+            "bytes": 1835008,
+            "sha256": "d3bbedbfd4720d4e0ace191a024c807e149f33c92b1db4a3e499673afc9df77c",
+            "dtype": "uint8_packed_signed4"
+          },
+          "sw.bin": {
+            "file": "l00_down.sw.bin",
+            "bytes": 114688,
+            "sha256": "9bc2f52c2cba934ed072ce4c0cae536ab25d10b1e5f7fc61883d06ca3a5cd47c",
+            "dtype": "float32_le"
+          }
+        }
+      },
+      "files": {
+        "w.bin": {
+          "file": "w.bin",
+          "bytes": 1835008,
+          "sha256": "d3bbedbfd4720d4e0ace191a024c807e149f33c92b1db4a3e499673afc9df77c"
+        },
+        "sw.bin": {
+          "file": "sw.bin",
+          "bytes": 114688,
+          "sha256": "9bc2f52c2cba934ed072ce4c0cae536ab25d10b1e5f7fc61883d06ca3a5cd47c"
+        }
+      }
+    },
+    "hand": {
+      "N": 2,
+      "K": 2,
+      "provenance": "synthetic small mathematical test",
+      "files": {
+        "w.bin": {
+          "file": "w.bin",
+          "bytes": 2048,
+          "sha256": "8b2df50854877c516976e7a822a528e3f6962cb5c2f537d36cfef65e0a5dcaf1"
+        },
+        "sw.bin": {
+          "file": "sw.bin",
+          "bytes": 128,
+          "sha256": "fab61d6c8f6fafb43980347cf5fb055517c6d1cc0943f6b0ee727ce490320b95"
+        }
+      }
+    },
+    "tails_double_scale": {
+      "N": 33,
+      "K": 129,
+      "provenance": "synthetic small mathematical test",
+      "files": {
+        "w.bin": {
+          "file": "w.bin",
+          "bytes": 8192,
+          "sha256": "2747e856f34ef9a24735427543cb2de7dd3024bd53377bb5ab69e966b97ce953"
+        },
+        "sw.bin": {
+          "file": "sw.bin",
+          "bytes": 512,
+          "sha256": "6f72f1dce290ef1e61a6855941828e01234c54e8b2c3746ee9f0e657f87bacd0"
+        }
+      }
+    }
+  },
+  "schedule": [
+    {
+      "job_id": 1,
+      "weight": "hand",
+      "case": "hand_T1",
+      "T": 1
+    },
+    {
+      "job_id": 2,
+      "weight": "tails_double_scale",
+      "case": "tails_double_scale_T3",
+      "T": 3
+    },
+    {
+      "job_id": 3,
+      "weight": "l00_gate",
+      "case": "l00_gate_T1",
+      "T": 1
+    },
+    {
+      "job_id": 4,
+      "weight": "l00_gate",
+      "case": "l00_gate_T8",
+      "T": 8
+    },
+    {
+      "job_id": 5,
+      "weight": "l00_gate",
+      "case": "l00_gate_T3",
+      "T": 3
+    },
+    {
+      "job_id": 6,
+      "weight": "l00_gate",
+      "case": "l00_gate_T1",
+      "T": 1
+    },
+    {
+      "job_id": 7,
+      "weight": "l00_gate",
+      "case": "l00_gate_T8",
+      "T": 8
+    },
+    {
+      "job_id": 8,
+      "weight": "l00_gate",
+      "case": "l00_gate_T1",
+      "T": 1
+    },
+    {
+      "job_id": 9,
+      "weight": "l00_gate",
+      "case": "l00_gate_T8",
+      "T": 8
+    },
+    {
+      "job_id": 10,
+      "weight": "l00_up",
+      "case": "l00_up_T1",
+      "T": 1
+    },
+    {
+      "job_id": 11,
+      "weight": "l00_up",
+      "case": "l00_up_T8",
+      "T": 8
+    },
+    {
+      "job_id": 12,
+      "weight": "l00_up",
+      "case": "l00_up_T3",
+      "T": 3
+    },
+    {
+      "job_id": 13,
+      "weight": "l00_up",
+      "case": "l00_up_T1",
+      "T": 1
+    },
+    {
+      "job_id": 14,
+      "weight": "l00_up",
+      "case": "l00_up_T8",
+      "T": 8
+    },
+    {
+      "job_id": 15,
+      "weight": "l00_up",
+      "case": "l00_up_T1",
+      "T": 1
+    },
+    {
+      "job_id": 16,
+      "weight": "l00_up",
+      "case": "l00_up_T8",
+      "T": 8
+    },
+    {
+      "job_id": 17,
+      "weight": "l00_down",
+      "case": "l00_down_T1",
+      "T": 1
+    },
+    {
+      "job_id": 18,
+      "weight": "l00_down",
+      "case": "l00_down_T8",
+      "T": 8
+    },
+    {
+      "job_id": 19,
+      "weight": "l00_down",
+      "case": "l00_down_T3",
+      "T": 3
+    },
+    {
+      "job_id": 20,
+      "weight": "l00_down",
+      "case": "l00_down_T1",
+      "T": 1
+    },
+    {
+      "job_id": 21,
+      "weight": "l00_down",
+      "case": "l00_down_T8",
+      "T": 8
+    },
+    {
+      "job_id": 22,
+      "weight": "l00_down",
+      "case": "l00_down_T1",
+      "T": 1
+    },
+    {
+      "job_id": 23,
+      "weight": "l00_down",
+      "case": "l00_down_T8",
+      "T": 8
+    }
+  ],
+  "real_shape_submissions": 21,
+  "small_submissions": 2,
+  "same_worker_required": true,
+  "max_simultaneous_weight_handles": 1,
+  "proposed_allocation": {
+    "logical_weight_bytes_per_real_handle": 1949696,
+    "page4096_aligned_io_bytes": 204800,
+    "explicit_bo_peak_bytes": 2154496,
+    "physical_peak_bytes": null,
+    "allocation_reachability": "NOT_VERIFIED_ON_BOARD",
+    "note": "One weight handle at a time; excludes XRT internal buffers, kernel, display and loader"
+  },
+  "sources": {
+    "models/sidecar_A/qwen35-v1/manifest.json": {
+      "sha256": "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+      "bytes": 88101
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/manifest.json": {
+      "sha256": "72c5d225f737c5395f202445e7e43949c20a2f549e4d15ae6748fe425a10c925",
+      "bytes": 35745
+    },
+    "quant/reference/scalar.py": {
+      "sha256": "b38cfebb36c6ec12c316188ec13f65b26435571a787cd119cc09767abbba3759",
+      "bytes": 3268
+    },
+    "/home/member-a/qwen35-a04/build-v1/w4ref": {
+      "sha256": "4569dd19972915141b29a6b384b6542207a439c36148cff06452909bcd1c8b81",
+      "bytes": 61752
+    },
+    "models/sidecar_A/qwen35-v1/l00_gate.w.bin": {
+      "sha256": "49203413e2e5049cd7eeeee76b893a2b3dd4de817d5a203a3e4ad946fa8f1605",
+      "bytes": 1835008
+    },
+    "models/sidecar_A/qwen35-v1/l00_gate.sw.bin": {
+      "sha256": "63653cbe74aa17430f280889645cc41d7ac41227e6f365f101eeb4c54871dcdc",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/comparison.json": {
+      "sha256": "ce47fc99d934a7aad8ced79f5ff75949377ef00090287694248703a0926bdabb",
+      "bytes": 1381
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/decode_l00_gate.x.f32": {
+      "sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6",
+      "bytes": 4096
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/cpp/xq.bin": {
+      "sha256": "ec03d1269e2c9e5354f5f0a67422a46361ce337692d070d128ef702f1ee1a8f7",
+      "bytes": 1024
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/cpp/sx.bin": {
+      "sha256": "ce6983b815db4793588fc2be726f63b16ac087875498aeb9d709c424baece0da",
+      "bytes": 4
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/python_y.bin": {
+      "sha256": "81cd847edb79e1dfaa787a223907e4253b9410231bf842941d28653f0d1c8cf5",
+      "bytes": 14336
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/cpp/y.bin": {
+      "sha256": "81cd847edb79e1dfaa787a223907e4253b9410231bf842941d28653f0d1c8cf5",
+      "bytes": 14336
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/python_sums.bin": {
+      "sha256": "ffbef1f7441f649cd39d7ea01d5281e367f18ab09540279e5140717048f5c2a4",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_gate/cpp/sums.bin": {
+      "sha256": "ffbef1f7441f649cd39d7ea01d5281e367f18ab09540279e5140717048f5c2a4",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/comparison.json": {
+      "sha256": "9188ffd3ba8676a17bfc5a550b11b6d914f66d299d97eec69821ad1668b868fe",
+      "bytes": 1383
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/prefill_l00_gate.x.f32": {
+      "sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "bytes": 32768
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/cpp/xq.bin": {
+      "sha256": "20f657cf0eb94a7aa8e4a1322e9e82e3dda2fd5ac1482b9d8ee31abd6c959e14",
+      "bytes": 8192
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/cpp/sx.bin": {
+      "sha256": "1e5d2e4fdd2df0480297e84bdadf0ad1419e03ab54eea96bc5198d6db936b829",
+      "bytes": 32
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/python_y.bin": {
+      "sha256": "561d2ef4150ba8c83ee26971e1afb68500c9a844cb37f4bec8d872977cb25567",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/cpp/y.bin": {
+      "sha256": "561d2ef4150ba8c83ee26971e1afb68500c9a844cb37f4bec8d872977cb25567",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/python_sums.bin": {
+      "sha256": "2104840c08afd33218c9cc77a6cf0a3aafd3a57b39e6601ecd15fbc2f9adfc8d",
+      "bytes": 917504
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_gate/cpp/sums.bin": {
+      "sha256": "2104840c08afd33218c9cc77a6cf0a3aafd3a57b39e6601ecd15fbc2f9adfc8d",
+      "bytes": 917504
+    },
+    "models/sidecar_A/qwen35-v1/l00_up.w.bin": {
+      "sha256": "d89f3f02193748bd62da9faf1771a09df4b647313ad1f70654e33727ffe39beb",
+      "bytes": 1835008
+    },
+    "models/sidecar_A/qwen35-v1/l00_up.sw.bin": {
+      "sha256": "b0434b2605b82288eee7c7b818ea1e82b533ba3670fd875439b528e8d81c5bc4",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/comparison.json": {
+      "sha256": "bbc58d6c80be60780caf07b7669bdee947b8098fb128ef4ea7c99a3bce9f40cf",
+      "bytes": 1378
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/decode_l00_up.x.f32": {
+      "sha256": "f9e585416ee4ea6a46c092ae00e111e0d87450da7873c0eb99c6410505aec9d6",
+      "bytes": 4096
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/cpp/xq.bin": {
+      "sha256": "ec03d1269e2c9e5354f5f0a67422a46361ce337692d070d128ef702f1ee1a8f7",
+      "bytes": 1024
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/cpp/sx.bin": {
+      "sha256": "ce6983b815db4793588fc2be726f63b16ac087875498aeb9d709c424baece0da",
+      "bytes": 4
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/python_y.bin": {
+      "sha256": "dd216cc087480a266e58551f205c8675636ae8d2c545110a4600b47eaf9caa0a",
+      "bytes": 14336
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/cpp/y.bin": {
+      "sha256": "dd216cc087480a266e58551f205c8675636ae8d2c545110a4600b47eaf9caa0a",
+      "bytes": 14336
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/python_sums.bin": {
+      "sha256": "f73e15683c4a17b3373216d731d1be3790b53aab318f3fed19926527fb91b451",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_up/cpp/sums.bin": {
+      "sha256": "f73e15683c4a17b3373216d731d1be3790b53aab318f3fed19926527fb91b451",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/comparison.json": {
+      "sha256": "f51cfe5d1c68226ba581f9d74a68594430ee85444fa25d3e466c280804a56dc1",
+      "bytes": 1383
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/prefill_l00_up.x.f32": {
+      "sha256": "c6176ee8500b88fc0e367bec1c2c022af1acb5493090faa751b8c10b329ca2e0",
+      "bytes": 32768
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/cpp/xq.bin": {
+      "sha256": "20f657cf0eb94a7aa8e4a1322e9e82e3dda2fd5ac1482b9d8ee31abd6c959e14",
+      "bytes": 8192
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/cpp/sx.bin": {
+      "sha256": "1e5d2e4fdd2df0480297e84bdadf0ad1419e03ab54eea96bc5198d6db936b829",
+      "bytes": 32
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/python_y.bin": {
+      "sha256": "82e8b681d4f3878bbfb4325ced1d1c29e648d509d446fe72a46ba4a7cec07303",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/cpp/y.bin": {
+      "sha256": "82e8b681d4f3878bbfb4325ced1d1c29e648d509d446fe72a46ba4a7cec07303",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/python_sums.bin": {
+      "sha256": "d1634b240b0955a24ea96277f5da262eddf8d2408ad5264794d057e605a4661a",
+      "bytes": 917504
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_up/cpp/sums.bin": {
+      "sha256": "d1634b240b0955a24ea96277f5da262eddf8d2408ad5264794d057e605a4661a",
+      "bytes": 917504
+    },
+    "models/sidecar_A/qwen35-v1/l00_down.w.bin": {
+      "sha256": "d3bbedbfd4720d4e0ace191a024c807e149f33c92b1db4a3e499673afc9df77c",
+      "bytes": 1835008
+    },
+    "models/sidecar_A/qwen35-v1/l00_down.sw.bin": {
+      "sha256": "9bc2f52c2cba934ed072ce4c0cae536ab25d10b1e5f7fc61883d06ca3a5cd47c",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/comparison.json": {
+      "sha256": "bb26acf654cbf06811909cc8de6fd156806a780e5ed716eac2b9d1423e6a9b67",
+      "bytes": 1387
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/decode_l00_down.x.f32": {
+      "sha256": "1b8e8be0bf946c0d15fe45ea43c07efbe6eb8478398e3fd0b26aaa37fbf82f12",
+      "bytes": 14336
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/cpp/xq.bin": {
+      "sha256": "9d660f959f2cd1d2705a47128c5407c095ce31c54ee73954ecb9ca371bd45c7e",
+      "bytes": 3584
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/cpp/sx.bin": {
+      "sha256": "b5f4ba227f8092ac05ebd8bc25a4cc0147551646ce619188ce6d5a779fe5e322",
+      "bytes": 4
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/python_y.bin": {
+      "sha256": "c27fc526735afebb0b512b9b87e7a3aadc64c349dd436117561505bc0c3398e5",
+      "bytes": 4096
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/cpp/y.bin": {
+      "sha256": "c27fc526735afebb0b512b9b87e7a3aadc64c349dd436117561505bc0c3398e5",
+      "bytes": 4096
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/python_sums.bin": {
+      "sha256": "d3db0eace7ac24163069c077b1197bde5a89ba2f90c4fa63f4948c7ef0acd740",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_decode_l00_down/cpp/sums.bin": {
+      "sha256": "d3db0eace7ac24163069c077b1197bde5a89ba2f90c4fa63f4948c7ef0acd740",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/comparison.json": {
+      "sha256": "be6daa83185353c853461dff668b3ce20476ddafe3b9fc98346231577ef34992",
+      "bytes": 1389
+    },
+    "eval/qwen35/a04/captures-v1/S0_Q4/prefill_l00_down.x.f32": {
+      "sha256": "9a865b92a28c8155192e0be7d61148eb2b0b7683bd4ef408c3659f518759aadb",
+      "bytes": 114688
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/cpp/xq.bin": {
+      "sha256": "1a180b404b0a7d3bd4112575f7ed7fc502517582e4317b752574482ec6533e7b",
+      "bytes": 28672
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/cpp/sx.bin": {
+      "sha256": "ab3ff29bea5cca20ef7faa6c8489b9d1aec0b5424bb3d371a94f58baf0d02327",
+      "bytes": 32
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/python_y.bin": {
+      "sha256": "4617ead56f677c1c3bbd5724a85338d8f3550baf164cd3bd9dd842b791e4ca30",
+      "bytes": 32768
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/cpp/y.bin": {
+      "sha256": "4617ead56f677c1c3bbd5724a85338d8f3550baf164cd3bd9dd842b791e4ca30",
+      "bytes": 32768
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/python_sums.bin": {
+      "sha256": "983b6bea017ab6c832d4aa4d7f8d4558327a1cb3730a0f5cb9d256767566f576",
+      "bytes": 917504
+    },
+    "eval/qwen35/a04/real-v1/S0_Q4_prefill_l00_down/cpp/sums.bin": {
+      "sha256": "983b6bea017ab6c832d4aa4d7f8d4558327a1cb3730a0f5cb9d256767566f576",
+      "bytes": 917504
+    }
+  },
+  "new_cpp_checks": [
+    {
+      "case": "l00_gate_T3",
+      "status": "PASS_PC_BIT_EXACT",
+      "command": "pc_reference/l00_gate_T3/command.json"
+    },
+    {
+      "case": "l00_up_T3",
+      "status": "PASS_PC_BIT_EXACT",
+      "command": "pc_reference/l00_up_T3/command.json"
+    },
+    {
+      "case": "l00_down_T3",
+      "status": "PASS_PC_BIT_EXACT",
+      "command": "pc_reference/l00_down_T3/command.json"
+    },
+    {
+      "case": "hand_T1",
+      "status": "PASS_PC_BIT_EXACT",
+      "command": "pc_reference/hand_T1/command.json"
+    },
+    {
+      "case": "tails_double_scale_T3",
+      "status": "PASS_PC_BIT_EXACT",
+      "command": "pc_reference/tails_double_scale_T3/command.json"
+    }
+  ],
+  "reused_full_real_reference_pairs": 6,
+  "integer_debug_BOARD": null,
+  "hardware_cycles": null,
+  "measured_AXI_bytes": null,
+  "fp32_tolerance": {
+    "atol": 0.0001,
+    "rtol": 1e-05
+  },
+  "actual_board_outputs": []
+}

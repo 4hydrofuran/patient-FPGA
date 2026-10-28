@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/probe.py",
+    "--scope",
+    "l0_up",
+    "--output",
+    "eval/qwen35/a05/probe-up-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:38:38.824844+00:00",
+  "elapsed_s": 8.627549499971792,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/probe.py\", line 15, in <module>\n    ready=read();assert ready['type']=='ready',ready\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/probe.py\", line 13, in read\n    if not line:raise RuntimeError('early exit '+str(proc.poll()))\nRuntimeError: early exit None\n"
+}

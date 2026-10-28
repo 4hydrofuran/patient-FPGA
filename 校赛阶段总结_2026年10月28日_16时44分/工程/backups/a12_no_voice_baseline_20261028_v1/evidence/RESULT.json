@@ -1,0 +1,118 @@
+{
+  "status": "BOARD_NICE10_CANDIDATE_REJECTED_ORIGINAL_SERVICE_RESTORED",
+  "recorded_at": "2026-10-28T00:13:10.043446+08:00",
+  "BOARD": "MEASURED",
+  "selected_nice_adjustment": 0,
+  "candidate_nice_adjustment": 10,
+  "candidate_adopted": false,
+  "actual_backend_of_comparison": "FPGA_REAL",
+  "samples_per_variant": 4,
+  "answer_cache_used_in_comparison": false,
+  "same_model_prompt_output_tokens_prefix_and_call_shapes": true,
+  "per_question_pl_calls": [
+    288,
+    288,
+    288,
+    288
+  ],
+  "metrics": {
+    "native_request_ms": {
+      "baseline": 13493.295124,
+      "candidate": 14671.462112500001,
+      "candidate_minus_baseline_ms": 1178.166988500001,
+      "candidate_change_percent": 8.731499442300361
+    },
+    "permission_wait_ms": {
+      "baseline": 4158.721404500001,
+      "candidate": 5053.391207500001,
+      "candidate_minus_baseline_ms": 894.6698029999998,
+      "candidate_change_percent": 21.513097800490087
+    },
+    "synchronous_record_ms": {
+      "baseline": 2222.742152499997,
+      "candidate": 3096.6337330000033,
+      "candidate_minus_baseline_ms": 873.8915805000065,
+      "candidate_change_percent": 39.315922430188756
+    },
+    "backend_service_ms": {
+      "baseline": 3805.361727500001,
+      "candidate": 3807.293266499998,
+      "candidate_minus_baseline_ms": 1.9315389999969739,
+      "candidate_change_percent": 0.05075835461418876
+    }
+  },
+  "releases": {
+    "baseline": {
+      "status": "FULL_MODEL_fast_response_continuous_NORMAL_RESTORE_PENDING_AUDIT",
+      "physical_domain": "BOARD",
+      "worker_exit_code": 0,
+      "permission_submissions": 1512,
+      "backend_host_verified_completions": 1512,
+      "hardware_global_count": null,
+      "scope": "all",
+      "lease_archived": true,
+      "variant": "fast_response_continuous",
+      "request_count": 2000,
+      "step10": "IN_PROGRESS_fast_response_continuous_PENDING_AUDIT",
+      "board_speedup": null
+    },
+    "candidate": {
+      "status": "FULL_MODEL_fast_response_continuous_NORMAL_RESTORE_PENDING_AUDIT",
+      "physical_domain": "BOARD",
+      "worker_exit_code": 0,
+      "permission_submissions": 1512,
+      "backend_host_verified_completions": 1512,
+      "hardware_global_count": null,
+      "scope": "all",
+      "lease_archived": true,
+      "variant": "fast_response_continuous",
+      "request_count": 2000,
+      "step10": "IN_PROGRESS_fast_response_continuous_PENDING_AUDIT",
+      "board_speedup": null
+    }
+  },
+  "measurement": "NATIVE_REQUEST_HOST_WALL_INCLUDING_PREFIX_RESTORE; NOT_BROWSER_PAINT",
+  "nested_scope": "SYNCHRONOUS_RECORD_IS_WITHIN_PERMISSION_WAIT; DO_NOT_ADD_PARENT_AND_CHILD",
+  "sample_scope": "TWO_FIXED_QUESTIONS_TWO_REPEATS_PER_VARIANT; NOT_P95",
+  "boot_id": "98886b24-96d3-409e-a783-ce9c54873da9",
+  "kernel": "6.8.12-a10irq2",
+  "reboots_this_task": 0,
+  "comparison_package": "release/a12_permission_scheduler_noboard_20261027_v2",
+  "evidence": "evidence\\model_pl_A\\20261027-permission-scheduler-board-v1",
+  "handoff": "docs/handoffs/A12_PERMISSION_SCHEDULER_BOARD_COMPARISON_20261028.md",
+  "service_restore": {
+    "status": "READY",
+    "window": "a12-case20-debug-permission-restore-20261028-v1",
+    "runtime_root": "/var/lib/kv260-a12/case20-debug-permission-restore-20261028-v1",
+    "original_source_manifest_sha256": "b92739af07cde88831cef5435ba0ab1693bdb7a61e3cfafdf829e610b939b1f2",
+    "ready": true,
+    "busy": false,
+    "backend": {
+      "configured": "native",
+      "execution_kind": "CPU_REFERENCE",
+      "ready": true,
+      "hardware_enabled": false
+    },
+    "cases": 20,
+    "cache_entries": 1320,
+    "session": {
+      "session_id": "532646e9c6254affba4d91cf4f294226",
+      "case_id": "SYN_CP_20",
+      "closed": false,
+      "active_request_id": null
+    },
+    "user_turn_count": 0,
+    "owner_pid": 18808,
+    "owner_intentionally_retained": true,
+    "remaining_seconds": 14188.04397203,
+    "normal_release": "PENDING_WHILE_USER_SERVICE_RUNNING"
+  },
+  "hardware_cycles": null,
+  "remote_pushed": false,
+  "current_runtime": true,
+  "evidence_sha256": {
+    "BASELINE.json": "625c449910176f10b19beb190785c9c3ec6866be4806cd7152763871ac07bbee",
+    "CANDIDATE.json": "86cedad2f4f054396ab03d63a65f301a3069aefcc7a84bf66746282e3c55b071",
+    "COMPARISON.json": "aacfbcdc518e44e2da6c65b15a874039fa5cab5a279557303061aa1bcbc8336b"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a10/capture_serial.ps1",
+    "-Ports",
+    "COM5",
+    "-OutputDirectory",
+    "C:/Patientqwen/evidence/model_pl_A/20261024-step08-v1/passive-after-reboot-01",
+    "-DurationSeconds",
+    "20"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T01:59:29.717249+00:00",
+  "elapsed_s": 21.022269800072536,
+  "exit_code": 0,
+  "stdout": "READY COM5 receive-only 115200 8N1; DTR/RTS false\n",
+  "stderr": ""
+}

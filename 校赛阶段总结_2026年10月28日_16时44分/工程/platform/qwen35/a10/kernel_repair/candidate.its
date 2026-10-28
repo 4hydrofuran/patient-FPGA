@@ -1,0 +1,45 @@
+/dts-v1/;
+/ {
+    description = "A10 PC-only candidate 6.8.12-a10irq1 NOT BOARD ACCEPTED";
+    #address-cells = <1>;
+    images {
+        kernel {
+            description = "Independent candidate kernel";
+            data = /incbin/("Image.gz");
+            type = "kernel";
+            arch = "arm64";
+            os = "linux";
+            compression = "gzip";
+            load = <0x00200000>;
+            entry = <0x00200000>;
+            hash-1 { algo = "sha256"; };
+        };
+        ramdisk {
+            description = "Original userland with matched candidate modules";
+            data = /incbin/("initramfs.cpio.gz");
+            type = "ramdisk";
+            arch = "arm64";
+            os = "linux";
+            compression = "none";
+            hash-1 { algo = "sha256"; };
+        };
+        fdt {
+            description = "Unmodified original KV260 revB DT";
+            data = /incbin/("kv260-revB.dtb");
+            type = "flat_dt";
+            arch = "arm64";
+            compression = "none";
+            load = <0x44000000>;
+            hash-1 { algo = "sha256"; };
+        };
+    };
+    configurations {
+        default = "conf-smk-k26-revA-sck-kv-g-revB";
+        conf-smk-k26-revA-sck-kv-g-revB {
+            description = "A10 candidate, boot/rollback unverified";
+            kernel = "kernel";
+            ramdisk = "ramdisk";
+            fdt = "fdt";
+        };
+    };
+};

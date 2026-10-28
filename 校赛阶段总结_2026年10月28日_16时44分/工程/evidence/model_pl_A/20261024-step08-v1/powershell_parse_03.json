@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a12/step08_parse.ps1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:56:29.067836+00:00",
+  "elapsed_s": 0.47168560000136495,
+  "exit_code": 0,
+  "stdout": "{\n    \"status\":  \"PASS_PARSE_ONLY_NO_BOARD_CONTACT\",\n    \"files\":  [\n                  {\n                      \"sha256\":  \"eb7390eb0335ee97a2a2f3d3fad4a3464c1e753be3527ca605c7cb51268041f9\",\n                      \"path\":  \"step08_network_once.ps1\"\n                  },\n                  {\n                      \"sha256\":  \"005d9aaf6ec75b678f0c4a9fc7e42cf711d7f3bb681494950bcb106763b330a1\",\n                      \"path\":  \"step08_parse.ps1\"\n                  },\n                  {\n                      \"sha256\":  \"e70b405f7ac1bd7553a4ff12c1443491a404a37c4ae8cc000249b51306e3e413\",\n                      \"path\":  \"step08_restore_once.ps1\"\n                  },\n                  {\n                      \"sha256\":  \"2ce2e801895920331c5aa8ae74c92dbd4dcadb5f8ccb6b29a9cee10d59f14435\",\n                      \"path\":  \"step08_restore_once_v2.ps1\"\n                  },\n                  {\n                      \"sha256\":  \"e879d0eefc7180f5cd38ab093aafe998bd0f3d164039c1ea341c50825f6f9ecb\",\n                      \"path\":  \"step08_uart_identity.ps1\"\n                  }\n              ]\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/31WW2/bNhR+96/Q8iIJkCXbddzUhh6GrQOGFcvQFnsJAoGmjm3WNKmRlBMv6H/fOaQkO2myAJEl8ly/c726uvoMrB5rJU+RVlst1LbYCMVk1BjNwdqIqTqSwCxEogblhDutIgVHMBGLDHCNb6eIcSe0yq+urkbi0Gjjoh2zOynW/ec3q1X/ru1oY/Qhapgjkqg7/gs/exLbrjv9w8nJjkafb2+/lkSXxMWRmQK5i/1xtpiM2XRWWAfN5GZcC7ZV2jrBx7PJbDGdzObj4zROR6MaNtGBCZWky1GEf8xa8PbkW3DQijpJy3LiPe7Mz+2Oza4XSacTHC8OjO+EgrGo4zQ3CF61PjmwSZrmO3isxRasIzkxsDmw99P5bDKB68n0Zsrn795fr9/dXK+n8I7P2WSzqKcfPnC+XuD1rF7MNjeLNd/M368Xc+CxtxH9zgmoXCgyNplk1pmEgChirpUzWha2bQijOE09iweXcQ4SDHPaVAZ8AKstc1AdZz3gXEsJ3GUG/mmFgUrpqkUd1gtZa+16qCkUBRpS7MEokIVBhPShIJLqDIODR3Q8R/NEk1xYIqyWqLhGUglVo6Xgp96ET7e//PHFk3YHThwg+M2ZsuXdfZCjTSQioSLUvIVk3sXP05WdGwmTUj9Uja1qYRvJTuVX00I6EDpzWr70NLEZEWWdJyX9pit7F/cEHrL43osaJMEjh8ZFn1tF1n40Bq1jNoLlK4y/MWmBJHrsESesAzymGF7Y5p3NWdOAqhN7Pheb6EeZyzWK2Z/9QhtyKwGaJJ8GVqMf7LPYSc339mWcGimcxEzG1F15gvLp+4B2Q2j76FxA7coGw8uQe7WHU5lg4RzYN20S6/C8quGYZnQm1POz8Iqn6WqjW1X3Ye2VkRU+umj3WV1/uxEga7omsmB2kj4n67DylDlHFS6Jl3H6UzlbUo0IdRG9y3xg2TrjZWALgoltdWSyhVKgFJZNF2lGb+vhjac/yOoy4m/i8/nwtlo0M4gvEcKlh6MPPPl3lu1DckeJ0qT3pSf0d4odAAsjPjDFtmDGjahz6q5xNhzBo3AvzjAANRiTu0eHh6ZV2BILA7aVA2V3aGfF719uP/389eOv4aYrQSFR7ZNaht6jniWTj5OiGHnryMmBTNiKeJM0JBeaO5Q1kv3oBknxys4hJha6y6VmtU387SsA3Kcrkp6jSQQnvXqoqTcPiY2ThTQksZ2iz3YWX6RSU4a+GpCIsa+ui7ifekHHZWk2Z9+WXnEXxwtTm0uU0rsYydDMUKTsoTyPuZzvgO8r3bqmdcldXCOMWzRwPEY68mwnLLby07PphxkyjL+iIyhwEo43rZRvz8FQy9hLylpg37xsflno8CVWcUuhTCjMfnhkIQH8MwvN2T+z0Dr8M+vR2Sv9oKrONbAVW1sEsXwK2bxUOkz7rj3FWThPMXLohO3yybcgwvX7IJfWjCNUYZoF4rcBCcTxWWp20HVLIwjznszpOGmwhZviX83lJUOvNyhkBif/Eeqyg5rCXwuDdOE+7Arli9Uh6QMTe6qQRv+zOVBmvVQQAU6R6E+tYDBpWx+qEMSLJMLExdxBhxwcuJOYP8KOOxyyGFni+4yzxrU4A0Oq+cmWUX6GcUl9Am/6KT6o2zRb1um7gI1LXKEKf9dVo/+YFJ7y9cVgEEmbI45pbCpNTrm2TJoiJsbWvs55zooLE7qVBPvtRmwLHDeCw9gZgKKXj8KEAxOA7MvWf50TK0ipqCbxP69xr60x+btyeCOySPkscpmCh4ozyVvcd3AdLnFXE1vcpW05CVXXGBogvj/U7aHB/YNwSrONbO2u21dGaGJVESBVhVtkVdHGWlXxMmyuo/8ABybtUrMLAAA=')); assert hashlib.sha256(b).hexdigest()=='a344c021e5a6f4f716601389c4bf235db0b3f332d62a394b46efb0b75b1a7af0'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "a344c021e5a6f4f716601389c4bf235db0b3f332d62a394b46efb0b75b1a7af0",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

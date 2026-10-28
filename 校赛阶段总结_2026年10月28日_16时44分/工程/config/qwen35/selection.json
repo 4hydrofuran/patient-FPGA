@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "model": {"repository": "Qwen/Qwen3.5-0.8B", "revision": "2fc06364715b967f1860aea9cf38778875588b17", "runtime_commit": "81e39ad34368329b5db77620721510fd91107e80", "mode": "text", "thinking": false, "asset_directory": "artifacts/qwen35-0.8b"},
+  "linear_backend": "A",
+  "voice_backend": "A",
+  "backends": {"A": "modules/linear_A/manifest.json", "B": "modules/linear_B/manifest.json"},
+  "voices": {"A": "modules/voice_A/manifest.json", "C": "modules/voice_C/manifest.json"},
+  "contract_lock": "contracts/qwen35/contracts.lock",
+  "auto_download_candidates": false,
+  "fallback": "disabled",
+  "selection_time": "startup_only_after_device_quiescence",
+  "note": "A05 PC CPU module available via explicit S1 entry; manifest and binaries are checked at startup. Larger physical-batch acceptance remains pending. This is not FPGA/BOARD readiness; missing selected module fails, no fallback. Historical S0 entry remains explicit/reproducible."
+}

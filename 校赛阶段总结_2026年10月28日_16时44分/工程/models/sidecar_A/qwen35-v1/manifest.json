@@ -1,0 +1,2705 @@
+{
+  "schema": "A_W4A8_SIDECAR_V1",
+  "contract": "SP_W4A8_128x32_V1",
+  "contract_sha256": "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+  "model": "Qwen/Qwen3.5-0.8B",
+  "source_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "model_lock_sha256": "4d98e28972422f23fb1ed5b373df71ae137858d5973c6b3440dfb95a5e2974fb",
+  "tensor_map_sha256": "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+  "endian": "little",
+  "weight_layout": "[N_tile32][K_group128][k_in_group][16_lane_pairs]; even_lane_low_nibble",
+  "scale_layout": "[N_tile32][K_group128][lane32]",
+  "precision": "BF16 losslessly promoted FP32; FP32 absmax/7 and w/scale; ties-to-even; FP32 scale underflow/nonfinite rejected; no epsilon/FTZ",
+  "W_range": [
+    -7,
+    7
+  ],
+  "A_range": [
+    -127,
+    127
+  ],
+  "group_K": 128,
+  "tile_N": 32,
+  "zero_group_scale": 1,
+  "payload_bytes": 140378112,
+  "binary_header_bytes": 0,
+  "binary_alignment_bytes": 0,
+  "entries": [
+    {
+      "id": "l00_gate",
+      "layer": 0,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.0.mlp.gate_proj.weight",
+      "source_tensor_sha256": "ac1e1d4df4f3adca7e0bc15ee7310ce093f9108baa712cfb86f57b03e6d6e140",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l00_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "49203413e2e5049cd7eeeee76b893a2b3dd4de817d5a203a3e4ad946fa8f1605",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l00_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "63653cbe74aa17430f280889645cc41d7ac41227e6f365f101eeb4c54871dcdc",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l00_up",
+      "layer": 0,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.0.mlp.up_proj.weight",
+      "source_tensor_sha256": "0317b5f7a4e522c75c5013a70f14c510262b79596ac298ef52b5e04740d76367",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l00_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "d89f3f02193748bd62da9faf1771a09df4b647313ad1f70654e33727ffe39beb",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l00_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "b0434b2605b82288eee7c7b818ea1e82b533ba3670fd875439b528e8d81c5bc4",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l00_down",
+      "layer": 0,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.0.mlp.down_proj.weight",
+      "source_tensor_sha256": "57c93b2a4452740b0b82386debc7c66df7774f98425a0253dd9d3e7006e989ac",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l00_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "d3bbedbfd4720d4e0ace191a024c807e149f33c92b1db4a3e499673afc9df77c",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l00_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "9bc2f52c2cba934ed072ce4c0cae536ab25d10b1e5f7fc61883d06ca3a5cd47c",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l01_gate",
+      "layer": 1,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.1.mlp.gate_proj.weight",
+      "source_tensor_sha256": "eec1554d574f568c1111fcacdfcce1ee9c96b30d68e104de5d6e73f620a52610",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l01_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "d2527f3671c759e0243696cee3cd68147b38331f92d74edbe4c5a87de977c5b1",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l01_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "68eedd64cf76f92658a405245b66666be4d9d9cec84d98e890470af20f6320cb",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l01_up",
+      "layer": 1,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.1.mlp.up_proj.weight",
+      "source_tensor_sha256": "740e3ead3094791179bb65898f034e0755eafbda8da9509ed441dab450d4ecad",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l01_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "8c58cb89ecde72534cb98d701ac4579bb5505427562142943f9021cf33094add",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l01_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "71086f40800122ea85ec88114378de0fdb032da5ee1dd1be80b2cd5b959ae3b7",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l01_down",
+      "layer": 1,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.1.mlp.down_proj.weight",
+      "source_tensor_sha256": "feda6221cef862b7eb343576a03dd1ad215a56561b084c80f26adbf284f1d292",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l01_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "57d2896feed285a90de9a3fa2a702e2eee4e765b0e375130d7f8ecb99fe8d2d2",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l01_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "793ebd20714ac37fcbdd35acc81069ef3edb9b5caff50f94fb39fa7541a65f4d",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l02_gate",
+      "layer": 2,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.2.mlp.gate_proj.weight",
+      "source_tensor_sha256": "92b1c17f4299d458400adbf94d5625402c519c65e2e75154821ac95913579307",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l02_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "967909a620b9182035eae6fb7c3690c518d9ab4b0f88e592551feb82661aa73c",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l02_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "4f0f56f5bb4ce997a5fab6bd6dc929c26a43b49d41bc7041a2fc7ed0c0fcdcf1",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l02_up",
+      "layer": 2,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.2.mlp.up_proj.weight",
+      "source_tensor_sha256": "045550db57e546e0bbf8d92ff749728b3a109c36feea700f600e954f9a85c2d3",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l02_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "1870eaeca4105f094d3c5a0f82485b929689c32247e6a3b0b1974d82d9039e06",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l02_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "ef1effce36d8367739090100332267483793969b21ca3aa880e675ba6f8e399c",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l02_down",
+      "layer": 2,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.2.mlp.down_proj.weight",
+      "source_tensor_sha256": "9196cbdeb8929eb1440cb8d7981aa72a19354f9bfaa22806e224694c303a902a",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l02_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "1359a358d43e4ba4d903112c845a56cbb1a56fe7ec5b42e289d2988554fc8655",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l02_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "b11c18318292a94bd8e86e25dea4e9d06a8ffaef9e3a0242401eeebbe765d01f",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l03_gate",
+      "layer": 3,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.3.mlp.gate_proj.weight",
+      "source_tensor_sha256": "50d2f4c60e786596e464958bb515ec5573c3ddb53604930e3e2244f107f71f11",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l03_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "6e99360ebae6b9c6cec95a5430e043d487f81889b554078dd0ded998d4cc7a1e",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l03_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "2feb76ad85397e94a9f12f7c1a9e7265211b0dceb5f00c1deddf2231142132d9",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l03_up",
+      "layer": 3,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.3.mlp.up_proj.weight",
+      "source_tensor_sha256": "f141786356fc0b59f4e1aa8cc3afb084d283e384c98cd47dbd1812b6c9ac1f0f",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l03_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "720283e639cb0df49b6aa253c1ac39015e087bbf39cf198d1ac97004a899bf3a",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l03_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "01743c7abfcfc8c6d654ba47ed0d0d8c4cb9e4a67960204c6d00c01af3e1989b",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l03_down",
+      "layer": 3,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.3.mlp.down_proj.weight",
+      "source_tensor_sha256": "d3428ec277dd5195c9a42720be5b4068fcc51943670c62f57e61b5adebcae1da",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l03_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "3ddb8eeeef5aef3973232805460528118d815800d2b045b500ecd25ea510bfcc",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l03_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "af4cd7aafec85054f6731c5594af20cf021bf2048f8d170b051dbc20cbc13536",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l04_gate",
+      "layer": 4,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.4.mlp.gate_proj.weight",
+      "source_tensor_sha256": "992c80a1b8374007902cbac7a616ad8d695ec9e63f519c016b665e41011222cc",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l04_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "6cd6feb199117af1b2e99a33bc12ae9abc5771e9d24fc3af959b8ce7fcf12574",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l04_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "154871c64c7f234aab974366496fdf91d64414968e770b1db2e6e48d2ff385ee",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l04_up",
+      "layer": 4,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.4.mlp.up_proj.weight",
+      "source_tensor_sha256": "2318c49e37ef0ae946f9f9b3d6ebca0a29929c1b05ac7db8c147cf4c1fd9f888",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l04_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "95e55bf160d87ee96f64a036c78cb3315e67f8dd04bece0ba855bae3226d63a6",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l04_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "7190f39debd9106a370b3069f657edc0ebd21dddf7756b8c0caa0d90dfa287e8",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l04_down",
+      "layer": 4,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.4.mlp.down_proj.weight",
+      "source_tensor_sha256": "ba121be04f6cb888879295137310ca32ae19429a1aa03ef7c4ea2f361bb62734",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l04_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "08c59abc845c0084ea92e0915fc5c82bdcc97f0656f3851b92c98c41f1dcae4e",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l04_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "c17515a9212a04845440a4215416ac04bbe13f2b0cbd27870ca7abffc6f9abd4",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l05_gate",
+      "layer": 5,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.5.mlp.gate_proj.weight",
+      "source_tensor_sha256": "d65832085f8a787945c1c6fbba55239a6f8b4f13ce1bd7a5184e458419427283",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l05_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "e49979d81da556c80fc102957e96c92736d49ba2937a112517af083662e04d53",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l05_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "35c6b42a113123d929ee658e1ecf739387e866aeb998ddd4bc6ba0ca7294325a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l05_up",
+      "layer": 5,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.5.mlp.up_proj.weight",
+      "source_tensor_sha256": "5f0c880e4d6b0127cda55cd017f73f782406dc050f1d750e5585ce102dddde1e",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l05_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "b65ac8dfd449bf95cb4c0ac889b2053d4ecbe69f0324341d0e690d563f8385b0",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l05_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "890ef9a1ffd4a752ccbc6b369eb9dfecb5d31c90210529903b29f4c3d1e7ebca",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l05_down",
+      "layer": 5,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.5.mlp.down_proj.weight",
+      "source_tensor_sha256": "60f0a77529c775c10da70e76c08a9518918abbae9b264b9d5d6130dff55520e7",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l05_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "7ffedf2c3bedf322df5bf82b3d745a3a15181af4ea17d7d4a16513b4af0a44b2",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l05_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "a59d2b6df89d78458a4c9955e1d93d3b3213d5aa85ba9f942f18373fde3ebf51",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l06_gate",
+      "layer": 6,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.6.mlp.gate_proj.weight",
+      "source_tensor_sha256": "b36b767f35d7e97bf2443c53e8ee9ff5b36ef4a1e881ceea8b815b403276ee29",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l06_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "d89c61efbea3f3083da7386a742a79cff8d0a88065333650c0a68a11f2686d6c",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l06_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "01a302ae83ecfd358182e6dbebfdf9dd50adceae8b9d91434720960136bb2645",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l06_up",
+      "layer": 6,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.6.mlp.up_proj.weight",
+      "source_tensor_sha256": "547463551165093b8b8bdec370a9148af50f9f6e5d38bc2ab4f207b72d2d4044",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l06_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "b1f74b9a909551b1fd6cec4560b39d162324d510205aa479dff85a4a1bd5c8eb",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l06_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "d05c29e41d0a0a51fbf65ad397a774fa1790261ad119100be3f01cd7d1b2a3e9",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l06_down",
+      "layer": 6,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.6.mlp.down_proj.weight",
+      "source_tensor_sha256": "b750e840ad51e8d4b7d0d7f46269df9b7060cc705212c0416b5a34607e3e15b1",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l06_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "304b59ed8c0a58b028a3d8e3772707b9a9e7025a40edb489da73cf5b343e988b",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l06_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "c7301ee2f70201db54e745c5f2be6c4ccf311068b32663abfe7a5244c615830a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l07_gate",
+      "layer": 7,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.7.mlp.gate_proj.weight",
+      "source_tensor_sha256": "ccff86cc93b91a5be46dbd61cebbfadc32a0e31e7d767b0436a37764d6d94547",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l07_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "1dbc0b62a15a1805b84df3ed5a0ff135f013263829ba117d3e9a53c60691039f",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l07_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "31971755701bc200ae066c456a9342db77a7c09b2ed7b0bf497315267acfb1d8",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l07_up",
+      "layer": 7,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.7.mlp.up_proj.weight",
+      "source_tensor_sha256": "9c8a6ffbeb9957d7a52939b037099d34e6445e2255e2b4fb3baedabea93f742a",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l07_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "87bdac99c524f5cba8a77cde9f3e2da3bc899cfe41a27a27aa1eeae1255b7761",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l07_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "f5aa08c8d0b42d270ac06fa122922dafc5455feccdcac9f2ead8780c8606ecad",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l07_down",
+      "layer": 7,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.7.mlp.down_proj.weight",
+      "source_tensor_sha256": "0c2ba3eec24441cc0a4b4c9e6956f64210caa2acb8fae18b3579fce9ec49159c",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l07_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "4550f8dd8026b9a0319e56fe69b42f208007ab3d7a4ffefd41ca0bfba2fcb184",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l07_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "368e79079bc449224e1d8719690c25060a41cd6f04d392d7e7d99c8475ab1639",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l08_gate",
+      "layer": 8,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.8.mlp.gate_proj.weight",
+      "source_tensor_sha256": "47ea617b14d9e3787fe7fb8e44eec9655dc8f3c75b150d0b2bfebd13028a4e91",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l08_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "52127a2424cd9d08b493919a0043842a69cc6087fbadb0b0d2d831e5415b0a01",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l08_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "5b3bbc28316d3c5f40bc743a10fc11cdfbc49afb802beb07c2c9a87f7717dca6",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l08_up",
+      "layer": 8,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.8.mlp.up_proj.weight",
+      "source_tensor_sha256": "3fe6752c0557e1e497a15e1e840907a05ddd1a216c540f4b6ed3546bc4f50c39",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l08_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "2393f1e48b6abe3a7587e084abe2dd58854c654a1df1069989c3725a5b277c65",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l08_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "991acbc2b0c90afc50e3d1d6aa6414368fa944f385ba80ac78efc47d97158522",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l08_down",
+      "layer": 8,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.8.mlp.down_proj.weight",
+      "source_tensor_sha256": "05fb318d3507148575b60805a4d34ccaba09aab41705d75a33fe101a78ff841c",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l08_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "caa474d19db7a2c5e7fe11e8e8172b213f004bcc9507a6f2b9ff930f5f435796",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l08_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "74830b0f5f70e25b09a1e2f9c842c15e2c4c49822149effe7da413bee22876fe",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l09_gate",
+      "layer": 9,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.9.mlp.gate_proj.weight",
+      "source_tensor_sha256": "d358d3350cff9257c1ab0ee1644fa384e0cc1139c94c6b10170ba2c4284c8454",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l09_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "3318028f17827d2e3f45a2cddcd4791958ffb68abf665fd156977d9a1f1e7428",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l09_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "055769f742a3648f558687b7c596dcf55ef4e2ba248e53f88432d78745b315f2",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l09_up",
+      "layer": 9,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.9.mlp.up_proj.weight",
+      "source_tensor_sha256": "a2d38250a3cfcd53088206f52b83b6a7cb21ea56560f0dee8ee7d9eb8a2ff052",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l09_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "61f06432de36efcc5717038cac6773b8b4cae0ed111b4b1a5d1a8c4d1d5640c4",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l09_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "ec4b0ab9d5c1bd5eee70f6ed2b7aa17d935081bbf3ea482f9cad5ebb7a66e962",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l09_down",
+      "layer": 9,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.9.mlp.down_proj.weight",
+      "source_tensor_sha256": "09751bd4c7ef156fd8c5cf4e3be0d6250c7cccc14cf30883fbb28d213fec6132",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l09_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "1e03f6cb6777ab7c75bd17b7b73af057d7089417531a4217b66916a2df0ad1ae",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l09_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "0781532ecb654374770b6738af24050de548cfa610927267dc2dcc5a0921af8a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l10_gate",
+      "layer": 10,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.10.mlp.gate_proj.weight",
+      "source_tensor_sha256": "acc39380cf3b0553da8333bffac94461fd05ea8cc4fecf0f96ff2f9e6f73ef06",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l10_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "ae0cb93ade8f24f3b15172ca1925bdb9f2768d831f9f31509dc91149155d1e30",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l10_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "8e2bc3a237a9acaba8e1842d8e6524aa202aec825b77bf38dac1dd8f0206e102",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l10_up",
+      "layer": 10,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.10.mlp.up_proj.weight",
+      "source_tensor_sha256": "793b2b2e9ad00cefec77ce9c76586612ff2b5705e56323f7ecf2a5e82b9aed0e",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l10_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "5528db89947e06b13c5336cf14a5bec5a6eb0b25bed6e37369520936125d05ee",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l10_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "e08920240b2b5126358ff3763b82fd3a178acc14a9602339c52e569e6c71f2a2",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l10_down",
+      "layer": 10,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.10.mlp.down_proj.weight",
+      "source_tensor_sha256": "e32e37cffba5b41c4939ad74507e10dea14db631b6fef69c16b1a37dd3dc9b12",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l10_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "b4ddf604b3bd7a42ce4038079bed9331bcb91fb701e07911b92a7fb321c75bab",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l10_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "fdf2afbba540c15fd734d30ae83d6d53305a757580d1cf3f2e02a502f43a5ecb",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l11_gate",
+      "layer": 11,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.11.mlp.gate_proj.weight",
+      "source_tensor_sha256": "59a7d0c382716854528f2b4cfae1223cdaa5e43052c1747ce2a58785c91dacee",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l11_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "28694cf9484fceade265f4372ffef02af5b6c6fff9c08d67953d5bc4c5599d63",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l11_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "f4c3f46fab90e22ae2a1714536e60fa58d546012327878e52f4921a5f92a566a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l11_up",
+      "layer": 11,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.11.mlp.up_proj.weight",
+      "source_tensor_sha256": "dab36859f9c0914874ca74f932cd380e6634babcba4750a95075bfb9e97d3c9b",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l11_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "abd759d8b31cde4f28d3b50f603af0f80be7389726f321b46dbaab6b6e99774d",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l11_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "b6b1ba8304c2e2d0fa034ea7e839ee81ebf9631757f8d94b4e48d3ef4ffee6d4",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l11_down",
+      "layer": 11,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.11.mlp.down_proj.weight",
+      "source_tensor_sha256": "5120ba8e1da3aeb89ddcf924f2c5e5108fdfe63fb072a4f270dd3508c7e24e3f",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l11_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "a3ff434b8fcc0c6c64ec5470043d57261149d37e6633d33630adb12c07279600",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l11_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "f6e8b571bf1f98b1474214ffc01f31bea5aac3306e15113364144a4b3507f619",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l12_gate",
+      "layer": 12,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.12.mlp.gate_proj.weight",
+      "source_tensor_sha256": "dc73c370a6af841769f183399d1ce8c8f7e26cc90daba1f048709030f81b0ba9",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l12_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "34abd3e38b8ba9e63500a13d1bc15dce89d1655e1ded2ed7c4a46a0761a075d8",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l12_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "6c2a693cd87ba4fd99dee4d833101a8678a6c7190b835744e7dd009fa9a2ee96",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l12_up",
+      "layer": 12,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.12.mlp.up_proj.weight",
+      "source_tensor_sha256": "0f290b628c01776d8afd46ed1db1d096722942f7112fc0f30e9baee41fb40fb5",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l12_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "10dd2627583debdc43d241e67ae1041664e93c05aea6e5f8ce23a24ed0c68c55",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l12_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "b746a2050bbdc97125c782eacb3099ee7e57c5805645ac946011eaf1d78b1b32",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l12_down",
+      "layer": 12,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.12.mlp.down_proj.weight",
+      "source_tensor_sha256": "2d5f2fef40eb81eddb32ab0ca8e4e53e5578c53f335cdd6b54d9d62051b0759e",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l12_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "d7e58055aa3cb8a7ab2d73ef832f3e8578c106d5604c36a08d004678c40e5287",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l12_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "ba38fdd60eaa02a921474f6b72c9ba5c5f6c3f6392a7a55ac60b455dc18fc619",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l13_gate",
+      "layer": 13,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.13.mlp.gate_proj.weight",
+      "source_tensor_sha256": "848f24b29888174053ce57ae02fe67c8d0f03fc94e75412ef821f0f7fb1159bc",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l13_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "e4c868010d0b3a6282aa8b86bbcc6c5d3769d24c909fe84b93dcb959acd831df",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l13_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "15c5912d76d40c39775d6dab8658688fea9b2e5bd9f80a2ff3ce1cd34f664d58",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l13_up",
+      "layer": 13,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.13.mlp.up_proj.weight",
+      "source_tensor_sha256": "8d66273c144a88ed841d0f15ef0bb0d65b5238a506d4ac1ee66f86dcf1993707",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l13_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "784b399099f904f16364910edfc9a535daf3d009639268bd0dba9e3deb70b96d",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l13_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "329f843c678e3b026e471fa6d7e81e6ab064610b43af8a3fac3d0e059f665c2e",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l13_down",
+      "layer": 13,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.13.mlp.down_proj.weight",
+      "source_tensor_sha256": "a903cbbf112b0c17b53cc7c89faed3df7fa718ec5f0a148ab474b6a75a064210",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l13_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "97241d581c27e435eb4f451f2586c161b01060ffdf2c18ca447b3dde628b6bf4",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l13_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "2c9f40c8158309d32a077ac1fe86c26e7516e50545d815d7424ce926a576788a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l14_gate",
+      "layer": 14,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.14.mlp.gate_proj.weight",
+      "source_tensor_sha256": "6327f2e91f44b5f5ae73cfaab781219ca035699280ca7fa8f2c044a1d0d54965",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l14_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "b43df0ba22b6672b1035588304087d63cde596bcb48908efc9b00f017e7d42c0",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l14_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "c68fd1c82ba346834eb157fcd8a9a6dff0f8a36b282553083e227e1014aa951a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l14_up",
+      "layer": 14,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.14.mlp.up_proj.weight",
+      "source_tensor_sha256": "f63c0b1e4ae22e9aa8c99d3d63a642b127a4f747eb9128eff0c339481e2c62d9",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l14_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "4f69d2d2aeea048a066da87eeadad891418839033b3f41b913081b42284657d2",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l14_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "d4d96b660cb77a99baddd5796f4e97616f13af83bd14808d8c9af3e06c621e02",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l14_down",
+      "layer": 14,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.14.mlp.down_proj.weight",
+      "source_tensor_sha256": "96d8150df0567e3d748b0388e6a20781b0569388a4ffa2a34faa531c85642803",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l14_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "d45de16736ce4a6da3b0eaf1510b25c6f2aa010b26670097af7f9488597e3a3d",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l14_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "1470398baca4892fa12e082f40556f36b7a3f2107ca5460fbf3e902f3ac17908",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l15_gate",
+      "layer": 15,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.15.mlp.gate_proj.weight",
+      "source_tensor_sha256": "46661cd3ffaa3fc096b0785581b41a848e40d8247ba4cb7ced946cc4fde06a48",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l15_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "0424a4502cb9695e67a7369588094bb39648602710564f4639f0417f9e6e6c31",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l15_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "df9ef640fbd971904c5d090194dbce52b9464fd7461282b0580f967e78a5335b",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l15_up",
+      "layer": 15,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.15.mlp.up_proj.weight",
+      "source_tensor_sha256": "aa16ebc91dcb4702fe78227d9eea187cc044eb49ae8196e228cad737dd71e715",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l15_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "42585a30fa626e100cc91e160f3f1469eb8678587a36da615e5f68e32d14adfd",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l15_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "52cc684359a80b34bf795710bee98a2ebeb4b18a090a465e281ba776592d6602",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l15_down",
+      "layer": 15,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.15.mlp.down_proj.weight",
+      "source_tensor_sha256": "ef60d2c687bab19464dca9c8bfd7777e46ad226df0c9e25643b0bab04b5a1cca",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l15_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "0f23a0ede014b2616d5e71d9c7b87a67660ef276ac8ee619b896207d2526e161",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l15_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "96ac35c68144032488ff18ecc5ef3cf673f6074441d50109069d6ca63664cb3d",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l16_gate",
+      "layer": 16,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.16.mlp.gate_proj.weight",
+      "source_tensor_sha256": "09149700806a4bb83986f73459d3b8ac636018a4a2411927073bc49c6895c3e8",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l16_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "f58d251ebe18df3bca22b0a74db2c40a20181247d8fee9ff5adb222da21fde3e",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l16_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "e67cbaad9a540f0f32b793e963acaf574e062141d33a13ac935ead417a83771c",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l16_up",
+      "layer": 16,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.16.mlp.up_proj.weight",
+      "source_tensor_sha256": "8c4eb5f3102c29f255f26e7e82a6223c410f229a4b3ea4dedab73d776a9f6080",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l16_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "ea98b97427f40d19e8e4e98fe756e3f52775a7c3bdaefe352d5702b57727ce76",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l16_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "76cda5d7f2b4f93271b9e9a502b939dd711fc4fe863ec86b9ed1031b9f1ff80d",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l16_down",
+      "layer": 16,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.16.mlp.down_proj.weight",
+      "source_tensor_sha256": "e12df33b47e0bb61125b8fe421d0aba4a75e6bf0b07e1b233f79937b978356d0",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l16_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "08ef31daaf3f8c1b806efd137a50e403f2bd3110667d0833eead3a3a3b0cdb50",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l16_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "a6350354b398399e3ecc710d1e2f398219d1e0b741976baae8f0bb7cf614e1ef",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l17_gate",
+      "layer": 17,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.17.mlp.gate_proj.weight",
+      "source_tensor_sha256": "f8756b1cb7504eacc713c4e2c9d2128e3b7c0ff63248756d5a1a216ffe694300",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l17_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "0d5f93934b785b04ea4f427f2d449d07dc134664779439fed61b42b533705136",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l17_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "356fa25bc969ac1818fdacec0474017c8568c28110e49afe283652824f191b60",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l17_up",
+      "layer": 17,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.17.mlp.up_proj.weight",
+      "source_tensor_sha256": "b69569389e39e255195d13e2af84a10c49b4415e4c83cb5a0840628ee8f80948",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l17_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "8e429a438a50495b9f9c991a9110a0c8835907cf37df445c4789604779f8d408",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l17_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "82c5eb109b9329421b390d8e30b53bc3b9361c7f0e9d78ec58d52602371897b2",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l17_down",
+      "layer": 17,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.17.mlp.down_proj.weight",
+      "source_tensor_sha256": "412058832c188e22c34c358c8e59601fbc9a945b7ac7fb8ed5b4712302b237a8",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l17_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "8e952fe3c51b98c907369c7c3bd6a3830d98b0ac994271b6df5ec9e027e3da8b",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l17_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "c41f4b2e4d1028ca1cd7b328799fb37109bf7937fe3baf5305f28a44b1395410",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l18_gate",
+      "layer": 18,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.18.mlp.gate_proj.weight",
+      "source_tensor_sha256": "4717af00990d4ec5e61e0f6f1da6d63a0c559dd829acf65130c74df02d2643b3",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l18_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "745930a532c2b071d6c99dc7fc303b8dade911c93a18e90bc211d448fae74272",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l18_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "e4928a229f856276bcc0f6cd479cf0c7312053bee0d1412bf6786514b105e642",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l18_up",
+      "layer": 18,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.18.mlp.up_proj.weight",
+      "source_tensor_sha256": "eb176a1dd3a08f18cb0a5dfda15811bb1b6008416c4765f7be13352a5b813605",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l18_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "b3cba45cb6d0f1e726cef2043d07cf8fcb92a0ff802ccdfc7952bde46413dcaa",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l18_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "7368eeddd1af46bcecf18bc45f7d41317827386d0baa4f4c72cb6cac45a229f7",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l18_down",
+      "layer": 18,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.18.mlp.down_proj.weight",
+      "source_tensor_sha256": "f41124d728ee26c54cd15b22cdd10138cbfe5a04c6e7fe514f53d86d4780d838",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l18_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "0d0d98c56a66d48e44328159933c0ce584d06de36ae0fd4aab0200b1465f74dc",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l18_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "f58d54e2f2036b5d69d09f17361e742ec0585e7e99780a27c3672cd1d96f5f85",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l19_gate",
+      "layer": 19,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.19.mlp.gate_proj.weight",
+      "source_tensor_sha256": "118bfa194557dc70eb6663356fad68adcc98c4a7e4cad9203576e7b6d59f2ec4",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l19_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "45c5dc4f9ccf83899a306c3376ed420094b370f47718d3f64c5cc673a141cafb",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l19_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "033481d8bb02e126b3224671804799765e4176b338aac85045099bafc3db4e73",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l19_up",
+      "layer": 19,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.19.mlp.up_proj.weight",
+      "source_tensor_sha256": "f731d77e73d6ba23b6ab5c938f79995f380ea23381a72eb3e01dd015023a51ba",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l19_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "92abdd7658384898321e1cc200b9d5b4b2913ddf1b7de7de13db32b4fd627472",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l19_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "ab09e7fb3bdaf71dc853a604c9436427889805ef7d21ec848bb7ede8e701266c",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l19_down",
+      "layer": 19,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.19.mlp.down_proj.weight",
+      "source_tensor_sha256": "638eedeb701b94aa861f4438e615c07ec6c60ee703db1bfee2de577bb6498c3e",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l19_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "48fe07781c7b2656933186473d260bb1cb4cd219a8136440c5a841f1d07df98b",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l19_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "77e090c6fc9143145f40d107020b5d58c198b6da7d95fb07974f97ba6e619f1a",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l20_gate",
+      "layer": 20,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.20.mlp.gate_proj.weight",
+      "source_tensor_sha256": "52f9e1ac66d6777ea869cd9c9a968f1fe60a61feea23164755a52e1971c1716e",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l20_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "384857ed66aa1d6af3f7b82a512356f4ae0a7288516d91032a68b8b055652b61",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l20_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "49b5747fcfec8754de33573657f10b129c97f4b352e8206d008a188e13dcacf2",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l20_up",
+      "layer": 20,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.20.mlp.up_proj.weight",
+      "source_tensor_sha256": "b686d984a503dca9d88012f9be8f14e042c2ca0be541d62c6dac186cd3fc5533",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l20_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "31e0eef95527259fc90b1fa3237a9d7f4df55a16e3a4861d40a1f8339c930ab3",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l20_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "3edb91e210dcecb7e40344af813c4d3e8fb2ce06f39d079630b6d576477add57",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l20_down",
+      "layer": 20,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.20.mlp.down_proj.weight",
+      "source_tensor_sha256": "95321f2c16e168880266841a7ba2839bc0830079d02a052e0b109c19132b01db",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l20_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "bbfb0c9f2a2a7fefc4eda3a7abcff3243f5623114a1c246c61bfbc7acd420456",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l20_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "824a5d7b3daca514a8f3199f053c21d9c58a92430de378c74fcc0ee0d2eae095",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l21_gate",
+      "layer": 21,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.21.mlp.gate_proj.weight",
+      "source_tensor_sha256": "eff487ff19905e18d39bcc76dde0c2c140a258efebd44f4384f0ad0ae705a8ee",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l21_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "80232bd475539c87d827adf450e3e7904906454835c9179fd63c3f7ad8b3963d",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l21_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "19ff2b5c869500d048a769eaff88663441012795f3626c6915ebfcf3078ea12f",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l21_up",
+      "layer": 21,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.21.mlp.up_proj.weight",
+      "source_tensor_sha256": "da385b3dfc14547a39b8cd2fe9f906d8caa3ebb088144175638356aef55fd311",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l21_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "95ae07291ae8fa0bbda9298dd118bcdd875a8be197eb4dc01c6868bf8dfd957c",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l21_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "3fa7954fc254f147f62e3ca8e2143f77921dee5cfc5f6c1422cff37878a209f6",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l21_down",
+      "layer": 21,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.21.mlp.down_proj.weight",
+      "source_tensor_sha256": "af9fa5ecc9556068d867a410180e79bb3b5ac93c05059b8c98fef526c4483d9c",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l21_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "983b03b829b02233e99b4fbb08d9d7ba22213cbf1d4f2fe62baa9a8f5b19d358",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l21_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "1c073d96712d800555c42d6977640d311c02b508e9d7d0e7489c2c4d93602de0",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l22_gate",
+      "layer": 22,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.22.mlp.gate_proj.weight",
+      "source_tensor_sha256": "dde22f42876bc15cae8778a29a573f150d4d042a09af00b8d1abe94d6207d93d",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l22_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "613b1c68439ef5d6ebc6811e5a9dc0029de3063fcf25efa28d47a14d67f88b0a",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l22_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "0fa8aeb967787799a2f93e42078939a99750258869d4f7ba444f0e679f5ed910",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l22_up",
+      "layer": 22,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.22.mlp.up_proj.weight",
+      "source_tensor_sha256": "84d1a8b4bf6a468ed531ce11ef7a13cd7e332716ca3d1d19c16714d4b8ad9b73",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l22_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "5ede17f78322916a3baa1bb034090511132d9748d2a3afc162780415246bff8f",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l22_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "7134d6a099d6593ab2677dcf935eebb1d6b2c90ce79f2e7332ff85be0a463c7b",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l22_down",
+      "layer": 22,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.22.mlp.down_proj.weight",
+      "source_tensor_sha256": "198e2fabef4ee48484d9c952018e465376acea23511f126b7edceef8a66f50a1",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l22_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "2168d823ab5a27f9b8008b73abee5ab4c57f7599f000a5f2e180517911dcb7ae",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l22_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "b8d18cebd21463141440d5806f7893b72ff806838512c72a2ec0ac4b82cc613e",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l23_gate",
+      "layer": 23,
+      "op": "gate",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.23.mlp.gate_proj.weight",
+      "source_tensor_sha256": "57e66633224761ad56da16da7cc0f476e42decd9df64a64ded4a343b8e87487b",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l23_gate.w.bin",
+          "bytes": 1835008,
+          "sha256": "964b59ecb48520f54e06e41a84ab126536b5a3c1df3db6ef3d77daada531c47b",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l23_gate.sw.bin",
+          "bytes": 114688,
+          "sha256": "5a64b254815b8d9570f7e208c807a1886e5bf82558eaeb7bcede363783d792f9",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l23_up",
+      "layer": 23,
+      "op": "up",
+      "N": 3584,
+      "K": 1024,
+      "Np": 3584,
+      "Kp": 1024,
+      "G": 8,
+      "source_tensor": "model.language_model.layers.23.mlp.up_proj.weight",
+      "source_tensor_sha256": "cb3830f5121ca0cb4b974b7904a382f9555975c2e84c71863e868e434e86aa6f",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        3584,
+        1024
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l23_up.w.bin",
+          "bytes": 1835008,
+          "sha256": "5fed073f50bbfa61d98de92d9185e783e4d7f32d76afb1b68f1787ca5f28eaf4",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l23_up.sw.bin",
+          "bytes": 114688,
+          "sha256": "758a80310b02b09bfa1de93ff8161403c8f9413d7c8afaa19c4ee9294212b7b2",
+          "dtype": "float32_le"
+        }
+      }
+    },
+    {
+      "id": "l23_down",
+      "layer": 23,
+      "op": "down",
+      "N": 1024,
+      "K": 3584,
+      "Np": 1024,
+      "Kp": 3584,
+      "G": 28,
+      "source_tensor": "model.language_model.layers.23.mlp.down_proj.weight",
+      "source_tensor_sha256": "1866748ce87d32cfee34891d2fa393fdfeee77447935f6a31d036e4b80332a48",
+      "source_file": "model.safetensors-00001-of-00001.safetensors",
+      "source_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "source_dtype": "BF16",
+      "source_shape_NK": [
+        1024,
+        3584
+      ],
+      "orientation": "Y=X@W.T; contiguous source [N,K]; no transpose",
+      "bias": null,
+      "padding_weight_code": 0,
+      "padding_scale": 1,
+      "files": {
+        "w.bin": {
+          "file": "l23_down.w.bin",
+          "bytes": 1835008,
+          "sha256": "650c2a5d7e5916600ffeea6e2d02215df7297d181f5aaddd5dee85c5707e28fe",
+          "dtype": "uint8_packed_signed4"
+        },
+        "sw.bin": {
+          "file": "l23_down.sw.bin",
+          "bytes": 114688,
+          "sha256": "f278da5e992871d2a71b0232498374f5a7ddad0232e47efa7e8e8507e36f09cc",
+          "dtype": "float32_le"
+        }
+      }
+    }
+  ],
+  "producer": {
+    "quant/export_w4a8/core.py": "e9088dfc3dc83deb6aa8c21e67920e131681761ef1fb9816b4b5e6bf4eea468f",
+    "quant/export_w4a8/__main__.py": "82d42333e5a9da435d0c27356476c14c2488a83ff8d42ae5b74ba7470719f7ef"
+  },
+  "numpy": "1.26.4",
+  "license": "Apache-2.0 (actual LICENSE retained)",
+  "license_file": "artifacts/qwen35-0.8b/source/LICENSE",
+  "vision_included": false,
+  "MTP_included": false,
+  "embedding_head": "Not exported; original shared embedding/head preserved in runtime",
+  "runtime_download": false,
+  "BOARD": "NOT_TESTED"
+}

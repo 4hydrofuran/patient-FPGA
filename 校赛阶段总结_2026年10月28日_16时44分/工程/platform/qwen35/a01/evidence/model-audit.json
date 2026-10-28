@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "platform/local/a1/venv/Scripts/python.exe",
+    "platform/qwen35/a01/audit_model.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-01T17:10:54.353550+00:00",
+  "elapsed_s": 11.765989400038961,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\audit_model.py\", line 94, in <module>\n    if __name__==\"__main__\":main()\n                            ~~~~^^\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\audit_model.py\", line 49, in main\n    assert not any(\"v.\" in n or \"mm.\" in n or \"nextn\" in n or \"blk.24.\" in n for n in converted)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

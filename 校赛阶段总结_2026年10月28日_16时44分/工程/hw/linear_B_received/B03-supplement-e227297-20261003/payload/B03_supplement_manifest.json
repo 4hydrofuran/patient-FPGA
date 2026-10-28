@@ -1,0 +1,18 @@
+{
+  "candidate": "double",
+  "status": "READY_FOR_A_INDEPENDENT_REVIEW",
+  "A_acceptance": "NOT_SIGNED_BY_B",
+  "base_package_sha256": "dde3a9c096f0b62853bd59b37c3d76da9c0571d26b5c1dc36b830c2c843c29fb",
+  "rtl_tv_files": 270,
+  "rtl_replay_transactions": 66,
+  "fixed_pc_vector_files": 342,
+  "fixed_real_vector_files": 40,
+  "checklist": {
+    "B06-01": "XO/source/config/kernel.xml/SHA included; actual ZIP must be transferred to A",
+    "B06-02": "All selected nominal/stall TV + independent expected + buildable portable replay included",
+    "B06-03": "Selected current inputs resolved; fresh frozen-baseline Csim50/synth included; old unavailable TB explicitly marked historical",
+    "B06-04": "Full candidate reports, generated overlap/AXI RTL and buffer/FIFO applicability note included; internal AXI FIFO occupancy unmeasured",
+    "B06-05": "Fixed synthetic/real replay vectors, original weights/license and per-file SHA included"
+  },
+  "read_first": "docs/b03/A06_SUPPLEMENT.md"
+}

@@ -1,0 +1,83 @@
+{
+  "parent_manifest_sha256": "83a08fbb7fc8a23043be23e62adee414715d28347904bc035f2e6d95bda68d12",
+  "variants": [
+    {
+      "name": "baseline-miss-probe",
+      "changes": [
+        {
+          "path": "continuous/bundle/control/permission-runtime.json",
+          "sha256": "c9eaf0eb3d69a13d6010cec5d62f7af3751b8705385664d9d214c6963b8a350c"
+        },
+        {
+          "path": "continuous/bundle/platform/qwen35/a12/cpu01b_supervisor_base.py",
+          "sha256": "ba0c2ee03e6d2a82ff9ffc68852e211e91bf2145905f840938aa6f51fee3feb4"
+        },
+        {
+          "path": "continuous/bundle/platform/qwen35/a12/permission_hotpath.py",
+          "sha256": "ce01eb316274a0b48fec03482e0beed8b7b8669a7490f52e79def5ddece35473"
+        },
+        {
+          "path": "continuous/fast_response_preflight.py",
+          "sha256": "924635ec33aaff35b5577186ca0a804efb72156074927ea363e26f41d4797915"
+        },
+        {
+          "path": "continuous/interactive_case.py",
+          "sha256": "6921d9a854b8a179ed5bfa8189947a3a7d764fd2929265834fdcec95d693dbb8"
+        },
+        {
+          "path": "continuous/permission_probe.py",
+          "sha256": "95afb41301fe4f5d53a5925faba3df7e239cb79ea3f7ea3e6df6081be9bf080c"
+        },
+        {
+          "path": "continuous/web-config.json",
+          "sha256": "98c5e2c5539c88bba4ad7ebfd9bf9b95c20e944840773c799b833f70904a0abe"
+        },
+        {
+          "path": "permission_compare.py",
+          "sha256": "fe56139a3aacdb4c7d17f718f74bdb5b59270e4d6259a335285ccf6c85421bbe"
+        }
+      ],
+      "manifest_sha256": "d217c64dbbfba99651d4181900c10186e926feb315c6f14d0e9be62ac4d551aa",
+      "bundle_manifest_sha256": "86fa7087018f48e162c54509fefcfe5966a64006c2907c09082b9bfba61012fa"
+    },
+    {
+      "name": "candidate-miss-probe",
+      "changes": [
+        {
+          "path": "continuous/bundle/control/permission-runtime.json",
+          "sha256": "01766073d19a46cd8c5dfabae27e3959531e2318da04f2530f1aa4845bb46e18"
+        },
+        {
+          "path": "continuous/bundle/platform/qwen35/a12/cpu01b_supervisor_base.py",
+          "sha256": "ba0c2ee03e6d2a82ff9ffc68852e211e91bf2145905f840938aa6f51fee3feb4"
+        },
+        {
+          "path": "continuous/bundle/platform/qwen35/a12/permission_hotpath.py",
+          "sha256": "ce01eb316274a0b48fec03482e0beed8b7b8669a7490f52e79def5ddece35473"
+        },
+        {
+          "path": "continuous/fast_response_preflight.py",
+          "sha256": "924635ec33aaff35b5577186ca0a804efb72156074927ea363e26f41d4797915"
+        },
+        {
+          "path": "continuous/interactive_case.py",
+          "sha256": "6921d9a854b8a179ed5bfa8189947a3a7d764fd2929265834fdcec95d693dbb8"
+        },
+        {
+          "path": "continuous/permission_probe.py",
+          "sha256": "95afb41301fe4f5d53a5925faba3df7e239cb79ea3f7ea3e6df6081be9bf080c"
+        },
+        {
+          "path": "continuous/web-config.json",
+          "sha256": "98c5e2c5539c88bba4ad7ebfd9bf9b95c20e944840773c799b833f70904a0abe"
+        },
+        {
+          "path": "permission_compare.py",
+          "sha256": "fe56139a3aacdb4c7d17f718f74bdb5b59270e4d6259a335285ccf6c85421bbe"
+        }
+      ],
+      "manifest_sha256": "6121c001642b6fa77518dabd52582382ba6aa50379d184d4f34013b1ef28eb0b",
+      "bundle_manifest_sha256": "43c8c2593189dea8032657615df98352325a3bf56e52611ab687560acfbf5b0b"
+    }
+  ]
+}

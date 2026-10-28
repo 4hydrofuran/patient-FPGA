@@ -1,0 +1,21 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/web/frontend_board_inventory.ps1",
+    "-Action",
+    "run",
+    "-RunPayload",
+    "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/permission_launch_candidate.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "exit_code": 0,
+  "elapsed_s": 13.799804399954155,
+  "logs": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "abc7e417ad98f80489608450f50e759f70efedba4a90b5a601e9d62b0d25eb1b"
+  }
+}

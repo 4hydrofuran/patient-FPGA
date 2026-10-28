@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a11/test_compute_management.py",
+    "--derived",
+    "/mnt/c/Patientqwen/evidence/mlp_board_A/20261023-compute-acceptance-v1/bundle-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-23T13:29:48.999032+00:00",
+  "elapsed_s": 56.87464379996527,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_completed_numeric_failure_restores_without_claiming_success (__main__.ComputeRecovery) ... ok\ntest_extra_submission_count_blocks_restore (__main__.ComputeRecovery) ... ok\ntest_lease_tamper_blocks_first_pl_mutation (__main__.ComputeRecovery) ... ok\ntest_new_kernel_error_blocks_next_hardware_command (__main__.ComputeRecovery) ... ok\ntest_numeric_failure_blocks_restore (__main__.ComputeRecovery) ... ok\ntest_post_exit_deleted_vma_blocks_all_teardown (__main__.ComputeRecovery) ... ok\ntest_post_exit_refcount_blocks_all_teardown (__main__.ComputeRecovery) ... ok\ntest_prepl_race_is_preserved_before_two_complete_reads (__main__.ComputeRecovery) ... ok\ntest_real_logs_locks_child_exit_and_restore_wiring (__main__.ComputeRecovery) ... ok\ntest_unknown_service_result_never_starts_pl_or_worker (__main__.ComputeRecovery) ... ok\ntest_wrong_worker_identity_blocks_all_teardown (__main__.ComputeRecovery) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 54.153s\n\nOK\n"
+}

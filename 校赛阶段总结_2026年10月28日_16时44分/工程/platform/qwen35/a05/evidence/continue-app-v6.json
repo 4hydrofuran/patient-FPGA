@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/app_eval.py",
+    "--output",
+    "eval/qwen35/a05/app-dev-v6"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:10:19.082842+00:00",
+  "elapsed_s": 24.47176089999266,
+  "exit_code": 1,
+  "stdout": "{\"id\": \"DEV-001\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-002\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-003\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-004\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-005\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-006\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-007\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-008\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-009\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-010\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-011\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-012\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-013\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-014\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-015\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-016\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-017\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-018\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-019\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-020\", \"source\": \"TEMPLATE\", \"router_match\": true}\n{\"id\": \"DEV-021\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-022\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-023\", \"source\": null, \"router_match\": false}\n{\"id\": \"DEV-024\", \"source\": null, \"router_match\": false}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/app_eval.py\", line 11, in <module>\n    rc=m.main()\n  File \"/mnt/c/Patientqwen/platform/qwen35/a02/run_model.py\", line 47, in main\n    a.trusted_delivery('a1',a.epoch,kind='PC_TEXT_TEST_ACK')\n  File \"/mnt/c/Patientqwen/system_qwen35/app/session.py\", line 18, in call\n    try:return method(self,*args,**kwargs)\n  File \"/mnt/c/Patientqwen/system_qwen35/app/session.py\", line 102, in trusted_delivery\n    if not p or p['request_id']!=request_id or epoch!=self._epoch:raise ValueError('Stale/foreign delivery ack')\nValueError: Stale/foreign delivery ack\n"
+}

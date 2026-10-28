@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/stable_probe.py",
+    "eval/qwen35/a05/stable-probe-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:01:31.697556+00:00",
+  "elapsed_s": 62.58521559997462,
+  "exit_code": 0,
+  "stdout": "{\"T\": 1, \"status\": \"OK\", \"comparison\": null}\n{\"T\": 2, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"T\": 4, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"T\": 8, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"T\": 256, \"status\": \"OK\", \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n",
+  "stderr": ""
+}

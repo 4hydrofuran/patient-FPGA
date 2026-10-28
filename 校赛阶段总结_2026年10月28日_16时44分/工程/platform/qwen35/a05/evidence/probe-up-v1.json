@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/probe.py",
+    "--scope",
+    "l0_up",
+    "--output",
+    "eval/qwen35/a05/probe-up-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:38:00.082254+00:00",
+  "elapsed_s": 0.3121069999760948,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/probe.py\", line 5, in <module>\n    from test_baseline import render\n  File \"/mnt/c/Patientqwen/runtime/qwen35_cpu/test_baseline.py\", line 10, in <module>\n    from jinja2.sandbox import ImmutableSandboxedEnvironment\nModuleNotFoundError: No module named 'jinja2'\n"
+}

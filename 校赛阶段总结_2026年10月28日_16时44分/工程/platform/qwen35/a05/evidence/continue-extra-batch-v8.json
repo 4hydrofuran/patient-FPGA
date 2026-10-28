@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a05/additional_batch_tests.py",
+    "eval/qwen35/a05/extra-batch-v8",
+    "/home/member-a/qwen35-a05/build-v8/qwen35-s1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T11:24:20.804865+00:00",
+  "elapsed_s": 175.17476070002886,
+  "exit_code": 0,
+  "stdout": "{\"id\": \"long-257-1\", \"prefill_ms\": 13893.028433, \"comparison\": null}\n{\"id\": \"long-257-8\", \"prefill_ms\": 6681.239572, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"id\": \"long-257-256\", \"prefill_ms\": 6368.559209, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"id\": \"long-1025-1\", \"prefill_ms\": 55283.073862, \"comparison\": null}\n{\"id\": \"long-1025-8\", \"prefill_ms\": 25985.121704, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"id\": \"long-1025-256\", \"prefill_ms\": 26182.78462, \"comparison\": {\"atol\": 0.002, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"rtol\": 0.0002}}\n{\"passed\": 74}\n",
+  "stderr": ""
+}

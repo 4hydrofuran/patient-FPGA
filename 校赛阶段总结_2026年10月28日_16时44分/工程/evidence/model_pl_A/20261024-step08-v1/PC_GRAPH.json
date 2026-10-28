@@ -1,0 +1,83 @@
+{
+  "status": "PASS_PC_ALL_24_LAYERS_216_CONSUMED_OUTPUTS_AND_DISCARD_REJECTION",
+  "runs": [
+    {
+      "scope": "CPU_ALL",
+      "status": "PASS_PC_MODEL_MATH",
+      "trace_calls": 0,
+      "trace_layers": [],
+      "logits": {
+        "logits-decode-0.f32": "185b3cba86c9456b3feb379f4fd77112506ab111e65c1295929448d030d9b36f",
+        "logits-prefill-0.f32": "e432372808b5c2f6ad974e04402ba6b549abbb9954ee8782648d0e85ad34931b",
+        "logits-prefill-1.f32": "a8321401ed5a8c2dc717577bee72d50c3fbe2c04451058f6ddb6529f356598fe",
+        "logits-prefill-2.f32": "3fbab820c5e917d37137c1c06d25fd8059d1f7abc049324d346c24c380ea2b34",
+        "logits-prefill-3.f32": "79d534a1cee15b189badeaf204ab10ec8c9a0ea155acf9d6df89138b863e58bc",
+        "logits-prefill-4.f32": "33d33fb5095ea2857dc4c98c737f34d4cd0d36407de699819c5bf3ed416daff3",
+        "logits-prefill-5.f32": "54fd80aeaaa90ac27cf694cc5924caa149132375353be0ab43cd2d37904b4918",
+        "logits-prefill-6.f32": "102a3dad074740769b980223dbf556c6f72bbb14bad5bc055b38ad203c7425d8",
+        "logits-prefill-7.f32": "a7ab71b45875d3d9a43287f3012bba923b07afa7188b47710f8e239ae95394d7",
+        "logits-prefill-8.f32": "4c4f433c2974db3ad90f3e00116bd6ce3e534cbc052b048ffa47f2067829efa0"
+      },
+      "state": "939bbe08208051e7ef2362513efccd30b2bdc026c9488e26ddf77846069724d2",
+      "fingerprint": {
+        "bytes": 20325212,
+        "fnv64": 7330957490795690097
+      }
+    },
+    {
+      "scope": "all",
+      "status": "PASS_PC_MODEL_MATH",
+      "trace_calls": 216,
+      "trace_layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "logits": {
+        "logits-decode-0.f32": "185b3cba86c9456b3feb379f4fd77112506ab111e65c1295929448d030d9b36f",
+        "logits-prefill-0.f32": "e432372808b5c2f6ad974e04402ba6b549abbb9954ee8782648d0e85ad34931b",
+        "logits-prefill-1.f32": "a8321401ed5a8c2dc717577bee72d50c3fbe2c04451058f6ddb6529f356598fe",
+        "logits-prefill-2.f32": "3fbab820c5e917d37137c1c06d25fd8059d1f7abc049324d346c24c380ea2b34",
+        "logits-prefill-3.f32": "79d534a1cee15b189badeaf204ab10ec8c9a0ea155acf9d6df89138b863e58bc",
+        "logits-prefill-4.f32": "33d33fb5095ea2857dc4c98c737f34d4cd0d36407de699819c5bf3ed416daff3",
+        "logits-prefill-5.f32": "54fd80aeaaa90ac27cf694cc5924caa149132375353be0ab43cd2d37904b4918",
+        "logits-prefill-6.f32": "102a3dad074740769b980223dbf556c6f72bbb14bad5bc055b38ad203c7425d8",
+        "logits-prefill-7.f32": "a7ab71b45875d3d9a43287f3012bba923b07afa7188b47710f8e239ae95394d7",
+        "logits-prefill-8.f32": "4c4f433c2974db3ad90f3e00116bd6ce3e534cbc052b048ffa47f2067829efa0"
+      },
+      "state": "939bbe08208051e7ef2362513efccd30b2bdc026c9488e26ddf77846069724d2",
+      "fingerprint": {
+        "bytes": 20325212,
+        "fnv64": 7330957490795690097
+      }
+    },
+    {
+      "scope": "all",
+      "counterfactual": "DROPPED_GRAPH_Y_DETECTED",
+      "status": "PASS_PC_REJECTION"
+    }
+  ],
+  "binary_sha256": "1c98be8c7b8fc152d17f78792f9e25dbbdb251155beacbaedfd8843fc34ea977",
+  "BOARD": "NOT_TESTED"
+}

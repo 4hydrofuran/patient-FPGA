@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a12/step08_restore_once.ps1",
+    "-Candidate",
+    "irq2",
+    "-ExpectedBootId",
+    "76c8aef5-8266-4404-a6e5-e17005103da6",
+    "-ValidateOnly"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T01:54:41.539941+00:00",
+  "elapsed_s": 0.5097597000421956,
+  "exit_code": 0,
+  "stdout": "{\n    \"candidate\":  \"irq2\",\n    \"candidate_bytes\":  65555004,\n    \"component_sha256\":  [\n                             \"0a132d4ac3905ec9815c8b4874bc34e825beff2f3fd2aa9bb96e82c364598e44\",\n                             \"ac4dd7766229ba57edb884909b5a32dfce1faa7f31d520d0908d9c317612f3c5\",\n                             \"32dc08a08a87aba2ab0ca68bc5292c735943c20ecd0dc7472690bd152fb7c7a3\"\n                         ],\n    \"preflight\":  \"set -e; test \\\"$(cat /proc/sys/kernel/random/boot_id)\\\" = 76c8aef5-8266-4404-a6e5-e17005103da6; test \\\"$(uname -r)\\\" = 6.8.0-1036-xilinx; test \\\"$(sha256sum /etc/machine-id | cut -d \\u0027 \\u0027 -f1)\\\" = ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec; test \\\"$(id -u)\\\" = 1000; test ! -d /sys/module/zocl; test -d /sys/kernel/config/device-tree/overlays/k26-starter-kits_image_1; python3 -c \\\"from pathlib import Path; t=[int(p.read_text()) for p in Path(\\u0027/sys/class/hwmon\\u0027).glob(\\u0027hwmon*/temp*_input\\u0027)]; print(\\u0027temperatures_mC\\u0027,t); assert t and all(0\\u003cx\\u003c55000 for x in t)\\\"; cat /proc/loadavg; cat /proc/sys/kernel/random/boot_id; test -d /usr/lib/modules/6.8.12-a10irq2; test \\\"$(sha256sum /boot/firmware/image.fit | cut -d \\u0027 \\u0027 -f1)\\\" = 23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e; test \\\"$(sha256sum /boot/firmware/boot.scr.uimg | cut -d \\u0027 \\u0027 -f1)\\\" = f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685; test \\\"$(sha256sum /boot/firmware/a10-candidate-irq2-20261021.fit | cut -d \\u0027 \\u0027 -f1)\\\" = e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b; python3 -c \\\"import json; from pathlib import Path; r=[json.loads(s) for s in Path(\\u0027/home/ubuntu/a10-irq2-stage-20261021-v1/stage-result.jsonl\\u0027).read_text().splitlines()]; assert r[-1][\\u0027event\\u0027]==\\u0027STAGED_ONLY_NOT_BOOTED\\u0027\\\"; test ! -e /var/lock/kv260-a1/active; test ! -L /var/lock/kv260-a1/active; test \\\"$(sha256sum /usr/lib/modules/6.8.12-a10irq2/extra/zocl.ko | cut -d \\u0027 \\u0027 -f1)\\\" = 38992846680c0ddbdad7a05f6506b66488473a96c52975fa35a126b8401344f8\",\n    \"load\":  \"fatload mmc 1:1 0x10000000 a10-candidate-irq2-20261021.fit\",\n    \"inspect\":  \"iminfo 0x10000000\",\n    \"temporary_bootargs\":  \"setenv bootargs \\u0027root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=800M\\u0027\",\n    \"boot\":  \"bootm 0x10000000#conf-smk-k26-revA-sck-kv-g-revB\",\n    \"board_contact\":  false\n}\n",
+  "stderr": ""
+}

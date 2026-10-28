@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "python3",
+    "platform/qwen35/a04/collect.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:56:09.002751+00:00",
+  "elapsed_s": 0.7320810000528581,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_PC_A04_NUMERICS_FULL_GRAPH_PENDING_A05\", \"payload_bytes\": 140378112, \"real_projection_count\": 48, \"integer_bit_exact\": true, \"fp32_bit_exact\": true, \"quantization_diagnostics\": {\"H0_F16\": {\"quantization_nrmse_min\": 0.06272716738733039, \"quantization_nrmse_max\": 0.17142575467584298, \"max_abs_quantization_error\": 0.7680423259735107}, \"S0_Q4\": {\"quantization_nrmse_min\": 0.06247323405400834, \"quantization_nrmse_max\": 0.1711445693485807, \"max_abs_quantization_error\": 0.884116530418396}}, \"max_W4_only_nrmse\": 0.16195475359991568, \"max_A8_only_nrmse\": 0.06771439388651204}\n",
+  "stderr": ""
+}

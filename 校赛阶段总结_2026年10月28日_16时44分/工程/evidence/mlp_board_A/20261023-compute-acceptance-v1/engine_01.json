@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Patientqwen/platform/qwen35/a11/test_engine.py",
+    "--quant",
+    "/mnt/c/Patientqwen/evidence/mlp_board_A/20261023-integration-v1/quant-v1/liba11_quant_PC_ONLY.so"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-23T13:27:24.809847+00:00",
+  "elapsed_s": 8.320046400069259,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_bo_page_floor_and_observed_high_address_rejected (__main__.Tests) ... ok\ntest_failed_cleanup_is_quarantined_without_retry (__main__.Tests) ... ok\ntest_guard_failure_stops (__main__.Tests) ... ok\ntest_invalid_quant_rejected (__main__.Tests) ... ok\ntest_native_quant_all_frozen_cases (__main__.Tests) ... ok\ntest_nonfinite_reference_rejected (__main__.Tests) ... ok\ntest_numeric_failure_stops (__main__.Tests) ... ok\ntest_open_returned_error_normally_exits_without_close (__main__.Tests) ... ok\ntest_parent_stop_before_native (__main__.Tests) ... ok\ntest_poison_no_output_consumption (__main__.Tests) ... ok\ntest_timeout_no_close_or_next_submission (__main__.Tests) ... ok\ntest_whole_schedule_single_context_and_resident_handles (__main__.Tests) ... ok\ntest_wrong_build_stops (__main__.Tests) ... ok\ntest_wrong_job_preserved_then_stopped (__main__.Tests) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 1.871s\n\nOK\n"
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--",
+    "timeout",
+    "900",
+    "python3",
+    "/mnt/c/Patientqwen/runtime/qwen35_cpu/test_baseline.py",
+    "--model",
+    "/mnt/c/Patientqwen/artifacts/qwen35-0.8b/qwen35-text-Q4_K_M.gguf",
+    "--output",
+    "/mnt/c/Patientqwen/eval/qwen35/a01/q4-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-01T17:11:13.581851+00:00",
+  "elapsed_s": 37.252971999987494,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"failures\": [], \"output\": \"/mnt/c/Patientqwen/eval/qwen35/a01/q4-v1\"}\n",
+  "stderr": ""
+}

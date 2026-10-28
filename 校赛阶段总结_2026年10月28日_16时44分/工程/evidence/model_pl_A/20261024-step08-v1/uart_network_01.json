@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "platform/qwen35/a10/collect_readonly_uart.ps1",
+    "-OutputPath",
+    "C:/Patientqwen/evidence/model_pl_A/20261024-step08-v1/uart-network-readback-01.json",
+    "-Phase",
+    "network_confirm"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T01:49:46.053084+00:00",
+  "elapsed_s": 7.034499800065532,
+  "exit_code": 2,
+  "stdout": "{\n    \"schema\":  \"A10_UART_READONLY_V1\",\n    \"utc\":  \"2026-10-24T01:49:49.8169833Z\",\n    \"port\":  \"COM5\",\n    \"usb_identity\":  \"FTDIBUS\\\\VID_0403+PID_6011+XFL1CYYPZ52YB\\\\0000\",\n    \"domain\":  \"BOARD_READONLY\",\n    \"handshake\":  \"\\r\\r\\nkria login: \",\n    \"records\":  [\n\n                ],\n    \"status\":  \"STOPPED\",\n    \"board_compute\":  \"NOT_TESTED\",\n    \"closed\":  true,\n    \"error\":  \"Expected logged-in Linux shell not confirmed; no diagnostic commands sent\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,154 @@
+{
+  "status": "FLOAT_ORIENTATION_DIAGNOSTIC_ONLY",
+  "threads": 4,
+  "linear_results": [
+    {
+      "layer": 0,
+      "projection": "gate",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 0,
+      "projection": "up",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 0,
+      "projection": "down",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        4864
+      ],
+      "output_shape": [
+        8,
+        896
+      ]
+    },
+    {
+      "layer": 11,
+      "projection": "gate",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 11,
+      "projection": "up",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 11,
+      "projection": "down",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        4864
+      ],
+      "output_shape": [
+        8,
+        896
+      ]
+    },
+    {
+      "layer": 23,
+      "projection": "gate",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 23,
+      "projection": "up",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        896
+      ],
+      "output_shape": [
+        8,
+        4864
+      ]
+    },
+    {
+      "layer": 23,
+      "projection": "down",
+      "max_abs_error": 0.0,
+      "rmse": 0.0,
+      "input_shape": [
+        8,
+        4864
+      ],
+      "output_shape": [
+        8,
+        896
+      ]
+    }
+  ],
+  "topology": [
+    {
+      "layer": 0,
+      "gate_up_input_bytes_equal": true,
+      "swiglu_input_max_abs_error": 0.0
+    },
+    {
+      "layer": 11,
+      "gate_up_input_bytes_equal": true,
+      "swiglu_input_max_abs_error": 0.0
+    },
+    {
+      "layer": 23,
+      "gate_up_input_bytes_equal": true,
+      "swiglu_input_max_abs_error": 0.0
+    }
+  ],
+  "threshold": null,
+  "quantization_error": "NOT_MEASURED",
+  "hardware_error": "NOT_MEASURED",
+  "independent_b_reference": false,
+  "a2": "NOT_PASSED"
+}

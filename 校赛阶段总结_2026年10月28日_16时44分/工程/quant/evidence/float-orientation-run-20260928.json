@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Patientqwen/platform/local/a1/venv/Scripts/python.exe",
+    "quant/validate_float_capture.py",
+    "--capture",
+    "platform/local/a2-float-capture-20260928",
+    "--audit",
+    "quant/evidence/source-graph-audit-20260928.json",
+    "--out",
+    "quant/evidence/float-orientation-20260928.json"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-09-28T10:01:17.041356+00:00",
+  "elapsed_s": 3.6099109000060707,
+  "exit_code": 0,
+  "stdout": "{\"status\": \"FLOAT_ORIENTATION_DIAGNOSTIC_ONLY\", \"threads\": 4, \"linear_results\": [{\"layer\": 0, \"projection\": \"gate\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 0, \"projection\": \"up\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 0, \"projection\": \"down\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 4864], \"output_shape\": [8, 896]}, {\"layer\": 11, \"projection\": \"gate\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 11, \"projection\": \"up\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 11, \"projection\": \"down\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 4864], \"output_shape\": [8, 896]}, {\"layer\": 23, \"projection\": \"gate\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 23, \"projection\": \"up\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 896], \"output_shape\": [8, 4864]}, {\"layer\": 23, \"projection\": \"down\", \"max_abs_error\": 0.0, \"rmse\": 0.0, \"input_shape\": [8, 4864], \"output_shape\": [8, 896]}], \"topology\": [{\"layer\": 0, \"gate_up_input_bytes_equal\": true, \"swiglu_input_max_abs_error\": 0.0}, {\"layer\": 11, \"gate_up_input_bytes_equal\": true, \"swiglu_input_max_abs_error\": 0.0}, {\"layer\": 23, \"gate_up_input_bytes_equal\": true, \"swiglu_input_max_abs_error\": 0.0}], \"threshold\": null, \"quantization_error\": \"NOT_MEASURED\", \"hardware_error\": \"NOT_MEASURED\", \"independent_b_reference\": false, \"a2\": \"NOT_PASSED\"}\n",
+  "stderr": ""
+}

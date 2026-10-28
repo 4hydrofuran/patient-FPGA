@@ -1,0 +1,2073 @@
+{
+  "version": "a2-source-audit-0.1",
+  "status": "FORMAT_INDEPENDENT_ONLY",
+  "source_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "source_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+  "config_sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+  "config": {
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 896,
+    "initializer_range": 0.02,
+    "intermediate_size": 4864,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 21,
+    "model_type": "qwen2",
+    "num_attention_heads": 14,
+    "num_hidden_layers": 24,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "tie_word_embeddings": true,
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.43.1",
+    "use_cache": true,
+    "use_sliding_window": false,
+    "vocab_size": 151936
+  },
+  "llama_commit": "4762ad7316dcdec20016ab5985fb46a27902204d",
+  "reviewed_source": [
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/convert_hf_to_gguf.py",
+      "sha256": "2e73750c607b61ff4cfcade65005c30b8248decc05fbcb52c09cc8c2c0b55552",
+      "reviewed_lines": [
+        242,
+        2753
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/gguf-py/gguf/tensor_mapping.py",
+      "sha256": "6d63f22aa4d90ae5e899e3a2b4c85e654f780796d4da3167916bfae2d2ae35d6",
+      "reviewed_lines": [
+        338,
+        392,
+        429
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/gguf-py/gguf/gguf_writer.py",
+      "sha256": "4130ccf13b98127a72c7eca575524e30336dba7ddde10bc4aa34af5e95d0cbe6",
+      "reviewed_lines": [
+        263
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/src/llama-model.cpp",
+      "sha256": "bde6343e593415876c92c8e416ad14c1fc78e7584686d8cd9aaecc53973ab5e1",
+      "reviewed_lines": [
+        2732,
+        7756
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/src/llama-model-loader.cpp",
+      "sha256": "0856074e18cb69b872b8508c2e5d8e33a51908179cbb112e4ecc28bfb0eb29b3",
+      "reviewed_lines": [
+        789
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/src/llama-graph.cpp",
+      "sha256": "3b849894214521f0968b476f5bd20a3e7b39785cd192f4ff69c5b10294418973",
+      "reviewed_lines": [
+        554,
+        643
+      ]
+    },
+    {
+      "file": "platform/local/a1/llama.cpp-4762ad7316dcdec20016ab5985fb46a27902204d/ggml/src/ggml.c",
+      "sha256": "5e91795027f281ca7aa50efb1e5b1886fc5cfaccbe01244d250f3973d50584e5",
+      "reviewed_lines": [
+        2971
+      ]
+    }
+  ],
+  "tensors": [
+    {
+      "source_tensor": "model.layers.0.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.0.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[0].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 0,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        280987392,
+        289703680
+      ],
+      "source_tensor_sha256": "e3346225575baaf568a0835e2c8f4bb682652093afdab5ff1a49224853c156a2"
+    },
+    {
+      "source_tensor": "model.layers.0.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.0.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[0].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 0,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        289703680,
+        298419968
+      ],
+      "source_tensor_sha256": "c66e277c3f509f8b2e3b40155a954f98ac5753870d344c9f67005f7108991862"
+    },
+    {
+      "source_tensor": "model.layers.0.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.0.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[0].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 0,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        272271104,
+        280987392
+      ],
+      "source_tensor_sha256": "195f2fd5f3bc96980f509c46b59180cfe3eacba58cb890381900d4c118157200"
+    },
+    {
+      "source_tensor": "model.layers.1.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.1.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[1].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 1,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        310812160,
+        319528448
+      ],
+      "source_tensor_sha256": "f65a208e6f676ce3f33904fc252a39aeb2cf20e75f6d5d99bffb01ee70d99bf8"
+    },
+    {
+      "source_tensor": "model.layers.1.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.1.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[1].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 1,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        319528448,
+        328244736
+      ],
+      "source_tensor_sha256": "1ad73428e44709872103940396a390975d2792019ff95d6e1608bbf46d1d3692"
+    },
+    {
+      "source_tensor": "model.layers.1.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.1.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[1].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 1,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        302095872,
+        310812160
+      ],
+      "source_tensor_sha256": "76b93dabcb4247e6bace2b8fd29833431809a8655ad594fc53a7896a62feeadd"
+    },
+    {
+      "source_tensor": "model.layers.2.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.2.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[2].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 2,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        638884608,
+        647600896
+      ],
+      "source_tensor_sha256": "4d3697a14f1f060d8ef2939e99007872394c11edbd16a7fabe2f4d95a309d93c"
+    },
+    {
+      "source_tensor": "model.layers.2.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.2.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[2].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 2,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        647600896,
+        656317184
+      ],
+      "source_tensor_sha256": "98ec9fbc054f78a85f9482a6c942d234be443906c456c11544c8210afc862ecf"
+    },
+    {
+      "source_tensor": "model.layers.2.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.2.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[2].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 2,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        630168320,
+        638884608
+      ],
+      "source_tensor_sha256": "f63c374701cb7470074cd572b26de4061cc794c859ea9cf4d39b38caed7f8bdb"
+    },
+    {
+      "source_tensor": "model.layers.3.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.3.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[3].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 3,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        788008448,
+        796724736
+      ],
+      "source_tensor_sha256": "211a021f1a54f527d53965be5397c6275eca777edaaabf1f81890ddb02fe941f"
+    },
+    {
+      "source_tensor": "model.layers.3.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.3.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[3].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 3,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        796724736,
+        805441024
+      ],
+      "source_tensor_sha256": "5a17b0cb1352d8a3c770067cb55c5b3069b112794c93bc405984531648a39c4a"
+    },
+    {
+      "source_tensor": "model.layers.3.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.3.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[3].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 3,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        779292160,
+        788008448
+      ],
+      "source_tensor_sha256": "97ec77ac02d6aa263136096efe304ea6d0f3fe1b7ee45beb78296049b568d08a"
+    },
+    {
+      "source_tensor": "model.layers.4.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.4.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[4].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 4,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        817833216,
+        826549504
+      ],
+      "source_tensor_sha256": "8be7307e3896395781ba580836542bafcda49edd031318457abeb7157ea9ad79"
+    },
+    {
+      "source_tensor": "model.layers.4.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.4.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[4].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 4,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        826549504,
+        835265792
+      ],
+      "source_tensor_sha256": "48f9f16c900835ca8869710ec638500e92f1e5a0097717338978d4fa87239e0c"
+    },
+    {
+      "source_tensor": "model.layers.4.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.4.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[4].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 4,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        809116928,
+        817833216
+      ],
+      "source_tensor_sha256": "32ec1502217bf3baa907df05333df80c1a3cfa7ee575a297005cbc8bc5745f67"
+    },
+    {
+      "source_tensor": "model.layers.5.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.5.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[5].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 5,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        847657984,
+        856374272
+      ],
+      "source_tensor_sha256": "39e2da37cb190631db52f52d1a1139de3eab30e25849b02f7fb4a24828544e92"
+    },
+    {
+      "source_tensor": "model.layers.5.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.5.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[5].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 5,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        856374272,
+        865090560
+      ],
+      "source_tensor_sha256": "84f0dff3b7e97708caac1bed75ca7a461d9ac11d563db83579126684754c5d44"
+    },
+    {
+      "source_tensor": "model.layers.5.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.5.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[5].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 5,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        838941696,
+        847657984
+      ],
+      "source_tensor_sha256": "106f8cdb6be877c8b673a43f82ee57e74d605343fd469661089da13fc899a232"
+    },
+    {
+      "source_tensor": "model.layers.6.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.6.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[6].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 6,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        877482752,
+        886199040
+      ],
+      "source_tensor_sha256": "16c90f0a13be4327fa6ad22bcd20ba2e9c882c1e8b62765dc31e17620a8a163c"
+    },
+    {
+      "source_tensor": "model.layers.6.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.6.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[6].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 6,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        886199040,
+        894915328
+      ],
+      "source_tensor_sha256": "c7ee62a4573b5d7f1af5c18cf7d422baac7a30e43fda206263a9a42854e6bb8d"
+    },
+    {
+      "source_tensor": "model.layers.6.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.6.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[6].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 6,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        868766464,
+        877482752
+      ],
+      "source_tensor_sha256": "c5a4031d91d6c4e78d3e7cc1c158904fe1eda0bcb50e4eb24993ce9c29533f82"
+    },
+    {
+      "source_tensor": "model.layers.7.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.7.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[7].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 7,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        907307520,
+        916023808
+      ],
+      "source_tensor_sha256": "acddc81f9be56b7a6487eeaf3f7434e5014c1e1f35b2ce2b072da12962f66b87"
+    },
+    {
+      "source_tensor": "model.layers.7.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.7.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[7].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 7,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        916023808,
+        924740096
+      ],
+      "source_tensor_sha256": "8198b705157c2f29d8407e24a62b6576425cfb39ba8b2a38cb2bd145441bb7c0"
+    },
+    {
+      "source_tensor": "model.layers.7.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.7.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[7].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 7,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        898591232,
+        907307520
+      ],
+      "source_tensor_sha256": "87bcd5efe37a231c34961e8d40d098fe660d0b58c3f495609991c9cf10fe14ec"
+    },
+    {
+      "source_tensor": "model.layers.8.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.8.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[8].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 8,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        937132288,
+        945848576
+      ],
+      "source_tensor_sha256": "832ec24b5f25e02f15c495b1259bc43e3394eb82ad8e63242263aa20e03db81d"
+    },
+    {
+      "source_tensor": "model.layers.8.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.8.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[8].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 8,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        945848576,
+        954564864
+      ],
+      "source_tensor_sha256": "2b95f0ab6f8039acbeedf223900faa56aa643f4b14ba08d0844b5089e71bc2ec"
+    },
+    {
+      "source_tensor": "model.layers.8.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.8.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[8].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 8,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        928416000,
+        937132288
+      ],
+      "source_tensor_sha256": "2d3835b622fb6ca09f321875141f8c198a88238375833707464f9b2c100064b2"
+    },
+    {
+      "source_tensor": "model.layers.9.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.9.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[9].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 9,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        966957056,
+        975673344
+      ],
+      "source_tensor_sha256": "3f57ca3b95a5dcdce8fb14996cae24f734a87217cccc54bb0fadfc7ab3acc3cd"
+    },
+    {
+      "source_tensor": "model.layers.9.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.9.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[9].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 9,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        975673344,
+        984389632
+      ],
+      "source_tensor_sha256": "2250eb5d7db458e3668c4b341e9ca21655147284ac073f7e65b13ba15a50f94f"
+    },
+    {
+      "source_tensor": "model.layers.9.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.9.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[9].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 9,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        958240768,
+        966957056
+      ],
+      "source_tensor_sha256": "6cbd720f4f4eaa3c8a83a6f6e5fbc5760cb56a197f5ed79764ba119cb46d2f06"
+    },
+    {
+      "source_tensor": "model.layers.10.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.10.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[10].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 10,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        340636928,
+        349353216
+      ],
+      "source_tensor_sha256": "05cb57c9bf2611441b8b61b36ed67feab8d668cedbbbbc2d5de8d3f4789b9a07"
+    },
+    {
+      "source_tensor": "model.layers.10.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.10.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[10].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 10,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        349353216,
+        358069504
+      ],
+      "source_tensor_sha256": "bd481461c34c330b4505d852f4241ca9da52dc22e17baa031a4b577c7565f002"
+    },
+    {
+      "source_tensor": "model.layers.10.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.10.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[10].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 10,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        331920640,
+        340636928
+      ],
+      "source_tensor_sha256": "987c1ccb340ecabe94673ab5552a3962e31a29ce6c7042f2be836b18b5e7434e"
+    },
+    {
+      "source_tensor": "model.layers.11.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.11.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[11].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 11,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        370461696,
+        379177984
+      ],
+      "source_tensor_sha256": "b72d7693a369935dfee5c73da3fc51498f6b3a5a4a28a20e3e2d11aaa275fc87"
+    },
+    {
+      "source_tensor": "model.layers.11.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.11.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[11].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 11,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        379177984,
+        387894272
+      ],
+      "source_tensor_sha256": "f395d622a7e57bc0f361253fde159ad52f520a2ed0d02da2040a99a9d22fe187"
+    },
+    {
+      "source_tensor": "model.layers.11.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.11.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[11].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 11,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        361745408,
+        370461696
+      ],
+      "source_tensor_sha256": "3fc7b60b06f5339cc1d13e5de0a7552b918f2596daa5b2d18d15a19f5e09522b"
+    },
+    {
+      "source_tensor": "model.layers.12.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.12.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[12].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 12,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        400286464,
+        409002752
+      ],
+      "source_tensor_sha256": "4c3c119736760683a14b05074c290e837dd7a4d5cb08a680446e62baa3d631dd"
+    },
+    {
+      "source_tensor": "model.layers.12.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.12.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[12].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 12,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        409002752,
+        417719040
+      ],
+      "source_tensor_sha256": "456ee472d1a607028419a73c53b791d80f53c58ba9baa162a9cca6c22a3e2d40"
+    },
+    {
+      "source_tensor": "model.layers.12.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.12.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[12].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 12,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        391570176,
+        400286464
+      ],
+      "source_tensor_sha256": "79ae5a8fe91ecf437f5959c7cb28121fda775a8e62fc807179cd037fbe6c1762"
+    },
+    {
+      "source_tensor": "model.layers.13.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.13.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[13].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 13,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        430111232,
+        438827520
+      ],
+      "source_tensor_sha256": "630813d6b54d98fabdcdb1d98da7bd72732d472710384760379fd82e8f570eaa"
+    },
+    {
+      "source_tensor": "model.layers.13.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.13.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[13].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 13,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        438827520,
+        447543808
+      ],
+      "source_tensor_sha256": "a023f120cd28cd0318bd69d35ae66f7b095bd388ab286ef07812534673a61d2b"
+    },
+    {
+      "source_tensor": "model.layers.13.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.13.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[13].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 13,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        421394944,
+        430111232
+      ],
+      "source_tensor_sha256": "98390c403d4fd070ec2c7565134a8b080369d879b28883e02b10d3d9b0c0f55d"
+    },
+    {
+      "source_tensor": "model.layers.14.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.14.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[14].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 14,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        459936000,
+        468652288
+      ],
+      "source_tensor_sha256": "6b183d792ff78bd23d15ac2a0cc64ef90bfe4b84bb282c79bc406b3c70aec56f"
+    },
+    {
+      "source_tensor": "model.layers.14.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.14.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[14].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 14,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        468652288,
+        477368576
+      ],
+      "source_tensor_sha256": "8946dacf667a22f0d8faee2dffe2dc5a6d4a124aa915f1ec7f707cbd661d1af0"
+    },
+    {
+      "source_tensor": "model.layers.14.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.14.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[14].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 14,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        451219712,
+        459936000
+      ],
+      "source_tensor_sha256": "cf70bc9ebb7ffbcaa07b683d06cc31929811b543efe76a2dd1f3c7b63733a035"
+    },
+    {
+      "source_tensor": "model.layers.15.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.15.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[15].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 15,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        489760768,
+        498477056
+      ],
+      "source_tensor_sha256": "d6682cf71ccfb3c0a4b4bf1c2fdf21590fabdc8a7cb7ed38e5e96b58e2ea123e"
+    },
+    {
+      "source_tensor": "model.layers.15.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.15.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[15].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 15,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        498477056,
+        507193344
+      ],
+      "source_tensor_sha256": "7473f0fa03ffbbef1b6983ede6e11f74f82ba23118b59aa62516b51d77173939"
+    },
+    {
+      "source_tensor": "model.layers.15.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.15.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[15].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 15,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        481044480,
+        489760768
+      ],
+      "source_tensor_sha256": "be8ae21a1c736476fe2d81954b6de9936d4624c3ecb5e0a195f142fcb3c5c04d"
+    },
+    {
+      "source_tensor": "model.layers.16.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.16.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[16].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 16,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        519585536,
+        528301824
+      ],
+      "source_tensor_sha256": "c85497c88098c99777612d9c10dba0f8e4caaacab4693a9cdb16e66f75392a01"
+    },
+    {
+      "source_tensor": "model.layers.16.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.16.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[16].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 16,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        528301824,
+        537018112
+      ],
+      "source_tensor_sha256": "52eede12b7845a9ff13a729b313fefd82c24fb4e120f158a425ec712b0090e49"
+    },
+    {
+      "source_tensor": "model.layers.16.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.16.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[16].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 16,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        510869248,
+        519585536
+      ],
+      "source_tensor_sha256": "de61d41af22c7ad252044e4d3923c16e6bf95b13fd60db48ccbd14747ee0151f"
+    },
+    {
+      "source_tensor": "model.layers.17.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.17.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[17].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 17,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        549410304,
+        558126592
+      ],
+      "source_tensor_sha256": "8362befa85f2c5846e99bb4e4f8606ff5c60b5358f0e6b335f94e6fb5ea2023f"
+    },
+    {
+      "source_tensor": "model.layers.17.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.17.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[17].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 17,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        558126592,
+        566842880
+      ],
+      "source_tensor_sha256": "204f87fd59e7244257334910312da65598a2b645cbdab2a4222d50f4c4fee646"
+    },
+    {
+      "source_tensor": "model.layers.17.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.17.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[17].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 17,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        540694016,
+        549410304
+      ],
+      "source_tensor_sha256": "e2bb7e4e01c1e6efe0db6ab9f8be0d351e2920fd3ddd04fa915d1a63b74f5715"
+    },
+    {
+      "source_tensor": "model.layers.18.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.18.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[18].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 18,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        579235072,
+        587951360
+      ],
+      "source_tensor_sha256": "6a32eb368a5dc0ec87e3be94ed65a729fa1dfcc82711b9f56a2598d84b5c8784"
+    },
+    {
+      "source_tensor": "model.layers.18.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.18.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[18].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 18,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        587951360,
+        596667648
+      ],
+      "source_tensor_sha256": "a694f1241a8e124ff0c27aeb2009b4f6b3af93ea5910fb0cf22f972e38b1e76b"
+    },
+    {
+      "source_tensor": "model.layers.18.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.18.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[18].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 18,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        570518784,
+        579235072
+      ],
+      "source_tensor_sha256": "9860a1012a55d011e0fc478c83e11f14ef0845b905740b739b3e4ff9d8fdffb9"
+    },
+    {
+      "source_tensor": "model.layers.19.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.19.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[19].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 19,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        609059840,
+        617776128
+      ],
+      "source_tensor_sha256": "06deb7f3f48abedba434a8f124534836df955d6723963ec7fad444f7bfe24a15"
+    },
+    {
+      "source_tensor": "model.layers.19.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.19.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[19].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 19,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        617776128,
+        626492416
+      ],
+      "source_tensor_sha256": "ccfa72fb0403cb8e3115b2121517ad7e93bee9783b74d0cd915f9b0ea524edb8"
+    },
+    {
+      "source_tensor": "model.layers.19.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.19.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[19].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 19,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        600343552,
+        609059840
+      ],
+      "source_tensor_sha256": "0305f26dba3b73c7ebc1b61b2ab8a3caacbf27c09fcefb3f3bfcb0f36eba302c"
+    },
+    {
+      "source_tensor": "model.layers.20.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.20.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[20].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 20,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        668709376,
+        677425664
+      ],
+      "source_tensor_sha256": "609353dc073e0e102d9bc70e6c6fed737ebe2cd2d128b355fd4edececf4faa46"
+    },
+    {
+      "source_tensor": "model.layers.20.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.20.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[20].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 20,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        677425664,
+        686141952
+      ],
+      "source_tensor_sha256": "3c2213c81adaf6c1e7b02332ba70ce17dba0bb3804b296030da03a8840f815a1"
+    },
+    {
+      "source_tensor": "model.layers.20.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.20.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[20].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 20,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        659993088,
+        668709376
+      ],
+      "source_tensor_sha256": "e241ce9b9efa48eca5a95551322316798acf13aa886f8971ec6e95b66ffdc2a8"
+    },
+    {
+      "source_tensor": "model.layers.21.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.21.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[21].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 21,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        698534144,
+        707250432
+      ],
+      "source_tensor_sha256": "101d854dba3fb9538baf1365e1efc9620bc240b74244999aec2dd8261a0f9138"
+    },
+    {
+      "source_tensor": "model.layers.21.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.21.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[21].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 21,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        707250432,
+        715966720
+      ],
+      "source_tensor_sha256": "2131894112774329e59083e6e1ae3a3a8d7c0d211b0a071b5b3c834a66e56f27"
+    },
+    {
+      "source_tensor": "model.layers.21.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.21.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[21].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 21,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        689817856,
+        698534144
+      ],
+      "source_tensor_sha256": "b89d4336c0ab9a15c53500a61509bad953ab3b5be2d1925429e572b22b7d1a97"
+    },
+    {
+      "source_tensor": "model.layers.22.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.22.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[22].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 22,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        728358912,
+        737075200
+      ],
+      "source_tensor_sha256": "93dc7357aac6669a183455467218ce697f7c1ed6b41aec22f37c634f6187b95f"
+    },
+    {
+      "source_tensor": "model.layers.22.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.22.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[22].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 22,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        737075200,
+        745791488
+      ],
+      "source_tensor_sha256": "37c412f5c2a9edaf362a0a2edba86834dec6dfebfc18806c29858e7e56d2b423"
+    },
+    {
+      "source_tensor": "model.layers.22.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.22.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[22].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 22,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        719642624,
+        728358912
+      ],
+      "source_tensor_sha256": "01df298fc1a8e829f66c0b3b94996d6f96208ffa13f6f00db1343847f936eec3"
+    },
+    {
+      "source_tensor": "model.layers.23.mlp.gate_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.23.ffn_gate.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[23].ffn_gate",
+      "graph_output": "ffn_gate",
+      "graph_input": "ffn_norm",
+      "layer": 23,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        758183680,
+        766899968
+      ],
+      "source_tensor_sha256": "03b3fd4c785569559f8aaaebdcb33b52903f8602e35f00dd3000ca2d4a2c01de"
+    },
+    {
+      "source_tensor": "model.layers.23.mlp.up_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        4864,
+        896
+      ],
+      "gguf_name": "blk.23.ffn_up.weight",
+      "ggml_ne_K_N": [
+        896,
+        4864
+      ],
+      "graph_weight": "model.layers[23].ffn_up",
+      "graph_output": "ffn_up",
+      "graph_input": "ffn_norm",
+      "layer": 23,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        766899968,
+        775616256
+      ],
+      "source_tensor_sha256": "763040c6066a2a82f45fdd87d306a18620007409812ca139f999561ea823ad08"
+    },
+    {
+      "source_tensor": "model.layers.23.mlp.down_proj.weight",
+      "source_dtype": "BF16",
+      "logical_shape_N_K": [
+        896,
+        4864
+      ],
+      "gguf_name": "blk.23.ffn_down.weight",
+      "ggml_ne_K_N": [
+        4864,
+        896
+      ],
+      "graph_weight": "model.layers[23].ffn_down",
+      "graph_output": "ffn_out",
+      "graph_input": "ffn_swiglu",
+      "layer": 23,
+      "transpose_payload": false,
+      "bias": null,
+      "data_offsets": [
+        749467392,
+        758183680
+      ],
+      "source_tensor_sha256": "e9c9f13345658df421db84b2ecb11d62258a569511bfa549859a7180061d6d95"
+    }
+  ],
+  "attention_biases": {
+    "model.layers.0.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.0.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.0.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.1.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.1.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.1.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.10.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.10.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.10.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.11.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.11.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.11.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.12.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.12.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.12.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.13.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.13.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.13.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.14.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.14.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.14.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.15.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.15.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.15.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.16.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.16.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.16.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.17.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.17.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.17.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.18.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.18.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.18.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.19.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.19.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.19.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.2.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.2.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.2.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.20.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.20.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.20.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.21.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.21.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.21.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.22.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.22.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.22.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.23.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.23.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.23.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.3.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.3.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.3.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.4.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.4.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.4.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.5.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.5.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.5.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.6.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.6.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.6.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.7.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.7.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.7.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.8.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.8.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.8.self_attn.v_proj.bias": [
+      128
+    ],
+    "model.layers.9.self_attn.k_proj.bias": [
+      128
+    ],
+    "model.layers.9.self_attn.q_proj.bias": [
+      896
+    ],
+    "model.layers.9.self_attn.v_proj.bias": [
+      128
+    ]
+  },
+  "embedding_head": {
+    "tied_config": true,
+    "explicit_lm_head_stored": false,
+    "source": "model.embed_tokens.weight",
+    "gguf": "token_embd.weight",
+    "storage_shape": [
+      151936,
+      896
+    ],
+    "runtime": "output falls back to TENSOR_DUPLICATED; physical alias/copy must be measured per backend"
+  },
+  "memory": {
+    "status": "SHAPE_BASED_PLANNING_NOT_ALLOCATED_OR_FROZEN",
+    "original_tensor_payload_bytes": 988065536,
+    "original_mlp_bf16_bytes": 627572736,
+    "original_gguf_file_bytes": 994156736,
+    "proposed_w4_payload_bytes": 156893184,
+    "proposed_f32_scales_bytes": 9805824,
+    "proposed_sidecar_payload_bytes": 166699008,
+    "sidecar_metadata_and_page_alignment_bytes": null,
+    "resident_weight_bo_bytes": null,
+    "original_gguf_resident_pages_bytes": null,
+    "sidecar_resident_pages_bytes": null,
+    "repack_copy_resident_bytes": null,
+    "runtime_workspace_bytes": null,
+    "linux_budget_bytes": null,
+    "pl_budget_bytes": null,
+    "example_kv_f16_512_tokens_bytes": 6291456,
+    "policy": "Never add file-backed RSS twice; BO copy and file-backed pages MAY coexist. No full second model; no per-token weight quantization. A3 must avoid original MLP loading, account tied-head buffers and measure actual residency."
+  },
+  "graph_note": "down output callback is ffn_out for this no-bias graph, NOT guaranteed ffn_down; last layer may select only requested token rows",
+  "sidecar_exported": false,
+  "b_crosscheck": "NOT_RUN",
+  "a2": "NOT_PASSED"
+}

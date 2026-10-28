@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "D:/Python/Python314/python.exe",
+    "-B",
+    "-c",
+    "import ast,json,pathlib; p=pathlib.Path('platform/qwen35/a12'); [ast.parse(f.read_text(encoding='utf-8'),str(f)) for f in p.glob('step08_*.py')]; d=pathlib.Path('evidence/model_pl_A/20261024-step08-v1'); a=json.loads((d/'diagnostic-budget.json').read_text()); b=json.loads((d/'generation-budget.json').read_text()); assert a['profiles'][0]['max_successful_runs']==1224 and b['profiles'][0]['max_successful_runs']==47736; assert a['profiles'][0]['explicit_bo_limit_bytes']==b['profiles'][0]['explicit_bo_limit_bytes']==140591104; print('PASS_STATIC_SYNTAX_EXPLICIT_SCOPE_CALL_BO_LIMITS')"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-24T02:04:07.636725+00:00",
+  "elapsed_s": 0.2539896999951452,
+  "exit_code": 0,
+  "stdout": "PASS_STATIC_SYNTAX_EXPLICIT_SCOPE_CALL_BO_LIMITS\n",
+  "stderr": ""
+}

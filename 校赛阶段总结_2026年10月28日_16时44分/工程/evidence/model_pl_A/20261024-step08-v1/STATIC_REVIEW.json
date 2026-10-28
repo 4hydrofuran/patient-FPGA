@@ -1,0 +1,53 @@
+{
+  "status": "PASS_FINAL_PRIVATE_PROFILE_AND_SOURCE_REVIEW",
+  "source_sha256": {
+    "platform/qwen35/a12/step08_audit.py": "9e5e543c52996402eeea29cf566634e1f17f351762fd60eb3e7671d2254245e1",
+    "platform/qwen35/a12/step08_closeout.py": "475c7557844135bda38d708557964a3431f0b261be1336a5d677184e81a57400",
+    "platform/qwen35/a12/step08_common.py": "41e9a38f05022b8cf1a995fd8dacaf82d25171f00309ca2ca04709f10e0c716b",
+    "platform/qwen35/a12/step08_generation_budget.py": "14950a0eb44548798c261db3aa6c9d78bd23dd2967db27a55fedeed69fb182eb",
+    "platform/qwen35/a12/step08_health.py": "72cc3c5fc4eee5ac744cb19678a64a42f263dae8ad1a1d965cf8517b0256893d",
+    "platform/qwen35/a12/step08_health_test.py": "f93a414b8d5f470dfcd813639c3e08078d4e3a3adaabd505c1417d305c372c3a",
+    "platform/qwen35/a12/step08_manager.py": "99cc8c8df08ca60310c1bfd157d32525f4f1496ad7cb16c138066984663ea2ec",
+    "platform/qwen35/a12/step08_manager_prepare.py": "1f8bff639a2da7fa606da45d491cd5c5b9c9395ec9690d2da3d047cfd2c2000f",
+    "platform/qwen35/a12/step08_monitor.py": "32d07a03085c8a248e7d6138d8534da0a685c4fd6048d3895e8df8c0a91aa1a2",
+    "platform/qwen35/a12/step08_network_guard.py": "6bac475d9a6940adc85bab17c0ac78b111ac97c93a74ca799936aff4b4008d61",
+    "platform/qwen35/a12/step08_network_prepare.py": "b473077b5f6ed2f9481605d01470ef8c22c3b5cf6e2a9343a45b3da7e049b869",
+    "platform/qwen35/a12/step08_package.py": "907a31fbaf8f581a36772fa6e8105fa7d2c88dba9aee553f63d7ad8c2b223e81",
+    "platform/qwen35/a12/step08_pc.py": "597cff281ce8884333f29907a61a483e74e5c89891e58a9a4a6985f1a132eea4",
+    "platform/qwen35/a12/step08_prepare.py": "ed26617e5d804005a5944c8ba046a54c92ec081d826fdf70e33525492875095c",
+    "platform/qwen35/a12/step08_preserve.py": "7400e1ced5a3d6d244e94de9dcf2e27072f1474822cc677b841bbb8842b588b4",
+    "platform/qwen35/a12/step08_progress.py": "8619dfb04df9b10e77f758b848aa6b990c440eb31e0552f53e5b69530c6a7cee",
+    "platform/qwen35/a12/step08_quality.py": "1060f6e3b504fdbd29970aeaa2464554b2bf66da37dfd0a25782f2260d28cda7",
+    "platform/qwen35/a12/step08_reboot_guard.py": "d53cc0b85f903257b8afe7852105a92f0f6370f47ec3fb3fabe0e1150fe2180a",
+    "platform/qwen35/a12/step08_recovery_audit.py": "ab52cb142db23807000ab4569b4792239781dac1365cc8546d0613b68df047c6",
+    "platform/qwen35/a12/step08_restore_prepare.py": "54c21f8a75d7a9b0ccefa32c11837b64bad88ae2e86e5c6f3cb8451c932a6c06",
+    "platform/qwen35/a12/step08_restore_prepare_v2.py": "73f6f25ce94140e6c8e73f9522b646391b8157134307b1f1d17c65721e5282ea",
+    "platform/qwen35/a12/step08_restore_readback.py": "d424450c29472d1259de3bb1e22b2911b76087bf4e767dd0168f30a681a6a1fd",
+    "platform/qwen35/a12/step08_seal.py": "2e79d61b6e28e6b1a11f8836b12e11a82fb87ac3437a9a6c314ef369fa741ddf",
+    "platform/qwen35/a12/step08_static.py": "26e4ff0f84819a7032868515ad28501a289b221a5d7f7ffb2470180198162f73",
+    "platform/qwen35/a12/step08_transport.py": "5e4b59f6a81d7444499d09877e32a5f46dc8ada17fb8079a5550aa3cbe4b2a76"
+  },
+  "specs": {
+    "diagnostic": {
+      "window_id": "a12-full-diagnostic-20261024-v1",
+      "variant": "diagnostic",
+      "max_runs": 1224,
+      "request_limit": 1,
+      "prompt_token_limit": 128,
+      "output_token_limit": 2,
+      "max_session_seconds": 360,
+      "receive_seconds": 240
+    },
+    "generation": {
+      "window_id": "a12-full-generation-20261024-v1",
+      "variant": "generation",
+      "max_runs": 47736,
+      "request_limit": 17,
+      "prompt_token_limit": 128,
+      "output_token_limit": 24,
+      "max_session_seconds": 18000,
+      "receive_seconds": 1200
+    }
+  },
+  "board_contact": false
+}

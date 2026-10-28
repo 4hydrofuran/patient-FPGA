@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "platform/local/a1/venv/Scripts/python.exe",
+    "platform/qwen35/a01/audit_model.py"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-01T17:11:42.351994+00:00",
+  "elapsed_s": 17.06501219997881,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\audit_model.py\", line 95, in <module>\n    if __name__==\"__main__\":main()\n                            ~~~~^^\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\audit_model.py\", line 72, in main\n    assert len(mapping)==72 and not any(\"mlp.\" in n and n.endswith(\"bias\") for n in tensors)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

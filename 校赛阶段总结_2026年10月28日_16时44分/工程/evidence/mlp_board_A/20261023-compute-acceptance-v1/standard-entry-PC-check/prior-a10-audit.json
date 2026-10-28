@@ -1,0 +1,162 @@
+{
+  "status": "PASS_BOARD_SINGLE_N32_POSTCOMPUTE_RELEASE_WITH_LIMITATIONS",
+  "A10": "PENDING_FINAL_REQUIREMENT_AUDIT",
+  "boot_id": "c5baeabe-273d-447e-b323-ff07dd7af201",
+  "kernel": "6.8.12-a10irq2",
+  "machine_sha256": "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec",
+  "bundle_manifest_sha256": "ae21f1acacadbf5ceaeed85384cade0c575fbe8a5a88012530c911ebfce7cfb7",
+  "new_compute_submissions": 1,
+  "explicit_compute_bo_allocations": 3,
+  "explicit_requested_peak_bytes": 49344,
+  "actual_addresses": [
+    1146814464,
+    1146847232,
+    1146880000
+  ],
+  "guards_checked": 4080,
+  "pass_numeric": true,
+  "kernel_completion_state": 4,
+  "controller_elapsed_s": 15.227869792,
+  "native_worker_observed_s": 0.315188242,
+  "sampled_temperature_range_mC": [
+    28606,
+    32624
+  ],
+  "minimum_sampled_mem_available_KiB": 3299796,
+  "minimum_sampled_cma_free_KiB": 808596,
+  "release_scan_processes": 170,
+  "module_refcount_before_unload": 0,
+  "command_exit_codes": [
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-listPackage"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-remove",
+        "0"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "insmod",
+        "/var/lib/kv260-a10/a10-isolated-single-20261023-v1/zocl.refcount.ko"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-load",
+        "a10-isolated-single-20261023-v1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-listPackage"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-remove",
+        "0"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "rmmod",
+        "zocl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "dfx-mgr-client",
+        "-load",
+        "k26-starter-kits"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "reviewed_advisories": [
+    {
+      "line": 1,
+      "severity": 3,
+      "text": "<3>[ 9043.505648] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name"
+    },
+    {
+      "line": 2,
+      "severity": 3,
+      "text": "<3>[ 9043.516566] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/misc_clk_0"
+    },
+    {
+      "line": 3,
+      "severity": 3,
+      "text": "<3>[ 9043.526669] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/clocking0"
+    },
+    {
+      "line": 4,
+      "severity": 3,
+      "text": "<3>[ 9043.536674] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/afi0"
+    },
+    {
+      "line": 5,
+      "severity": 3,
+      "text": "<3>[ 9043.546240] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_intc_0"
+    },
+    {
+      "line": 6,
+      "severity": 3,
+      "text": "<3>[ 9043.556322] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_vip_pltf"
+    },
+    {
+      "line": 7,
+      "severity": 3,
+      "text": "<3>[ 9043.566584] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/krnl_vadd_1"
+    },
+    {
+      "line": 10,
+      "severity": 3,
+      "text": "<3>[ 9043.640300] zocl-drm axi:zyxclmm_drm: error -ENXIO: IRQ index 32 not found"
+    },
+    {
+      "line": 1,
+      "severity": 3,
+      "text": "<3>[ 9048.450504] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/firmware-name"
+    },
+    {
+      "line": 2,
+      "severity": 3,
+      "text": "<3>[ 9048.460916] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-region/resets"
+    }
+  ],
+  "delayed_kernel_readback_allowed": true,
+  "delayed_readback_after_controller_s": 47.174429708,
+  "final_readback": {
+    "temperature_mC": [
+      29244,
+      30681,
+      30293
+    ],
+    "default_pl": "applied",
+    "gdm": "active",
+    "zocl_present": false,
+    "manager_present": false,
+    "active_lease_present": false
+  },
+  "kernel_raw_sha256": "0c193a9d4a2c52ee24a541d49c233f2d10597db1e73c7c229fd71e3748edafc0",
+  "normal_kernel_restore": "NOT_PERFORMED_STILL_IRQ2",
+  "physical_bo_peak_bytes": null,
+  "performance_conclusion": null,
+  "measurement_scope": "One N32 and postcompute release/default PL recovery; not statistical stress/performance"
+}

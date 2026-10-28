@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/6VVzZLiOAy+8xS5JenKD7AMNU2XX2FqD3vr6koZWwkeHNtjO/xMF+++shNouoc97QESS7L0SZ+kiN5o6xPtip9Oq8KdXbGlDtar4rcU22JH3S483bA1VjNwrvCih1lrdZ8Y6oMyEaOPv/E4MyQ8srQ+UFujst4flut5SReLGn+lNqDK5Xy5XsyXf5WHb2n+giGr4KkSyoH12bxw3mYmz8cglDGQYKnXtrH4huCajnpoDstrYKalBOZn1AUHmEvVgYdB8CwnZH4VT7hCGjXGrPdgFcjaUsV1X2+19o3gaV5ZoLzxcPJZXiESYYKX9PtquWyfl23J54u2XH1fPZeUL57LNazX2/VqTp8pT2ccWqwK22fbfGPBD1YlXDCfbc8eHJGgUFG4HV1+W5OptNV4REW1gxMXHTiMHKvfjEyQ8VFhGFBMc8iCsmK6NxYJwZt5xSEqsGiK9hgqSyUdFNuBLY3gVeA2LdKddr6Ek/BXwVFbLEOJbgb5RYi5c7C28ic/3fws+bDSw3hVolSKFtiZSbhJemnQPwNhbgEsHAQcrycsMZUl0tKK6RoKFfXiACX1HnrzFW6ohxTqZnw7W3r8gvcDG7YT+nfkXW0iQ5mp1UR2ZAdrl7TaJioRKolFTESbjFbCNeFyll9me/IxCpUdVPaacrTtMGZZYvz0rWDUIPPQYGwzePKPHSB/mZpwX41tEdjC3kyw+RKlg3ws7kxqtnfkvlej5GtfGil8SBlhv/TUI9GcvF9mtwSuA4h3bxNYczBSn3tQvgoKhFxjBqMRTqBARfnriAMaPFM7GuWbWTIBUmEgKMZ/2cOZtOk7TlpPf2qbOVQ0HA75Zr48XTZRIdQDRTyj5pJeYb+qN/IqY+llQB7TDaXHGPE8JpvlbzNL4jCNPMb/YhziRuqORFb3E+l5QVnooCYuDPJDKyimESf/YxFM8QjmN4QeyYJVDFE4RhWZNlFGpdTHxriGC0RPz2MTFPoAFk/YhCdceTYQEbxsTo9ixZKcQgkmwHdYmVat6JDQg2BQegtQX30j8E7qbZY+1YGsAQWXojUdJXdumMR+rIO06amiHdh4mMcr8B+5d7z/s/nRG44o82HUhSvHquM7Gj8ehSJ4HetxHdBrgN+ayXuUveaDhDqIERLuLeex3z8x24zSQEj8hsjJ6lH7T9jyYpyxqf+KsGHC9wVxOvIqlM8+0fGYh7GAu2OPC+ha8Hh6qoO/J+xxTDjN34roChXaayVYoxwJH9DqXhLWtrEhclhVFR964zKb57N/AV9fASqdBwAA')); assert hashlib.sha256(b).hexdigest()=='9e5cc823c988cbeaa3c735a495ae4dee95419d65effa6a85e8dc2febe9178499'; exec(compile(b,'read_open_evidence','exec'))\""
+  ],
+  "helper_sha256": "9e5cc823c988cbeaa3c735a495ae4dee95419d65effa6a85e8dc2febe9178499",
+  "exit_code": 0,
+  "stderr": "__A10_READONLY_EVIDENCE_AUTH__:",
+  "scope": "readonly"
+}

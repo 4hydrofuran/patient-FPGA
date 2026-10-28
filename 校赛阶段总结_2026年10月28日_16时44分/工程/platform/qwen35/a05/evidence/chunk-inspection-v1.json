@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-c",
+    "import sys,json;from pathlib import Path;sys.path.insert(0,'platform/qwen35/a05');from analyze_state import compare;p=Path('eval/qwen35/a05/state-v1');r=compare(p/'chunk-256',p/'chunk-1');print(json.dumps({'passed':r['passed'],'logits':{k:v for k,v in r['logits'].items() if not v['passed']},'first_bad_projections':{k:v for k,v in r['projections'].items() if not v['y']['passed']},'states':{k:v for k,v in r['state_arrays'].items() if not v['passed']}}))"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T09:56:53.919467+00:00",
+  "elapsed_s": 1.4153796999598853,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/analyze_state.py\", line 53, in compare\n    am,aa=state(other/'hybrid-state.bin');bm,ba=state(base/'hybrid-state.bin');assert am==bm\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/analyze_state.py\", line 30, in state\n    assert num('I')==1;count=num('I');assert 0<count<=2048;meta['kv']=cells(count)\n  File \"/mnt/c/Patientqwen/platform/qwen35/a05/analyze_state.py\", line 19, in cells\n    pos=num('i');n=num('I');assert 0<=n<=1;result.append([pos,[num('i') for _ in range(n)]])\nAssertionError\n"
+}

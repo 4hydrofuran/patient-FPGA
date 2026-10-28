@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-c",
+    "import sys,json;from pathlib import Path;sys.path.insert(0,'platform/qwen35/a05');from analyze_state import compare;p=Path('eval/qwen35/a05/batch-precision-v1');r={k:compare(p/'chunk-256',p/k) for k in ('chunk-1','chunk-8')};print(json.dumps({k:{'passed':v['passed'],'max_logit':max(x['max_abs'] for x in v['logits'].values()),'bad_states':sum(not x['passed'] for x in v['state_arrays'].values()),'first_MLP_input':v['projections']['l00_up']['x']} for k,v in r.items()}))"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:26:15.264614+00:00",
+  "elapsed_s": 14.849385100009385,
+  "exit_code": 0,
+  "stdout": "{\"chunk-1\": {\"passed\": false, \"max_logit\": 3.1218496561050415, \"bad_states\": 45, \"first_MLP_input\": {\"passed\": true, \"bit_equal\": false, \"elements\": 23552, \"failures\": 0, \"max_abs\": 0.0001538991928100586, \"rmse\": 9.571730927741305e-06, \"atol\": 0.002, \"rtol\": 0.0002}}, \"chunk-8\": {\"passed\": true, \"max_logit\": 0.0, \"bad_states\": 0, \"first_MLP_input\": {\"passed\": true, \"bit_equal\": true, \"elements\": 23552, \"failures\": 0, \"max_abs\": 0.0, \"rmse\": 0.0, \"atol\": 0.002, \"rtol\": 0.0002}}}\n",
+  "stderr": ""
+}

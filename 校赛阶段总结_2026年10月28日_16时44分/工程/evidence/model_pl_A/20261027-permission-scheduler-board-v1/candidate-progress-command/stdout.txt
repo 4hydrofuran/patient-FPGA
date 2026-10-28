@@ -1,0 +1,530 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T15:58:41.7894133Z",
+    "source_sha256":  "92c9e6301158259f38f66e8bbb1dafb141608b19907381133fcd96259e59de79",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "COMPARISON_PROGRESS",
+                      "observed_monotonic_ns":  12432934724681,
+                      "windows":  {
+                                      "baseline":  {
+                                                       "exists":  true,
+                                                       "files":  {
+                                                                     "continuous/bundle/run-v1/result.json":  {
+                                                                                                                  "status":  "FULL_MODEL_fast_response_continuous_NORMAL_RESTORE_PENDING_AUDIT",
+                                                                                                                  "physical_domain":  "BOARD",
+                                                                                                                  "worker_exit_code":  0,
+                                                                                                                  "permission_submissions":  1512,
+                                                                                                                  "backend_host_verified_completions":  1512,
+                                                                                                                  "hardware_global_count":  null,
+                                                                                                                  "scope":  "all",
+                                                                                                                  "lease_archived":  true,
+                                                                                                                  "variant":  "fast_response_continuous",
+                                                                                                                  "request_count":  2000,
+                                                                                                                  "step10":  "IN_PROGRESS_fast_response_continuous_PENDING_AUDIT",
+                                                                                                                  "board_speedup":  null
+                                                                                                              },
+                                                                     "continuous/bundle/run-v1/s2/permission-probe/RESULT.json":  {
+                                                                                                                                      "status":  "PASS_FRESH_MODEL_PERMISSION_PROBE",
+                                                                                                                                      "rows":  [
+                                                                                                                                                   {
+                                                                                                                                                       "request_id":  "permission-0-0",
+                                                                                                                                                       "case_id":  "SYN_CP_03",
+                                                                                                                                                       "case_sha256":  "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+                                                                                                                                                       "prompt_sha256":  "a7ee795cf18edb3ae78538113f638f61d15d24af4e32bbd807608be647727d78",
+                                                                                                                                                       "answer":  "一回大约疼 20 分钟。",
+                                                                                                                                                       "output_tokens":  [
+                                                                                                                                                                             122768,
+                                                                                                                                                                             100914,
+                                                                                                                                                                             99707,
+                                                                                                                                                                             220,
+                                                                                                                                                                             17,
+                                                                                                                                                                             15,
+                                                                                                                                                                             220,
+                                                                                                                                                                             98004,
+                                                                                                                                                                             1710
+                                                                                                                                                                         ],
+                                                                                                                                                       "actual_backend":  "FPGA_REAL",
+                                                                                                                                                       "answer_source":  "MODEL",
+                                                                                                                                                       "answer_cache_used":  false,
+                                                                                                                                                       "model_calls":  1,
+                                                                                                                                                       "eos":  true,
+                                                                                                                                                       "launch":  {
+                                                                                                                                                                      "schema":  "A12_PERMISSION_SCHEDULING_V1",
+                                                                                                                                                                      "worker_nice_adjustment":  0,
+                                                                                                                                                                      "native_semantic_argv_sha256":  "43baefb37ab443278583315f6adb3bc098200a163ecd2896fcc64e25eea2ff66",
+                                                                                                                                                                      "scope":  "OWNED_CHILD_ONLY_INHERITED_BY_ITS_THREADS",
+                                                                                                                                                                      "persistence":  "ORIGINAL_SYNCHRONOUS_FSYNC_BEFORE_EVERY_PERMISSION_REPLY"
+                                                                                                                                                                  },
+                                                                                                                                                       "permission":  {
+                                                                                                                                                                          "calls":  288,
+                                                                                                                                                                          "owner_check_ms":  590.5927690000008,
+                                                                                                                                                                          "health_check_ms":  1220.15215,
+                                                                                                                                                                          "durable_permission_record_ms":  2463.151213999995,
+                                                                                                                                                                          "scope":  "EXACT_REQUEST_BOUNDARIES_INCLUDES_LAST_PERMISSION_RECORD"
+                                                                                                                                                                      },
+                                                                                                                                                       "native_request_wall_ms":  12653.215712,
+                                                                                                                                                       "session_received_to_validated_ms":  12719.779427,
+                                                                                                                                                       "permission_wait_ms":  4519.319291999999,
+                                                                                                                                                       "backend_service_ms":  3504.382579000001,
+                                                                                                                                                       "native_pl_calls":  288,
+                                                                                                                                                       "prefix":  {
+                                                                                                                                                                      "hit":  true,
+                                                                                                                                                                      "lookup_ms":  246.868159,
+                                                                                                                                                                      "new_tokens":  16,
+                                                                                                                                                                      "policy":  "TT10_REQUIRE_HIT",
+                                                                                                                                                                      "reason":  "EXACT_FULL_STATE_HIT",
+                                                                                                                                                                      "restore_error":  null,
+                                                                                                                                                                      "restore_ms":  286.538126,
+                                                                                                                                                                      "reused_tokens":  34,
+                                                                                                                                                                      "snapshot_bytes":  21614659,
+                                                                                                                                                                      "speculative_extra_tokens":  9
+                                                                                                                                                                  },
+                                                                                                                                                       "physical_T_calls":  {
+                                                                                                                                                                                "1":  72,
+                                                                                                                                                                                "8":  216
+                                                                                                                                                                            },
+                                                                                                                                                       "prefix_binding_sha256":  "989be2d938c53bea50c716aafbdebcad511dbfc815046576ffcf2dc7efea332c",
+                                                                                                                                                       "model_identity":  {
+                                                                                                                                                                              "context":  1024,
+                                                                                                                                                                              "contract_sha256":  "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+                                                                                                                                                                              "executable_sha256":  "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+                                                                                                                                                                              "execution_kind":  "FPGA_REAL",
+                                                                                                                                                                              "input_workload_sha256":  "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+                                                                                                                                                                              "kernel_threads":  4,
+                                                                                                                                                                              "layout":  "pinned_memory_state_plus_last_logits_v1",
+                                                                                                                                                                              "libraries":  {
+                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                            },
+                                                                                                                                                                              "live_miss_prompt_policy_sha256":  "93720bb39b7e475f368f05e870ca9e130c63123fc4a95bdfe39952c1a9a2e63f",
+                                                                                                                                                                              "model_revision":  "2fc06364715b967f1860aea9cf38778875588b17",
+                                                                                                                                                                              "model_sha256":  "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+                                                                                                                                                                              "n_rs_seq":  0,
+                                                                                                                                                                              "n_seq_max":  1,
+                                                                                                                                                                              "natural_patient_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "neutral_prefix_choices_sha256":  "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+                                                                                                                                                                              "physical_ubatch":  8,
+                                                                                                                                                                              "prompt_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "quantization":  "A12_W4A8_MLP",
+                                                                                                                                                                              "runtime_base_commit":  "81e39ad34368329b5db77620721510fd91107e80",
+                                                                                                                                                                              "sampler":  "fresh_greedy_v1",
+                                                                                                                                                                              "sidecar_sha256":  "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+                                                                                                                                                                              "template_sha256":  "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+                                                                                                                                                                              "tensor_map_sha256":  "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+                                                                                                                                                                              "threads":  4,
+                                                                                                                                                                              "verified_loaded_libraries":  {
+                                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                                            }
+                                                                                                                                                                          },
+                                                                                                                                                       "measurement":  "SESSION_SUBMIT_TO_VALIDATION_AND_NATIVE_PROFILE_NOT_BROWSER_PAINT",
+                                                                                                                                                       "hardware_cycles":  null,
+                                                                                                                                                       "question":  "每次疼痛持续多久？",
+                                                                                                                                                       "repeat":  0,
+                                                                                                                                                       "wall_ms":  12793.521235
+                                                                                                                                                   },
+                                                                                                                                                   {
+                                                                                                                                                       "request_id":  "permission-0-1",
+                                                                                                                                                       "case_id":  "SYN_CP_03",
+                                                                                                                                                       "case_sha256":  "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+                                                                                                                                                       "prompt_sha256":  "7c9a49cdb6f5c4b59cd8cfd25ec34e31ea595f9a669e4336483852094417c87a",
+                                                                                                                                                       "answer":  "满分 10 分的话我有 5 分。",
+                                                                                                                                                       "output_tokens":  [
+                                                                                                                                                                             112478,
+                                                                                                                                                                             220,
+                                                                                                                                                                             16,
+                                                                                                                                                                             15,
+                                                                                                                                                                             220,
+                                                                                                                                                                             95880,
+                                                                                                                                                                             101587,
+                                                                                                                                                                             109591,
+                                                                                                                                                                             220,
+                                                                                                                                                                             20,
+                                                                                                                                                                             220,
+                                                                                                                                                                             95880,
+                                                                                                                                                                             1710
+                                                                                                                                                                         ],
+                                                                                                                                                       "actual_backend":  "FPGA_REAL",
+                                                                                                                                                       "answer_source":  "MODEL",
+                                                                                                                                                       "answer_cache_used":  false,
+                                                                                                                                                       "model_calls":  1,
+                                                                                                                                                       "eos":  true,
+                                                                                                                                                       "launch":  {
+                                                                                                                                                                      "schema":  "A12_PERMISSION_SCHEDULING_V1",
+                                                                                                                                                                      "worker_nice_adjustment":  0,
+                                                                                                                                                                      "native_semantic_argv_sha256":  "43baefb37ab443278583315f6adb3bc098200a163ecd2896fcc64e25eea2ff66",
+                                                                                                                                                                      "scope":  "OWNED_CHILD_ONLY_INHERITED_BY_ITS_THREADS",
+                                                                                                                                                                      "persistence":  "ORIGINAL_SYNCHRONOUS_FSYNC_BEFORE_EVERY_PERMISSION_REPLY"
+                                                                                                                                                                  },
+                                                                                                                                                       "permission":  {
+                                                                                                                                                                          "calls":  288,
+                                                                                                                                                                          "owner_check_ms":  592.7114899999995,
+                                                                                                                                                                          "health_check_ms":  967.1945499999983,
+                                                                                                                                                                          "durable_permission_record_ms":  1883.9236540000102,
+                                                                                                                                                                          "scope":  "EXACT_REQUEST_BOUNDARIES_INCLUDES_LAST_PERMISSION_RECORD"
+                                                                                                                                                                      },
+                                                                                                                                                       "native_request_wall_ms":  13330.859159,
+                                                                                                                                                       "session_received_to_validated_ms":  13367.369795,
+                                                                                                                                                       "permission_wait_ms":  3691.4459170000005,
+                                                                                                                                                       "backend_service_ms":  4106.340876000001,
+                                                                                                                                                       "native_pl_calls":  288,
+                                                                                                                                                       "prefix":  {
+                                                                                                                                                                      "hit":  true,
+                                                                                                                                                                      "lookup_ms":  246.469415,
+                                                                                                                                                                      "new_tokens":  18,
+                                                                                                                                                                      "policy":  "TT10_REQUIRE_HIT",
+                                                                                                                                                                      "reason":  "EXACT_FULL_STATE_HIT",
+                                                                                                                                                                      "restore_error":  null,
+                                                                                                                                                                      "restore_ms":  282.613136,
+                                                                                                                                                                      "reused_tokens":  34,
+                                                                                                                                                                      "snapshot_bytes":  21614659,
+                                                                                                                                                                      "speculative_extra_tokens":  13
+                                                                                                                                                                  },
+                                                                                                                                                       "physical_T_calls":  {
+                                                                                                                                                                                "7":  72,
+                                                                                                                                                                                "8":  216
+                                                                                                                                                                            },
+                                                                                                                                                       "prefix_binding_sha256":  "989be2d938c53bea50c716aafbdebcad511dbfc815046576ffcf2dc7efea332c",
+                                                                                                                                                       "model_identity":  {
+                                                                                                                                                                              "context":  1024,
+                                                                                                                                                                              "contract_sha256":  "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+                                                                                                                                                                              "executable_sha256":  "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+                                                                                                                                                                              "execution_kind":  "FPGA_REAL",
+                                                                                                                                                                              "input_workload_sha256":  "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+                                                                                                                                                                              "kernel_threads":  4,
+                                                                                                                                                                              "layout":  "pinned_memory_state_plus_last_logits_v1",
+                                                                                                                                                                              "libraries":  {
+                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                            },
+                                                                                                                                                                              "live_miss_prompt_policy_sha256":  "93720bb39b7e475f368f05e870ca9e130c63123fc4a95bdfe39952c1a9a2e63f",
+                                                                                                                                                                              "model_revision":  "2fc06364715b967f1860aea9cf38778875588b17",
+                                                                                                                                                                              "model_sha256":  "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+                                                                                                                                                                              "n_rs_seq":  0,
+                                                                                                                                                                              "n_seq_max":  1,
+                                                                                                                                                                              "natural_patient_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "neutral_prefix_choices_sha256":  "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+                                                                                                                                                                              "physical_ubatch":  8,
+                                                                                                                                                                              "prompt_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "quantization":  "A12_W4A8_MLP",
+                                                                                                                                                                              "runtime_base_commit":  "81e39ad34368329b5db77620721510fd91107e80",
+                                                                                                                                                                              "sampler":  "fresh_greedy_v1",
+                                                                                                                                                                              "sidecar_sha256":  "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+                                                                                                                                                                              "template_sha256":  "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+                                                                                                                                                                              "tensor_map_sha256":  "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+                                                                                                                                                                              "threads":  4,
+                                                                                                                                                                              "verified_loaded_libraries":  {
+                                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                                            }
+                                                                                                                                                                          },
+                                                                                                                                                       "measurement":  "SESSION_SUBMIT_TO_VALIDATION_AND_NATIVE_PROFILE_NOT_BROWSER_PAINT",
+                                                                                                                                                       "hardware_cycles":  null,
+                                                                                                                                                       "question":  "疼痛有多严重？",
+                                                                                                                                                       "repeat":  0,
+                                                                                                                                                       "wall_ms":  13442.095402
+                                                                                                                                                   },
+                                                                                                                                                   {
+                                                                                                                                                       "request_id":  "permission-1-0",
+                                                                                                                                                       "case_id":  "SYN_CP_03",
+                                                                                                                                                       "case_sha256":  "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+                                                                                                                                                       "prompt_sha256":  "a7ee795cf18edb3ae78538113f638f61d15d24af4e32bbd807608be647727d78",
+                                                                                                                                                       "answer":  "一回大约疼 20 分钟。",
+                                                                                                                                                       "output_tokens":  [
+                                                                                                                                                                             122768,
+                                                                                                                                                                             100914,
+                                                                                                                                                                             99707,
+                                                                                                                                                                             220,
+                                                                                                                                                                             17,
+                                                                                                                                                                             15,
+                                                                                                                                                                             220,
+                                                                                                                                                                             98004,
+                                                                                                                                                                             1710
+                                                                                                                                                                         ],
+                                                                                                                                                       "actual_backend":  "FPGA_REAL",
+                                                                                                                                                       "answer_source":  "MODEL",
+                                                                                                                                                       "answer_cache_used":  false,
+                                                                                                                                                       "model_calls":  1,
+                                                                                                                                                       "eos":  true,
+                                                                                                                                                       "launch":  {
+                                                                                                                                                                      "schema":  "A12_PERMISSION_SCHEDULING_V1",
+                                                                                                                                                                      "worker_nice_adjustment":  0,
+                                                                                                                                                                      "native_semantic_argv_sha256":  "43baefb37ab443278583315f6adb3bc098200a163ecd2896fcc64e25eea2ff66",
+                                                                                                                                                                      "scope":  "OWNED_CHILD_ONLY_INHERITED_BY_ITS_THREADS",
+                                                                                                                                                                      "persistence":  "ORIGINAL_SYNCHRONOUS_FSYNC_BEFORE_EVERY_PERMISSION_REPLY"
+                                                                                                                                                                  },
+                                                                                                                                                       "permission":  {
+                                                                                                                                                                          "calls":  288,
+                                                                                                                                                                          "owner_check_ms":  590.7648640000007,
+                                                                                                                                                                          "health_check_ms":  1201.5195920000056,
+                                                                                                                                                                          "durable_permission_record_ms":  4228.160056999994,
+                                                                                                                                                                          "scope":  "EXACT_REQUEST_BOUNDARIES_INCLUDES_LAST_PERMISSION_RECORD"
+                                                                                                                                                                      },
+                                                                                                                                                       "native_request_wall_ms":  14292.596189,
+                                                                                                                                                       "session_received_to_validated_ms":  14319.70374,
+                                                                                                                                                       "permission_wait_ms":  6265.728552999996,
+                                                                                                                                                       "backend_service_ms":  3504.0292520000025,
+                                                                                                                                                       "native_pl_calls":  288,
+                                                                                                                                                       "prefix":  {
+                                                                                                                                                                      "hit":  true,
+                                                                                                                                                                      "lookup_ms":  246.789688,
+                                                                                                                                                                      "new_tokens":  16,
+                                                                                                                                                                      "policy":  "TT10_REQUIRE_HIT",
+                                                                                                                                                                      "reason":  "EXACT_FULL_STATE_HIT",
+                                                                                                                                                                      "restore_error":  null,
+                                                                                                                                                                      "restore_ms":  280.338824,
+                                                                                                                                                                      "reused_tokens":  34,
+                                                                                                                                                                      "snapshot_bytes":  21614659,
+                                                                                                                                                                      "speculative_extra_tokens":  9
+                                                                                                                                                                  },
+                                                                                                                                                       "physical_T_calls":  {
+                                                                                                                                                                                "1":  72,
+                                                                                                                                                                                "8":  216
+                                                                                                                                                                            },
+                                                                                                                                                       "prefix_binding_sha256":  "989be2d938c53bea50c716aafbdebcad511dbfc815046576ffcf2dc7efea332c",
+                                                                                                                                                       "model_identity":  {
+                                                                                                                                                                              "context":  1024,
+                                                                                                                                                                              "contract_sha256":  "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+                                                                                                                                                                              "executable_sha256":  "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+                                                                                                                                                                              "execution_kind":  "FPGA_REAL",
+                                                                                                                                                                              "input_workload_sha256":  "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+                                                                                                                                                                              "kernel_threads":  4,
+                                                                                                                                                                              "layout":  "pinned_memory_state_plus_last_logits_v1",
+                                                                                                                                                                              "libraries":  {
+                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                            },
+                                                                                                                                                                              "live_miss_prompt_policy_sha256":  "93720bb39b7e475f368f05e870ca9e130c63123fc4a95bdfe39952c1a9a2e63f",
+                                                                                                                                                                              "model_revision":  "2fc06364715b967f1860aea9cf38778875588b17",
+                                                                                                                                                                              "model_sha256":  "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+                                                                                                                                                                              "n_rs_seq":  0,
+                                                                                                                                                                              "n_seq_max":  1,
+                                                                                                                                                                              "natural_patient_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "neutral_prefix_choices_sha256":  "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+                                                                                                                                                                              "physical_ubatch":  8,
+                                                                                                                                                                              "prompt_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "quantization":  "A12_W4A8_MLP",
+                                                                                                                                                                              "runtime_base_commit":  "81e39ad34368329b5db77620721510fd91107e80",
+                                                                                                                                                                              "sampler":  "fresh_greedy_v1",
+                                                                                                                                                                              "sidecar_sha256":  "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+                                                                                                                                                                              "template_sha256":  "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+                                                                                                                                                                              "tensor_map_sha256":  "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+                                                                                                                                                                              "threads":  4,
+                                                                                                                                                                              "verified_loaded_libraries":  {
+                                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                                            }
+                                                                                                                                                                          },
+                                                                                                                                                       "measurement":  "SESSION_SUBMIT_TO_VALIDATION_AND_NATIVE_PROFILE_NOT_BROWSER_PAINT",
+                                                                                                                                                       "hardware_cycles":  null,
+                                                                                                                                                       "question":  "每次疼痛持续多久？",
+                                                                                                                                                       "repeat":  1,
+                                                                                                                                                       "wall_ms":  14394.691559
+                                                                                                                                                   },
+                                                                                                                                                   {
+                                                                                                                                                       "request_id":  "permission-1-1",
+                                                                                                                                                       "case_id":  "SYN_CP_03",
+                                                                                                                                                       "case_sha256":  "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+                                                                                                                                                       "prompt_sha256":  "7c9a49cdb6f5c4b59cd8cfd25ec34e31ea595f9a669e4336483852094417c87a",
+                                                                                                                                                       "answer":  "满分 10 分的话我有 5 分。",
+                                                                                                                                                       "output_tokens":  [
+                                                                                                                                                                             112478,
+                                                                                                                                                                             220,
+                                                                                                                                                                             16,
+                                                                                                                                                                             15,
+                                                                                                                                                                             220,
+                                                                                                                                                                             95880,
+                                                                                                                                                                             101587,
+                                                                                                                                                                             109591,
+                                                                                                                                                                             220,
+                                                                                                                                                                             20,
+                                                                                                                                                                             220,
+                                                                                                                                                                             95880,
+                                                                                                                                                                             1710
+                                                                                                                                                                         ],
+                                                                                                                                                       "actual_backend":  "FPGA_REAL",
+                                                                                                                                                       "answer_source":  "MODEL",
+                                                                                                                                                       "answer_cache_used":  false,
+                                                                                                                                                       "model_calls":  1,
+                                                                                                                                                       "eos":  true,
+                                                                                                                                                       "launch":  {
+                                                                                                                                                                      "schema":  "A12_PERMISSION_SCHEDULING_V1",
+                                                                                                                                                                      "worker_nice_adjustment":  0,
+                                                                                                                                                                      "native_semantic_argv_sha256":  "43baefb37ab443278583315f6adb3bc098200a163ecd2896fcc64e25eea2ff66",
+                                                                                                                                                                      "scope":  "OWNED_CHILD_ONLY_INHERITED_BY_ITS_THREADS",
+                                                                                                                                                                      "persistence":  "ORIGINAL_SYNCHRONOUS_FSYNC_BEFORE_EVERY_PERMISSION_REPLY"
+                                                                                                                                                                  },
+                                                                                                                                                       "permission":  {
+                                                                                                                                                                          "calls":  288,
+                                                                                                                                                                          "owner_check_ms":  593.1896789999992,
+                                                                                                                                                                          "health_check_ms":  973.7423230000013,
+                                                                                                                                                                          "durable_permission_record_ms":  1982.3330909999986,
+                                                                                                                                                                          "scope":  "EXACT_REQUEST_BOUNDARIES_INCLUDES_LAST_PERMISSION_RECORD"
+                                                                                                                                                                      },
+                                                                                                                                                       "native_request_wall_ms":  13655.731089,
+                                                                                                                                                       "session_received_to_validated_ms":  13682.433466,
+                                                                                                                                                       "permission_wait_ms":  3798.1235170000023,
+                                                                                                                                                       "backend_service_ms":  4107.099862999997,
+                                                                                                                                                       "native_pl_calls":  288,
+                                                                                                                                                       "prefix":  {
+                                                                                                                                                                      "hit":  true,
+                                                                                                                                                                      "lookup_ms":  246.421945,
+                                                                                                                                                                      "new_tokens":  18,
+                                                                                                                                                                      "policy":  "TT10_REQUIRE_HIT",
+                                                                                                                                                                      "reason":  "EXACT_FULL_STATE_HIT",
+                                                                                                                                                                      "restore_error":  null,
+                                                                                                                                                                      "restore_ms":  261.740808,
+                                                                                                                                                                      "reused_tokens":  34,
+                                                                                                                                                                      "snapshot_bytes":  21614659,
+                                                                                                                                                                      "speculative_extra_tokens":  13
+                                                                                                                                                                  },
+                                                                                                                                                       "physical_T_calls":  {
+                                                                                                                                                                                "7":  72,
+                                                                                                                                                                                "8":  216
+                                                                                                                                                                            },
+                                                                                                                                                       "prefix_binding_sha256":  "989be2d938c53bea50c716aafbdebcad511dbfc815046576ffcf2dc7efea332c",
+                                                                                                                                                       "model_identity":  {
+                                                                                                                                                                              "context":  1024,
+                                                                                                                                                                              "contract_sha256":  "83bd402b39350710d8689d50f79296e9625e9c75ccb0ecee145f08067c4ee3b6",
+                                                                                                                                                                              "executable_sha256":  "bb66432dafdcda9d990f08b0c2e766e0c9d3de82070177199183268b069047fc",
+                                                                                                                                                                              "execution_kind":  "FPGA_REAL",
+                                                                                                                                                                              "input_workload_sha256":  "3906575e1ed15b43f3e7d37c83d99fd01023303441fd378d3dda210c099092d5",
+                                                                                                                                                                              "kernel_threads":  4,
+                                                                                                                                                                              "layout":  "pinned_memory_state_plus_last_logits_v1",
+                                                                                                                                                                              "libraries":  {
+                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                            },
+                                                                                                                                                                              "live_miss_prompt_policy_sha256":  "93720bb39b7e475f368f05e870ca9e130c63123fc4a95bdfe39952c1a9a2e63f",
+                                                                                                                                                                              "model_revision":  "2fc06364715b967f1860aea9cf38778875588b17",
+                                                                                                                                                                              "model_sha256":  "bb9fda88db8a7ee4ae8648e71d5189ed5209151a7e6a437d18999a9c33bbac1c",
+                                                                                                                                                                              "n_rs_seq":  0,
+                                                                                                                                                                              "n_seq_max":  1,
+                                                                                                                                                                              "natural_patient_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "neutral_prefix_choices_sha256":  "4c838769507b52affa40cec042073883494ce8711589d01ef8d49f6c901b1f82",
+                                                                                                                                                                              "physical_ubatch":  8,
+                                                                                                                                                                              "prompt_policy_sha256":  "d376db1c8b61a6c1da45010b4be89d268af223ceb4c262ca4cd917abee756a15",
+                                                                                                                                                                              "quantization":  "A12_W4A8_MLP",
+                                                                                                                                                                              "runtime_base_commit":  "81e39ad34368329b5db77620721510fd91107e80",
+                                                                                                                                                                              "sampler":  "fresh_greedy_v1",
+                                                                                                                                                                              "sidecar_sha256":  "cdb2a04dbd95d426ea8967cda0adb219a769d3630107a2af72d6ddf2d5285688",
+                                                                                                                                                                              "template_sha256":  "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+                                                                                                                                                                              "tensor_map_sha256":  "0da95f23af8b6b10dd78e7d369d83491d47649083212ea07ba305f9496465736",
+                                                                                                                                                                              "threads":  4,
+                                                                                                                                                                              "verified_loaded_libraries":  {
+                                                                                                                                                                                                                "libggml-base.so":  "b5f18d444e6f5728f2b44a9ecf48223a59cc3483c32556d915cef965fc3e7866",
+                                                                                                                                                                                                                "libggml-cpu.so":  "e52214684b55472e7a46117bf1de5eb160bd13f323b8e4924522651b7d0ddc6b",
+                                                                                                                                                                                                                "libggml.so":  "068e298cf66488c97cd4d99ff8c6a763b61e19bf545460958f79074d2351f0f3",
+                                                                                                                                                                                                                "libllama.so":  "ccbb82f034eff17f11c73957758587316dad43c16f793549ad74802fe8253db6",
+                                                                                                                                                                                                                "libsp_linear_a12_trial.so":  "17ca94f915a455018842d8a5dc73d3db54280b61e140ee5694a5b0fae559378d",
+                                                                                                                                                                                                                "libsp_linear_cpu.so":  "e0e519d29afffa1fd81cf9df417fef2667a7747cca443bfffd125dd240f5ba6f"
+                                                                                                                                                                                                            }
+                                                                                                                                                                          },
+                                                                                                                                                       "measurement":  "SESSION_SUBMIT_TO_VALIDATION_AND_NATIVE_PROFILE_NOT_BROWSER_PAINT",
+                                                                                                                                                       "hardware_cycles":  null,
+                                                                                                                                                       "question":  "疼痛有多严重？",
+                                                                                                                                                       "repeat":  1,
+                                                                                                                                                       "wall_ms":  13756.420095
+                                                                                                                                                   }
+                                                                                                                                               ],
+                                                                                                                                      "actual_backend":  "FPGA_REAL",
+                                                                                                                                      "answer_cache_used":  false,
+                                                                                                                                      "observed_hardware_cycles":  null,
+                                                                                                                                      "measurement":  "HOST_WALL_NOT_DEVICE_CYCLES"
+                                                                                                                                  }
+                                                                 },
+                                                       "stderr_tail":  "",
+                                                       "last_permission":  {
+                                                                               "request":  {
+                                                                                               "job":  0,
+                                                                                               "phase":  "router_close",
+                                                                                               "pid":  18053,
+                                                                                               "sequence":  2
+                                                                                           },
+                                                                               "allow":  true,
+                                                                               "owner_check_ms":  2.083111,
+                                                                               "health_check_ms":  3.03548
+                                                                           },
+                                                       "completed_probe_files":  4
+                                                   },
+                                      "candidate":  {
+                                                        "exists":  true,
+                                                        "files":  {
+
+                                                                  },
+                                                        "stderr_tail":  "",
+                                                        "last_permission":  {
+                                                                                "request":  {
+                                                                                                "job":  426,
+                                                                                                "phase":  "submit",
+                                                                                                "pid":  18386,
+                                                                                                "sequence":  499
+                                                                                            },
+                                                                                "allow":  true,
+                                                                                "owner_check_ms":  2.086761,
+                                                                                "health_check_ms":  2.98471
+                                                                            },
+                                                        "completed_probe_files":  0
+                                                    }
+                                  },
+                      "staged":  {
+                                     "status":  "PINNED_COMPARISON_CANDIDATES_STAGED",
+                                     "compute_runs":  0,
+                                     "pl_loads":  0,
+                                     "variants":  [
+                                                      {
+                                                          "name":  "baseline-miss-probe",
+                                                          "manifest_sha256":  "d217c64dbbfba99651d4181900c10186e926feb315c6f14d0e9be62ac4d551aa"
+                                                      },
+                                                      {
+                                                          "name":  "candidate-miss-probe",
+                                                          "manifest_sha256":  "6121c001642b6fa77518dabd52582382ba6aa50379d184d4f34013b1ef28eb0b"
+                                                      }
+                                                  ],
+                                     "root":  "/home/ubuntu/kv260-staging/a12-permission-scheduler-20261027-v1"
+                                 },
+                      "lease":  {
+                                    "schema":  "A12_MODEL_LEASE_V1",
+                                    "owner":  "A",
+                                    "scope":  "all",
+                                    "window":  "a12-permission-candidate-20261027-v1",
+                                    "identity":  "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec:98886b24-96d3-409e-a783-ce9c54873da9",
+                                    "pid":  18301,
+                                    "owner_start_ticks":  1236657,
+                                    "expires_monotonic_ns":  26784194136920,
+                                    "compute_authorized":  true,
+                                    "max_runs":  60000,
+                                    "max_loads":  72,
+                                    "explicit_bo_budget_bytes":  140591104
+                                }
+                  }
+}

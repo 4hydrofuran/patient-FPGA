@@ -1,0 +1,152 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T15:43:52.5999372Z",
+    "source_sha256":  "2ce1949f0f198c678cbfd34c9eb963b056e5802de59c059e9a405b5328994a25",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "PERMISSION_COMPARISON_CURRENT_STATE",
+                      "boot_id":  "98886b24-96d3-409e-a783-ce9c54873da9",
+                      "kernel":  "6.8.12-a10irq2",
+                      "monotonic_ns":  11544830856208,
+                      "zocl":  true,
+                      "files":  {
+                                    "STARTED.json":  {
+                                                         "status":  "STARTED_PENDING_READY_AND_BOARD_ACCEPTANCE",
+                                                         "source":  "/home/ubuntu/kv260-staging/a12-case20-debug-20261027-v1/case20-debug-t4",
+                                                         "runtime_root":  "/var/lib/kv260-a12/case20-debug-20261027-v1",
+                                                         "command":  [
+                                                                         "/usr/bin/python3",
+                                                                         "-B",
+                                                                         "/var/lib/kv260-a12/case20-debug-20261027-v1/continuous/fast_response_verify.py",
+                                                                         "--domain",
+                                                                         "BOARD",
+                                                                         "--bundle",
+                                                                         "/var/lib/kv260-a12/case20-debug-20261027-v1",
+                                                                         "--suite",
+                                                                         "web",
+                                                                         "--execute-board",
+                                                                         "--window-id",
+                                                                         "a12-case20-debug-20261027-v1"
+                                                                     ],
+                                                         "requires_kernel":  "6.8.12-a10irq2",
+                                                         "temporary_lock":  "/run/lock/patient-qwen-linear.lock",
+                                                         "temporary_rule":  "/run/udev/rules.d/71-patient-zocl-display.rules",
+                                                         "first_actual_PL_web_answer":  true,
+                                                         "answer_cache":  true,
+                                                         "BOARD":  "NOT_TESTED",
+                                                         "pid":  12056,
+                                                         "boot_id":  "98886b24-96d3-409e-a783-ce9c54873da9"
+                                                     },
+                                    "continuous/web-config.json":  {
+                                                                       "continuous":  true,
+                                                                       "profile":  "profile.json",
+                                                                       "browser_profile":  "/home/ubuntu/snap/firefox/common/a12-case20-debug-20261027",
+                                                                       "dependency_paths":  [
+                                                                                                "/home/ubuntu/patient-web-demo-20261026/.venv/lib/python3.12/site-packages"
+                                                                                            ],
+                                                                       "realtime_draft_strategy":  "FACT_COPY_GREEDY_VERIFY_V1",
+                                                                       "neutral_prefix_policy":  "LONGEST_REVIEWED_PUBLIC_PREFIX_V2",
+                                                                       "backend_modes":  {
+                                                                                             "cpu":  true,
+                                                                                             "initial":  "managed-pl",
+                                                                                             "automatic_fallback":  false
+                                                                                         },
+                                                                       "verify_first":  true,
+                                                                       "answer_cache":  {
+                                                                                            "enabled":  true,
+                                                                                            "path":  "answer-cache/catalog.json",
+                                                                                            "sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                                                            "policy":  "VERIFIED_MODEL_REPLAY_WITH_EXPLICIT_ORIGIN",
+                                                                                            "live_miss":  "ORIGINAL_FPGA_REQUIRED"
+                                                                                        },
+                                                                       "profile_model_requests":  false,
+                                                                       "verify_continuous":  false,
+                                                                       "natural_patient_policy":  "patient-natural-short-v1",
+                                                                       "case_selection":  "SERVER_RANDOM"
+                                                                   }
+                                },
+                      "lease":  {
+                                    "schema":  "A12_MODEL_LEASE_V1",
+                                    "owner":  "A",
+                                    "scope":  "all",
+                                    "window":  "a12-case20-debug-20261027-v1",
+                                    "identity":  "ea4ea714200e50181c4375b385b1e3c4a0f6d199ccb60182d62f86bcf47b64ec:98886b24-96d3-409e-a783-ce9c54873da9",
+                                    "pid":  12056,
+                                    "owner_start_ticks":  650225,
+                                    "expires_monotonic_ns":  20922746392372,
+                                    "compute_authorized":  true,
+                                    "max_runs":  60000,
+                                    "max_loads":  72,
+                                    "explicit_bo_budget_bytes":  140591104
+                                },
+                      "runtime":  "/var/lib/kv260-a12/case20-debug-20261027-v1",
+                      "manager_tail":  "INFO:     Started server process [12056]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\n",
+                      "http":  {
+                                   "schema_version":  "ui.v1",
+                                   "instance_id":  "b1a68f42ced24e6eaecb2a41d66a857f",
+                                   "phase":  "FINISHED",
+                                   "ready":  true,
+                                   "busy":  false,
+                                   "current_session_id":  "080d5a8b74d844aaa768417d27751e64",
+                                   "backend":  {
+                                                   "configured":  "native",
+                                                   "execution_kind":  "CPU_REFERENCE",
+                                                   "ready":  true,
+                                                   "hardware_enabled":  false
+                                               },
+                                   "backend_options":  [
+                                                           {
+                                                               "id":  "managed-pl",
+                                                               "label":  "FPGA"
+                                                           },
+                                                           {
+                                                               "id":  "native",
+                                                               "label":  "CPU"
+                                                           }
+                                                       ],
+                                   "capabilities":  {
+                                                        "text":  true,
+                                                        "audio":  false,
+                                                        "rule_score":  true,
+                                                        "case_selection":  "random",
+                                                        "case_count":  20,
+                                                        "chief_narration":  true,
+                                                        "chief_summary_kind":  "RULE_TEMPLATE",
+                                                        "cancel_turn":  false,
+                                                        "generation_timeout_s":  180,
+                                                        "max_active_turns":  1,
+                                                        "pending_turn_queue":  0,
+                                                        "max_turns":  200,
+                                                        "max_sessions":  8,
+                                                        "archived_sessions_readable":  true
+                                                    },
+                                   "failure":  null,
+                                   "answer_cache":  {
+                                                        "entries":  1320,
+                                                        "bytes":  1732636,
+                                                        "hits":  6,
+                                                        "misses":  0,
+                                                        "catalog_sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                        "origin_kinds":  [
+                                                                             "CPU_REFERENCE"
+                                                                         ]
+                                                    },
+                                   "verification":  {
+                                                        "software_test_only":  true,
+                                                        "board":  "NOT_TESTED",
+                                                        "medical_review":  "PENDING_TEACHER_REVIEW"
+                                                    },
+                                   "service_mode":  "continuous",
+                                   "remaining_seconds":  9377.669974748,
+                                   "demo_lab":  false
+                               },
+                      "session":  {
+                                      "session_id":  "080d5a8b74d844aaa768417d27751e64",
+                                      "case_id":  "SYN_CP_18",
+                                      "closed":  true,
+                                      "active_request_id":  null,
+                                      "turn_count":  0
+                                  },
+                      "original_case20_source_manifest_sha256":  "83a08fbb7fc8a23043be23e62adee414715d28347904bc035f2e6d95bda68d12"
+                  }
+}

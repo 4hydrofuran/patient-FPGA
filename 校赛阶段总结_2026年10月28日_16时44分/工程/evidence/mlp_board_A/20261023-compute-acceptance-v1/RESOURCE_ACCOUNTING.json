@@ -1,0 +1,81 @@
+{
+  "domain": "BOARD",
+  "observations": [
+    {
+      "event": "CONTEXT_OPENED",
+      "weight": null,
+      "monotonic_ns": 12496567622591,
+      "VmRSS_KiB": 37532,
+      "VmHWM_KiB": 37532,
+      "PSS_KiB": 28798,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 808336,
+      "explicit_bo_charged_bytes": 212992
+    },
+    {
+      "event": "WEIGHT_LOADED",
+      "weight": "hand",
+      "monotonic_ns": 12496959925934,
+      "VmRSS_KiB": 37660,
+      "VmHWM_KiB": 37660,
+      "PSS_KiB": 29038,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 808448,
+      "explicit_bo_charged_bytes": 229376
+    },
+    {
+      "event": "WEIGHT_LOADED",
+      "weight": "tails_double_scale",
+      "monotonic_ns": 12499055173320,
+      "VmRSS_KiB": 37788,
+      "VmHWM_KiB": 37788,
+      "PSS_KiB": 29152,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 808432,
+      "explicit_bo_charged_bytes": 229376
+    },
+    {
+      "event": "WEIGHT_LOADED",
+      "weight": "l00_gate",
+      "monotonic_ns": 12500001311293,
+      "VmRSS_KiB": 41372,
+      "VmHWM_KiB": 41372,
+      "PSS_KiB": 32772,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 806544,
+      "explicit_bo_charged_bytes": 2162688
+    },
+    {
+      "event": "WEIGHT_LOADED",
+      "weight": "l00_up",
+      "monotonic_ns": 12505089742065,
+      "VmRSS_KiB": 44848,
+      "VmHWM_KiB": 47004,
+      "PSS_KiB": 36215,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 806544,
+      "explicit_bo_charged_bytes": 2162688
+    },
+    {
+      "event": "WEIGHT_LOADED",
+      "weight": "l00_down",
+      "monotonic_ns": 12510263110407,
+      "VmRSS_KiB": 46808,
+      "VmHWM_KiB": 47004,
+      "PSS_KiB": 38095,
+      "CMA_total_KiB": 819200,
+      "CMA_free_KiB": 806544,
+      "explicit_bo_charged_bytes": 2162688
+    }
+  ],
+  "explicit_peak_charged_bytes": 2162688,
+  "explicit_io_charge_bytes": 212992,
+  "allocation_alignment_bytes": 8192,
+  "explicit_budget_bytes": 4194304,
+  "explicit_BO_creations_host_counter": 14,
+  "physical_bo_peak_bytes": null,
+  "implicit_XRT_BO_bytes": null,
+  "production_full_model_memory_bytes": null,
+  "accounting": "PSS/RSS include process mappings; CMA-free changes are system-wide. Do not sum PSS + CMA + explicit BO bytes.",
+  "scope": "one reusable IO workspace plus one resident weight pair; not a full-model resident memory budget"
+}

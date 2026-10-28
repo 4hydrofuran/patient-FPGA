@@ -1,0 +1,1226 @@
+[
+  {
+    "file": "node-0.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-1.bin",
+    "name": "attn_norm-0",
+    "op": "MUL",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-2.bin",
+    "name": "conv_states-0",
+    "op": "GET_ROWS",
+    "shape": [
+      18432,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      73728,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-3.bin",
+    "name": "conv_states_reshaped-0",
+    "op": "RESHAPE",
+    "shape": [
+      3,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      12,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-4.bin",
+    "name": "linear_attn_qkv_mixed-0",
+    "op": "RESHAPE",
+    "shape": [
+      6144,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      196608,
+      196608
+    ]
+  },
+  {
+    "file": "node-5.bin",
+    "name": "qkv_mixed_transposed-0",
+    "op": "TRANSPOSE",
+    "shape": [
+      8,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      24576,
+      4,
+      196608,
+      196608
+    ]
+  },
+  {
+    "file": "node-6.bin",
+    "name": "conv_input-0",
+    "op": "CONCAT",
+    "shape": [
+      11,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      44,
+      270336,
+      270336
+    ]
+  },
+  {
+    "file": "node-7.bin",
+    "name": "conv_state_last-0",
+    "op": "VIEW",
+    "shape": [
+      3,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      44,
+      270336,
+      270336
+    ]
+  },
+  {
+    "file": "node-8.bin",
+    "name": "conv_state_update-0",
+    "op": "VIEW",
+    "shape": [
+      18432,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      73728,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-9.bin",
+    "name": "conv_output_raw-0",
+    "op": "SSM_CONV",
+    "shape": [
+      6144,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      196608,
+      196608
+    ]
+  },
+  {
+    "file": "node-10.bin",
+    "name": "conv_output_silu-0",
+    "op": "UNARY",
+    "shape": [
+      6144,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      196608,
+      196608
+    ]
+  },
+  {
+    "file": "node-11.bin",
+    "name": "q_conv-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      196608
+    ]
+  },
+  {
+    "file": "node-12.bin",
+    "name": "q_conv_predelta-0",
+    "op": "SCALE",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      65536
+    ]
+  },
+  {
+    "file": "node-13.bin",
+    "name": "k_conv-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      196608
+    ]
+  },
+  {
+    "file": "node-14.bin",
+    "name": "k_conv_predelta-0",
+    "op": "SCALE",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      65536
+    ]
+  },
+  {
+    "file": "node-15.bin",
+    "name": "v_conv_predelta-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      196608
+    ]
+  },
+  {
+    "file": "node-16.bin",
+    "name": "alpha-0",
+    "op": "RESHAPE",
+    "shape": [
+      16,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "node-17.bin",
+    "name": "a_softplus-0",
+    "op": "UNARY",
+    "shape": [
+      16,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "node-18.bin",
+    "name": "gate-0",
+    "op": "MUL",
+    "shape": [
+      16,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "node-19.bin",
+    "name": "beta-0",
+    "op": "RESHAPE",
+    "shape": [
+      1,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      4,
+      64,
+      512
+    ]
+  },
+  {
+    "file": "node-20.bin",
+    "name": "beta_sigmoid-0",
+    "op": "UNARY",
+    "shape": [
+      1,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      4,
+      64,
+      512
+    ]
+  },
+  {
+    "file": "node-21.bin",
+    "name": "state_predelta-0",
+    "op": "RESHAPE",
+    "shape": [
+      128,
+      128,
+      16,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      65536,
+      1048576
+    ]
+  },
+  {
+    "file": "node-22.bin",
+    "name": "new_state-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      128,
+      16,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      65536,
+      1048576
+    ]
+  },
+  {
+    "file": "node-23.bin",
+    "name": "attn_output-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      65536
+    ]
+  },
+  {
+    "file": "node-24.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      128,
+      16,
+      8,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      65536
+    ]
+  },
+  {
+    "file": "node-25.bin",
+    "name": "z-0",
+    "op": "CONCAT",
+    "shape": [
+      2048,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      8192,
+      65536,
+      65536
+    ]
+  },
+  {
+    "file": "node-26.bin",
+    "name": "final_output-0",
+    "op": "RESHAPE",
+    "shape": [
+      2048,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      8192,
+      65536,
+      65536
+    ]
+  },
+  {
+    "file": "node-27.bin",
+    "name": "linear_attn_out-0",
+    "op": "CONCAT",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-28.bin",
+    "name": "attn_residual-0",
+    "op": "ADD",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-29.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-30.bin",
+    "name": "attn_post_norm-0",
+    "op": "MUL",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-31.bin",
+    "name": "ffn_gate-0",
+    "op": "CUSTOM",
+    "shape": [
+      3584,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      114688,
+      114688
+    ]
+  },
+  {
+    "file": "node-32.bin",
+    "name": "ffn_up-0",
+    "op": "CUSTOM",
+    "shape": [
+      3584,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      114688,
+      114688
+    ]
+  },
+  {
+    "file": "node-33.bin",
+    "name": "ffn_swiglu-0",
+    "op": "GLU",
+    "shape": [
+      3584,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      114688,
+      114688
+    ]
+  },
+  {
+    "file": "node-34.bin",
+    "name": "ffn_out-0",
+    "op": "CUSTOM",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-35.bin",
+    "name": "l_out-0",
+    "op": "ADD",
+    "shape": [
+      1024,
+      8,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      32768,
+      32768
+    ]
+  },
+  {
+    "file": "node-36.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-37.bin",
+    "name": "attn_norm-0",
+    "op": "MUL",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-38.bin",
+    "name": "conv_states-0",
+    "op": "GET_ROWS",
+    "shape": [
+      18432,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      73728,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-39.bin",
+    "name": "conv_states_reshaped-0",
+    "op": "RESHAPE",
+    "shape": [
+      3,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      12,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-40.bin",
+    "name": "linear_attn_qkv_mixed-0",
+    "op": "RESHAPE",
+    "shape": [
+      6144,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-41.bin",
+    "name": "qkv_mixed_transposed-0",
+    "op": "TRANSPOSE",
+    "shape": [
+      1,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      24576,
+      4,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-42.bin",
+    "name": "conv_input-0",
+    "op": "CONCAT",
+    "shape": [
+      4,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      16,
+      98304,
+      98304
+    ]
+  },
+  {
+    "file": "node-43.bin",
+    "name": "conv_state_last-0",
+    "op": "VIEW",
+    "shape": [
+      3,
+      6144,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      16,
+      98304,
+      98304
+    ]
+  },
+  {
+    "file": "node-44.bin",
+    "name": "conv_state_update-0",
+    "op": "VIEW",
+    "shape": [
+      18432,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      73728,
+      73728,
+      73728
+    ]
+  },
+  {
+    "file": "node-45.bin",
+    "name": "conv_output_raw-0",
+    "op": "SSM_CONV",
+    "shape": [
+      6144,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-46.bin",
+    "name": "conv_output_silu-0",
+    "op": "UNARY",
+    "shape": [
+      6144,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      24576,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-47.bin",
+    "name": "q_conv-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-48.bin",
+    "name": "q_conv_predelta-0",
+    "op": "SCALE",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-49.bin",
+    "name": "k_conv-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-50.bin",
+    "name": "k_conv_predelta-0",
+    "op": "SCALE",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-51.bin",
+    "name": "v_conv_predelta-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      24576,
+      24576
+    ]
+  },
+  {
+    "file": "node-52.bin",
+    "name": "alpha-0",
+    "op": "RESHAPE",
+    "shape": [
+      16,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "file": "node-53.bin",
+    "name": "a_softplus-0",
+    "op": "UNARY",
+    "shape": [
+      16,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "file": "node-54.bin",
+    "name": "gate-0",
+    "op": "MUL",
+    "shape": [
+      16,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "file": "node-55.bin",
+    "name": "beta-0",
+    "op": "RESHAPE",
+    "shape": [
+      1,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4,
+      64,
+      64
+    ]
+  },
+  {
+    "file": "node-56.bin",
+    "name": "beta_sigmoid-0",
+    "op": "UNARY",
+    "shape": [
+      1,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4,
+      64,
+      64
+    ]
+  },
+  {
+    "file": "node-57.bin",
+    "name": "state_predelta-0",
+    "op": "RESHAPE",
+    "shape": [
+      128,
+      128,
+      16,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      65536,
+      1048576
+    ]
+  },
+  {
+    "file": "node-58.bin",
+    "name": "new_state-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      128,
+      16,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      65536,
+      1048576
+    ]
+  },
+  {
+    "file": "node-59.bin",
+    "name": "attn_output-0",
+    "op": "VIEW",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-60.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      128,
+      16,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      512,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-61.bin",
+    "name": "z-0",
+    "op": "MUL_MAT",
+    "shape": [
+      2048,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      8192,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-62.bin",
+    "name": "final_output-0",
+    "op": "RESHAPE",
+    "shape": [
+      2048,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      8192,
+      8192,
+      8192
+    ]
+  },
+  {
+    "file": "node-63.bin",
+    "name": "linear_attn_out-0",
+    "op": "MUL_MAT",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-64.bin",
+    "name": "attn_residual-0",
+    "op": "ADD",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-65.bin",
+    "name": "norm-0",
+    "op": "RMS_NORM",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-66.bin",
+    "name": "attn_post_norm-0",
+    "op": "MUL",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-67.bin",
+    "name": "ffn_gate-0",
+    "op": "CUSTOM",
+    "shape": [
+      3584,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      14336,
+      14336
+    ]
+  },
+  {
+    "file": "node-68.bin",
+    "name": "ffn_up-0",
+    "op": "CUSTOM",
+    "shape": [
+      3584,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      14336,
+      14336
+    ]
+  },
+  {
+    "file": "node-69.bin",
+    "name": "ffn_swiglu-0",
+    "op": "GLU",
+    "shape": [
+      3584,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      14336,
+      14336,
+      14336
+    ]
+  },
+  {
+    "file": "node-70.bin",
+    "name": "ffn_out-0",
+    "op": "CUSTOM",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  },
+  {
+    "file": "node-71.bin",
+    "name": "l_out-0",
+    "op": "ADD",
+    "shape": [
+      1024,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      4,
+      4096,
+      4096,
+      4096
+    ]
+  }
+]

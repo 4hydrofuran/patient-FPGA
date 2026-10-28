@@ -1,0 +1,30 @@
+{
+    "schema":  "A10_ONE_MANUAL_COLD_IRQ2_BOOT_V1",
+    "utc":  "2026-10-24T02:00:38.0724085Z",
+    "status":  "STOPPED_NO_AUTOMATIC_RECOVERY",
+    "events":  [
+                   {
+                       "utc":  "2026-10-24T02:00:41.6623555Z",
+                       "text":  "No input sent. Awaiting fresh U-Boot countdown.",
+                       "kind":  "armed"
+                   },
+                   {
+                       "utc":  "2026-10-24T02:05:41.8387841Z",
+                       "text":  "",
+                       "kind":  "fresh_boot_capture"
+                   },
+                   {
+                       "utc":  "2026-10-24T02:05:41.9784216Z",
+                       "text":  "No PL or compute commands sent.",
+                       "kind":  "serial_closed"
+                   }
+               ],
+    "autoboot_stop_bytes_sent":  0,
+    "boot_commands_sent":  0,
+    "reboot_commands_sent":  0,
+    "default_boot_changed":  false,
+    "pl_loads":  0,
+    "compute_runs":  0,
+    "closed":  true,
+    "error":  "No fresh countdown: no bytes sent"
+}

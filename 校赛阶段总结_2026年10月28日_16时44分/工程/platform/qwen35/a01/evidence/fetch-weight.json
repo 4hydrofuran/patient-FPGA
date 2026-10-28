@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "platform/local/a1/venv/Scripts/python.exe",
+    "platform/qwen35/a01/fetch.py",
+    "weight"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-01T16:58:33.627346+00:00",
+  "elapsed_s": 464.0252440999611,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\fetch.py\", line 59, in <module>\n    if __name__ == \"__main__\": main()\n                               ~~~~^^\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\fetch.py\", line 51, in main\n    get(base + name, DEST / name)\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Patientqwen\\platform\\qwen35\\a01\\fetch.py\", line 32, in get\n    if expected is not None and part.stat().st_size != int(expected): raise ValueError(\"Incomplete response\")\n                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Incomplete response\n"
+}

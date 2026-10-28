@@ -1,0 +1,11 @@
+--- source-v1/src/llama-graph.cpp
++++ source-v2/src/llama-graph.cpp
+@@ -1526,7 +1526,7 @@
+         GGML_ASSERT(!w_s && loras->empty()); // Exact selected bias-free MLP only.
+         return custom;
+     }
+-    ggml_tensor * res = ggml_mul_mat(ctx0, w, cur);
++    ggml_tensor * res = sp_llama_stable_mm(ctx0, w, cur);
+ 
+     if (prec_policy) {
+         prec_policy->apply(res);

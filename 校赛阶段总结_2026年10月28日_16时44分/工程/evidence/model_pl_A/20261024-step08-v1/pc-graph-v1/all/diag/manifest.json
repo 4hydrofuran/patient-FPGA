@@ -1,0 +1,3735 @@
+{
+  "logits": [
+    {
+      "file": "logits-prefill-0.f32",
+      "position": 0
+    },
+    {
+      "file": "logits-prefill-1.f32",
+      "position": 1
+    },
+    {
+      "file": "logits-prefill-2.f32",
+      "position": 2
+    },
+    {
+      "file": "logits-prefill-3.f32",
+      "position": 3
+    },
+    {
+      "file": "logits-prefill-4.f32",
+      "position": 4
+    },
+    {
+      "file": "logits-prefill-5.f32",
+      "position": 5
+    },
+    {
+      "file": "logits-prefill-6.f32",
+      "position": 6
+    },
+    {
+      "file": "logits-prefill-7.f32",
+      "position": 7
+    },
+    {
+      "file": "logits-prefill-8.f32",
+      "position": 8
+    },
+    {
+      "file": "logits-decode-0.f32",
+      "position": 9
+    }
+  ],
+  "prefill_chunk": 8,
+  "projections": [
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l00_gate",
+      "input": "1_1_l00_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l00_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l00_up",
+      "input": "1_1_l00_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l00_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l00_down",
+      "input": "1_1_l00_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l00_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l01_gate",
+      "input": "1_1_l01_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l01_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l01_up",
+      "input": "1_1_l01_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l01_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l01_down",
+      "input": "1_1_l01_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l01_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l02_gate",
+      "input": "1_1_l02_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l02_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l02_up",
+      "input": "1_1_l02_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l02_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l02_down",
+      "input": "1_1_l02_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l02_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l03_gate",
+      "input": "1_1_l03_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l03_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l03_up",
+      "input": "1_1_l03_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l03_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l03_down",
+      "input": "1_1_l03_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l03_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l04_gate",
+      "input": "1_1_l04_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l04_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l04_up",
+      "input": "1_1_l04_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l04_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l04_down",
+      "input": "1_1_l04_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l04_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l05_gate",
+      "input": "1_1_l05_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l05_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l05_up",
+      "input": "1_1_l05_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l05_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l05_down",
+      "input": "1_1_l05_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l05_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l06_gate",
+      "input": "1_1_l06_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l06_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l06_up",
+      "input": "1_1_l06_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l06_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l06_down",
+      "input": "1_1_l06_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l06_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l07_gate",
+      "input": "1_1_l07_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l07_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l07_up",
+      "input": "1_1_l07_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l07_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l07_down",
+      "input": "1_1_l07_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l07_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l08_gate",
+      "input": "1_1_l08_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l08_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l08_up",
+      "input": "1_1_l08_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l08_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l08_down",
+      "input": "1_1_l08_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l08_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l09_gate",
+      "input": "1_1_l09_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l09_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l09_up",
+      "input": "1_1_l09_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l09_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l09_down",
+      "input": "1_1_l09_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l09_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l10_gate",
+      "input": "1_1_l10_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l10_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l10_up",
+      "input": "1_1_l10_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l10_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l10_down",
+      "input": "1_1_l10_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l10_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l11_gate",
+      "input": "1_1_l11_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l11_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l11_up",
+      "input": "1_1_l11_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l11_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l11_down",
+      "input": "1_1_l11_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l11_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l12_gate",
+      "input": "1_1_l12_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l12_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l12_up",
+      "input": "1_1_l12_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l12_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l12_down",
+      "input": "1_1_l12_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l12_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l13_gate",
+      "input": "1_1_l13_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l13_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l13_up",
+      "input": "1_1_l13_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l13_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l13_down",
+      "input": "1_1_l13_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l13_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l14_gate",
+      "input": "1_1_l14_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l14_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l14_up",
+      "input": "1_1_l14_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l14_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l14_down",
+      "input": "1_1_l14_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l14_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l15_gate",
+      "input": "1_1_l15_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l15_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l15_up",
+      "input": "1_1_l15_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l15_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l15_down",
+      "input": "1_1_l15_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l15_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l16_gate",
+      "input": "1_1_l16_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l16_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l16_up",
+      "input": "1_1_l16_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l16_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l16_down",
+      "input": "1_1_l16_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l16_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l17_gate",
+      "input": "1_1_l17_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l17_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l17_up",
+      "input": "1_1_l17_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l17_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l17_down",
+      "input": "1_1_l17_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l17_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l18_gate",
+      "input": "1_1_l18_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l18_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l18_up",
+      "input": "1_1_l18_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l18_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l18_down",
+      "input": "1_1_l18_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l18_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l19_gate",
+      "input": "1_1_l19_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l19_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l19_up",
+      "input": "1_1_l19_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l19_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l19_down",
+      "input": "1_1_l19_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l19_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l20_gate",
+      "input": "1_1_l20_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l20_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l20_up",
+      "input": "1_1_l20_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l20_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l20_down",
+      "input": "1_1_l20_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l20_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l21_gate",
+      "input": "1_1_l21_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l21_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l21_up",
+      "input": "1_1_l21_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l21_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l21_down",
+      "input": "1_1_l21_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l21_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l22_gate",
+      "input": "1_1_l22_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l22_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l22_up",
+      "input": "1_1_l22_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l22_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l22_down",
+      "input": "1_1_l22_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l22_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l23_gate",
+      "input": "1_1_l23_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l23_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l23_up",
+      "input": "1_1_l23_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        32768,
+        32768
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l23_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 8,
+      "epoch": 1,
+      "execution": 1,
+      "id": "l23_down",
+      "input": "1_1_l23_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        114688,
+        114688
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "1_1_l23_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l00_gate",
+      "input": "2_2_l00_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l00_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l00_up",
+      "input": "2_2_l00_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l00_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l00_down",
+      "input": "2_2_l00_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l00_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l01_gate",
+      "input": "2_2_l01_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l01_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l01_up",
+      "input": "2_2_l01_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l01_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l01_down",
+      "input": "2_2_l01_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l01_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l02_gate",
+      "input": "2_2_l02_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l02_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l02_up",
+      "input": "2_2_l02_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l02_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l02_down",
+      "input": "2_2_l02_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l02_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l03_gate",
+      "input": "2_2_l03_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l03_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l03_up",
+      "input": "2_2_l03_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l03_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l03_down",
+      "input": "2_2_l03_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l03_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l04_gate",
+      "input": "2_2_l04_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l04_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l04_up",
+      "input": "2_2_l04_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l04_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l04_down",
+      "input": "2_2_l04_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l04_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l05_gate",
+      "input": "2_2_l05_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l05_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l05_up",
+      "input": "2_2_l05_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l05_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l05_down",
+      "input": "2_2_l05_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l05_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l06_gate",
+      "input": "2_2_l06_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l06_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l06_up",
+      "input": "2_2_l06_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l06_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l06_down",
+      "input": "2_2_l06_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l06_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l07_gate",
+      "input": "2_2_l07_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l07_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l07_up",
+      "input": "2_2_l07_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l07_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l07_down",
+      "input": "2_2_l07_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l07_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l08_gate",
+      "input": "2_2_l08_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l08_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l08_up",
+      "input": "2_2_l08_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l08_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l08_down",
+      "input": "2_2_l08_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l08_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l09_gate",
+      "input": "2_2_l09_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l09_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l09_up",
+      "input": "2_2_l09_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l09_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l09_down",
+      "input": "2_2_l09_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l09_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l10_gate",
+      "input": "2_2_l10_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l10_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l10_up",
+      "input": "2_2_l10_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l10_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l10_down",
+      "input": "2_2_l10_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l10_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l11_gate",
+      "input": "2_2_l11_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l11_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l11_up",
+      "input": "2_2_l11_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l11_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l11_down",
+      "input": "2_2_l11_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l11_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l12_gate",
+      "input": "2_2_l12_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l12_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l12_up",
+      "input": "2_2_l12_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l12_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l12_down",
+      "input": "2_2_l12_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l12_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l13_gate",
+      "input": "2_2_l13_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l13_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l13_up",
+      "input": "2_2_l13_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l13_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l13_down",
+      "input": "2_2_l13_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l13_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l14_gate",
+      "input": "2_2_l14_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l14_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l14_up",
+      "input": "2_2_l14_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l14_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l14_down",
+      "input": "2_2_l14_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l14_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l15_gate",
+      "input": "2_2_l15_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l15_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l15_up",
+      "input": "2_2_l15_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l15_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l15_down",
+      "input": "2_2_l15_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l15_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l16_gate",
+      "input": "2_2_l16_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l16_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l16_up",
+      "input": "2_2_l16_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l16_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l16_down",
+      "input": "2_2_l16_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l16_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l17_gate",
+      "input": "2_2_l17_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l17_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l17_up",
+      "input": "2_2_l17_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l17_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l17_down",
+      "input": "2_2_l17_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l17_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l18_gate",
+      "input": "2_2_l18_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l18_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l18_up",
+      "input": "2_2_l18_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l18_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l18_down",
+      "input": "2_2_l18_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l18_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l19_gate",
+      "input": "2_2_l19_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l19_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l19_up",
+      "input": "2_2_l19_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l19_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l19_down",
+      "input": "2_2_l19_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l19_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l20_gate",
+      "input": "2_2_l20_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l20_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l20_up",
+      "input": "2_2_l20_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l20_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l20_down",
+      "input": "2_2_l20_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l20_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l21_gate",
+      "input": "2_2_l21_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l21_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l21_up",
+      "input": "2_2_l21_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l21_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l21_down",
+      "input": "2_2_l21_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l21_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l22_gate",
+      "input": "2_2_l22_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l22_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l22_up",
+      "input": "2_2_l22_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l22_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l22_down",
+      "input": "2_2_l22_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l22_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l23_gate",
+      "input": "2_2_l23_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l23_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l23_up",
+      "input": "2_2_l23_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l23_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 2,
+      "id": "l23_down",
+      "input": "2_2_l23_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "2_2_l23_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l00_gate",
+      "input": "3_3_l00_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l00_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l00_up",
+      "input": "3_3_l00_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l00_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l00_down",
+      "input": "3_3_l00_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l00_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l01_gate",
+      "input": "3_3_l01_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l01_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l01_up",
+      "input": "3_3_l01_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l01_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l01_down",
+      "input": "3_3_l01_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l01_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l02_gate",
+      "input": "3_3_l02_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l02_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l02_up",
+      "input": "3_3_l02_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l02_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l02_down",
+      "input": "3_3_l02_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l02_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l03_gate",
+      "input": "3_3_l03_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l03_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l03_up",
+      "input": "3_3_l03_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l03_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l03_down",
+      "input": "3_3_l03_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l03_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l04_gate",
+      "input": "3_3_l04_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l04_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l04_up",
+      "input": "3_3_l04_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l04_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l04_down",
+      "input": "3_3_l04_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l04_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l05_gate",
+      "input": "3_3_l05_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l05_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l05_up",
+      "input": "3_3_l05_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l05_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l05_down",
+      "input": "3_3_l05_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l05_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l06_gate",
+      "input": "3_3_l06_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l06_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l06_up",
+      "input": "3_3_l06_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l06_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l06_down",
+      "input": "3_3_l06_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l06_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l07_gate",
+      "input": "3_3_l07_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l07_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l07_up",
+      "input": "3_3_l07_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l07_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l07_down",
+      "input": "3_3_l07_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l07_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l08_gate",
+      "input": "3_3_l08_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l08_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l08_up",
+      "input": "3_3_l08_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l08_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l08_down",
+      "input": "3_3_l08_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l08_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l09_gate",
+      "input": "3_3_l09_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l09_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l09_up",
+      "input": "3_3_l09_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l09_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l09_down",
+      "input": "3_3_l09_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l09_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l10_gate",
+      "input": "3_3_l10_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l10_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l10_up",
+      "input": "3_3_l10_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l10_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l10_down",
+      "input": "3_3_l10_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l10_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l11_gate",
+      "input": "3_3_l11_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l11_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l11_up",
+      "input": "3_3_l11_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l11_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l11_down",
+      "input": "3_3_l11_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l11_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l12_gate",
+      "input": "3_3_l12_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l12_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l12_up",
+      "input": "3_3_l12_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l12_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l12_down",
+      "input": "3_3_l12_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l12_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l13_gate",
+      "input": "3_3_l13_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l13_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l13_up",
+      "input": "3_3_l13_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l13_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l13_down",
+      "input": "3_3_l13_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l13_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l14_gate",
+      "input": "3_3_l14_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l14_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l14_up",
+      "input": "3_3_l14_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l14_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l14_down",
+      "input": "3_3_l14_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l14_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l15_gate",
+      "input": "3_3_l15_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l15_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l15_up",
+      "input": "3_3_l15_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l15_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l15_down",
+      "input": "3_3_l15_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l15_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l16_gate",
+      "input": "3_3_l16_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l16_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l16_up",
+      "input": "3_3_l16_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l16_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l16_down",
+      "input": "3_3_l16_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l16_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l17_gate",
+      "input": "3_3_l17_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l17_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l17_up",
+      "input": "3_3_l17_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l17_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l17_down",
+      "input": "3_3_l17_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l17_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l18_gate",
+      "input": "3_3_l18_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l18_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l18_up",
+      "input": "3_3_l18_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l18_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l18_down",
+      "input": "3_3_l18_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l18_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l19_gate",
+      "input": "3_3_l19_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l19_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l19_up",
+      "input": "3_3_l19_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l19_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l19_down",
+      "input": "3_3_l19_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l19_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l20_gate",
+      "input": "3_3_l20_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l20_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l20_up",
+      "input": "3_3_l20_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l20_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l20_down",
+      "input": "3_3_l20_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l20_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l21_gate",
+      "input": "3_3_l21_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l21_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l21_up",
+      "input": "3_3_l21_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l21_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l21_down",
+      "input": "3_3_l21_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l21_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l22_gate",
+      "input": "3_3_l22_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l22_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l22_up",
+      "input": "3_3_l22_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l22_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l22_down",
+      "input": "3_3_l22_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l22_down.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l23_gate",
+      "input": "3_3_l23_gate.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l23_gate.y.bin"
+    },
+    {
+      "K": 1024,
+      "N": 3584,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l23_up",
+      "input": "3_3_l23_up.x.bin",
+      "input_strides": [
+        4,
+        4096,
+        4096,
+        4096
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l23_up.y.bin"
+    },
+    {
+      "K": 3584,
+      "N": 1024,
+      "T": 1,
+      "epoch": 1,
+      "execution": 3,
+      "id": "l23_down",
+      "input": "3_3_l23_down.x.bin",
+      "input_strides": [
+        4,
+        14336,
+        14336,
+        14336
+      ],
+      "op": "GGML_OP_CUSTOM",
+      "output": "3_3_l23_down.y.bin"
+    }
+  ],
+  "prompt_tokens": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "scope": "all",
+  "teacher_tokens": [
+    10,
+    11
+  ]
+}

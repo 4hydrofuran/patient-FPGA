@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "wsl",
+    "-d",
+    "KV260-A-2204",
+    "--cd",
+    "/mnt/c/Patientqwen",
+    "--",
+    "/home/member-a/voice-a03/venv/bin/python",
+    "-m",
+    "platform.qwen35.a04.test_vectors",
+    "--output",
+    "eval/qwen35/a04/vectors-v1",
+    "--binary",
+    "/home/member-a/qwen35-a04/build-v1/w4ref"
+  ],
+  "cwd": "C:\\Patientqwen",
+  "started_utc": "2026-10-02T08:42:25.567644+00:00",
+  "elapsed_s": 6.336995200021192,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "/home/member-a/voice-a03/venv/bin/python: Error while finding module specification for 'platform.qwen35.a04.test_vectors' (ModuleNotFoundError: No module named 'platform.qwen35'; 'platform' is not a package)\n"
+}

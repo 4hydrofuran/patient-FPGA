@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>无模型流程联调</title>
+<style>
+*{box-sizing:border-box}body{font:17px/1.6 system-ui,sans-serif;background:#eae7df;color:#302f2a;max-width:900px;margin:20px auto;padding:0 20px}
+h1{font-size:24px}a{color:#354c3b}form{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:#fbf9f3;padding:16px;border:1px solid #cbc6b9}
+label{display:flex;flex-direction:column}button,select,input{font:inherit;min-height:48px;padding:8px;border:1px solid #817d70;background:#fff;color:inherit}
+button{cursor:pointer}button:disabled{opacity:.5;cursor:default}#message{min-height:28px;color:#8b3e32}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#fbf9f3;padding:12px;max-height:180px;overflow:auto;font-size:14px}p{margin:12px 0}
+</style>
+<h1>无模型流程联调</h1>
+<p>这里控制下一次提问的模拟行为。<a href="/" target="_blank" rel="noopener">打开问诊页面</a> 后，保留本页用于切换场景。</p>
+<form id="scenario-form">
+<label>下一轮场景<select id="scenario"><option value="normal">正常规则回答</option><option value="delayed">延迟返回（可测试取消）</option><option value="wrong_fact">错误事实候选（应被拦截）</option><option value="timeout">模拟回答超时</option><option value="failure">模拟回答失败</option></select></label>
+<label>等待秒数（延迟、超时、失败）<input id="delay" type="number" min="0.2" max="10" step="0.2" value="3" required></label>
+<button id="arm" type="submit">应用到下一轮</button>
+</form>
+<p id="message" role="status" aria-live="polite"></p>
+<p>错误事实测试请输入“每次疼痛持续多久？”。超时应显示通过检查的模板回答；失败应提示未发布回答。延迟期间可点取消，随后到达的回答应被丢弃。</p>
+<p>场景仅生效一次，之后恢复正常。澄清、拒绝等不调用回答模块的问题会消耗选择，但不会触发故障；下面会标明回答模块是否实际进入。</p>
+<pre id="diagnostics" aria-label="联调运行记录"></pre>
+<p>仅验证软件流程，不运行真实模型、语音或 FPGA。主任评价仍使用规则模板。请在独立服务上联调，以免影响正在进行的练习。</p>
+<script src="/lab.js" defer></script>
+</html>

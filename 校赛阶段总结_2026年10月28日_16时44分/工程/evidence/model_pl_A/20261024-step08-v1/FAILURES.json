@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prepare_01",
+    "domain": "PC",
+    "exit_code": 1,
+    "problem": "Transcript source text/final missing",
+    "resolution": "Typed final transcript prepared; prepare_02 passed"
+  },
+  {
+    "id": "ssh_before_recovery",
+    "domain": "TRANSPORT",
+    "exit_code": 255,
+    "problem": "Default1036 kernel had no direct IPv4",
+    "resolution": "Authorized temporary irq2 cold boot and unsaved NM profile restored connection"
+  },
+  {
+    "id": "uart_network_01",
+    "domain": "READONLY_TRANSPORT",
+    "exit_code": 2,
+    "problem": "Existing reader rejected login prompt",
+    "resolution": "Explicit prompt-verified hidden UART login"
+  },
+  {
+    "id": "restore_once_01",
+    "domain": "PRE_REBOOT_GUARD",
+    "problem": "Canonical tmpfs lock absent after boot",
+    "resolution": "Safe root O_CREAT/NOFOLLOW/exclusive lock initialization; this failed attempt sent no reboot"
+  },
+  {
+    "id": "normal_reboot_fsbl",
+    "domain": "BOARD_BOOT",
+    "problem": "One actual normal reboot produced only FSBL prefix; no U-Boot/Linux observed",
+    "resolution": "User-authorized one manual cold cycle restored irq2; warm reset cause not fixed; raw failure retained"
+  },
+  {
+    "id": "cold_wait_01",
+    "domain": "UART_WAIT",
+    "problem": "No fresh power-on log in first300sec passive window",
+    "resolution": "No bytes/boot commands sent; re-armed before user-reported one cold cycle"
+  },
+  {
+    "id": "network_prefix_scope",
+    "domain": "LOCAL_GENERATOR",
+    "exit_code": 1,
+    "problem": "Dot-sourced param reset OutputPath",
+    "resolution": "Reserve input before source; no UART command from this rejected invocation"
+  },
+  {
+    "id": "network_pin_reservation",
+    "domain": "LOCAL_GENERATOR",
+    "exit_code": 1,
+    "problem": "Exclusive old pin file already exists",
+    "resolution": "Kept old pin and wrote distinct v2/v3/v4 receipts"
+  },
+  {
+    "id": "network_empty_ipv4",
+    "domain": "UART_ROOT_GUARD",
+    "exit_code": 1,
+    "problem": "ip -j -4 with no IPv4 returned empty list",
+    "resolution": "Read exact eth0 link and filter inet; failure occurred before address addition"
+  },
+  {
+    "id": "network_ip_cleared",
+    "domain": "BOARD_NETWORK",
+    "exit_code": 255,
+    "problem": "NetworkManager removed raw volatile ip addr addition",
+    "resolution": "One new unsaved NM manual profile; stable pinned SSH afterward"
+  },
+  {
+    "id": "generation_time_budget_v1",
+    "domain": "UNEXECUTED_DRAFT",
+    "problem": "Original1200sec total/120sec receive insufficient for measured guarded full graph",
+    "resolution": "Explicit time-only v2 saved before any dev execution; original workload47736permits/17requests/24output limit and resource/numeric gates unchanged"
+  },
+  {
+    "id": "static_final_02",
+    "domain": "LOCAL_READONLY_CHECK",
+    "exit_code": 1,
+    "problem": "Exclusive STATIC_REVIEW.json already exists",
+    "resolution": "Added explicit distinct output-name; original retained, static_final_03 passed"
+  },
+  {
+    "id": "powershell_parse_01",
+    "domain": "LOCAL_READONLY_CHECK",
+    "exit_code": 1,
+    "problem": "Default process script execution policy rejected the parser script before running",
+    "resolution": "Used process-only ExecutionPolicy Bypass for reviewed parse-only script; no system policy change; powershell_parse_03 passed"
+  },
+  {
+    "id": "powershell_parse_02",
+    "domain": "LOCAL_READONLY_CHECK",
+    "exit_code": 1,
+    "problem": "Child Windows PowerShell lacked Get-FileHash cmdlet",
+    "resolution": "Used portable .NET SHA256 without installation or module changes; powershell_parse_03 passed"
+  },
+  {
+    "id": "final_scan_transient_reads",
+    "domain": "BOARD_FINALIZATION_OBSERVATION",
+    "attempts": {
+      "diagnostic": 2,
+      "generation": 2
+    },
+    "problem": "Process-set/FD-table changes can reject an incomplete observation",
+    "resolution": "Every rejected observation retained. V2 accepts only a later fresh complete no-users scan; normal exit and independent archived lease hash verified. No failed scan promoted to PASS"
+  },
+  {
+    "id": "dev_raw_quality",
+    "domain": "BOARD_MODEL_LANGUAGE",
+    "status": "PASS_DEV_FINITE_CHECKER",
+    "counts": {
+      "pass": 17
+    },
+    "token_limit_without_EOS": [],
+    "resolution": "Raw outputs and checker decisions retained; no replacement or automatic CPU/template fallback"
+  },
+  {
+    "id": "step06_failures",
+    "domain": "HISTORICAL",
+    "status": "PRESERVED",
+    "resolution": "No edits to old evidence or thresholds; same-board S1/S2 used as already reviewed"
+  }
+]
