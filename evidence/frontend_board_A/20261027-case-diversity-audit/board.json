@@ -1,0 +1,490 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T15:23:53.9307595Z",
+    "source_sha256":  "11987c03654b57d13f21d75200db24b474e1891f389381a8f30abdf69ce12dab",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "scope":  "READ_ONLY_DEPLOYED_CASE_DIVERSITY",
+                      "root":  "/var/lib/kv260-a12/case20-debug-20261027-v1",
+                      "case_count":  20,
+                      "file_count":  20,
+                      "groups":  {
+                                     "活动相关":  6,
+                                     "动作相关":  4,
+                                     "进食体位相关":  4,
+                                     "呼吸相关":  3,
+                                     "紧张相关":  1,
+                                     "信息不完整":  1,
+                                     "静息相关":  1
+                                 },
+                      "profiles":  [
+                                       {
+                                           "case_id":  "SYN_CP_01",
+                                           "title":  "快走相关胸骨后压迫",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "直接陈述",
+                                           "chief_complaint_variants":  [
+                                                                            "我胸口像被东西压着。",
+                                                                            "快走的时候，胸口里面会压着疼。",
+                                                                            "胸骨后面疼，歇一会儿能轻点。"
+                                                                        ],
+                                           "case_origin":  "retained_original",
+                                           "source_ids":  [
+                                                              "PROJECT_ORIGINAL"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_02",
+                                           "title":  "转身相关左胸针扎",
+                                           "symptom_group":  "动作相关",
+                                           "speech_style":  "日常口语",
+                                           "chief_complaint_variants":  [
+                                                                            "我左边胸口像针扎一样。",
+                                                                            "一转身，左胸就扎着疼。",
+                                                                            "左边胸口有针扎的感觉。"
+                                                                        ],
+                                           "case_origin":  "retained_original",
+                                           "source_ids":  [
+                                                              "PROJECT_ORIGINAL"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_03",
+                                           "title":  "进食后胸前烧灼",
+                                           "symptom_group":  "进食体位相关",
+                                           "speech_style":  "感觉比喻",
+                                           "chief_complaint_variants":  [
+                                                                            "吃完东西后，胸口像火烧一样。",
+                                                                            "我胸口正中有烧灼的感觉。",
+                                                                            "吃过东西，胸前正中会烧得难受。"
+                                                                        ],
+                                           "case_origin":  "retained_original",
+                                           "source_ids":  [
+                                                              "PROJECT_ORIGINAL"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_04",
+                                           "title":  "上楼相关胸口紧缩",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "直接、简短",
+                                           "chief_complaint_variants":  [
+                                                                            "我一上楼，胸口就紧得难受。",
+                                                                            "胸口像被勒住一样。",
+                                                                            "上楼的时候胸口发紧。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_05",
+                                           "title":  "搬物后左前胸牵拉",
+                                           "symptom_group":  "动作相关",
+                                           "speech_style":  "生活化描述",
+                                           "chief_complaint_variants":  [
+                                                                            "搬重物的时候，左边胸口像扯着疼。",
+                                                                            "我左边胸口有牵拉一样的疼。",
+                                                                            "一使劲搬东西，左胸就疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_06",
+                                           "title":  "深呼吸相关右胸针刺",
+                                           "symptom_group":  "呼吸相关",
+                                           "speech_style":  "部位先行",
+                                           "chief_complaint_variants":  [
+                                                                            "右边胸口一吸深气就像针扎。",
+                                                                            "我右胸有针扎一样的痛。",
+                                                                            "深吸气的时候，右边胸口会刺痛。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_07",
+                                           "title":  "饱餐后胸前烧灼",
+                                           "symptom_group":  "进食体位相关",
+                                           "speech_style":  "朴素口语",
+                                           "chief_complaint_variants":  [
+                                                                            "吃得饱一点，胸口就火烧似的。",
+                                                                            "胸前正中火烧火燎的。",
+                                                                            "饱餐以后，胸前正中烧得难受。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_08",
+                                           "title":  "平躺相关胸前针刺",
+                                           "symptom_group":  "进食体位相关",
+                                           "speech_style":  "对比式陈述",
+                                           "chief_complaint_variants":  [
+                                                                            "躺下胸口会刺痛，坐起来能轻一点。",
+                                                                            "我一平躺，胸前正中就像针扎。",
+                                                                            "胸口正中有针刺一样的疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_09",
+                                           "title":  "紧张相关胸口发紧",
+                                           "symptom_group":  "紧张相关",
+                                           "speech_style":  "略带担忧",
+                                           "chief_complaint_variants":  [
+                                                                            "我一紧张胸口就发紧，有点担心。",
+                                                                            "胸口紧紧的，我心里有点慌。",
+                                                                            "紧张的时候，胸前正中会发紧。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_10",
+                                           "title":  "咳嗽相关右前胸刺痛",
+                                           "symptom_group":  "呼吸相关",
+                                           "speech_style":  "动作先行",
+                                           "chief_complaint_variants":  [
+                                                                            "咳一下，右边胸口就刺着疼。",
+                                                                            "我右前胸在咳嗽时会刺痛。",
+                                                                            "一咳嗽就牵动右边胸口疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_11",
+                                           "title":  "抬臂相关右胸酸痛",
+                                           "symptom_group":  "动作相关",
+                                           "speech_style":  "具体动作描述",
+                                           "chief_complaint_variants":  [
+                                                                            "右胳膊一抬起来，右胸就酸痛。",
+                                                                            "我抬右手时，右边胸口酸着疼。",
+                                                                            "右胸酸痛，手放下会轻一点。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_12",
+                                           "title":  "弯腰相关胸骨后烧灼",
+                                           "symptom_group":  "进食体位相关",
+                                           "speech_style":  "比喻式表达",
+                                           "chief_complaint_variants":  [
+                                                                            "一弯腰，胸口里面像烧起来一样。",
+                                                                            "我胸骨后面有烧灼的感觉。",
+                                                                            "胸口里面烧得难受，坐直能轻一点。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_13",
+                                           "title":  "快走相关左胸压迫",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "忍耐式短述",
+                                           "chief_complaint_variants":  [
+                                                                            "走快了左胸像压着东西，歇会儿能轻点。",
+                                                                            "我左边胸口有压着的疼。",
+                                                                            "快走的时候左胸会压着疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_14",
+                                           "title":  "爬坡相关胸痛牵背",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "连带部位描述",
+                                           "chief_complaint_variants":  [
+                                                                            "爬坡时胸口闷着疼，还会牵到背部。",
+                                                                            "我胸骨后闷痛，有时候牵到背上。",
+                                                                            "胸口里面闷着疼，爬坡时会出现。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_15",
+                                           "title":  "转身相关轻度左胸隐痛",
+                                           "symptom_group":  "动作相关",
+                                           "speech_style":  "轻描淡写",
+                                           "chief_complaint_variants":  [
+                                                                            "左边胸口有点隐隐的疼，转身时会有。",
+                                                                            "我左胸不是很疼，就是有点隐痛。",
+                                                                            "一转身，左边胸口就隐隐作痛。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_16",
+                                           "title":  "时间信息不清的胸前闷痛",
+                                           "symptom_group":  "信息不完整",
+                                           "speech_style":  "犹豫、如实不清楚",
+                                           "chief_complaint_variants":  [
+                                                                            "我胸口有点闷痛，什么时候开始的记不清。",
+                                                                            "胸口正中闷着疼，开始时间我说不准。",
+                                                                            "我胸前正中有闷痛。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_17",
+                                           "title":  "快走胸紧但无气短",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "明确区分症状",
+                                           "chief_complaint_variants":  [
+                                                                            "走快了胸口会发紧，不过我没有气短。",
+                                                                            "我胸骨后发紧，歇一会儿能轻些。",
+                                                                            "快走的时候，胸口像被勒住。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_18",
+                                           "title":  "走路胸压伴气短信息不清",
+                                           "symptom_group":  "活动相关",
+                                           "speech_style":  "措辞谨慎",
+                                           "chief_complaint_variants":  [
+                                                                            "走路时左胸像被压着，喘不喘我说不准。",
+                                                                            "我左胸压着疼，坐下能减轻。",
+                                                                            "左边胸口像压了东西，还会牵到左肩。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_19",
+                                           "title":  "咳嗽右下胸牵扯伴气短",
+                                           "symptom_group":  "呼吸相关",
+                                           "speech_style":  "位置精确",
+                                           "chief_complaint_variants":  [
+                                                                            "咳嗽时右边胸口偏下牵着疼，还有点气短。",
+                                                                            "我右下胸部有牵扯一样的痛。",
+                                                                            "一咳嗽，右下胸口就牵着疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       },
+                                       {
+                                           "case_id":  "SYN_CP_20",
+                                           "title":  "静息时胸前明显压迫",
+                                           "symptom_group":  "静息相关",
+                                           "speech_style":  "急切但短句",
+                                           "chief_complaint_variants":  [
+                                                                            "坐着没活动，胸口也像被压住了，很难受。",
+                                                                            "我胸口正中压得疼，还会牵到左上臂。",
+                                                                            "安静坐着的时候，胸前正中也会压着疼。"
+                                                                        ],
+                                           "case_origin":  "new_synthetic",
+                                           "source_ids":  [
+                                                              "SYNTHEA_STRUCTURE",
+                                                              "AGENTCLINIC_STRUCTURE",
+                                                              "NHS_CHEST_FEATURES"
+                                                          ],
+                                           "initial_disclosure":  "chief_complaint_only"
+                                       }
+                                   ],
+                      "distinct_fact_vectors":  20,
+                      "cases":  {
+                                    "selection":  "random",
+                                    "case_count":  20
+                                },
+                      "hashes":  {
+                                     "manifest.json":  "b97ccb5b549c3651983d77c80d17bd01638442d240d0a1308d53a9090faf9a64",
+                                     "SYN_CP_01.json":  "9725c863a49428bf68e4024f2cfb13d3fa097c1f59a3649a401431c24345adc7",
+                                     "SYN_CP_02.json":  "f421a134ed30cbfc255c0d8eabf3109620b2e0ad703a633e3eb5306ea3d46e52",
+                                     "SYN_CP_03.json":  "30c297c23b09e60584dc8c55a845f924f17c3a1155605c589418f4872e0a4ced",
+                                     "SYN_CP_04.json":  "334e084f0f37295ba1032c4fc52753a4dcfa57c68f62ceed09c15cef0129ad95",
+                                     "SYN_CP_05.json":  "86ad555c126bc525b1ef64f77431e32696727ce810cf0e649b68678e4bddb935",
+                                     "SYN_CP_06.json":  "d4e44b78293aade924f2a9e679bf8806854b28cd9456b484f266d82d58ddb2e9",
+                                     "SYN_CP_07.json":  "56a57d2447256df5f83315fc46a164c2f2f8932efba1817b7212b4b0236d23e6",
+                                     "SYN_CP_08.json":  "5165d6b011ae77be45f3f3db4b874ea5866367f97c4dd7b7a6e0ee4c5db4ec58",
+                                     "SYN_CP_09.json":  "f9a91ab25e94fb3e81a0b25084224f9a79a1ba27f7c06670d797e3e93d20d6f4",
+                                     "SYN_CP_10.json":  "4c2cc6ae79a6bce71c93aab1334f3f674013f16abce9552ee5735d67208cce6e",
+                                     "SYN_CP_11.json":  "0c95b093e4db4641cf60200e68a08dc54ca3b345eb3e70f2d9bd81430d291e33",
+                                     "SYN_CP_12.json":  "1c37f0a0c9ea3fc69e7bdd33e19cb0ea82a1a4dcaf0ade6aa1ddb9203bf25a1d",
+                                     "SYN_CP_13.json":  "a28a319e21aa0a44957a734031cf73a2c7114123cab9a3ccf51fb9e75cdb477f",
+                                     "SYN_CP_14.json":  "ee45d22beafe56c80996a97d1f12aa625970d79adcdb06506cb3e0646fe6f634",
+                                     "SYN_CP_15.json":  "f551e9e86afed1e0af7a2604cb714d91b0d9e11a03b342f458f4a8ac1a837159",
+                                     "SYN_CP_16.json":  "7746bbc8391a95d75e1d1dc290073a384d0bdcd2a9e4ae3602198bbbe6fc5c15",
+                                     "SYN_CP_17.json":  "6e70cab30e8b4e39bebc0608085e4ee1af560f2f38a95bd46567706bce144240",
+                                     "SYN_CP_18.json":  "72541d1d9335e891ab904e125450005efa16a97a753851063c24de454eb60943",
+                                     "SYN_CP_19.json":  "7095597174e55cfd811f6b90aed476b724bdc20ff2585e0bd4cfe6ba92b1fedd",
+                                     "SYN_CP_20.json":  "a152068c83508c2419cf8f36cb5d9e8dc10fb5f07402f9b63012ab951bc18428"
+                                 },
+                      "code":  {
+                                   "natural_patient_prompt.py":  [
+                                                                     {
+                                                                         "path":  "/var/lib/kv260-a12/case20-debug-20261027-v1/continuous/natural_patient_prompt.py",
+                                                                         "sha256":  "4690811d619926b88afba1e7510d619b7f6d7af980b623572530295f6ec3f298",
+                                                                         "text":  "\"\"\"Short patient wording from the current typed facts; no whole-case prompt.\"\"\"\nimport hashlib\nimport json\n\nPOLICY = \u0027patient-natural-short-v1\u0027\n# The small target model\u0027s unconstrained rewrites lost facts in pilot01/02.\n# Naturalness comes from varied patient surfaces, with its proven complete-read prompt.\nfrom short_prompt_adapter import SYSTEM\n\n\ndef prompt_messages(plan, question):\n    from patient_web.reference.checking import natural_forms\n    if plan.route != \u0027answer\u0027 or not plan.facts:\n        raise ValueError(\u0027natural answer requires current facts\u0027)\n    # Stable patient phrasing varies across cases/slots without changing the fact.\n    sentences = []\n    for fact in plan.facts:\n        choices = natural_forms(fact)\n        signature = json.dumps([fact.slot, fact.value, fact.time_scope], ensure_ascii=False)\n        index = int(hashlib.sha256(signature.encode()).hexdigest()[:8], 16) % len(choices)\n        sentences.append(choices[index] + \u0027。\u0027)\n    return [dict(role=\u0027system\u0027, content=SYSTEM),\n            dict(role=\u0027user\u0027, content=\u0027事实句：\\n\u0027 + \u0027\u0027.join(sentences))]\n\n\ndef policy_sha256():\n    return hashlib.sha256(json.dumps(dict(id=POLICY, system=SYSTEM,\n        selection=\u0027typed-fact SHA256 stable surface; target model generates all output\u0027,\n        prompt=\u0027facts only; at most two; no unrelated history\u0027),\n        ensure_ascii=False, sort_keys=True, separators=(\u0027,\u0027, \u0027:\u0027)).encode()).hexdigest()\n"
+                                                                     }
+                                                                 ],
+                                   "short_prompt_adapter.py":  [
+                                                                   {
+                                                                       "path":  "/var/lib/kv260-a12/case20-debug-20261027-v1/continuous/short_prompt_adapter.py",
+                                                                       "sha256":  "c65bb8e4968fb481d49b1e4eb52f5325b7e863d68419c362083685fea4ad4206",
+                                                                       "text":  "\"\"\"Host-selected facts-only-02 prompt; the original planner/checker own facts.\"\"\"\nimport hashlib\nimport json\n\nSYSTEM = \u0027你是模拟病人。请逐字复制用户提供的事实句，必须保留每个字及句号，不要解释。\u0027\nPOLICY_ID = \u0027facts-only-02\u0027\n\n\ndef prompt_messages(plan, question):\n    # The question remains in Session and scoring, not in the model\u0027s fact payload.\n    from patient_web.reference.checking import forms\n    if plan.route != \u0027answer\u0027 or not plan.facts:\n        raise ValueError(\u0027facts-only generation requires an original answer plan\u0027)\n    payload = \u0027事实句：\\n\u0027 + \u0027\u0027.join(forms(f)[0] + \u0027。\u0027 for f in plan.facts)\n    return [{\u0027role\u0027:\u0027system\u0027,\u0027content\u0027:SYSTEM},{\u0027role\u0027:\u0027user\u0027,\u0027content\u0027:payload}]\n\n\ndef policy_sha256():\n    value = dict(id=POLICY_ID, system=SYSTEM, user_prefix=\u0027事实句：\\n\u0027,\n                 facts=\u0027original forms(f)[0] + 。; concatenate without newline\u0027)\n    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True,\n                                    separators=(\u0027,\u0027, \u0027:\u0027)).encode()).hexdigest()\n"
+                                                                   }
+                                                               ],
+                                   "fast_response_profile.py":  [
+                                                                    {
+                                                                        "path":  "/var/lib/kv260-a12/case20-debug-20261027-v1/continuous/fast_response_profile.py",
+                                                                        "sha256":  "b46ce8f224b2c7a870b28ee9715bfc8b1ba9843893533cbedcc448eeb5725663",
+                                                                        "text":  "\"\"\"Concrete host profiles shared by preparation, transport and admission.\"\"\"\nimport hashlib\nimport json\nfrom pathlib import Path\n\n\ndef digest(value):\n    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True,\n                                    separators=(\u0027,\u0027, \u0027:\u0027), allow_nan=False).encode()).hexdigest()\n\n\nLEGACY = dict(profile_id=\u0027legacy70-threads2\u0027, prompt_policy=\u0027legacy\u0027, prefix_tokens=70,\n              cache_id=\u0027neutral\u0027, context_tokens=1024, output_tokens=24, threads=2,\n              kernel_threads=2, warm_request_id=\u0027warm_prefix\u0027)\n\n\ndef load_profile(path):\n    p=json.loads(Path(path).read_text(encoding=\u0027utf-8\u0027))\n    validate_profile(p)\n    return p\n\n\ndef validate_profile(p):\n    if p.get(\u0027schema\u0027)!=\u0027A12_FAST_RESPONSE_PROFILE_V1\u0027:raise ValueError(\u0027profile schema differs\u0027)\n    natural=p.get(\u0027prompt_policy\u0027)==\u0027patient-natural-short-v1\u0027\n    if p.get(\u0027prompt_policy\u0027) not in (\u0027legacy\u0027,\u0027facts-only-02\u0027,\u0027patient-natural-short-v1\u0027):raise ValueError(\u0027unknown prompt policy\u0027)\n    if not natural and p.get(\u0027prefix_tokens\u0027) != (34 if p[\u0027prompt_policy\u0027]==\u0027facts-only-02\u0027 else 70):\n        raise ValueError(\u0027profile prefix differs\u0027)\n    if natural:\n        from natural_patient_prompt import POLICY,policy_sha256\n        if (p.get(\u0027natural_patient_policy\u0027)!=POLICY or not 1\u003c=p[\u0027prefix_tokens\u0027]\u003c=128\n                or p[\u0027prefix_identity\u0027].get(\u0027natural_patient_policy_sha256\u0027)!=policy_sha256()):\n            raise ValueError(\u0027natural prompt identity differs\u0027)\n    output=32 if p.get(\u0027realtime_draft_strategy\u0027) else 24\n    for k,v in ((\u0027context_tokens\u0027,1024),(\u0027output_tokens\u0027,output)):\n        if type(p.get(k)) is not int or p[k]!=v:raise ValueError(\u0027profile bound differs: \u0027+k)\n    if p.get(\u0027threads\u0027) not in (2,3,4) or p.get(\u0027kernel_threads\u0027)!=p[\u0027threads\u0027]:raise ValueError(\u0027threads differ\u0027)\n    tokens=p.get(\u0027prefix_token_ids\u0027)\n    if not isinstance(tokens,list) or len(tokens)!=p[\u0027prefix_tokens\u0027] or digest(tokens)!=p.get(\u0027prefix_sha256\u0027):\n        raise ValueError(\u0027prefix token digest differs\u0027)\n    if not all(type(t) is int and 0\u003c=t\u003c248320 for t in tokens):raise ValueError(\u0027invalid prefix token\u0027)\n    if p.get(\u0027authorization_included\u0027) is not False:raise ValueError(\u0027profile cannot carry authority\u0027)\n    expected_cache=(\u0027natural-t\u0027+str(p[\u0027threads\u0027])) if natural else (\u0027short34-t\u0027+str(p[\u0027threads\u0027]) if p[\u0027prompt_policy\u0027]==\u0027facts-only-02\u0027 else \u0027neutral\u0027)\n    if p.get(\u0027cache_id\u0027) != expected_cache:\n        raise ValueError(\u0027profile cache namespace differs\u0027)\n    if p.get(\u0027realtime_draft_strategy\u0027) is not None:\n        from realtime_draft import STRATEGY\n        if p[\u0027realtime_draft_strategy\u0027]!=STRATEGY or p[\u0027prompt_policy\u0027] not in (\u0027facts-only-02\u0027,\u0027patient-natural-short-v1\u0027):\n            raise ValueError(\u0027realtime draft profile differs\u0027)\n    if p.get(\u0027live_miss_prompt_policy\u0027) is not None:\n        from compact_fact_prompt import POLICY,policy_sha256\n        if p[\u0027live_miss_prompt_policy\u0027]==\u0027allowed-severity-scale-first-02\u0027:\n            from severity_scale_prompt import POLICY,policy_sha256\n        if (p[\u0027live_miss_prompt_policy\u0027]!=POLICY or not p.get(\u0027realtime_draft_strategy\u0027)\n                or p[\u0027prefix_identity\u0027].get(\u0027live_miss_prompt_policy_sha256\u0027)!=policy_sha256()):\n            raise ValueError(\u0027live miss input selection differs\u0027)\n    from neutral_prefixes import validate_additional_prefixes\n    validate_additional_prefixes(p)\n    if p.get(\u0027prefill_chunk\u0027,256) not in (8,256):raise ValueError(\u0027unreviewed live prefill chunk\u0027)\n    return p\n\n\ndef check_ready(profile, ready):\n    cache=ready.get(\u0027prefix_cache\u0027,{})\n    if not cache.get(\u0027enabled\u0027) or not cache.get(\u0027binding_sha256\u0027):raise RuntimeError(\u0027prefix cache not ready\u0027)\n    identity=cache.get(\u0027identity\u0027,{})\n    for key,value in profile[\u0027prefix_identity\u0027].items():\n        if identity.get(key)!=value:raise RuntimeError(\u0027native profile identity differs: \u0027+key)\n\n\ndef builder(profile):\n    if profile.get(\u0027natural_patient_policy\u0027):\n        from natural_patient_prompt import prompt_messages\n        return prompt_messages\n    if profile.get(\u0027live_miss_prompt_policy\u0027)==\u0027allowed-severity-scale-first-02\u0027:\n        from severity_scale_prompt import prompt_messages\n        return prompt_messages\n    if profile.get(\u0027live_miss_prompt_policy\u0027):\n        from compact_fact_prompt import prompt_messages\n        return prompt_messages\n    if profile[\u0027prompt_policy\u0027]==\u0027legacy\u0027:return None\n    from short_prompt_adapter import prompt_messages\n    return prompt_messages\n\n\ndef pair_budget(requests, prefix_tokens):\n    total=0\n    for r in requests:\n        n=len(r[\u0027tokens\u0027])-(prefix_tokens if r[\u0027cache_policy\u0027]==\u0027TT10_REQUIRE_HIT\u0027 else 0)\n        if n\u003c=0:raise ValueError(\u0027generation must extend prefix\u0027)\n        total+=72*((n+7)//8+(0 if r[\u0027op\u0027]==\u0027cache_create\u0027 else r[\u0027max_tokens\u0027]-1))\n    return total\n"
+                                                                    }
+                                                                ]
+                               },
+                      "status":  {
+                                     "schema_version":  "ui.v1",
+                                     "instance_id":  "b1a68f42ced24e6eaecb2a41d66a857f",
+                                     "phase":  "READY",
+                                     "ready":  true,
+                                     "busy":  false,
+                                     "current_session_id":  "105df23b68a542a1b48e22c376e3a2dc",
+                                     "backend":  {
+                                                     "configured":  "native",
+                                                     "execution_kind":  "CPU_REFERENCE",
+                                                     "ready":  true,
+                                                     "hardware_enabled":  false
+                                                 },
+                                     "backend_options":  [
+                                                             {
+                                                                 "id":  "managed-pl",
+                                                                 "label":  "FPGA"
+                                                             },
+                                                             {
+                                                                 "id":  "native",
+                                                                 "label":  "CPU"
+                                                             }
+                                                         ],
+                                     "capabilities":  {
+                                                          "text":  true,
+                                                          "audio":  false,
+                                                          "rule_score":  true,
+                                                          "case_selection":  "random",
+                                                          "case_count":  20,
+                                                          "chief_narration":  true,
+                                                          "chief_summary_kind":  "RULE_TEMPLATE",
+                                                          "cancel_turn":  false,
+                                                          "generation_timeout_s":  180,
+                                                          "max_active_turns":  1,
+                                                          "pending_turn_queue":  0,
+                                                          "max_turns":  200,
+                                                          "max_sessions":  8,
+                                                          "archived_sessions_readable":  true
+                                                      },
+                                     "failure":  null,
+                                     "answer_cache":  {
+                                                          "entries":  1320,
+                                                          "bytes":  1732636,
+                                                          "hits":  6,
+                                                          "misses":  0,
+                                                          "catalog_sha256":  "b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f",
+                                                          "origin_kinds":  [
+                                                                               "CPU_REFERENCE"
+                                                                           ]
+                                                      },
+                                     "verification":  {
+                                                          "software_test_only":  true,
+                                                          "board":  "NOT_TESTED",
+                                                          "medical_review":  "PENDING_TEACHER_REVIEW"
+                                                      },
+                                     "service_mode":  "continuous",
+                                     "remaining_seconds":  10578.125049561,
+                                     "demo_lab":  false
+                                 },
+                      "capabilities":  {
+                                           "error":  "HTTP Error 404: Not Found"
+                                       }
+                  }
+}

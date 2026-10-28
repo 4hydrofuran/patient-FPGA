@@ -21,9 +21,9 @@ def save(p,x):Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2,allow_
 
 
 def enumerate_plans():
-    from patient_web.reference.domain import load_case,Transcript,SLOTS
+    from patient_web.reference.domain import load_case,Transcript,SLOTS,CASE_IDS
     from patient_web.reference.planning import plan
-    for cid in ('SYN_CP_01','SYN_CP_02','SYN_CP_03'):
+    for cid in CASE_IDS:
         case=load_case(cid)
         base=plan(case,Transcript.parse(dict(request_id='catalog',text='疼痛在哪里？',source='typed',final=True)),())
         for n in (1,2):

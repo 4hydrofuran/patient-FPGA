@@ -19,32 +19,41 @@ def digest(value):
 def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def model_identity(prefix_identity,reference):
+def model_identity(prefix_identity,reference,*,generation_policy=None):
     reference=Path(reference)
-    return dict(assets={k:prefix_identity[k] for k in IDENTITY_KEYS},policy=POLICY,
+    result=dict(assets={k:prefix_identity[k] for k in IDENTITY_KEYS},policy=POLICY,
         checker_sha256=file_sha(reference/'checking.py'),planner_sha256=file_sha(reference/'planning.py'),
         generation=dict(sampling='greedy',enable_thinking=False,teacher_forced=False,max_tokens=64))
+    if generation_policy is not None:
+        from natural_patient_prompt import policy_sha256
+        result.update(policy=generation_policy,prompt_policy_sha256=policy_sha256(),key_version=2)
+        result['generation']['max_tokens']=32
+    return result
 
 
 def key_data(case,plan,identity):
-    return dict(identity=identity,case_id=case.case_id,case_version=case.version,case_sha256=case.sha256,
+    binding={'identity_sha256':digest(identity)} if identity.get('key_version')==2 else {'identity':identity}
+    return dict(**binding,case_id=case.case_id,case_version=case.version,case_sha256=case.sha256,
         route=plan.route,required_fact_ids=list(plan.required_fact_ids),facts=[asdict(f) for f in plan.facts],
         max_sentences=plan.max_sentences)
 
 
 class VerifiedAnswerCache:
-    def __init__(self,path,*,identity,expected_sha256):
+    def __init__(self,path,*,identity,expected_sha256,max_entries=1320,max_bytes=8*1024*1024):
         path=Path(path)
-        if path.stat().st_size>2*1024*1024:raise ValueError('answer catalog exceeds 2 MiB')
+        if path.stat().st_size>max_bytes:raise ValueError('answer catalog exceeds configured byte bound')
         if file_sha(path)!=expected_sha256:raise ValueError('answer catalog SHA differs')
         data=json.loads(path.read_text(encoding='utf-8'))
         if data.get('schema')!=SCHEMA or data.get('identity')!=identity or data.get('authorization_included') is not False:
             raise ValueError('answer catalog identity/schema differs')
         self.identity=copy.deepcopy(identity);self.catalog_sha256=expected_sha256
         self.records={};self.hits=0;self.misses=0;self.path=str(path)
+        identity_sha=digest(identity)
         for row in data['entries']:
             origin=row['origin'];key=row['key'];text=row['text']
-            if key in self.records or digest(row['key_data'])!=key or row['key_data']['identity']!=identity:
+            bound=(row['key_data'].get('identity_sha256')==identity_sha if identity.get('key_version')==2
+                   else row['key_data'].get('identity')==identity)
+            if key in self.records or digest(row['key_data'])!=key or not bound:
                 raise ValueError('duplicate or changed answer key')
             if (not isinstance(text,str) or not text or len(text)>220 or row['text_sha256']!=hashlib.sha256(text.encode()).hexdigest()
                 or origin.get('status')!='OK' or origin.get('eos') is not True or origin.get('teacher_forced') is not False
@@ -52,8 +61,9 @@ class VerifiedAnswerCache:
                 or not origin.get('native_request_id') or origin.get('text_sha256')!=row['text_sha256']):
                 raise ValueError('answer lacks real model/EOS provenance')
             self.records[key]=copy.deepcopy(row)
-        if len(self.records)>198:raise ValueError('catalog exceeds current three-case bound')
+        if len(self.records)>max_entries:raise ValueError('catalog exceeds configured entry bound')
         self.bytes=path.stat().st_size
+        self.origin_kinds=sorted({r['origin']['execution_kind'] for r in self.records.values()})
 
     def lookup(self,case,plan):
         if plan.route!='answer':return None
@@ -68,4 +78,4 @@ class VerifiedAnswerCache:
 
     def report(self):
         return dict(entries=len(self.records),bytes=self.bytes,hits=self.hits,misses=self.misses,
-            catalog_sha256=self.catalog_sha256,origin_kinds=sorted({r['origin']['execution_kind'] for r in self.records.values()}))
+            catalog_sha256=self.catalog_sha256,origin_kinds=list(self.origin_kinds))

@@ -1,0 +1,12 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T14:19:49.6121484Z",
+    "source_sha256":  "50fc40628089400954bbd8ed2941f0936d4c25f1bd5130289cc640b647c8c912",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "CACHE_DEBUG_START_REQUESTED",
+                      "exit_code":  0,
+                      "stdout":  "{\n  \"status\": \"PASS_OFFLINE_PACKAGE\",\n  \"files\": 1926,\n  \"checks\": [\n    {\n      \"status\": \"PASS_OFFLINE_IMPORTS_PROFILE_BUDGET\",\n      \"profile_id\": \"short34-threads2\",\n      \"window\": \"ordinary\",\n      \"answer_cache\": null,\n      \"owner_created\": false,\n      \"worker_started\": false,\n      \"board_contacted\": false\n    },\n    {\n      \"status\": \"PASS_OFFLINE_IMPORTS_PROFILE_BUDGET\",\n      \"profile_id\": \"natural20-t4-out32\",\n      \"window\": \"continuous\",\n      \"answer_cache\": {\n        \"entries\": 1320,\n        \"bytes\": 1732636,\n        \"hits\": 0,\n        \"misses\": 0,\n        \"catalog_sha256\": \"b97871b7bd67252d63d4834544b323680824ce49dc4dcabc084cf124bf3ec79f\",\n        \"origin_kinds\": [\n          \"CPU_REFERENCE\"\n        ]\n      },\n      \"owner_created\": false,\n      \"worker_started\": false,\n      \"board_contacted\": false\n    }\n  ],\n  \"BOARD\": \"NOT_TESTED\"\n}\n{\n  \"status\": \"STARTED_PENDING_READY_AND_BOARD_ACCEPTANCE\",\n  \"source\": \"/home/ubuntu/kv260-staging/a12-case20-debug-20261027-v1/case20-debug-t4\",\n  \"runtime_root\": \"/var/lib/kv260-a12/case20-debug-20261027-v1\",\n  \"command\": [\n    \"/usr/bin/python3\",\n    \"-B\",\n    \"/var/lib/kv260-a12/case20-debug-20261027-v1/continuous/fast_response_verify.py\",\n    \"--domain\",\n    \"BOARD\",\n    \"--bundle\",\n    \"/var/lib/kv260-a12/case20-debug-20261027-v1\",\n    \"--suite\",\n    \"web\",\n    \"--execute-board\",\n    \"--window-id\",\n    \"a12-case20-debug-20261027-v1\"\n  ],\n  \"requires_kernel\": \"6.8.12-a10irq2\",\n  \"temporary_lock\": \"/run/lock/patient-qwen-linear.lock\",\n  \"temporary_rule\": \"/run/udev/rules.d/71-patient-zocl-display.rules\",\n  \"first_actual_PL_web_answer\": true,\n  \"answer_cache\": true,\n  \"BOARD\": \"NOT_TESTED\",\n  \"pid\": 12056,\n  \"boot_id\": \"98886b24-96d3-409e-a783-ce9c54873da9\"\n}\n",
+                      "stderr":  ""
+                  }
+}

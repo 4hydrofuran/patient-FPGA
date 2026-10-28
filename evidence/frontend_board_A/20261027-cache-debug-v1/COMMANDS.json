@@ -1,0 +1,167 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/release/check_contracts.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/release/qwen35_config.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--",
+      "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "bench.qwen35.web.test_cache_debug",
+      "-q"
+    ],
+    "exit_code": 0,
+    "tests": 2
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "platform/qwen35/web/cache_debug_browser_pc.py"
+    ],
+    "exit_code": 0,
+    "result": "pc-browser/RESULT.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_stage.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "e8e1468290700cdaa941ed69786dc249ce21f093c972a17eb3a6e2c5647dc9a0",
+    "result": "stage-board.json",
+    "observed_status": "CASE20_RANDOM_STAGED_NOT_STARTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_stop_old.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "7996f3a1e3327700aaa0ef89d9fd2ba7fdb7803b78522fac8048f369462cc355",
+    "result": "old-stop.json",
+    "observed_status": "ORIGINAL_OWNER_NORMAL_STOP_REQUESTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_release_check.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "1e21cbeb02fd77fca5d5bf2f6ab1d78d35ae860128fdf158ec6cd435febd0671",
+    "result": "old-release.json",
+    "observed_status": "OLD_OWNER_NORMAL_RELEASE_VERIFIED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_close_old.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "3893c136b9b94465b41ddb92050299b17e35344060255ed8593e2c6d634fe5b6",
+    "result": "old-http-close.json",
+    "observed_status": "RELEASED_RESULT_VIEW_CLOSED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_launch.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "50fc40628089400954bbd8ed2941f0936d4c25f1bd5130289cc640b647c8c912",
+    "result": "launch-board.json",
+    "observed_status": "CACHE_DEBUG_START_REQUESTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_browser.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "175f4dbaa65b67935a3b35c5e0739278b02bb26c724be1c6a6d5e8d46c1a30b3",
+    "result": "browser-board.json",
+    "observed_status": "PASS_BOARD_DEBUG_HIT_AND_REAL_FPGA_MISS"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/cache_debug_collect.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "2de26eb0ae8861b71b65d87fb936aaf5f513f466de2d1e450d90eaa0363d78e9",
+    "result": "collect-board.json",
+    "observed_status": "CACHE_DEBUG_EVIDENCE_COLLECTED"
+  }
+]

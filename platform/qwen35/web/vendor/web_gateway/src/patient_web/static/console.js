@@ -153,7 +153,16 @@ function render(snapshot){
   const previousScroll = transcript.scrollTop;
   const followLatest = transcript.scrollHeight - previousScroll - transcript.clientHeight < 48;
   const newQuestion = current?.session_id !== snapshot.session_id || snapshot.turns.length > current.turns.length;
-  if (current?.session_id !== snapshot.session_id) { turnNodes.clear(); transcript.replaceChildren(); }
+  if (current?.session_id !== snapshot.session_id) {
+    turnNodes.clear(); transcript.replaceChildren();
+    if (snapshot.chief_complaint) {
+      const opening = document.createElement("p");
+      opening.className = "patient-chief-complaint";
+      opening.textContent = `患者主诉：${snapshot.chief_complaint}`;
+      opening.dataset.source = snapshot.chief_complaint_source;
+      transcript.append(opening);
+    }
+  }
   current = snapshot;
   if (el("cases").options.length) el("cases").value = snapshot.case_id;
   el("state").textContent = labels[snapshot.phase] || snapshot.phase;

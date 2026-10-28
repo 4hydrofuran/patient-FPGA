@@ -1,0 +1,20 @@
+{
+  "profile": "UI_RANDOM_CASES_CACHE_DEBUG_V1",
+  "request": {
+    "request_id": "next-consultation",
+    "cache_mode": "auto|hit|miss"
+  },
+  "default": "auto",
+  "selection": "random 20 cases unchanged",
+  "scope": "next created consultation; fixed within that consultation",
+  "miss_semantics": "bypass answer catalog and run selected model; public prefix/weight optimizations remain",
+  "turn_extension": {
+    "execution_mode": "CPU|FPGA|null"
+  },
+  "receipt_actual_backend_for_hit": null,
+  "receipt_model_called_for_hit": false,
+  "cached_note": "CPU 模式 · 缓存命中 / FPGA 模式 · 缓存命中",
+  "uncached_note": "unchanged CPU/FPGA",
+  "user_clarified_second_sentence": "uncached display stays unchanged",
+  "compute_voice_contracts_unchanged": true
+}

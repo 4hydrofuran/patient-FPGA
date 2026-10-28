@@ -6,7 +6,7 @@ import uuid
 import threading
 import math
 from functools import wraps
-from .domain import load_case,Transcript,digest
+from .domain import load_case,Transcript,digest,case_profile
 from .planning import plan
 from .checking import check,fallback,prompt_messages
 from .scoring import evidence,score
@@ -25,6 +25,8 @@ class Session:
         self._case=load_case(case_id)
         if not software_test:raise PermissionError('Teacher review pending: only explicit software-test sessions are enabled')
         self._mode=mode;self._id=uuid.uuid4().hex;self._epoch=0
+        profile=case_profile(case_id)
+        self.chief_complaint=profile['chief_complaint_variants'][int(self._id[:8],16)%len(profile['chief_complaint_variants'])]
         self._events=[];self._played=[];self._received={};self._pending=None
         self._turn=0;self._closed=False
         self._operation=threading.Lock()
@@ -36,7 +38,8 @@ class Session:
     def snapshot(self):
         return deepcopy({'session_id':self._id,'epoch':self._epoch,'case_id':self._case.case_id,
                          'case_version':self._case.version,'case_sha256':self._case.sha256,
-                         'received':self._events,'played':self._played,'pending':self._pending,'closed':self._closed})
+                         'received':self._events,'played':self._played,'pending':self._pending,'closed':self._closed,
+                         'chief_complaint':self.chief_complaint,'chief_complaint_source':'AUTHORED_CASE_PROFILE'})
     @exclusive
     def submit(self,request,backend,timeout_s=20,*,trusted_asr_confirmation=None):
         if self._closed:raise RuntimeError('Session ended')

@@ -106,9 +106,11 @@ exercise().then(result=>{
 
 
 def main():
+    global STATIC
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--edge',type=Path,default=Path('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'))
-    a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
+    p.add_argument('--static',type=Path,default=STATIC)
+    a=p.parse_args();STATIC=a.static;a.output.mkdir(parents=True,exist_ok=False)
     # Inline the exact console source into a local fixture page; no live service/board.
     html=STATIC.joinpath('index.html').read_text(encoding='utf-8')
     html=html.replace('<script src="/console.js" defer></script>',

@@ -1,0 +1,14 @@
+{
+  "task": "Mechanical CLI CASE_IDS and schema enum edits only",
+  "provider": "deepseek-delegate MCP",
+  "model_requested": "tool default",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "```diff\n--- a/system_qwen35/app/cli.py\n+++ b/system_qwen35/app/cli.py\n@@ -1,4 +1,5 @@\n from .session import Session\n+from .domain import CASE_IDS\n \n@@ -10,7 +11,7 @@\n-    p.add_argument('--case',choices=['SYN_CP_01','SYN_CP_02','SYN_CP_03'],required=True)\n+    p.add_argument('--case',choices=CASE_IDS,required=True)\n \n--- a/system_qwen35/cases/schema.json\n+++ b/system_qwen35/cases/schema.json\n@@ -5,7 +5,24 @@\n       \"enum\": [\n         \"SYN_CP_01\",\n         \"SYN_CP_02\",\n-        \"SYN_CP_03\"\n+        \"SYN_CP_03\",\n+        \"SYN_CP_04\",\n+        \"SYN_CP_05\",\n+        \"SYN_CP_06\",\n+        \"SYN_CP_07\",\n+        \"SYN_CP_08\",\n+        \"SYN_CP_09\",\n+        \"SYN_CP_10\",\n+        \"SYN_CP_11\",\n+        \"SYN_CP_12\",\n+        \"SYN_CP_13\",\n+        \"SYN_CP_14\",\n+        \"SYN_CP_15\",\n+        \"SYN_CP_16\",\n+        \"SYN_CP_17\",\n+        \"SYN_CP_18\",\n+        \"SYN_CP_19\",\n+        \"SYN_CP_20\"\n       ]\n```"
+      }
+    ]
+  },
+  "review": "Sol checked and applied the two edits; no files or commands delegated; no patient facts sent"
+}

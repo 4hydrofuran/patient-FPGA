@@ -1,0 +1,834 @@
+{
+  "status": "INCOMPLETE",
+  "expected": 24,
+  "accepted": 9,
+  "model_calls": 24,
+  "failures": [
+    {
+      "id": "natural-0001",
+      "case_id": "SYN_CP_01",
+      "slots": [
+        "location"
+      ],
+      "text": "疼。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 2,
+      "wall_ms": 1302.169599000024,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0002",
+      "case_id": "SYN_CP_02",
+      "slots": [
+        "quality"
+      ],
+      "text": "有针扎感。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1283.0888700000003,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0003",
+      "case_id": "SYN_CP_03",
+      "slots": [
+        "trigger"
+      ],
+      "text": "疼。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 2,
+      "wall_ms": 1028.6540479999928,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0004",
+      "case_id": "SYN_CP_04",
+      "slots": [
+        "allergy"
+      ],
+      "text": "青霉素过敏。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 4,
+      "wall_ms": 1202.3018840000077,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0005",
+      "case_id": "SYN_CP_05",
+      "slots": [
+        "duration"
+      ],
+      "text": "15 分钟。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1327.190375000015,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0007",
+      "case_id": "SYN_CP_07",
+      "slots": [
+        "onset"
+      ],
+      "text": "疼的。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 3,
+      "wall_ms": 1313.4091919999946,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0008",
+      "case_id": "SYN_CP_08",
+      "slots": [
+        "relief"
+      ],
+      "text": "好，我坐起来了。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 6,
+      "wall_ms": 1329.0857369999856,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0010",
+      "case_id": "SYN_CP_10",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用了止咳药。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1216.6390010000043,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0011",
+      "case_id": "SYN_CP_11",
+      "slots": [
+        "radiation"
+      ],
+      "text": "疼得直不起腰了。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 7,
+      "wall_ms": 1395.5296379999993,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0012",
+      "case_id": "SYN_CP_12",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用过铝碳酸镁。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 6,
+      "wall_ms": 1338.811413000002,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0013",
+      "case_id": "SYN_CP_13",
+      "slots": [
+        "allergy"
+      ],
+      "text": "青霉素过敏。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 4,
+      "wall_ms": 1202.7533669999855,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0019",
+      "case_id": "SYN_CP_19",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用了止咳药。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1192.1852419999937,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0021",
+      "case_id": "SYN_CP_06",
+      "slots": [
+        "onset",
+        "severity"
+      ],
+      "text": "12 小时疼。满分 10 分，我有 5 分。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 19,
+      "wall_ms": 3195.1085479999792,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0022",
+      "case_id": "SYN_CP_11",
+      "slots": [
+        "onset",
+        "severity"
+      ],
+      "text": "36 小时疼。满分 10 分，我有 3 分。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 19,
+      "wall_ms": 3161.724604,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0023",
+      "case_id": "SYN_CP_02",
+      "slots": [
+        "onset",
+        "radiation"
+      ],
+      "text": "疼的。大概 24 小时前开始疼的。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 13,
+      "wall_ms": 2496.834489000008,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    }
+  ],
+  "rows": [
+    {
+      "id": "natural-0001",
+      "case_id": "SYN_CP_01",
+      "slots": [
+        "location"
+      ],
+      "text": "疼。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 2,
+      "wall_ms": 1302.169599000024,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0002",
+      "case_id": "SYN_CP_02",
+      "slots": [
+        "quality"
+      ],
+      "text": "有针扎感。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1283.0888700000003,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0003",
+      "case_id": "SYN_CP_03",
+      "slots": [
+        "trigger"
+      ],
+      "text": "疼。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 2,
+      "wall_ms": 1028.6540479999928,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0004",
+      "case_id": "SYN_CP_04",
+      "slots": [
+        "allergy"
+      ],
+      "text": "青霉素过敏。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 4,
+      "wall_ms": 1202.3018840000077,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0005",
+      "case_id": "SYN_CP_05",
+      "slots": [
+        "duration"
+      ],
+      "text": "15 分钟。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1327.190375000015,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0006",
+      "case_id": "SYN_CP_06",
+      "slots": [
+        "dyspnea"
+      ],
+      "text": "没有气短。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "dyspnea"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 4,
+      "wall_ms": 528.3867320000013,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0007",
+      "case_id": "SYN_CP_07",
+      "slots": [
+        "onset"
+      ],
+      "text": "疼的。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 3,
+      "wall_ms": 1313.4091919999946,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0008",
+      "case_id": "SYN_CP_08",
+      "slots": [
+        "relief"
+      ],
+      "text": "好，我坐起来了。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 6,
+      "wall_ms": 1329.0857369999856,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0009",
+      "case_id": "SYN_CP_09",
+      "slots": [
+        "severity"
+      ],
+      "text": "按 10 分算有 4 分。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "severity"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 13,
+      "wall_ms": 979.2068870000037,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0010",
+      "case_id": "SYN_CP_10",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用了止咳药。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1216.6390010000043,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0011",
+      "case_id": "SYN_CP_11",
+      "slots": [
+        "radiation"
+      ],
+      "text": "疼得直不起腰了。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 7,
+      "wall_ms": 1395.5296379999993,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0012",
+      "case_id": "SYN_CP_12",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用过铝碳酸镁。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 6,
+      "wall_ms": 1338.811413000002,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0013",
+      "case_id": "SYN_CP_13",
+      "slots": [
+        "allergy"
+      ],
+      "text": "青霉素过敏。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 4,
+      "wall_ms": 1202.7533669999855,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0014",
+      "case_id": "SYN_CP_14",
+      "slots": [
+        "medications"
+      ],
+      "text": "平时在吃氨氯地平。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "medications"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 7,
+      "wall_ms": 643.4214939999947,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0015",
+      "case_id": "SYN_CP_15",
+      "slots": [
+        "quality"
+      ],
+      "text": "感觉是隐痛。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "quality"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 545.2687469999944,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0016",
+      "case_id": "SYN_CP_16",
+      "slots": [
+        "severity"
+      ],
+      "text": "按 10 分算有 4 分。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "severity"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 13,
+      "wall_ms": 865.4833989999986,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0017",
+      "case_id": "SYN_CP_17",
+      "slots": [
+        "medications"
+      ],
+      "text": "平时在吃美托洛尔。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "medications"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 8,
+      "wall_ms": 779.9106669999958,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0018",
+      "case_id": "SYN_CP_18",
+      "slots": [
+        "relief"
+      ],
+      "text": "坐下会好一些。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "relief"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 538.1111979999957,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0019",
+      "case_id": "SYN_CP_19",
+      "slots": [
+        "medications"
+      ],
+      "text": "今天用了止咳药。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "unrecognized_or_extra_claim"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 1192.1852419999937,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0020",
+      "case_id": "SYN_CP_20",
+      "slots": [
+        "location"
+      ],
+      "text": "疼的是胸前正中。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "location"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 5,
+      "wall_ms": 537.5188019999939,
+      "draft_accepted": true,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0021",
+      "case_id": "SYN_CP_06",
+      "slots": [
+        "onset",
+        "severity"
+      ],
+      "text": "12 小时疼。满分 10 分，我有 5 分。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 19,
+      "wall_ms": 3195.1085479999792,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0022",
+      "case_id": "SYN_CP_11",
+      "slots": [
+        "onset",
+        "severity"
+      ],
+      "text": "36 小时疼。满分 10 分，我有 3 分。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 19,
+      "wall_ms": 3161.724604,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0023",
+      "case_id": "SYN_CP_02",
+      "slots": [
+        "onset",
+        "radiation"
+      ],
+      "text": "疼的。大概 24 小时前开始疼的。",
+      "accepted": false,
+      "checker": {
+        "status": "uncertain",
+        "covered_fact_ids": [],
+        "failure_bucket": "extra_fact_or_checker_uncertain",
+        "reason": "numeric_unit_polarity_or_relation_mismatch"
+      },
+      "eos": true,
+      "output_tokens": 13,
+      "wall_ms": 2496.834489000008,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    },
+    {
+      "id": "natural-0024",
+      "case_id": "SYN_CP_03",
+      "slots": [
+        "onset",
+        "severity"
+      ],
+      "text": "6 小时前开始疼的。满分 10 分的话我有 5 分。",
+      "accepted": true,
+      "checker": {
+        "status": "pass",
+        "covered_fact_ids": [
+          "onset",
+          "severity"
+        ],
+        "failure_bucket": null,
+        "reason": "whole_relation_grammar"
+      },
+      "eos": true,
+      "output_tokens": 20,
+      "wall_ms": 3123.886086999988,
+      "draft_accepted": false,
+      "reused_tokens": 35
+    }
+  ],
+  "worker_exit": 0,
+  "elapsed_s": 57.63701769100001,
+  "catalog_bytes": 11741,
+  "catalog_sha256": "a3dd6851c8aa59517752451a8bbe7fd0f717846a28716a46805a02aaa33f086c",
+  "cache_python_retained_bytes": 49954,
+  "cache_python_peak_bytes": 68761,
+  "prefix_tokens": 35,
+  "prefix_retained_bytes": 21626975,
+  "latency_ms": {
+    "min": 528.3867320000013,
+    "median": 1209.696183999995,
+    "max": 3195.1085479999792,
+    "samples": 24
+  },
+  "max_output_tokens": 20,
+  "draft_accepts": 8,
+  "BOARD": "NOT_TESTED",
+  "board_actions": 0
+}

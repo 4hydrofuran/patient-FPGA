@@ -1,0 +1,189 @@
+[
+  {
+    "command": [
+      "wsl",
+      "-d",
+      "KV260-A-2204",
+      "--",
+      "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "bench.qwen35.web.test_case20_random",
+      "-q"
+    ],
+    "exit_code": 0,
+    "tests": 2
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_current_inventory.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "f3589462a97e24dd9fa279383bf4608c08d44f900270c8eccb47f9d2b212f089",
+    "result": "initial-board.json",
+    "result_sha256": "5d2f4d36b374cc3aaaf2443de1ce908c7dfeac66825fc32cdff59901f0a6510d",
+    "observed_status": "CURRENT_BOARD_READ_ONLY"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_stage.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "7e2bffa729f6659482eec6fcad557000b5573a4f4ab232d0afeb43053034fa97",
+    "result": "stage-board.json",
+    "result_sha256": "350cfb28be8e5132bebd57c503b5153e708173f5cd602b1d32d8e8e513529416",
+    "observed_status": "CASE20_RANDOM_STAGED_NOT_STARTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_stop_old.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "381abaddcba5d3601b6a283fb608b6d336951a0f68c12e22e14aa90fe9443335",
+    "result": "old-stop.json",
+    "result_sha256": "be254007835b62f49c6ade796b7f68b61f56b30f355cdd094ec32b5fe510daec",
+    "observed_status": "ORIGINAL_OWNER_NORMAL_STOP_REQUESTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_release_check.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "f812bd07f3c6ace28d762d19fae6fed1a7300ba8322c84386396579d92c89bb6",
+    "result": "old-release.json",
+    "result_sha256": "c49c6b639b1c4d65e89abb69b17f0a35d06e9dfc1dba6b800902e20f89887895",
+    "observed_status": "OLD_OWNER_NORMAL_RELEASE_VERIFIED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_close_result.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "152a4c2b7d14539fb348a37944ca8ee629a2cb274730ae7c02cc7172ff152b20",
+    "result": "close-old-result.json",
+    "result_sha256": "f912d8e95f47cf661bc7667c1cecdf8e6ec4a20a09b4192cb34c3ff46bdf9c6d",
+    "observed_status": "RELEASED_RESULT_VIEW_CLOSED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_launch.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "937b6dc65d067214f6a5498fef7b8e0d80581f644f0eb60d33146b68aa2f4e64",
+    "result": "launch-board.json",
+    "result_sha256": "52e84497829fa24c36a72eacbf9fbc4569c7faf39ed46810159d9bd759a6edab",
+    "observed_status": "CASE20_RANDOM_START_REQUESTED"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_status.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "3f9806d7ba948de2988312cf72a5ba6b59d76718e735ec9cdbb59fc01dd4a923",
+    "result": "startup-status02.json",
+    "result_sha256": "712998c2d971fe26a0806786f49d6656deb94aca604a5c197444398690899f1b",
+    "observed_status": "CASE20_RANDOM_STARTUP_STATUS"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_browser_verify.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "40f0810c75114305024e5c380df25ffe5a61b3e72ecc47a25b27dc85e45ba0fd",
+    "result": "browser-board.json",
+    "result_sha256": "f4c9d0057045a90cef9da6084c9ba028917ebaabaa488d957b222e338f7e8e4c",
+    "observed_status": "PASS_BOARD_RANDOM_CASES_CACHE_AND_REFRESH"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "platform/qwen35/web/frontend_board_inventory.ps1",
+      "-Action",
+      "run",
+      "-RunPayload",
+      "C:/Patientqwen/evidence/frontend_board_A/20261027-b601e69ca-board-run-v1/case20_collect.py"
+    ],
+    "exit_code": 0,
+    "payload_sha256": "79a0cf1aba01683a2cb8276d782b5ce7f835882908a5c0e3ed03d4dc6135e4e5",
+    "result": "collect-board.json",
+    "result_sha256": "61d6f935c751ada576cfe88f650265dcc4e7adef673c5f340639e22f9bc463b0",
+    "observed_status": "BOARD_EVIDENCE_COLLECTED"
+  }
+]

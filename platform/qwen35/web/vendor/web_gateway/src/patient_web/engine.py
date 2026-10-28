@@ -13,10 +13,10 @@ import time
 
 from .delivery import DeliveryReceipt, text_hash
 from .errors import GatewayError, OperationCancelled
-from .reference.domain import digest, load_case
+from .reference.domain import digest, load_case, CASE_IDS, case_profile
 from .reference.session import Session, exclusive
 
-CASE_IDS = ("SYN_CP_01", "SYN_CP_02", "SYN_CP_03")
+
 
 
 class PublishedSession(Session):
@@ -170,7 +170,8 @@ class TextEngine:
             return self.backend == "demo" or (not model.broken and model.p.poll() is None)
 
     def cases(self):
-        return [{"case_id": case_id, "title": f"合成胸痛病例 {index}",
+        return [{"case_id": case_id, "title": case_profile(case_id)["title"], "speech_style": case_profile(case_id)["speech_style"],
+                 "chief_complaint": case_profile(case_id)["chief_complaint_variants"][0],
                  "case_version": load_case(case_id).version,
                  "review_status": "PENDING_TEACHER_REVIEW", "software_test_only": True}
                 for index, case_id in enumerate(CASE_IDS, 1)]

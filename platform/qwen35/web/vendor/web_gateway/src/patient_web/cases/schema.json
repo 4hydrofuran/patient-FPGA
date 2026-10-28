@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A02 synthetic case draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "version",
+    "synthetic",
+    "review_status",
+    "provenance",
+    "rubric_version",
+    "unknown_policy",
+    "forbidden",
+    "facts"
+  ],
+  "properties": {
+    "case_id": {
+      "enum": [
+        "SYN_CP_01",
+        "SYN_CP_02",
+        "SYN_CP_03",
+        "SYN_CP_04",
+        "SYN_CP_05",
+        "SYN_CP_06",
+        "SYN_CP_07",
+        "SYN_CP_08",
+        "SYN_CP_09",
+        "SYN_CP_10",
+        "SYN_CP_11",
+        "SYN_CP_12",
+        "SYN_CP_13",
+        "SYN_CP_14",
+        "SYN_CP_15",
+        "SYN_CP_16",
+        "SYN_CP_17",
+        "SYN_CP_18",
+        "SYN_CP_19",
+        "SYN_CP_20"
+      ]
+    },
+    "version": {
+      "const": "1.0-draft"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "review_status": {
+      "const": "PENDING_TEACHER_REVIEW"
+    },
+    "provenance": {
+      "type": "string"
+    },
+    "rubric_version": {
+      "const": "coverage-v1-draft"
+    },
+    "unknown_policy": {
+      "const": "explicit_unknown-v1-draft"
+    },
+    "forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 11,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slot",
+          "status",
+          "value",
+          "unit",
+          "time_scope",
+          "polarity",
+          "disclose"
+        ],
+        "properties": {
+          "slot": {
+            "enum": [
+              "location",
+              "quality",
+              "onset",
+              "duration",
+              "severity",
+              "radiation",
+              "trigger",
+              "relief",
+              "dyspnea",
+              "allergy",
+              "medications"
+            ]
+          },
+          "status": {
+            "enum": [
+              "known",
+              "unknown"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "time_scope": {
+            "type": "string"
+          },
+          "polarity": {
+            "enum": [
+              "positive",
+              "negative",
+              "unknown"
+            ]
+          },
+          "disclose": {
+            "const": "on_slot"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "unknown"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "type": "null"
+                },
+                "unit": {
+                  "type": "null"
+                },
+                "polarity": {
+                  "const": "unknown"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

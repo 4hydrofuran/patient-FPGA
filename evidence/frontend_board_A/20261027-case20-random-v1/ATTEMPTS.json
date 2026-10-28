@@ -1,0 +1,12 @@
+[
+  {
+    "stage": "PC API expectation",
+    "observed": "existing validation handler returns HTTP400 rather than FastAPI default422",
+    "resolution": "test expects actual application HTTP400; picker remains closed"
+  },
+  {
+    "stage": "startup first status",
+    "observed": "HTTP not listening while native startup/warmup in progress",
+    "resolution": "later live marker/FPGA probe/cache/UI verification passed; no retry window or reboot"
+  }
+]

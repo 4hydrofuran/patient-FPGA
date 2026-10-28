@@ -175,6 +175,8 @@ class Coordinator:
             return {"schema_version": "ui.v1", "instance_id": self.journal.instance_id,
                     "cursor": self.journal.sequence, "session_id": session_id,
                     "case_id": identity["case_id"], "case_version": identity["case_version"],
+                    "chief_complaint": identity.get("chief_complaint"),
+                    "chief_complaint_source": identity.get("chief_complaint_source"),
                     "epoch": conversation.epoch, "closed": conversation.closed,
                     "phase": "FINISHED" if conversation.closed else self.phase,
                     "active_request_id": active.request_id if active else None,

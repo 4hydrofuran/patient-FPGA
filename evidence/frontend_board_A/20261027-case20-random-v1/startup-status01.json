@@ -1,0 +1,42 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T13:31:48.9008728Z",
+    "source_sha256":  "3f9806d7ba948de2988312cf72a5ba6b59d76718e735ec9cdbb59fc01dd4a923",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "CASE20_RANDOM_STARTUP_STATUS",
+                      "root":  "/var/lib/kv260-a12/case20-random-20261027-v1",
+                      "files":  {
+                                    "STARTED.json":  {
+                                                         "status":  "STARTED_PENDING_READY_AND_BOARD_ACCEPTANCE",
+                                                         "source":  "/home/ubuntu/kv260-staging/a12-case20-random-20261027-v1/case20-random-t4",
+                                                         "runtime_root":  "/var/lib/kv260-a12/case20-random-20261027-v1",
+                                                         "command":  [
+                                                                         "/usr/bin/python3",
+                                                                         "-B",
+                                                                         "/var/lib/kv260-a12/case20-random-20261027-v1/continuous/fast_response_verify.py",
+                                                                         "--domain",
+                                                                         "BOARD",
+                                                                         "--bundle",
+                                                                         "/var/lib/kv260-a12/case20-random-20261027-v1",
+                                                                         "--suite",
+                                                                         "web",
+                                                                         "--execute-board",
+                                                                         "--window-id",
+                                                                         "a12-case20-random-20261027-v1"
+                                                                     ],
+                                                         "requires_kernel":  "6.8.12-a10irq2",
+                                                         "temporary_lock":  "/run/lock/patient-qwen-linear.lock",
+                                                         "temporary_rule":  "/run/udev/rules.d/71-patient-zocl-display.rules",
+                                                         "first_actual_PL_web_answer":  true,
+                                                         "answer_cache":  true,
+                                                         "BOARD":  "NOT_TESTED",
+                                                         "pid":  8683,
+                                                         "boot_id":  "98886b24-96d3-409e-a783-ce9c54873da9"
+                                                     }
+                                },
+                      "stderr_tail":  "",
+                      "http_error":  "\u003curlopen error [Errno 111] Connection refused\u003e",
+                      "observed_monotonic_ns":  3621714284037
+                  }
+}

@@ -1,0 +1,46 @@
+{
+  "provider": "B",
+  "maintainer": "A",
+  "upstream_commit": "601e69ca2896aa9939c1d7e28220b35a59150260",
+  "base_commit": "40498c2388b6293d68f38907c71ffd8933a5803e",
+  "A_baseline": "a12_realtime_tail_20261027_1446_BJT_v2",
+  "files": [
+    {
+      "path": "web_gateway/src/patient_web/api.py",
+      "status": "MERGED",
+      "sha256": "30af5727d83c60acd5018bb628a0be60215c1421233444768554a5c411b3203c"
+    },
+    {
+      "path": "web_gateway/src/patient_web/managed.py",
+      "status": "RESOLVED_A_KEEP_FAST_PATH_AND_B_MODES",
+      "sha256": "389dc45295fe769221c83a34e9e6d91593248a05fe0cc88fb06c95438aca428f"
+    },
+    {
+      "path": "web_gateway/src/patient_web/manager.py",
+      "status": "MERGED",
+      "sha256": "7d792e5f3197bb7327d161920be3607cc03025a449b0c4604119a24b3e82d000"
+    },
+    {
+      "path": "web_gateway/src/patient_web/static/console.js",
+      "status": "RESOLVED_A_KEEP_FAST_PATH_AND_B_MODES",
+      "sha256": "8f794b8a7da75d58e8d9c138ec29236c296ef6148bdbc6cdd8e044cfa23c7e52"
+    },
+    {
+      "path": "web_gateway/src/patient_web/static/evaluation.css",
+      "status": "MERGED",
+      "sha256": "e91d922a21ff06fe354414954cd8549179c60dd52c3cdfbdce56cc9dc33488b7"
+    },
+    {
+      "path": "web_gateway/src/patient_web/static/index.html",
+      "status": "MERGED",
+      "sha256": "e0c16e159c4c14e24a8cdd7bf2fa69f735ce548c97f0d5b5da67d13deeb41233"
+    },
+    {
+      "path": "web_gateway/src/patient_web/stdio_cpu.py",
+      "status": "MERGED",
+      "sha256": "930180841c9f761529f6f15b3ff1454f22d98c9d167182bb03489b8ba45c3ea9"
+    }
+  ],
+  "BOARD": "NOT_TESTED",
+  "resolution": "A preserves prompt/cache/EOS/score/timing/IME; B mode controls and actual-backend labels added"
+}

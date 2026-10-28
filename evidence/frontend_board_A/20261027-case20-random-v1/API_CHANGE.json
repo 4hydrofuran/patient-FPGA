@@ -1,0 +1,26 @@
+{
+  "profile": "UI_RANDOM_CASES_V1",
+  "authorized_change": "user requested closing case selection and random allocation",
+  "new_request": {
+    "method": "POST",
+    "path": "/ui/v1/sessions",
+    "body": {
+      "request_id": "new-consultation"
+    }
+  },
+  "old_request_counterexample": {
+    "request_id": "pick",
+    "case_id": "SYN_CP_01"
+  },
+  "old_request_status": 400,
+  "new_response_extension": {
+    "case_selection": "random"
+  },
+  "case_list_response": {
+    "selection": "random",
+    "case_count": 20
+  },
+  "retry": "same request_id returns the same session/case; no new draw",
+  "frozen_compute_voice_contract_files_changed": false,
+  "regression": "bench/qwen35/web/test_case20_random.py"
+}

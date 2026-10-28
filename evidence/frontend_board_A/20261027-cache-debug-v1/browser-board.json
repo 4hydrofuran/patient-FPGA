@@ -1,0 +1,33 @@
+{
+    "scope":  "PINNED_KV260_PREBOARD_RUN",
+    "utc":  "2026-10-27T14:23:01.1056229Z",
+    "source_sha256":  "175f4dbaa65b67935a3b35c5e0739278b02bb26c724be1c6a6d5e8d46c1a30b3",
+    "credentials_logged":  false,
+    "inventory":  {
+                      "status":  "PASS_BOARD_DEBUG_HIT_AND_REAL_FPGA_MISS",
+                      "model_results_before":  1,
+                      "browser":  "158.0",
+                      "model_results_after":  2,
+                      "user_session_id":  "9283e82088134c6aa71a972ee242e353",
+                      "user_case_id":  "SYN_CP_17",
+                      "user_turn_count":  0,
+                      "user_cache_mode":  "auto",
+                      "ready":  true,
+                      "rows":  [
+                                   {
+                                       "kind":  "hit",
+                                       "note":  "FPGA 模式 · 缓存命中",
+                                       "source":  "MODEL_CACHE",
+                                       "model_called":  false,
+                                       "submit_to_paint_ms":  163
+                                   },
+                                   {
+                                       "kind":  "miss",
+                                       "note":  "FPGA",
+                                       "source":  "MODEL",
+                                       "model_called":  true,
+                                       "submit_to_paint_ms":  9614
+                                   }
+                               ]
+                  }
+}

@@ -7,6 +7,11 @@ import math
 
 ROOT=Path(__file__).resolve().parents[1]
 CASE_DIR=ROOT/'cases'
+CASE_PROFILES=json.loads((CASE_DIR/'manifest.json').read_text(encoding='utf-8'))['cases']
+CASE_IDS=tuple(p['case_id'] for p in CASE_PROFILES)
+
+def case_profile(case_id):
+    return next(p for p in CASE_PROFILES if p['case_id']==case_id)
 SLOTS=('location','quality','onset','duration','severity','radiation','trigger','relief','dyspnea','allergy','medications')
 
 def digest(value):
@@ -36,7 +41,7 @@ def validate_case(x):
     if not isinstance(x,dict):raise ValueError('Case must be an object')
     expected={'case_id','version','synthetic','review_status','provenance','rubric_version','unknown_policy','forbidden','facts'}
     if set(x)!=expected or x['synthetic'] is not True:raise ValueError('Invalid synthetic case envelope')
-    if x['case_id'] not in ('SYN_CP_01','SYN_CP_02','SYN_CP_03'):raise ValueError('Unknown case ID')
+    if x['case_id'] not in CASE_IDS:raise ValueError('Unknown case ID')
     if x['review_status']!='PENDING_TEACHER_REVIEW':raise ValueError('No approved release supported by this draft build')
     if not isinstance(x['version'],str) or not x['version'] or not isinstance(x['provenance'],str):raise ValueError('Version/provenance')
     if not isinstance(x['forbidden'],list) or not all(isinstance(v,str) for v in x['forbidden']):raise ValueError('Forbidden purposes')
@@ -66,7 +71,7 @@ def validate_case(x):
     return x
 
 def load_case(case_id):
-    if case_id not in ('SYN_CP_01','SYN_CP_02','SYN_CP_03'):raise ValueError('Unknown case ID')
+    if case_id not in CASE_IDS:raise ValueError('Unknown case ID')
     path=CASE_DIR/(case_id+'.json')
     if path.is_symlink():raise ValueError('Symlink case refused')
     raw=path.read_bytes();x=validate_case(json.loads(raw.decode('utf-8')))

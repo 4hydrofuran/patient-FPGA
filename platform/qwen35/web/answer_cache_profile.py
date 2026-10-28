@@ -12,7 +12,8 @@ def prepare_answer_cache(window,config):
     if spec is None:return None
     if spec.get('enabled') is not True:raise ValueError('explicit cache profile required')
     profile=json.loads((window/config['profile']).read_text(encoding='utf-8'))
-    identity=model_identity(profile['prefix_identity'],window/'web_gateway/src/patient_web/reference')
+    identity=model_identity(profile['prefix_identity'],window/'web_gateway/src/patient_web/reference',
+        generation_policy=profile.get('natural_patient_policy'))
     cache=VerifiedAnswerCache(window/spec['path'],identity=identity,expected_sha256=spec['sha256'])
     _PREPARED[str(window)]=(copy.deepcopy(config),cache)
     return cache

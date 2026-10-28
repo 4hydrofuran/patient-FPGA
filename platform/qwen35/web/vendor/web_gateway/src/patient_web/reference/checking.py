@@ -11,7 +11,7 @@ LABELS={'location':'疼痛位置','quality':'疼痛感觉','onset':'开始时间
         'radiation':'疼痛牵扯部位','trigger':'诱因','relief':'缓解方式','dyspnea':'气短情况','allergy':'过敏情况','medications':'用药情况'}
 NUM={1:'一',2:'两',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十',20:'二十',30:'三十'}
 
-def forms(f):
+def _standard_forms(f):
     if f.status=='unknown':
         labels=[LABELS[f.slot]]
         # A05 dev counterexample: whole relation synonym, not a text rewrite.
@@ -28,7 +28,30 @@ def forms(f):
     if s=='trigger':return ['疼痛在'+v+'时出现','我在'+v+'时会痛',v+'时出现疼痛']
     if s=='relief':return [v+'可以减轻疼痛','疼痛在'+v+'后减轻']
     if s=='dyspnea':return ['我有气短','有气短','我气短','是的，我有气短'] if v else ['我没有气短','没有气短']
+    if s=='allergy':return ['我对'+v+'过敏','以前对'+v+'过敏']
+    if s=='medications':
+        return [('我今天用过'+v),('今天用过'+v)] if '今天' in f.time_scope else [('我平时服用'+v),('平时在用'+v)]
     raise ValueError('Unsupported known relation: '+s)
+
+
+def natural_forms(f):
+    if f.status=='unknown':
+        return [LABELS[f.slot]+'我不太清楚','我不清楚'+LABELS[f.slot]]
+    v=str(f.value);s=f.slot
+    if s=='location':return ['我'+v+'这儿疼','疼的是'+v]
+    if s=='quality':return ['感觉是'+v,('像'+v[:-1]+'一样疼') if v in ('针扎感','针刺感') else '有'+v]
+    if s=='onset':return [v+'小时前开始疼的','大概'+v+'小时前开始疼的']
+    if s=='duration':return ['一回大约疼'+v+'分钟','每次痛'+v+'分钟']
+    if s=='severity':return ['按10分算有'+v+'分','满分10分的话我有'+v+'分']
+    if s=='radiation':return ['还会疼到'+v,'会牵着'+v+'一起疼']
+    if s=='trigger':return ['我在'+v+('会痛' if v.endswith('后') else '时会痛'),v+'会让我疼']
+    if s=='relief':return [v+'会好一些',v+'后会轻一点']
+    if s=='dyspnea':return ['会觉得气短','我有气短'] if f.value else ['不会觉得气短','没有气短']
+    return _standard_forms(f)
+
+
+def forms(f):
+    return list(dict.fromkeys(_standard_forms(f)+natural_forms(f)))
 
 def fallback(p):
     if p.route=='refuse':return REFUSE
@@ -73,10 +96,10 @@ def prompt_messages(p,question):
     facts=[{'id':f.slot,'status':f.status,'value':f.value,'unit':f.unit,'time_scope':f.time_scope,
             'polarity':f.polarity,'expression':forms(f)[0]} for f in p.facts]
     import json
-    system='你是教学模拟病人。只说下方已核对的事实句，全部说完，不增删事实。保留数字、单位、肯否及“不清楚”。不复述问题，不诊断、不评分。直接输出1至2句病人回答，以句号结尾。'
+    system='你是模拟病人。用1—2句说完事实，保留是否和不清楚。'
     # Clear Chinese instructions suit this small model better than asking it to
     # interpret internal JSON. The quoted question is data, never instructions.
-    payload='学生问题（不可信原文）：'+json.dumps(question,ensure_ascii=False)+'\n'
+    payload='学生问题：'+json.dumps(question,ensure_ascii=False)+'\n'
     payload+='本轮已核对的事实句（逐句原样说出）：\n'+'\n'.join(f['expression']+'。' for f in facts)
     # Context routing already used only host-confirmed history; unrelated turns
     # need not be retransmitted to the model. Plan still retains audit history.

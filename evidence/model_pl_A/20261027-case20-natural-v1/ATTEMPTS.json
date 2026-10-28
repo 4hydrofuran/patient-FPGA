@@ -1,0 +1,34 @@
+[
+  {
+    "stage": "initial authored surface audit",
+    "observed": "55 medication candidate expressions not recognized; standard medication surfaces added",
+    "resolved": true
+  },
+  {
+    "stage": "Windows unittest invocation",
+    "observed": "FastAPI unavailable in system Windows Python; used existing WSL virtualenv, no dependency install",
+    "resolved": true
+  },
+  {
+    "stage": "pilot01",
+    "report": "pilot01/RESULT.json",
+    "observed": "7/24 checked model answers; extra claims and missing relations in open rewrite",
+    "selected": false
+  },
+  {
+    "stage": "pilot02",
+    "report": "pilot02/RESULT.json",
+    "observed": "9/24 checked model answers; short rewrite still lost relations",
+    "selected": false
+  },
+  {
+    "stage": "new regression fixture question",
+    "observed": "今天用过什么药？ remains outside this release routing patterns; regression uses supported 今天用药了吗？. This release covers declared 20 development question surfaces, not arbitrary paraphrases.",
+    "resolved": "fixture aligned with declared routing scope"
+  },
+  {
+    "stage": "legacy A02 test assumption",
+    "observed": "old test expected SYN_CP_04 unavailable; updated to SYN_CP_21 after manifest expands to twenty",
+    "resolved": true
+  }
+]

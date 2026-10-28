@@ -1,0 +1,70 @@
+{
+  "schema_version": "board-workflow-checklist.v1",
+  "status": "NOT_TESTED",
+  "reason": "KV260 is not connected in this task",
+  "target": "KV260 Ubuntu + 7-inch 1024x600 HDMI touch",
+  "operator": null,
+  "tested_at": null,
+  "os": null,
+  "architecture": null,
+  "python_version": null,
+  "browser_version": null,
+  "http_report": null,
+  "items": [
+    {
+      "id": "runtime",
+      "description": "Ubuntu/ARM64/Python >=3.12 与依赖安装",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "http_workflow",
+      "description": "板上规则模式完整 HTTP/SSE 验收",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "hdmi",
+      "description": "实体 1024×600 横屏、字体与素材显示",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "touch",
+      "description": "发送、取消、结束、页签和新问诊的实体触摸",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "keyboard",
+      "description": "实体屏幕键盘弹出、输入及布局恢复",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "repeat_refresh",
+      "description": "连续练习、长记录滚动、刷新与病例隔离",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    },
+    {
+      "id": "service_restart",
+      "description": "板端测试服务重启及旧会话失效",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "notes": null
+    }
+  ],
+  "separate_joint_acceptance": [
+    "real_model",
+    "native_failure_quarantine",
+    "ASR_TTS",
+    "PL"
+  ]
+}

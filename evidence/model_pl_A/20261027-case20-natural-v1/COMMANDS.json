@@ -1,0 +1,225 @@
+{
+  "scope": "NO_BOARD",
+  "working_directory": "C:/Patientqwen",
+  "board_actions": 0,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "scripts/release/check_contracts.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "scripts/release/qwen35_config.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "platform/qwen35/web/case20_noboard.py",
+        "audit",
+        "--output",
+        "evidence\\model_pl_A\\20261027-case20-natural-v1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "bench.qwen35.web.test_case20_natural",
+        "bench.qwen35.web.test_verified_answer_cache",
+        "bench.qwen35.web.test_short_prompt",
+        "bench.qwen35.web.test_interactive",
+        "-q"
+      ],
+      "exit_code": 0,
+      "tests": 18
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "platform/qwen35/web/case20_prepare.py",
+        "prepare",
+        "--output",
+        "release/a12_case20_natural_20261027_v1/case20-natural-t4",
+        "--catalog-build",
+        "evidence\\model_pl_A\\20261027-case20-natural-v1\\full1320"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "system_qwen35.app.test_a02",
+        "-q"
+      ],
+      "exit_code": 0,
+      "tests": 36
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "system_qwen35.app.cli",
+        "--help"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "/mnt/c/Patientqwen/platform/qwen35/web/case20_noboard.py",
+        "generate",
+        "--output",
+        "/mnt/c/Patientqwen/evidence/model_pl_A/20261027-case20-natural-v1/full1320"
+      ],
+      "exit_code": 0,
+      "model_calls": 1320,
+      "result_sha256": "0eadd72672e35d34aaf81ba8c74bbb4608347c5538ef8129e57b2f3e054e3fd0"
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/answer_cache_serve_pc.py",
+        "--mode",
+        "realtime",
+        "--parent",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4",
+        "--output",
+        "/mnt/c/Patientqwen/evidence/model_pl_A/20261027-case20-natural-v1/live-serve",
+        "--port",
+        "18781"
+      ],
+      "exit_code": 0,
+      "result": "evidence\\model_pl_A\\20261027-case20-natural-v1\\live-serve\\RESULT.json",
+      "result_sha256": "7c5e366c4cfc4edc77e7ad372eb1bd29a78701549475c97ac00f26f3511d00e8"
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/answer_cache_serve_pc.py",
+        "--mode",
+        "cache",
+        "--realtime-draft",
+        "--catalog",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/answer-cache/catalog.json",
+        "--parent",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4",
+        "--output",
+        "/mnt/c/Patientqwen/evidence/model_pl_A/20261027-case20-natural-v1/cache-serve",
+        "--port",
+        "18781"
+      ],
+      "exit_code": 0,
+      "result": "evidence\\model_pl_A\\20261027-case20-natural-v1\\cache-serve\\RESULT.json",
+      "result_sha256": "265618e2a6f229459fa9fb2400f56640d5163bd5c2700e70ab33263512c61505"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "platform/qwen35/web/answer_cache_browser.py",
+        "--mode",
+        "realtime",
+        "--url",
+        "http://127.0.0.1:18781/",
+        "--cohort",
+        "evidence/model_pl_A/20261027-case20-natural-v1/BROWSER_COHORT.json",
+        "--output",
+        "evidence/model_pl_A/20261027-case20-natural-v1/browser-live"
+      ],
+      "exit_code": 0,
+      "result_sha256": "7011269dccf2959c576358c57f52741623ee8afb6d0f3c459cf995d2442baebf"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "platform/qwen35/web/answer_cache_browser.py",
+        "--mode",
+        "cache",
+        "--url",
+        "http://127.0.0.1:18781/",
+        "--cohort",
+        "evidence/model_pl_A/20261027-case20-natural-v1/BROWSER_COHORT.json",
+        "--output",
+        "evidence/model_pl_A/20261027-case20-natural-v1/browser-cache"
+      ],
+      "exit_code": 0,
+      "result_sha256": "b502176192c13ffef39319dcc5c1e048b4f155b10690ecb552b75ae5ebbddca5"
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/answer_cache_checks_pc.py",
+        "--minimal",
+        "--realtime-draft",
+        "--catalog",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/answer-cache/catalog.json",
+        "--parent",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4",
+        "--output",
+        "/mnt/c/Patientqwen/evidence/model_pl_A/20261027-case20-natural-v1/actual-miss"
+      ],
+      "exit_code": 0,
+      "result_sha256": "9905bf443686cc751018240353f06d679b2061afc3eeaeca79e9892b40274dda"
+    },
+    {
+      "command": [
+        "wsl",
+        "-d",
+        "KV260-A-2204",
+        "--",
+        "/home/member-a/kv260-build/a12-fast-response-20261027-venv/bin/python",
+        "-B",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4/continuous/fast_response_verify.py",
+        "--domain",
+        "PC",
+        "--bundle",
+        "/mnt/c/Patientqwen/release/a12_case20_natural_20261027_v1/case20-natural-t4",
+        "--suite",
+        "package"
+      ],
+      "exit_code": 0,
+      "status": "PASS_OFFLINE_PACKAGE",
+      "note": "1935 files at runtime validation; subsequent additions are result documents/evidence only"
+    }
+  ]
+}

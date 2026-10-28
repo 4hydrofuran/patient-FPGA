@@ -6,15 +6,15 @@ from .domain import Fact
 
 RULE_VERSION='route-v2-draft'
 PATTERNS={
- 'location':r'哪里|哪个部位|什么部位|位置|部位|胸骨',
- 'quality':r'什么感觉|怎么个疼|怎么个痛|怎样的痛|疼痛性质|痛的性质|压迫|针扎|烧灼',
+ 'location':r'哪里|哪儿|哪个部位|什么部位|位置|部位|胸骨',
+ 'quality':r'什么感觉|疼像什么|痛像什么|怎么个疼|怎么个痛|怎样的痛|疼痛性质|痛的性质|压迫|针扎|烧灼',
  'onset':r'什么时候|何时|开始|起病|几小时前',
- 'duration':r'持续|每次.*多久|一次.*多久|多长时间',
+ 'duration':r'持续|每次.*多久|一次.*多久|一回.*多久|多长时间',
  'severity':r'几分|严重|程度|多疼|多痛|疼得厉害',
  'radiation':r'放射|牵扯|其他地方|别的地方|肩膀|胳膊',
  'trigger':r'诱因|什么情况下|什么活动|加重|活动后',
- 'relief':r'缓解|减轻|休息后',
- 'dyspnea':r'气短|喘不上气|呼吸困难|呼吸费力',
+ 'relief':r'缓解|减轻|休息后|歇一歇.*好',
+ 'dyspnea':r'气短|喘不上气|喘不过气|呼吸困难|呼吸费力',
  'allergy':r'过敏',
  'medications':r'用药|服药|吃.*药|药物(?!过敏)|药名',
 }
@@ -56,6 +56,8 @@ def plan(case,transcript,played,*,asr_confirmed=False):
         if not slots and re.fullmatch(r'(那)?(刚才|这个|那个)(呢|方面呢)?[？?]?',raw.strip()) and played:
             slots=list(played[-1]['fact_ids']);reason='last_played_fact_explicit_followup'
             evidence=[{'slot':s,'span':[0,len(raw)],'quote':raw,'context_turn':played[-1]['turn_id']} for s in slots]
+        if 'onset' in slots and 'duration' in slots and re.search(r'从开始.*到现在',raw):
+            slots.remove('duration');evidence=[e for e in evidence if e['slot']!='duration']
         if not slots:route,reason='clarify','unresolved_intent'
         elif len(slots)>2:route,reason='clarify','too_many_topics'
     if route!='answer':slots=[];evidence=[]

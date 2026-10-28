@@ -54,7 +54,8 @@ def verify_first(worker,owner,path,api,transport):
         assert turn['status']=='COMPLETED' and receipt['answer_source']=='MODEL' and receipt['actual_backend']=='FPGA_REAL'
         assert receipt['delivery_receipt']['model_called'] and receipt['delivery_receipt']['validation_status']=='pass'
         result=transport.last_result
-        assert result['prefix_cache_request']['hit'] and result['prefix_cache_request']['reused_tokens']==70
+        expected_prefix=transport.pending_prefix['prefix_tokens']
+        assert result['prefix_cache_request']['hit'] and result['prefix_cache_request']['reused_tokens']==expected_prefix
         report.update(answer=receipt['answer'],backend='FPGA_REAL',answer_source='MODEL',
                       prefix_cache_request=result['prefix_cache_request'],native_request_wall_ms=result['request_profile']['native_request_wall_ms'])
         wait("!document.getElementById('finish').disabled")
@@ -72,8 +73,9 @@ def verify_first(worker,owner,path,api,transport):
         screenshot('user-input-ready.png')
         report.update(status='PASS_REAL_GRAPHICAL_MODEL_FPGA_QUESTION',test_session_id=sid,
                       user_session_id=user_sid,user_questions_sent=0,permission_runs=worker.runs,weight_loads=worker.loads)
-        api.save(path/'USER_INPUT_READY.json',dict(status='READY_FOR_USER_ONE_QUESTION',
-                 session_id=user_sid,model_questions_remaining=1,expires_monotonic_ns=owner.expires))
+        remaining=None if transport.maximum_questions is None else max(0,transport.maximum_questions-transport.questions_sent)
+        api.save(path/'USER_INPUT_READY.json',dict(status='READY_FOR_USER_INPUT',
+                 session_id=user_sid,model_questions_remaining=remaining,expires_monotonic_ns=owner.expires))
     except BaseException as exc:
         report.update(status='FAILED_REAL_GRAPHICAL_VERIFICATION',error=type(exc).__name__+': '+str(exc))
         raise

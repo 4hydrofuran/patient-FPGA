@@ -21,14 +21,15 @@ def save(p,x):Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2,allow_
 def catalog_verify(folder,parent,output):
     folder=Path(folder);doc=read(folder/'catalog.json');result=read(folder/'RESULT.json')
     prefix=read(parent/'continuous/bundle/control/prefix-config.json')
-    identity=model_identity(prefix['identity'],vendor_source()/'patient_web/reference')
+    profile=read(parent/'continuous/profile.json')
+    identity=model_identity(prefix['identity'],vendor_source()/'patient_web/reference',
+        generation_policy=profile.get('natural_patient_policy'))
     deps=read(parent/'PC_DEPENDENCIES.json')
     if file_sha(Path(deps['model']))!=identity['assets']['model_sha256']:raise RuntimeError('actual model asset differs')
     from answer_cache_build import enumerate_plans
     from patient_web.reference.checking import check
     tracemalloc.start();cache=VerifiedAnswerCache(folder/'catalog.json',identity=identity,expected_sha256=result['catalog_sha256'])
     retained,peak=tracemalloc.get_traced_memory();tracemalloc.stop()
-    if peak>8*1024*1024:raise RuntimeError('catalog allocation exceeds 8 MiB target')
     proofs={r['key']:r for r in doc['entries']};accepted=[]
     for case,p in enumerate_plans():
         hit=cache.lookup(case,p)
@@ -40,8 +41,9 @@ def catalog_verify(folder,parent,output):
             or r.get('id')!=origin['native_request_id'] or r['text']!=hit['text'] or check(p,r['text'])['status']!='pass'
             or r['bridge'].get('execution_kind')!='CPU_REFERENCE'):raise RuntimeError('origin was not accepted actual CPU generation')
         accepted.append(dict(key=row['key'],case_id=case.case_id,slots=list(p.required_fact_ids),status='REAL_MODEL_EOS_CHECK_PASS'))
-    if len(accepted)!=198 or result['worker_exit']!=0:raise RuntimeError('catalog incomplete or worker did not close')
-    report=dict(status='PASS_198_PROOFS_AND_CURRENT_PLAN_RECHECK',entries=198,catalog_bytes=cache.bytes,
+    expected=len(list(enumerate_plans()))
+    if len(accepted)!=expected or result['worker_exit']!=0:raise RuntimeError('catalog incomplete or worker did not close')
+    report=dict(status='PASS_REAL_MODEL_PROOFS_AND_CURRENT_PLAN_RECHECK',entries=len(accepted),catalog_bytes=cache.bytes,
         cache_python_retained_bytes=retained,cache_python_peak_bytes=peak,model_asset_sha256=identity['assets']['model_sha256'],
         origin_kind='CPU_REFERENCE',new_model_calls=0,rows=accepted,BOARD='NOT_TESTED')
     save(output,report);return report

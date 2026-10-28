@@ -22,9 +22,15 @@ def load_profile(path):
 
 def validate_profile(p):
     if p.get('schema')!='A12_FAST_RESPONSE_PROFILE_V1':raise ValueError('profile schema differs')
-    if p.get('prompt_policy') not in ('legacy','facts-only-02'):raise ValueError('unknown prompt policy')
-    if p.get('prefix_tokens') != (34 if p['prompt_policy']=='facts-only-02' else 70):
+    natural=p.get('prompt_policy')=='patient-natural-short-v1'
+    if p.get('prompt_policy') not in ('legacy','facts-only-02','patient-natural-short-v1'):raise ValueError('unknown prompt policy')
+    if not natural and p.get('prefix_tokens') != (34 if p['prompt_policy']=='facts-only-02' else 70):
         raise ValueError('profile prefix differs')
+    if natural:
+        from natural_patient_prompt import POLICY,policy_sha256
+        if (p.get('natural_patient_policy')!=POLICY or not 1<=p['prefix_tokens']<=128
+                or p['prefix_identity'].get('natural_patient_policy_sha256')!=policy_sha256()):
+            raise ValueError('natural prompt identity differs')
     output=32 if p.get('realtime_draft_strategy') else 24
     for k,v in (('context_tokens',1024),('output_tokens',output)):
         if type(p.get(k)) is not int or p[k]!=v:raise ValueError('profile bound differs: '+k)
@@ -34,11 +40,12 @@ def validate_profile(p):
         raise ValueError('prefix token digest differs')
     if not all(type(t) is int and 0<=t<248320 for t in tokens):raise ValueError('invalid prefix token')
     if p.get('authorization_included') is not False:raise ValueError('profile cannot carry authority')
-    if p.get('cache_id') != ('short34-t'+str(p['threads']) if p['prompt_policy']=='facts-only-02' else 'neutral'):
+    expected_cache=('natural-t'+str(p['threads'])) if natural else ('short34-t'+str(p['threads']) if p['prompt_policy']=='facts-only-02' else 'neutral')
+    if p.get('cache_id') != expected_cache:
         raise ValueError('profile cache namespace differs')
     if p.get('realtime_draft_strategy') is not None:
         from realtime_draft import STRATEGY
-        if p['realtime_draft_strategy']!=STRATEGY or p['prompt_policy']!='facts-only-02':
+        if p['realtime_draft_strategy']!=STRATEGY or p['prompt_policy'] not in ('facts-only-02','patient-natural-short-v1'):
             raise ValueError('realtime draft profile differs')
     if p.get('live_miss_prompt_policy') is not None:
         from compact_fact_prompt import POLICY,policy_sha256
@@ -62,6 +69,9 @@ def check_ready(profile, ready):
 
 
 def builder(profile):
+    if profile.get('natural_patient_policy'):
+        from natural_patient_prompt import prompt_messages
+        return prompt_messages
     if profile.get('live_miss_prompt_policy')=='allowed-severity-scale-first-02':
         from severity_scale_prompt import prompt_messages
         return prompt_messages

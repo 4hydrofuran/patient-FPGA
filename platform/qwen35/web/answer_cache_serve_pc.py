@@ -56,9 +56,12 @@ def serve(a):
     if a.mode=='cache':
         from verified_answer_cache import VerifiedAnswerCache,model_identity,file_sha
         profile=load_profile(window/'profile.json')
-        identity=model_identity(profile['prefix_identity'],vendor/'patient_web/reference')
+        identity=model_identity(profile['prefix_identity'],vendor/'patient_web/reference',
+            generation_policy=profile.get('natural_patient_policy'))
         cache=VerifiedAnswerCache(a.catalog,identity=identity,expected_sha256=file_sha(a.catalog))
     profile=load_profile(window/'profile.json')
+    if profile.get('natural_patient_policy'):
+        from natural_patient_prompt import prompt_messages
     pc_config=a.pc_prefix_config or (parent/'PC_PREFIX_CONFIG.json' if (parent/'PC_PREFIX_CONFIG.json').is_file()
         else project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json')
     cfg=read(pc_config)
@@ -76,7 +79,7 @@ def serve(a):
         if ready.get('type')!='ready' or ready.get('execution_kind')!='CPU_REFERENCE':raise RuntimeError('wrong CPU ready')
         save(out/'ready.json',ready)
         p=copy.deepcopy(profile);p['prefix_identity']=cfg['identity'];p['threads']=p['kernel_threads']=threads
-        p['cache_id']='short34-t'+str(threads)
+        p['cache_id']=('natural-t' if p.get('natural_patient_policy') else 'short34-t')+str(threads)
         output_tokens=a.output_tokens or (32 if a.mode=='realtime' or a.realtime_draft else p['output_tokens'])
         p['output_tokens']=output_tokens
         if a.extra_prefix:

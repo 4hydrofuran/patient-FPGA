@@ -22,14 +22,14 @@ def install(coordinator,directory):
             result=original['finish'](sid,rid)
             archive(sid)
             return result
-    def create(rid,case_id):
+    def create(rid,case_id=None,**options):
         with coordinator.lock:
             if rid not in coordinator.starts and len(coordinator.conversations)>=8:
                 closed=next((sid for sid,c in coordinator.conversations.items() if c.closed),None)
                 if closed is not None:
                     archive(closed)
                     del coordinator.conversations[closed]
-            return original['create_session'](rid,case_id)
+            return original['create_session'](rid,case_id,**options)
     def stored(sid):
         p=path(sid)
         return json.loads(p.read_text(encoding='utf-8')) if p.is_file() else None

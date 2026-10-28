@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import sys
 from .session import Session
+from .domain import CASE_IDS
+from .natural_prompt import prompt_messages as natural_prompt
 
 def public_response(r):
     # Student-facing output excludes the case, prompt, candidate and score rubric.
@@ -12,13 +14,13 @@ def public_response(r):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--case',choices=['SYN_CP_01','SYN_CP_02','SYN_CP_03'],required=True)
+    p.add_argument('--case',choices=CASE_IDS,required=True)
     p.add_argument('--mode',choices=['training','exam'],default='training')
     p.add_argument('--software-test',action='store_true',help='Synthetic drafts only; not a teacher approval')
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--model-backend',choices=('s0','s1'),default='s0',help='Explicit W4A8 experimental S1; never automatic fallback')
     args=p.parse_args()
-    session=Session(args.case,args.mode,software_test=args.software_test)
+    session=Session(args.case,args.mode,software_test=args.software_test,prompt_builder=natural_prompt)
     args.output.mkdir(parents=True,exist_ok=False)
     from .native import NativeCPU
     from .native_w4a8 import NativeW4A8

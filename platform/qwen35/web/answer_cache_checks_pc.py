@@ -35,18 +35,22 @@ def verify(a):
         from compact_fact_prompt import prompt_messages
     if profile.get('live_miss_prompt_policy')=='allowed-severity-scale-first-02':
         from severity_scale_prompt import prompt_messages
-    identity=model_identity(profile['prefix_identity'],vendor_source()/'patient_web/reference')
+    if profile.get('natural_patient_policy'):
+        from natural_patient_prompt import prompt_messages
+    identity=model_identity(profile['prefix_identity'],vendor_source()/'patient_web/reference',
+        generation_policy=profile.get('natural_patient_policy'))
     data=read(a.catalog);case=load_case('SYN_CP_01')
     miss_question='疼痛有几分？' if a.miss_slot=='severity' else '疼痛在哪里？'
     p=plan(case,Transcript.parse(dict(request_id='miss',text=miss_question,source='typed',final=True)),())
-    missing=digest(key_data(case,p,identity));data['entries']=[r for r in data['entries'] if r['key']!=missing]
-    if len(data['entries'])!=197:raise RuntimeError('test catalog must remove exactly one real entry')
+    missing=digest(key_data(case,p,identity));total=len(data['entries']);data['entries']=[r for r in data['entries'] if r['key']!=missing]
+    if len(data['entries'])!=total-1:raise RuntimeError('test catalog must remove exactly one real entry')
     save(out/'partial-catalog.json',data)
     cache=VerifiedAnswerCache(out/'partial-catalog.json',identity=identity,expected_sha256=file_sha(out/'partial-catalog.json'))
     cfg_path=a.pc_prefix_config or (parent/'PC_PREFIX_CONFIG.json' if (parent/'PC_PREFIX_CONFIG.json').is_file()
         else project_root(parent)/'evidence/model_pl_A/20261027-fast-response-v1/release-model/prefix-config-PC.json')
     cfg=read(cfg_path);p=copy.deepcopy(profile);p['prefix_identity']=cfg['identity']
-    threads=cfg['identity']['threads'];p['threads']=p['kernel_threads']=threads;p['cache_id']='short34-t'+str(threads)
+    threads=cfg['identity']['threads'];p['threads']=p['kernel_threads']=threads
+    p['cache_id']=('natural-t' if profile.get('natural_patient_policy') else 'short34-t')+str(threads)
     strategy=profile.get('realtime_draft_strategy')
     if a.realtime_draft:
         from realtime_draft import STRATEGY
@@ -98,29 +102,32 @@ def verify(a):
             c.finish(sid,'finish')
             if c.evaluation(sid)['rule_score']['score']!=20:raise RuntimeError('score not frozen at20')
             save(out/'HIT_MISS.json',responses)
-            original={r['id']:r for r in read(project_root(parent)/'eval/qwen35/a02/dev/questions-v2.json')}
-            policies=[]
-            for row in read(parent/'COHORT.json')['policy_inputs']:
-                before=native.count;hits=cache.hits
-                psid=c.create_session('policy-'+row['id'],original[row['id']]['case_id'])['session_id']
-                c.submit(psid,row['id'],row['question']);wait()
-                response=c.conversations[psid].business._received[row['id']]['response']
-                if native.count!=before or cache.hits!=hits or response['llm_calls']!=0 or response['answer_plan']['route']!=row['route']:
-                    raise RuntimeError('policy consulted model/cache or changed route')
-                policies.append(dict(id=row['id'],model_calls=0,route=row['route']));c.finish(psid,'finish-'+row['id'])
-            # Finish/new-case beyond eight sessions exercises archived v2 turn receipts.
-            saved=[]
-            for i in range(10):
-                nsid=c.create_session('archive-'+str(i),'SYN_CP_03')['session_id']
-                c.submit(nsid,'duration-'+str(i),'每次疼痛持续多久？');wait();c.finish(nsid,'end-'+str(i));saved.append(nsid)
-            archived=c.snapshot(saved[0]);archived_turn=c.turn_result(saved[0],'duration-0')
-            if len(c.conversations)!=8 or archived_turn['answer_source']!='MODEL_CACHE' or not archived['closed']:
-                raise RuntimeError('archived cache session not readable')
-            if native.count!=1:raise RuntimeError('cached new cases called model')
+            policies=[];archive_count=0
+            if not a.minimal:
+                original={r['id']:r for r in read(project_root(parent)/'eval/qwen35/a02/dev/questions-v2.json')}
+                policies=[]
+                for row in read(parent/'COHORT.json')['policy_inputs']:
+                    before=native.count;hits=cache.hits
+                    psid=c.create_session('policy-'+row['id'],original[row['id']]['case_id'])['session_id']
+                    c.submit(psid,row['id'],row['question']);wait()
+                    response=c.conversations[psid].business._received[row['id']]['response']
+                    if native.count!=before or cache.hits!=hits or response['llm_calls']!=0 or response['answer_plan']['route']!=row['route']:
+                        raise RuntimeError('policy consulted model/cache or changed route')
+                    policies.append(dict(id=row['id'],model_calls=0,route=row['route']));c.finish(psid,'finish-'+row['id'])
+                # Finish/new-case beyond eight sessions exercises archived v2 turn receipts.
+                saved=[]
+                for i in range(10):
+                    nsid=c.create_session('archive-'+str(i),'SYN_CP_03')['session_id']
+                    c.submit(nsid,'duration-'+str(i),'每次疼痛持续多久？');wait();c.finish(nsid,'end-'+str(i));saved.append(nsid)
+                archived=c.snapshot(saved[0]);archived_turn=c.turn_result(saved[0],'duration-0')
+                if len(c.conversations)!=8 or archived_turn['answer_source']!='MODEL_CACHE' or not archived['closed']:
+                    raise RuntimeError('archived cache session not readable')
+                if native.count!=1:raise RuntimeError('cached new cases called model')
+                archive_count=10
         if worker.closed:raise RuntimeError('web shutdown closed owned worker')
         if not worker.close(15):raise RuntimeError('actual CPU worker not closed normally')
-        result=dict(status='PASS_ACTUAL_CPU_MISS_CACHE_POLICY_LIFECYCLE',actual_model_calls=1,
-            policy_items=policies,same_session_score=20,archived_cache_sessions=10,retained_in_memory=8,
+        result=dict(status='PASS_ACTUAL_CPU_MISS_AND_CACHE' if a.minimal else 'PASS_ACTUAL_CPU_MISS_CACHE_POLICY_LIFECYCLE',actual_model_calls=1,
+            policy_items=policies,same_session_score=20,archived_cache_sessions=archive_count,retained_in_memory=len(c.conversations),
             worker_exit=worker.process.returncode,cache=cache.report(),generation_strategy=strategy,
             original_Owner_hardware_restore='NOT_TESTED',BOARD='NOT_TESTED')
         save(out/'RESULT.json',result);return result
@@ -133,6 +140,7 @@ if __name__=='__main__':
     p.add_argument('--parent',type=Path,default=default_parent());p.add_argument('--output',type=Path,required=True)
     p.add_argument('--pc-prefix-config',type=Path);p.add_argument('--binary',type=Path)
     p.add_argument('--realtime-draft',action='store_true')
+    p.add_argument('--minimal',action='store_true',help='one real miss, one hit and the same-session score only')
     p.add_argument('--compact',action='store_true')
     p.add_argument('--miss-slot',choices=('location','severity'),default='location')
     print(json.dumps(verify(p.parse_args()),indent=2))

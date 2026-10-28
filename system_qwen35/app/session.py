@@ -20,7 +20,7 @@ def exclusive(method):
     return call
 
 class Session:
-    def __init__(self,case_id,mode='training',*,software_test=False):
+    def __init__(self,case_id,mode='training',*,software_test=False,prompt_builder=None):
         if mode not in ('training','exam'):raise ValueError('mode')
         self._case=load_case(case_id)
         if not software_test:raise PermissionError('Teacher review pending: only explicit software-test sessions are enabled')
@@ -28,6 +28,7 @@ class Session:
         self._events=[];self._played=[];self._received={};self._pending=None
         self._turn=0;self._closed=False
         self._operation=threading.Lock()
+        self.prompt_builder=prompt_messages if prompt_builder is None else prompt_builder
     @property
     def epoch(self):return self._epoch
     def snapshot(self):
@@ -64,7 +65,7 @@ class Session:
         else:
             calls=1
             try:
-                llm_result=backend.generate(prompt_messages(p,t.text),timeout_s=timeout_s)
+                llm_result=backend.generate(self.prompt_builder(p,t.text),timeout_s=timeout_s)
                 candidate=llm_result['text'];checks=check(p,candidate)
                 if llm_result.get('status')!='OK' or not llm_result.get('eos'):
                     checks={'status':'uncertain','failure_bucket':'incomplete_generation','reason':'non_eos_or_error'}

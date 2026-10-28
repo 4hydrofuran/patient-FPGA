@@ -200,14 +200,14 @@ def run_case(worker, owner, path, *, real, api, overlay):
     command=['runuser','-u','ubuntu','--','env',*[k+'='+v for k,v in env.items()],
              'MOZ_AVOID_OPENGL_ALTOGETHER=1']
     subprocess.run(command+['gsettings','set','org.gnome.desktop.a11y.applications','screen-keyboard-enabled','true'],check=True)
-    profile=config.get('browser_profile','/home/ubuntu/snap/firefox/common/manual-pl-20261026-v2')
+    browser_profile=config.get('browser_profile','/home/ubuntu/snap/firefox/common/manual-pl-20261026-v2')
     subprocess.run(['runuser','-u','ubuntu','--','/usr/bin/python3','-c',
-                    'import json;from pathlib import Path;p=Path('+repr(profile)+');p.mkdir(exist_ok=True);'
+                    'import json;from pathlib import Path;p=Path('+repr(browser_profile)+');p.mkdir(exist_ok=True);'
                     'prefs={"layers.acceleration.disabled":True,"gfx.webrender.software":True,"webgl.disabled":True};'
                     '(p/"user.js").write_text("".join("user_pref("+json.dumps(k)+","+json.dumps(v)+");\\n" for k,v in prefs.items()))'],check=True)
     with (path/'browser.log').open('xb') as log:
         browser=subprocess.Popen(command+['gnome-session-inhibit','--inhibit','idle','--reason','Manual-PL-consultation',
-            '/snap/bin/firefox','--no-remote','--profile',profile,'--remote-debugging-port','9222','--kiosk','http://127.0.0.1:8000/'],
+            '/snap/bin/firefox','--no-remote','--profile',browser_profile,'--remote-debugging-port','9222','--kiosk','http://127.0.0.1:8000/'],
             stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True)
     api.save(path/'INTERACTIVE_READY.json',dict(status='READY_WAITING_FOR_USER_INPUT',url='http://127.0.0.1:8000/',
              backend='FPGA_REAL',prefix_warmed=True,prefix_tokens=profile['prefix_tokens'],
