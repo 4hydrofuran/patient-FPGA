@@ -1,0 +1,84 @@
+[
+  {
+    "id": "PROJECT_ORIGINAL",
+    "title": "项目原有三个合成病例",
+    "url": "https://github.com/4hydrofuran/patient-FPGA/tree/8773630/system_qwen35/cases",
+    "use": "原有01至03保留本地版本的原始文件字节；新编主诉放在独立profiles文件，不改原事实。"
+  },
+  {
+    "id": "SYNTHEA_STRUCTURE",
+    "title": "Synthea Patient Generator",
+    "url": "https://github.com/synthetichealth/synthea",
+    "license": "Apache-2.0 for project code",
+    "use": "参考合成患者和结构化事实分离的设计；未运行生成器、未抽取其记录。"
+  },
+  {
+    "id": "AGENTCLINIC_STRUCTURE",
+    "title": "AgentClinic",
+    "url": "https://github.com/SamuelSchmidgall/AgentClinic",
+    "license": "MIT for project code; underlying datasets have their own conditions",
+    "use": "参考结构化病例驱动模拟患者问答的组织方式；未复制MedQA/NEJM/MIMIC病例或诊断答案。"
+  },
+  {
+    "id": "NHS_CHEST_FEATURES",
+    "title": "NHS Chest pain",
+    "url": "https://www.nhs.uk/symptoms/chest-pain/",
+    "use": "参考活动、进食、体位、呼吸和动作相关的症状维度；不据这些维度为病例指定诊断。"
+  },
+  {
+    "id": "NHS_ANGINA",
+    "title": "Angina",
+    "url": "https://www.nhs.uk/conditions/angina/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_CHEST_WALL",
+    "title": "Costochondritis",
+    "url": "https://www.nhs.uk/conditions/costochondritis/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_REFLUX",
+    "title": "Heartburn and acid reflux",
+    "url": "https://www.nhs.uk/conditions/heartburn-and-acid-reflux/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_PERICARDITIS",
+    "title": "Pericarditis",
+    "url": "https://www.nhs.uk/conditions/pericarditis/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_PLEURISY",
+    "title": "Pleurisy",
+    "url": "https://www.nhs.uk/conditions/pleurisy/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_ACUTE",
+    "title": "Heart attack",
+    "url": "https://www.nhs.uk/conditions/heart-attack/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_PANIC",
+    "title": "Panic disorder",
+    "url": "https://www.nhs.uk/mental-health/conditions/panic-disorder/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  },
+  {
+    "id": "NHS_CHEST",
+    "title": "Chest pain",
+    "url": "https://www.nhs.uk/symptoms/chest-pain/",
+    "accessed": "2026-10-30",
+    "use": "症状关联或确诊信息需求的公开医学参考；病例分组是本项目的教学性推断，不是该来源对病例的确诊。"
+  }
+]

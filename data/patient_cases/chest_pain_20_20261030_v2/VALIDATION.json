@@ -1,0 +1,53 @@
+{
+  "case_count": 20,
+  "fact_count": 220,
+  "original_files_byte_identical": true,
+  "chief_complaints": 60,
+  "single_candidates": 220,
+  "double_candidates": 1100,
+  "question_count": 400,
+  "unique_question_texts": 20,
+  "length_unit": "Unicode characters including punctuation; not tokenizer tokens",
+  "single_chars": {
+    "min": 4,
+    "median": 9.0,
+    "max": 15
+  },
+  "double_chars": {
+    "min": 11,
+    "median": 18.0,
+    "max": 28
+  },
+  "max_chief_chars": 19,
+  "symptom_groups": {
+    "活动相关": 6,
+    "动作相关": 4,
+    "进食体位相关": 4,
+    "呼吸相关": 3,
+    "紧张相关": 1,
+    "信息不完整": 1,
+    "静息相关": 1
+  },
+  "qwen_tokenization": "NOT_MEASURED",
+  "decode_latency": "NOT_MEASURED",
+  "model_generation": "NOT_RUN",
+  "board_execution": "NOT_RUN",
+  "application_modified": false,
+  "answer_expression_compatibility": {
+    "existing_checker_pass": 1211,
+    "documented_expression_extension": 109
+  },
+  "unique_chief_complaints": 60,
+  "interpretation": "结构和旧表达规则核对通过；有标记的109条涉及需新增的表达支持，不是现有程序可直接交付的1320条缓存。",
+  "annotation_update": {
+    "date": "2026-10-30",
+    "cases_annotated": 20,
+    "confirmed_diagnoses": 0,
+    "patient_facts_and_answers_unchanged": true,
+    "byte_identical_files": 23,
+    "references_resolve": true,
+    "note": "references_resolve指source_ids均能在sources中找到；不是临床验证通过。",
+    "application_modified": false,
+    "model_or_board_run": false
+  }
+}

@@ -1,0 +1,3666 @@
+{
+  "schema": "CASE_ROUTING_QUESTIONS_V1",
+  "note": "开发与验收题；未按病例划分独立泛化评测集。expected_fact_ids是目标行为，不表示旧路由均已支持。",
+  "entries": [
+    {
+      "case_id": "SYN_CP_01",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸骨后。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是压迫感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从2小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续10分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是6分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "疼痛会牵扯到左肩。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "疼痛在快走时出现。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸骨后。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是压迫感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从2小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续10分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "疼痛在胸骨后。疼痛是压迫感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从2小时前开始。每次疼痛持续10分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_01",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "疼痛在快走时出现。休息可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在左侧胸部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是针扎感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛3分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是4分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在转身时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在左侧胸部。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是针扎感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛3分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我痛的地方在左侧胸部。我感觉是针扎感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。每次痛3分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_02",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在转身时会痛。我不清楚缓解方式。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是烧灼感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从6小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续20分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是5分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在进食后会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是烧灼感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从6小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续20分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。感觉是烧灼感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从6小时前开始。每次持续20分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_03",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在进食后会痛。我不清楚缓解方式。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸骨后痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是紧缩感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是4小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续5分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是6分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到左上臂。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "疼痛在上楼时出现。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐下休息后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我对青霉素过敏。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸骨后痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是紧缩感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是4小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续5分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐下休息后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我胸骨后痛。疼痛是紧缩感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是4小时前开始胸痛的。每次疼痛持续5分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_04",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "疼痛在上楼时出现。疼痛在坐下休息后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在左前胸。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是牵拉痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从8小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛15分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是4分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在搬重物时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "停止用力可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在左前胸。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是牵拉痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从8小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛15分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "停止用力可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "疼痛在左前胸。我感觉是牵拉痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从8小时前开始。每次痛15分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_05",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在搬重物时会痛。停止用力可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在右侧胸部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是针刺感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是12小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续2分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是5分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到右肩。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "深呼吸时出现疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止活动后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在右侧胸部。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是针刺感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是12小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续2分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止活动后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我痛的地方在右侧胸部。感觉是针刺感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是12小时前开始胸痛的。每次持续2分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_06",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "深呼吸时出现疼痛。疼痛在停止活动后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是烧灼感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从3小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续20分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是4分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在饱餐后会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "坐直可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是烧灼感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从3小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续20分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "坐直可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我的疼痛在胸前正中。疼痛是烧灼感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从3小时前开始。每次疼痛持续20分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_07",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在饱餐后会痛。坐直可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是针刺感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是10小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛10分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是5分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到左肩。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在平躺时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐起后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是针刺感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是10小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛10分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐起后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我胸前正中痛。我感觉是针刺感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是10小时前开始胸痛的。每次痛10分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_08",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在平躺时会痛。疼痛在坐起后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸前正中。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是发紧感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从1小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续8分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是4分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "紧张时出现疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "安静休息可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸前正中。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是发紧感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从1小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续8分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "安静休息可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "疼痛在胸前正中。感觉是发紧感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从1小时前开始。每次持续8分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_09",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "紧张时出现疼痛。安静休息可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在右前胸。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是刺痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续3分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是4分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "疼痛在咳嗽时出现。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止咳嗽后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我对头孢氨苄过敏。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我今天用过止咳药。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在右前胸。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是刺痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续3分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止咳嗽后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我痛的地方在右前胸。疼痛是刺痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是24小时前开始胸痛的。每次疼痛持续3分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_10",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "疼痛在咳嗽时出现。疼痛在停止咳嗽后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在右侧胸部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是酸痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从36小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛20分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是3分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在抬右臂时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "放下右臂可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在右侧胸部。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是酸痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从36小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛20分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "放下右臂可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我的疼痛在右侧胸部。我感觉是酸痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从36小时前开始。每次痛20分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_11",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在抬右臂时会痛。放下右臂可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸骨后痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是烧灼感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是8小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续15分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是3分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "弯腰时出现疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐直后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我今天用过铝碳酸镁。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸骨后痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是烧灼感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是8小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续15分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐直后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我胸骨后痛。感觉是烧灼感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是8小时前开始胸痛的。每次持续15分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_12",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "弯腰时出现疼痛。疼痛在坐直后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在左前胸。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是压迫感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从2小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续10分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是7分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "疼痛会牵扯到左肩。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "疼痛在快走时出现。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我对青霉素过敏。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在左前胸。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是压迫感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从2小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续10分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "疼痛在左前胸。疼痛是压迫感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从2小时前开始。每次疼痛持续10分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_13",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "疼痛在快走时出现。休息可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在胸骨后。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是闷痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是6小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛12分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是6分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到背部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在爬坡时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止活动后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我平时服用氨氯地平。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在胸骨后。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是闷痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是6小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛12分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在停止活动后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我痛的地方在胸骨后。我感觉是闷痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是6小时前开始胸痛的。每次痛12分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_14",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在爬坡时会痛。疼痛在停止活动后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在左侧胸部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是隐痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从48小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续5分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是2分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "转身时出现疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "停止转身可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在左侧胸部。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是隐痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从48小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续5分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "停止转身可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我的疼痛在左侧胸部。感觉是隐痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从48小时前开始。每次持续5分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_15",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "转身时出现疼痛。停止转身可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是闷痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我不清楚开始时间。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "我不清楚每次持续时间。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是4分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我不清楚诱因。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是闷痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我不清楚开始时间。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "我不清楚每次持续时间。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我胸前正中痛。疼痛是闷痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我不清楚开始时间。我不清楚每次持续时间。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_16",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我不清楚诱因。我不清楚缓解方式。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸骨后。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是紧缩感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从5小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛8分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是6分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在快走时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我平时服用美托洛尔。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "疼痛在胸骨后。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是紧缩感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从5小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛8分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "休息可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我没有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "疼痛在胸骨后。我感觉是紧缩感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从5小时前开始。每次痛8分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_17",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在快走时会痛。休息可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在左前胸。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是压迫感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是3小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续15分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是5分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到左肩。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "走路时出现疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐下后减轻。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我痛的地方在左前胸。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "感觉是压迫感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是3小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次持续15分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "疼痛在坐下后减轻。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我不清楚气短情况。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我痛的地方在左前胸。感觉是压迫感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是3小时前开始胸痛的。每次持续15分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_18",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "走路时出现疼痛。疼痛在坐下后减轻。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在右下胸部。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是牵扯痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从18小时前开始。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续4分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "疼痛程度是4分，满分10分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "我不清楚疼痛牵扯部位。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "疼痛在咳嗽时出现。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "安静休息可以减轻疼痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我今天用过止咳药。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我的疼痛在右下胸部。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "疼痛是牵扯痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "胸痛从18小时前开始。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次疼痛持续4分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "安静休息可以减轻疼痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "我有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我的疼痛在右下胸部。疼痛是牵扯痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "胸痛从18小时前开始。每次疼痛持续4分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_19",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "疼痛在咳嗽时出现。安静休息可以减轻疼痛。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "疼痛在什么位置？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "疼痛是什么感觉？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是压迫感。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "什么时候开始胸痛的？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是1小时前开始胸痛的。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "每次疼痛持续多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛20分钟。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "疼痛能打几分？",
+      "expected_fact_ids": [
+        "severity"
+      ],
+      "authored_reference": "按10分计算，我的疼痛是8分。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "疼痛会牵扯到别的地方吗？",
+      "expected_fact_ids": [
+        "radiation"
+      ],
+      "authored_reference": "还会痛到左上臂。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "什么情况下会痛？",
+      "expected_fact_ids": [
+        "trigger"
+      ],
+      "authored_reference": "我在安静坐着时会痛。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "怎样才能缓解疼痛？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "有没有气短？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "有药物过敏吗？",
+      "expected_fact_ids": [
+        "allergy"
+      ],
+      "authored_reference": "我不清楚过敏情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "最近服药了吗？",
+      "expected_fact_ids": [
+        "medications"
+      ],
+      "authored_reference": "我不清楚用药情况。",
+      "kind": "canonical"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "你具体是哪儿疼？",
+      "expected_fact_ids": [
+        "location"
+      ],
+      "authored_reference": "我胸前正中痛。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "这种疼像什么？",
+      "expected_fact_ids": [
+        "quality"
+      ],
+      "authored_reference": "我感觉是压迫感。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "从开始疼到现在有多长时间了？",
+      "expected_fact_ids": [
+        "onset"
+      ],
+      "authored_reference": "我是1小时前开始胸痛的。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "一回大概疼多久？",
+      "expected_fact_ids": [
+        "duration"
+      ],
+      "authored_reference": "每次痛20分钟。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "歇一歇会不会好一点？",
+      "expected_fact_ids": [
+        "relief"
+      ],
+      "authored_reference": "我不清楚缓解方式。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "会觉得喘不过气吗？",
+      "expected_fact_ids": [
+        "dyspnea"
+      ],
+      "authored_reference": "有气短。",
+      "kind": "paraphrase"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "疼在哪里，是什么感觉？",
+      "expected_fact_ids": [
+        "location",
+        "quality"
+      ],
+      "authored_reference": "我胸前正中痛。我感觉是压迫感。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "什么时候开始的，每次疼多久？",
+      "expected_fact_ids": [
+        "onset",
+        "duration"
+      ],
+      "authored_reference": "我是1小时前开始胸痛的。每次痛20分钟。",
+      "kind": "two_fact"
+    },
+    {
+      "case_id": "SYN_CP_20",
+      "question": "什么情况下会疼，怎么才能缓解？",
+      "expected_fact_ids": [
+        "trigger",
+        "relief"
+      ],
+      "authored_reference": "我在安静坐着时会痛。我不清楚缓解方式。",
+      "kind": "two_fact"
+    }
+  ]
+}
