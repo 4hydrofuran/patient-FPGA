@@ -1,0 +1,83 @@
+{
+  "schema": "KV260_PUBLIC_BOARD_BACKUP_V1",
+  "board_kernel": "6.8.0-1036-xilinx",
+  "files": [
+    {
+      "path": "boot/firmware/image.fit",
+      "bytes": 67701612,
+      "sha256": "23a0ad7516d6f67f248f952653324c18a9c7d1db31fdf27a003f021adf0ca61e",
+      "board_mode": 493
+    },
+    {
+      "path": "boot/firmware/boot.scr.uimg",
+      "bytes": 8000,
+      "sha256": "f1eb9e841e100a64f59eed77bccd73396297ce93bbcb6ce4916a7b516793c685",
+      "board_mode": 493
+    },
+    {
+      "path": "boot/firmware/a10-candidate-irq2-20261021.fit",
+      "bytes": 65555004,
+      "sha256": "e60d7f49033ef8efbd2396fafbe94a3bc684a478d5f5e31676626d1bc5f6ae2b",
+      "board_mode": 493
+    },
+    {
+      "path": "lib/firmware/xilinx/k26-starter-kits/k26_starter_kits.bit.bin",
+      "bytes": 1871196,
+      "sha256": "f9dfe95d14881a2768b2c0e6a36fc363635e8ae7882ecad9725d270490395d3e",
+      "board_mode": 420
+    },
+    {
+      "path": "lib/firmware/xilinx/k26-starter-kits/k26_starter_kits.dtbo",
+      "bytes": 526,
+      "sha256": "1e998ffd5d33a05da3746df3603e65603e1628006bc878209a836cc9bd3c4ae1",
+      "board_mode": 420
+    },
+    {
+      "path": "etc/dfx-mgrd/default_firmware",
+      "bytes": 17,
+      "sha256": "964216dad55f3ee8727a22a2aea1230fa44909ccc1719a0dab47e91012c56d3d",
+      "board_mode": 420
+    },
+    {
+      "path": "lib/netplan/00-network-manager-all.yaml",
+      "bytes": 49,
+      "sha256": "d0fa4fd1b88a52f9b8eae641c7c84b7843197155c08df46c0057a4ea23094411",
+      "board_mode": 384
+    },
+    {
+      "path": "etc/netplan/50-cloud-init.yaml",
+      "bytes": 90,
+      "sha256": "7a395ee535c56a5070d0a6f8f4a62559a8a55247d3b8f8e247a9840c51f6adcf",
+      "board_mode": 384
+    },
+    {
+      "path": "etc/netplan/90-NM-626dd384-8b3d-3690-9511-192b2c79b3fd.yaml",
+      "bytes": 505,
+      "sha256": "db2a6bd5532a25e96c68ec299d3c10ccb89ea5bf363f2e83eceb64496eadadbf",
+      "board_mode": 384
+    }
+  ],
+  "file_count": 9,
+  "archive": {
+    "bytes": 132127112,
+    "sha256": "680308142fc024484d920fe5b3735a627d22bfb45b92189ae8b9e19042cd8fa0",
+    "parts": [
+      {
+        "path": "kv260-board.zip.part001",
+        "bytes": 47185920,
+        "sha256": "44c9ad0f6c9cbfbad6edaaa836eebe6e29db48f82d4d60de29706f3d5845d033"
+      },
+      {
+        "path": "kv260-board.zip.part002",
+        "bytes": 47185920,
+        "sha256": "6f794f85d1ecb44c2e18bc4722ea455eb80815fed52c89be4241bd48160628bf"
+      },
+      {
+        "path": "kv260-board.zip.part003",
+        "bytes": 37755272,
+        "sha256": "94ac2c94fbbbb4a0a6b67092c45ec16b5573ab67bed73290044bfc7cf68c5df9"
+      }
+    ]
+  },
+  "scope": "Boot, default PL firmware, and Ethernet configuration only; no user records."
+}
