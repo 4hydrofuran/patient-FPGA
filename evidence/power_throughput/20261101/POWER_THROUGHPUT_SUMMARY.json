@@ -1,0 +1,36 @@
+{
+  "measurement_date_user_timezone": "2026-11-01 Asia/Shanghai",
+  "board_wall_clock_unreliable": true,
+  "power_scope": "INA260 SOM main 5V rail, not total kit AC/DC input",
+  "idle_w": {
+    "mean": 3.62,
+    "min": 3.42,
+    "max": 3.82,
+    "samples": 5
+  },
+  "model_request_w": {
+    "mean": 3.9234883720930234,
+    "min": 3.37,
+    "sampled_max": 4.71,
+    "samples": 43,
+    "requested_interval_s": 0.25
+  },
+  "output_tokens_excluding_eos": 9,
+  "accepted_to_published_s": 10.534917276,
+  "end_to_end_output_tokens_per_s": 0.8543019146911809,
+  "answer_source": "MODEL",
+  "backend": "FPGA_REAL",
+  "cache_used": false,
+  "serial_decode_earlier_today": {
+    "output_tokens": 7,
+    "decode_seconds": 7.257598476,
+    "approx_tokens_per_s": 0.9645063753730869,
+    "source": "evidence/model_pl_A/20261101-latency-tail-readonly-v1/ANALYSIS.json"
+  },
+  "limitations": [
+    "single active request, not sustained load or hardware peak",
+    "power is SOM rail only",
+    "serial decode historical sample includes runtime permission and scheduling overhead",
+    "successful draft verification is not serial decode throughput"
+  ]
+}
